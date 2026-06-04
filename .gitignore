@@ -1,0 +1,41 @@
+.DS_Store
+
+# Local configuration and secrets.
+.env
+.env.*
+!.env.example
+
+# Python artifacts.
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments and package metadata.
+.venv/
+venv/
+env/
+*.egg-info/
+
+# IDE/editor state.
+.idea/
+.vscode/
+
+# Runtime logs and generated experiment details.
+logs/
+experiments/runs/
+
+# DenseX/generated retrieval artifacts. Keep the main FAISS index in storage/
+# because it lets a fresh clone run the existing baseline immediately.
+experiments/densex_corpus/
+storage/densex/
+
+# Large model checkpoints should be downloaded from their source instead of
+# committed to the repository.
+*.safetensors
+*.ckpt
+*.pt
+*.pth
