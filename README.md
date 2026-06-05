@@ -34,6 +34,9 @@ Generated run-detail JSON files under `experiments/runs/`, DenseX generated
 corpora under `experiments/densex_corpus/`, and DenseX indexes under
 `storage/densex/` are intentionally ignored by git.
 
+Fixed QA and DenseX experiment steps are documented in
+`docs/experiment_test_steps.md`.
+
 ## Usage
 
 Put `.txt`, `.md`, `.markdown`, or `.pdf` files in `data/`, then build the index:

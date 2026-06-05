@@ -227,11 +227,41 @@ Draft for manual review. These QA pairs are not yet added to
 
 | Page | Evidence For | Evidence |
 | --- | --- | --- |
+| 1 | `nuscenes_night,robotcar_night` | The Abstract reports that DepthDark achieves state-of-the-art performance on the challenging nuScenes-Night and RobotCar-Night datasets. |
+| 2 | `nuscenes_night,robotcar_night` | The Introduction contribution bullets state that DepthDark achieves state-of-the-art performance on nuScenes-Night and RobotCar-Night. |
 | 6 | `nuscenes_night,robotcar_night` | The Evaluation Protocol states that the method is evaluated on nuScenes-Night and RobotCar-Night. |
 | 6 | `nuscenes_night,robotcar_night` | Table 4.1 reports separate results for Test on nuScenes-Night and Test on RobotCar-Night. |
 | 8 | `nuscenes_night,robotcar_night` | The ablation tables report results on both nuScenes-Night and RobotCar-Night. |
 
-### 3. Ablation Components
+### 3. Training Datasets
+
+**ID:** `depthdark_training_datasets`
+
+**Question:** DepthDark 在哪些数据集上进行了训练？
+
+**Gold Answer:** DepthDark 使用 Hypersim 和 Virtual KITTI 作为训练数据。论文说明这两个数据集分别提供室内和合成室外场景，并且由于它们只包含 daytime images，作者使用 Section 3.1 的 LLDG 方法将其合成为高质量、低光、深度对齐的训练数据。论文也提到 KITTI，但认为 KITTI 训练集在部分场景中 ground truth 不可靠、数据量有限且场景泛化能力较弱，因此没有将其作为 DepthDark 的主要训练数据。
+
+**Gold Items:**
+
+| ID | Name | Aliases |
+| --- | --- | --- |
+| `hypersim` | Hypersim | Hypersim; Hypersim dataset; H |
+| `virtual_kitti` | Virtual KITTI | Virtual KITTI; Virtual KITTI dataset; VK |
+
+**Candidate Items / Distractors:**
+
+`hypersim`, `virtual_kitti`, `kitti`, `nuscenes_night`, `robotcar_night`, `flare7k`, `depth_anything_unlabeled_data`, `depth_anything_v2_real_data`, `depth_anything_v2_synthetic_data`
+
+**Gold Evidence:**
+
+| Page | Evidence For | Evidence |
+| --- | --- | --- |
+| 6 | `hypersim,virtual_kitti` | Section 4.2.1 Training Datasets states that the paper selects the Hypersim indoor dataset and the Virtual KITTI synthetic outdoor dataset as training data. |
+| 6 | `hypersim,virtual_kitti` | Section 4.2.1 explains that these datasets contain only daytime images, so Section 3.1 is used to synthesize a large-scale low-light depth-aligned dataset for training DepthDark. |
+| 6 | `hypersim,virtual_kitti` | Table 4.1 marks Ours DepthDark as trained on H and VK, which the table caption defines as Hypersim and Virtual KITTI. |
+| 6 | `kitti` | Section 4.2.1 mentions KITTI but says its training ground truth is unreliable in some scenarios and has limited data volume and weak scene generalization, so it is not ideal for training foundation models. |
+
+### 4. Ablation Components
 
 **ID:** `depthdark_ablation_components`
 
@@ -258,13 +288,13 @@ Draft for manual review. These QA pairs are not yet added to
 | 8 | `lldg,llpeft` | Section 5.1 says the ablation experiments evaluate the gains introduced by the LLDG and LLPEFT modules. |
 | 8 | `llpeft` | Section 5.2 compares LLPEFT with representative PEFT methods such as AMFG and LoRA. |
 
-### 4. SoTA Comparison Methods
+### 5. SoTA Comparison Methods
 
 **ID:** `depthdark_sota_comparison_methods`
 
-**Question:** DepthDark 在 Comparison with other methods 中与哪些方法进行了比较？
+**Question:** DepthDark 与哪些方法进行了比较？
 
-**Gold Answer:** DepthDark 在定量比较中主要与 MonoViT、WSGD、ITDFA、RNW、ADDS、MonoFormer、TDDC、Depth Anything 和 Depth Anything V2 进行比较。定性结果中重点展示了 ADDS、Depth Anything、Depth Anything V2 和 DepthDark 的对比。
+**Gold Answer:** DepthDark 与 MonoViT、WSGD、ITDFA、RNW、ADDS、MonoFormer、Depth Anything 和 Depth Anything V2 进行了比较。TDDC 也出现在定量结果表和比较文字中，但由于官方代码不可用，论文使用 TDDC 原文报告的实验结果，而没有在定性可视化结果中直接与 TDDC 进行比较；定性结果中重点展示了 DepthDark 与 ADDS、Depth Anything 和 Depth Anything V2 的对比。
 
 **Gold Items:**
 
@@ -288,6 +318,7 @@ Draft for manual review. These QA pairs are not yet added to
 
 | Page | Evidence For | Evidence |
 | --- | --- | --- |
-| 6 | `monovit,wsgd,itdfa,rnw,adds,monoformer,tddc,depth_anything,depth_anything_v2` | Table 4.1 lists these methods in the quantitative comparison on nuScenes-Night and RobotCar-Night. |
-| 6 | `depth_anything,depth_anything_v2,tddc` | The comparison text says the paper further compares with state-of-the-art methods including Depth Anything, Depth Anything V2, and TDDC. |
+| 6 | `monovit,wsgd,itdfa,rnw,adds,monoformer,tddc,depth_anything,depth_anything_v2` | Table 4.1 lists these methods in the quantitative comparison on nuScenes-Night and RobotCar-Night; TDDC is included using the experimental results reported in the TDDC paper because its official code is unavailable. |
+| 6 | `depth_anything,depth_anything_v2,tddc` | The comparison text says the paper further compares with state-of-the-art methods including Depth Anything, Depth Anything V2, and TDDC, while clarifying that TDDC's reported results are used. |
 | 7 | `adds,depth_anything,depth_anything_v2` | The qualitative figures compare DepthDark with ADDS, Depth Anything, and Depth Anything V2. |
+| 8 | `adds,depth_anything,depth_anything_v2` | The qualitative results section says ADDS is selected for qualitative comparison because TDDC's official code is unavailable. |

@@ -64,8 +64,8 @@ def _relevance_precision(chunks: list[dict], gold_items: list[dict]) -> float:
     return relevant / len(chunks)
 
 
-def _parse_run_label(label: str) -> tuple[str, str] | tuple[None, None]:
-    match = re.match(r"densex_([^_]+)_(.+)", label or "")
+def _parse_run_label(label: str, prefix: str) -> tuple[str, str] | tuple[None, None]:
+    match = re.match(rf"{re.escape(prefix)}_([^_]+)_(.+)", label or "")
     if not match:
         return None, None
     return match.group(1), match.group(2)
@@ -86,7 +86,7 @@ def main() -> None:
         label = run.get("run_label", "")
         if not label.startswith(args.run_label_prefix + "_"):
             continue
-        granularity, question_id = _parse_run_label(label)
+        granularity, question_id = _parse_run_label(label, args.run_label_prefix)
         if not granularity or question_id not in questions:
             continue
 
