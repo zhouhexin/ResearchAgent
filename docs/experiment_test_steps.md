@@ -106,6 +106,56 @@ storage/densex/proposition
 
 ## 6. Run Fixed QA Granularity Test
 
+Recommended one-command batch runner:
+
+```bash
+python experiments/run_fixed_qa_batch.py \
+  --question-set fixed \
+  --granularities chunk,sentence,proposition \
+  --budgets 500,1000,1500 \
+  --top-k 50 \
+  --strategy baseline \
+  --run-prefix qa_v1
+```
+
+This command runs the fixed QA sweep, evaluates the generated runs, and writes:
+
+```text
+experiments/qa_v1_densex_results.csv
+experiments/qa_v1_densex_summary.csv
+```
+
+Use `--question-set depthdark` or `--question-set acdepth` to run only one
+paper's QA set.
+
+If corpora or indexes need to be rebuilt, add:
+
+```bash
+python experiments/run_fixed_qa_batch.py \
+  --question-set fixed \
+  --granularities chunk,sentence,proposition \
+  --budgets 500,1000,1500 \
+  --top-k 50 \
+  --strategy baseline \
+  --run-prefix qa_v1 \
+  --prepare-corpora \
+  --build-index
+```
+
+For a quick command check without running experiments:
+
+```bash
+python experiments/run_fixed_qa_batch.py \
+  --question-set depthdark \
+  --granularities chunk,sentence \
+  --budgets 500 \
+  --top-k 20 \
+  --run-prefix smoke \
+  --dry-run
+```
+
+The manual command sequence is below.
+
 Use a unique prefix for each experiment batch:
 
 ```bash
