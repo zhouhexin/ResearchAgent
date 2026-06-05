@@ -157,11 +157,52 @@ Draft for manual review. These QA pairs are not yet added to
 
 **Gold Evidence:**
 
-| Page | Evidence For | Evidence |
-| --- | --- | --- |
-| 1 | `depthdark_model,flare_simulation_module,noise_simulation_module,low_light_peft,illumination_guidance,multiscale_feature_fusion` | The Abstract introduces DepthDark for low-light monocular depth estimation and describes the flare-simulation module, noise-simulation module, low-light PEFT strategy, illumination guidance, and multiscale feature fusion. |
-| 2 | `low_light_data_generation,low_light_peft` | The contribution bullets state that the paper proposes a low-light image synthesis approach and designs an efficient parameter-efficient fine-tuning strategy. |
-| 8 | `flare_simulation_module,noise_simulation_module,low_light_peft,illumination_guidance,multiscale_feature_fusion` | The Conclusion summarizes the flare/noise simulation techniques and the PEFT strategy with illumination guidance and multiscale feature fusion. |
+<table>
+  <colgroup>
+    <col style="width: 8%;">
+    <col style="width: 26%;">
+    <col style="width: 66%;">
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Page</th>
+      <th>Evidence For</th>
+      <th>Evidence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><code>depthdark_model</code>, <code>flare_simulation_module</code>, <code>noise_simulation_module</code>, <code>low_light_peft</code>, <code>illumination_guidance</code>, <code>multiscale_feature_fusion</code></td>
+      <td>The Abstract introduces DepthDark for low-light monocular depth estimation and describes the flare-simulation module, noise-simulation module, low-light PEFT strategy, illumination guidance, and multiscale feature fusion.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><code>low_light_data_generation</code>, <code>low_light_peft</code></td>
+      <td>The contribution bullets state that the paper proposes a low-light image synthesis approach and designs an efficient parameter-efficient fine-tuning strategy.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><code>low_light_data_generation</code>, <code>flare_simulation_module</code>, <code>noise_simulation_module</code></td>
+      <td>The Method section states that LLDG is introduced for the first time and integrates flare-simulation and noise-simulation modules to simulate low-light imaging and produce high-quality paired depth data.</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><code>low_light_peft</code></td>
+      <td>The Method section states that the paper proposes an efficient Low-Light Parameter-Efficient Fine-Tuning (LLPEFT) strategy tailored for low-light scenarios.</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><code>low_light_peft</code>, <code>illumination_guidance</code>, <code>multiscale_feature_fusion</code></td>
+      <td>The LLPEFT method section states that the LLPEFT strategy integrates illumination guidance and multiscale feature fusion to guide and enhance model performance under challenging low-light conditions.</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><code>flare_simulation_module</code>, <code>noise_simulation_module</code>, <code>low_light_peft</code>, <code>illumination_guidance</code>, <code>multiscale_feature_fusion</code></td>
+      <td>The Conclusion summarizes the flare/noise simulation techniques and the PEFT strategy with illumination guidance and multiscale feature fusion.</td>
+    </tr>
+  </tbody>
+</table>
 
 ### 2. Evaluation Datasets
 
