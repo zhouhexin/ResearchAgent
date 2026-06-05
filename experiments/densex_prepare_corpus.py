@@ -66,13 +66,16 @@ def _load_propositionizer(model_name: str, device: str):
     # require protobuf for that conversion; when protobuf is missing they may
     # incorrectly fall back to TikToken and fail to parse `spiece.model`. The
     # slow tokenizer is stable here and avoids that conversion path.
+    print(f"Loading propositionizer tokenizer: {model_name}", flush=True)
     tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
     kwargs = {"low_cpu_mem_usage": True}
     if device == "cuda":
         kwargs["torch_dtype"] = torch.float16
+    print(f"Loading propositionizer model on device={device}: {model_name}", flush=True)
     model = AutoModelForSeq2SeqLM.from_pretrained(model_name, **kwargs)
     model.to(device)
     model.eval()
+    print("Propositionizer model loaded.", flush=True)
     return tokenizer, model, torch
 
 
@@ -90,6 +93,11 @@ def _propositionize(
     if output_path.exists() and not resume:
         output_path.unlink()
 
+    print(
+        f"Preparing propositions for {len(chunks)} chunks "
+        f"(resume={resume}, existing_parent_chunks={len(existing_ids)}).",
+        flush=True,
+    )
     tokenizer, model, torch = _load_propositionizer(model_name, device)
     for chunk_index, chunk in enumerate(chunks, start=1):
         parent_id = chunk.get("id")
@@ -106,6 +114,7 @@ def _propositionize(
             max_length=max_input_tokens,
         )
         inputs = {key: value.to(device) for key, value in inputs.items()}
+        print(f"[{chunk_index}/{len(chunks)}] Generating propositions for {parent_id}", flush=True)
         with torch.no_grad():
             outputs = model.generate(**inputs, max_new_tokens=max_new_tokens)
         raw = tokenizer.decode(outputs[0], skip_special_tokens=True)
@@ -139,6 +148,7 @@ def main() -> None:
     parser.add_argument("--output-dir", type=Path, default=PROJECT_ROOT / "experiments" / "densex_corpus")
     parser.add_argument("--granularities", default="chunk,sentence,proposition")
     parser.add_argument("--source-contains", default="", help="Optional source path filter")
+    parser.add_argument("--limit", type=int, default=0, help="Optional chunk limit for smoke tests")
     parser.add_argument("--sentence-min-chars", type=int, default=30)
     parser.add_argument("--proposition-model", default=DEFAULT_MODEL)
     parser.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda", "mps"])
@@ -150,6 +160,13 @@ def main() -> None:
     chunks = _filter_chunks(load_chunks_from_metadata(args.metadata), args.source_contains)
     if not chunks:
         raise RuntimeError("No chunks matched the requested metadata/filter")
+    if args.limit > 0:
+        chunks = chunks[: args.limit]
+    print(
+        f"Loaded {len(chunks)} chunks from {args.metadata} "
+        f"(source_contains={args.source_contains!r}, limit={args.limit}).",
+        flush=True,
+    )
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     granularities = set(_parse_csv(args.granularities))
