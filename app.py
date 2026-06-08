@@ -108,6 +108,9 @@ def _compact_chunk(chunk: dict) -> dict:
     compression = chunk.get("compression")
     if isinstance(compression, dict) and compression:
         compact["compression_ratio"] = compression.get("compression_ratio")
+    fine_to_chunk = chunk.get("fine_to_chunk")
+    if isinstance(fine_to_chunk, dict) and fine_to_chunk:
+        compact["fine_to_chunk"] = fine_to_chunk
     return {key: value for key, value in compact.items() if value is not None}
 
 
@@ -209,10 +212,14 @@ def answer_query(
     llmlingua_model: str = config.LLMLINGUA2_MODEL,
     run_label: str = "",
     dry_run: bool = False,
+    retrieved_chunks_override: list[dict] | None = None,
 ) -> str:
     """Retrieve context and answer a user query."""
-    retriever = Retriever(index_dir=index_dir, embedding_model=config.EMBEDDING_MODEL)
-    chunks = retriever.retrieve(query, top_k=top_k)
+    if retrieved_chunks_override is None:
+        retriever = Retriever(index_dir=index_dir, embedding_model=config.EMBEDDING_MODEL)
+        chunks = retriever.retrieve(query, top_k=top_k)
+    else:
+        chunks = retrieved_chunks_override[:top_k]
 
     if compression not in {"none", "truncate", "llmlingua2"}:
         raise ValueError(f"Unknown compression method: {compression}")

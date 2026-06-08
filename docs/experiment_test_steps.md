@@ -204,7 +204,48 @@ python experiments/evaluate_densex_runs.py \
   --output experiments/smoke_densex_results.csv
 ```
 
-## 8. Check Key Metrics
+## 8. Run Fine-To-Chunk V1
+
+Fine-to-chunk uses sentence/proposition retrieval as an evidence locator, then
+maps fine-grained hits back to their parent chunks before context allocation.
+The v1 implementation uses parent deduplication and this aggregation score:
+
+```text
+parent_score = max(child_score) + 0.1 * sum(top_3_child_scores)
+```
+
+Run sentence-to-chunk and proposition-to-chunk:
+
+```bash
+python experiments/run_densex_parent_sweep.py \
+  --question-set fixed \
+  --fine-granularities sentence,proposition \
+  --budgets 500,1000,1500 \
+  --fine-top-m 150 \
+  --parent-top-k 50 \
+  --strategy baseline \
+  --run-label-prefix qa_parent_v1
+```
+
+Evaluate:
+
+```bash
+python experiments/evaluate_densex_runs.py \
+  --run-label-prefix qa_parent_v1 \
+  --output experiments/qa_parent_v1_densex_results.csv
+```
+
+Compare these against the direct granularity run:
+
+```text
+chunk
+sentence
+proposition
+sentence-to-chunk
+proposition-to-chunk
+```
+
+## 9. Check Key Metrics
 
 Focus on these fields first:
 
@@ -226,7 +267,7 @@ Recommended interpretation:
 - `selected_relevance_precision`: how many selected units are relevant by alias matching.
 - `token_efficiency`: answer F1 normalized by context tokens.
 
-## 9. Commit Reproducible Changes
+## 10. Commit Reproducible Changes
 
 Commit code, QA, and documentation changes:
 
