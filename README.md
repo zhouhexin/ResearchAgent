@@ -40,6 +40,9 @@ Fixed QA and DenseX experiment steps are documented in
 Windows PowerShell experiment steps are documented in
 `docs/windows_experiment_steps.md`.
 
+Frontend implementation order is documented in
+`docs/frontend_implementation_plan.md`.
+
 ## Usage
 
 Put `.txt`, `.md`, `.markdown`, or `.pdf` files in `data/`, then build the index:
