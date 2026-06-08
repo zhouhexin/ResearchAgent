@@ -3,6 +3,8 @@
 This document records the fixed steps for running QA-based retrieval and
 granularity experiments.
 
+For Windows PowerShell commands, see `docs/windows_experiment_steps.md`.
+
 ## 1. Prepare Environment
 
 Run from the project root:

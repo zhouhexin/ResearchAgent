@@ -37,6 +37,9 @@ corpora under `experiments/densex_corpus/`, and DenseX indexes under
 Fixed QA and DenseX experiment steps are documented in
 `docs/experiment_test_steps.md`.
 
+Windows PowerShell experiment steps are documented in
+`docs/windows_experiment_steps.md`.
+
 ## Usage
 
 Put `.txt`, `.md`, `.markdown`, or `.pdf` files in `data/`, then build the index:
