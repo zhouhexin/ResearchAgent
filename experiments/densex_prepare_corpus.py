@@ -26,6 +26,26 @@ from densex.corpus import (
 DEFAULT_MODEL = "chentong00/propositionizer-wiki-flan-t5-large"
 
 
+def _build_proposition_prompt(*, title: str, section: str, content: str) -> str:
+    """Build a contextual proposition prompt for paper-domain chunks."""
+    return "\n".join(
+        [
+            "Convert the content into self-contained propositions.",
+            "",
+            "Requirements:",
+            "- Each proposition should be 25-40 words.",
+            "- Each proposition must include the subject, relation, and important role.",
+            "- Keep method names, dataset names, module names, comparison methods, and table meanings.",
+            "- Do not output isolated names or overly short facts.",
+            "- Output one proposition per line.",
+            "",
+            f"Title: {title}",
+            f"Section: {section}",
+            f"Content: {content}",
+        ]
+    )
+
+
 def _parse_csv(value: str) -> list[str]:
     return [item.strip() for item in value.split(",") if item.strip()]
 
@@ -106,7 +126,11 @@ def _propositionize(
 
         title = paper_title_from_source(chunk.get("source", ""))
         section = f"page {chunk.get('page')}" if chunk.get("page") else "unknown"
-        prompt = f"Title: {title}. Section: {section}. Content: {chunk.get('text', '')}"
+        prompt = _build_proposition_prompt(
+            title=title,
+            section=section,
+            content=chunk.get("text", ""),
+        )
         inputs = tokenizer(
             prompt,
             return_tensors="pt",
