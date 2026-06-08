@@ -1,31 +1,49 @@
 # 前端实现计划
 
-本文档记录如何基于当前 ResearchAgent 项目搭建一个可解释的知识库问答前端。
+本文档记录如何基于当前 ResearchAgent 项目搭建一个实验室知识问答系统。
 
 ## 目标
 
-构建一个前端页面，先支持关键词检索，后续扩展为可解释的论文知识库问答系统。
+构建一个面向实验室成员开放的知识问答前端。用户输入关键词或自然语言问题后，系统基于当前论文知识库和已有 RAG 方法生成最终回答。
 
-这个前端不应该只展示最终回答，还应该展示：
+前端只需要展示：
 
 ```text
-检索到的证据
-进入 context 的内容
-token 使用情况
-实验结果指标
+用户问题
+最终回答
+必要的加载、错误和空结果状态
 ```
+
+前端不展示：
+
+```text
+retrieved chunks
+selected context
+token 使用情况
+实验评估指标
+gold items / evidence 匹配结果
+```
+
+这些信息仍然可以在后端日志、run details 和实验 CSV 中保留，供个人研究和调试使用。
 
 ## 产品定位
 
-第一版应该定位为内部研究工具，而不是普通聊天机器人。
-
-核心价值是让完整流程可观察：
+这个系统有两层定位：
 
 ```text
-query -> retrieval evidence -> selected context -> answer -> metrics
+对实验室其他用户：知识问答系统
+对我个人：基于当前研究方法的实验工具
 ```
 
-这样可以帮助判断 retrieval、context selection、compression、granularity 等环节是否真的有效。
+因此，普通前端应该保持简洁，像一个可直接使用的问答系统；复杂的检索过程、context selection、compression、granularity 对比和评估指标不暴露给普通用户。
+
+当前研究方法仍然作为后端能力存在：
+
+```text
+query -> retrieval -> context selection -> optional compression -> LLM answer
+```
+
+但用户只看到最终回答。
 
 ## 推荐架构
 
@@ -34,10 +52,10 @@ query -> retrieval evidence -> selected context -> answer -> metrics
 ```text
 Frontend UI
   -> FastAPI backend
-    -> storage/metadata.json 关键词检索
-    -> FAISS semantic retrieval
+    -> storage/metadata.json / FAISS index
     -> app.answer_query 问答流程
-    -> experiments/*.csv 实验结果查看
+    -> experiments/runs 后端调试记录
+    -> experiments/*.csv 个人实验分析
 ```
 
 推荐前端技术栈：
@@ -47,187 +65,254 @@ React + Vite + TypeScript
 Ant Design
 ```
 
-Ant Design 比较适合这个项目，因为当前页面更像实验工作台，需要大量表单、表格、筛选器和密集结果展示。
+Ant Design 适合快速构建稳定的输入框、按钮、结果区域、历史记录列表和基础管理页面。
+
+## 用户侧功能范围
+
+第一版用户侧只保留最小功能：
+
+- 输入关键词或自然语言问题。
+- 点击提交。
+- 展示最终回答。
+- 展示加载状态。
+- 展示错误提示。
+- 可选展示最近几次问答历史。
+
+不在用户侧展示检索证据和实验指标，避免普通用户理解成本过高。
+
+## 研究侧保留能力
+
+虽然前端不展示证据和指标，但后端仍然需要保留研究所需信息：
+
+- run id
+- run label
+- retrieved chunks
+- selected chunks
+- context tokens
+- compression info
+- details path
+- LLM usage
+
+这些信息继续写入：
+
+```text
+experiments/runs/
+experiments/results.csv
+```
+
+这样前端对外是问答系统，对个人研究仍然可追踪和可评估。
 
 ## 实现顺序
 
-### 1. 后端关键词检索 API
+### 1. 后端问答 API
 
-先增加一个 FastAPI 后端，并实现关键词检索接口：
-
-```text
-POST /search
-```
-
-第一版行为：
-
-- 读取 `storage/metadata.json`。
-- 在 `text`、`source`、`page` 和论文标题中检索关键词。
-- 返回命中的 chunks。
-- 对命中的关键词进行高亮。
-- 返回 `source`、`page`、`score`、`chunk_id` 和文本片段。
-
-这一步不调用 LLM，只用于验证语料是否可检索、证据是否存在。
-
-### 2. 前端关键词检索页面
-
-创建第一个前端页面：
-
-```text
-关键词输入框
-搜索按钮
-结果列表 / 表格
-关键词高亮
-source 和 page 信息
-```
-
-建议提供的控制项：
-
-- keyword query
-- max results
-- source filter
-- 是否区分大小写
-
-这个页面用于检查知识库内容是否被正确索引，以及用户能否快速定位论文证据。
-
-### 3. QA API
-
-增加问答接口：
+先增加一个 FastAPI 后端，并实现问答接口：
 
 ```text
 POST /ask
 ```
 
-该接口调用现有 `answer_query` 流程，并返回：
+请求参数第一版保持简单：
 
-- final answer
+```json
+{
+  "query": "DepthDark 在哪些数据集上进行了训练？"
+}
+```
+
+后端内部使用默认配置调用当前 RAG 流程：
+
+```text
+retrieval -> allocation -> prompt -> LLM -> answer
+```
+
+接口返回给前端的内容只包括：
+
+```json
+{
+  "answer": "...",
+  "run_id": "...",
+  "error": null
+}
+```
+
+`run_id` 可以用于后端排查，但前端不需要展示复杂细节。
+
+### 2. 前端问答页面
+
+创建第一版问答页面：
+
+```text
+顶部：系统名称
+中间：问题输入框
+按钮：提交 / 清空
+下方：最终回答
+```
+
+页面状态需要包括：
+
+- idle
+- loading
+- answered
+- error
+- empty query
+
+普通用户只关心问题和回答，所以页面应保持简洁。
+
+### 3. 基础问答历史
+
+增加本地历史记录，方便用户查看当前会话内问过的问题。
+
+第一版可以只存在浏览器内存中，不需要数据库：
+
+```text
+question
+answer
+timestamp
+```
+
+后续如果需要多人使用记录，再增加持久化存储。
+
+### 4. 后端默认参数配置
+
+为了对其他人开放使用，前端不暴露复杂实验参数。
+
+默认参数由后端配置控制，例如：
+
+```text
+strategy
+top_k
+context_budget
+compression
+compression_stage
+granularity / retrieval mode
+```
+
+这些参数可以先写在后端配置中，由你根据实验结果选择当前最稳定的方案。
+
+建议第一版默认使用当前表现最稳的配置，例如：
+
+```text
+chunk retrieval
+baseline allocation
+固定 top_k
+固定 context_budget
+```
+
+等 fine-to-chunk 或其他方法验证更好后，再替换后端默认策略。
+
+### 5. 管理 / 调试入口
+
+如果需要保留个人研究入口，可以增加一个不面向普通用户的调试页面或后端接口。
+
+这部分不作为第一版公开前端：
+
+```text
+/admin/runs
+/admin/results
+/admin/search-debug
+```
+
+调试入口可以展示：
+
 - retrieved chunks
-- selected chunks
-- context tokens
-- prompt / completion / total token usage
-- details path 或 run id
+- selected context
+- token usage
+- run details
+- CSV 结果
 
-第一版只暴露少量安全参数：
+但默认用户页面不显示这些内容。
 
-- `strategy`
-- `top_k`
-- `context_budget`
-- `compression`
-- `compression_stage`
+### 6. 关键词检索能力
 
-### 4. 可解释问答页面
+用户可以输入关键词，也可以输入自然语言问题。
 
-创建问答页面，建议布局为三块：
+第一版不单独做“检索结果列表页”，而是统一进入问答流程：
 
 ```text
-左侧：问题输入和参数设置
-中间：最终回答
-右侧：retrieved evidence 和 selected context
+关键词 / 问题 -> 后端检索 -> LLM 生成最终回答 -> 前端展示最终回答
 ```
 
-证据面板需要展示：
+如果后续发现用户需要查原文，再考虑增加“查看相关资料”按钮，但默认仍然隐藏证据细节。
 
-- retrieved chunks
-- selected chunks
-- source file
-- page
-- score
-- token estimate
-- text preview
+### 7. 后续增强
 
-这个页面比普通聊天 UI 更适合当前项目，因为它能展示回答为什么成立，或者为什么没有被 context 支撑。
+基础问答系统稳定后，再考虑：
 
-### 5. 实验结果页面
+- 用户登录
+- 问答历史持久化
+- 多知识库切换
+- 管理端上传论文
+- 后台重新构建索引
+- 基于实验结果切换 retrieval mode
 
-增加一个实验结果查看页面，读取 CSV 文件，例如：
-
-```text
-experiments/qa_v1_densex_summary.csv
-experiments/qa_parent_v1_densex_results.csv
-```
-
-页面需要支持排序和筛选，重点展示：
-
-- `granularity`
-- `budget`
-- `answer_f1`
-- `answer_recall`
-- `context_tokens`
-- `selected_gold_recall`
-- `selected_relevance_precision`
-- `token_efficiency`
-
-这个页面可以减少手动打开 CSV 的成本，也方便横向比较 chunk、sentence、proposition 和 fine-to-chunk。
-
-### 6. Hybrid Retrieval 和高级模式
-
-基础关键词检索和问答页面稳定后，再增加高级检索模式：
-
-```text
-keyword
-semantic
-hybrid
-sentence-to-chunk
-proposition-to-chunk
-```
-
-Hybrid retrieval 可以组合：
-
-```text
-keyword score + embedding similarity score
-```
-
-fine-to-chunk 模式复用当前 parent aggregation 逻辑：
-
-```text
-sentence/proposition retrieve -> parent chunk aggregation -> context selection
-```
-
-### 7. Evaluation Overlay
-
-对于已经存在于 `evaluation/questions.jsonl` 中的问题，可以在回答后展示实验评估信息：
-
-- matched gold items
-- selected gold recall
-- selected relevance precision
-- answer F1 / recall
-
-这部分应该作为实验调试功能，而不是面向普通用户的回答质量保证。
+这些都不是第一版必须功能。
 
 ## 第一个里程碑
 
-第一版可用功能应该包括：
+第一版可用功能：
 
 ```text
-FastAPI /search
-React 关键词检索页面
-命中关键词高亮
-source/page 展示
+FastAPI /ask
+React 问答页面
+输入问题
+展示最终回答
+加载和错误状态
 ```
 
-不要一开始就做聊天页面。关键词检索更简单、更容易验证，也更适合检查语料中是否存在预期证据。
+这一步完成后，系统就可以作为实验室内部知识问答系统试用。
+
+第一版启动方式：
+
+```bash
+uvicorn api.server:app --host 127.0.0.1 --port 8000
+```
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+前端默认调用：
+
+```text
+http://127.0.0.1:8000
+```
+
+如果需要修改 API 地址，在 `frontend/.env` 中设置：
+
+```text
+VITE_API_BASE_URL=http://127.0.0.1:8000
+```
 
 ## 第二个里程碑
 
 增加：
 
 ```text
-POST /ask
-问答页面
-retrieved/selected context 面板
-token usage 展示
+当前会话问答历史
+后端 run_id 记录
+更稳定的错误处理
+默认参数配置文件
 ```
 
-完成这一步后，系统就具备“可解释知识库问答”的基本形态。
+这一步让系统更适合给其他人持续使用。
 
 ## 第三个里程碑
 
-增加：
+增加个人研究调试能力，但不暴露给普通用户：
 
 ```text
-实验结果 CSV 查看页面
-granularity 对比表格
-fine-to-chunk 模式控制
+调试页面 / 管理入口
+run details 查看
+实验 CSV 查看
+retrieval mode 切换
 ```
 
-完成这一步后，前端可以作为当前研究流程的实验分析工作台。
+这一步让系统同时满足两类需求：
+
+```text
+普通用户：只使用问答系统
+个人研究：继续分析检索、context 和实验效果
+```

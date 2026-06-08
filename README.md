@@ -43,6 +43,34 @@ Windows PowerShell experiment steps are documented in
 Frontend implementation order is documented in
 `docs/frontend_implementation_plan.md`.
 
+## Knowledge QA Web App
+
+Start the API from the Python environment that has the project dependencies:
+
+```bash
+uvicorn api.server:app --host 127.0.0.1 --port 8000
+```
+
+If port `8000` is already used, choose another port such as `8001` and point the
+frontend at it with `VITE_API_BASE_URL`.
+
+Start the frontend:
+
+```bash
+cd frontend
+npm install
+VITE_API_BASE_URL=http://127.0.0.1:8000 npm run dev
+```
+
+Open:
+
+```text
+http://127.0.0.1:5173/
+```
+
+The first web version only shows the final answer to users. Retrieval context,
+token usage, and experiment metrics remain in backend run details and CSV files.
+
 ## Usage
 
 Put `.txt`, `.md`, `.markdown`, or `.pdf` files in `data/`, then build the index:
