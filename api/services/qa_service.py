@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import uuid
 from pathlib import Path
 
@@ -15,10 +16,22 @@ def _extract_final_answer(raw_answer: str) -> str:
     text = raw_answer.strip()
     if not text:
         return ""
+
+    if text.startswith("```"):
+        text = re.sub(r"^```(?:json)?\s*", "", text, flags=re.IGNORECASE)
+        text = re.sub(r"\s*```$", "", text).strip()
+
     try:
         parsed = json.loads(text)
     except json.JSONDecodeError:
-        return text
+        match = re.search(r"\{.*\}", text, flags=re.DOTALL)
+        if not match:
+            return text
+        try:
+            parsed = json.loads(match.group(0))
+        except json.JSONDecodeError:
+            return text
+
     if isinstance(parsed, dict) and isinstance(parsed.get("answer"), str):
         return parsed["answer"].strip()
     return text
