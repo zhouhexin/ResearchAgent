@@ -46,7 +46,7 @@ def _extract_final_answer(raw_answer: str) -> str:
 def _find_run_id(run_label: str) -> str | None:
     """Find the run id saved by `answer_query` for this API request."""
     candidates = sorted(
-        config.RUNS_DIR.glob(f"{run_label}_*.json"),
+        settings.API_RUNS_DIR.glob(f"{run_label}_*.json"),
         key=lambda path: path.stat().st_mtime,
         reverse=True,
     )
@@ -73,6 +73,7 @@ def ask_public_question(query: str) -> dict:
         compression=settings.API_COMPRESSION,
         compression_stage=settings.API_COMPRESSION_STAGE,
         temperature=settings.API_TEMPERATURE,
+        runs_dir=settings.API_RUNS_DIR,
         run_label=run_label,
         dry_run=False,
     )
