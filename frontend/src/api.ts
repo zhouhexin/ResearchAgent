@@ -4,20 +4,44 @@ export interface AskResponse {
   error?: string | null;
 }
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:8000";
+const configuredApiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+const fallbackApiBaseUrl = "http://127.0.0.1:8001";
+
+function getApiBaseUrls(): string[] {
+  const candidates = [configuredApiBaseUrl, fallbackApiBaseUrl]
+    .filter((url): url is string => Boolean(url))
+    .map((url) => url.replace(/\/$/, ""));
+
+  return Array.from(new Set(candidates));
+}
 
 export async function askQuestion(query: string): Promise<AskResponse> {
-  const response = await fetch(`${API_BASE_URL}/ask`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query }),
-  });
+  let lastError: unknown;
 
-  if (!response.ok) {
-    throw new Error(`请求失败：${response.status}`);
+  for (const apiBaseUrl of getApiBaseUrls()) {
+    try {
+      const response = await fetch(`${apiBaseUrl}/ask`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ query }),
+      });
+
+      if (!response.ok) {
+        lastError = new Error(`请求失败：${response.status}`);
+        continue;
+      }
+
+      return (await response.json()) as AskResponse;
+    } catch (error) {
+      lastError = error;
+    }
   }
 
-  return (await response.json()) as AskResponse;
+  if (lastError instanceof Error) {
+    throw lastError;
+  }
+
+  throw new Error("请求失败，请检查后端服务是否已启动。");
 }
