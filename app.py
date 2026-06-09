@@ -16,7 +16,7 @@ from compression.summarize import compress_chunks
 from evaluation.logger import create_run_id, log_result, save_run_details
 from evaluation.token_counter import count_context_tokens, count_tokens
 from llm.minimax_client import MiniMaxClient
-from prompt.builder import build_prompt
+from prompt.builder import build_prompt, build_public_qa_prompt
 from retrieval.embed import Embedder
 from retrieval.faiss_store import FaissStore
 from retrieval.retriever import Retriever
@@ -215,6 +215,7 @@ def answer_query(
     retrieved_chunks_override: list[dict] | None = None,
     temperature: float | None = None,
     runs_dir: Path | None = None,
+    prompt_mode: str = "experiment",
 ) -> str:
     """Retrieve context and answer a user query."""
     if retrieved_chunks_override is None:
@@ -307,7 +308,12 @@ def answer_query(
         _original_context_tokens(contexts),
     )
 
-    prompt = build_prompt(query, contexts)
+    if prompt_mode == "experiment":
+        prompt = build_prompt(query, contexts)
+    elif prompt_mode == "public_qa":
+        prompt = build_public_qa_prompt(query, contexts)
+    else:
+        raise ValueError(f"Unknown prompt mode: {prompt_mode}")
     context_tokens = count_context_tokens(contexts)
     prompt_token_estimate = count_tokens(prompt)
     run_stage = compression_info.get("stage", compression_stage)

@@ -74,6 +74,7 @@ def ask_public_question(query: str) -> dict:
         compression_stage=settings.API_COMPRESSION_STAGE,
         temperature=settings.API_TEMPERATURE,
         runs_dir=settings.API_RUNS_DIR,
+        prompt_mode=settings.API_PROMPT_MODE,
         run_label=run_label,
         dry_run=False,
     )

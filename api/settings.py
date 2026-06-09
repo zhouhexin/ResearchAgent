@@ -16,3 +16,4 @@ API_COMPRESSION_STAGE = os.getenv("QA_API_COMPRESSION_STAGE", "after-allocation"
 API_TEMPERATURE = float(os.getenv("QA_API_TEMPERATURE", "0.0"))
 API_RUN_LABEL_PREFIX = os.getenv("QA_API_RUN_LABEL_PREFIX", "web")
 API_RUNS_DIR = Path(os.getenv("QA_API_RUNS_DIR", str(config.BASE_DIR / "experiments" / "web_runs")))
+API_PROMPT_MODE = os.getenv("QA_API_PROMPT_MODE", "public_qa")

@@ -45,6 +45,7 @@ class QaApiTemperatureTest(unittest.TestCase):
         self.assertEqual(result["answer"], "ok")
         self.assertEqual(captured.get("temperature"), 0.0)
         self.assertEqual(captured.get("runs_dir"), "experiments/web_runs")
+        self.assertEqual(captured.get("prompt_mode"), "public_qa")
 
 
 if __name__ == "__main__":
