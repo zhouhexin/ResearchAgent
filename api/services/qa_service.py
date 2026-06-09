@@ -11,9 +11,15 @@ import config
 from api import settings
 
 
+def _strip_thinking_blocks(text: str) -> str:
+    """Remove model-visible reasoning blocks before displaying the answer."""
+    cleaned = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL | re.IGNORECASE)
+    return cleaned.strip()
+
+
 def _extract_final_answer(raw_answer: str) -> str:
     """Return a display-friendly answer string from the model response."""
-    text = raw_answer.strip()
+    text = _strip_thinking_blocks(raw_answer)
     if not text:
         return ""
 
@@ -33,7 +39,7 @@ def _extract_final_answer(raw_answer: str) -> str:
             return text
 
     if isinstance(parsed, dict) and isinstance(parsed.get("answer"), str):
-        return parsed["answer"].strip()
+        return _strip_thinking_blocks(parsed["answer"])
     return text
 
 
