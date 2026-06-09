@@ -72,6 +72,7 @@ def ask_public_question(query: str) -> dict:
         context_budget=settings.API_CONTEXT_BUDGET,
         compression=settings.API_COMPRESSION,
         compression_stage=settings.API_COMPRESSION_STAGE,
+        temperature=settings.API_TEMPERATURE,
         run_label=run_label,
         dry_run=False,
     )

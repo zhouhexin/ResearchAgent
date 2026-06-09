@@ -213,6 +213,7 @@ def answer_query(
     run_label: str = "",
     dry_run: bool = False,
     retrieved_chunks_override: list[dict] | None = None,
+    temperature: float | None = None,
 ) -> str:
     """Retrieve context and answer a user query."""
     if retrieved_chunks_override is None:
@@ -343,7 +344,7 @@ def answer_query(
         print(f"\nRun details saved to {details_path}")
         return prompt
 
-    result = MiniMaxClient().chat_with_usage(prompt)
+    result = MiniMaxClient().chat_with_usage(prompt, temperature=temperature)
     answer = result.content
     print(answer)
 

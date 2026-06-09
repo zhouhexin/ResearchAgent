@@ -12,4 +12,5 @@ API_CONTEXT_BUDGET = int(os.getenv("QA_API_CONTEXT_BUDGET", str(config.CONTEXT_B
 API_STRATEGY = os.getenv("QA_API_STRATEGY", "baseline")
 API_COMPRESSION = os.getenv("QA_API_COMPRESSION", "none")
 API_COMPRESSION_STAGE = os.getenv("QA_API_COMPRESSION_STAGE", "after-allocation")
+API_TEMPERATURE = float(os.getenv("QA_API_TEMPERATURE", "0.0"))
 API_RUN_LABEL_PREFIX = os.getenv("QA_API_RUN_LABEL_PREFIX", "web")
