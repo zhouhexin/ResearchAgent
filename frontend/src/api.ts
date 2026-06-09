@@ -4,6 +4,18 @@ export interface AskResponse {
   error?: string | null;
 }
 
+export interface FeedbackPayload {
+  run_id?: string | null;
+  query: string;
+  answer: string;
+  rating: "accurate" | "inaccurate";
+}
+
+export interface FeedbackResponse {
+  ok: boolean;
+  error?: string | null;
+}
+
 const configuredApiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 const fallbackApiBaseUrl = "http://127.0.0.1:8001";
 
@@ -16,16 +28,24 @@ function getApiBaseUrls(): string[] {
 }
 
 export async function askQuestion(query: string): Promise<AskResponse> {
+  return postJson<AskResponse>("/ask", { query });
+}
+
+export async function submitFeedback(payload: FeedbackPayload): Promise<FeedbackResponse> {
+  return postJson<FeedbackResponse>("/feedback", payload);
+}
+
+async function postJson<TResponse>(path: string, payload: unknown): Promise<TResponse> {
   let lastError: unknown;
 
   for (const apiBaseUrl of getApiBaseUrls()) {
     try {
-      const response = await fetch(`${apiBaseUrl}/ask`, {
+      const response = await fetch(`${apiBaseUrl}${path}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ query }),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
@@ -33,7 +53,7 @@ export async function askQuestion(query: string): Promise<AskResponse> {
         continue;
       }
 
-      return (await response.json()) as AskResponse;
+      return (await response.json()) as TResponse;
     } catch (error) {
       lastError = error;
     }

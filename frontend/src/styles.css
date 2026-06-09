@@ -90,6 +90,18 @@ body {
   font-size: 16px;
 }
 
+.feedback-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.feedback-alert {
+  margin-top: 12px;
+}
+
 .history-sider {
   margin: 32px 32px 32px 0;
   padding: 16px;

@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Alert, Button, ConfigProvider, Empty, Input, Layout, List, Typography } from "antd";
 import zhCN from "antd/locale/zh_CN";
-import { askQuestion } from "./api";
+import { askQuestion, submitFeedback } from "./api";
 import "./styles.css";
 
 const { Header, Content, Sider } = Layout;
@@ -9,10 +9,13 @@ const { Text, Title, Paragraph } = Typography;
 
 interface HistoryItem {
   id: string;
+  runId?: string | null;
   question: string;
   answer: string;
   createdAt: string;
 }
+
+type FeedbackRating = "accurate" | "inaccurate";
 
 function formatTime(date: Date): string {
   return date.toLocaleTimeString("zh-CN", {
@@ -23,9 +26,13 @@ function formatTime(date: Date): string {
 
 export default function App() {
   const [query, setQuery] = useState("");
-  const [answer, setAnswer] = useState("");
+  const [currentAnswer, setCurrentAnswer] = useState<HistoryItem | null>(null);
   const [history, setHistory] = useState<HistoryItem[]>([]);
   const [loading, setLoading] = useState(false);
+  const [feedbackLoading, setFeedbackLoading] = useState(false);
+  const [feedbackPendingRating, setFeedbackPendingRating] = useState<FeedbackRating | null>(null);
+  const [feedbackStatus, setFeedbackStatus] = useState<FeedbackRating | null>(null);
+  const [feedbackError, setFeedbackError] = useState("");
   const [error, setError] = useState("");
 
   const canSubmit = useMemo(() => query.trim().length > 0 && !loading, [query, loading]);
@@ -39,7 +46,9 @@ export default function App() {
 
     setLoading(true);
     setError("");
-    setAnswer("");
+    setFeedbackError("");
+    setFeedbackStatus(null);
+    setCurrentAnswer(null);
 
     try {
       const result = await askQuestion(trimmed);
@@ -48,16 +57,13 @@ export default function App() {
         return;
       }
       const finalAnswer = result.answer || "没有生成可展示的回答。";
-      setAnswer(finalAnswer);
-      setHistory((items) => [
-        {
-          id: `${Date.now()}`,
-          question: trimmed,
-          answer: finalAnswer,
-          createdAt: formatTime(new Date()),
-        },
-        ...items,
-      ]);
+      setCurrentAnswer({
+        id: result.run_id || `${Date.now()}`,
+        runId: result.run_id ?? null,
+        question: trimmed,
+        answer: finalAnswer,
+        createdAt: formatTime(new Date()),
+      });
     } catch (exc) {
       setError(exc instanceof Error ? exc.message : "请求失败，请稍后重试。");
     } finally {
@@ -65,9 +71,50 @@ export default function App() {
     }
   }
 
+  async function markFeedback(rating: FeedbackRating) {
+    if (!currentAnswer) {
+      return;
+    }
+
+    setFeedbackLoading(true);
+    setFeedbackPendingRating(rating);
+    setFeedbackError("");
+
+    try {
+      const result = await submitFeedback({
+        run_id: currentAnswer.runId,
+        query: currentAnswer.question,
+        answer: currentAnswer.answer,
+        rating,
+      });
+      if (!result.ok) {
+        setFeedbackError(result.error || "反馈保存失败。");
+        return;
+      }
+
+      setFeedbackStatus(rating);
+      if (rating === "accurate") {
+        setHistory((items) => {
+          const nextItems = items.filter((item) => item.id !== currentAnswer.id);
+          return [currentAnswer, ...nextItems];
+        });
+      } else {
+        setHistory((items) => items.filter((item) => item.id !== currentAnswer.id));
+      }
+    } catch (exc) {
+      setFeedbackError(exc instanceof Error ? exc.message : "反馈保存失败。");
+    } finally {
+      setFeedbackLoading(false);
+      setFeedbackPendingRating(null);
+    }
+  }
+
   function clearCurrent() {
     setQuery("");
-    setAnswer("");
+    setCurrentAnswer(null);
+    setFeedbackStatus(null);
+    setFeedbackPendingRating(null);
+    setFeedbackError("");
     setError("");
   }
 
@@ -113,14 +160,41 @@ export default function App() {
                 <Text strong>最终回答</Text>
               </div>
               {error ? <Alert type="error" showIcon message={error} /> : null}
-              {!error && !answer && !loading ? (
+              {!error && !currentAnswer && !loading ? (
                 <Empty description="提交问题后，这里会显示最终回答。" />
               ) : null}
               {loading ? <Alert type="info" showIcon message="正在生成回答，请稍候。" /> : null}
-              {answer ? (
-                <Paragraph className="answer-text">
-                  {answer}
-                </Paragraph>
+              {currentAnswer ? (
+                <>
+                  <Paragraph className="answer-text">
+                    {currentAnswer.answer}
+                  </Paragraph>
+                  <div className="feedback-actions">
+                    <Text type="secondary">这个回答是否准确？</Text>
+                    <Button
+                      type={feedbackStatus === "accurate" ? "primary" : "default"}
+                      loading={feedbackLoading && feedbackPendingRating === "accurate"}
+                      disabled={feedbackLoading}
+                      onClick={() => markFeedback("accurate")}
+                    >
+                      准确
+                    </Button>
+                    <Button
+                      danger={feedbackStatus === "inaccurate"}
+                      loading={feedbackLoading && feedbackPendingRating === "inaccurate"}
+                      disabled={feedbackLoading}
+                      onClick={() => markFeedback("inaccurate")}
+                    >
+                      不准确
+                    </Button>
+                    {feedbackStatus ? (
+                      <Text type="secondary">
+                        已标记：{feedbackStatus === "accurate" ? "准确" : "不准确"}
+                      </Text>
+                    ) : null}
+                  </div>
+                  {feedbackError ? <Alert className="feedback-alert" type="error" showIcon message={feedbackError} /> : null}
+                </>
               ) : null}
             </section>
           </Content>
@@ -142,7 +216,10 @@ export default function App() {
                       className="history-button"
                       onClick={() => {
                         setQuery(item.question);
-                        setAnswer(item.answer);
+                        setCurrentAnswer(item);
+                        setFeedbackStatus("accurate");
+                        setFeedbackPendingRating(null);
+                        setFeedbackError("");
                         setError("");
                       }}
                     >

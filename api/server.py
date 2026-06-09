@@ -5,7 +5,8 @@ from __future__ import annotations
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from api.schemas import AskRequest, AskResponse, HealthResponse
+from api.schemas import AskRequest, AskResponse, FeedbackRequest, FeedbackResponse, HealthResponse
+from api.services.feedback_service import record_feedback
 from api.services.qa_service import ask_public_question
 
 
@@ -37,3 +38,18 @@ def ask(request: AskRequest) -> AskResponse:
     except Exception as exc:  # noqa: BLE001 - API boundary returns safe error text.
         return AskResponse(answer="", run_id=None, error=str(exc))
     return AskResponse(**result)
+
+
+@app.post("/feedback", response_model=FeedbackResponse)
+def feedback(request: FeedbackRequest) -> FeedbackResponse:
+    """Persist user feedback for a displayed answer."""
+    try:
+        record_feedback(
+            run_id=request.run_id,
+            query=request.query.strip(),
+            answer=request.answer.strip(),
+            rating=request.rating,
+        )
+    except Exception as exc:  # noqa: BLE001 - API boundary returns safe error text.
+        return FeedbackResponse(ok=False, error=str(exc))
+    return FeedbackResponse(ok=True)

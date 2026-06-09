@@ -36,6 +36,7 @@ frontend/vite.config.d.ts
 # Runtime logs and generated experiment details.
 logs/
 experiments/runs/
+experiments/web_feedback.jsonl
 
 # DenseX/generated retrieval artifacts. Keep the main FAISS index in storage/
 # because it lets a fresh clone run the existing baseline immediately.

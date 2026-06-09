@@ -25,6 +25,22 @@ class AskResponse(BaseModel):
     error: Optional[str] = None
 
 
+class FeedbackRequest(BaseModel):
+    """User feedback for one public QA answer."""
+
+    run_id: Optional[str] = None
+    query: str = Field(..., min_length=1, max_length=2000)
+    answer: str = Field(..., min_length=1)
+    rating: str = Field(..., pattern="^(accurate|inaccurate)$")
+
+
+class FeedbackResponse(BaseModel):
+    """Feedback write result."""
+
+    ok: bool
+    error: Optional[str] = None
+
+
 class HealthResponse(BaseModel):
     """Health check response."""
 
