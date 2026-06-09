@@ -25,6 +25,8 @@ class RunTopkSummary:
     retrieved_rows: list[dict]
     overlap_with_first: int
     same_order_as_first: bool
+    selected_overlap_with_first: int
+    selected_same_order_as_first: bool
 
 
 def _load_json(path: Path) -> dict | None:
@@ -103,6 +105,8 @@ def summarize_runs(
                 retrieved_rows=retrieved_rows,
                 overlap_with_first=0,
                 same_order_as_first=False,
+                selected_overlap_with_first=0,
+                selected_same_order_as_first=False,
             )
         )
         if len(summaries) >= limit:
@@ -113,6 +117,8 @@ def summarize_runs(
 
     first_ids = summaries[0].retrieved_ids
     first_id_set = set(first_ids)
+    first_selected_ids = summaries[0].selected_ids
+    first_selected_id_set = set(first_selected_ids)
     return [
         RunTopkSummary(
             run_id=item.run_id,
@@ -123,6 +129,8 @@ def summarize_runs(
             retrieved_rows=item.retrieved_rows,
             overlap_with_first=len(set(item.retrieved_ids) & first_id_set),
             same_order_as_first=_same_order(item.retrieved_ids, first_ids),
+            selected_overlap_with_first=len(set(item.selected_ids) & first_selected_id_set),
+            selected_same_order_as_first=_same_order(item.selected_ids, first_selected_ids),
         )
         for item in summaries
     ]
@@ -137,7 +145,11 @@ def format_report(summaries: list[RunTopkSummary], *, show_chunks: bool) -> str:
         f"Matched runs: {len(summaries)}",
         f"Reference run: {summaries[0].run_id}",
         "",
-        "run_id\ttop_k\tretrieved_count\tselected_count\toverlap_with_first\tsame_order_as_first",
+        (
+            "run_id\ttop_k\tretrieved_count\tselected_count\t"
+            "overlap_with_first\tsame_order_as_first\t"
+            "selected_overlap_with_first\tselected_same_order_as_first"
+        ),
     ]
     for item in summaries:
         lines.append(
@@ -149,6 +161,8 @@ def format_report(summaries: list[RunTopkSummary], *, show_chunks: bool) -> str:
                     str(len(item.selected_ids)),
                     str(item.overlap_with_first),
                     "yes" if item.same_order_as_first else "no",
+                    str(item.selected_overlap_with_first),
+                    "yes" if item.selected_same_order_as_first else "no",
                 ]
             )
         )

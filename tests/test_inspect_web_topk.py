@@ -31,18 +31,21 @@ class InspectWebTopkTest(unittest.TestCase):
                 run_id="web_a",
                 query="same question",
                 chunk_ids=["c1", "c2", "c3"],
+                selected_ids=["c1", "c2"],
             )
             self._write_run(
                 runs_dir / "web_b.json",
                 run_id="web_b",
                 query="same question",
                 chunk_ids=["c1", "c3", "c2"],
+                selected_ids=["c2", "c1"],
             )
             self._write_run(
                 runs_dir / "web_c.json",
                 run_id="web_c",
                 query="other question",
                 chunk_ids=["x1"],
+                selected_ids=["x1"],
             )
             os.utime(runs_dir / "web_a.json", (3, 3))
             os.utime(runs_dir / "web_b.json", (2, 2))
@@ -58,8 +61,16 @@ class InspectWebTopkTest(unittest.TestCase):
         self.assertEqual(summaries[0].retrieved_ids, ["c1", "c2", "c3"])
         self.assertEqual(summaries[0].overlap_with_first, 3)
         self.assertTrue(summaries[0].same_order_as_first)
+        self.assertEqual(summaries[0].selected_overlap_with_first, 2)
+        self.assertTrue(summaries[0].selected_same_order_as_first)
         self.assertEqual(summaries[1].overlap_with_first, 3)
         self.assertFalse(summaries[1].same_order_as_first)
+        self.assertEqual(summaries[1].selected_overlap_with_first, 2)
+        self.assertFalse(summaries[1].selected_same_order_as_first)
+
+        report = module.format_report(summaries, show_chunks=False)
+        self.assertIn("selected_overlap_with_first", report)
+        self.assertIn("selected_same_order_as_first", report)
 
     def _write_run(
         self,
@@ -68,6 +79,7 @@ class InspectWebTopkTest(unittest.TestCase):
         run_id: str,
         query: str,
         chunk_ids: list[str],
+        selected_ids: list[str],
     ) -> None:
         payload = {
             "run_id": run_id,
@@ -82,7 +94,7 @@ class InspectWebTopkTest(unittest.TestCase):
                 }
                 for index, chunk_id in enumerate(chunk_ids)
             ],
-            "selected_chunks": [],
+            "selected_chunks": [{"id": chunk_id} for chunk_id in selected_ids],
         }
         path.write_text(json.dumps(payload), encoding="utf-8")
 
