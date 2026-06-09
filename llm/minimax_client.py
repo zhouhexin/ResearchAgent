@@ -41,7 +41,7 @@ class MiniMaxClient:
             base_url=base_url or config.MINIMAX_BASE_URL,
         )
 
-    def chat_with_usage(self, prompt: str) -> ChatResult:
+    def chat_with_usage(self, prompt: str, temperature: float | None = None) -> ChatResult:
         """Send a single-turn chat request and return token usage if provided."""
         response = self.client.chat.completions.create(
             model=self.model,
@@ -49,7 +49,7 @@ class MiniMaxClient:
                 {"role": "system", "content": "你是一个严谨、可引用资料的研究助手。"},
                 {"role": "user", "content": prompt},
             ],
-            temperature=config.TEMPERATURE,
+            temperature=config.TEMPERATURE if temperature is None else temperature,
             max_tokens=config.MAX_LLM_TOKENS,
         )
         usage = getattr(response, "usage", None)
@@ -65,6 +65,6 @@ class MiniMaxClient:
             total_tokens=total_tokens,
         )
 
-    def chat(self, prompt: str) -> str:
+    def chat(self, prompt: str, temperature: float | None = None) -> str:
         """Send a single-turn chat request and return only the text content."""
-        return self.chat_with_usage(prompt).content
+        return self.chat_with_usage(prompt, temperature=temperature).content

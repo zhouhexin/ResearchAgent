@@ -213,6 +213,8 @@ def answer_query(
     run_label: str = "",
     dry_run: bool = False,
     retrieved_chunks_override: list[dict] | None = None,
+    temperature: float | None = None,
+    runs_dir: Path | None = None,
 ) -> str:
     """Retrieve context and answer a user query."""
     if retrieved_chunks_override is None:
@@ -316,7 +318,9 @@ def answer_query(
     if safe_run_label:
         run_prefix = f"{safe_run_label}_{run_prefix}"
     run_id = create_run_id(run_prefix)
-    details_path = config.RUNS_DIR / f"{run_id}.json"
+    details_dir = runs_dir or config.RUNS_DIR
+    details_dir.mkdir(parents=True, exist_ok=True)
+    details_path = details_dir / f"{run_id}.json"
 
     if dry_run:
         print(prompt)
@@ -343,7 +347,7 @@ def answer_query(
         print(f"\nRun details saved to {details_path}")
         return prompt
 
-    result = MiniMaxClient().chat_with_usage(prompt)
+    result = MiniMaxClient().chat_with_usage(prompt, temperature=temperature)
     answer = result.content
     print(answer)
 

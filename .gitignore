@@ -20,6 +20,15 @@ venv/
 env/
 *.egg-info/
 
+# Frontend dependencies and build output.
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+
 # IDE/editor state.
 .idea/
 .vscode/
@@ -27,6 +36,8 @@ env/
 # Runtime logs and generated experiment details.
 logs/
 experiments/runs/
+experiments/web_runs/
+experiments/web_feedback.jsonl
 
 # DenseX/generated retrieval artifacts. Keep the main FAISS index in storage/
 # because it lets a fresh clone run the existing baseline immediately.
