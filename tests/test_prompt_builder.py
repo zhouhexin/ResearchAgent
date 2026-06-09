@@ -15,6 +15,8 @@ class PromptBuilderTest(unittest.TestCase):
         self.assertIn("实验室知识库问答系统", prompt)
         self.assertIn("不要输出 JSON", prompt)
         self.assertIn("不要输出 <think>", prompt)
+        self.assertIn("不要使用 Markdown 加粗", prompt)
+        self.assertIn("首次提到论文时必须使用论文全称", prompt)
         self.assertIn("当前资料中没有找到足够依据", prompt)
         self.assertIn("DepthDark uses low-light data.", prompt)
 
