@@ -5,6 +5,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from densex.corpus import deduplicate_units_by_text
+
 
 def load_parent_chunks(metadata_path: Path) -> dict[str, dict]:
     """Load original chunk metadata keyed by chunk id."""
@@ -25,6 +27,7 @@ def aggregate_fine_hits_to_parent_chunks(
     parent_top_k: int,
     top_child_count: int = 3,
     child_sum_weight: float = 0.1,
+    fine_hit_dedup: str = "none",
 ) -> list[dict]:
     """Convert sentence/proposition hits into scored parent chunks.
 
@@ -44,8 +47,13 @@ def aggregate_fine_hits_to_parent_chunks(
         grouped.setdefault(parent_id, []).append(hit)
 
     candidates: list[dict] = []
+    if fine_hit_dedup not in {"none", "exact-per-parent"}:
+        raise ValueError(f"Unsupported fine hit dedup mode: {fine_hit_dedup}")
+
     for parent_id, hits in grouped.items():
         ranked_hits = sorted(hits, key=lambda item: float(item.get("score") or 0.0), reverse=True)
+        if fine_hit_dedup == "exact-per-parent":
+            ranked_hits = deduplicate_units_by_text(ranked_hits)
         top_scores = [float(hit.get("score") or 0.0) for hit in ranked_hits[:top_child_count]]
         max_score = top_scores[0] if top_scores else 0.0
         aggregate_score = max_score + child_sum_weight * sum(top_scores)
@@ -55,6 +63,8 @@ def aggregate_fine_hits_to_parent_chunks(
         parent["fine_to_chunk"] = {
             "parent_chunk_id": parent_id,
             "matched_child_count": len(hits),
+            "deduplicated_child_count": len(ranked_hits),
+            "fine_hit_dedup": fine_hit_dedup,
             "max_child_score": max_score,
             "top_child_score_sum": sum(top_scores),
             "top_child_ids": [hit.get("id") for hit in ranked_hits[:top_child_count]],

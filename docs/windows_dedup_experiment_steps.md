@@ -1,8 +1,21 @@
-# Windows Dedup Experiment Steps
+# Windows Chunk-Aware Dedup Experiment Steps
 
-本文件用于在 Windows 服务器上执行 sentence/proposition 精确去重后的对比实验。
-它不会覆盖已有的 `qa_v2` 或 `qa_parent_v1` 结果，新增结果统一使用 `qa_dedup_v1`
-前缀。
+本文件用于在 Windows 服务器上执行 fine-to-chunk 的 chunk-aware 精确去重实验。
+主实验不需要构建 `sentence_dedup` 或 `proposition_dedup` 索引，而是使用原始
+`sentence` / `proposition` 索引，在检索后、聚合回 parent chunk 时去重。
+
+核心流程：
+
+```text
+query
+-> 检索更多 sentence/proposition
+-> 按 parent_chunk_id 分组
+-> 每个 parent chunk 内部做规范化精确去重
+-> 聚合 parent chunk 分数
+-> 选 parent chunk 进入 context
+```
+
+这样可以避免全局去重导致某些 chunk 永远失去召回机会。
 
 ## 1. 更新代码
 
@@ -77,107 +90,116 @@ python experiments\densex_prepare_corpus.py `
   --max-new-tokens 512
 ```
 
-## 4. 生成 Dedup Corpus
+## 4. 构建原始 Fine-Grained 索引
 
-生成 `sentence_dedup.jsonl` 和 `proposition_dedup.jsonl`：
-
-```powershell
-python experiments\densex_prepare_corpus.py `
-  --granularities sentence_dedup,proposition_dedup `
-  --metadata storage\metadata.json
-```
-
-说明：
-
-- `sentence_dedup` 会从原始 chunk 重新切 sentence，然后做全局规范化精确去重。
-- `proposition_dedup` 会优先复用已有 `experiments\densex_corpus\proposition.jsonl`，
-  然后做全局规范化精确去重。
-- 去重方式不是 embedding 语义去重，只删除规范化后完全相同的文本。
-
-可以检查去重前后的数量：
-
-```powershell
-@'
-from pathlib import Path
-from densex.corpus import read_jsonl
-
-base = Path("experiments/densex_corpus")
-for name in ["sentence", "sentence_dedup", "proposition", "proposition_dedup"]:
-    path = base / f"{name}.jsonl"
-    rows = read_jsonl(path)
-    print(f"{name}: {len(rows)}")
-'@ | python
-```
-
-## 5. 构建 Dedup FAISS 索引
-
-如果只跑 dedup 实验：
+本实验使用原始 `sentence` 和 `proposition` 索引：
 
 ```powershell
 python experiments\densex_build_index.py `
-  --granularities sentence_dedup,proposition_dedup
-```
-
-如果还需要重新构建原始 fine-grained 索引用于对比：
-
-```powershell
-python experiments\densex_build_index.py `
-  --granularities sentence,proposition,sentence_dedup,proposition_dedup
+  --granularities sentence,proposition
 ```
 
 确认存在：
 
 ```text
-storage\densex\sentence_dedup
-storage\densex\proposition_dedup
+storage\densex\sentence
+storage\densex\proposition
 ```
 
-## 6. 运行 Dedup Fine-To-Chunk 实验
+## 5. 运行原始 Parent Baseline
 
-运行 sentence/proposition 去重后的 parent chunk 回填实验：
+如果你已经有 `qa_parent_v1_densex_results.csv`，可以跳过本节。
 
 ```powershell
 python experiments\run_densex_parent_sweep.py `
   --question-set fixed `
-  --fine-granularities sentence_dedup,proposition_dedup `
+  --fine-granularities sentence,proposition `
   --budgets 500,1000,1500 `
   --fine-top-m 150 `
   --parent-top-k 50 `
   --strategy baseline `
-  --run-label-prefix qa_dedup_v1
+  --run-label-prefix qa_parent_v1
 ```
 
-生成的 run JSON 会保存在：
+评估：
+
+```powershell
+python experiments\evaluate_densex_runs.py `
+  --run-label-prefix qa_parent_v1 `
+  --output experiments\qa_parent_v1_densex_results.csv
+```
+
+## 6. 运行 Chunk-Aware Dedup 实验
+
+建议比 baseline 检索更多 fine hits，例如把 `fine-top-m` 从 150 提到 300 或 500。
+去重发生在 parent chunk 内部，所以不会因为全局去重损失 chunk 覆盖。
+
+推荐先跑 300：
+
+```powershell
+python experiments\run_densex_parent_sweep.py `
+  --question-set fixed `
+  --fine-granularities sentence,proposition `
+  --budgets 500,1000,1500 `
+  --fine-top-m 300 `
+  --parent-top-k 50 `
+  --fine-hit-dedup exact-per-parent `
+  --strategy baseline `
+  --run-label-prefix qa_chunkaware_dedup_v1
+```
+
+如果 300 有提升，再跑 500：
+
+```powershell
+python experiments\run_densex_parent_sweep.py `
+  --question-set fixed `
+  --fine-granularities sentence,proposition `
+  --budgets 500,1000,1500 `
+  --fine-top-m 500 `
+  --parent-top-k 50 `
+  --fine-hit-dedup exact-per-parent `
+  --strategy baseline `
+  --run-label-prefix qa_chunkaware_dedup_m500_v1
+```
+
+run JSON 会保存在：
 
 ```text
 experiments\runs\
 ```
 
-run label 中会包含：
-
-```text
-qa_dedup_v1_sentence_dedup-to-chunk_...
-qa_dedup_v1_proposition_dedup-to-chunk_...
-```
-
 ## 7. 评估 Dedup 结果
+
+评估 top-M=300：
 
 ```powershell
 python experiments\evaluate_densex_runs.py `
-  --run-label-prefix qa_dedup_v1 `
-  --output experiments\qa_dedup_v1_densex_results.csv
+  --run-label-prefix qa_chunkaware_dedup_v1 `
+  --output experiments\qa_chunkaware_dedup_v1_densex_results.csv
 ```
 
-生成简单 summary：
+评估 top-M=500：
 
 ```powershell
+python experiments\evaluate_densex_runs.py `
+  --run-label-prefix qa_chunkaware_dedup_m500_v1 `
+  --output experiments\qa_chunkaware_dedup_m500_v1_densex_results.csv
+```
+
+生成 summary。把 `$inputPath` 和 `$outputPath` 改成你要汇总的结果文件：
+
+```powershell
+$inputPath="experiments/qa_chunkaware_dedup_v1_densex_results.csv"
+$outputPath="experiments/qa_chunkaware_dedup_v1_densex_summary.csv"
+
 @'
 import csv
+import os
 from collections import defaultdict
 from pathlib import Path
 
-input_path = Path("experiments/qa_dedup_v1_densex_results.csv")
-output_path = Path("experiments/qa_dedup_v1_densex_summary.csv")
+input_path = Path(os.environ["INPUT_PATH"])
+output_path = Path(os.environ["OUTPUT_PATH"])
 rows = list(csv.DictReader(input_path.open(encoding="utf-8", newline="")))
 groups = defaultdict(list)
 for row in rows:
@@ -216,17 +238,22 @@ with output_path.open("w", encoding="utf-8", newline="") as file:
         })
 
 print(f"Wrote {output_path}")
-'@ | python
+'@ | set-content tmp_summary.py -Encoding utf8
+
+$env:INPUT_PATH=$inputPath
+$env:OUTPUT_PATH=$outputPath
+python tmp_summary.py
+remove-item tmp_summary.py
 ```
 
 ## 8. 对比结果
 
-重点对比这几个文件：
+重点对比：
 
 ```text
 experiments\qa_parent_v1_densex_results.csv
-experiments\qa_dedup_v1_densex_results.csv
-experiments\qa_dedup_v1_densex_summary.csv
+experiments\qa_chunkaware_dedup_v1_densex_results.csv
+experiments\qa_chunkaware_dedup_m500_v1_densex_results.csv
 ```
 
 主要看：
@@ -242,31 +269,61 @@ token_efficiency
 
 解释方式：
 
-- 如果 `sentence_dedup-to-chunk` 优于 `sentence-to-chunk`，说明 sentence 重复会消耗
-  检索名额或 context token。
-- 如果 `proposition_dedup-to-chunk` 优于 `proposition-to-chunk`，说明 proposition 重复
-  会影响 parent chunk 排序。
-- 如果 F1 没提升但 `context_tokens` 降低，说明去重可能提升 token efficiency。
-- 如果 F1 和 recall 都下降，说明精确去重误删了有用证据，后续要改成按论文或按
-  parent chunk 局部去重。
+- 如果 `qa_chunkaware_dedup_v1` 优于 `qa_parent_v1`，说明 parent chunk 内重复
+  fine hits 会干扰 chunk 排序。
+- 如果 `fine-top-m=500` 优于 `fine-top-m=300`，说明检索更多 fine hits 后再去重
+  可以扩大有效候选覆盖。
+- 如果 F1 没提升但 `selected_gold_recall` 提升，说明去重改善了证据进入 context，
+  但答案生成或 gold alias 仍需要检查。
+- 如果 F1 和 recall 都下降，说明去重或更大的 `fine-top-m` 引入了更多噪声，需要降低
+  `fine-top-m` 或调整聚合权重。
 
-## 9. 可选：只跑 DepthDark
+## 9. 可选：Corpus-Level Dedup 对照
 
-如果先做小范围验证：
+如果你仍想单独测试“去重索引”这个变量，可以额外执行：
+
+```powershell
+python experiments\densex_prepare_corpus.py `
+  --granularities sentence_dedup,proposition_dedup `
+  --metadata storage\metadata.json
+```
+
+```powershell
+python experiments\densex_build_index.py `
+  --granularities sentence_dedup,proposition_dedup
+```
 
 ```powershell
 python experiments\run_densex_parent_sweep.py `
-  --question-set depthdark `
+  --question-set fixed `
   --fine-granularities sentence_dedup,proposition_dedup `
   --budgets 500,1000,1500 `
   --fine-top-m 150 `
   --parent-top-k 50 `
   --strategy baseline `
-  --run-label-prefix depthdark_dedup_v1
+  --run-label-prefix qa_corpus_dedup_v1
+```
+
+这个对照可能损失 chunk 覆盖，因此不作为主实验。
+
+## 10. 可选：只跑 DepthDark
+
+小范围验证 top-M=300：
+
+```powershell
+python experiments\run_densex_parent_sweep.py `
+  --question-set depthdark `
+  --fine-granularities sentence,proposition `
+  --budgets 500,1000,1500 `
+  --fine-top-m 300 `
+  --parent-top-k 50 `
+  --fine-hit-dedup exact-per-parent `
+  --strategy baseline `
+  --run-label-prefix depthdark_chunkaware_dedup_v1
 ```
 
 ```powershell
 python experiments\evaluate_densex_runs.py `
-  --run-label-prefix depthdark_dedup_v1 `
-  --output experiments\depthdark_dedup_v1_densex_results.csv
+  --run-label-prefix depthdark_chunkaware_dedup_v1 `
+  --output experiments\depthdark_chunkaware_dedup_v1_densex_results.csv
 ```

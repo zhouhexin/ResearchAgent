@@ -78,6 +78,12 @@ def main() -> None:
     parser.add_argument("--parent-top-k", type=int, default=50)
     parser.add_argument("--aggregation-top-children", type=int, default=3)
     parser.add_argument("--aggregation-child-sum-weight", type=float, default=0.1)
+    parser.add_argument(
+        "--fine-hit-dedup",
+        default="none",
+        choices=["none", "exact-per-parent"],
+        help="Deduplicate fine hits inside each parent chunk before aggregation",
+    )
     parser.add_argument("--strategy", default="baseline", choices=["baseline", "dynamic", "rerank"])
     parser.add_argument("--run-label-prefix", default="qa_parent_v1")
     parser.add_argument("--dry-run", action="store_true")
@@ -106,6 +112,7 @@ def main() -> None:
                 parent_top_k=args.parent_top_k,
                 top_child_count=args.aggregation_top_children,
                 child_sum_weight=args.aggregation_child_sum_weight,
+                fine_hit_dedup=args.fine_hit_dedup,
             )
             if not parent_candidates:
                 raise RuntimeError(
@@ -118,6 +125,7 @@ def main() -> None:
                     "\n=== "
                     f"qid={question['id']} granularity={granularity}-to-chunk "
                     f"strategy={args.strategy} fine_top_m={args.fine_top_m} "
+                    f"fine_hit_dedup={args.fine_hit_dedup} "
                     f"parent_top_k={args.parent_top_k} budget={budget} "
                     "==="
                 )
