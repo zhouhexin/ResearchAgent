@@ -64,8 +64,25 @@ def _relevance_precision(chunks: list[dict], gold_items: list[dict]) -> float:
     return relevant / len(chunks)
 
 
-def _parse_run_label(label: str, prefix: str) -> tuple[str, str] | tuple[None, None]:
-    match = re.match(rf"{re.escape(prefix)}_([^_]+)_(.+)", label or "")
+def _parse_run_label(
+    label: str,
+    prefix: str,
+    question_ids: set[str] | None = None,
+) -> tuple[str, str] | tuple[None, None]:
+    remainder = (label or "").removeprefix(prefix + "_")
+    if remainder == label:
+        return None, None
+
+    if question_ids:
+        for question_id in sorted(question_ids, key=len, reverse=True):
+            suffix = "_" + question_id
+            if remainder.endswith(suffix):
+                granularity = remainder[: -len(suffix)]
+                if granularity:
+                    return granularity, question_id
+        return None, None
+
+    match = re.match(r"([^_]+)_(.+)", remainder)
     if not match:
         return None, None
     return match.group(1), match.group(2)
@@ -86,7 +103,11 @@ def main() -> None:
         label = run.get("run_label", "")
         if not label.startswith(args.run_label_prefix + "_"):
             continue
-        granularity, question_id = _parse_run_label(label, args.run_label_prefix)
+        granularity, question_id = _parse_run_label(
+            label,
+            args.run_label_prefix,
+            set(questions),
+        )
         if not granularity or question_id not in questions:
             continue
 

@@ -13,6 +13,7 @@ if str(PROJECT_ROOT) not in sys.path:
 import config
 from densex.corpus import (
     append_jsonl,
+    deduplicate_units_by_text,
     load_chunks_from_metadata,
     make_chunk_units,
     make_sentence_units,
@@ -206,18 +207,36 @@ def main() -> None:
         write_jsonl(path, units)
         print(f"Wrote {path}")
 
-    if "proposition" in granularities:
+    if "sentence_dedup" in granularities:
+        path = args.output_dir / "sentence_dedup.jsonl"
+        units = make_sentence_units(chunks, min_chars=args.sentence_min_chars, dedup=True)
+        write_jsonl(path, units)
+        print(f"Wrote {path} ({len(units)} globally deduplicated sentence units)")
+
+    needs_propositions = "proposition" in granularities or "proposition_dedup" in granularities
+    if needs_propositions:
         path = args.output_dir / "proposition.jsonl"
-        _propositionize(
-            chunks=chunks,
-            output_path=path,
-            model_name=args.proposition_model,
-            device=_device_arg(args.device),
-            max_input_tokens=args.max_input_tokens,
-            max_new_tokens=args.max_new_tokens,
-            resume=args.resume,
-        )
-        print(f"Wrote {path}")
+        should_generate = "proposition" in granularities or not path.exists()
+        if should_generate:
+            _propositionize(
+                chunks=chunks,
+                output_path=path,
+                model_name=args.proposition_model,
+                device=_device_arg(args.device),
+                max_input_tokens=args.max_input_tokens,
+                max_new_tokens=args.max_new_tokens,
+                resume=args.resume,
+            )
+            print(f"Wrote {path}")
+        else:
+            print(f"Using existing {path} for proposition_dedup")
+
+    if "proposition_dedup" in granularities:
+        source_path = args.output_dir / "proposition.jsonl"
+        path = args.output_dir / "proposition_dedup.jsonl"
+        units = deduplicate_units_by_text(read_jsonl(source_path))
+        write_jsonl(path, units)
+        print(f"Wrote {path} ({len(units)} globally deduplicated proposition units)")
 
 
 if __name__ == "__main__":

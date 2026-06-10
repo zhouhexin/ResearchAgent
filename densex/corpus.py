@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import re
+import unicodedata
 from pathlib import Path
 from typing import Iterable
 
@@ -73,6 +74,35 @@ def make_chunk_units(chunks: list[dict]) -> list[dict]:
     return units
 
 
+_DEDUP_EDGE_PUNCTUATION = " \t\r\n.,;:!?。！？；：，、()[]{}<>\"'"
+
+
+def _normalized_text_key(text: str) -> str:
+    """Normalize text for exact deduplication without doing semantic matching."""
+    value = unicodedata.normalize("NFKC", text)
+    value = re.sub(r"\s+", " ", value).strip()
+    value = re.sub(r"\s+([.,;:!?。！？；：，、])", r"\1", value)
+    return value.lower().strip(_DEDUP_EDGE_PUNCTUATION)
+
+
+def deduplicate_units_by_text(units: Iterable[dict], *, text_key: str = "text") -> list[dict]:
+    """Keep the first unit for each normalized text string.
+
+    This is deliberately exact-normalized deduplication. It removes repeated
+    text artifacts while avoiding embedding-threshold decisions that could
+    delete distinct evidence sentences.
+    """
+    deduped = []
+    seen = set()
+    for unit in units:
+        key = _normalized_text_key(str(unit.get(text_key, "")))
+        if not key or key in seen:
+            continue
+        deduped.append(unit)
+        seen.add(key)
+    return deduped
+
+
 _SENTENCE_BOUNDARY = re.compile(
     r"(?<=[。！？.!?])\s+|(?<=[。！？.!?])(?=[A-Z0-9\u4e00-\u9fff])"
 )
@@ -107,7 +137,7 @@ def split_sentences(text: str, *, min_chars: int = 30) -> list[str]:
     return merged
 
 
-def make_sentence_units(chunks: list[dict], *, min_chars: int = 30) -> list[dict]:
+def make_sentence_units(chunks: list[dict], *, min_chars: int = 30, dedup: bool = False) -> list[dict]:
     """Create sentence units from chunk text."""
     units = []
     for chunk in chunks:
@@ -126,6 +156,8 @@ def make_sentence_units(chunks: list[dict], *, min_chars: int = 30) -> list[dict
                     "paper_title": paper_title_from_source(source),
                 }
             )
+    if dedup:
+        return deduplicate_units_by_text(units)
     return units
 
 
