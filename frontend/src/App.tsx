@@ -124,7 +124,7 @@ export default function App() {
         <Header className="app-header">
           <div>
             <Title level={3} className="app-title">
-              实验室知识问答系统
+              知识问答系统
             </Title>
             <Text className="app-subtitle">基于论文知识库的问答入口</Text>
           </div>
