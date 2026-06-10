@@ -13,6 +13,15 @@ class AskRequest(BaseModel):
     query: str = Field(..., min_length=1, max_length=2000)
 
 
+class PaperLink(BaseModel):
+    """Local PDF link matched from a public QA answer."""
+
+    id: str
+    title: str
+    preview_url: str
+    download_url: str
+
+
 class AskResponse(BaseModel):
     """User-facing ask response.
 
@@ -22,6 +31,7 @@ class AskResponse(BaseModel):
 
     answer: str
     run_id: Optional[str] = None
+    paper_links: list[PaperLink] = Field(default_factory=list)
     error: Optional[str] = None
 
 

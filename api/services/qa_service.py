@@ -9,6 +9,7 @@ from pathlib import Path
 
 import config
 from api import settings
+from api.services.paper_service import match_papers_in_answer
 
 
 def _strip_thinking_blocks(text: str) -> str:
@@ -88,8 +89,15 @@ def ask_public_question(query: str) -> dict:
         run_label=run_label,
         dry_run=False,
     )
+    answer = _extract_final_answer(raw_answer)
+    try:
+        paper_links = match_papers_in_answer(answer)
+    except Exception:
+        paper_links = []
+
     return {
-        "answer": _extract_final_answer(raw_answer),
+        "answer": answer,
         "run_id": _find_run_id(run_label),
+        "paper_links": paper_links,
         "error": None,
     }

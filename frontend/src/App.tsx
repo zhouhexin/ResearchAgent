@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Alert, Button, ConfigProvider, Empty, Input, Layout, List, Typography } from "antd";
 import zhCN from "antd/locale/zh_CN";
-import { askQuestion, submitFeedback } from "./api";
+import { apiFileUrl, askQuestion, PaperLink, submitFeedback } from "./api";
 import "./styles.css";
 
 const { Header, Content, Sider } = Layout;
@@ -12,6 +12,7 @@ interface HistoryItem {
   runId?: string | null;
   question: string;
   answer: string;
+  paperLinks: PaperLink[];
   createdAt: string;
 }
 
@@ -62,6 +63,7 @@ export default function App() {
         runId: result.run_id ?? null,
         question: trimmed,
         answer: finalAnswer,
+        paperLinks: result.paper_links ?? [],
         createdAt: formatTime(new Date()),
       });
     } catch (exc) {
@@ -169,6 +171,30 @@ export default function App() {
                   <Paragraph className="answer-text">
                     {currentAnswer.answer}
                   </Paragraph>
+                  {currentAnswer.paperLinks.length ? (
+                    <div className="paper-links">
+                      <Text strong>相关论文</Text>
+                      <List
+                        size="small"
+                        dataSource={currentAnswer.paperLinks}
+                        renderItem={(paper) => (
+                          <List.Item className="paper-link-item">
+                            <div className="paper-link-content">
+                              <Text>{paper.title}</Text>
+                              <div className="paper-link-actions">
+                                <a href={apiFileUrl(paper.preview_url)} target="_blank" rel="noreferrer">
+                                  预览
+                                </a>
+                                <a href={apiFileUrl(paper.download_url)}>
+                                  下载
+                                </a>
+                              </div>
+                            </div>
+                          </List.Item>
+                        )}
+                      />
+                    </div>
+                  ) : null}
                   <div className="feedback-actions">
                     <Text type="secondary">这个回答是否准确？</Text>
                     <Button

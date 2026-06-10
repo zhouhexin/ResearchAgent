@@ -4,7 +4,7 @@
 
 ```text
 Nginx 对外提供前端静态页面
-Nginx 将 /ask、/feedback、/health 转发到 FastAPI
+Nginx 将 /ask、/feedback、/papers/file、/health 转发到 FastAPI
 FastAPI 后端只监听 127.0.0.1:8001
 ```
 
@@ -150,6 +150,10 @@ server {
         proxy_pass http://127.0.0.1:8001/feedback;
     }
 
+    location /papers/file/ {
+        proxy_pass http://127.0.0.1:8001/papers/file/;
+    }
+
     location /health {
         proxy_pass http://127.0.0.1:8001/health;
     }
@@ -219,6 +223,7 @@ http://YOUR_SERVER_IP
 确认以下功能：
 
 - 可以提交问题并得到最终回答。
+- 如果回答中提到本地已有论文，回答下方会展示“预览 / 下载”链接。
 - 回答中不会展示 run id、chunk id、检索细节。
 - 可以点击“准确 / 不准确”提交反馈。
 - 点击“准确”的回答会进入当前会话历史。
@@ -229,6 +234,7 @@ http://YOUR_SERVER_IP
 ```text
 experiments/web_runs/             # 前端问答 run JSON
 experiments/web_feedback.jsonl    # 用户准确性反馈
+experiments/web_paper_index.json  # 本地 PDF 内容标题索引缓存
 ```
 
 实验运行文件仍然位于：
@@ -278,6 +284,28 @@ curl http://127.0.0.1:8001/health
 
 ```bash
 curl http://YOUR_SERVER_IP/health
+```
+
+### 论文预览或下载链接打不开
+
+确认 Nginx 已代理 `/papers/file/`：
+
+```nginx
+location /papers/file/ {
+    proxy_pass http://127.0.0.1:8001/papers/file/;
+}
+```
+
+然后检查后端日志：
+
+```bash
+sudo journalctl -u researchagent-api -f
+```
+
+如果 `experiments/web_paper_index.json` 不存在，重启后端会重新生成：
+
+```bash
+sudo systemctl restart researchagent-api
 ```
 
 ### 回答仍然带旧格式

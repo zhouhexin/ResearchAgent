@@ -102,6 +102,30 @@ body {
   margin-top: 12px;
 }
 
+.paper-links {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #e7edf6;
+}
+
+.paper-link-item {
+  padding-inline: 0;
+}
+
+.paper-link-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.paper-link-actions {
+  display: flex;
+  gap: 12px;
+  white-space: nowrap;
+}
+
 .history-sider {
   margin: 32px 32px 32px 0;
   padding: 16px;

@@ -2,11 +2,13 @@
 
 from __future__ import annotations
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 
 from api.schemas import AskRequest, AskResponse, FeedbackRequest, FeedbackResponse, HealthResponse
 from api.services.feedback_service import record_feedback
+from api.services.paper_service import build_or_update_paper_index, find_paper_path
 from api.services.qa_service import ask_public_question
 
 
@@ -19,6 +21,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.on_event("startup")
+def startup() -> None:
+    """Refresh local PDF title cache when the API process starts."""
+    try:
+        build_or_update_paper_index()
+    except Exception:
+        # Paper links are an optional frontend enhancement; QA must still start.
+        pass
 
 
 @app.get("/health", response_model=HealthResponse)
@@ -53,3 +65,16 @@ def feedback(request: FeedbackRequest) -> FeedbackResponse:
     except Exception as exc:  # noqa: BLE001 - API boundary returns safe error text.
         return FeedbackResponse(ok=False, error=str(exc))
     return FeedbackResponse(ok=True)
+
+
+@app.get("/papers/file/{paper_id}")
+def paper_file(paper_id: str, download: bool = Query(default=False)) -> FileResponse:
+    """Preview or download a local PDF by public paper id."""
+    path = find_paper_path(paper_id)
+    if path is None:
+        raise HTTPException(status_code=404, detail="Paper not found")
+    return FileResponse(
+        path,
+        media_type="application/pdf",
+        filename=path.name if download else None,
+    )

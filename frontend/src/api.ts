@@ -1,7 +1,15 @@
 export interface AskResponse {
   answer: string;
   run_id?: string | null;
+  paper_links?: PaperLink[];
   error?: string | null;
+}
+
+export interface PaperLink {
+  id: string;
+  title: string;
+  preview_url: string;
+  download_url: string;
 }
 
 export interface FeedbackPayload {
@@ -18,6 +26,7 @@ export interface FeedbackResponse {
 
 const configuredApiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 const fallbackApiBaseUrl = "http://127.0.0.1:8001";
+let activeApiBaseUrl: string | null = null;
 
 function getApiBaseUrls(): string[] {
   const candidates = [configuredApiBaseUrl, fallbackApiBaseUrl]
@@ -33,6 +42,11 @@ export async function askQuestion(query: string): Promise<AskResponse> {
 
 export async function submitFeedback(payload: FeedbackPayload): Promise<FeedbackResponse> {
   return postJson<FeedbackResponse>("/feedback", payload);
+}
+
+export function apiFileUrl(path: string): string {
+  const baseUrl = activeApiBaseUrl ?? getApiBaseUrls()[0] ?? fallbackApiBaseUrl;
+  return `${baseUrl}${path}`;
 }
 
 async function postJson<TResponse>(path: string, payload: unknown): Promise<TResponse> {
@@ -53,6 +67,7 @@ async function postJson<TResponse>(path: string, payload: unknown): Promise<TRes
         continue;
       }
 
+      activeApiBaseUrl = apiBaseUrl;
       return (await response.json()) as TResponse;
     } catch (error) {
       lastError = error;
