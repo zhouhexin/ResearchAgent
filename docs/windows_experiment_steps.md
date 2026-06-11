@@ -199,7 +199,84 @@ Interpretation:
 - If fine-to-chunk approaches chunk performance with fewer tokens, fine-grained retrieval is useful.
 - If fine-to-chunk is still weak, inspect proposition quality and retrieval misses before training a new model.
 
-## 10. Optional: Run Only DepthDark
+## 10. Run All Questions
+
+After `evaluation\questions.jsonl` has been expanded, run all QA pairs with a
+separate prefix. This keeps the full-question results separate from earlier
+ACDepth/DepthDark-only runs.
+
+Direct chunk/sentence/proposition comparison:
+
+```powershell
+python experiments\run_fixed_qa_batch.py `
+  --question-set all `
+  --granularities chunk,sentence,proposition `
+  --budgets 500,1000,1500 `
+  --top-k 50 `
+  --strategy baseline `
+  --run-prefix qa_all_v1
+```
+
+Outputs:
+
+```text
+experiments\qa_all_v1_densex_results.csv
+experiments\qa_all_v1_densex_summary.csv
+```
+
+Fine-to-chunk comparison:
+
+```powershell
+python experiments\run_densex_parent_sweep.py `
+  --question-set all `
+  --fine-granularities sentence,proposition `
+  --budgets 500,1000,1500 `
+  --fine-top-m 150 `
+  --parent-top-k 50 `
+  --strategy baseline `
+  --run-label-prefix qa_all_parent_v1
+```
+
+Evaluate:
+
+```powershell
+python experiments\evaluate_densex_runs.py `
+  --run-label-prefix qa_all_parent_v1 `
+  --output experiments\qa_all_parent_v1_densex_results.csv
+```
+
+Quick command check without running the LLM:
+
+```powershell
+python experiments\run_fixed_qa_batch.py `
+  --question-set all `
+  --granularities chunk `
+  --budgets 500 `
+  --run-prefix qa_all_check `
+  --dry-run
+
+python experiments\run_densex_parent_sweep.py `
+  --question-set all `
+  --fine-granularities sentence `
+  --budgets 500 `
+  --run-label-prefix qa_all_parent_check `
+  --dry-run
+```
+
+If the current `evaluation\questions.jsonl` contains N questions, the direct
+comparison with 3 granularities and 3 budgets will produce:
+
+```text
+N questions × 3 granularities × 3 budgets = N × 9 LLM runs
+```
+
+The fine-to-chunk comparison with 2 granularities and 3 budgets will produce:
+
+```text
+N questions × 2 granularities × 3 budgets = N × 6 LLM runs
+```
+
+## 11. Optional: Run Only DepthDark
 
 ```powershell
 python experiments\run_fixed_qa_batch.py `

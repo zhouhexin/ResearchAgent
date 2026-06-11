@@ -8,6 +8,7 @@ import subprocess
 import sys
 from collections import defaultdict
 from datetime import datetime
+import json
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -33,9 +34,25 @@ def _csv(items: list[str]) -> str:
     return ",".join(items)
 
 
+def _load_all_question_ids(path: Path) -> list[str]:
+    question_ids = []
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        item = json.loads(line)
+        question_id = item.get("id")
+        if question_id:
+            question_ids.append(str(question_id))
+    if not question_ids:
+        raise ValueError(f"No questions found in {path}")
+    return question_ids
+
+
 def _question_ids(args: argparse.Namespace) -> str:
     if args.question_ids:
         return args.question_ids
+    if args.question_set == "all":
+        return _csv(_load_all_question_ids(args.questions))
     if args.question_set == "acdepth":
         return _csv(ACDEPTH_QA_IDS)
     if args.question_set == "depthdark":
@@ -102,7 +119,8 @@ def _write_summary(results_path: Path, summary_path: Path) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Run fixed QA DenseX comparison batch")
-    parser.add_argument("--question-set", choices=["fixed", "acdepth", "depthdark"], default="fixed")
+    parser.add_argument("--questions", type=Path, default=PROJECT_ROOT / "evaluation" / "questions.jsonl")
+    parser.add_argument("--question-set", choices=["fixed", "acdepth", "depthdark", "all"], default="fixed")
     parser.add_argument("--question-ids", default="", help="Override question IDs as a comma-separated list")
     parser.add_argument("--granularities", default="chunk,sentence,proposition")
     parser.add_argument("--budgets", default="500,1000,1500")
@@ -150,6 +168,8 @@ def main() -> None:
         run_command = [
             sys.executable,
             "experiments/run_densex_sweep.py",
+            "--questions",
+            str(args.questions),
             "--question-ids",
             question_ids,
             "--granularities",

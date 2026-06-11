@@ -11,9 +11,6 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-import config
-from app import answer_query
-
 
 def _parse_csv(value: str) -> list[str]:
     return [item.strip() for item in value.split(",") if item.strip()]
@@ -23,18 +20,27 @@ def _parse_csv_ints(value: str) -> list[int]:
     return [int(item.strip()) for item in value.split(",") if item.strip()]
 
 
-def _load_questions(path: Path, ids: set[str]) -> list[dict]:
+def _load_questions(path: Path, ids: set[str] | None) -> list[dict]:
     questions = []
     for line in path.read_text(encoding="utf-8").splitlines():
         if not line.strip():
             continue
         item = json.loads(line)
-        if item.get("id") in ids:
+        if ids is None or item.get("id") in ids:
             questions.append(item)
-    missing = ids - {item["id"] for item in questions}
-    if missing:
-        raise ValueError(f"Question ids not found: {sorted(missing)}")
+    if ids is not None:
+        missing = ids - {item["id"] for item in questions}
+        if missing:
+            raise ValueError(f"Question ids not found: {sorted(missing)}")
+    if not questions:
+        raise ValueError(f"No questions selected from {path}")
     return questions
+
+
+def _load_answer_query():
+    from app import answer_query
+
+    return answer_query
 
 
 def main() -> None:
@@ -49,6 +55,7 @@ def main() -> None:
             "always_clear_depth_sota_comparison_methods"
         ),
     )
+    parser.add_argument("--all-questions", action="store_true", help="Run every question in --questions")
     parser.add_argument("--index-base-dir", type=Path, default=PROJECT_ROOT / "storage" / "densex")
     parser.add_argument("--granularities", default="chunk,sentence,proposition")
     parser.add_argument("--budgets", default="500,1000,1500")
@@ -58,10 +65,11 @@ def main() -> None:
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    question_ids = set(_parse_csv(args.question_ids))
+    question_ids = None if args.all_questions else set(_parse_csv(args.question_ids))
     questions = _load_questions(args.questions, question_ids)
     budgets = _parse_csv_ints(args.budgets)
     granularities = _parse_csv(args.granularities)
+    answer_query = None if args.dry_run else _load_answer_query()
 
     for question in questions:
         for granularity in granularities:
@@ -74,17 +82,18 @@ def main() -> None:
                     f"strategy={args.strategy} top_k={args.top_k} budget={budget} "
                     "==="
                 )
-                answer_query(
-                    query=question["query"],
-                    index_dir=index_dir,
-                    strategy=args.strategy,
-                    top_k=args.top_k,
-                    context_budget=budget,
-                    compression="none",
-                    compression_stage="after-allocation",
-                    run_label=label,
-                    dry_run=args.dry_run,
-                )
+                if answer_query is not None:
+                    answer_query(
+                        query=question["query"],
+                        index_dir=index_dir,
+                        strategy=args.strategy,
+                        top_k=args.top_k,
+                        context_budget=budget,
+                        compression="none",
+                        compression_stage="after-allocation",
+                        run_label=label,
+                        dry_run=args.dry_run,
+                    )
 
 
 if __name__ == "__main__":
