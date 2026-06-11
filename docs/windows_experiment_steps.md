@@ -67,17 +67,15 @@ python experiments\densex_prepare_corpus.py `
   --granularities chunk,sentence `
   --metadata storage\metadata.json `
   --resume
+  
+python experiments/densex_prepare_corpus.py  --granularities chunk,sentence   --metadata storage/metadata.json  --device auto    --resume --proposition-model=./models/propositionizer-wiki-flan-t5-large
+
 ```
 
 Generate propositions with the contextual 25-40 word prompt:
 
 ```powershell
-python experiments\densex_prepare_corpus.py `
-  --granularities proposition `
-  --metadata storage\metadata.json `
-  --device auto `
-  --resume `
-  --max-new-tokens 512
+python experiments\densex_prepare_corpus.py --granularities proposition --metadata storage\metadata.json --device auto --resume  --proposition-model=./models/propositionizer-wiki-flan-t5-large
 ```
 
 For a quick proposition smoke test:
@@ -115,8 +113,7 @@ print("max_words:", max(lens) if lens else 0)
 ## 6. Build DenseX FAISS Indexes
 
 ```powershell
-python experiments\densex_build_index.py `
-  --granularities chunk,sentence,proposition
+python experiments\densex_build_index.py --granularities chunk,sentence,proposition
 ```
 
 Expected outputs:
@@ -132,13 +129,7 @@ storage\densex\proposition
 This compares chunk, sentence, and proposition as direct context units:
 
 ```powershell
-python experiments\run_fixed_qa_batch.py `
-  --question-set fixed `
-  --granularities chunk,sentence,proposition `
-  --budgets 500,1000,1500 `
-  --top-k 50 `
-  --strategy baseline `
-  --run-prefix qa_v2
+python experiments\run_fixed_qa_batch.py --question-set fixed --granularities chunk,sentence,proposition --budgets 500,1000,1500  --top-k 50 --strategy baseline  --run-prefix qa_v2
 ```
 
 Outputs:
@@ -154,22 +145,13 @@ This uses sentence/proposition retrieval to locate evidence, then maps results
 back to parent chunks for context construction:
 
 ```powershell
-python experiments\run_densex_parent_sweep.py `
-  --question-set fixed `
-  --fine-granularities sentence,proposition `
-  --budgets 500,1000,1500 `
-  --fine-top-m 150 `
-  --parent-top-k 50 `
-  --strategy baseline `
-  --run-label-prefix qa_parent_v1
+python experiments\run_densex_parent_sweep.py --question-set fixed --fine-granularities sentence,proposition  --budgets 500,1000,1500 --fine-top-m 150 --parent-top-k 50 --strategy baseline --run-label-prefix qa_parent_v1
 ```
 
 Evaluate:
 
 ```powershell
-python experiments\evaluate_densex_runs.py `
-  --run-label-prefix qa_parent_v1 `
-  --output experiments\qa_parent_v1_densex_results.csv
+python experiments\evaluate_densex_runs.py  --run-label-prefix qa_parent_v1  --output experiments\qa_parent_v1_densex_results.csv
 ```
 
 ## 9. Compare Results
