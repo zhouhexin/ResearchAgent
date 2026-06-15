@@ -52,6 +52,13 @@ CONTENT_QUERIES = {
     ),
 }
 
+SOURCE_BASENAME_ALIASES = {
+    "always_clear_depth": {
+        "acd.pdf",
+        "always clear depth- robust monocular depth estimation under adverse weather.pdf",
+    }
+}
+
 
 def _parse_csv(value: str) -> list[str]:
     return [item.strip() for item in value.split(",") if item.strip()]
@@ -132,6 +139,21 @@ def _source_basename(value: object) -> str:
     return Path(str(value or "").replace("\\", "/")).name
 
 
+def _normalized_source_basename(value: object) -> str:
+    return _source_basename(value).lower()
+
+
+def _source_matches(hit_source: object, evidence: dict) -> bool:
+    hit_basename = _normalized_source_basename(hit_source)
+    evidence_basename = _normalized_source_basename(evidence.get("source", ""))
+    if hit_basename == evidence_basename:
+        return True
+
+    paper_id = str(evidence.get("paper_id", "") or "")
+    aliases = SOURCE_BASENAME_ALIASES.get(paper_id, set())
+    return hit_basename in aliases and evidence_basename in aliases
+
+
 def _pages_equal(left: object, right: object) -> bool:
     try:
         return int(left) == int(right)
@@ -151,12 +173,10 @@ def _gold_evidence_refs(question: dict) -> set[str]:
 
 
 def _matched_evidence_refs(chunk: dict, question: dict) -> list[str]:
-    chunk_source = _source_basename(chunk.get("source", ""))
     chunk_page = chunk.get("page")
     refs = []
     for evidence in question.get("gold_evidence", []):
-        evidence_source = _source_basename(evidence.get("source", ""))
-        if chunk_source == evidence_source and _pages_equal(chunk_page, evidence.get("page")):
+        if _source_matches(chunk.get("source", ""), evidence) and _pages_equal(chunk_page, evidence.get("page")):
             refs.append(_format_evidence_ref(evidence))
     return refs
 

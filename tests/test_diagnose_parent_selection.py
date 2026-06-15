@@ -32,6 +32,29 @@ class DiagnoseParentSelectionTests(unittest.TestCase):
             ],
         )
 
+    def test_evidence_matching_accepts_acd_source_alias(self):
+        question = {
+            "gold_evidence": [
+                {
+                    "paper_id": "always_clear_depth",
+                    "source": "data/Always Clear Depth- Robust Monocular Depth Estimation Under Adverse Weather.pdf",
+                    "page": 7,
+                    "evidence_for": "ordinal_guidance_distillation",
+                }
+            ]
+        }
+        chunk = {
+            "source": r"data\ACD.pdf",
+            "page": 7,
+        }
+
+        self.assertEqual(
+            _matched_evidence_refs(chunk, question),
+            [
+                "Always Clear Depth- Robust Monocular Depth Estimation Under Adverse Weather.pdf:p7:ordinal_guidance_distillation"
+            ],
+        )
+
     def test_summarize_separates_parent_candidate_and_selected_recall(self):
         question = {
             "id": "always_clear_depth_ablation_components",
