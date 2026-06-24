@@ -200,6 +200,31 @@ python experiments/run_sage_semantic_chunk_sweep.py \
   --run-label-prefix sage_semantic_all_v1
 ```
 
+如果全量实验中网络不稳定，建议使用可恢复的循环脚本。该脚本会：
+
+- 对 APIConnectionError、SSL EOF、timeout、429、5xx 等临时错误自动重试；
+- 某条任务失败后继续执行后续任务；
+- 将失败任务写入 `experiments/sage_failed_jobs.jsonl`；
+- 默认跳过已经有成功 answer 的 `run_label`，可以断点续跑。
+
+Windows PowerShell 推荐命令：
+
+```powershell
+python experiments/run_sage_semantic_chunk_loop.py `
+  --questions evaluation/questions.jsonl `
+  --all-questions `
+  --embedding-model WhereIsAI/UAE-Large-V1 `
+  --budgets 300,500,1000,1500 `
+  --top-k 50 `
+  --run-label-prefix sage_semantic_all_v1 `
+  --max-retries 5 `
+  --retry-wait-seconds 20 `
+  --retry-backoff 1.5 `
+  --allow-failures
+```
+
+如果脚本中途断开，直接再次执行同一条命令即可。它会扫描 `experiments/runs/`，跳过已经完成的 run label。
+
 ## 9. 结果分析
 
 QA 实验结束后，继续使用现有 DenseX evaluation 脚本统计准确率：
