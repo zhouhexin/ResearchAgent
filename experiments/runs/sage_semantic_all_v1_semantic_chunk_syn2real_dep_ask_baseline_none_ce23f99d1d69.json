@@ -1,0 +1,438 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_syn2real_dep_ask_baseline_none_ce23f99d1d69",
+  "dry_run": false,
+  "query": "Syn2Real-Depth 的 structure prior constraint 是如何构建和使用的？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7494617700576782,
+      "text": "Therefore, we have summarized two key points that need to be care- fully considered to help the model eﬀectively learn semantic priors: (1) How to eﬀectively utilize the semantic information of the scene to guide SIDE. As shown in Fig. 1(b), all objects in the depth map have nearly identical contours with their semantic segments, and the depth values within the some semantic segments also exhibit a high degree of https://doi.org/10. 1016/j.patcog. 2025. 112279 Received 29 December 2024; Received in revised form 23 July 2025; Accepted 9 August 2025 Pattern Recognition 171 (2026) 112279 Available online 18 August 2025 0031-3203/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7295156121253967,
+      "text": "While RDE serves as a valid estimation paradigm, it has limitations in real-world applications. ∗ Corresponding author. E-mail address: zhao13871001982@whut.edu.cn (Z. Zhao). Consequently, MDE methods have gradually become the mainstream [8]. MDE methods typically directly regress the metric depth of each pixel. Some MDE methods [9,10] employ a hybrid regression strategy, adaptively dividing the image depth range into discrete bins and then predicting the probability of pixels belonging to each bin to achieve ac- curate metric depth estimation. Despite their excellent performance in various benchmarks, these methods often neglect the semantic informa- tion of real-world scene structures, leading to “smooth transition” char- acteristics in the semantic boundaries areas of the predicted depth maps, as shown in Fig. 1(a). Therefore, the introduction of semantic priors is essential. However, existing methods [11] focus on implicitly constructing scene structural relationships utilizing semantic information, but with- out explicit constraints, models may struggle to learn semantic priors."
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc2",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7247670888900757,
+      "text": "To address the synthetic-real gaps, we propose a novel real adaptation (RA) stage. One challenge is to find valid supervision signals from earlier trained models, and we design a consistency-reweighting strategy by incorporating different models to find a consistency map that can empha- size the valid parts of pseudo-labels and provide effective signals for learning in real-world conditions. Since pseudo- labels from the frozen model still suffer from the synthetic- real gap, we introduce an effective prior based on daytime depth predictions, by calculating explicit depth distribution from the daytime model and setting it to be a reference in di- verse conditions. This structural prior provides explicit con- straint when facing real adverse data, learning real-world information further effectively. With the proposed synthetic-to-real adaptation pipeline, our model can provide much more robust depth predictions in diverse conditions through different real-world datasets [5, 19, 37]."
+    },
+    {
+      "id": "semantic_chunk::s_p1_sc0",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7126739025115967,
+      "text": "Synthetic-to-Real Self-supervised Robust Depth Estimation via Learning with Motion and Structure Priors Weilong Yan1 Ming Li3 Haipeng Li4 Shuwei Shao5 Robby T. Tan1,2 1National University of Singapore 2ASUS Intelligent Cloud Services 3Guangdong Laboratory of Artificial Intelligence and Digital Economy (SZ) 4University of Electronic Science and Technology of China 5School of Control Science and Engineering, Shandong University yanweilong@u.nus.edu Abstract Self-supervised depth estimation from monocular cameras in diverse outdoor conditions, such as daytime, rain, and nighttime, is challenging due to the difficulty of learning universal representations and the severe lack of labeled real-world adverse data. Previous methods either rely on synthetic inputs and pseudo-depth labels or directly apply daytime strategies to adverse conditions, resulting in sub- optimal results. In this paper, we present the first synthetic- to-real robust depth estimation framework, incorporating motion and structure priors to capture real-world knowl- edge effectively."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p4_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 4,
+      "score": 0.7117903232574463,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 4 allows imposing a knowledge distillation loss on the denoised depth. The knowledge distillation paradigm distills knowledge from the teacher model to a student model, which is beneficial to improve the results [11]. To mitigate the adverse impact of depth error in the pseudo ground-truth, we apply a multi-view check filter [25] to filter out erroneous depth. The knowledge distillation loss is thus defined as LKD = X p Φ(p) ⊙ \u0000 Dt (p) − Dpseudo (p) \u0001 , (10) where Φ(p) stands for the multi-view check filter, ⊙ denotes the element-wise multiplication. The core principle of multi- view check is similar to that of the novel view synthesis. We draw on Eq. 5 to get each projected point pt→s in the source view and acquire a warped depth map, Ds→t(p) = Ds pt→s , (11) where Ds stands for the depth map of source frame. Similar to the projection procedure above, we leverage Ds to perform a reprojection procedure to acquire each reprojected 2D point eps→t and depth map eD s→t (p) in the target view."
+    },
+    {
+      "id": "semantic_chunk::s_p8_sc4",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.7081974744796753,
+      "text": "We introduce a consistency reweighting strategy and a structure prior con- straint to boost learning from synthetic to real domains. Ex- periments across diverse settings and datasets show that our model provides more accurate and robust depth than previ- ous methods, with superior generalization capabilities."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p3_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 3,
+      "score": 0.7022209167480469,
+      "text": "Given the current frame It, the MDE model as F:I t → D∈RW×H , we can synthesize a warped current frameI t′→t with: It′→t =I t′ ⟨proj (D,Tt→t′, K)⟩, t′ ∈(t−1, t+ 1),(1) where Tt→t′ denotes the relative camera poses obtained from the pose network, K denotes the camera intrinsics, and ⟨·⟩ denotes the grid sample process. Then, we can compute the photometric reconstruction loss betweenI t andI t′→t to constrain the depth: Lph(It,I t′→t) =ηp1(1−SSIM (It,I t′→t))/2 +ηp2 ∥It −I t′→t∥.(2) Stable Diffusion-based Monocular Depth Estimationreformulates depth prediction as an image- conditioned annotation generation task. Typically, given the imageIand processed GT depthy, SD first encodes them to the low-dimension latent space through a V AE encoderε, as (zI,z y) =ε(I,y) . 3"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p10_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.7020003795623779,
+      "text": "This choice can not to fully demonstrate the model’s perfor- mance. Therefore, we train our method on both the raw depth annota- tions(rawDepths) and the completed reﬁned depth annotations(Depths) from NYU1449. The experimental results are shown in Table 8. Our Pattern Recognition 171 (2026) 112279 10"
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc1",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.700283408164978,
+      "text": "However, since ΦD−syn is optimized for the synthetic do- main and may not perform well in real adverse conditions, it is intuitive to emphasize supervision on the more reliable parts. To address this, we also leverage ΦD−day to provide predictions Dday on real images across diverse conditions. Our strategy compares Dday and Dsyn, assigning higher weights to consistent regions and lower weights to highly inconsistent areas. Using an exponential function [34], we design a confidence map Ccst based on the consistency and transform it into a reweighting map Wcst: Ccst = e−β |Dsyn −Dday | Dsyn , (9) Wcst = Ccst + ϵ. (10) The β is a scale factor and the ϵ is a weight bias to guar- antee a weak supervision. The supervision forDreal will be changed into a reweighting consistent-depth loss Lcd: Lcd = 1 HW HWX Wcst| Dreal − Dsyn Dreal |. (11) Structure Prior Constraint Although pseudo-label learn- ing is reweighted, it still cannot perfectly supervise real ad- verse predictions, motivating us to seek more explicit pri- ors from daytime data and depth. To investigate further, we calculate and visualize the predicted depth distributions of ΦD−day and ΦD−syn on the real training set in Fig."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_sc3",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.6981706619262695,
+      "text": "The input channels of the latent denoiser are then doubled to accommodate the expanded input zt. To prevent inflation of activations magnitude of the first layer and keep the pre- trained structure as faithfully as possible, we duplicate the weight tensor of the input layer and divide its values by two. 3. 3. Fine-Tuning Protocol Affine-invariant depth normalization. For the ground truth depth maps d, we implement a linear normalization such that the depth primarily falls in the value range [−1, 1], to match the designed input value range of the V AE. Such normalization serves two purposes. First, it is the conven- tion for working with the original Stable Diffusion V AE. Second, it enforces a canonical affine-invariant depth rep- resentation independent of the data statistics – any scene must be bounded by near and far planes with extreme depth values. The normalization is achieved through an affine transformation computed as ˜d = \u0012 d − d2 d98 − d2 − 0. 5 \u0013 × 2, (3) where d2 and d98 correspond to the 2% and 98% per- centiles of individual depth maps. This normalization allows Marigold to focus on pure affine-invariant depth estimation. Training on synthetic data."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_sc3",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.6981706619262695,
+      "text": "The input channels of the latent denoiser are then doubled to accommodate the expanded input zt. To prevent inflation of activations magnitude of the first layer and keep the pre- trained structure as faithfully as possible, we duplicate the weight tensor of the input layer and divide its values by two. 3. 3. Fine-Tuning Protocol Affine-invariant depth normalization. For the ground truth depth maps d, we implement a linear normalization such that the depth primarily falls in the value range [−1, 1], to match the designed input value range of the V AE. Such normalization serves two purposes. First, it is the conven- tion for working with the original Stable Diffusion V AE. Second, it enforces a canonical affine-invariant depth rep- resentation independent of the data statistics – any scene must be bounded by near and far planes with extreme depth values. The normalization is achieved through an affine transformation computed as ˜d = \u0012 d − d2 d98 − d2 − 0. 5 \u0013 × 2, (3) where d2 and d98 correspond to the 2% and 98% per- centiles of individual depth maps. This normalization allows Marigold to focus on pure affine-invariant depth estimation. Training on synthetic data."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p14_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.6980764865875244,
+      "text": "InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 10371–10381, 2024. 3 [60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything v2.arXiv preprint arXiv:2406. 09414, 2024. 3 [61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tianlu Mao, and Zhaoqi Wang. MSP-MVS: Multi-granularity segmentation prior guided multi-view stereo. InProceedings of the AAAI Conference on Artificial Intelligence, volume 39, pages 9753–9762, 2025. 23 [62] Zhenlong Yuan, Jinguo Luo, Fei Shen, Zhaoxin Li, Cong Liu, Tianlu Mao, and Zhaoqi Wang. DVP-MVS: Synergize depth-edge and visibility prior for multi-view stereo. InProceedings of the AAAI Conference on Artificial Intelligence, volume 39, pages 9743–9752, 2025. 23 [63] Zhenlong Yuan, Zhidong Yang, Yujun Cai, Kuangxin Wu, Mufan Liu, Dapeng Zhang, Hao Jiang, Zhaoxin Li, and Zhaoqi Wang. SED-MVS: Segmentation-Driven and Edge-Aligned Deformation Multi-View Stereo with Depth Restoration and Occlusion Constraint. IEEE Transactions on Circuits and Systems for Video Technology, 2025."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p4_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.6951475143432617,
+      "text": "2) inevitably introduce the supervision with noise and artifacts due to occlusions, texture-less regions, and pho- tometric inconsistencies. As shown in Fig. 3 (a), consider a scenario where relative camera poses Tt→t′ represents a pure horizontal translation. The point p—which should ideally have 5 pixels of disparity (reciprocal of depth)—becomes occluded. Instead, it must displace 10 to compensate for incorrect pixel matches, resulting in erroneous depth alignment with point q (a detailed explanation is provided in Sec. F). This phenomenon propagates to neighboring points, collectively eroding structural details (e.g., the tree’s edge) while generating imprecise supervisory signals that rapidly degrade SD’s fine-grained prior knowledge. To preserve these details, we notice that both SSMDE and SD inherently rely on image consistency: SSMDE uses photometric constraints (Eq. 2), while SD’s training directly minimizes image gen- eration errors. Inspired by this, we propose a surrogate task: image reconstruction. Concretely, following [11], we design a switcher s∈ {sx, sy} to alternate the U-Net f z θ between the main and surrogate tasks."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p14_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.695016622543335,
+      "text": "23 [64] Zhenlong Yuan, Dapeng Zhang, Zehao Li, Chengxuan Qian, Jianing Chen, Yinda Chen, Kehua Chen, Tianlu Mao, Zhaoxin Li, Hao Jiang, and Zhaoqi Wang. Dvp-mvs++: Synergize depth-normal-edge and harmonized visibility prior for multi-view stereo, 2025. 23 [65] Zongsheng Yue, Kang Liao, and Chen Change Loy. Arbitrary-steps image super-resolution via diffusion inversion.arXiv preprint arXiv:2412. 09013, 2024. 3 [66] Ziyao Zeng, Jingcheng Ni, Daniel Wang, Patrick Rim, Younjoon Chung, Fengyu Yang, Byung-Woo Hong, and Alex Wong. Priordiffusion: Leverage language prior in diffusion models for monocular depth estimation, 2024. 3 [67] Ning Zhang, Francesco Nex, George V osselman, and Norman Kerle. Lite-mono: A lightweight cnn and transformer architecture for self-supervised monocular depth estimation. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18537–18546, 2023. 8 [68] Chaoqiang Zhao, Youmin Zhang, Matteo Poggi, Fabio Tosi, Xianda Guo, Zheng Zhu, Guan Huang, Yang Tang, and Stefano Mattoccia. Monovit: Self-supervised monocular depth estimation with a vision transformer. In2022 international conference on 3D vision (3DV), pages 668–678."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p8_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6946397423744202,
+      "text": "As a result, our Depth Anything model exhibits excellent zero-shot depth estimation ability, and also serves as a promising initialization for downstream metric depth estimation and semantic segmentation tasks. Acknowledgement. This work is supported by the National Natural Science Foundation of China (No. 62201484), HKU Startup Fund, and HKU Seed Fund for Basic Research. 10378"
+    },
+    {
+      "id": "semantic_chunk::dav2_p6_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 6,
+      "score": 0.6941004991531372,
+      "text": "On pseudo-labeled images, we follow V1 to add an additional feature alignment loss to preserve informative semantics from pre-trained DINOv2 encoders. 2To offer capablemetric depth models, we further fine-tune our basic models with metric depth (Section 7. 3). 6"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.6938320398330688,
+      "text": "Y. Zou et al. Fig. 1. Explanation of our motivation. We provide an example of semantic boundary areas with a “smooth transition” (a), where our method successfully alleviates this issue. similarity. If we can explicitly model diﬀerent semantic segments, break- ing down a scene into multiple segmented planes with varying depths, then the model only needs to focus on inferring the relative depth rela- tionships within each segment. (2) How to eﬀectively aggregate im- age features within semantic segments. In the real world, there are regular structural relationships within the same semantic segment. For example, as shown in Fig. 1(b), the depth of the sky is eﬀectively inﬁnite and tends towards a uniform depth value. Meanwhile, the depth span of the road surface is relatively large, yet it varies smoothly along the vertical direction. We believe that aggregating relevant features within semantic segments can better restore their internal relative depth rela- tionships."
+    },
+    {
+      "id": "semantic_chunk::ACD_p5_sc0",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.6925293207168579,
+      "text": "଴ ଵ כ OREDO ଴ ଵ כ RFDO ଵ *OREDO ଵ /RFDO D GD\\\u0010FOHDU E QLJKW F 3VHXGR GHSWK G 7UDLQLQJ\u0003GHSWK H 5HJLRQ PDVN I 'HSWK\u0003$Q\\WKLQJ\u00039\u0015 5HJLRQDO\u0003'LIIHUHQFHV Figure 3: Ordinal Pair Sampling: During training, we use two strate- gies to efﬁciently sample ordinal pairs. First, we employ the teacher and student models to respectively predict the depth maps (c and d) from the normal (a) and degraded (b) input, and then compute the pixel-wise errors (e) among them. Based on (e), we sample the local (uncertain regions with large errors) and global (random sampling regions) patches from the depth maps (d) and (f) to compute the to- tal ordinal pair loss. global depth map by a ratio of 0. 01, and the ranking loss cal- culated from these sampled points is used to reﬁne the global depth information. The sampling process is illustrated in Fig- ure. 3. Thus, our ﬁnal loss becomes: L r = 1 |Zg| ∑ p0,p1∈Zg ψ(p0,p 1)+ 1 |Zl| ∑ p0,p1∈Zl ψ(p0,p 1), (12) where Zg and Zl represent the global and local ordinal sam- pling sample sets, respectively. Feature Consistency Constraint."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.6921133995056152,
+      "text": "The latent space is constructed in the bottleneck of a varia- tional autoencoder (V AE) trained independently of the de- noiser to enable latent space compression and perceptual alignment with the data space. To translate our formulation into the latent space, for a given depth map d, the corre- sponding latent code is given by the encoderE: z(d) = E(d). Given a depth latent code, a depth map can be recovered with the decoder D: ˆd = D(z(d)). The conditioning im- age x is also naturally translated into the latent space as z(x) = E(x). The denoiser is henceforth trained in the latent space: ϵθ(z(d) t , z(x), t). The adapted inference procedure involves one extra step – the decoder D reconstructing the data ˆd from the estimated clean latent z(d) 0 : ˆd = D(z(d) 0 ). 3. 2. Network Architecture One of our main objectives is training efficiency since diffu- sion models are often extremely resource-intensive to train. Therefore, we base our model on a pretrained text-to-image LDM (Stable Diffusion v2 [ 38]), which has learned very good image priors from LAION-5B [ 46]. With minimal changes to the model components, we turn it into an image- conditioned depth estimator. Fig."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.6921133995056152,
+      "text": "The latent space is constructed in the bottleneck of a varia- tional autoencoder (V AE) trained independently of the de- noiser to enable latent space compression and perceptual alignment with the data space. To translate our formulation into the latent space, for a given depth map d, the corre- sponding latent code is given by the encoderE: z(d) = E(d). Given a depth latent code, a depth map can be recovered with the decoder D: ˆd = D(z(d)). The conditioning im- age x is also naturally translated into the latent space as z(x) = E(x). The denoiser is henceforth trained in the latent space: ϵθ(z(d) t , z(x), t). The adapted inference procedure involves one extra step – the decoder D reconstructing the data ˆd from the estimated clean latent z(d) 0 : ˆd = D(z(d) 0 ). 3. 2. Network Architecture One of our main objectives is training efficiency since diffu- sion models are often extremely resource-intensive to train. Therefore, we base our model on a pretrained text-to-image LDM (Stable Diffusion v2 [ 38]), which has learned very good image priors from LAION-5B [ 46]. With minimal changes to the model components, we turn it into an image- conditioned depth estimator. Fig."
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc3",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6901225447654724,
+      "text": "Our contributions are listed as follows: • We propose a novel synthetic-to-real adaptation pipeline for robust depth estimation in diverse conditions, which is able to work in multiple real-world datasets. • We construct the motion and cost volume as auxiliary space to transfer filtered daytime knowledge for depth, which boosts the robust representation learning. • We design a novel real adaptation with two strategies named consistency-reweighting and structure prior con- straint, which effectively learns from real adverse data. • Through the experiments, our method achieves state-of- the-art performance on multiple real challenging datasets (improving by 7. 5% in AbsRel and 4. 3% in RMSE), in multi-frame, single-frame, zero-shot settings. 2. Related Work 2. 1. Self-supervised Depth Estimation In the deep learning era [14–17, 43], self-supervised depth has been widely studied for its reliance on only RGB data. SfM-Learner [48] firstly leveraged photometric consistency to reformulate depth estimation as a view reconstruction task. Monodepth2 [10] introduced per-pixel photometric loss and auto-masking to reduce the impact of moving ob- jects."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc3",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6900354623794556,
+      "text": "We define N sub-intervals be- tween dmin and dmax, where each interval has a length of L = dmax−dmin N , with center bn = dmin + L(n + 1 2 ) for interval n. Using two sigmoid functions σ to model the ker- nel function K(x) = σ(x)σ(−x), the probability of a depth map D falling within interval k is P (n) = 1 HW HWX x=1 [σ( D(x) − bn + L 2 a ) − σ( D(x) − bn − L 2 a )], (12) where P is the differentiable probability function and a is a bandwidth factor. Finally, the Distday, Distadv are consist of Pday, Padv: Distday = {bn, Pday(n)}N n=1, (13) Distadv = {bn, Padv(n)}N n=1. (14) Noted that Distday is calculated among the whole day- time training set instead of one sample. The objective is to minimize the distribution distances betweenDistday and Distadv by K-L divergence: LKL dis = NX i=1 Padv(i) · log Padv(i) Pday(i) . (15) Apart from Lcd and LKL dis , we also utilize Lcv and LT as in previous stage. Thus, the total objective functionLreal is Lreal = α1Lcd + α2LKL dis + α3Lcv + α4LT (16) With the designed learning procedure, our model can gradually fit better to multiple real conditions, rather than only learn from the synthetic conditions. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6897910833358765,
+      "text": "We employ scale- invariant loss [4] and cross-entropy loss respectively to provide depth and semantic segmentation constraints, with the expressions of 𝑆𝐼𝑙𝑜𝑔 and 𝐶𝐸 are as follows: 𝑆𝐼𝑙𝑜𝑔 = √√√√√ 1 𝑉 ∑ 𝑖 𝑑2 𝑖 − 𝜆 𝑉 2 ( ∑ 𝑖 𝑑𝑖 )2 , (12) 𝐶𝐸 = − 1 𝑉 𝑉∑ 𝑖 𝑆∗(𝑖) log 𝑆(𝑖), (13) in the formula, 𝑑𝑖 = log 𝐷𝑚(𝑖) − log 𝐷∗ 𝑚(𝑖), where 𝐷𝑚(𝑖) and 𝐷∗ 𝑚(𝑖) denote the predicted metric depth and ground truth (GT) metric depths at pixel 𝑖, respectively, while 𝑆(𝑖) and 𝑆∗(𝑖) represent the predicted semantic annotation and ground truth (GT) semantic annotations at pixel 𝑖. 𝑉 denotes the number of pixels in the image that provide valid ground truth depth values. In our experiments, we conventionally set 𝜆 to 0. 15. Segmentation proposal scale alignment loss. To improve the per- formance of depth estimation, we propose a segmentation proposal scale alignment loss (𝑆𝑃 𝑆𝐴 ). Inspired by [29], in order to make the pixel scales within each semantic segment converge to similar values, we crop the ground truth (GT) and predicted depths into 𝑈 patches according to the predicted semantic segmentation annotation, and then apply the me- dian absolute deviation for each patch."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6895549297332764,
+      "text": "Then, the 𝑅 is computed through a weighted sum with respect to 𝑐𝑖: 𝑃𝐵 = 𝐸𝐵 × 𝐹 ⊤ 𝑝 , (9) 𝑅(𝑥, 𝑦) = 𝑁∑ 𝑘=1 𝑠𝑜𝑓 𝑡𝑚𝑎𝑥(𝑐𝑘)𝑝𝑘(𝑥, 𝑦), (10) where 𝑝𝑘(𝑥, 𝑦) represents the probability value at pixel location (𝑥, 𝑦) for the corresponding channel in the 𝑃𝐵, and 𝑅(𝑥, 𝑦) represents the semantic-aware relative depth value at the corresponding pixel location. Note that the semantic-aware relative depth here diﬀers from conven- tional relative depth, as it only establishes relative depth relationships within the same semantic segments. We provide a detailed description of this phenomenon in Section 4. 6. Finally, we obtain the true metric depth map 𝐷𝑚 ∈ ℝ1× 𝐻 4 × 𝑊 4 by per- forming pixel-wise multiplication between 𝐷𝑆 and 𝑅: 𝐷𝑚 = 𝐷𝑆 ⋅ 𝑅. (11) 3. 5. Loss function Depth and semantic segmentation loss."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p20_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 20,
+      "score": 0.6885570287704468,
+      "text": "For the SSI depth supervision, we perform a normalization similar to Eq. 9 in paper: Norm(Dtc) = 2· \u0012 Dtc −min(D tc) max(Dtc)−min(D tc) −0. 5 \u0013 .(20) Furthermore, to avoid the performance ceiling imposed by the teacher model, we draw inspiration from D4RD[49], and employ an adaptive filtering mechanism: Mtc = \u0014 min t′ ph \u0000 I,I tc t′→t \u0001 < λ ηstep \u0015 , where λ is a constant set to 1. 5, Itc t′→t is the warped target image using the teacher disparity Dtc, and ηstep = max(1,30·(step now/stepmax)) is a dynamic factor that adjusts with training progress. This adaptive weight initially allows the model to converge across the entire depth map and subsequently filters out less accurate regions, mitigating the adverse effects of inaccurate pseudo-depth labels. Therefore, we have: filter(D tc) =Dtc ·M tc, In the supervision process, we introduce the BerHu lossL B and get better results: LB(x, y) = ( |x−y|,if|x−y| ≤c, (x−y)2+c2 2c ,if|x−y|> c, (21) where c= 0. 2·max(|x−y|) is a threshold that adapts to the error magnitude. This loss imposes a greater penalty on pixels with larger errors using an L2-like penalty, while retaining the robustness of L1 loss for small errors. Thus, The Eq."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p3_sc2",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.6884156465530396,
+      "text": "Each denoising step is approximated by a Gaussian distribution, pθ (xτ −1 |xτ ) := N \u0000 xτ −1; µθ (xτ , τ) , σ2 τ I \u0001 , (4) where µθ (xτ , τ) is acquired by the linear combination of xτ and predicted noise of ϵθ (xτ , τ) and σ2 τ denotes the transition variance. Self-supervised MDE frames the depth estimation as a task of novel view synthesis and typically requires two networks, a depth network and an additional pose network. To achieve supervision, the predicted depth map is utilized to back-project each pixel into 3D camera space with the camera intrinsic. The acquired 3D point cloud is then transformed to another view utilizing the predicted relative pose. Suppose a target frame ft and a source frame fs, the procedure is defined as pt→s = KMt→sDt (p) K−1pt, (5) where pt→s denotes the mapped pixel coordinate from target view t to source view s, pt denotes the pixel coordinate in the target view, K denotes the camera intrinsic, Mt→s denotes the relative pose from target view to source view, and Dt denotes the depth map of target frame. Next, we can obtain a warped frame fs→t via fs→t(p) = fs pt→s , (6) where ⟨·⟩ denotes the warping operation [46]."
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc1",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.688249945640564,
+      "text": "These motivate us to explore an auxiliary space for improved representation learning and an effective strategy to learn in real-world conditions. In this work, we propose the first synthetic-to-real frame- work to achieve depth estimation under diverse conditions. Different from previous methods focused solely on syn- thetic data, ours learns from the synthetic to real-world data. Since only pseudo-depth label is insufficient for the model to learn due to the heterogeneous features [29, 47], we dig into motion constraint and explicit structure prior for efficient learning of real-world knowledge. Examples of our method compared with previous ones are shown in Fig. 1. Starting from having a strong self-supervised day- time model, we identify the cost volume [6, 33, 34] as an ef- fective auxiliary space for robust representation, as it natu- rally filters redundant information while preserving motion and structural features. Thus, in the synthetic adaptation (SA) which learns on the synthetic data, we construct cost volumes from high-level features to transfer filtered daytime motion-spatial knowledge to adverse conditions, apart from learning only with pseudo-depth labels."
+    },
+    {
+      "id": "semantic_chunk::s_p3_sc2",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.6877294778823853,
+      "text": "The pipeline of Manydepth [33] consists of a depth net- work ΦD−day and a pose network ΦP −day, the key of which is to inject multi-frame cost volumecv into the model to give explicit geometric guidance. The input of the mod- els are consecutive frame pairsIt−1, It, and the cost volume cv is constructed via It−1, It and the encoder of ΦD−day: cv = ΦD−day(It) − W (ΦD−day(It−1), T, d, K), (1) T = ΦP −day(It, It−1), (2) where W (·) is the warping operation [36], T represents the estimated pose, d is the predefined depth candidates and K refers to the camera intrinsics. In short, the depth Dt is obtained by Dt = ΦD−day(It, cv). (3)"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p4_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.687687873840332,
+      "text": "Afterward, gaussian noise is gradually added at levels τ∈[1, T] into zy to obtain the noisy sample, with zy τ = √ατ zy + √1− ατ ϵ, then the model learns to iteratively reverse it by removing the predicted noise: ˆϵ=f ϵ θ (zy τ−1 |zy τ ,z I),(3) and finally decodes the depth prediction with D=D(z y 0). Here ϵ∼ N(0, I), fϵ θ is the ϵ-prediction U-Net, αt := Qt s=1(1−β s), D is the V AE decoder and{β1, β2, . , βT } is the noise schedule with Tsteps. Equation 1 demonstrates that the self-supervised approach needs the depth predictionDfor image warping. However, obtaining zy 0 requires iterative computation of Eq. 3, which becomes computation- ally infeasible considering the enormous size of SD models. Fortunately, Lotus and E2E FT[33, 21] demonstrate that we can obtain comparable results with single-step denoising and directly predict depth, D=D \u0000 f z θ \u0000 zy τ ,z I\u0001\u0001 , τ=T , which makes it possible to train SD with self-supervision. The step-by-step workflow is detailed in Sec B. 3. 2 Surrogate Task: Image Reconstruction Self-supervision Compromise SD Prior. The photometric reconstruction losses (Eq."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p9_sc3",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.6856789588928223,
+      "text": "In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , pages 1851–1858, 2017. [6] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. Enforcing geo- metric constraints of virtual normal for depth prediction. In Proceedings of the IEEE International Conference on Computer Vision , pages 5684– 5693, 2019. [7] Ruoyu Wang, Zehao Yu, and Shenghua Gao. Planedepth: Self-supervised depth estimation via orthogonal planes. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 21425– 21434, 2023. [8] Jin Han Lee, Myung-Kyu Han, Dong Wook Ko, and Il Hong Suh. From big to small: Multi-scale local planar guidance for monocular depth estimation. arXiv preprint arXiv:1907. 10326 , 2019. [9] Shariq Farooq Bhat, Ibraheem Alhashim, and Peter Wonka. Adabins: Depth estimation using adaptive bins. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , pages 4009– 4018, 2021. [10] Youngjung Kim, Hyungjoo Jung, Dongbo Min, and Kwanghoon Sohn. Deep monocular depth estimation via integration of global and local predictions. IEEE Transactions on Image Processing, 27(8):4131–4144, 2018."
+    },
+    {
+      "id": "semantic_chunk::s_p8_sc3",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.68562912940979,
+      "text": "Given the abundant information within features and the heterogeneous visual cues across conditions, simply us- ing Lf eatleads to significantly worse performance than the baseline. In contrast, since the cost volume inherently filters extraneous information and retains motion-structure features, utilizing Lcv enhances the model’s performance in adverse scenarios. Moreover, applying RA alone with- out additional strategies does not guarantee improved per- formance on real data, as not all supervisions are valid. However, by incorporating Lcd to emphasize valid regions and LKL dis for structural prior constraint, the model’s perfor- mance gradually improves in real-world adverse conditions. The ablation study confirms the effectiveness of the indi- vidual components within the pipeline and highlights the importance of synthetic-to-real adaptation. 6. Conclusion In this work, we propose a synthetic-to-real learning pipeline for self-supervised robust depth estimation, includ- ing synthetic adaptation and real adaptation stages where the cost volume is constructed to transfer motion-structure feature from daytime to adverse conditions."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc2",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6855073571205139,
+      "text": "We encode the input image into the latent space, initialize depth latent as standard Gaussian noise, and progressively denoise it with the same schedule as during fine-tuning. We empirically find that initializing with standard Gaussian noise gives better results than with multi-resolution noise, although the model is trained on the latter. We follow DDIM’s [ 49] approach to perform non- Markovian sampling with re-spaced steps for accelerated inference. The final depth map is decoded from the latent code using the V AE decoder and postprocessed by averaging channels. Test-time ensembling. The stochastic nature of the infer- ence pipeline leads to varying predictions depending on the initialization noise in z(d) T . Capitalizing on that, we propose the following test-time ensembling scheme, capable of com- bining multiple inference passes over the same input. For each input sample, we can run inference N times. To aggre- gate these affine-invariant depth predictions {ˆd1, . ,ˆdN }, we jointly estimate the corresponding scale ˆsi and shift ˆti, relative to some canonical scale and range, in an iterative manner."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc2",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6855073571205139,
+      "text": "We encode the input image into the latent space, initialize depth latent as standard Gaussian noise, and progressively denoise it with the same schedule as during fine-tuning. We empirically find that initializing with standard Gaussian noise gives better results than with multi-resolution noise, although the model is trained on the latter. We follow DDIM’s [ 49] approach to perform non- Markovian sampling with re-spaced steps for accelerated inference. The final depth map is decoded from the latent code using the V AE decoder and postprocessed by averaging channels. Test-time ensembling. The stochastic nature of the infer- ence pipeline leads to varying predictions depending on the initialization noise in z(d) T . Capitalizing on that, we propose the following test-time ensembling scheme, capable of com- bining multiple inference passes over the same input. For each input sample, we can run inference N times. To aggre- gate these affine-invariant depth predictions {ˆd1, . ,ˆdN }, we jointly estimate the corresponding scale ˆsi and shift ˆti, relative to some canonical scale and range, in an iterative manner."
+    },
+    {
+      "id": "semantic_chunk::dav2_p15_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.6846212148666382,
+      "text": "2 [89] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything: Unleashing the power of large-scale unlabeled data. In CVPR, 2024. 1, 2, 3, 5, 6, 7, 8, 9, 10, 17, 19, 21, 22, 24 [90] Lihe Yang, Zhen Zhao, Lei Qi, Yu Qiao, Yinghuan Shi, and Hengshuang Zhao. Shrinking class space for enhanced certainty in semi-supervised learning. In ICCV, 2023. 10 [91] Xiaodong Yang, Zhuang Ma, Zhiyu Ji, and Zhe Ren. Gedepth: Ground embedding for monocular depth estimation. In ICCV, 2023. 9 [92] Yao Yao, Zixin Luo, Shiwei Li, Jingyang Zhang, Yufan Ren, Lei Zhou, Tian Fang, and Long Quan. Blendedmvs: A large-scale dataset for generalized multi-view stereo networks. In CVPR, 2020. 18 [93] Chongjie Ye, Yinyu Nie, Jiahao Chang, Yuantao Chen, Yihao Zhi, and Xiaoguang Han. Gaustudio: A modular framework for 3d gaussian splatting and beyond. arXiv:2403. 19632, 2024. 2 [94] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. Enforcing geometric constraints of virtual normal for depth prediction. In ICCV, 2019. 10 15"
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p3_sc4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.6843545436859131,
+      "text": "Unfortunately, the lack of depth ground-truth for self-supervised MDE makes it hard to perform. To address the issue, we introduce a pseudo ground-truth diffusion process. More specifically, we pre-train a teacher model based on Lite-Mono [18], a well-behaved self- supervised monocular depth estimator. Then, the diffusion is performed on the depth generated by our teacher model, which we referred to as the pseudo ground-truth Dpseudo (p), q (Dτ |Dpseudo ) := N \u0000 Dτ √ατ Dpseudo, (1 − ατ )I \u0001 . (9) The teacher model will be discarded once the training is com- pleted. Compared with diffusion on the denoised output [23], [24], the pseudo ground-truth process is able to avoid the noisy denoised output at the early training stage from deteriorating the entire training process. As a by-product, the teacher model"
+    },
+    {
+      "id": "semantic_chunk::s_p3_sc0",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.6842938661575317,
+      "text": "Figure 2. Illustration of our proposed pipeline. (a) Synthetic adaptation utilizes an augmentation model to generate paired data for training, and we also conduct learning in an auxiliary motion space. (b) Real adaptation leverages the daytime model and synthetic model to provide valid pseudo-labels with consistency reweighting, and the daytime depth distribution from plenty of daytime predictions are seen as structure prior to constrain the model facing real adverse data. (c) Inference stage can work in multi-frame and single-frame settings. ate realistic adverse data and employing a teacher-student framework. However, they overlook the importance of learning a common representation and do not consider about bridging the synthetic-real gap. In contrast, we pro- pose an auxiliary space to enhance robust representation learning and introduce a novel real adaptation stage. 3. Proposed Method We propose to estimate depth map from single frame or con- secutive frames under various conditions, including the nor- mal (e.g., daytime) and adverse scenarios (e.g., rain, night- time, etc.). We demonstrate our pipeline in Fig."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p12_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 12,
+      "score": 0.6841616630554199,
+      "text": "1, 2, 3, 4, 7, 8, 21 [34] Jaeho Moon, Juan Luis Gonzalez Bello, Byeongjun Kwon, and Munchurl Kim. From-ground-to-objects: Coarse-to-fine self-supervised monocular depth estimation of dynamic objects with ground contact prior. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 10519– 10529, 2024. 2, 7, 8, 18, 20 [35] Adam Paszke et al. Pytorch: An imperative style, high-performance deep learning library. InNeurIPS, pages 8026–8037, 2019. 7 [36] Rui Peng, Ronggang Wang, Yawen Lai, Luyang Tang, and Yangang Cai. Excavating the potential capacity of selfsupervised monocular depth estimation. InICCV, pages 15560–15569, 2021. 16 12"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p17_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.6839905977249146,
+      "text": "008 25:returnloss 26:end function 27:functionCOMPUTE_AUXILIARY_LOSS(inputs,D si, Dssi) 28:L GDS ←gds_loss(inputs[’I_t’],inputs[’seg’], Dsi) 29:L SKY ←sky_loss(D ssi,inputs[’sky_mask’]) 30:L e ←edge_loss(D si, Dssi) 31:returnL GDS +L SKY +L e 32:end function C Supervision Details Self-supervised depth estimation has been researched for a decade, and hundreds of works have proposed numerous progressive ideas. Therefore, to achieve SoTA performance, it is inevitable that we will reuse some loss constraints from previous works to optimize our results. In the following text, except for theedge loss, the other losses are mostly referenced from prior papers and are not the core contributions of this paper. Thus, we have not included them in the main paper. The effectiveness of 17"
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p5_sc1",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 5,
+      "score": 0.6839490532875061,
+      "text": "The feature alignment loss is formulated as: Lf eat= 1− 1 HW HWX i=1 cos(fi, f′ i ), (9) where cos(·, ·) measures the cosine similarity between two feature vectors. f is the feature extracted by the depth model S, while f ′ is the feature from a frozen DINOv2 encoder. We do not follow some works [ 18] to project the online feature f into a new space for alignment, because a randomly initialized projector makes the large alignment loss dominate the overall loss in the early stage. Another key point in feature alignment is that, semantic encoders like DINOv2 tend to produce similar features for different parts of an object, e.g., car front and rear. In depth estimation, however, different parts or even pixels within the same part, can be of varying depth. Thus, it is not beneficial to exhaustively enforce our depth model to produce exactly the same features as the frozen encoder. To solve this issue, we set a tolerance margin α for the feature alignment. If the cosine similarity of fi and f ′ i has surpassed α, this pixel will not be considered in our Lf eat."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_sc2",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.6837506890296936,
+      "text": "2 contains an overview of the proposed fine-tuning procedure. Depth encoder and decoder. We take the frozen V AE to encode both the image and its corresponding depth map into a latent space for training our conditional denoiser. Given that the encoder, which is designed for 3-channel (RGB) inputs, receives a single-channel depth map, we replicate the depth map into three channels to simulate an RGB image. At this point, the data range of the depth data plays a sig- nificant role in enabling affine-invariance. We discuss our normalization approach in Sec. 3. 3. We verified that without any modification of the V AE or the latent space structure, the depth map can be reconstructed from the encoded latent code with a negligible error, i.e., d ≈ D(E(d)). At infer- ence time, the depth latent code is decoded once at the end of diffusion, and the average of three channels is taken as the predicted depth map. Adapted denoising U-Net. To implement the conditioning of the latent denoiser ϵθ(z(d) t , z(x), t) on input image x, we concatenate the image and depth latent codes into a single input zt = cat(z(d) t , z(x)) along the feature dimension."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_sc2",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.6837506890296936,
+      "text": "2 contains an overview of the proposed fine-tuning procedure. Depth encoder and decoder. We take the frozen V AE to encode both the image and its corresponding depth map into a latent space for training our conditional denoiser. Given that the encoder, which is designed for 3-channel (RGB) inputs, receives a single-channel depth map, we replicate the depth map into three channels to simulate an RGB image. At this point, the data range of the depth data plays a sig- nificant role in enabling affine-invariance. We discuss our normalization approach in Sec. 3. 3. We verified that without any modification of the V AE or the latent space structure, the depth map can be reconstructed from the encoded latent code with a negligible error, i.e., d ≈ D(E(d)). At infer- ence time, the depth latent code is decoded once at the end of diffusion, and the average of three channels is taken as the predicted depth map. Adapted denoising U-Net. To implement the conditioning of the latent denoiser ϵθ(z(d) t , z(x), t) on input image x, we concatenate the image and depth latent codes into a single input zt = cat(z(d) t , z(x)) along the feature dimension."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6824700236320496,
+      "text": "Contents lists available at ScienceDirect Pattern Recognition journal homepage: www.elsevier.com/locate/pr SSRDepth: Combining semantic segmentation and relative depth for monocular metric depth estimation Yuhang Zou, Xiaoming Chen, Zhangyan Zhao ∗, Chenghua Zhang, Haipeng Liu School of Transportation and Logistics Engineering, Wuhan University of Technology, Wuhan, 430063, Hubei, China a r t i c l e i n f o Keywords: Monocular depth estimation Semantic segment Relative depth Masked transformer a b s t r a c t Monocular depth estimation is a pivotal task in computer vision, aimed to predict a dense depth map from a single image. Existing methods can achieve satisfactory performance through carefully designed network architectures. However, they often ignore the semantic information of scene structures, leading to poor performance in the se- mantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular depth estimation method that leverages semantic segmentation to improve metric depth prediction."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p2_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 2,
+      "score": 0.6824290752410889,
+      "text": "Estimating depth “in the wild” refers to methods that are successful across a wide range of (possibly unfamiliar) set- tings, a particularly challenging task. It has been addressed by constructing large and diverse depth datasets and design- ing algorithms to handle that diversity. DIW [8] was perhaps the earliest work to introduce an uncontrolled dataset and to predict relative (ordinal) depth for it. OASIS [ 9] intro- duced relative depth and normals to better generalize across scenes. However, relative depth predictions (depth ordering) are of limited use for many downstream tasks, which has led several authors to consider affine-invariant depth. In that setting, depth is estimated up to an unknown (global) offset and scale. It offers a viable compromise between the ordinal and metric cases: on the one hand, it can handle general scenes consisting of unfamiliar objects; on the other hand, depth differences between different objects or scene parts are still geometrically meaningful relative to each other."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p2_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 2,
+      "score": 0.6824290752410889,
+      "text": "Estimating depth “in the wild” refers to methods that are successful across a wide range of (possibly unfamiliar) set- tings, a particularly challenging task. It has been addressed by constructing large and diverse depth datasets and design- ing algorithms to handle that diversity. DIW [8] was perhaps the earliest work to introduce an uncontrolled dataset and to predict relative (ordinal) depth for it. OASIS [ 9] intro- duced relative depth and normals to better generalize across scenes. However, relative depth predictions (depth ordering) are of limited use for many downstream tasks, which has led several authors to consider affine-invariant depth. In that setting, depth is estimated up to an unknown (global) offset and scale. It offers a viable compromise between the ordinal and metric cases: on the one hand, it can handle general scenes consisting of unfamiliar objects; on the other hand, depth differences between different objects or scene parts are still geometrically meaningful relative to each other."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc0",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6809701919555664,
+      "text": "still inevitable gaps between synthetic and real adverse con- ditions [8, 22, 46]. Here, we analyze the performance of models ΦD−syn and ΦP −syn on synthetic and real data un- der the same condition (e.g., night), as shown in Fig. 3 (a) and (b). In (a), performance significantly declines from syn- thetic to real adverse data, with drops of 70% in AbsRel, 28% in RM SE, and 17% in δ1. In (b), the synthetic night- time image and its predicted depth map show different pat- terns compared to the real nighttime, such as successful de- tection of near and far distances in synthetic images, and failure to detect distant planes in real images. This moti- vates us to address the synthetic-real domain gap. Formally, our goal is to train a depth modelΦD−real and a pose model ΦP −real capable of predicting Dreal across various real conditions without any labels. To achieve this, we leverage the abilities of ΦD−day and ΦD−syn by care- fully designing a Real Adaptation stage in Fig. 3 (b). Consistency Reweighting Strategy A straightforward su- pervision signal for Dreal is Dsyn, generated by ΦD−syn on real data, which can serve as a pseudo label forΦD−real."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p14_sc2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.680561900138855,
+      "text": "We evaluate our results on these 652 improved ground truth frames and compare to existing pub- lished methods without having to retrain each method, see Table 7. We present results for all other methods for which we have obtained predictions from the authors. We use the same error metrics from the standard evaluation, and clip the predicted depths to 80 meters to match the Eigen evalu- ation. We evaluate on the full image and do not crop, unlike with the Eigen evaluation. We can see that our method still signiﬁcantly outperforms all previously published methods on all metrics. While Superdepth [47] comes a close sec- ond to our algorithm in the S category, they are run at high resolution (1024× 384 vs. our 640× 192), and in Table 1 we show that at higher resolutions our model’s performance also increases. D. 2. Single-Scale Evaluation Our monocular trained approach, like all self-supervised baselines, has no guarantee of producing results with a metric scale. Nonetheless, we anticipate that there could be value in estimating depth-outputs that are, without spe- cial measures, consistent with each other across all predic- tions."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p14_sc2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.680561900138855,
+      "text": "We evaluate our results on these 652 improved ground truth frames and compare to existing pub- lished methods without having to retrain each method, see Table 7. We present results for all other methods for which we have obtained predictions from the authors. We use the same error metrics from the standard evaluation, and clip the predicted depths to 80 meters to match the Eigen evalu- ation. We evaluate on the full image and do not crop, unlike with the Eigen evaluation. We can see that our method still signiﬁcantly outperforms all previously published methods on all metrics. While Superdepth [47] comes a close sec- ond to our algorithm in the S category, they are run at high resolution (1024× 384 vs. our 640× 192), and in Table 1 we show that at higher resolutions our model’s performance also increases. D. 2. Single-Scale Evaluation Our monocular trained approach, like all self-supervised baselines, has no guarantee of producing results with a metric scale. Nonetheless, we anticipate that there could be value in estimating depth-outputs that are, without spe- cial measures, consistent with each other across all predic- tions."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p10_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 10,
+      "score": 0.6804207563400269,
+      "text": "[24] Vaishakh Patil, Christos Sakaridis, Alexander Liniger, and Luc Van Gool. P3Depth: Monocular depth estimation with a piecewise planarity prior. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 1610–1621, 2022. 2 [25] Andra Petrovai and Sergiu Nedevschi. Exploiting pseudo labels in a self-supervised learning framework for im- proved monocular depth estimation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 1578–1588, 2022. 1, 3 [26] Matteo Poggi, Filippo Aleotti, Fabio Tosi, and Stefano Mat- toccia. On the uncertainty of self-supervised monocular depth estimation. In Proceedings of the IEEE/CVF Con- ference on Computer Vision and Pattern Recognition, pages 3227–3237, 2020. 3 [27] Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, and Bj ¨orn Ommer. High-resolution image synthesis with latent diffusion models. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 10684–10695, 2022. 6 [28] Chitwan Saharia, William Chan, Huiwen Chang, Chris Lee, Jonathan Ho, Tim Salimans, David Fleet, and Mohammad Norouzi."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p3_sc4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 3,
+      "score": 0.6803438663482666,
+      "text": "It builds on a recursive use of IDWT operation applied to predicted coefﬁcient maps. Thus, we reconstruct a depth map at the input scale by ﬁrst predict-"
+    },
+    {
+      "id": "semantic_chunk::LED_p16_sc1",
+      "source": "data\\LED.pdf",
+      "page": 16,
+      "score": 0.6800684928894043,
+      "text": "As we believe edges sharpness is important regardless of the distance, we employ a standard L1 Loss expressed in eq. (2) instead of a logarithmic one used in [22]. Moreover, our experiments revealed no performance improvements with the Log version.∇ x(di)and∇ y(di)respectively represent the spatial derivative ofd i along the x and y-axis, Lgrad = 1 N N ∑ i=1 |∇x(di)−∇ x(gi)|+|∇ y(di)−∇ y(gi)|.(2) Similar to [22], we want to ensure accurate surfaces representation in depth maps. The depth normals are estimated at each pixel usingna i ≡[−∇ x(ai),−∇ y(ai),1] ⊺. The co- sine similarity loss, expressed in eq. (3), is then employed to compare estimated and ground truth normals.⟨., .⟩denotes vector inner product operation: Lnormal = 1 N N ∑ i=1 |1− ⟨nd i ,n g i ⟩q nd i ,n d i q ng i ,n g i |.(3) Finally, our learning objective can be expressed as eq. (4), we setλ 1 =1 andλ 2 =1:"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7494617700576782,
+      "text": "Therefore, we have summarized two key points that need to be care- fully considered to help the model eﬀectively learn semantic priors: (1) How to eﬀectively utilize the semantic information of the scene to guide SIDE. As shown in Fig. 1(b), all objects in the depth map have nearly identical contours with their semantic segments, and the depth values within the some semantic segments also exhibit a high degree of https://doi.org/10. 1016/j.patcog. 2025. 112279 Received 29 December 2024; Received in revised form 23 July 2025; Accepted 9 August 2025 Pattern Recognition 171 (2026) 112279 Available online 18 August 2025 0031-3203/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+      "estimated_tokens": 194
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7295156121253967,
+      "text": "While RDE serves as a valid estimation paradigm, it has limitations in real-world applications. ∗ Corresponding author. E-mail address: zhao13871001982@whut.edu.cn (Z. Zhao). Consequently, MDE methods have gradually become the mainstream [8]. MDE methods typically directly regress the metric depth of each pixel. Some MDE methods [9,10] employ a hybrid regression strategy, adaptively dividing the image depth range into discrete bins and then predicting the probability of pixels belonging to each bin to achieve ac- curate metric depth estimation. Despite their excellent performance in various benchmarks, these methods often neglect the semantic informa- tion of real-world scene structures, leading to “smooth transition” char- acteristics in the semantic boundaries areas of the predicted depth maps, as shown in Fig. 1(a). Therefore, the introduction of semantic priors is essential. However, existing methods [11] focus on implicitly constructing scene structural relationships utilizing semantic information, but with- out explicit constraints, models may struggle to learn semantic priors.",
+      "estimated_tokens": 216
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc2",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7247670888900757,
+      "text": "To address the synthetic-real gaps, we propose a novel real adaptation (RA) stage. One challenge is to find valid supervision signals from earlier trained models, and we design a consistency-reweighting strategy by incorporating different models to find a consistency map that can empha- size the valid parts of pseudo-labels and provide effective signals for learning in real-world conditions. Since pseudo- labels from the frozen model still suffer from the synthetic- real gap, we introduce an effective prior based on daytime depth predictions, by calculating explicit depth distribution from the daytime model and setting it to be a reference in di- verse conditions. This structural prior provides explicit con- straint when facing real adverse data, learning real-world information further effectively. With the proposed synthetic-to-real adaptation pipeline, our model can provide much more robust depth predictions in diverse conditions through different real-world datasets [5, 19, 37].",
+      "estimated_tokens": 180
+    },
+    {
+      "id": "semantic_chunk::s_p1_sc0",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7126739025115967,
+      "text": "Synthetic-to-Real Self-supervised Robust Depth Estimation via Learning with Motion and Structure Priors Weilong Yan1 Ming Li3 Haipeng Li4 Shuwei Shao5 Robby T. Tan1,2 1National University of Singapore 2ASUS Intelligent Cloud Services 3Guangdong Laboratory of Artificial Intelligence and Digital Economy (SZ) 4University of Electronic Science and Technology of China 5School of Control Science and Engineering, Shandong University yanweilong@u.nus.edu Abstract Self-supervised depth estimation from monocular cameras in diverse outdoor conditions, such as daytime, rain, and nighttime, is challenging due to the difficulty of learning universal representations and the severe lack of labeled real-world adverse data. Previous methods either rely on synthetic inputs and pseudo-depth labels or directly apply daytime strategies to adverse conditions, resulting in sub- optimal results. In this paper, we present the first synthetic- to-real robust depth estimation framework, incorporating motion and structure priors to capture real-world knowl- edge effectively.",
+      "estimated_tokens": 213
+    },
+    {
+      "id": "semantic_chunk::s_p8_sc4",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.7081974744796753,
+      "text": "We introduce a consistency reweighting strategy and a structure prior con- straint to boost learning from synthetic to real domains. Ex- periments across diverse settings and datasets show that our model provides more accurate and robust depth than previ- ous methods, with superior generalization capabilities.",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p10_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.7020003795623779,
+      "text": "This choice can not to fully demonstrate the model’s perfor- mance. Therefore, we train our method on both the raw depth annota- tions(rawDepths) and the completed reﬁned depth annotations(Depths) from NYU1449. The experimental results are shown in Table 8. Our Pattern Recognition 171 (2026) 112279 10",
+      "estimated_tokens": 78
+    },
+    {
+      "id": "semantic_chunk::dav2_p6_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 6,
+      "score": 0.6941004991531372,
+      "text": "On pseudo-labeled images, we follow V1 to add an additional feature alignment loss to preserve informative semantics from pre-trained DINOv2 encoders. 2To offer capablemetric depth models, we further fine-tune our basic models with metric depth (Section 7. 3). 6",
+      "estimated_tokens": 61
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1000,
+    "compressed_context_tokens": 1000,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1000,
+  "context_tokens": 1000,
+  "prompt_token_estimate": 1406,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_syn2real_depth_structure_prior_constraint",
+  "answer": "<think>\nThe user is asking about how Syn2Real-Depth's structure prior constraint is constructed and used. Let me look at the relevant sources.\n\nFrom source [3] (s.pdf):\n- They propose a real adaptation (RA) stage\n- One challenge is finding valid supervision signals from earlier trained models\n- They design a consistency-reweighting strategy by incorporating different models to find a consistency map\n- Since pseudo-labels from the frozen model still suffer from the synthetic-real gap, they introduce an effective prior based on daytime depth predictions\n- They calculate explicit depth distribution from the daytime model and set it to be a reference in diverse conditions\n- This structural prior provides explicit constraint when facing real adverse data\n- It helps learn real-world information further effectively\n\nSo the structure prior constraint is:\n1. Built from daytime depth predictions\n2. Based on explicit depth distribution calculated from the daytime model\n3. Used as a reference in diverse conditions (adverse conditions like rain, nighttime)\n4. Provides explicit constraint when facing real adverse data\n5. Helps learn real-world information effectively\n\nThis is from source [3] (s.pdf).\n\nLet me construct the answer.\n</think>\n{\n  \"answer\": \"Syn2Real-Depth 的 structure prior constraint 基于白天（daytime）模型预测的深度显式计算深度分布，并将其作为多样条件（含雨、夜间等不良条件）下的参考约束，以应对伪标签的合成-真实域差距，为真实不良数据的学习提供显式约束。\",\n  \"items\": [\n    {\n      \"name\": \"构建方式\",\n      \"description\": \"通过 frozen daytime depth model 对图像预测的深度计算显式的深度分布（explicit depth distribution），以此作为结构先验。\",\n      \"citations\": [3]\n    },\n    {\n      \"name\": \"使用方式\",\n      \"description\": \"将该深度分布作为 reference 应用于多样（diverse）真实条件下的预测，对真实不良数据提供 explicit constraint，辅助模型在 synthetic-to-real 适应阶段学习真实世界信息。\",\n      \"citations\": [3]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1447,
+    "completion_tokens": 434,
+    "total_tokens": 1881,
+    "model": "MiniMax-M3"
+  }
+}

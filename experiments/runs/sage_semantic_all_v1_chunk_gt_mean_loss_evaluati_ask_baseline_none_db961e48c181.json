@@ -1,0 +1,422 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_gt_mean_loss_evaluati_ask_baseline_none_db961e48c181",
+  "dry_run": false,
+  "query": "GT-Mean Loss 论文使用了哪些评估指标？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_chunk_4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.8565311431884766,
+      "text": "raining. However, this issue\nis largely neglected in current research. In this context, we\npropose the GT-mean loss, a simple yet effective loss func-\ntion directly modeling the mean values of images from a\nprobabilistic perspective. The GT-mean loss is fl"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_chunk_4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.8565311431884766,
+      "text": "raining. However, this issue\nis largely neglected in current research. In this context, we\npropose the GT-mean loss, a simple yet effective loss func-\ntion directly modeling the mean values of images from a\nprobabilistic perspective. The GT-mean loss is fl"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_chunk_10",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.8395175933837891,
+      "text": ".4033.660 57.698 2.646 1.9673.400 61.310 2.938 2.1312.700 36.235 2.904 1.8393.310 53.901 2.927 2.097Uformer with GT-mean loss (ours) 3.120 58.981 3.067 2.1803.690 56.641 3.229 2.4263.640 58.200 2.712 1.9733.380 61.704 2.956 2.1132.700 36.695 3.001 1.8483.3"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_chunk_10",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.8395175933837891,
+      "text": ".4033.660 57.698 2.646 1.9673.400 61.310 2.938 2.1312.700 36.235 2.904 1.8393.310 53.901 2.927 2.097Uformer with GT-mean loss (ours) 3.120 58.981 3.067 2.1803.690 56.641 3.229 2.4263.640 58.200 2.712 1.9733.380 61.704 2.956 2.1132.700 36.695 3.001 1.8483.3"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_chunk_6",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.8368402123451233,
+      "text": "0 2.7403.860 56.170 3.137 2.3733.880 57.262 3.111 2.3233.380 60.507 3.673 2.6992.730 37.513 3.471 2.1543.420 53.77 3.438 2.458Retinexformer with GT-mean loss (ours) 3.210 57.247 3.805 2.7733.820 56.633 3.195 2.4123.840 57.374 3.273 2.4233.370 60.682 3.706"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_chunk_6",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.8368402123451233,
+      "text": "0 2.7403.860 56.170 3.137 2.3733.880 57.262 3.111 2.3233.380 60.507 3.673 2.6992.730 37.513 3.471 2.1543.420 53.77 3.438 2.458Retinexformer with GT-mean loss (ours) 3.210 57.247 3.805 2.7733.820 56.633 3.195 2.4123.840 57.374 3.273 2.4233.370 60.682 3.706"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_chunk_4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.8244174718856812,
+      "text": "2.467 3.111 2.3373.670 47.399 2.742 2.0564.230 54.837 2.860 2.0883.470 58.641 3.285 2.3743.640 54.566 2.955 2.1623.770 53.582 2.991 2.203MIRNET with GT-mean loss(ours)3.200 53.188 3.295 2.3753.600 47.611 2.817 2.0674.330 55.776 2.747 2.0583.500 58.718 3.36"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_chunk_4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.8244174718856812,
+      "text": "2.467 3.111 2.3373.670 47.399 2.742 2.0564.230 54.837 2.860 2.0883.470 58.641 3.285 2.3743.640 54.566 2.955 2.1623.770 53.582 2.991 2.203MIRNET with GT-mean loss(ours)3.200 53.188 3.295 2.3753.600 47.611 2.817 2.0674.330 55.776 2.747 2.0583.500 58.718 3.36"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_chunk_17",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.817176342010498,
+      "text": "xtending its su-\npervised loss function into the GT-mean version.\nThe GT-mean loss is also efficient. Compared to the\noriginal loss, it doubles the computation, and W is esti-\nmated with an analytical solution. Despite there is extra\ncomputation overhead,"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p4_chunk_17",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 4,
+      "score": 0.817176342010498,
+      "text": "xtending its su-\npervised loss function into the GT-mean version.\nThe GT-mean loss is also efficient. Compared to the\noriginal loss, it doubles the computation, and W is esti-\nmated with an analytical solution. Despite there is extra\ncomputation overhead,"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_chunk_12",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.8168213963508606,
+      "text": ".671 3.040 2.3433.320 59.824 3.657 2.7163.160 60.885 3.557 2.2493.500 57.271 3.351 2.418LLformer with GT-mean loss(ours)3.050 57.038 3.910 2.8373.650 53.842 2.706 2.0174.070 55.830 3.118 2.4163.330 60.044 3.707 2.7312.990 60.858 3.563 2.2313.410(-)57.522(+"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_chunk_12",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.8168213963508606,
+      "text": ".671 3.040 2.3433.320 59.824 3.657 2.7163.160 60.885 3.557 2.2493.500 57.271 3.351 2.418LLformer with GT-mean loss(ours)3.050 57.038 3.910 2.8373.650 53.842 2.706 2.0174.070 55.830 3.118 2.4163.330 60.044 3.707 2.7312.990 60.858 3.563 2.2313.410(-)57.522(+"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p6_chunk_4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 6,
+      "score": 0.8094298839569092,
+      "text": "loss demonstrates\nsuperior or comparable results in most cases in terms of\nthe non-reference evaluation metrics. These results indicate\nthat the GT-Mean loss possesses strong generalization capa-\nbilities: even when tested on unseen images, performance\nimp"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p6_chunk_4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 6,
+      "score": 0.8094298839569092,
+      "text": "loss demonstrates\nsuperior or comparable results in most cases in terms of\nthe non-reference evaluation metrics. These results indicate\nthat the GT-Mean loss possesses strong generalization capa-\nbilities: even when tested on unseen images, performance\nimp"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_chunk_5",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.8090380430221558,
+      "text": "e mean values of images from a\nprobabilistic perspective. The GT-mean loss is flexible, as it\nextends existing supervised LLIE loss functions into the GT-\nmean form with minimal additional computational costs.\nExtensive experiments demonstrate that the inc"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_chunk_5",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.8090380430221558,
+      "text": "e mean values of images from a\nprobabilistic perspective. The GT-mean loss is flexible, as it\nextends existing supervised LLIE loss functions into the GT-\nmean form with minimal additional computational costs.\nExtensive experiments demonstrate that the inc"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_chunk_1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.8053468465805054,
+      "text": "ns. The\nperformance is consistently improved when the GT-mean loss functions are adopted. Notably, this improvement is easily attainable, as the\nuse of GT-mean loss functions is flexible and brings minimal additional computational costs during training.\nTh"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_chunk_1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.8053468465805054,
+      "text": "ns. The\nperformance is consistently improved when the GT-mean loss functions are adopted. Notably, this improvement is easily attainable, as the\nuse of GT-mean loss functions is flexible and brings minimal additional computational costs during training.\nTh"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_chunk_12",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.802655816078186,
+      "text": "20.235 0.841 0.162 28.159 0.88 0.147 3.478 1.987Restormer with GT-mean loss(ours) 20.717(+0.482)0.845(+0.004)0.149(-0.013)28.440(+0.281)0.884(+0.004)0.135(-0.012)3.554(↑) 2.020(↑)\nLLFormer 21.308 0.803 0.248 27.052 0.828 0.236 2.882 1.827LLFormer with GT-m"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_chunk_12",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.802655816078186,
+      "text": "20.235 0.841 0.162 28.159 0.88 0.147 3.478 1.987Restormer with GT-mean loss(ours) 20.717(+0.482)0.845(+0.004)0.149(-0.013)28.440(+0.281)0.884(+0.004)0.135(-0.012)3.554(↑) 2.020(↑)\nLLFormer 21.308 0.803 0.248 27.052 0.828 0.236 2.882 1.827LLFormer with GT-m"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_chunk_12",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.8026337623596191,
+      "text": "ess mismatch on pixel-\nlevel loss. The results in our experimental section validate\nthis point in Section 4.2.\nIn summary, the GT-mean loss is highlighted in the fol-\nlowing aspects:\n• Simplicity: The construction of the GT-mean loss is both\ntheoretically"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_chunk_12",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.8026337623596191,
+      "text": "ess mismatch on pixel-\nlevel loss. The results in our experimental section validate\nthis point in Section 4.2.\nIn summary, the GT-mean loss is highlighted in the fol-\nlowing aspects:\n• Simplicity: The construction of the GT-mean loss is both\ntheoretically"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_chunk_9",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.8020768165588379,
+      "text": "009Uformer with GT-mean loss(ours) 16.103( +1.162)0.792(+0.032)0.180(-0.048)23.989( +1.841)0.858(+0.026)0.156(-0.043)3.778(↑) 2.048(↑)\nMIRNet 21.648 0.81 0.313 26.712 0.827 0.303 2.598 1.520MIRNet with GT-mean loss(ours) 22.050(+0.402)0.830(+0.021)0.214( -"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_chunk_9",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.8020768165588379,
+      "text": "009Uformer with GT-mean loss(ours) 16.103( +1.162)0.792(+0.032)0.180(-0.048)23.989( +1.841)0.858(+0.026)0.156(-0.043)3.778(↑) 2.048(↑)\nMIRNet 21.648 0.81 0.313 26.712 0.827 0.303 2.598 1.520MIRNet with GT-mean loss(ours) 22.050(+0.402)0.830(+0.021)0.214( -"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_chunk_31",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.7998632192611694,
+      "text": "usted\nversion of the original loss, sharing the same computational\ncomplexity. Thus, the GT-Mean Loss incurs only twice the\ncomputational overhead of the original loss. For example,\n5"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_chunk_31",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.7998632192611694,
+      "text": "usted\nversion of the original loss, sharing the same computational\ncomplexity. Thus, the GT-Mean Loss incurs only twice the\ncomputational overhead of the original loss. For example,\n5"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_chunk_9",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.7961727380752563,
+      "text": "In Section 3.1 present the formulation of the GT-mean loss.\nIn Section 3.2 detail the crucial component W of this loss\nfunction. Section 3.3 summarizes the features of the pro-\nposed loss.\n3.1. GT-mean loss\nIn general, the GT-mean loss LGT (f (x), y) can b"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_chunk_9",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.7961727380752563,
+      "text": "In Section 3.1 present the formulation of the GT-mean loss.\nIn Section 3.2 detail the crucial component W of this loss\nfunction. Section 3.3 summarizes the features of the pro-\nposed loss.\n3.1. GT-mean loss\nIn general, the GT-mean loss LGT (f (x), y) can b"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_chunk_2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.7940205335617065,
+      "text": "rmer 3.220 58.525 3.885 2.8003.660 56.528 3.215 2.4153.660 58.461 3.267 2.4663.470 61.031 3.781 2.7353.290 37.919 3.710 2.2643.460 54.493 3.572 2.536Restormer with GT-mean loss (ours) 3.180 58.604 3.913 2.8213.630 56.522 3.208 2.4313.630 58.124 3.380 2.521"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_chunk_2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.7940205335617065,
+      "text": "rmer 3.220 58.525 3.885 2.8003.660 56.528 3.215 2.4153.660 58.461 3.267 2.4663.470 61.031 3.781 2.7353.290 37.919 3.710 2.2643.460 54.493 3.572 2.536Restormer with GT-mean loss (ours) 3.180 58.604 3.913 2.8213.630 56.522 3.208 2.4313.630 58.124 3.380 2.521"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_8",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.7931883335113525,
+      "text": "·]\nin our modeling, we recommend using a small value, such\nas σ = 0.1 for real world application.\n4.5. Further analysis on the GT-mean loss\nIn this experiment, we further investigate the difference be-\ntween the original loss and the GT-mean loss. Specific"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_chunk_8",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.7931883335113525,
+      "text": "·]\nin our modeling, we recommend using a small value, such\nas σ = 0.1 for real world application.\n4.5. Further analysis on the GT-mean loss\nIn this experiment, we further investigate the difference be-\ntween the original loss and the GT-mean loss. Specific"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_22",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.7924498319625854,
+      "text": "ement (LLIE)\nmethods. The GT-mean loss enables the model train-\ning process to circumvent the misleading issue caused by\nbrightness mismatch, thereby comprehensively addressing\nthe various degeneration factors in low-light images. Due\nto its simple constru"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_chunk_22",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.7924498319625854,
+      "text": "ement (LLIE)\nmethods. The GT-mean loss enables the model train-\ning process to circumvent the misleading issue caused by\nbrightness mismatch, thereby comprehensively addressing\nthe various degeneration factors in low-light images. Due\nto its simple constru"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_chunk_10",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.7913259267807007,
+      "text": "03 2.598 1.520MIRNet with GT-mean loss(ours) 22.050(+0.402)0.830(+0.021)0.214( -0.099)26.769(+0.057)0.846(+0.019)0.208( -0.101)2.924(↑) 1.702(↑)\nRetinexFormer 21.272 0.841 0.163 27.65 0.877 0.152 2.714 1.590RetinexFormer with GT-mean loss(ours)21.810(+0.53"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_chunk_10",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.7913259267807007,
+      "text": "03 2.598 1.520MIRNet with GT-mean loss(ours) 22.050(+0.402)0.830(+0.021)0.214( -0.099)26.769(+0.057)0.846(+0.019)0.208( -0.101)2.924(↑) 1.702(↑)\nRetinexFormer 21.272 0.841 0.163 27.65 0.877 0.152 2.714 1.590RetinexFormer with GT-mean loss(ours)21.810(+0.53"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_chunk_18",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.7873393297195435,
+      "text": "mated with an analytical solution. Despite there is extra\ncomputation overhead, the overall increase introduced by\nthe GT-mean loss is negligible throughout the training pro-\ncess.\n4. Experiment\n4.1. Datasets and Settings\nBaselines. We selected a total of"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p4_chunk_18",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 4,
+      "score": 0.7873393297195435,
+      "text": "mated with an analytical solution. Despite there is extra\ncomputation overhead, the overall increase introduced by\nthe GT-mean loss is negligible throughout the training pro-\ncess.\n4. Experiment\n4.1. Datasets and Settings\nBaselines. We selected a total of"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_chunk_27",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.7860944867134094,
+      "text": "lidates the universal effectiveness\nof the GT-Mean loss in LLIE tasks. Notably, both SNR-\naware and CIDNet methods exhibit significant performance\nimprovements after incorporating the GT-Mean loss,\nindicating that the GT-Mean loss effectively complements\np"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_chunk_27",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.7860944867134094,
+      "text": "lidates the universal effectiveness\nof the GT-Mean loss in LLIE tasks. Notably, both SNR-\naware and CIDNet methods exhibit significant performance\nimprovements after incorporating the GT-Mean loss,\nindicating that the GT-Mean loss effectively complements\np"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p11_chunk_11",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 11,
+      "score": 0.7853237986564636,
+      "text": "loss variant, the Charbonnier loss, edge\nloss, and perceptual loss were extended to GT-mean loss.\nIn summary, for each method, the original loss functions\nwere extended to GT-mean loss, and all models were trained\nusing consistent settings to ensure a fai"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p11_chunk_11",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 11,
+      "score": 0.7853237986564636,
+      "text": "loss variant, the Charbonnier loss, edge\nloss, and perceptual loss were extended to GT-mean loss.\nIn summary, for each method, the original loss functions\nwere extended to GT-mean loss, and all models were trained\nusing consistent settings to ensure a fai"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_chunk_15",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.7849475741386414,
+      "text": "er makes adopting the GT-\nmean loss a universal choice for supervised LLIE models\nto upgrade their loss functions.\n• Low Cost : Using the GT-mean loss introduces mini-\nmal overhead during training (approximately doubling\nthe original loss computation). It"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_chunk_15",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.7849475741386414,
+      "text": "er makes adopting the GT-\nmean loss a universal choice for supervised LLIE models\nto upgrade their loss functions.\n• Low Cost : Using the GT-mean loss introduces mini-\nmal overhead during training (approximately doubling\nthe original loss computation). It"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p11_chunk_1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 11,
+      "score": 0.7843728065490723,
+      "text": "ne model while introducing the GT-\nmean loss to demonstrate its effectiveness. To ensure fair\ncomparisons, both the baseline models and the ones using\nGT-mean loss were trained under identical hardware and\nsoftware environments, minimizing the effects of r"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p11_chunk_1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 11,
+      "score": 0.7843728065490723,
+      "text": "ne model while introducing the GT-\nmean loss to demonstrate its effectiveness. To ensure fair\ncomparisons, both the baseline models and the ones using\nGT-mean loss were trained under identical hardware and\nsoftware environments, minimizing the effects of r"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_13",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.7825071811676025,
+      "text": "urve of the original L1 loss (Figure 6(a)), and the curves\nof the GT-mean L1 loss under different σ values (Figure\n6(b)). The difference between them is that the use of the\nGT-mean loss clearly produces basins around η = 1. In an-\nother word, the GT-mean l"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_chunk_13",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.7825071811676025,
+      "text": "urve of the original L1 loss (Figure 6(a)), and the curves\nof the GT-mean L1 loss under different σ values (Figure\n6(b)). The difference between them is that the use of the\nGT-mean loss clearly produces basins around η = 1. In an-\nother word, the GT-mean l"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_chunk_8",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.781100869178772,
+      "text": "48.685 2.531 1.9436.060 49.216 2.836 2.1026.470 46.441 3.445 2.55111.520 23.186 3.067 1.9556.880 42.911 3.052 2.215SNR with GT-mean loss (ours) 6.120 47.430 3.521 2.5714.260 48.780 2.571 1.9576.110 49.008 2.946 2.1526.460 46.602 3.580 2.60511.550 23.853 3"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_chunk_8",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.781100869178772,
+      "text": "48.685 2.531 1.9436.060 49.216 2.836 2.1026.470 46.441 3.445 2.55111.520 23.186 3.067 1.9556.880 42.911 3.052 2.215SNR with GT-mean loss (ours) 6.120 47.430 3.521 2.5714.260 48.780 2.571 1.9576.110 49.008 2.946 2.1526.460 46.602 3.580 2.60511.550 23.853 3"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_chunk_4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.8565311431884766,
+      "text": "raining. However, this issue\nis largely neglected in current research. In this context, we\npropose the GT-mean loss, a simple yet effective loss func-\ntion directly modeling the mean values of images from a\nprobabilistic perspective. The GT-mean loss is fl",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_chunk_4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.8565311431884766,
+      "text": "raining. However, this issue\nis largely neglected in current research. In this context, we\npropose the GT-mean loss, a simple yet effective loss func-\ntion directly modeling the mean values of images from a\nprobabilistic perspective. The GT-mean loss is fl",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_chunk_10",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.8395175933837891,
+      "text": ".4033.660 57.698 2.646 1.9673.400 61.310 2.938 2.1312.700 36.235 2.904 1.8393.310 53.901 2.927 2.097Uformer with GT-mean loss (ours) 3.120 58.981 3.067 2.1803.690 56.641 3.229 2.4263.640 58.200 2.712 1.9733.380 61.704 2.956 2.1132.700 36.695 3.001 1.8483.3",
+      "estimated_tokens": 150
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_chunk_10",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.8395175933837891,
+      "text": ".4033.660 57.698 2.646 1.9673.400 61.310 2.938 2.1312.700 36.235 2.904 1.8393.310 53.901 2.927 2.097Uformer with GT-mean loss (ours) 3.120 58.981 3.067 2.1803.690 56.641 3.229 2.4263.640 58.200 2.712 1.9733.380 61.704 2.956 2.1132.700 36.695 3.001 1.8483.3",
+      "estimated_tokens": 150
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_chunk_17",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.817176342010498,
+      "text": "xtending its su-\npervised loss function into the GT-mean version.\nThe GT-mean loss is also efficient. Compared to the\noriginal loss, it doubles the computation, and W is esti-\nmated with an analytical solution. Despite there is extra\ncomputation overhead,",
+      "estimated_tokens": 57
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 471,
+    "compressed_context_tokens": 471,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 471,
+  "context_tokens": 471,
+  "prompt_token_estimate": 953,
+  "run_label": "sage_semantic_all_v1_chunk_gt_mean_loss_evaluation_metrics",
+  "answer": "<think>\nThe user is asking about what evaluation metrics the GT-Mean Loss paper uses. Let me look at the provided materials.\n\nFrom the materials, I can see:\n- [1] and [2] mention the GT-mean loss proposal but don't specifically list evaluation metrics\n- [3] and [4] show numerical data in tables, but the table headers/captions are not visible in the provided snippets\n- [5] discusses computation efficiency of the GT-mean loss\n\nThe provided materials don't explicitly state which evaluation metrics are used. I can see numerical values in the tables but the metric names are not clearly visible in the text snippets.\n\nLooking at the data: \"3.120 58.981 3.067 2.180\" - these are 4 values, but the column headers (metric names) are not shown in the provided excerpts.\n\nI should indicate that the information about specific evaluation metric names is not available in the provided materials, even though we can see numerical data from tables.\n\nWait, let me reconsider. The question asks what evaluation metrics the paper used. The provided snippets show table data but don't include the column headers or the section that lists the evaluation metrics explicitly. So I should indicate missing information.\n</think>\n{\"answer\": \"资料中可见表格数据（如 3.120、58.981、3.067、2.180 等数值），但未提供对应的评估指标名称，无法明确列出具体指标。\", \"items\": [], \"missing_information\": \"资料片段中缺少表格的列标题或正文对评估指标的定义，无法识别所使用的具体评估指标名称。\"}",
+  "usage": {
+    "prompt_tokens": 1003,
+    "completion_tokens": 324,
+    "total_tokens": 1327,
+    "model": "MiniMax-M3"
+  }
+}

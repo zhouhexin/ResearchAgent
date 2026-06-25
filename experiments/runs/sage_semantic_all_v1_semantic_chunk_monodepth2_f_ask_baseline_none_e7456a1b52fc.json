@@ -1,0 +1,398 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_monodepth2_f_ask_baseline_none_e7456a1b52fc",
+  "dry_run": false,
+  "query": "Monodepth2的full-resolution multi-scale sampling解决了什么问题？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.7412015199661255,
+      "text": "[64] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. arXiv:2303. 02153, 2023. 3 [65] Chong Zhou, Chen Change Loy, and Bo Dai. Extract free dense labels from CLIP. In ECCV, pages 696–712, 2022. 3 Appendix In this supplementary material, we provide additional im- plementation details in Appendix A and present additional quantitative and qualitative results in Appendix B and Ap- pendix C, respectively. A. Implementation Details A. 1. Mixed Dataset Training We train on two synthetic datasets, Hypersim [37] and Vir- tual KITTI [7], whose images have different resolutions and aspect ratios. For each batch, we probabilistically choose the dataset and then draw samples from it. We ablate the Bernoulli parameter of dataset sampling in Appendix B. 4. A. 2. Annealed Multi-Resolution Noise In the standard multi-resolution noise, multiple Gaussian noise images are sampled to form a pyramid of resolutions and then subsequently combined by upsampling, weighted averaging, and renormalization."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.7412015199661255,
+      "text": "[64] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. arXiv:2303. 02153, 2023. 3 [65] Chong Zhou, Chen Change Loy, and Bo Dai. Extract free dense labels from CLIP. In ECCV, pages 696–712, 2022. 3 Appendix In this supplementary material, we provide additional im- plementation details in Appendix A and present additional quantitative and qualitative results in Appendix B and Ap- pendix C, respectively. A. Implementation Details A. 1. Mixed Dataset Training We train on two synthetic datasets, Hypersim [37] and Vir- tual KITTI [7], whose images have different resolutions and aspect ratios. For each batch, we probabilistically choose the dataset and then draw samples from it. We ablate the Bernoulli parameter of dataset sampling in Appendix B. 4. A. 2. Annealed Multi-Resolution Noise In the standard multi-resolution noise, multiple Gaussian noise images are sampled to form a pyramid of resolutions and then subsequently combined by upsampling, weighted averaging, and renormalization."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7228609919548035,
+      "text": "Thus, the remaining concern is the sufficient diversity or domain gaps between synthetic and real data, which sometimes limits generalization ability. As demonstrated in our experiments, our choice of synthetic datasets leads to impressive zero-shot transfer. Annealed multi-resolution noise. Previous works have explored deviations from the original DDPM formulations, such as non-Gaussian noise [30] or non-Markovian schedule shortcuts [49]. Our proposed setting and the fine-tuning pro- tocol outlined above are permissive to changes to the noise schedule at the fine-tuning stage. We identified a combina- tion of multi-resolution noise [23] and an annealed schedule to converge faster and substantially improve performance over the standard DDPM formulation. The multi-resolution noise is composed by superimposing several random Gaus- sian noise images of different scales, all upsampled to the U-Net input resolution. The proposed annealed schedule interpolates between the multi-resolution noise at t = T and standard Gaussian noise at t = 0. 3. 4. Inference Latent diffusion denoising. The overall inference pipeline is presented in Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7228609919548035,
+      "text": "Thus, the remaining concern is the sufficient diversity or domain gaps between synthetic and real data, which sometimes limits generalization ability. As demonstrated in our experiments, our choice of synthetic datasets leads to impressive zero-shot transfer. Annealed multi-resolution noise. Previous works have explored deviations from the original DDPM formulations, such as non-Gaussian noise [30] or non-Markovian schedule shortcuts [49]. Our proposed setting and the fine-tuning pro- tocol outlined above are permissive to changes to the noise schedule at the fine-tuning stage. We identified a combina- tion of multi-resolution noise [23] and an annealed schedule to converge faster and substantially improve performance over the standard DDPM formulation. The multi-resolution noise is composed by superimposing several random Gaus- sian noise images of different scales, all upsampled to the U-Net input resolution. The proposed annealed schedule interpolates between the multi-resolution noise at t = T and standard Gaussian noise at t = 0. 3. 4. Inference Latent diffusion denoising. The overall inference pipeline is presented in Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.7109032869338989,
+      "text": "996 [18] Monodepth2 Resnet18 \u0013 MS 192 × 640 0. 084 0. 494 3. 739 0. 132 0. 918 0. 983 0. 995 WaveletMonodepth Resnet18 \u0013 MS 192 × 640 0. 085 0. 497 3. 804 0. 134 0. 912 0. 982 0. 995 [63] Depth Hints \u0013 MS +SSGM 192 × 640 0. 087 0. 526 3. 776 0. 133 0. 915 0. 982 0. 995 WaveletMonodepth Resnet18 \u0013 MS +SSGM 192 × 640 0. 086 0. 497 3. 699 0. 131 0. 914 0. 983 0. 996 [18] Monodepth2 Resnet18 \u0013 S 320 × 1024 0. 082 0. 497 3. 637 0. 132 0. 924 0. 982 0. 994 WaveletMonodepth Resnet18 \u0013 S 320 × 1024 0. 080 0. 443 3. 544 0. 130 0. 919 0. 983 0. 995 WaveletMonodepth Resnet50 \u0013 S 320 × 1024 0. 076 0. 413 3. 434 0. 126 0. 926 0. 984 0. 995 [63] Depth Hints \u0013 SSGM 320 × 1024 0. 077 0. 404 3. 345 0. 119 0. 930 0. 988 0. 997 WaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0. 078 0. 397 3. 316 0. 121 0. 928 0. 987 0. 997 Depth Hints Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 363 3. 198 0. 114 0. 936 0. 989 0. 997 WaveletMonodepth Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 357 3. 170 0. 114 0. 936 0. 989 0. 997 Table 9: Quantitative results on the improved KITTI benchmark. We compare our method to our baselines on the KITTI [15] improved dataset introduced by [61], using the Eigen split."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p16_sc2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 16,
+      "score": 0.7094660401344299,
+      "text": "106 0. 818 4. 750 0. 196 0. 874 0. 957 0. 979 15 Monodepth2MS 1024×320 ✓ 0. 106 0. 806 4. 630 0. 193 0. 876 0. 958 0. 980 7. 5 + 10† Table 11. Ablation study on the input/output resolutions of our model.†Timings for the highest resolution models comprise 10 epochs training of the 640× 192 model and 5 epochs of the 1024× 320 model. Input Monodepth2 MS 128× 416 Monodepth2 MS192× 640 Monodepth2 MS320× 1024 Figure 11. Effect of varying resolutions on the KITTI Eigen split. All predicted disparity maps have been resized to the same size for visualization. Our lowest resolution model (128× 416) captures the broad shape of the scene successfully, but struggles with thin objects and sometimes fails to accurately capture the shape of depth discontinuities around object boundaries. trated in Fig. 11. It is clear that all resolutions accurately capture the overall shape of the scene. However, only the highest resolution model accurately represents the shape of thin objects."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p16_sc2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 16,
+      "score": 0.7094660401344299,
+      "text": "106 0. 818 4. 750 0. 196 0. 874 0. 957 0. 979 15 Monodepth2MS 1024×320 ✓ 0. 106 0. 806 4. 630 0. 193 0. 876 0. 958 0. 980 7. 5 + 10† Table 11. Ablation study on the input/output resolutions of our model.†Timings for the highest resolution models comprise 10 epochs training of the 640× 192 model and 5 epochs of the 1024× 320 model. Input Monodepth2 MS 128× 416 Monodepth2 MS192× 640 Monodepth2 MS320× 1024 Figure 11. Effect of varying resolutions on the KITTI Eigen split. All predicted disparity maps have been resized to the same size for visualization. Our lowest resolution model (128× 416) captures the broad shape of the scene successfully, but struggles with thin objects and sometimes fails to accurately capture the shape of depth discontinuities around object boundaries. trated in Fig. 11. It is clear that all resolutions accurately capture the overall shape of the scene. However, only the highest resolution model accurately represents the shape of thin objects."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p3_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 3,
+      "score": 0.7075893878936768,
+      "text": "In contrast, our method can directly be applied to regres- sion tasks, as rendering locations are directly predicted by our model as non-zero-valued high-frequency wavelet coef- ﬁcients. 3. Method In this section, we ﬁrst introduce the basics of 2D wavelet transforms. We chose Haar wavelets [22] due to their simplicity and provided efﬁciency. Next, we describe how to use the cascade nature of wavelet representations to build our efﬁcient depth estimation architecture, which we call WaveletMonodepth. Finally, we discuss the computa- tional beneﬁts of sparse representations. L H H L LL1 HH2 LH2 HL2 LL2 LL0 x0. 5 x0. 5 x0. 5 x0. 5 HH1 LH1 HL1 (a) Forward transform (DWT). This decomposes the high resolution in- put (left) into multi-scale low resolution outputs. LT HT HT LT HH1 LH1 HL1 HH2 LH2 HL2 x2 x2 x2 x2 LL1 LL2 LL0 (b) Inverse transform (IDWT). This reconstructs the original input from estimated low resolution inputs. Figure 2: Illustration of a two-level wavelet representation of a depth image. The input image LL0 is passed through a two-level wavelet decomposition (a), to produce a low frequency depth map together with associated wavelets for high frequency detail."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_sc3",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.706622838973999,
+      "text": "We note that we achieve our best results when using Depth Hints and high-resolution input images. This is not surprising, as supervision from SGM should give better scores, but more importantly using high resolution inputs and outputs allows for more sparsiﬁcation, as edge pixels become sparser as resolution grows. Impor- tantly, we show overall that replacing fully convolutional layers with wavelets gives models with comparable perfor- mance to the off-the-shelf, non-wavelet baselines. We show qualitative results from KITTI in Figure 7 (left). 4. 4. NYUv2 results Scores on NYUv2 are shown in Table 4. Our method performs on par with our baseline, which demonstrates that it is possible to estimate accurate depth and sparse wavelets without directly supervising the wavelet coefﬁ- cients, in contrast with [67]. In Table 4, we show that su- pervising depth only at the last scale performs on par with our network supervised at all scales, which shows that a full multi-scale wavelet reconstruction network can be trained end-to-end. Qualitative results from NYUv2 are shown in Figure 7 (right). 5."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p8_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.7055442333221436,
+      "text": "(2) Based on the default setting the dilation rates of the last three blocks are set to 1, 2, and 3, respectively. (3) Similar to the default setting we set 1, 2, and 5 in every three CDC blocks as a group. (4) Based on the default setting the dilation rates in the last two CDC blocks are set to 2, 4, 6 and 4, 8, 12, respectively. Table 6 lists the accuracy under different dila- tion settings. Comparing (2) with (3) the accuracy beneﬁts from larger dilation rates. However, (4) using very large di- lation rates in the late CDC blocks does not help. Simply pursuing larger dilation rates will result in the loss of local information, which is not good for the network to perceive small and medium-sized objects. Therefore, the proposed Lite-Mono adopts the setting (1) to extract multi-scale lo- cal features, i.e., smaller dilation rates are used in shallow layers, and they are doubled in the last three CDC modules. NO. Abs Rel Sq Rel RMSE RMSE logδ1 δ2 δ3 1 0. 107 0. 765 4. 561 0. 183 0. 886 0. 963 0. 983 2 0. 110 0. 867 4. 681 0. 187 0. 885 0. 961 0. 981 3 0. 108 0. 835 4. 652 0. 186 0. 885 0. 962 0. 982 4 0. 110 0. 855 4. 642 0. 187 0. 885 0. 961 0. 981 Table 6."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p4_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 4,
+      "score": 0.7041329741477966,
+      "text": "In our network architecture, the coarse depth estimate LL3 is estimated at 1/16 of the input scale. This depth map is then progressively upscaled and reﬁned using Algorithm 1. A forward pass of our model generates a collection of 5 depth maps LLs for scales [1/16, 1/8, 1/4, 1/2, 1]. We choose to supervise only the four last scales as in [18]. It is worth noting that the coefﬁcient maps are predicted at scales [1/16, 1/8, 1/4, 1/2], thus removing the need for full-resolution computation. 3. 3. Sparse Computations in Decoder For piecewise ﬂat depth maps, high-frequency coefﬁ- cient maps have a small number of non-zero values; these are located around depth edges. Hence, for full-resolution depth reconstruction, only some pixel locations need to pre- dict non-zero coefﬁcient map values at each scale. At any scale, we assume that these pixel locations with non-zero values can be determined from high-frequency coefﬁcient maps estimated at the previous scale deﬁned by a mask M described in GetSparseMask of Algorithm 1. The sparsity level achieved by using maskM is ψ = ∑H,W r,c=1,1Mr,c HW , (1) which allows us to remove redundant computation in the decoder layer."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p6_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 6,
+      "score": 0.7036945223808289,
+      "text": "As can be seen, most of the signal is captured in low-frequency 0. 05 0. 10 0. 25 0. 50 1. 00 density 0. 00 0. 05 0. 10 0. 15 0. 20Relative score loss (%) Abs rel log10 RMSE 1 < 1. 25 Figure 5: Analysis of performance loss vs density on NYUv2 . Using our wavelet representation, we can drop up to 95% of the wavelet coefﬁcients while suffering a maximum relative perfor- mance loss of less than 0. 2%. 6 8 10 12 14 16 18 GFLOPs 0. 096 0. 097 0. 098 0. 099 0. 100Abs rel Depth Hints (ResNet50) 0. 891 0. 890 0. 889 0. 888 0. 887 < 1. 25 Depth Hints (ResNet50) Figure 6: Analysis of performance vs decoder GFLOPs on KITTI. By adjusting the parameter η, we trade off computation in GFLOPs (x-axis) against accuracy (y-axis; Abs Rel in red, and δ1 in green). We show here that we can reduce the computation by more than half while still remaining on par with our baseline. estimates of the depth map at the lowest resolution. This conﬁrms previous works observations [11, 4] that a coarse estimate of depth is sufﬁcient to capture the global geom- etry of the scene. Using more wavelet levels adds more high-frequency details to the depth map, yielding sharper results."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc2",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7027208805084229,
+      "text": "We encode the input image into the latent space, initialize depth latent as standard Gaussian noise, and progressively denoise it with the same schedule as during fine-tuning. We empirically find that initializing with standard Gaussian noise gives better results than with multi-resolution noise, although the model is trained on the latter. We follow DDIM’s [ 49] approach to perform non- Markovian sampling with re-spaced steps for accelerated inference. The final depth map is decoded from the latent code using the V AE decoder and postprocessed by averaging channels. Test-time ensembling. The stochastic nature of the infer- ence pipeline leads to varying predictions depending on the initialization noise in z(d) T . Capitalizing on that, we propose the following test-time ensembling scheme, capable of com- bining multiple inference passes over the same input. For each input sample, we can run inference N times. To aggre- gate these affine-invariant depth predictions {ˆd1, . ,ˆdN }, we jointly estimate the corresponding scale ˆsi and shift ˆti, relative to some canonical scale and range, in an iterative manner."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc2",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7027208805084229,
+      "text": "We encode the input image into the latent space, initialize depth latent as standard Gaussian noise, and progressively denoise it with the same schedule as during fine-tuning. We empirically find that initializing with standard Gaussian noise gives better results than with multi-resolution noise, although the model is trained on the latter. We follow DDIM’s [ 49] approach to perform non- Markovian sampling with re-spaced steps for accelerated inference. The final depth map is decoded from the latent code using the V AE decoder and postprocessed by averaging channels. Test-time ensembling. The stochastic nature of the infer- ence pipeline leads to varying predictions depending on the initialization noise in z(d) T . Capitalizing on that, we propose the following test-time ensembling scheme, capable of com- bining multiple inference passes over the same input. For each input sample, we can run inference N times. To aggre- gate these affine-invariant depth predictions {ˆd1, . ,ˆdN }, we jointly estimate the corresponding scale ˆsi and shift ˆti, relative to some canonical scale and range, in an iterative manner."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p3_sc2",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.7020705938339233,
+      "text": "Most of the previous studies have convention- ally stacked multiple bilinear upsampling with convolution or deconvolution layers to recover the original size. However, we empirically observe that the model can achieve better per- formance with much fewer convolution and bilinear upsam- pling layers of the decoder if we design our restoring path effectively. First, we reduce the channel dimension of the bottleneck feature into NC with 1× 1 convolution to avoid computational complexity. Then we use consecutive bilinear upsampling to enlarge the feature into size ofH×W×NC. Finally, the output is passed through two convolution layers and a sigmoid function to predict depth map H×W× 1. Local Feat element-wise multiplication element-wise summation 𝐻𝐷 𝑖 Global Feat concat Conv BatchNorm ReLU Conv BatchNorm ReLU Conv Sigmoid Figure 2: Detailed description of the SFF module. And depth map is multiplied with the maximum depth value to scale in meter. This simple decoder can generate as precise a depth map as other baseline structures. However, to fur- ther exploit the local structures with ﬁne details, we add skip connection with the proposed fusion module. 3."
+    },
+    {
+      "id": "semantic_chunk::ACD_p7_sc3",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.7005460262298584,
+      "text": "Additionally, our experiments demonstrate that using windowed sampling re- gions enables the model to learn more robust feature repre- sentations, signiﬁcantly reducing the risk of overﬁtting. GLW day-clear night day-rain absRel RMSE absRel RMSE absRel RMSE N 0. 1371 6. 560 0. 1884 8. 209 0. 1412 7. 178 ✓ 0. 1343 6. 384 0. 1876 8. 161 0. 1401 7. 004 ✓✓ 0. 1330 6. 318 0. 1875 8. 141 0. 1377 6. 982 ✓✓✓ 0. 1355 6. 340 0. 1872 8. 125 0. 1377 6. 999 GLW day night absRel RMSE sqRel absRel RMSE sqRel R 0. 1144 3. 184 0. 642 0. 1230 3. 448 0. 721 ✓ 0. 1128 3. 157 0. 623 0. 1228 3. 443 0. 691 ✓✓ 0. 1107 3. 095 0. 600 0. 1223 3. 453 0. 685 ✓✓✓ 0. 1107 3. 084 0. 591 0. 1206 3. 432 0. 690 Table 4: Ablation study of sampling method for ranking loss. G: global sampling, L: local sampling, W: window sampling. 5 Conclusion In this paper, we propose a novel approach named ACDepth for robust monocular depth estimation under adverse weather conditions. In addition, we introduce an elaborate data gen- eration scheme to produce the multi-tuple depth dataset with diverse degradations, which signiﬁcantly mitigates the prob- lem of data scarcity."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p16_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 16,
+      "score": 0.6997333765029907,
+      "text": "979 Monodepth2 + pp MS 0. 104 0. 786 4. 687 0. 194 0. 876 0. 958 0. 980 Monodepth2 (1024× 320) MS 0. 106 0. 806 4. 630 0. 193 0. 876 0. 958 0. 980 Monodepth2 (1024× 320) + pp MS 0. 104 0. 775 4. 562 0. 191 0. 878 0. 959 0. 981 Table 10. Effect of post-processing. We observe that post-processing, originally motivated only for stereo training, also brings consistent beneﬁts to all our monocular-trained models. Interestingly, for some metrics post-processing results in a larger quantitative gain than models trained at higher resolution. Train ResolutionFull-res multi-scaleAbs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Train. time (h) Monodepth2M 416×128 ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 9 Monodepth2M 640×192 ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 12 Monodepth2M 1024×320 ✓ 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 6 + 9† Monodepth2S 416×128 ✓ 0. 118 0. 971 5. 231 0. 218 0. 848 0. 943 0. 973 6 Monodepth2S 640×192 ✓ 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 8 Monodepth2S 1024×320 ✓ 0. 105 0. 822 4. 692 0. 199 0. 876 0. 954 0. 977 4 + 8† Monodepth2MS 416×128 ✓ 0. 118 0. 935 5. 119 0. 210 0. 852 0. 949 0. 976 11 Monodepth2MS 640×192 ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p16_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 16,
+      "score": 0.6997333765029907,
+      "text": "979 Monodepth2 + pp MS 0. 104 0. 786 4. 687 0. 194 0. 876 0. 958 0. 980 Monodepth2 (1024× 320) MS 0. 106 0. 806 4. 630 0. 193 0. 876 0. 958 0. 980 Monodepth2 (1024× 320) + pp MS 0. 104 0. 775 4. 562 0. 191 0. 878 0. 959 0. 981 Table 10. Effect of post-processing. We observe that post-processing, originally motivated only for stereo training, also brings consistent beneﬁts to all our monocular-trained models. Interestingly, for some metrics post-processing results in a larger quantitative gain than models trained at higher resolution. Train ResolutionFull-res multi-scaleAbs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Train. time (h) Monodepth2M 416×128 ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 9 Monodepth2M 640×192 ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 12 Monodepth2M 1024×320 ✓ 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 6 + 9† Monodepth2S 416×128 ✓ 0. 118 0. 971 5. 231 0. 218 0. 848 0. 943 0. 973 6 Monodepth2S 640×192 ✓ 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 8 Monodepth2S 1024×320 ✓ 0. 105 0. 822 4. 692 0. 199 0. 876 0. 954 0. 977 4 + 8† Monodepth2MS 416×128 ✓ 0. 118 0. 935 5. 119 0. 210 0. 852 0. 949 0. 976 11 Monodepth2MS 640×192 ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6995226144790649,
+      "text": "The quantitative results obviously demonstrate that our method can produce much finer and more accurate depth predictions, particularly in complex regions with intricate structures, which sometimes cannot be reflected by the met- rics. E. 4 Mix-batch Ratio Ablation Details In the paper, Fig. 3 (g) illustrates the per- formance variation versus the mix-batch ratio under two supervision schemes. We further present 1Discussed in MonoDepth2 repository: https://github.com/nianticlabs/monodepth2/issues/274 21"
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p14_sc2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.6985654830932617,
+      "text": "We evaluate our results on these 652 improved ground truth frames and compare to existing pub- lished methods without having to retrain each method, see Table 7. We present results for all other methods for which we have obtained predictions from the authors. We use the same error metrics from the standard evaluation, and clip the predicted depths to 80 meters to match the Eigen evalu- ation. We evaluate on the full image and do not crop, unlike with the Eigen evaluation. We can see that our method still signiﬁcantly outperforms all previously published methods on all metrics. While Superdepth [47] comes a close sec- ond to our algorithm in the S category, they are run at high resolution (1024× 384 vs. our 640× 192), and in Table 1 we show that at higher resolutions our model’s performance also increases. D. 2. Single-Scale Evaluation Our monocular trained approach, like all self-supervised baselines, has no guarantee of producing results with a metric scale. Nonetheless, we anticipate that there could be value in estimating depth-outputs that are, without spe- cial measures, consistent with each other across all predic- tions."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p14_sc2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.6985654830932617,
+      "text": "We evaluate our results on these 652 improved ground truth frames and compare to existing pub- lished methods without having to retrain each method, see Table 7. We present results for all other methods for which we have obtained predictions from the authors. We use the same error metrics from the standard evaluation, and clip the predicted depths to 80 meters to match the Eigen evalu- ation. We evaluate on the full image and do not crop, unlike with the Eigen evaluation. We can see that our method still signiﬁcantly outperforms all previously published methods on all metrics. While Superdepth [47] comes a close sec- ond to our algorithm in the S category, they are run at high resolution (1024× 384 vs. our 640× 192), and in Table 1 we show that at higher resolutions our model’s performance also increases. D. 2. Single-Scale Evaluation Our monocular trained approach, like all self-supervised baselines, has no guarantee of producing results with a metric scale. Nonetheless, we anticipate that there could be value in estimating depth-outputs that are, without spe- cial measures, consistent with each other across all predic- tions."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p15_sc3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 15,
+      "score": 0.6939046382904053,
+      "text": "This has been shown to bring signiﬁcant gains in accuracy for stereo results, at the expense of requiring two forward-passes through the network at test time [15, 50]. In Table 10 we show, for the ﬁrst time, that post-processing also improves quantitative performance in the monocular only (M) and mixed (MS) training cases. G. Effect of Image Resolution In the main paper, we presented results at our standard resolution (640× 192). We also showed additional results at higher (1024×320) and lower (416×128) resolutions. In Table 11 we show a full set of results at all three resolutions. We see that higher resolution helps, conﬁrming the ﬁnding in [47]. We also include an ablation showing that, even at the highest resolution, our full-res multi-scale still provides beneﬁt beyond just higher resolution training (vs. ‘Ours w/o full-res multi-scale’). Our high resolution models were initialized using the weights from our standard resolution ( 640× 192) model after 10 epochs of training. We then trained our high reso- lution models for 5 epochs with a learning rate of10−5. We used a batch size of 4 to enable this higher resolution model to ﬁt on a single 12GB Titan X GPU."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p15_sc3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 15,
+      "score": 0.6939046382904053,
+      "text": "This has been shown to bring signiﬁcant gains in accuracy for stereo results, at the expense of requiring two forward-passes through the network at test time [15, 50]. In Table 10 we show, for the ﬁrst time, that post-processing also improves quantitative performance in the monocular only (M) and mixed (MS) training cases. G. Effect of Image Resolution In the main paper, we presented results at our standard resolution (640× 192). We also showed additional results at higher (1024×320) and lower (416×128) resolutions. In Table 11 we show a full set of results at all three resolutions. We see that higher resolution helps, conﬁrming the ﬁnding in [47]. We also include an ablation showing that, even at the highest resolution, our full-res multi-scale still provides beneﬁt beyond just higher resolution training (vs. ‘Ours w/o full-res multi-scale’). Our high resolution models were initialized using the weights from our standard resolution ( 640× 192) model after 10 epochs of training. We then trained our high reso- lution models for 5 epochs with a learning rate of10−5. We used a batch size of 4 to enable this higher resolution model to ﬁt on a single 12GB Titan X GPU."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p12_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 12,
+      "score": 0.6922140717506409,
+      "text": "aggregate these statistics across entire datasets and report them in Tab. S2. As seen from the values, training with the multi-resolution noises increases the prediction consis- tency at inference, and the annealed version brings further improvement. Fig. S1 demonstrates predictions for a single sample with three models and varying starting noise. Table S2. Pixel-wise consistency of depth predictions made by models trained with three different noise types. The reported numbers are averaged over entire datasets, wherein each sample was processed 10 times, starting from a new noise sample. Multi-res. noise Annealed NYUv2 KITTI std max −min std max −min ✗ ✗ 0. 086 0. 260 0. 050 0. 152 ✓ ✗ 0. 037 0. 117 0. 030 0. 094 ✓ ✓ 0. 033 0. 106 0. 025 0. 079 Figure S1. Example of predictions on the same input by models trained with (top-down) Gaussian, multi-resolution, and annealed multi-resolution noise. The last row exhibits the least variance. B. 4. Ratio of Mixed Training Datasets To further investigate the impact of the synthetic datasets used in our fine-tuning protocol, we ablate the mixing ratio of the datasets, discussed in Appendix A. 1."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p12_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6922140717506409,
+      "text": "aggregate these statistics across entire datasets and report them in Tab. S2. As seen from the values, training with the multi-resolution noises increases the prediction consis- tency at inference, and the annealed version brings further improvement. Fig. S1 demonstrates predictions for a single sample with three models and varying starting noise. Table S2. Pixel-wise consistency of depth predictions made by models trained with three different noise types. The reported numbers are averaged over entire datasets, wherein each sample was processed 10 times, starting from a new noise sample. Multi-res. noise Annealed NYUv2 KITTI std max −min std max −min ✗ ✗ 0. 086 0. 260 0. 050 0. 152 ✓ ✗ 0. 037 0. 117 0. 030 0. 094 ✓ ✓ 0. 033 0. 106 0. 025 0. 079 Figure S1. Example of predictions on the same input by models trained with (top-down) Gaussian, multi-resolution, and annealed multi-resolution noise. The last row exhibits the least variance. B. 4. Ratio of Mixed Training Datasets To further investigate the impact of the synthetic datasets used in our fine-tuning protocol, we ablate the mixing ratio of the datasets, discussed in Appendix A. 1."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p7_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 7,
+      "score": 0.6920686960220337,
+      "text": "Figures 4 and 5 show relative score changes with varying sparsity threshold on KITTI and NYU datasets respectively. Note that a ﬁxed value of η produces different sparsity lev- els depending on the content of an image, so we also plot standard deviation of sparsity levels for each η value. Fig- ure 4 indicates that computing the wavelet coefﬁcients at only 10 percent of pixel locations results in a relative loss in scores of less than 1. 4% for KITTI images. Similarly, Figure 5 shows that we can compute wavelet coefﬁcients at only 5 percent of pixel locations while suffering a loss in scores of less than 0. 20% for NYU images. Finally, we demonstrate how sparsity of high-frequency coefﬁcient maps can be exploited for efﬁciency gains in the decoder. Figure 6 shows Abs Rel and δ1 scores for varying η used during prediction. As can be seen, the score change is minimal when using half multiply-add operations in the decoder and the performance is comparable to SOTA meth- ods using only a third of multiply-add operations. Note that biggest efﬁciency gains are obtained at higher resolution, as sparsity increases with resolution."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p7_sc1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.6908044815063477,
+      "text": "MonoD- iffusion is better at delineating object contours, for example, traffic sign and preserves fine-grained depth details. To further show the strengths of MonoDiffusion, we convert depth maps into point clouds and display the 3D structures in Fig 4. It can be seen that MonoDiffusion is capable of recovering the 3D world reasonably and shows less distortion than the compared methods. The outstanding performance of our MonoDiffusion evidences the strong generative capability of diffusion model."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p13_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.6907215118408203,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Encoder Pretrained Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline R18 ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Monodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ R18 ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 w/o SSIM ✓ ✓ ✓ R18 ✓ 0. 118 0. 853 4. 824 0. 198 0. 868 0. 956 0. 980 Monodepth2 with [76]’s mask ✓ ✓ R18 ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2(full) ✓ ✓ ✓ R18 ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt R18 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2 w/o pt or auto-masking ✓ ✓ R18 0. 138 1. 197 5. 369 0. 215 0. 842 0. 945 0. 975 Monodepth2 w/o pt or min reproj ✓ ✓ R18 0. 133 1. 021 5. 219 0. 214 0. 841 0. 945 0. 976 Monodepth2 w/o pt or full-res m.s. ✓ ✓ R18 0. 131 1. 030 5. 206 0. 210 0. 846 0. 948 0. 978 Monodepth2w/o pt ✓ ✓ ✓ R18 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Monodepth2ResNet18 w/o pt ✓ ✓ ✓ R18 0. 132 1. 044 5. 142 0. 210 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p13_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.6907215118408203,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Encoder Pretrained Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline R18 ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Monodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ R18 ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 w/o SSIM ✓ ✓ ✓ R18 ✓ 0. 118 0. 853 4. 824 0. 198 0. 868 0. 956 0. 980 Monodepth2 with [76]’s mask ✓ ✓ R18 ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2(full) ✓ ✓ ✓ R18 ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt R18 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2 w/o pt or auto-masking ✓ ✓ R18 0. 138 1. 197 5. 369 0. 215 0. 842 0. 945 0. 975 Monodepth2 w/o pt or min reproj ✓ ✓ R18 0. 133 1. 021 5. 219 0. 214 0. 841 0. 945 0. 976 Monodepth2 w/o pt or full-res m.s. ✓ ✓ R18 0. 131 1. 030 5. 206 0. 210 0. 846 0. 948 0. 978 Monodepth2w/o pt ✓ ✓ ✓ R18 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Monodepth2ResNet18 w/o pt ✓ ✓ ✓ R18 0. 132 1. 044 5. 142 0. 210 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.6901724338531494,
+      "text": "979 Monodepth2(1024×320) MS 0. 106 0. 806 4. 630 0. 193 0. 876 0. 958 0. 980 Table 1. Quantitative results. Com- parison of our method to existing methods on KITTI 2015 [13] using the Eigen split. Best results in each category are in bold; second best are underlined. All results here are presented with- out post-processing [15]; see supple- mentary Section F for improved post- processed results. While our contribu- tions are designed for monocular train- ing, we still gain high accuracy in the stereo-only category. We additionally show we can get higher scores at a larger 1024 × 320 resolution, similar to [47] – see sup- plementary Section G. These high res- olution numbers are bolded if they beat all other models, including our low-res versions. Legend D – Depth supervision D* – Auxiliary depth supervision S – Self-supervised stereo supervision M – Self-supervised mono supervision † – Newer results from github. + pp – With post-processing (monocular plus stereo), we set the transformation between the two stereo frames to be a pure horizontal translation of ﬁxed length. During evaluation, we cap depth to 80m per standard practice [15]."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.6901724338531494,
+      "text": "979 Monodepth2(1024×320) MS 0. 106 0. 806 4. 630 0. 193 0. 876 0. 958 0. 980 Table 1. Quantitative results. Com- parison of our method to existing methods on KITTI 2015 [13] using the Eigen split. Best results in each category are in bold; second best are underlined. All results here are presented with- out post-processing [15]; see supple- mentary Section F for improved post- processed results. While our contribu- tions are designed for monocular train- ing, we still gain high accuracy in the stereo-only category. We additionally show we can get higher scores at a larger 1024 × 320 resolution, similar to [47] – see sup- plementary Section G. These high res- olution numbers are bolded if they beat all other models, including our low-res versions. Legend D – Depth supervision D* – Auxiliary depth supervision S – Self-supervised stereo supervision M – Self-supervised mono supervision † – Newer results from github. + pp – With post-processing (monocular plus stereo), we set the transformation between the two stereo frames to be a pure horizontal translation of ﬁxed length. During evaluation, we cap depth to 80m per standard practice [15]."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.6890349388122559,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Pretrained Full Eigen split Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Baseline + min reproj. ✓ ✓ 0. 122 1. 081 5. 116 0. 199 0. 866 0. 957 0. 980 Baseline + automasking ✓ 0. 124 0. 936 5. 010 0. 206 0. 858 0. 952 0. 977 Baseline + full-res m.s. ✓ ✓ 0. 124 1. 170 5. 249 0. 203 0. 865 0. 953 0. 978 Monodepth2 w/o min reprojection ✓ ✓ ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 with [76]’s mask ✓ ✓ ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 Monodepth2(full) ✓ ✓ ✓ ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2w/o pt ✓ ✓ ✓ 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Baseline (full Eigen dataset) ✓ ✓ 0. 146 1. 876 5. 666 0. 230 0. 848 0. 945 0. 972 Monodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.6890349388122559,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Pretrained Full Eigen split Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Baseline + min reproj. ✓ ✓ 0. 122 1. 081 5. 116 0. 199 0. 866 0. 957 0. 980 Baseline + automasking ✓ 0. 124 0. 936 5. 010 0. 206 0. 858 0. 952 0. 977 Baseline + full-res m.s. ✓ ✓ 0. 124 1. 170 5. 249 0. 203 0. 865 0. 953 0. 978 Monodepth2 w/o min reprojection ✓ ✓ ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 with [76]’s mask ✓ ✓ ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 Monodepth2(full) ✓ ✓ ✓ ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2w/o pt ✓ ✓ ✓ 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Baseline (full Eigen dataset) ✓ ✓ 0. 146 1. 876 5. 666 0. 230 0. 848 0. 945 0. 972 Monodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p4_sc1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 4,
+      "score": 0.6887874603271484,
+      "text": "Thereafter, a reprojection error erepro and a geometry error egeo are defined as erepro = eps→t − pt 2 , (12) egeo = eD s→t (p) − Dt (p) Dt (p) , (13) The determination of valid pixels for multi-view check filter is achieved by {p} = {p |erepro < aerepro, egeo < begeo } , (14) where erepro and egeo are the average over all pixels and a and b are set to 4 based on [25]. Masked visual condition. Inspired by the success of cou- pling diffusion model with masked image modeling [26], [27], we develop a masked visual condition mechanism to further enhance the denoising ability of MonoDiffusion. For multi- scale feature tokens propagated by the encoder, we generate random masks to remove part of the tokens from these feature tokens. To prevent the information leakage, these masks are shared otherwise masked information may be easily borrowed from feature tokens of different resolutions. More specifically, we generate a mask with the highest resolution, and leverage nearest neighbor interpolation to acquire a pyramid of masks. The masked feature tokens are aggregated into masked visual conditions through learnable layers composed of 3 × 3 convo- lutions and upsampling layers."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p1_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 1,
+      "score": 0.6881780624389648,
+      "text": "Our network up-samples and re- ﬁnes a 1/16-resolution depth map (bottom-right), by estimating wavelet coefﬁcients only in sparse regions. (c) Reconstruction of the output depth map using the inverse wavelet transform. Figure 1: We can represent depth maps more efﬁciently with wavelets. Here the network takes image (a) as input and outputs a low resolution depth map, together with sparse wavelet coefﬁ- cients (b). We can reconstruct a high-resolution depth map (c) us- ing the inverse wavelet transform. In our model we predict multi- scale wavelet coefﬁcients with an image-to-image network, and we exploit sparseness of the output to save computation. approaches still use standard neural network components: convolutions, additions, summations and multiplications. Inspired by sparse representations that can be achieved with wavelet decomposition, we propose an alternative net- work representation for more efﬁcient depth estimation, us- arXiv:2106. 02022v2 [cs. CV] 16 Aug 2021"
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p6_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 6,
+      "score": 0.6880159378051758,
+      "text": "Both our model and baseline are trained using an Adam op- timizer with standard parameters, for 20 epochs with batch size 8 and with learning rate 10−4. It is worth noting that DenseDepth predicts outputs at half the input resolution, but evaluates at full resolution after bilinearly upsampling. 4. 2. Efﬁciency vs. Accuracy Trade-off Analysis In this section, we study the relation between accuracy, sparsity, and efﬁciency of WaveletMonoDepth. For each set of experiments, we compare our method to an equiva- lently trained model without wavelets. We ﬁrst study how wavelets contribute to high-frequency details, then show that they are sparse. Finally, we discuss how we trade off accuracy against efﬁciency by varying the thresholdη used in Algorithm 1 to ﬁlter out close-to-zero coefﬁcients. Wavelets enhance high-frequency details. As men- tioned in Section 3. 2, the wavelet representation of depth maps allows us to output depth at different resolutions, de- pending on how many levels of coefﬁcients have been com- puted. Tables 1 and 2 demonstrate evaluation scores for depth maps produced at different levels of wavelet decom- position on the KITTI and NYUv2 datasets respectively."
+    },
+    {
+      "id": "semantic_chunk::ACD_p4_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6875545978546143,
+      "text": "Similar to the existing technol- ogy [Gasperini et al., 2023 ], the commonly used multi-scale feature distillation loss between the teacher model (F T(·)) and student model (F S(·)) is employed to facilitate the per- ception of the student model to the adverse weather. For the given normal inputei and the produced degraded sample (hc i ), the distillation loss function is deﬁned as: Ld = 1 S S∑ s=1 1 Ns Ns∑ j=1 ⏐⏐ ⏐F T (ei)js −FS (mi)js ⏐ ⏐ ⏐ FS (mi)js , (7) where S denotes the number of different scales and mi rep- resents a sample randomly selected from the mixed training set. Ordinal Guidance Distillation. 1) Uncertain Region Def- inition: We use the output from Depth Anything V2 model as the supervisory signal because it ensures accurate depth prediction while maintaining acceptable inference speed. D T and DS represent the inverse depth of the teacher model and student model, respectively, and Dv represents the output depth of Depth Anything V2. We ﬁrst identify the regions with signiﬁcant discrepancies between D T and DS for re- ﬁnement: ¯D = |DT −DS|, (8) where ¯D reﬂects the difference between the output of the teacher model and the student model."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p6_sc1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 6,
+      "score": 0.6870089173316956,
+      "text": "Following [18], [54], we leverage random horizontal flip as well as random brightness adjustment, saturation adjust- ment, contrast adjustment and hue jitter with a 50 % chance. We utilize the improved sampling process with 1000 diffusion steps for training and 20 denoising steps for inference. D. Comparison to Prior State-of-the-Arts We compare the proposed MonoDiffusion with prior state- of-the-art competitors on the Eigen split of KITTI benchmark. We mainly focus on training with monocular videos in three settings: 640 × 192 resolution, without pre-training on Ima- geNet and 1024 × 320 resolution. The results are summarized"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6865731477737427,
+      "text": "969 (c) Mix-batch Image Reconstruction (7) w/o MIR 0. 132 0. 673 4. 271 0. 852 0. 967 (8) Direct 0. 129 0. 679 4. 385 0. 858 0. 962 (9) Only Hy 0. 106 0. 614 4. 181 0. 901 0. 970 (10) Latent space 0. 095 0. 606 4. 138 0. 909 0. 970 (d) Auxiliary Image Analysis (12) KITTI 0. 095 0. 616 4. 040 0. 912 0. 972 (13) KITTI+ETH3D0. 090 0. 586 3. 937 0. 916 0. 972 (14) KITTI+vK 0. 094 0. 606 4. 068 0. 911 0. 972 (15) KITTI+Hy/4 0. 091 0. 596 3. 943 0. 917 0. 972 (16) KITTI+Hy/1. 60. 090 0. 591 3. 971 0. 918 0. 972 In sub-table(b), we further melted down our proposed SSG. ID (6) reveals that the naive GRU can initially solve the distribu- tion misalignment by estimating the Dδ (Eq. 4). However, the scale difference be- tween SSI and SI depth makes it difficult to restore through linear addition. Therefore, after introducing SST, the overall model performance is further enhanced by 10%, ultimately achieving SoTA performance. A comprehensive analysis of MIR was con- ducted in sub-table(c)and we can draw similar conclusions to Sec. 3. 2. Jasmine significantly outperforms the alternatives, such as KITTI/synthetic-only reconstruc- tion (IDs (8,9) and Fig."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6864889860153198,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6864889860153198,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::LED_p18_sc2",
+      "source": "data\\LED.pdf",
+      "page": 18,
+      "score": 0.6855010986328125,
+      "text": "Conversely, decreasing resolution to 200×200 px appears to enhance relative metrics while Figure S3:Encoder-decoder performances on NSDDusing multiple resolutions"
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p1_sc4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6854015588760376,
+      "text": "Since the depth ground-truth is not available in the training phase, we introduce a pseudo ground-truth diffusion process to assist the diffusion in MonoDiffusion. Specifically, the pseudo ground- truth diffusion gradually appends noise to the depth generated by a pre-trained teacher model, which we refer to as the pseudo ground-truth. As a by-product, the teacher model allows us to impose a knowledge distillation loss on the denoised depth to improve the results. In order to alleviate the negative impact of depth error in pseudo ground-truth, we apply a multi-view check filter [25] to filter out erroneous depth. Furthermore, we develop a masked visual condition mechanism to enhance the denoising ability of MonoDiffusion, inspired by the success of combining diffusion model with masked image modeling [26], [27]. The difference is that our target to reconstruction is the denoised depth rather than the RGB image. To summarize, our contributions are listed as follows: • We propose a novel framework, dubbed MonoDiffusion, arXiv:2311. 07198v1 [cs. CV] 13 Nov 2023"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p8_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 8,
+      "score": 0.6853982210159302,
+      "text": "Additionally, we replaced the semantic seg- mentation loss (𝐶𝐸 ) with:𝜆1𝐶𝐿𝑆 + 𝜆2𝑀𝐴𝑆𝐾 + 𝜆3𝐷𝐼𝐶𝐸 (𝜆1 = 2, 𝜆 2 = 5, 𝜆 3 = 5),where 𝐶𝐿𝑆 , 𝑀𝐴𝑆𝐾 and 𝐷𝐼𝐶𝐸 represent cross-entropy loss, binary cross-entropy loss, and dice loss, respectively. For more details on the segmentation loss, please refer to Mask2Former [28]. The comparison results are shown in Table 6. The panoptic seg- mentation method achieved the best performance in 5 out of 7 met- rics. The experimental results demonstrate that the panoptic segmenta- tion method can further reﬁne the boundary regions between diﬀerent Pattern Recognition 171 (2026) 112279 8"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p8_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 8,
+      "score": 0.684116542339325,
+      "text": "5. 49 5. 65 5. 81 5. 97 6. 13AbsRel (%) NYUv2 AbsRel δ1 1 2 5 10 20 # Predictions 11. 22 11. 39 11. 55 11. 72 11. 89AbsRel (%) KITTI AbsRel δ1 95. 90 96. 07 96. 25 96. 43 96. 60 δ1 (%) 87. 55 87. 87 88. 19 88. 50 88. 82 δ1 (%) Figure 6. Ablation of ensemble size. We observe a monotonic improvement with the growth of ensemble size. This improvement starts to diminish after 10 predictions per sample. Table 2. Ablation of training noise. Multi-resolution noise im- proves over Gaussian noise; annealing yields further improvement. Multi-res. noise Annealed NYUv2 KITTI AbsRel↓ δ1↑ AbsRel↓ δ1↑ ✗ - 7. 7 93. 4 14. 2 82. 1 ✓ ✗ 5. 8 96. 1 12. 1 87. 1 ✓ ✓ 5. 6 96. 5 11. 3 88. 7 images from the KITTI Eigen [14] training split. Refer to supplementary sections for extra ablations and discussion. Training noise. We investigate the impact of three types of noise during the training phase. As shown in Tab. 2, training with multi-resolution noise significantly improves the depth prediction accuracy over using standard Gaussian noise. Fur- thermore, the gradual annealing of multi-resolution noise yields an additional improvement."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p8_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 8,
+      "score": 0.6841164827346802,
+      "text": "5. 49 5. 65 5. 81 5. 97 6. 13AbsRel (%) NYUv2 AbsRel δ1 1 2 5 10 20 # Predictions 11. 22 11. 39 11. 55 11. 72 11. 89AbsRel (%) KITTI AbsRel δ1 95. 90 96. 07 96. 25 96. 43 96. 60 δ1 (%) 87. 55 87. 87 88. 19 88. 50 88. 82 δ1 (%) Figure 6. Ablation of ensemble size. We observe a monotonic improvement with the growth of ensemble size. This improvement starts to diminish after 10 predictions per sample. Table 2. Ablation of training noise. Multi-resolution noise im- proves over Gaussian noise; annealing yields further improvement. Multi-res. noise Annealed NYUv2 KITTI AbsRel↓ δ1↑ AbsRel↓ δ1↑ ✗ - 7. 7 93. 4 14. 2 82. 1 ✓ ✗ 5. 8 96. 1 12. 1 87. 1 ✓ ✓ 5. 6 96. 5 11. 3 88. 7 images from the KITTI Eigen [14] training split. Refer to supplementary sections for extra ablations and discussion. Training noise. We investigate the impact of three types of noise during the training phase. As shown in Tab. 2, training with multi-resolution noise significantly improves the depth prediction accuracy over using standard Gaussian noise. Fur- thermore, the gradual annealing of multi-resolution noise yields an additional improvement."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p5_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.6829919815063477,
+      "text": "(e) Latent (d) Hypersim(c) Direct (c)Segment (b) Origin (h)E2E-FT (f) Ours .p .q . p(Occlude) . q(Correct) (a) Principle .p’(Wrong) AbsRel A1 0. 0 0. 3 0. 6 1. 0 0. 0 0. 3 0. 6 1. 0 0. 86 0. 92 0. 09 1. 0 0. 0 0. 3 0. 6 1. 0 0. 86 0. 92 0. 09 0. 13 (g) Results 𝝀𝝀 Target View Source View Shift 10 pixels Shift 510 pixels .r . r(Correct)Shift 5 pixels Tree depth=10m 10m 20m Figure 3:The attempts to preserve the SD prior. The meanings of (a)-(f) are detailed in Sec. 3. 2. Notably, while (e) demonstrates superior visual quality, it erroneously interprets surface textures (e.g., house windows) as depth edges. (g) shows the performance variations under different λ settings for photometric supervision (Eq. 5) and latent supervision (Eq. 4). The complete metrics and their definitions are provided in Sec. E. 4. whereϕdenotes random choice;I K andI H are KITTI and Hypersim images, respectively. In summary, MIR constructs each training batch by randomly selecting images from these two datasets, and supervises the reconstructed image with the photometric loss in Eq. 5. Analysis of Auxiliary ImagesThe specific synthetic data usage may raise concerns about appli- cability boundaries."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p5_sc3",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6814855933189392,
+      "text": "1 and 1, respectively. Similar to [15], we employ two source frames in Lph and the one with the minimum Lph is chosen to handle occlusion. Moreover, an auto-masking mechanism [15] is used to deal with dynamic objects. IV. E XPERIMENT We conduct extensive experiments on two standard datasets, which includes KITTI [28] and Make3D [29]. In the following part, we first describe the relevant datasets, evaluation metrics and implementation details. Then, we present quantitative and qualitative comparisons to the state-of-the-art competitors. Fi- nally, we conduct zero-shot generalization and ablation studies to perform a thorough analysis of MonoDiffusion. A. Datasets and Evaluation Metrics The KITTI dataset is composed of 61 stereo road scenes with the image resolution around 1241 × 376 pixels. The data collection involves multiple sensors such as cameras, 3D Lidar, GPU/IMU, among others. We adopt the Eigen split [4], which comprises 39180 monocular triplets for training, 4424 images for validation, and 697 images for testing. As in [15], we adopt the same intrinsic for all images by averaging the intrinsic of each image."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p3_sc4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 3,
+      "score": 0.6811853647232056,
+      "text": "It builds on a recursive use of IDWT operation applied to predicted coefﬁcient maps. Thus, we reconstruct a depth map at the input scale by ﬁrst predict-"
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p15_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 15,
+      "score": 0.6810464859008789,
+      "text": "Method σscale Abs RelSq Rel RMSE RMSE logδ <1. 25 δ <1. 252 δ <1. 253 Zhou [76]† 0. 210 0. 258 2. 338 7. 040 0. 309 0. 601 0. 853 0. 940 Mahjourian [40]0. 189 0. 221 1. 663 6. 220 0. 265 0. 665 0. 892 0. 962 GeoNet [71] 0. 172 0. 202 1. 521 5. 829 0. 244 0. 707 0. 913 0. 970 Ranjan [51] 0. 162 0. 188 1. 298 5. 467 0. 232 0. 724 0. 927 0. 974 EPC++ [38] 0. 123 0. 153 0. 998 5. 080 0. 204 0. 805 0. 945 0. 982 DDVO [62] 0. 108 0. 147 1. 014 5. 183 0. 204 0. 808 0. 946 0. 983 Monodepth2 0. 093 0. 109 0. 623 4. 136 0. 154 0. 873 0. 977 0. 994 Table 8. Single scale monocular evaluation. Comparison to exist- ing monocular supervised methods on KITTI 2015 [13] using the Eigen split with improved ground truth from [59] using a single scale for each method. † indicates newer results from the on- line implementation. Method TrainSILogsqErrorRelabsErrorReliRMSE DORN [10] D 11. 77 2. 23 8. 78 12. 98 DABC [34] D 14. 49 4. 08 12. 72 15. 53 APMoE [29] D 14. 74 3. 88 11. 74 15. 63 CSWS [32] D 14. 85 3. 48 11. 84 16. 38 DHGRL [74] D 15. 47 4. 04 12. 52 15. 72 Monodepth [15] S 22. 02 20. 58 17. 79 21. 84 Monodepth2 M 15. 57 4. 52 12. 98 16. 70 Monodepth2 MS 15. 07 4. 16 11. 64 15."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.7412015199661255,
+      "text": "[64] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. arXiv:2303. 02153, 2023. 3 [65] Chong Zhou, Chen Change Loy, and Bo Dai. Extract free dense labels from CLIP. In ECCV, pages 696–712, 2022. 3 Appendix In this supplementary material, we provide additional im- plementation details in Appendix A and present additional quantitative and qualitative results in Appendix B and Ap- pendix C, respectively. A. Implementation Details A. 1. Mixed Dataset Training We train on two synthetic datasets, Hypersim [37] and Vir- tual KITTI [7], whose images have different resolutions and aspect ratios. For each batch, we probabilistically choose the dataset and then draw samples from it. We ablate the Bernoulli parameter of dataset sampling in Appendix B. 4. A. 2. Annealed Multi-Resolution Noise In the standard multi-resolution noise, multiple Gaussian noise images are sampled to form a pyramid of resolutions and then subsequently combined by upsampling, weighted averaging, and renormalization.",
+      "estimated_tokens": 261
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7228609919548035,
+      "text": "Thus, the remaining concern is the sufficient diversity or domain gaps between synthetic and real data, which sometimes limits generalization ability. As demonstrated in our experiments, our choice of synthetic datasets leads to impressive zero-shot transfer. Annealed multi-resolution noise. Previous works have explored deviations from the original DDPM formulations, such as non-Gaussian noise [30] or non-Markovian schedule shortcuts [49]. Our proposed setting and the fine-tuning pro- tocol outlined above are permissive to changes to the noise schedule at the fine-tuning stage. We identified a combina- tion of multi-resolution noise [23] and an annealed schedule to converge faster and substantially improve performance over the standard DDPM formulation. The multi-resolution noise is composed by superimposing several random Gaus- sian noise images of different scales, all upsampled to the U-Net input resolution. The proposed annealed schedule interpolates between the multi-resolution noise at t = T and standard Gaussian noise at t = 0. 3. 4. Inference Latent diffusion denoising. The overall inference pipeline is presented in Fig. 3.",
+      "estimated_tokens": 232
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 493,
+    "compressed_context_tokens": 493,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 493,
+  "context_tokens": 493,
+  "prompt_token_estimate": 884,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_monodepth2_full_resolution_multiscale",
+  "answer": "<think>\nThe user is asking about Monodepth2's full-resolution multi-scale sampling. Let me check the provided materials to see if this information is available.\n\nLooking at the provided materials:\n- [1] discusses Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation\n- [2] discusses the same paper, focusing on synthetic datasets and annealed multi-resolution noise\n\nNeither of these materials discusses Monodepth2's full-resolution multi-scale sampling. The materials are about a different paper (about diffusion-based image generators for depth estimation), not about Monodepth2.\n\nI should indicate that the information is missing.\n</think>\n{\n  \"answer\": \"资料中没有关于Monodepth2的full-resolution multi-scale sampling的信息，无法回答该问题。\",\n  \"items\": [],\n  \"missing_information\": \"缺少关于Monodepth2的full-resolution multi-scale sampling的相关资料。给定资料讨论的是基于扩散模型的单目深度估计方法（Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation），涉及合成数据集训练、退火多分辨率噪声等内容，未涉及Monodepth2的full-resolution multi-scale sampling。\"\n}",
+  "usage": {
+    "prompt_tokens": 929,
+    "completion_tokens": 235,
+    "total_tokens": 1164,
+    "model": "MiniMax-M3"
+  }
+}

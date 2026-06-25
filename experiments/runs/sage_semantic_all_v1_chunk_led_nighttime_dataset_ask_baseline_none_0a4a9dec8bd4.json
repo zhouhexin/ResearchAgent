@@ -1,0 +1,430 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_led_nighttime_dataset_ask_baseline_none_0a4a9dec8bd4",
+  "dry_run": false,
+  "query": "LED 论文中 Nighttime Synthetic Drive Dataset 的图像数量表述是否一致？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::LED_p1_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.8652257919311523,
+      "text": "Finally, we release the Nighttime Synthetic Drive Dataset, a synthetic and photo-\nrealistic nighttime dataset, which comprises 49,990 comprehensively annotated images.\nTo facilitate further research, both synthetic dataset and code are publicly available a"
+    },
+    {
+      "id": "chunk::LED_p10_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.8586827516555786,
+      "text": "performance. We\nalso release the Nighttime Synthetic Drive Dataset, comprising 49,995 fully annotated im-\nages. We hope it will serve as a valuable resource for the research community, supporting\nexploration of various nighttime perception tasks.\nAcknowle"
+    },
+    {
+      "id": "chunk::LED_p5_chunk_6",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.8499242663383484,
+      "text": "4 Dataset\n4.1 Nighttime Synthetic Drive Dataset (NSDD)\nDue to the lack of public datasets containing HD pattern illumination, we create the Night-\ntime Synthetic Drive Dataset (NSDD) using the Nvidia Drive Sim (Drop 15) simulator [33],\nwhich generates road"
+    },
+    {
+      "id": "chunk::LED_p3_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.8431177735328674,
+      "text": "D demonstrates great performances improvements on our in-house\ndataset, collected using a real car-mounted prototype.\n•Dataset: We provide the Nighttime Synthetic Drive Dataset, a photorealistic synthetic\ndataset, comprising 49,995 comprehensively annotate"
+    },
+    {
+      "id": "chunk::LED_p3_chunk_6",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.8424364328384399,
+      "text": "of large, annotated nighttime datasets. In\nresponse, we release the Nighttime Synthetic Drive Dataset to support the development of\nnighttime-specific methods.\nVision Foundation Models.Depth foundation models [8, 23, 48, 49] have achieved impres-\nsive gene"
+    },
+    {
+      "id": "chunk::LED_p20_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.8233822584152222,
+      "text": "20DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\n[11] using the available annotation in the Nighttime Synthetic Drive Dataset. Results are re-\nported in table S5. LED doesn’t improve, nor degrade performances. We even note a better\nstabil"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_12",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.8210605382919312,
+      "text": "riments\nWe evaluate our method through extensive experiments on the Nighttime Synthetic Drive\nDataset. We validate the contribution of our light pattern in boosting performance, both in-\nside and outside illuminated area. We apply our method to the encoder"
+    },
+    {
+      "id": "chunk::LED_p10_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.8208281397819519,
+      "text": "essful integration\nwith two state-of-the-art architectures, Adabins and DepthFormer, as well as the foundation\nmodel Depth Anything V2. Moreover, LED shows promising real-world performance. We\nalso release the Nighttime Synthetic Drive Dataset, comprising"
+    },
+    {
+      "id": "chunk::LED_p5_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.8161956071853638,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT5\nFigure 3:Nighttime Synthetic Drive Dataset examples:(A) depicts HD pattern and (B)\nhigh-beam illumination. Ground truth annotations include dense depth maps, semantic seg-\nmentation, instanc"
+    },
+    {
+      "id": "chunk::LED_p1_chunk_8",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.7998499870300293,
+      "text": "Depth Anything V2) both on synthetic and real datasets. Furthermore, increased perfor-\nmances beyond illuminated areas reveal a holistic enhancement in scene understand-\ning. Finally, we release the Nighttime Synthetic Drive Dataset, a synthetic and photo"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_8",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.7975105047225952,
+      "text": "ty, code and\nsynthetic dataset are publicly available. Releasing large-scale nighttime data, with precise\nand comprehensive annotations, will foster research in nighttime computer vision for au-\ntonomous driving.\n4.2 Real-world Dataset\nWe validate LED on a"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7934698462486267,
+      "text": "nighttime dataset is used as the\ntarget dataset during our training.\nIn our supplementary material, we provide additional tests\non nuScenes-Day and Robotcar-Day, give a complete qual-\nitative comparison on nuScenes-Night/nuScenes-Day and\nRobotCar-Night/Rob"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_7",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7921342849731445,
+      "text": "e qual-\nitative comparison on nuScenes-Night/nuScenes-Day and\nRobotCar-Night/RobotCar-Day, and offer additional visual\nresults on other nighttime datasets to further prove the effec-\ntiveness of our method.\n4.3 Ablation Test on Pre-processing\nContribution"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_24",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.7834837436676025,
+      "text": "uScenes-Night and\nRobotCar-Night datasets, with particularly notable improvements\non RobotCar-Night. Specifically, the large-scale paired low-light\ndataset generated by LLDG addresses the challenge of collecting\ntraining data for low-light foundation model"
+    },
+    {
+      "id": "chunk::LED_p5_chunk_5",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.7826995253562927,
+      "text": "mited to dataset format compatibility.\nThe training setup follows the original papers’ recommendations, excluding data augmenta-\ntion to preserve the HD pattern from cropping.\n4 Dataset\n4.1 Nighttime Synthetic Drive Dataset (NSDD)\nDue to the lack of public"
+    },
+    {
+      "id": "chunk::LED_p3_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.762694239616394,
+      "text": ", a photorealistic synthetic\ndataset, comprising 49,995 comprehensively annotated nighttime images to foster future in-\nvestigations in nighttime perception.\n2 Related Work\n2.1 Depth Estimation from Camera\nSupervised Learning.Recent advances in supervised"
+    },
+    {
+      "id": "chunk::LED_p2_chunk_11",
+      "source": "data\\LED.pdf",
+      "page": 2,
+      "score": 0.7532918453216553,
+      "text": "ublicly available, large-scale annotated datasets suitable for\nnighttime depth estimation. To address this gap, this paper releases a synthetic nighttime\ndataset annotated with dense depth maps, along with additional labels.\nIn this paper, we introduce Lig"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_19",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7519441843032837,
+      "text": "equires no nighttime im-\nage during training but day-to-night data distribution com-\npensation. Focusing on day-night lighting differences, dis-\nsimilarities in photometric and noise distribution are located\nas two key components. We model the difference i"
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_10",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.7476335763931274,
+      "text": "RobotCar-\nNight datasets, validating its effectiveness using limited training\ndata and computing resources.\nCCS Concepts\n• Computing methodologies→ Computer vision; Image pro-\ncessing; Virtual reality.\n∗Corresponding Author.\nPermission to make digital or h"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_36",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.747090756893158,
+      "text": "the nuScenes-Night and\nRobotCar-Night datasets, surpassing existing methods in qualita-\ntive results in low-light scenarios. Ultimately, our proposed LLDG\nand LLPEFT modules provide a novel and viable approach for fine-\ntuning large-scale foundation model"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_16",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7457885146141052,
+      "text": "ness of our method on unseen\nnighttime scenes, we show the visual results on darkZurich\n(Fig. E.4) and NightCity (Fig. E.5), correspondingly. Note\nthat darkZurich and NightCity are two popular used night-\ntime segmentation datasets. As shown in Fig. E.5, t"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_24",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.7451202273368835,
+      "text": "tic imaging compared to that in RobotCar-Night, it in-\ntroduces further disadvantages in the photometric loss. Thus,\ntwo DT methods strongly diverge on this dataset.\nMeanwhile, our method generalizes well to these unseen\nnighttime scenes and outperforms al"
+    },
+    {
+      "id": "chunk::s_p7_chunk_4",
+      "source": "data\\s.pdf",
+      "page": 7,
+      "score": 0.744988203048706,
+      "text": "data.\nWe follow the split of WSGD [27], where there are 17790\nimages in daytime and 19612 in nighttime. The test set in-\ncludes 1411 single images, in which 702 are daytime and\n709 are nighttime. Our model is evaluated in single-frame\nsetting on the datas"
+    },
+    {
+      "id": "chunk::DepthDark_p3_chunk_19",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.7445339560508728,
+      "text": "ime image distributions, we propose the Low-Light Dataset Gen-\neration (LLDG). This framework synthesizes realistic nighttime\nimage distributions from daytime images by incorporating two key\ncomponents: Flare Simulation Module (FSM) and Noise Simula-\ntion"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_17",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7430371642112732,
+      "text": "are two popular used night-\ntime segmentation datasets. As shown in Fig. E.5, the in-\nput images have different camera hardware settings which\nmakes it a more challenging setting for testing. While our\npresented self-supervised method still maintains reas"
+    },
+    {
+      "id": "chunk::LED_p2_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 2,
+      "score": 0.7425259947776794,
+      "text": "ted onto the scene to enhance nighttime depth estimation from RGB\nimages. We release a synthetic nighttime dataset with high beam and pattern-illuminated im-\nages, along with comprehensive ground truth annotations, to advance research in nighttime\npercepti"
+    },
+    {
+      "id": "chunk::DepthDark_p7_chunk_6",
+      "source": "data\\DepthDark.pdf",
+      "page": 7,
+      "score": 0.7409530878067017,
+      "text": "-of-the-art performance on the nuScenes-Night dataset\n(with only the𝛿1 metric ranking second) and attained comprehen-\nsive leading results across all metrics on RobotCar-Night. This\nremarkable advantage stems from our innovative fine-tuning strat-\negy, whi"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_5",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.738138735294342,
+      "text": "and P + T Lis shown.\npresents that these methods generalize poorly to unseen night\nscenes, while our approach does not suffer from such a draw-\nback, and note that no specific nighttime dataset is used as the\ntarget dataset during our training.\nIn our supp"
+    },
+    {
+      "id": "chunk::TDDC_p9_chunk_21",
+      "source": "data\\TDDC.pdf",
+      "page": 9,
+      "score": 0.73662269115448,
+      "text": ", 2021] Xin Tan, Ke Xu, Ying Cao, Yiheng Zhang,\nLizhuang Ma, and Rynson W. H. Lau. Night-time scene\nparsing with a large real dataset. IEEE Transactions on\nImage Processing, 30:9085–9098, 2021.\n[Tang et al., 2013] Shuai Tang, Xiaoyu Wang, Xutao Lv,\nTony X"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_7",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7362298965454102,
+      "text": "upervised methods have issues at night. While Mon-\nodepth2 [11] could identify critical elements of the scenes\n(e.g., car and sign), its difficulties in extracting informa-\ntion in the dark are evident. Monodepth2 had fewer issues\ninput image WSGD md4all ["
+    },
+    {
+      "id": "chunk::DepthDark_p7_chunk_4",
+      "source": "data\\DepthDark.pdf",
+      "page": 7,
+      "score": 0.7358270287513733,
+      "text": "Car-Night dataset.\nWe systematically evaluate performance across scenes with varying noise levels, where red dashed boxes clearly demarcate\nregions where our method demonstrates substantial performance advantages.\nAs demonstrated in Tab. 4.1, although our"
+    },
+    {
+      "id": "chunk::DepthDark_p3_chunk_21",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.7307618856430054,
+      "text": "ric characteristics of night-\ntime scenes, enabling the creation of high-quality paired training\ndatasets for low-light scenes.\n3.1.1 Flare Simulation Module. The uneven distribution of light\nsources and significant optical aberrations in nighttime scenes"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.7304540872573853,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17\nLdepth Lgrad Lnormal Metrics\nL1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n✓ ✗ ✗ ✗ ✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.02"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.7281893491744995,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nDomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n(HB→HB)6.1204 0.0903 0.0233 0.1353 13.4847 3.3579 0.9489 0.9812 0.9908(HB→LED)17.3113 0.4479 0.1955 0.6817 52.5132 20.0263 0.4699 0"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7274478673934937,
+      "text": "on NSDD, Depth Anything V2 [49] performs poorly, with an\nRMSE of∼19 m (see table 5), highlighting the complexity of nighttime data and the need\nfor specialized models. It performs slightly better on LED images, possibly due to its ability\nto leverage the p"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_3",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.7264619469642639,
+      "text": "a photometric\nand noise distribution close to the night images. The fused\ndistribution is randomly sampled and used for the training of\nthe depth network. As shown in Fig. 1.1, thoughno night im-\nage is seen during training, our method still achieves super"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_8",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7261157035827637,
+      "text": "n in the dark are evident. Monodepth2 had fewer issues\ninput image WSGD md4all [ours]\nFigure 6. Comparison on RobotCar [23] samples between ours\nself-supervised and WSGD [37]. Ouputs of WSGD are from [37].\nwith brighter night samples, as shown in the Appen"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_9",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7259661555290222,
+      "text": "Ouputs of WSGD are from [37].\nwith brighter night samples, as shown in the Appendix. Our\nself-supervised md4all delivered sharp estimates, identify-\ning even the two trees on the left side of the bottom in-\nput, which are particularly hard to see. For Robo"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7253662943840027,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9\nPattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nEncoder-decoderLB 14.199 0.187 0.072 0.292 28.938 5.620 0.772 0.909 0.956LED 0.5°11.089 0.119 0.050 0.213 21.251 2.304 0.864 0.95"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_30",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7250141501426697,
+      "text": "tion of DepthDark and compared it with various state-of-the-art\nmethods. As shown in Tab. 4.1, the overall performance demon-\nstrates that results on the nuScenes-Night dataset are generally\nworse compared to RobotCar-Night. This is primarily due to the\ns"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.7245503664016724,
+      "text": "as\nreflections, we propose Brightness Peak Generator (BPG) to\nmodel the difference in photometric distribution. Based on\nthe shot-read noise model, we build up Imaging Noise Gen-\nerator (ING) to model nighttime noise distribution. The joint\napplication of"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_28",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7235739231109619,
+      "text": "ur\nexperimental results with state-of-the-art methods, including Depth\nAnything, Depth Anything V2, and TDDC. Evaluations on both\nnuScenes-Night and RobotCar-Night datasets demonstrate that our\nmethod exhibits superior robustness in low-light scenarios.\n4."
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_1",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7233361005783081,
+      "text": "enes-Night\nDT MonoViT[51] N 𝑑 &𝑛 640 × 320 60 1.726 93.031 30.321 2.183 0.143 0.291 0.437\nWSGD[35] N 𝑑 &𝑛 640 × 320 60 0.663 9.573 15.200 0.755 0.199 0.388 0.567\nDA\nITDFA[50] N 𝑑 &𝑛 640 × 320 60 0.337 4.511 10.118 0.403 0.515 0.767 0.890\nRNW[36] N 𝑑 &𝑛 640"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.7232432961463928,
+      "text": "ter vision for au-\ntonomous driving.\n4.2 Real-world Dataset\nWe validate LED on a real-world, in-house dataset collected using a car-mounted prototype.\nIt comprises 50,000 images (70% train / 15% val / 15% test) from populated urban and\nrural roads, evenly"
+    },
+    {
+      "id": "chunk::s_p7_chunk_3",
+      "source": "data\\s.pdf",
+      "page": 7,
+      "score": 0.7226767539978027,
+      "text": "luated both un-\nder single-frame and multi-frames settings. All the metrics\nare computed for ground truth within 0.1 − 80m.\nRobotcar [19] contains daytime and nighttime driving data.\nWe follow the split of WSGD [27], where there are 17790\nimages in daytime"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.7226470708847046,
+      "text": "no night images dur-\ning training. We accomplish this design by day-to-night data\ndistribution compensation. (III) Photometric and noise distri-\nbutions are located as two key day-night differences. Using\nphysical priors, we propose two simple but effectiv"
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_22",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.722226083278656,
+      "text": "s used as the training set due to\nits high-quality images, and we also regard it as our basic\nday-image distribution.\nFor evaluation, we use the nuScenes-Night test split from\nRNW [Wang et al., 2021] and the RobotCar-Night test split\nproposed in ADDS [Liu"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_37",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.7219417095184326,
+      "text": "e-\nsults on both nuScenes-Night and Robotcar-Night, although\nno image from these two datasets is used during training.\nComparison of G Results\nIn Table 4.1, we also provide the G results of domain\nadaptation-based methods. Their decrease in accuracy"
+    },
+    {
+      "id": "chunk::TDDC_p9_chunk_29",
+      "source": "data\\TDDC.pdf",
+      "page": 9,
+      "score": 0.7217921018600464,
+      "text": "bei Xu, Jun Li, and Jian Yang. Reg-\nularizing nighttime weirdness: Efficient self-supervised"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_36",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.7215460538864136,
+      "text": "ed\nand photometric loss repair-based methods are still limited\nby the quality of night images. Meanwhile, using the same\nbackbone of DepthNet, our method maintains convincing re-\nsults on both nuScenes-Night and Robotcar-Night, although\nno image from these"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::LED_p1_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.8652257919311523,
+      "text": "Finally, we release the Nighttime Synthetic Drive Dataset, a synthetic and photo-\nrealistic nighttime dataset, which comprises 49,990 comprehensively annotated images.\nTo facilitate further research, both synthetic dataset and code are publicly available a",
+      "estimated_tokens": 46
+    },
+    {
+      "id": "chunk::LED_p10_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.8586827516555786,
+      "text": "performance. We\nalso release the Nighttime Synthetic Drive Dataset, comprising 49,995 fully annotated im-\nages. We hope it will serve as a valuable resource for the research community, supporting\nexploration of various nighttime perception tasks.\nAcknowle",
+      "estimated_tokens": 51
+    },
+    {
+      "id": "chunk::LED_p5_chunk_6",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.8499242663383484,
+      "text": "4 Dataset\n4.1 Nighttime Synthetic Drive Dataset (NSDD)\nDue to the lack of public datasets containing HD pattern illumination, we create the Night-\ntime Synthetic Drive Dataset (NSDD) using the Nvidia Drive Sim (Drop 15) simulator [33],\nwhich generates road",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::LED_p3_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.8431177735328674,
+      "text": "D demonstrates great performances improvements on our in-house\ndataset, collected using a real car-mounted prototype.\n•Dataset: We provide the Nighttime Synthetic Drive Dataset, a photorealistic synthetic\ndataset, comprising 49,995 comprehensively annotate",
+      "estimated_tokens": 48
+    },
+    {
+      "id": "chunk::LED_p3_chunk_6",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.8424364328384399,
+      "text": "of large, annotated nighttime datasets. In\nresponse, we release the Nighttime Synthetic Drive Dataset to support the development of\nnighttime-specific methods.\nVision Foundation Models.Depth foundation models [8, 23, 48, 49] have achieved impres-\nsive gene",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::TDDC_p9_chunk_29",
+      "source": "data\\TDDC.pdf",
+      "page": 9,
+      "score": 0.7217921018600464,
+      "text": "bei Xu, Jun Li, and Jian Yang. Reg-\nularizing nighttime weirdness: Efficient self-supervised",
+      "estimated_tokens": 22
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 279,
+    "compressed_context_tokens": 279,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 279,
+  "context_tokens": 279,
+  "prompt_token_estimate": 680,
+  "run_label": "sage_semantic_all_v1_chunk_led_nighttime_dataset_size_inconsistency",
+  "answer": "<think>The user asks whether the image count of the Nighttime Synthetic Drive Dataset in the LED paper is consistent across statements.\n\nLooking at the sources:\n[1] says \"49,990 comprehensively annotated images\"\n[2] says \"49,995 fully annotated images\"\n[3] doesn't mention the specific number\n[4] says \"49,995 comprehensively annotate\" (cut off but likely \"annotated\")\n[5] doesn't mention specific number\n\nSo there are two different numbers: 49,990 and 49,995. The statements are inconsistent.\n\nLet me format the answer as JSON.</think>\n\n{\n  \"answer\": \"LED 论文中对 Nighttime Synthetic Drive Dataset 的图像数量表述不一致：部分位置写为 49,990 张，另一些位置写为 49,995 张。\",\n  \"items\": [\n    {\n      \"name\": \"49,990 张\",\n      \"description\": \"论文一处摘要/总结中写为 '49,990 comprehensively annotated images'。\",\n      \"citations\": [1]\n    },\n    {\n      \"name\": \"49,995 张\",\n      \"description\": \"论文多处（包括结论段和数据集条目）写为 '49,995 fully annotated images' / '49,995 comprehensively annotated images'。\",\n      \"citations\": [2, 4]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 745,
+    "completion_tokens": 280,
+    "total_tokens": 1025,
+    "model": "MiniMax-M3"
+  }
+}

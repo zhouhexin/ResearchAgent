@@ -1,0 +1,574 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_paper_ing_components_ask_baseline_none_70cbb3a918b4",
+  "dry_run": false,
+  "query": "Imaging Noise Generator (ING) 如何建模夜间成像噪声？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::TDDC_p5_chunk_2",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.8346937894821167,
+      "text": "tion and makes\nfake textures. Based on the shot-read noise model [Wei et al.,\n2020; Wei et al., 2021], we build our Imaging Noise Genera-\ntor (ING) using color images as input.\nNoise Model\nFor a camera imaging system, if without Image Signal Pro-\ncessor (I"
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_18",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7915244698524475,
+      "text": "ious section, we derived\nthe calculation process of 𝐼𝐹 . However, low-light images often\nsuffer from amplified noise due to low photon counts and high\nsystem gain in camera sensors. Inspired by the physical priors\nof noise formation, we introduce the Noise"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.7889387011528015,
+      "text": "as\nreflections, we propose Brightness Peak Generator (BPG) to\nmodel the difference in photometric distribution. Based on\nthe shot-read noise model, we build up Imaging Noise Gen-\nerator (ING) to model nighttime noise distribution. The joint\napplication of"
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7780665159225464,
+      "text": "ation of I R\ni is shown in the supplementary,\nand we give some examples of re-rendering in Fig. 3.1.\n3.4 Imaging noise modeling\nHeavy noise at night corrupts the local distribution and makes\nfake textures. Based on the shot-read noise model [Wei et al.,\n20"
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_20",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7756947875022888,
+      "text": "on the shot-read noise model [12, 37, 40], we take the\nflare image as input and precisely simulate noise under low-light\nconditions in a physically decoupled manner. This approach ensures\nthat the synthesized images closely resemble those captured in real"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_23",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7712656855583191,
+      "text": "ghtness Peak Generator, Image Noise Generator and\nBPG+ING for data compensation, respectively."
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_19",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7693488597869873,
+      "text": "x). (14)\nFinally, with the simulated raw image RLR\nt , the sampled\nshot noise Np and read noise Nread, the output of ING will\nbe\nI LRN\nt =\n\u0012 snRLR\nt + KN p + Nread\nsbit\n\u0013gn\n. (15)\nFig. 3.2 visualizes some examples of I LRN\nt .\nIt\nI LR\nt\nI LRN\nt\nFigure 3.2:"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_10",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7685620784759521,
+      "text": "substantially improve performance\nover the standard DDPM formulation. The multi-resolution\nnoise is composed by superimposing several random Gaus-\nsian noise images of different scales, all upsampled to the\nU-Net input resolution. The proposed annealed sch"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_10",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7685620784759521,
+      "text": "substantially improve performance\nover the standard DDPM formulation. The multi-resolution\nnoise is composed by superimposing several random Gaus-\nsian noise images of different scales, all upsampled to the\nU-Net input resolution. The proposed annealed sch"
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_26",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.7624570727348328,
+      "text": "camera\nadjusts the system gain to compensate for the lower number\nof input photons, so noise is amplified and appears more pro-\nnounced in the raw image [Wei et al., 2020; Wei et al., 2021;\nZhang et al., 2021]. When the noise intensity exceeds the de-\nnoi"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p8_chunk_21",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 8,
+      "score": 0.7562628984451294,
+      "text": "ies that one can fur-\nther reduce the denoising steps to 10 or even less to gain\nefficiency while keeping comparable performance. Interest-\ningly, this threshold is smaller than what is usually required\nfor diffusion-based image generators [38, 49], i.e.,"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p8_chunk_21",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 8,
+      "score": 0.7562628984451294,
+      "text": "ies that one can fur-\nther reduce the denoising steps to 10 or even less to gain\nefficiency while keeping comparable performance. Interest-\ningly, this threshold is smaller than what is usually required\nfor diffusion-based image generators [38, 49], i.e.,"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_2",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.754397988319397,
+      "text": "n-\nerator (ING) to model nighttime noise distribution. The joint\napplication of BPG and ING together with the day-image dis-\ntribution results in a fused distribution that has a photometric\nand noise distribution close to the night images. The fused\ndistri"
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_19",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7531524896621704,
+      "text": "sors. Inspired by the physical priors\nof noise formation, we introduce the Noise Simulation Module\n(NSM) technique to simulate the noise distribution in nighttime\nscenes. Based on the shot-read noise model [12, 37, 40], we take the\nflare image as input and"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_chunk_25",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.7451973557472229,
+      "text": "ment and denoising. IEEE Transactions on Multimedia, 25:\n5580–5588, 2023. 2, 3\n[24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a\n“completely blind” image quality analyzer.IEEE Signal Pro-\ncessing Letters, page 209–212, 2013. 5\n[25] Ben Moseley, V"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_chunk_25",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.7451971769332886,
+      "text": "ment and denoising. IEEE Transactions on Multimedia, 25:\n5580–5588, 2023. 2, 3\n[24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a\n“completely blind” image quality analyzer.IEEE Signal Pro-\ncessing Letters, page 209–212, 2013. 5\n[25] Ben Moseley, V"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p3_chunk_4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 3,
+      "score": 0.7439957857131958,
+      "text": "ffusion process that progressively de-\ngrades images with Gaussian noise so that they can draw sam-\nples from the data distribution by applying the reverse pro-\ncess to random noise. This idea was extended to DDIMs [49],\nwhich provide a non-Markovian short"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p3_chunk_4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7439957857131958,
+      "text": "ffusion process that progressively de-\ngrades images with Gaussian noise so that they can draw sam-\nples from the data distribution by applying the reverse pro-\ncess to random noise. This idea was extended to DDIMs [49],\nwhich provide a non-Markovian short"
+    },
+    {
+      "id": "chunk::DepthDark_p2_chunk_6",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.7434539198875427,
+      "text": "n light source dis-\ntributions, while the noise-simulation module employs a physically\ndecoupled framework to accurately simulate the significant noise\ndistribution variations in low-light scenes. As a result, these innova-\ntions effectively overcome the d"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_49",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.7407351732254028,
+      "text": ".\n[37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. 2020. A physics-based\nnoise formation model for extreme low-light raw denoising. In Proceedings of the\nIEEE/CVF Conference on Computer Vision and Pattern Recognition . 2758–2767.\n[38] Ke Xian, Jian"
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_28",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.7373756170272827,
+      "text": "will not be negligible in\nthe output image. Heavy noise distorts the local distribution\nand creates fake textures on both foreground and background,\nand such fake textures confuse the daytime depth model dur-\ning testing."
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_12",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7340433597564697,
+      "text": "da distribution respectively and ING ran-\ndomly samples the calibrations to generate read noise Nread.\nFrom RGB to simulated dark raw image RLR\nt\nIn ELD, shot noise Np is applied on the number of pho-\ntons R/K while read noise Nread on raw image R. How-\nev"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_8",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.7314701080322266,
+      "text": "e(BMVC),\n2018. 2, 3, 4\n[37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. A\nphysics-based noise formation model for extreme low-light\nraw denoising. In Proceedings of the IEEE/CVF Conference\non Computer Vision and Pattern Recognition (CVPR), 2020.\n1"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_8",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.7314701080322266,
+      "text": "e(BMVC),\n2018. 2, 3, 4\n[37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. A\nphysics-based noise formation model for extreme low-light\nraw denoising. In Proceedings of the IEEE/CVF Conference\non Computer Vision and Pattern Recognition (CVPR), 2020.\n1"
+    },
+    {
+      "id": "chunk::DepthDark_p3_chunk_14",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.7286947965621948,
+      "text": "time, we introduce Low-Light Dataset\nGeneration (LLDG), which integrates a flare-simulation module\nand a noise-simulation module techniques to precisely simulate\nthe imaging process under low-light conditions, thereby produc-\ning a high-quality paired dep"
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_18",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7278437614440918,
+      "text": "relationship with the noise intensity. Therefore, we\nappoint K as ING Intensity. Similar in BPG, we make ING\nIntensity following the log uniform:\nlog K ∼ U(log K min, log K max). (14)\nFinally, with the simulated raw image RLR\nt , the sampled\nshot noise Np"
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_4",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7277326583862305,
+      "text": "t al., 2022]:\nR∗ = KC + N = R + N, (8)\nwhere C is the number of photon, K donates the overall sys-\ntem gain, and N refers to the summation of all physical noise.\nIn the physical model base image denoising[Wei et al., 2020;\nWei et al., 2021; Zhang et al., 2"
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_27",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.7266074419021606,
+      "text": "et al., 2021;\nZhang et al., 2021]. When the noise intensity exceeds the de-\nnoising capability of the Image Sensor Processor (ISP)[Chen\net al., 2018; Brooks et al., 2019], it will not be negligible in\nthe output image. Heavy noise distorts the local distr"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p3_chunk_10",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.7261607050895691,
+      "text": "n of noise to a\ndesired image distribution x0 and allows acquiring the latent\nnoisy sample xτ . Mathematically,\nq (xτ |x0 ) := N\n\u0000\nxτ\n\f\f√ατ x0, (1 − ατ )I\n\u0001\n, (1)\nwith\nατ :=\nYτ\nn=0\nατ =\nYτ\nn=0\n(1 − βn), (2)\nand\nxτ = √ατ x0 +\n√\n1 − ατ ϵ, ϵ ∼ N(0, 1) , (3)\nw"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_18",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.7252228260040283,
+      "text": "zgli@i2r.a-star.edu.sg)\n*(corresponding author: Weihai Chen.)\nFig. 1. Illustration of the denoising process guided by visual conditions.\nexample, intricate configurations and data processing. To boost\nthe performance, following methods developed improved l"
+    },
+    {
+      "id": "chunk::dav2_p10_chunk_24",
+      "source": "data\\dav2.pdf",
+      "page": 10,
+      "score": 0.7243632674217224,
+      "text": "rucial findings to pave\nthe way towards building a strong MDE model. Furthermore, realizing the poor diversity and rich\nnoise in existing test sets, we construct a versatile evaluation benchmark DA-2K, covering diverse\nhigh-resolution images with precise a"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_21",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.722416877746582,
+      "text": "arXiv preprint arXiv:2106.09685 (2021).\n[17] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. 2021. Neigh-\nbor2neighbor: Self-supervised denoising from single noisy images. InProceedings\nof the IEEE/CVF conference on computer vision and pat"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_20",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7213830351829529,
+      "text": "noise distribution are located\nas two key components. We model the difference in corre-\nsponding distributions with the proposed BPG and ING. The\nsamples from the fused distribution are used for the training\nof the depth network. Although no nighttime ima"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p3_chunk_28",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 3,
+      "score": 0.7209607362747192,
+      "text": "ing set, noising d with sam-\npled noise ϵ at a random timestep t, computing the noise\nestimate ˆϵ = ϵθ(dt, x, t) and minimizing one of the denois-\ning diffusion objective functions. The canonical standard\nnoise objective L is given as follows [20]:\nL = Ed0"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p3_chunk_28",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7209607362747192,
+      "text": "ing set, noising d with sam-\npled noise ϵ at a random timestep t, computing the noise\nestimate ˆϵ = ϵθ(dt, x, t) and minimizing one of the denois-\ning diffusion objective functions. The canonical standard\nnoise objective L is given as follows [20]:\nL = Ed0"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_26",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.7198532819747925,
+      "text": "aussian noise, multi-resolution\nnoise, and annealed multi-resolution noise. We train with\ntwo synthetic datasets and validate with the training split of\nNYUv2 [31] and a subsampled Eigen training split [14] of\nthe KITTI dataset [17]. Specifically, we perfo"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_26",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.7198532819747925,
+      "text": "aussian noise, multi-resolution\nnoise, and annealed multi-resolution noise. We train with\ntwo synthetic datasets and validate with the training split of\nNYUv2 [31] and a subsampled Eigen training split [14] of\nthe KITTI dataset [17]. Specifically, we perfo"
+    },
+    {
+      "id": "chunk::DepthDark_p5_chunk_3",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.718484103679657,
+      "text": "the aforementioned issues,\nwe analyzed that the main factors [5, 46] stem from two aspects.\nFirst, high-ISO and long-exposure settings in dark scenes inevitably\nintroduce noise artifacts. Second, uneven brightness in the images\namplifies noise artifacts, l"
+    },
+    {
+      "id": "chunk::ACD_p3_chunk_23",
+      "source": "data\\ACD.pdf",
+      "page": 3,
+      "score": 0.7182730436325073,
+      "text": "rovided below.\n3.3 Data Generation\nGiven a normal input (e i), which is captured under good\nlighting and visibility conditions, the previous studies em-\nploy GAN-based or diffusion-based models to generate the\ndegraded images (h\nc\ni ). c represents various"
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_26",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.716597318649292,
+      "text": "er noise.𝑁𝑟 typically manifests as horizontal or verti-\ncal lines in the image and is modeled as a fixed offset applied to each\ncolumn or row, sampled from a zero-mean Gaussian distribution\nwith variance𝜆𝑟𝑜𝑤 .𝑁𝑞 is introduced by the finite bit depth of the"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_5",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.7157455682754517,
+      "text": "the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled to form a pyramid of resolutions\nand then subsequently combined by upsampling, weighted\naveraging, and renormalization. The weight for the i-th\npyramid level is computed as si"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_5",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.7157455682754517,
+      "text": "the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled to form a pyramid of resolutions\nand then subsequently combined by upsampling, weighted\naveraging, and renormalization. The weight for the i-th\npyramid level is computed as si"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_chunk_21",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.7135295867919922,
+      "text": "53–1184, 2021.\n1, 2\n[20] Yucheng Lu and Seung-Won Jung. Progressive joint low-\nlight enhancement and noise removal for raw images. IEEE\nTransactions on Image Processing, 31:2390–2404, 2022. 1\n[21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality\nassess"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_chunk_21",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.7135295867919922,
+      "text": "53–1184, 2021.\n1, 2\n[20] Yucheng Lu and Seung-Won Jung. Progressive joint low-\nlight enhancement and noise removal for raw images. IEEE\nTransactions on Image Processing, 31:2390–2404, 2022. 1\n[21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality\nassess"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_17",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.7111462354660034,
+      "text": "continuing to\nincrease the number of steps from the standard denoising step\n20, the performance degrades.\nIn Fig. 7, we show an intuitive illustration of how the depth\nis iteratively refined from a random depth distribution. As can\nbe seen, the process beg"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_8",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.7077503204345703,
+      "text": "approaches.\nAs shown in the first row of Figs. 4.1 and 4.2, low-light conditions\nexhibit significant image quality variations due to uneven illumina-\ntion and noise artifacts. These lead to bright spots and noise patches,\nseverely impairing object contours"
+    },
+    {
+      "id": "chunk::DepthDark_p2_chunk_16",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.7075124979019165,
+      "text": "this area. The main contributions of\nour work are summarized as follows:\n• We propose a novel approach to synthesizing low-light im-\nages by realistically simulating light sources and noise char-\nacteristics. This method addresses the challenge of collect"
+    },
+    {
+      "id": "chunk::DepthDark_p10_chunk_7",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.7070353031158447,
+      "text": "Zhang, Hongwei Qin, Xiaogang Wang, and Hongsheng Li. 2021. Rethinking\nnoise synthesis and modeling in raw denoising. In Proceedings of the IEEE/CVF\nInternational Conference on Computer Vision . 4593–4601.\n[49] Zhedong Zhang, Liang Li, Gaoxiang Cong, Haibi"
+    },
+    {
+      "id": "chunk::Jasmine_p12_chunk_12",
+      "source": "data\\Jasmine.pdf",
+      "page": 12,
+      "score": 0.7065067291259766,
+      "text": "ixels using\na learned similarity metric.CoRR, abs/1512.09300, 2015. 2, 5\n[28] Kang Liao, Zongsheng Yue, Zhouxia Wang, and Chen Change Loy. Denoising as adaptation: Noise-space\ndomain adaptation for image restoration.arXiv preprint arXiv:2406.18516, 2024. 3"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_chunk_27",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.7063959836959839,
+      "text": "ven image denoising over permanently shadowed lunar\nregions with a physical noise model. In Proceedings of\nthe IEEE/CVF Conference on Computer Vision and Pattern\nRecognition (CVPR), 2021. 1\n[26] J. G. Robson. Spatial and temporal contrast-sensitivity func-"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::TDDC_p5_chunk_2",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.8346937894821167,
+      "text": "tion and makes\nfake textures. Based on the shot-read noise model [Wei et al.,\n2020; Wei et al., 2021], we build our Imaging Noise Genera-\ntor (ING) using color images as input.\nNoise Model\nFor a camera imaging system, if without Image Signal Pro-\ncessor (I",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_18",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7915244698524475,
+      "text": "ious section, we derived\nthe calculation process of 𝐼𝐹 . However, low-light images often\nsuffer from amplified noise due to low photon counts and high\nsystem gain in camera sensors. Inspired by the physical priors\nof noise formation, we introduce the Noise",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.7889387011528015,
+      "text": "as\nreflections, we propose Brightness Peak Generator (BPG) to\nmodel the difference in photometric distribution. Based on\nthe shot-read noise model, we build up Imaging Noise Gen-\nerator (ING) to model nighttime noise distribution. The joint\napplication of",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7780665159225464,
+      "text": "ation of I R\ni is shown in the supplementary,\nand we give some examples of re-rendering in Fig. 3.1.\n3.4 Imaging noise modeling\nHeavy noise at night corrupts the local distribution and makes\nfake textures. Based on the shot-read noise model [Wei et al.,\n20",
+      "estimated_tokens": 64
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_20",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7756947875022888,
+      "text": "on the shot-read noise model [12, 37, 40], we take the\nflare image as input and precisely simulate noise under low-light\nconditions in a physically decoupled manner. This approach ensures\nthat the synthesized images closely resemble those captured in real",
+      "estimated_tokens": 54
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_23",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7712656855583191,
+      "text": "ghtness Peak Generator, Image Noise Generator and\nBPG+ING for data compensation, respectively.",
+      "estimated_tokens": 20
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_19",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7693488597869873,
+      "text": "x). (14)\nFinally, with the simulated raw image RLR\nt , the sampled\nshot noise Np and read noise Nread, the output of ING will\nbe\nI LRN\nt =\n\u0012 snRLR\nt + KN p + Nread\nsbit\n\u0013gn\n. (15)\nFig. 3.2 visualizes some examples of I LRN\nt .\nIt\nI LR\nt\nI LRN\nt\nFigure 3.2:",
+      "estimated_tokens": 104
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_10",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7685620784759521,
+      "text": "substantially improve performance\nover the standard DDPM formulation. The multi-resolution\nnoise is composed by superimposing several random Gaus-\nsian noise images of different scales, all upsampled to the\nU-Net input resolution. The proposed annealed sch",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_10",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7685620784759521,
+      "text": "substantially improve performance\nover the standard DDPM formulation. The multi-resolution\nnoise is composed by superimposing several random Gaus-\nsian noise images of different scales, all upsampled to the\nU-Net input resolution. The proposed annealed sch",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_26",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.7624570727348328,
+      "text": "camera\nadjusts the system gain to compensate for the lower number\nof input photons, so noise is amplified and appears more pro-\nnounced in the raw image [Wei et al., 2020; Wei et al., 2021;\nZhang et al., 2021]. When the noise intensity exceeds the de-\nnoi",
+      "estimated_tokens": 69
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p8_chunk_21",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 8,
+      "score": 0.7562628984451294,
+      "text": "ies that one can fur-\nther reduce the denoising steps to 10 or even less to gain\nefficiency while keeping comparable performance. Interest-\ningly, this threshold is smaller than what is usually required\nfor diffusion-based image generators [38, 49], i.e.,",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p8_chunk_21",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 8,
+      "score": 0.7562628984451294,
+      "text": "ies that one can fur-\nther reduce the denoising steps to 10 or even less to gain\nefficiency while keeping comparable performance. Interest-\ningly, this threshold is smaller than what is usually required\nfor diffusion-based image generators [38, 49], i.e.,",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_2",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.754397988319397,
+      "text": "n-\nerator (ING) to model nighttime noise distribution. The joint\napplication of BPG and ING together with the day-image dis-\ntribution results in a fused distribution that has a photometric\nand noise distribution close to the night images. The fused\ndistri",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_19",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7531524896621704,
+      "text": "sors. Inspired by the physical priors\nof noise formation, we introduce the Noise Simulation Module\n(NSM) technique to simulate the noise distribution in nighttime\nscenes. Based on the shot-read noise model [12, 37, 40], we take the\nflare image as input and",
+      "estimated_tokens": 60
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_chunk_25",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.7451973557472229,
+      "text": "ment and denoising. IEEE Transactions on Multimedia, 25:\n5580–5588, 2023. 2, 3\n[24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a\n“completely blind” image quality analyzer.IEEE Signal Pro-\ncessing Letters, page 209–212, 2013. 5\n[25] Ben Moseley, V",
+      "estimated_tokens": 96
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_chunk_25",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.7451971769332886,
+      "text": "ment and denoising. IEEE Transactions on Multimedia, 25:\n5580–5588, 2023. 2, 3\n[24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a\n“completely blind” image quality analyzer.IEEE Signal Pro-\ncessing Letters, page 209–212, 2013. 5\n[25] Ben Moseley, V",
+      "estimated_tokens": 96
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p3_chunk_4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 3,
+      "score": 0.7439957857131958,
+      "text": "ffusion process that progressively de-\ngrades images with Gaussian noise so that they can draw sam-\nples from the data distribution by applying the reverse pro-\ncess to random noise. This idea was extended to DDIMs [49],\nwhich provide a non-Markovian short",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p3_chunk_4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7439957857131958,
+      "text": "ffusion process that progressively de-\ngrades images with Gaussian noise so that they can draw sam-\nples from the data distribution by applying the reverse pro-\ncess to random noise. This idea was extended to DDIMs [49],\nwhich provide a non-Markovian short",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::DepthDark_p2_chunk_6",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.7434539198875427,
+      "text": "n light source dis-\ntributions, while the noise-simulation module employs a physically\ndecoupled framework to accurately simulate the significant noise\ndistribution variations in low-light scenes. As a result, these innova-\ntions effectively overcome the d",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_49",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.7407351732254028,
+      "text": ".\n[37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. 2020. A physics-based\nnoise formation model for extreme low-light raw denoising. In Proceedings of the\nIEEE/CVF Conference on Computer Vision and Pattern Recognition . 2758–2767.\n[38] Ke Xian, Jian",
+      "estimated_tokens": 74
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_28",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.7373756170272827,
+      "text": "will not be negligible in\nthe output image. Heavy noise distorts the local distribution\nand creates fake textures on both foreground and background,\nand such fake textures confuse the daytime depth model dur-\ning testing.",
+      "estimated_tokens": 42
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_12",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7340433597564697,
+      "text": "da distribution respectively and ING ran-\ndomly samples the calibrations to generate read noise Nread.\nFrom RGB to simulated dark raw image RLR\nt\nIn ELD, shot noise Np is applied on the number of pho-\ntons R/K while read noise Nread on raw image R. How-\nev",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_8",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.7314701080322266,
+      "text": "e(BMVC),\n2018. 2, 3, 4\n[37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. A\nphysics-based noise formation model for extreme low-light\nraw denoising. In Proceedings of the IEEE/CVF Conference\non Computer Vision and Pattern Recognition (CVPR), 2020.\n1",
+      "estimated_tokens": 80
+    },
+    {
+      "id": "chunk::DepthDark_p3_chunk_14",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.7286947965621948,
+      "text": "time, we introduce Low-Light Dataset\nGeneration (LLDG), which integrates a flare-simulation module\nand a noise-simulation module techniques to precisely simulate\nthe imaging process under low-light conditions, thereby produc-\ning a high-quality paired dep",
+      "estimated_tokens": 51
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1499,
+    "compressed_context_tokens": 1499,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1499,
+  "context_tokens": 1499,
+  "prompt_token_estimate": 2279,
+  "run_label": "sage_semantic_all_v1_chunk_paper_ing_components",
+  "answer": "<think>The question asks how the Imaging Noise Generator (ING) models nighttime imaging noise. Let me analyze the provided materials.\n\nFrom the materials, I can extract the following information about ING:\n\n1. [1] ING is built based on the shot-read noise model [Wei et al., 2020; Wei et al., 2021], using color images as input.\n\n2. [3] ING models nighttime noise distribution based on the shot-read noise model.\n\n3. [4] Heavy noise at night corrupts local distribution and makes fake textures. ING is based on the shot-read noise model.\n\n4. [6] ING is used together with BPG (Brightness Peak Generator) for data compensation.\n\n5. [7] The output of ING is calculated using the formula: I^LRN_t = (s·n^RLR_t + K·N_p + N_read)/(s_bit) · g_n\n   - Using simulated raw image RLR_t, sampled shot noise Np and read noise Nread.\n\n6. [10] At night, camera adjusts system gain to compensate for lower number of input photons, so noise is amplified.\n\n7. [13] ING models nighttime noise distribution. Joint application of BPG and ING with day-image distribution results in fused distribution close to night images.\n\n8. [22] ING randomly samples calibrations to generate read noise Nread. Shot noise Np is applied on the number of photons R/K while read noise Nread on raw image R.\n\nSo the key points are:\n- Based on shot-read noise model\n- Uses color images as input\n- Simulates shot noise (Np) applied on photon count R/K\n- Simulates read noise (Nread) applied on raw image R\n- ING randomly samples calibrations to generate read noise\n- Models both shot noise and read noise\n- Together with BPG, fuses day-image distribution to approximate night image distribution\n\nLet me construct the JSON response.</think>\n\n{\n  \"answer\": \"Imaging Noise Generator (ING) 基于 shot-read 噪声模型，使用彩色图像作为输入，通过对模拟的 raw 图像同时施加 shot noise（Np，作用于光子数 R/K）和 read noise（Nread，作用于 raw 图像 R）来建模夜间成像噪声，并与 Brightness Peak Generator (BPG) 联合生成接近真实夜间图像的噪声分布。\",\n  \"items\": [\n    {\n      \"name\": \"基于 shot-read 噪声模型\",\n      \"description\": \"ING 基于 shot-read 噪声模型 [Wei et al., 2020; Wei et al., 2021]，使用彩色图像作为输入来模拟夜间噪声分布。\",\n      \"citations\": [1, 3, 4]\n    },\n    {\n      \"name\": \"采样 shot noise 与 read noise\",\n      \"description\": \"ING 对模拟 raw 图像 RLR_t 同时施加采样得到的 shot noise Np（作用于光子数 R/K）和 read noise Nread（作用于 raw 图像 R），并通过公式 I^LRN_t = ((s·n^RLR_t + K·Np + Nread) / s_bit)·gn 输出。\",\n      \"citations\": [7, 22]\n    },\n    {\n      \"name\": \"随机采样 read noise 校准\",\n      \"description\": \"ING 从 ELD 数据分布中随机采样校准参数以生成 read noise Nread。\",\n      \"citations\": [22]\n    },\n    {\n      \"name\": \"与 BPG 联合进行数据补偿\",\n      \"description\": \"ING 与 Brightness Peak Generator (BPG) 联合使用，结合白天图像分布，融合生成在光度与噪声分布上都接近真实夜间图像的分布。\",\n      \"citations\": [3, 6, 13]\n    },\n    {\n      \"name\": \"针对夜间噪声放大的物理特性建模\",\n      \"description\": \"夜间相机为补偿光子数减少而调高系统增益，导致噪声被放大，ING 据此建模夜间显著的噪声分布。\",\n      \"citations\": [10]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 2278,
+    "completion_tokens": 843,
+    "total_tokens": 3121,
+    "model": "MiniMax-M3"
+  }
+}

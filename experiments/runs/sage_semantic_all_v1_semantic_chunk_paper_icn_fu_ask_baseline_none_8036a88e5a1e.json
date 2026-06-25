@@ -1,0 +1,438 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_paper_icn_fu_ask_baseline_none_8036a88e5a1e",
+  "dry_run": false,
+  "query": "论文中的 Illuminating Change Net (ICN) 的作用是什么？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::TDDC_p3_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6363126635551453,
+      "text": "\u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 , \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 Pose decoder ICN decoder Day - Image Splits Sample ING ( sec. 3. 4 ) BPG ( sec. 3. 3 ) \u0000 \u0000 3D position appointing Random darken Intensity \u0000 sampling Re - rendering Dark raw image simulation Intensity \u0000 sampling Noise simulation with calibration \u0000′ \u0000 \u0000 \u0000 \u0000 \u0000 \u0000\u0000 \u0000 \u0000 \u0000\u0000\u0000 \u0000 \u0000 \u0000\u0000 \u0000 \u0000 \u0000\u0000\u0000 Light Source Bank Prepare& Sample ING DepthNet DepthNet Detached Transformer Base CNN Base \u0000 \u0000 \u0000\u0000 BPG \u0000 \u0000 \u0000 \u0000 Photometric Loss Smooth Loss \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 , \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 Figure 2. 1: Overview of our data distribution compensation training framework . The proposed BPG and ING form our compensation stage, whose simple processes are also visualized in the top right. Note that BPG and ING will not participate in the backward propagation. Their input and output are detached. The Transformer-CNN hybrid DepthNet, CNN-based PoseNet and CNN-based Illuminating Change Net (ICN) constitute the trainable part of our framework. The two DepthNets share the same weights during training and the left one are frozen during the whole training."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p3_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6271578073501587,
+      "text": "3 and Section 3. 4. Self-supervised Training The proposed framework is trained in a self-supervised man- ner. Following [Godard et al., 2019; Zhao et al., 2022b], the combination of photometric loss and edge-aware smooth loss is used as the main supervision during training, and the frame- work is shown in Fig. 2. 1. We use the same Transformer- CNN hybrid network in MonoViT[Zhao et al., 2022b] as our DepthNet because of its good performance. Besides, inspired by [Vankadari et al., 2023], we further consider the potential illuminating changes between images, and the Illuminating Change Net (ICN) is introduced to predict the linear per-pixel illuminating change Ct,t+n and Bt,t+n. In addition, to avoid poor self-supervision, we make a simple decoupling at the in- put stage, and the sampled I LRN t is only applied to the input of the depth network. 3."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6134792566299438,
+      "text": "Delieve-net: Deblurring low-light images with light streaks and local events. In Proceedings of the IEEE/CVF Interna- tional Conference on Computer Vision (ICCV) Workshops , 2021. 1 [50] Shangchen Zhou, Chongyi Li, and Chen Change Loy. Led- net: Joint low-light enhancement and deblurring in the dark. In Proceedings of European Conference on Computer Vision (ECCV), 2022. 1 10"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.6134792566299438,
+      "text": "Delieve-net: Deblurring low-light images with light streaks and local events. In Proceedings of the IEEE/CVF Interna- tional Conference on Computer Vision (ICCV) Workshops , 2021. 1 [50] Shangchen Zhou, Chongyi Li, and Chen Change Loy. Led- net: Joint low-light enhancement and deblurring in the dark. In Proceedings of European Conference on Computer Vision (ECCV), 2022. 1 10"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.6093400716781616,
+      "text": "007)0. 846( +0. 023)0. 133( -0. 045)3. 419(↑) 2. 049(↑) SNR-Aware 23. 005 0. 824 0. 164 26. 373 0. 843 0. 158 3. 330 1. 893SNR-Aware with GT-mean loss(ours) 23. 992(+0. 988)0. 836(+0. 012)0. 158(-0. 006)26. 942(+0. 569)0. 853(+0. 009)0. 153(-0. 005)3. 509(↑) 1. 913(↑) CID-Net 23. 809 0. 857 0. 086 27. 715 0. 876 0. 079 4. 087 2. 157CID-Net with GT-mean loss(ours) 25. 122( +1. 313)0. 865(+0. 008)0. 081(-0. 005)28. 108(+0. 393)0. 878(+0. 002)0. 075(-0. 004)4. 074(↓) 2. 161(↑) LOLv2-real Uformer 14. 941 0. 76 0. 228 22. 148 0. 831 0. 199 3. 478 2. 009Uformer with GT-mean loss(ours) 16. 103( +1. 162)0. 792(+0. 032)0. 180(-0. 048)23. 989( +1. 841)0. 858(+0. 026)0. 156(-0. 043)3. 778(↑) 2. 048(↑) MIRNet 21. 648 0. 81 0. 313 26. 712 0. 827 0. 303 2. 598 1. 520MIRNet with GT-mean loss(ours) 22. 050(+0. 402)0. 830(+0. 021)0. 214( -0. 099)26. 769(+0. 057)0. 846(+0. 019)0. 208( -0. 101)2. 924(↑) 1. 702(↑) RetinexFormer 21. 272 0. 841 0. 163 27. 65 0. 877 0. 152 2. 714 1. 590RetinexFormer with GT-mean loss(ours)21. 810(+0. 538)0. 852(+0. 011)0. 143(-0. 020)28. 437(+0. 787)0. 879(+0. 002)0. 134(-0. 018)3. 206(↑) 1. 884(↑) Restormer 20. 235 0. 841 0. 162 28. 159 0. 88 0. 147 3. 478 1."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.6093400716781616,
+      "text": "007)0. 846( +0. 023)0. 133( -0. 045)3. 419(↑) 2. 049(↑) SNR-Aware 23. 005 0. 824 0. 164 26. 373 0. 843 0. 158 3. 330 1. 893SNR-Aware with GT-mean loss(ours) 23. 992(+0. 988)0. 836(+0. 012)0. 158(-0. 006)26. 942(+0. 569)0. 853(+0. 009)0. 153(-0. 005)3. 509(↑) 1. 913(↑) CID-Net 23. 809 0. 857 0. 086 27. 715 0. 876 0. 079 4. 087 2. 157CID-Net with GT-mean loss(ours) 25. 122( +1. 313)0. 865(+0. 008)0. 081(-0. 005)28. 108(+0. 393)0. 878(+0. 002)0. 075(-0. 004)4. 074(↓) 2. 161(↑) LOLv2-real Uformer 14. 941 0. 76 0. 228 22. 148 0. 831 0. 199 3. 478 2. 009Uformer with GT-mean loss(ours) 16. 103( +1. 162)0. 792(+0. 032)0. 180(-0. 048)23. 989( +1. 841)0. 858(+0. 026)0. 156(-0. 043)3. 778(↑) 2. 048(↑) MIRNet 21. 648 0. 81 0. 313 26. 712 0. 827 0. 303 2. 598 1. 520MIRNet with GT-mean loss(ours) 22. 050(+0. 402)0. 830(+0. 021)0. 214( -0. 099)26. 769(+0. 057)0. 846(+0. 019)0. 208( -0. 101)2. 924(↑) 1. 702(↑) RetinexFormer 21. 272 0. 841 0. 163 27. 65 0. 877 0. 152 2. 714 1. 590RetinexFormer with GT-mean loss(ours)21. 810(+0. 538)0. 852(+0. 011)0. 143(-0. 020)28. 437(+0. 787)0. 879(+0. 002)0. 134(-0. 018)3. 206(↑) 1. 884(↑) Restormer 20. 235 0. 841 0. 162 28. 159 0. 88 0. 147 3. 478 1."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p8_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.6093366742134094,
+      "text": "(2) Based on the default setting the dilation rates of the last three blocks are set to 1, 2, and 3, respectively. (3) Similar to the default setting we set 1, 2, and 5 in every three CDC blocks as a group. (4) Based on the default setting the dilation rates in the last two CDC blocks are set to 2, 4, 6 and 4, 8, 12, respectively. Table 6 lists the accuracy under different dila- tion settings. Comparing (2) with (3) the accuracy beneﬁts from larger dilation rates. However, (4) using very large di- lation rates in the late CDC blocks does not help. Simply pursuing larger dilation rates will result in the loss of local information, which is not good for the network to perceive small and medium-sized objects. Therefore, the proposed Lite-Mono adopts the setting (1) to extract multi-scale lo- cal features, i.e., smaller dilation rates are used in shallow layers, and they are doubled in the last three CDC modules. NO. Abs Rel Sq Rel RMSE RMSE logδ1 δ2 δ3 1 0. 107 0. 765 4. 561 0. 183 0. 886 0. 963 0. 983 2 0. 110 0. 867 4. 681 0. 187 0. 885 0. 961 0. 981 3 0. 108 0. 835 4. 652 0. 186 0. 885 0. 962 0. 982 4 0. 110 0. 855 4. 642 0. 187 0. 885 0. 961 0. 981 Table 6."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p13_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 13,
+      "score": 0.6074883341789246,
+      "text": "We use a sequential fea- ture decoder (ICN) to estimate the linear brightness change {Ct,t+n ∈ RH×W ×1, Bt,t+n ∈ RH×W ×1}. The reconstruc- tion of It can be described as ˙Vt,t+n(u) =KI Tt,t+nDt(u)K −1 I ˙u, ˜It+n = bs(It+n ⊙ Ct,t+n + Bt,t+n, Vt,t+n), (16) with u being a pixel in frame It, ˙u being the corresponding homogeneous form, and ˜It+n being the reconstructed version of target frame It. We assume the camera intrinsic KI ∈ R3×3 is already known during the training. Following [Vankadari et al. , 2023; Godard et al. , 2019; Wang et al., 2021], we choose the combination of Structured Similarity Index Measure (SSIM) [Wang et al., 2004] and the L1 difference as the measure of photometric error, i.e. pe( ˜I, I) = α 2 (1 − SSIM( ˜I, I)) + (1− α)| ˜I − I|, (17) where we set α to 0. 85 in all our experiments. To handle potential occlusions within image sequences, we use the popular minimum re-projection and Auto-mask strate- gies [Godard et al., 2019] in the per-pixel photometric loss: Lss = min ˜I pe( ˜I, It), (18) with ˜I ∈ {˜It+n, ˜It−n, It+n, It−n}."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p5_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.6028900146484375,
+      "text": "How- ever, raw images or the exact inverse ISP are not available in most daytime datasets. The simplest ISP includes white bal- ance, binning, denoising, color collection and gamma com- pression [Chen et al., 2018; Brooks et al., 2019]. Fortunately, except for denoising and gamma compression, rest operations can be viewed as approximately linear processes. We con- sider the gamma compression in ING as it’s strongly nonlin- ear. Following ELD, we set gn = 1/2. 2. To simulate the low photon count C in the dark, a light scale factor sn is proposed follows U (100, 300) [Wei et al., 2020]. Then, the simulated raw image will be RLR t = sbit(I LR t )1/gn sn , (13) where sbit denotes quantization factor equals to 2bit − 1. ING Intensity K According to Eq. 9, Eq. 11 and Eq. 12, system gain K has a positive relationship with the noise intensity. Therefore, we appoint K as ING Intensity. Similar in BPG, we make ING Intensity following the log uniform: log K ∼ U(log K min, log K max). (14) Finally, with the simulated raw image RLR t , the sampled shot noise Np and read noise Nread, the output of ING will be I LRN t = \u0012 snRLR t + KN p + Nread sbit \u0013gn . (15) Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5982595682144165,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5982595682144165,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc4",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.5943441390991211,
+      "text": "2 [44] Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang, and Dongbin Zhao. Steps: Joint self- supervised nighttime image enhancement and depth estima- tion. In 2023 IEEE International Conference on Robotics and Automation (ICRA), pages 4916–4923, 2023. 1, 2 [45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork- gan: Seeing into the rainy night. In The IEEE European Conference on Computer Vision (ECCV), 2020. 2, 4 [46] Hanyu Zhou, Yi Chang, Wending Yan, and Luxin Yan. Un- supervised cumulative domain adaptation for foggy scene optical flow. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9569– 9578, 2023. 4, 5 [47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING, Yuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the common appearance-boundary adaptation for nighttime op- tical flow. InThe Twelfth International Conference on Learn- ing Representations, 2024. 2 [48] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.5935007929801941,
+      "text": "Using the Phong illumination model [28, 40], the final flare image at the current stage,𝐼𝐹 , is calculated by the following equation: 𝐼𝐹 =(𝑠𝑏·𝐼)𝑔𝐹+ 𝑁𝐹∑︁ 𝑖=1 (𝑠𝑠(𝐿𝑆,𝑠𝐹,𝑃𝑖))𝑔𝐹 , (4) where𝐼 is the daytime image and𝑠𝑠(.) represents scaling and shifting the sampled𝐿𝑆 by the scale rate𝑠𝐹 and the 2D coordinate 𝑃𝑖. Ultimately, FSM generates more realistic nighttime flare images by incorporating existing synthetic flare images, applying random darkening operations, and adopting an adaptive light source inten- sity strategy. This approach effectively mitigates the photometric inconsistency issues in nighttime images and significantly enhances the diversity and quality of the training dataset. 𝐼 𝐼𝐹 𝐼𝐹𝑁 Figure 3. 1: Paired visual examples for different scenes, 𝐼 rep- resents the image under normal lighting conditions, 𝐼𝐹 rep- resents the visualization result of adding FSM to the normal lighting image, and 𝐼𝐹𝑁 represents the visualization result of adding both FSM and NSM to the normal lighting image. 3. 1. 2 Noise Simulation Module. In the previous section, we derived the calculation process of 𝐼𝐹 ."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p8_sc1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.5898175239562988,
+      "text": "883 0. 960 0. 982 w/o cross-stage connections2. 942M 4. 4 0. 108 0. 834 4. 683 0. 185 0. 884 0. 962 0. 982 Table 5. Ablation study on model architectures. All the models are trained and tested on KITTI with the input size 640× 192. This is because when using a down-sampling layer to re- duce the size of feature maps, some spatial information is also lost. The advantage of using pooled concatenations is that the spatial information is kept, and this design only adds a small number of parameters (0. 007M). The beneﬁt of cross-stage connections. When two cross-stage connections are removed the accuracy decreases slightly. The beneﬁt of the proposed cross-stage connec- tions in Mono-Lite is to promote feature propagation and cross-stage information fusion. 4. 7. Ablation study on dilation rates The inﬂuence of the dilation rate in the proposed CDC module on the accuracy is studied. Four different settings are used in this experiment. (1) The default setting of our models is to group every three CDC blocks together, and set the dilation rate to 1, 2, and 3, respectively. For the last three blocks we set them to 2, 4, and 6."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p10_sc0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 10,
+      "score": 0.586098313331604,
+      "text": "[35] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Doll´ar, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In ECCV, 2014. 1 [36] Ce Liu, Jenny Yuen, Antonio Torralba, Josef Sivic, and William T Freeman. Sift flow: Dense correspondence across different scenes. In ECCV, 2008. 2 [37] Shilong Liu, Zhaoyang Zeng, Tianhe Ren, Feng Li, Hao Zhang, Jie Yang, Chunyuan Li, Jianwei Yang, Hang Su, Jun Zhu, et al. Grounding dino: Marrying dino with grounded pre-training for open-set object detection. arXiv:2303. 05499, 2023. 4 [38] Ze Liu, Yutong Lin, Yue Cao, Han Hu, Yixuan Wei, Zheng Zhang, Stephen Lin, and Baining Guo. Swin transformer: Hierarchical vision transformer using shifted windows. In ICCV, 2021. 6, 7 [39] Ze Liu, Han Hu, Yutong Lin, Zhuliang Yao, Zhenda Xie, Yixuan Wei, Jia Ning, Yue Cao, Zheng Zhang, Li Dong, et al. Swin transformer v2: Scaling up capacity and resolution. In CVPR, 2022. 6 [40] Zhuang Liu, Hanzi Mao, Chao-Yuan Wu, Christoph Feicht- enhofer, Trevor Darrell, and Saining Xie. A convnet for the 2020s. In CVPR, 2022."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_sc4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.5836035013198853,
+      "text": "PackNet [12] improved at night and rain, albeit doing worse in standard settings, possibly due to its large model and the relatively small dataset. Pack- Net’s velocity supervision also helped over Monodepth2 (md2) with our baseline. Thanks to the extra radar signal, R4Dyn [8] delivered significant improvements, although at night, only adding radar in input was beneficial over md2. md2 trained only on day-clear data outperformed RNW’s complex pipeline [38]. We retrained RNW on the official split (the authors reported an absRel of 0. 3150 at night on their split [38]). Remarkably, despite being based on the same model as md2, atnight, our simple techniques reduced absRel by 32% and relatively increased δ1 by 37% (DD). Our md4all also outperformed the radar-based R4Dyn at night. This is thanks to the ability of our method to extract robust features from monocular data even in the dark. 8182"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p6_sc3",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.5822374224662781,
+      "text": "850 0. 928Test on RobotCar-NightBaseline 0. 242 1. 882 5. 962 0. 261 0. 600 0. 915 0. 979BPG Only 0. 2161. 827 5. 986 0. 248 0. 6860. 9200. 976ING Only 0. 238 1. 8175. 882 0. 257 0. 620 0. 9200. 980Full Method0. 210 1. 515 5. 386 0. 238 0. 6760. 936 0. 980 Table 4. 2: Quantitative results of pre-processing ablation test. The baseline in this table is G: MonoViT w. ICN. a fair comparison, all methods apply the same Transformer- CNN hybrid backbone [Zhao et al., 2022b] if no further ex- planation is made. We also provide the G (Generalize to test set) version result of each DA method for further compar- isons. In addition, we will release the code upon acceptance. Evaluation on nuScenes-Night As shown in Fig. 4. 1, due to the weak interference of ISP on the digit raw, wave optics/diffraction effects are evident, and the imaging noise is also visible. Though it provides more realistic imaging compared to that in RobotCar-Night, it in- troduces further disadvantages in the photometric loss. Thus, two DT methods strongly diverge on this dataset."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.5818378925323486,
+      "text": "In Proceedings of European Conference on Computer Vision (ECCV), 2020. 4, 11 [45] Syed Waqas Zamir, Aditya Arora, Salman Khan, Mu- nawar Hayat, Fahad Shahbaz Khan, and Ming-Hsuan Yang. Restormer: Efficient transformer for high-resolution image restoration. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 4, 11 [46] Richard Zhang, Phillip Isola, Alexei A. Efros, Eli Shecht- man, and Oliver Wang. The unreasonable effective- ness of deep features as a perceptual metric. In 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR), pages 586–595, 2018. 1, 4 [47] Yonghua Zhang, Jiawan Zhang, and Xiaojie Guo. Kindling the darkness: A practical low-light image enhancer. In Pro- ceedings of the 27th ACM International Conference on Mul- timedia (ACM MM), 2019. 3 [48] Zhao Zhang, Huan Zheng, Richang Hong, Mingliang Xu, Shuicheng Yan, and Meng Wang. Deep color consistent net- work for low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 1 [49] Chu Zhou, Minggui Teng, Jin Han, Chao Xu, and Boxin Shi."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.5818378925323486,
+      "text": "In Proceedings of European Conference on Computer Vision (ECCV), 2020. 4, 11 [45] Syed Waqas Zamir, Aditya Arora, Salman Khan, Mu- nawar Hayat, Fahad Shahbaz Khan, and Ming-Hsuan Yang. Restormer: Efficient transformer for high-resolution image restoration. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 4, 11 [46] Richard Zhang, Phillip Isola, Alexei A. Efros, Eli Shecht- man, and Oliver Wang. The unreasonable effective- ness of deep features as a perceptual metric. In 2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition(CVPR), pages 586–595, 2018. 1, 4 [47] Yonghua Zhang, Jiawan Zhang, and Xiaojie Guo. Kindling the darkness: A practical low-light image enhancer. In Pro- ceedings of the 27th ACM International Conference on Mul- timedia (ACM MM), 2019. 3 [48] Zhao Zhang, Huan Zheng, Richang Hong, Mingliang Xu, Shuicheng Yan, and Meng Wang. Deep color consistent net- work for low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 1 [49] Chu Zhou, Minggui Teng, Jin Han, Chao Xu, and Boxin Shi."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p7_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 7,
+      "score": 0.5816279649734497,
+      "text": "Y. Zou et al. Table 1 Quantitative comparison on the NYU-Depth V2 dataset. The best results are indicated in bold, and the second-best results are underlined. Method Venue Backbone 𝛿1 ↑ 𝛿2 ↑ 𝛿3 ↑ RMSE↓ AbsRel↓ log10↓ BTS [12] arXiv 2019 DenseNet-161 0. 871 0. 977 0. 995 0. 407 0. 113 0. 049 AdaBins [9] CVPR 2019 EﬃcientNet-B5 0. 903 0. 984 0. 997 0. 364 0. 103 0. 044 LocalBins [18] ECCV 2022 ResNet-101 0. 898 0. 987 0. 998 0. 357 – 0. 042 P3Depth [13] CVPR 2022 Swin-Large 0. 907 0. 981 0. 996 0. 356 0. 104 0. 043 NeWCRFs [16] CVPR 2022 Swin-Large 0. 927 0. 989 0. 998 0. 334 0. 095 0. 039 PixelFormer [39] WCAV 2023 Swin-Large 0. 929 0. 991 0. 998 0. 322 0. 090 0. 039 BinsFormer [10] TIP 2024 Swin-Large 0. 925 0. 991 0. 997 0. 330 0. 094 0. 040 iDisc [40] CVPR 2023 Swin-Large 0. 936 0. 992 0. 998 0. 313 0. 086 0. 037 ZoeDepth [41] arXiv 2023 Swin-Large 0. 937 0. 992 0. 998 0. 310 0. 086 0. 037 WorDepth [42] CVPR 2024 Swin-Large 0. 932 0. 992 0. 998 0. 317 0. 088 0. 038 Ours – Swin-Tiny 0. 893 0. 981 0. 995 0. 377 0. 107 0. 045 Swin-Large 0. 933 0. 991 0. 998 0. 316 0. 086 0. 037 Convnext-Large 0. 938 0. 991 0. 998 0. 308 0. 084 0. 036 Fig. 8."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5810081958770752,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5810081958770752,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.5776398181915283,
+      "text": "For each condition c, we used a ForkGAN model [45] T c to translate all day-clear training samples E of nuScenes, with c ∈ C = {night, rain}. We trained Fork- GAN on BDD100K [42] and fine-tuned it on the nuScenes training set. For RobotCar, we used T c to translate all day samples E into night ones. RobotCar contains more night samples than nuScenes, so we trained T c directly on its training set. We share publicly all generated hc i images. Prior works and baselines We compared ours with a variety of works [8, 11, 12, 38, 37, 22, 33, 1]. We applied ours on the self-supervised Monodepth2-based baseline of Section 3. 1. 1 and the fully-supervised AdaBins [1]. 4. 2. Quantitative Results Night – nuScenes In Table 1, we report results for nuScenes [3] across various settings. Night samples present strong noise levels and reflections that are detrimental for self-supervised models (Figure 2), causing the absRel er- rors of most methods to double from ideal conditions (i.e., day-clear) to night. The difficulty of learning from night inputs is evident comparing Monodepth2 [11] trained only on day-clear (d) against all conditions (a), with the latter severely underperforming."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5764724016189575,
+      "text": "In our supplementary material, we provide additional tests on nuScenes-Day and Robotcar-Day, give a complete qual- itative comparison on nuScenes-Night/nuScenes-Day and RobotCar-Night/RobotCar-Day, and offer additional visual results on other nighttime datasets to further prove the effec- tiveness of our method. 4. 3 Ablation Test on Pre-processing Contribution of Each Part Table 4. 2 shows the contributions of each pre-processing part. The comparison of different self-supervised training ap- proaches is left to the supplementary material to further prove the effectiveness of our training framework. In nuScenes-Night, compared with the baseline, BPG im- proves ABS rel by 19. 3% and RMSE by 14. 0%, and ING im- proves ABS rel by 18. 0% and RMSE by 9. 1%. Besides, the joint application of BPG and ING achieves the best scores with 20. 8% improvement on ABS rel, 20. 1% on RMSE and 35. 3% on δ1. For RobotCar-Night, the joint application of BPG and ING still achieves a significant boost with 13. 2% on ABS rel and 9. 7% on RMSE. In addition, Table 4. 2 shows that the joint application of BPG and ING significantly improves RMSE (7. 2% in nuScenec-Night and 8."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.5762190222740173,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pat- tern Recognition (CVPR), 2022. 4, 11 [36] Chen Wei, Wenjing Wang, Wenhan Yang, and Jiaying Liu. Deep retinex decomposition for low-light enhancement. In Proceedings of British Machine Vision Conference(BMVC), 2018. 2, 3, 4 [37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. A physics-based noise formation model for extreme low-light raw denoising. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020. 1 [38] Haoning Wu, Zicheng Zhang, Weixia Zhang, Chaofeng Chen, Liang Liao, Chunyi Li, Yixuan Gao, Annan Wang, Erli Zhang, Wenxiu Sun, Qiong Yan, Xiongkuo Min, Guang- tao Zhai, and Weisi Lin. Q-align: Teaching LMMs for visual scoring via discrete text-defined levels. In Proceedings of the International Conference on Machine Learning (ICML), pages 54015–54029. PMLR, 2024. 1, 4 [39] Wenhui Wu, Jian Weng, Pingping Zhang, Xu Wang, Wenhan Yang, and Jianmin Jiang. Uretinex-net: Retinex-based deep unfolding network for low-light image enhancement. InPro- ceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.5762190222740173,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pat- tern Recognition (CVPR), 2022. 4, 11 [36] Chen Wei, Wenjing Wang, Wenhan Yang, and Jiaying Liu. Deep retinex decomposition for low-light enhancement. In Proceedings of British Machine Vision Conference(BMVC), 2018. 2, 3, 4 [37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. A physics-based noise formation model for extreme low-light raw denoising. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020. 1 [38] Haoning Wu, Zicheng Zhang, Weixia Zhang, Chaofeng Chen, Liang Liao, Chunyi Li, Yixuan Gao, Annan Wang, Erli Zhang, Wenxiu Sun, Qiong Yan, Xiongkuo Min, Guang- tao Zhai, and Weisi Lin. Q-align: Teaching LMMs for visual scoring via discrete text-defined levels. In Proceedings of the International Conference on Machine Learning (ICML), pages 54015–54029. PMLR, 2024. 1, 4 [39] Wenhui Wu, Jian Weng, Pingping Zhang, Xu Wang, Wenhan Yang, and Jianmin Jiang. Uretinex-net: Retinex-based deep unfolding network for low-light image enhancement. InPro- ceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p11_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 11,
+      "score": 0.5758664011955261,
+      "text": "img img seq photometric loss depth pose pre process (d) Our training. Figure A. 1: Different self-supervised methods with preprocess- ing. The Illuminating Change Net (ICN) and the smooth loss are omitted from the figures. Method ABS rel↓ Sq rel↓ RMSE↓ δ1↑ δ2↑ δ3↑ TimeFull disturb 0. 601 10. 06 15. 76 0. 247 0. 447 0. 610 ×1. 0Pose disturb 0. 276 3. 606 9. 098 0. 625 0. 840 0. 928×1. 0Self-teaching0. 259 3. 139 8. 615 0. 6410. 8470. 930 ×1. 7Our training0. 259 3. 147 8. 547 0. 641 0. 850 0. 928 ×1. 0 Table A. 1: Result of different self-supervised methods. K, N-D and N-N denote the KITTI, nuScenes-Day and nuScnes-Night train- ing sets, respcetively. Time means the total training time compared to our training. All methods are trained on a single A60. Experiment Setting In the training, all experiments in this part use our BPG and ING for preprocessing. Full disturb and pose disturb apply the same training settings as mentioned in our main paper (see in Sec. D. 3) except from different pose network and photo- metric loss input. In self-teaching (Fig. A. 1), the teacher network is trained on KITTI dataset as mentioned by MonoViT [Zhao et al. , 2022b]."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.5755902528762817,
+      "text": "2, 3 [40] Yuhui Wu, Chen Pan, Guoqing Wang, Yang Yang, Jiwei Wei, Chongyi Li, and Heng Tao Shen. Learning semantic-aware knowledge guidance for low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vi- sion and Pattern Recognition (CVPR) , pages 1662–1671, 2023. 2 [41] Xiaogang Xu, Ruixing Wang, Chi-Wing Fu, and Jiaya Jia. Snr-aware low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 4, 11 [42] Qingsen Yan, Yixu Feng, Cheng Zhang, Pei Wang, Peng Wu, Wei Dong, Jinqiu Sun, and Yanning Zhang. Hvi: A new color space for low-light image enhancement. In IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025. 1, 2, 4, 11 [43] Wenhan Yang, Wenjing Wang, Haofeng Huang, Shiqi Wang, and Jiaying Liu. Sparse gradient regularized deep retinex network for robust low-light image enhancement. IEEE Transactions on Image Processing, page 2072–2086, 2021. 2, 3, 4 [44] Syed Waqas Zamir, Aditya Arora, Salman Khan, Munawar Hayat, Fahad Shahbaz Khan, Ming-Hsuan Yang, and Ling Shao. Learning enriched features for real image restoration and enhancement."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.5755902528762817,
+      "text": "2, 3 [40] Yuhui Wu, Chen Pan, Guoqing Wang, Yang Yang, Jiwei Wei, Chongyi Li, and Heng Tao Shen. Learning semantic-aware knowledge guidance for low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vi- sion and Pattern Recognition (CVPR) , pages 1662–1671, 2023. 2 [41] Xiaogang Xu, Ruixing Wang, Chi-Wing Fu, and Jiaya Jia. Snr-aware low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 4, 11 [42] Qingsen Yan, Yixu Feng, Cheng Zhang, Pei Wang, Peng Wu, Wei Dong, Jinqiu Sun, and Yanning Zhang. Hvi: A new color space for low-light image enhancement. In IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2025. 1, 2, 4, 11 [43] Wenhan Yang, Wenjing Wang, Haofeng Huang, Shiqi Wang, and Jiaying Liu. Sparse gradient regularized deep retinex network for robust low-light image enhancement. IEEE Transactions on Image Processing, page 2072–2086, 2021. 2, 3, 4 [44] Syed Waqas Zamir, Aditya Arora, Salman Khan, Munawar Hayat, Fahad Shahbaz Khan, Ming-Hsuan Yang, and Ling Shao. Learning enriched features for real image restoration and enhancement."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5754717588424683,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023. 3 [8] Ross Girshick. Fast r-cnn. In Proceedings of the IEEE In- ternational Conference on Computer Vision (ICCV) , 2015. 4 [9] Xiaojie Guo, Yu Li, and Haibin Ling. Lime: Low-light im- age enhancement via illumination map estimation. IEEE Transactions on Image Processing, 26(2):982–993, 2017. 4 [10] Jie Huang, Yajing Liu, Feng Zhao, Keyu Yan, Jinghao Zhang, Yukun Huang, Man Zhou, and Zhiwei Xiong. Deep fourier-based exposure correction network with spatial- frequency interaction. In Proceedings of European Confer- ence on Computer Vision (ECCV), 2022. 2 [11] Hai Jiang, Ao Luo, Xiaohong Liu, Songchen Han, and Shuaicheng Liu. Lightendiffusion: Unsupervised low-light image enhancement with latent-retinex diffusion models. In European Conference on Computer Vision, 2024. 3 [12] Justin Johnson, Alexandre Alahi, and Li Fei-Fei. Percep- tual losses for real-time style transfer and super-resolution. In Proceedings of European Conference on Computer Vision (ECCV), pages 694–711, 2016. 2, 4 [13] T. Kailath. The divergence and bhattacharyya distance mea- sures in signal selection."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5754717588424683,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2023. 3 [8] Ross Girshick. Fast r-cnn. In Proceedings of the IEEE In- ternational Conference on Computer Vision (ICCV) , 2015. 4 [9] Xiaojie Guo, Yu Li, and Haibin Ling. Lime: Low-light im- age enhancement via illumination map estimation. IEEE Transactions on Image Processing, 26(2):982–993, 2017. 4 [10] Jie Huang, Yajing Liu, Feng Zhao, Keyu Yan, Jinghao Zhang, Yukun Huang, Man Zhou, and Zhiwei Xiong. Deep fourier-based exposure correction network with spatial- frequency interaction. In Proceedings of European Confer- ence on Computer Vision (ECCV), 2022. 2 [11] Hai Jiang, Ao Luo, Xiaohong Liu, Songchen Han, and Shuaicheng Liu. Lightendiffusion: Unsupervised low-light image enhancement with latent-retinex diffusion models. In European Conference on Computer Vision, 2024. 3 [12] Justin Johnson, Alexandre Alahi, and Li Fei-Fei. Percep- tual losses for real-time style transfer and super-resolution. In Proceedings of European Conference on Computer Vision (ECCV), pages 694–711, 2016. 2, 4 [13] T. Kailath. The divergence and bhattacharyya distance mea- sures in signal selection."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p9_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 9,
+      "score": 0.5739948749542236,
+      "text": "Y. Zou et al. Fig. 10. Qualitative comparison on the Cityscapes dataset. Table 4 Zero-shot quantitative results on two unseen datasets. Method SUN RGB-D Virtual KITTI 2 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ BTS [12] 0. 740 0. 933 0. 172 0. 515 0. 075 0. 831 0. 948 0. 115 5. 368 0. 054 AdaBins [9] 0. 771 0. 944 0. 159 0. 476 0. 068 0. 862 0. 957 0. 112 5. 218 0. 048 LocalBins [18] 0. 777 0. 949 0. 156 0. 470 0. 067 0. 810 0. 940 0. 127 5. 981 0. 061 NeWCRFs [16] 0. 798 0. 967 0. 151 0. 424 0. 064 0. 829 0. 951 0. 117 5. 691 0. 056 BinsFormer [10] 0. 805 0. 963 0. 143 0. 421 0. 061 – – – – – ZoeDepth [41] 0. 856 0. 979 0. 123 0. 356 0. 053 0. 850 0. 965 0. 105 5. 095 0. 050 Ours 0. 822 0. 969 0. 135 0. 395 0. 057 0. 890 0. 964 0. 098 4. 878 0. 043 Fig. 11. Qualitative zero-shot results on the SUN RGB-D dataset. Pattern Recognition 171 (2026) 112279 9"
+    },
+    {
+      "id": "semantic_chunk::LED_p19_sc1",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.5736175775527954,
+      "text": "F Examples of Other Patterns To find a suitable pattern for our application, we generate half-sized datasets featuring com- monly used structured light patterns: checkerboard, horizontal, and vertical lines (see fig. S4). Comprehensive metrics from this experiment are available in table S4, the checkerboard pat- tern demonstrates significantly superior performances. G LED Impact On Other Tasks We introduce the LED lighting pattern for improving performance on geometric tasks. We study its impact on the performance of other tasks that might be running in the same time on the vehicle, taking the example of semantic segmentation. To this end, we train Mask2Former"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p3_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.5728240609169006,
+      "text": "The images inputting of the pose network part and the loss part will not be pre-processed by BPG and ING, we discuss this setting in supplementary. tween them, ˜Pshif trefers to the simulation of some key dif- ferences, and I LRN t indicates one sample from the fused dis- tribution. Physical Priors or Image Transfer Either physical priors or image transfer technology can be used to build the fused distribution, Pd + ˜Pshif t. Though vivid fake night images could be transferred with solid back- bones and properly partitioned training sets, some key differ- ences (e.g., differences in photometric and noise distribution) between day and night could be underestimated in the image transfer network because no corresponding constraint is made during their training. Different from image transfer technology, the use of phys- ical priors is more controllable, directional and explainable. It’s also efficient because it doesn’t require additional train- ing stages or excessive memory costs. Thus, we use physical priors to model ˜Pshif t. In addition, focusing on lighting con- ditions, we analyze key day-night differences in Section 3. 2 and describe their modeling in Section 3."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc4",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.5719663500785828,
+      "text": "Implementation Details The experiments on all models of different stages are con- ducted on the same ResNet architecture [13], so do the base- lines. The training for the Φday and the Φsyn are con- ducted for 20 epochs, while Φreal is initialized by Φsyn"
+    },
+    {
+      "id": "semantic_chunk::ACD_p7_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5714490413665771,
+      "text": "Trailing 0 added to the values from [V ankadari et al., 2023 ] and [Tosi et al., 2025 ]. Notation from Table 1. :\u0012\u0003'/\u000e)&& 2ULJLQ\u0003,PDJH :\u0012\u0003'/ :\u0012\u0003'/\u000e)&&\u000e2*' Figure 5: Visualization of ablation study on the distillation learning, feature consistency constraint and ordinal guidance distillation. DL OGD FCC day-clear night day-rain absRel RMSE absRel RMSE absRel RMSE N 0. 1333 6. 459 0. 2419 10. 922 0. 1572 7. 453 ✓ 0. 1335 6. 408 0. 1883 8. 398 0. 1404 7. 092 ✓✓ 0. 1325 6. 328 0. 1879 8. 353 0. 1414 7. 084 ✓✓ ✓ 0. 1355 6. 340 0. 1872 8. 125 0. 1377 6. 999 DL OGD FCC day night absRel RMSE sqRel absRel RMSE sqRel R 0. 1209 3. 335 0. 723 0. 3909 8. 227 3. 547 ✓ 0. 1123 3. 135 0. 631 0. 1233 3. 476 0. 720 ✓✓ 0. 1117 3. 115 0. 615 0. 1224 3. 458 0. 704 ✓✓ ✓ 0. 1107 3. 084 0. 591 0. 1206 3. 432 0. 690 Table 3: Ablation study of Design Components. N: nuScenes, R: RobotCar, DL: distillation learning, OGD: ordinal guidance distilla- tion, FCC: feature consistency constraint. provements in model performance, reducing the absRel met- ric by 0. 54% for day scene and 0. 73% for night scene on the RobotCar."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5709812641143799,
+      "text": "The dilation rate used in each CDC block is also listed. Repeat × 1 3×3 DDWConv dilation=r Batch Norm 1×1 point-wise GELU 1×1 point-wise CDC Module LGFI Module Linear 1×1 point-wise GELU Linear Linear LayerNorm Softmax Linear LayerNorm 1×1 point-wise 𝑄𝑇 𝑄 𝐾 𝑉 Repeat × N Figure 3. Structures of the proposed Consecutive Dilated Con- volutions (CDC) module and Local-Global Features Interac- tion (LGFI) module. In each stage the CDC module with differ- ent dilation rate is repeated for N times. with size H×W× 3 is ﬁrst fed into a convolution stem, where the image is down-sampled by a 3× 3 convolu- tion. Following two additional 3× 3 convolutions with stride = 1 for local feature extraction, the feature maps of size H 2 × W 2 ×C1 are obtained. In the second stage the features are concatenated with the pooled three-channel in- put image, and another 3×3 convolution withstride = 2 is adopted to down-sample the feature maps, resulting in fea- ture maps with size H 4 × W 4 ×C2. Concatenating features with the average-pooled input image in a down-sampling layer can reduce the spatial information loss caused by the reduction of feature size, which is inspired by ESP- Netv2 [3]."
+    },
+    {
+      "id": "semantic_chunk::dav2_p13_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 13,
+      "score": 0.5706813335418701,
+      "text": "[40] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Dollár, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In ECCV, 2014. 18 [41] Haotian Liu, Chunyuan Li, Qingyang Wu, and Yong Jae Lee. Visual instruction tuning. In NeurIPS, 2023. 8 [42] Lingjie Liu, Nenglun Chen, Duygu Ceylan, Christian Theobalt, Wenping Wang, and Niloy J Mitra. Curvefusion: reconstructing thin structures from rgbd sequences. TOG, 2018. 2 [43] Yifan Liu, Ke Chen, Chris Liu, Zengchang Qin, Zhenbo Luo, and Jingdong Wang. Structured knowledge distillation for semantic segmentation. In CVPR, 2019. 10 [44] Ze Liu, Han Hu, Yutong Lin, Zhuliang Yao, Zhenda Xie, Yixuan Wei, Jia Ning, Yue Cao, Zheng Zhang, Li Dong, et al. Swin transformer v2: Scaling up capacity and resolution. In CVPR, 2022. 9 [45] Ze Liu, Yutong Lin, Yue Cao, Han Hu, Yixuan Wei, Zheng Zhang, Stephen Lin, and Baining Guo. Swin transformer: Hierarchical vision transformer using shifted windows. In ICCV, 2021. 18 [46] Zhuang Liu, Hanzi Mao, Chao-Yuan Wu, Christoph Feichtenhofer, Trevor Darrell, and Saining Xie. A convnet for the 2020s. In CVPR, 2022. 18 [47] Ben Mildenhall, Pratul P."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p3_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 3,
+      "score": 0.5702418088912964,
+      "text": "Noise n ℰ Denoiser U-Net 𝑓𝑓𝜃𝜃 surrogate switch s single step τ = T 𝒟𝒟 normalization Scale-Shift GRU×2 edge extraction warp 𝐿𝐿𝑠𝑠 𝐷𝐷𝑆𝑆𝑆𝑆𝑆𝑆 𝐷𝐷𝑆𝑆𝑆𝑆 𝐷𝐷𝑘𝑘 Training Image 𝐈𝐈𝑡𝑡 𝐿𝐿ph 𝐿𝐿𝑒𝑒 𝐿𝐿𝑡𝑡𝑡𝑡 𝐷𝐷𝑡𝑡𝑡𝑡 𝐿𝐿𝑒𝑒 Mix-batch 𝐈𝐈𝑚𝑚 Depth Prediction 𝐿𝐿𝑡𝑡𝑡𝑡 𝐿𝐿𝑡𝑡𝑡𝑡 𝐈𝐈𝑚𝑚 … … or or or Figure 2:Finetuning Protocol of Jasmine. The It and Im are each concatenated with n[33] and fed into the V AE encoderε. Next, the U-Net performs single-step denoising guided by the task switcher s, and subsequently decodes the SSI-depth prediction DSSI and the reconstructed image with the D (Sec. 3. 2). Afterward, the DSSI is processed by the SSG for distribution refinement, yielding the final depth estimation DSI . The Ltc, Le, Lph andL s are supervision loss and they are detailed in Sec. 3. 4. The edge extraction module is detailed in Sec C .into single-frame and multi-frame approaches[52, 17, 9, 1]. Comparisons between these paradigms are detailed in Sec. E. 2. Recently, DepthAnything v1/v2[59, 60] has revealed that we can obtain an accurate single image depth prediction model with strong generalization by training on large-scale image depth pairs."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.5684247612953186,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.5684247612953186,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p12_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 12,
+      "score": 0.5683271884918213,
+      "text": "night scenes, can corrupt the depth-dependent high-frequency part of the image (i.e., object edges). Thus, the partial com- pensation of hightlights and noise (BPG and ING) allows the depth network to suppress these depth-uncorrelated disturb- ing terms and better generalize to the challenging nighttime scenes. Table B. 1 shows the comparison between our compensa- tion and other full compensation (image transfer). Although CUT and Qs-Atten get better FID score on the nuScenes- Night testing set, indicating that their methods produce more night-like images, our methods still get better night depth es- timation results. Compared to the second best, we improve ABS rel by 9. 8% and RMSE by 9. 8%. Compensation methodABS rel↓ Sq rel↓ RMSE↓ δ1↑ δ2↑ δ3↑ FID↓Train on KITTI - Test on nuScenes-NightNone 0. 327 3. 740 10. 70 0. 451 0. 733 0. 855 -Cut I2I: K to N-N 0. 300 3. 771 9. 596 0. 565 0. 793 0. 895 46. 26Qs-Atten I2I: K to N-N 0. 291 3. 659 9. 554 0. 577 0. 801 0. 90345. 05Ours compensation 0. 259 3. 147 8. 547 0. 641 0. 850 0. 92860. 01±1. 81Train on nuScenes - Test on nuScenes-NightCut I2I: N-D to N-N 0. 290 3. 653 9. 614 0. 580 0. 807 0. 911 54. 40Qs-Atten I2I: N-D to N-N 0. 287 3."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p12_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 12,
+      "score": 0.5683095455169678,
+      "text": "582 9. 473 0. 580 0. 813 0. 913 46. 97 Table B. 1: Ours result compared to the full compensation meth- ods. K, N-D and N-N denote the KITTI, nuScenes-Day and nuScnes- Night training sets, respectively. We append the poplar FID met- ric [Heusel et al., 2017] to measure the day-to-night quality of the day-to-night full compensation. N - D N - D K CUT N - D to N - N CUT N - D to N - N Qs - Atten N - D to N - N Qs - Atten N - D to N - N Real N - N Real N - N K CUT N - D to K CUT N - D to K Qs - Atten N - D to K Qs - Atten N - D to K (a) Full compensation results. (b) Our partial compensation results. Figure B. 2: Visualization of full compensation and our partial compensation results. Day-to-Night Image Transfer Experiment Setting To train the day-to-night image transfer network, we ran- domly select 4,000 images from the KITTI [Eigen et al. , 2014], nuScene-Day [Wang et al. , 2021 ] and nuScenes- Night [Wang et al., 2021] monocular depth training sets, re- spectively, as the I2I (image to image transfer) training set. Note that the KITTI dataset contains daytime images only. The I2I testing set is the corresponding monocular depth test- ing set."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.5681419372558594,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Method ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑ Test on nuScenes-Night Depth Anything V2 0. 272 2. 5518. 576 0. 304 0. 518 0. 843 0. 971 + Only LLDG 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914 + Only LLPEFT 0. 255 3. 050 7. 686 0. 302 0. 619 0. 836 0. 934 DepthDark 0. 210 1. 910 7. 764 0. 260 0. 630 0. 914 0. 976 Test on RobotCar-Night Depth Anything V2 0. 235 2. 474 6. 239 0. 268 0. 697 0. 868 0. 946 + Only LLDG 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972 + Only LLPEFT 0. 177 1. 584 6. 727 0. 245 0. 700 0. 895 0. 973 DepthDark 0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 2: Efficacy of Proposed Modules: Ablation studies on nuScenes-Night and RobotCar-Night demonstrate that each module enhances DepthDark’s performance, with combined use significantly improving robustness."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p11_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.5679487586021423,
+      "text": "Y. Zou et al. Table 6 Comparison results of semantic segmentation and panoptic segmentation-assisted prediction on the Cityscapes dataset. Segmentation type Backbone 𝛿1 ↑ 𝛿2 ↑ 𝛿3 ↑ RMSE↓ RMSEL↓ AbsRel↓ SqRel↓ semantic Swin-Tiny 0. 799 0. 932 0. 968 1. 901 0. 352 0. 230 1. 332 Swin-Large 0. 839 0. 940 0. 973 1. 767 0. 340 0. 206 1. 266 Convnext-Large 0. 835 0. 948 0. 973 1. 743 0. 340 0. 204 1. 403 panoptic Swin-Tiny 0. 806 0932 0. 965 1822 0. 376 0. 230 1. 465 Swin-Large 0. 834 0. 951 0. 975 1. 755 0. 320 0. 225 1. 399 Convnext-Large 0. 838 0. 949 0. 974 1. 696 0. 340 0. 204 1. 482 Fig. 15. Visualization of semantic segmentation mask activation areas. Table 7 Ablation study on diﬀerent model components on the Cityscapes dataset. Model ARD SPS SMG 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ a × × × 0. 732 0. 303 2. 122 0. 090 b ✓ × × 0. 790 0. 280 2. 026 0. 078 c ✓ ✓ × 0. 779 0. 233 1. 934 0. 078 d ✓ × ✓ 0. 774 0. 254 1. 935 0. 075 e ✓ ✓ ✓ 0. 799 0. 230 1. 901 0. 073 method is able to provide sharp depth boundaries on imperfect real datasets, as the predicted performance obtained from training on both depth annotations are extremely similar. Mask generation of the SMG module: As shown in Fig."
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.5677207708358765,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17 Ldepth Lgrad Lnormal Metrics L1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ ✓ ✗ ✗ ✗ ✗ 5. 9790. 1910. 020 0. 13213. 032 14. 3520. 957 0. 982 0. 991 ✗ ✓ ✗ ✗ ✗ 5. 852 0. 187 0. 021 0. 13213. 12212. 9840. 9570. 9830. 992 ✗ ✓ ✓ ✗ ✗ 5. 760 0. 201 0. 020 0. 137 13. 616 16. 174 0. 9580. 9830. 992 ✗ ✓ ✗ ✓ ✗ 5. 386 0. 2020. 0210. 12412. 373 15. 901 0. 9580. 985 0. 993 ✗ ✓ ✗ ✗ ✓ 5. 3090. 206 0. 022 0. 149 14. 862 16. 048 0. 954 0. 981 0. 990 ✗ ✓ ✗ ✓ ✓ 5. 8090. 186 0. 0180. 125 12. 21014. 6830. 961 0. 985 0. 993 ✗ ✓ ✓ ✗ ✓ 5. 4220. 2000. 0180. 125 12. 50316. 1200. 961 0. 985 0. 993 Table S1:Loss study. Performance comparison using several combination of losses:1st best, 2nd best,3rd best. Figure S2:Few-shot learning performances of Depth Anything V2 on our real dataset. All LED patterns demonstrate superior performances over LB. The model is near its maximal performances with only 1,000 training images. L=L depth +λ 1Lgrad +λ 2Lnormal .(4) B. 3 Loss Study To determine the impact of each individual loss, we conduct an ablation study (see table S1)."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p5_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.5666282773017883,
+      "text": "To effectively transform the input low-light image𝐼𝐹𝑁 and its illumination guidance image𝐼𝐹𝑁𝑔 from the image space to the feature space, we propose an augmented fea- ture fusion method that incorporates illumination guidance. Specif- ically, we first concatenate the low-light image and illumination guidance image along the channel dimension to form a new aug- mented low-light image, denoted as the low-light auxiliary image 𝐼𝐹𝑁 𝐴 . Subsequently, we design and employ a Multiscale Feature Fu- sion. This method captures multiscale contextual information and dynamically adjusts feature weights, ensuring that the extracted features comprehensively represent the multi-level information embedded in the low-light image and its illumination guidance. The detailed process is as follows: Firstly, let the low-light image𝐼𝐹𝑁 ∈ R𝐻×𝑊×𝐶1 and the illumi- nation guidance𝐼𝐹𝑁𝑔 ∈ R𝐻×𝑊×𝐶2. We concatenate them along the channel dimension to produce the low-light auxiliary image𝐼𝐹𝑁 𝐴 , as defined by: 𝐼𝐹𝑁 𝐴 =𝐶𝑜𝑛𝑐𝑎𝑡(𝐼𝐹𝑁,𝐼𝐹𝑁 𝑔 ), (8) where𝐼𝐹𝑁 𝐴 ∈ R𝐻×𝑊×(𝐶1+𝐶2)."
+    },
+    {
+      "id": "semantic_chunk::s_p11_sc0",
+      "source": "data\\s.pdf",
+      "page": 11,
+      "score": 0.565496027469635,
+      "text": "(ICCV), 2017 IEEE International Conference on , 2017. 2, 4"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc4",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.5637412071228027,
+      "text": "Although foundation models such as Depth Anything [41], Depth Anything V2 [42] and Marigold [19] demonstrate strong performance under typical day- light conditions, their effectiveness in complex low-light scenarios remains constrained due to limitations in training data coverage. arXiv:2507. 18243v1 [cs. CV] 24 Jul 2025"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p5_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.5628685355186462,
+      "text": "Specifically, we introduce illumi- nation guidance term𝐼𝐹𝑁𝑔 in the LLPEFT strategy, which is defined as follows: 𝐼𝐹𝑁 𝑔 =𝑚𝑒𝑎𝑛𝑐 \u0000𝐿𝐿𝐷𝐺(𝐼)\u0001, (7) The operation𝑚𝑒𝑎𝑛𝑐 computes the mean value of each pixel along the channel dimension. As shown in Fig. 1. 1, the low-light image𝐼𝐹𝑁 is synthesized from the daytime image𝐼 using LLDG, while𝐼𝐹𝑁𝑔 is generated from𝐼𝐹𝑁 using illumination guidance. This process effectively simplifies the illumination guidance procedure by converting the low-light image into a grayscale representation using a simple but efficient approach. This transformation helps to reduce noise, enhance the brightness distribution, and simplify the information structure. Although this approach results in the loss of color information, it does not significantly affect the final outcome, as the color information is already preserved in the low-light image 𝐼𝐹𝑁 . Ultimately, by introducing this illumination guidance, the model can focus on learning robust feature representations, thereby miti- gating noise amplification, color distortion, and artifacts caused by long exposure and high ISO settings. 3. 2. 2 Multiscale Feature Fusion."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::TDDC_p3_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6363126635551453,
+      "text": "\u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 , \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 Pose decoder ICN decoder Day - Image Splits Sample ING ( sec. 3. 4 ) BPG ( sec. 3. 3 ) \u0000 \u0000 3D position appointing Random darken Intensity \u0000 sampling Re - rendering Dark raw image simulation Intensity \u0000 sampling Noise simulation with calibration \u0000′ \u0000 \u0000 \u0000 \u0000 \u0000 \u0000\u0000 \u0000 \u0000 \u0000\u0000\u0000 \u0000 \u0000 \u0000\u0000 \u0000 \u0000 \u0000\u0000\u0000 Light Source Bank Prepare& Sample ING DepthNet DepthNet Detached Transformer Base CNN Base \u0000 \u0000 \u0000\u0000 BPG \u0000 \u0000 \u0000 \u0000 Photometric Loss Smooth Loss \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 , \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 Figure 2. 1: Overview of our data distribution compensation training framework . The proposed BPG and ING form our compensation stage, whose simple processes are also visualized in the top right. Note that BPG and ING will not participate in the backward propagation. Their input and output are detached. The Transformer-CNN hybrid DepthNet, CNN-based PoseNet and CNN-based Illuminating Change Net (ICN) constitute the trainable part of our framework. The two DepthNets share the same weights during training and the left one are frozen during the whole training.",
+      "estimated_tokens": 363
+    },
+    {
+      "id": "semantic_chunk::TDDC_p3_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6271578073501587,
+      "text": "3 and Section 3. 4. Self-supervised Training The proposed framework is trained in a self-supervised man- ner. Following [Godard et al., 2019; Zhao et al., 2022b], the combination of photometric loss and edge-aware smooth loss is used as the main supervision during training, and the frame- work is shown in Fig. 2. 1. We use the same Transformer- CNN hybrid network in MonoViT[Zhao et al., 2022b] as our DepthNet because of its good performance. Besides, inspired by [Vankadari et al., 2023], we further consider the potential illuminating changes between images, and the Illuminating Change Net (ICN) is introduced to predict the linear per-pixel illuminating change Ct,t+n and Bt,t+n. In addition, to avoid poor self-supervision, we make a simple decoupling at the in- put stage, and the sampled I LRN t is only applied to the input of the depth network. 3.",
+      "estimated_tokens": 221
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6134792566299438,
+      "text": "Delieve-net: Deblurring low-light images with light streaks and local events. In Proceedings of the IEEE/CVF Interna- tional Conference on Computer Vision (ICCV) Workshops , 2021. 1 [50] Shangchen Zhou, Chongyi Li, and Chen Change Loy. Led- net: Joint low-light enhancement and deblurring in the dark. In Proceedings of European Conference on Computer Vision (ECCV), 2022. 1 10",
+      "estimated_tokens": 102
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.6134792566299438,
+      "text": "Delieve-net: Deblurring low-light images with light streaks and local events. In Proceedings of the IEEE/CVF Interna- tional Conference on Computer Vision (ICCV) Workshops , 2021. 1 [50] Shangchen Zhou, Chongyi Li, and Chen Change Loy. Led- net: Joint low-light enhancement and deblurring in the dark. In Proceedings of European Conference on Computer Vision (ECCV), 2022. 1 10",
+      "estimated_tokens": 102
+    },
+    {
+      "id": "semantic_chunk::LED_p19_sc1",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.5736175775527954,
+      "text": "F Examples of Other Patterns To find a suitable pattern for our application, we generate half-sized datasets featuring com- monly used structured light patterns: checkerboard, horizontal, and vertical lines (see fig. S4). Comprehensive metrics from this experiment are available in table S4, the checkerboard pat- tern demonstrates significantly superior performances. G LED Impact On Other Tasks We introduce the LED lighting pattern for improving performance on geometric tasks. We study its impact on the performance of other tasks that might be running in the same time on the vehicle, taking the example of semantic segmentation. To this end, we train Mask2Former",
+      "estimated_tokens": 124
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc4",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.5719663500785828,
+      "text": "Implementation Details The experiments on all models of different stages are con- ducted on the same ResNet architecture [13], so do the base- lines. The training for the Φday and the Φsyn are con- ducted for 20 epochs, while Φreal is initialized by Φsyn",
+      "estimated_tokens": 63
+    },
+    {
+      "id": "semantic_chunk::s_p11_sc0",
+      "source": "data\\s.pdf",
+      "page": 11,
+      "score": 0.565496027469635,
+      "text": "(ICCV), 2017 IEEE International Conference on , 2017. 2, 4",
+      "estimated_tokens": 20
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 995,
+    "compressed_context_tokens": 995,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 995,
+  "context_tokens": 995,
+  "prompt_token_estimate": 1442,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_paper_icn_function",
+  "answer": "<think>The user is asking about the role of Illuminating Change Net (ICN) in the paper. Let me look at the relevant sources.\n\nFrom source [2]:\n\"inspired by [Vankadari et al., 2023], we further consider the potential illuminating changes between images, and the Illuminating Change Net (ICN) is introduced to predict the linear per-pixel illuminating change Ct,t+n and Bt,t+n.\"\n\nFrom source [1]:\nThe framework mentions ICN decoder and ICN is part of the trainable part of the framework.\n\nSo ICN's role is to predict linear per-pixel illuminating changes between images.</think>\n\n{\n  \"answer\": \"ICN 用于预测图像之间逐像素的线性光照变化 Ct,t+n 和 Bt,t+n。\",\n  \"items\": [\n    {\n      \"name\": \"Illuminating Change Net (ICN) 的作用\",\n      \"description\": \"受 Vankadari et al., 2023 启发，ICN 被引入以预测图像之间逐像素的线性光照变化 Ct,t+n 和 Bt,t+n，以考虑图像间的潜在光照变化。\",\n      \"citations\": [2]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1395,
+    "completion_tokens": 246,
+    "total_tokens": 1641,
+    "model": "MiniMax-M3"
+  }
+}

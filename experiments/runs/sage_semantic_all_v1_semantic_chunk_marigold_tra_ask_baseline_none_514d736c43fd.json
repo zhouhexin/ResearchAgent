@@ -1,0 +1,414 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_marigold_tra_ask_baseline_none_514d736c43fd",
+  "dry_run": false,
+  "query": "论文实现中 Marigold 的关键训练与推理设置包括哪些？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p31_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 31,
+      "score": 0.6556669473648071,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p31_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 31,
+      "score": 0.6556669473648071,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p23_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 23,
+      "score": 0.6546666622161865,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p23_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 23,
+      "score": 0.6546666622161865,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23"
+    },
+    {
+      "id": "semantic_chunk::dav2_p25_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 25,
+      "score": 0.6482874155044556,
+      "text": "Image Marigold Depth Anything V2 Figure 14: Comparison between Marigold [31] and our V2 in open-world images. 25"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p24_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 24,
+      "score": 0.6479570269584656,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 24"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p24_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 24,
+      "score": 0.6479570269584656,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 24"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p12_sc3",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 12,
+      "score": 0.6372856497764587,
+      "text": "Test Datasets We show additional qualitative comparisons with our com- petitors [13, 35, 36, 56, 57], on 5 test datasets [ 10, 17, 31, 45, 50]. The depth maps are visualized in Fig. S4, and the normal maps can be found in Fig. S5. Marigold excels at capturing fine scene details and reflecting the global scene layout. 12"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p12_sc3",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6372856497764587,
+      "text": "Test Datasets We show additional qualitative comparisons with our com- petitors [13, 35, 36, 56, 57], on 5 test datasets [ 10, 17, 31, 45, 50]. The depth maps are visualized in Fig. S4, and the normal maps can be found in Fig. S5. Marigold excels at capturing fine scene details and reflecting the global scene layout. 12"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p25_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 25,
+      "score": 0.6341950297355652,
+      "text": "KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 25"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p25_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 25,
+      "score": 0.6341950297355652,
+      "text": "KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 25"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p28_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 28,
+      "score": 0.628940761089325,
+      "text": "ScanNet [10] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 28"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p28_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 28,
+      "score": 0.628940761089325,
+      "text": "ScanNet [10] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 28"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p26_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 26,
+      "score": 0.6279396414756775,
+      "text": "KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 26"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p26_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 26,
+      "score": 0.6279396414756775,
+      "text": "KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 26"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p21_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 21,
+      "score": 0.6213834285736084,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 21"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p21_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 21,
+      "score": 0.6213834285736084,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 21"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p14_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 14,
+      "score": 0.6212553977966309,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 14"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p14_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.6212553977966309,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 14"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p27_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 27,
+      "score": 0.619881808757782,
+      "text": "ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 27"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p27_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 27,
+      "score": 0.619881808757782,
+      "text": "ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 27"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p17_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 17,
+      "score": 0.6195681691169739,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 17"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p17_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 17,
+      "score": 0.6195681691169739,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 17"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p18_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 18,
+      "score": 0.6192657947540283,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 18"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p18_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 18,
+      "score": 0.6192657947540283,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 18"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p13_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 13,
+      "score": 0.6171136498451233,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 13"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p13_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.6171136498451233,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 13"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p16_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 16,
+      "score": 0.6170421242713928,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 16"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p16_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 16,
+      "score": 0.6170421242713928,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 16"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p32_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 32,
+      "score": 0.6170046329498291,
+      "text": "ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 32"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p32_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 32,
+      "score": 0.6170046329498291,
+      "text": "ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 32"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p15_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 15,
+      "score": 0.6163167357444763,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 15"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p15_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 15,
+      "score": 0.6163167357444763,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 15"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p19_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 19,
+      "score": 0.61622554063797,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 19"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p19_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 19,
+      "score": 0.61622554063797,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 19"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.615915060043335,
+      "text": "Implementation We implement Marigold using PyTorch and utilize Stable Diffusion v2 [38] as our backbone, following the original pre-training setup with a v-objective [42]. We disable text conditioning and perform the steps outlined in Sec. 3. 2. Dur- ing training, we apply the DDPM noise scheduler [20] with 1000 diffusion steps. At inference time, we apply the DDIM scheduler [49] and only sample 50 steps. For the final pre- diction, we aggregate results from 10 inference runs with varying starting noise. Training our method takes 18K itera- tions using a batch size of 32. To fit one GPU, we accumulate gradients for 16 steps. We use the Adam optimizer with a learning rate of 3 · 10−5. Additionally, we apply random hor- izontal flipping augmentation to the training data. Training our method to convergence takes approximately 2. 5 days on a single Nvidia RTX 4090 GPU card. 5"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.615915060043335,
+      "text": "Implementation We implement Marigold using PyTorch and utilize Stable Diffusion v2 [38] as our backbone, following the original pre-training setup with a v-objective [42]. We disable text conditioning and perform the steps outlined in Sec. 3. 2. Dur- ing training, we apply the DDPM noise scheduler [20] with 1000 diffusion steps. At inference time, we apply the DDIM scheduler [49] and only sample 50 steps. For the final pre- diction, we aggregate results from 10 inference runs with varying starting noise. Training our method takes 18K itera- tions using a batch size of 32. To fit one GPU, we accumulate gradients for 16 steps. We use the Adam optimizer with a learning rate of 3 · 10−5. Additionally, we apply random hor- izontal flipping augmentation to the training data. Training our method to convergence takes approximately 2. 5 days on a single Nvidia RTX 4090 GPU card. 5"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p20_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 20,
+      "score": 0.6104871034622192,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 20"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p20_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 20,
+      "score": 0.6104871034622192,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 20"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p29_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 29,
+      "score": 0.6098631024360657,
+      "text": "ScanNet [10] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata DIODE [50] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 29"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p29_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 29,
+      "score": 0.6098630428314209,
+      "text": "ScanNet [10] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata DIODE [50] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 29"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p7_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 7,
+      "score": 0.5898290872573853,
+      "text": "Input RGB Image MiDaS Omnidata DPT Marigold (ours) Ground Truth NYUv2 KITTI ETH3D Scannet DIODE Figure 4. Qualitative comparison (depth) of monocular depth estimation methods across different datasets. Marigold excels at capturing thin structures (e.g., chair legs) and preserving overall layout of the scene (e.g., walls in ETH3D example and chairs in DIODE example). Input RGB Image MiDaS Omnidata DPT Marigold (ours) Ground Truth NYUv2 ScanNet DIODE Figure 5. Qualitative comparison (unprojected, colored as normals) of monocular depth estimation methods across different datasets. Marigold stands out for its superior reconstruction of flat surfaces and detailed structures. 7"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.5898290872573853,
+      "text": "Input RGB Image MiDaS Omnidata DPT Marigold (ours) Ground Truth NYUv2 KITTI ETH3D Scannet DIODE Figure 4. Qualitative comparison (depth) of monocular depth estimation methods across different datasets. Marigold excels at capturing thin structures (e.g., chair legs) and preserving overall layout of the scene (e.g., walls in ETH3D example and chairs in DIODE example). Input RGB Image MiDaS Omnidata DPT Marigold (ours) Ground Truth NYUv2 ScanNet DIODE Figure 5. Qualitative comparison (unprojected, colored as normals) of monocular depth estimation methods across different datasets. Marigold stands out for its superior reconstruction of flat surfaces and detailed structures. 7"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p6_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 6,
+      "score": 0.5883463025093079,
+      "text": "4 † Most baselines are sourced from Metric3D [58], except for the ScanNet benchmark. For ScanNet, Metric3D used a different random split that is not publicly accessible, therefore we re-ran all baselines on our split. For HDN [60] we show the ScanNet results from Metric3D, as no source code is available. ∗ Image-text data is used in the pretrained model. 4. 2. Evaluation Training datasets. We train Marigold on two synthetic datasets covering both indoor and outdoor scenes. Hyper- sim [37] is a photorealistic dataset with 461 indoor scenes. We use the official split with around 54K samples from 365 scenes for training. Incomplete samples are filtered out. RGB images and depth maps are resized to 480 × 640 size. Additionally, we transform the original distances relative to the focal point into conventional depth values relative to the focal plane. The second dataset, Virtual KITTI [7] is a synthetic street-scene dataset featuring 5 scenes under vary- ing conditions like weather or camera perspectives. Four scenes containing a total of around 20K samples are used for training. We crop the images to the KITTI benchmark resolution [17] and set the far plane to 80 meters."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.5883463025093079,
+      "text": "4 † Most baselines are sourced from Metric3D [58], except for the ScanNet benchmark. For ScanNet, Metric3D used a different random split that is not publicly accessible, therefore we re-ran all baselines on our split. For HDN [60] we show the ScanNet results from Metric3D, as no source code is available. ∗ Image-text data is used in the pretrained model. 4. 2. Evaluation Training datasets. We train Marigold on two synthetic datasets covering both indoor and outdoor scenes. Hyper- sim [37] is a photorealistic dataset with 461 indoor scenes. We use the official split with around 54K samples from 365 scenes for training. Incomplete samples are filtered out. RGB images and depth maps are resized to 480 × 640 size. Additionally, we transform the original distances relative to the focal point into conventional depth values relative to the focal plane. The second dataset, Virtual KITTI [7] is a synthetic street-scene dataset featuring 5 scenes under vary- ing conditions like weather or camera perspectives. Four scenes containing a total of around 20K samples are used for training. We crop the images to the KITTI benchmark resolution [17] and set the far plane to 80 meters."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.5863726139068604,
+      "text": "180 0. 808 0. 966 0. 989 WSGD[Vankadariet al., 2023] R d&n 640× 320 40 0. 123 0. 694 3. 957 0. 163 0. 835 0. 978 0. 995 DA ITDFA[Zhaoet al., 2022a] R d&n 640× 320 40 0. 156 0. 786 3. 971 0. 192 0. 778 0. 965 0. 992 ADDS[Liu et al., 2021]† R d&n 640× 320 40 0. 109 0. 584 3. 578 0. 153 0. 631 0. 908 0. 962 ADDS[Liu et al., 2021] R d&n 640× 320 40 0. 120 0. 778 4. 113 0. 172 0. 856 0. 967 0. 987 RNW[Wanget al., 2021] R d&n 640× 320 40 0. 156 0. 701 3. 838 0. 202 0. 768 0. 958 0. 991 G ITDFA[Zhaoet al., 2022a] N d&n 640× 320 40 0. 230 2. 018 6. 336 0. 281 0. 653 0. 875 0. 956 ADDS[Liu et al., 2021] N d&n 640× 320 40 0. 180 1. 441 5. 680 0. 232 0. 727 0. 930 0. 981 RNW[Wanget al., 2021] N d&n 640× 320 40 0. 271 3. 939 9. 204 0. 314 0. 661 0. 830 0. 927 MonoFormer[Baeet al., 2023] K 768 × 256 40 0. 138 0. 665 3. 730 0. 181 0. 824 0. 971 0. 993 MonoViT[Zhaoet al., 2022b] K 768 × 256 40 0. 102 0. 500 3. 364 0. 147 0. 905 0. 977 0. 992 Ours K 768 × 256 40 0. 109 0. 477 3. 261 0. 151 0. 891 0. 978 0. 993 Table E. 1: Effective test on nuScenes-Day [Wang et al., 2021; Caesar et al., 2020] and Robotcar-Day [Liu et al., 2021; Maddern et al., 2017]."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.5847994089126587,
+      "text": "/C10/C7/C8/C6/C9/C8/C3 /C5/C9/C4/C2/C1/C6/C0 /C10/C7/C8/C6/C9/C8/C3 /C5/C9/C4/C2/C1/C6/C0 /C10/C7/C8/C6/C9/C8/C3 /C17/C19/C16/C15/C14/C19/C2/C9/C20 /C13/C12/C11/C6/C8 /C37/C7/C36/C32/C35/C30 /C11/C2/C19/C14/C6 /C42/C41/C39/C42/C38/C40 /C17/C6/C9/C2/C19/C14/C19/C9/C48/C3/C17/C19/C16/C15/C14/C19/C2/C9/C20 /C45/C0/C7/C19/C9/C19/C9/C48/C3/C44/C43/C47/C6/C4/C8/C19/C46/C6 /C67/C1/C1/C3 /C11/C2/C19/C14/C6 Figure 2. Overview of the Marigold fine-tuning protocol. Start- ing from pretrained Stable Diffusion, we encode the image x and depth d into the latent space using the original Stable Diffusion V AE. We fine-tune just the U-Net by optimizing the standard diffu- sion objective relative to the depth latent code. Image conditioning is achieved by concatenating the two latent codes before feeding them into the U-Net. The first layer of the U-Net is modified to ac- cept concatenated latent codes. See details in Sec. 3. 2 and Sec. 3. 3. Unlike diffusion models that work directly on the data, latent diffusion models perform diffusion steps in a low- dimensional latent space, offering computational efficiency and suitability for high-resolution image generation [ 38]."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.5847994089126587,
+      "text": "/C10/C7/C8/C6/C9/C8/C3 /C5/C9/C4/C2/C1/C6/C0 /C10/C7/C8/C6/C9/C8/C3 /C5/C9/C4/C2/C1/C6/C0 /C10/C7/C8/C6/C9/C8/C3 /C17/C19/C16/C15/C14/C19/C2/C9/C20 /C13/C12/C11/C6/C8 /C37/C7/C36/C32/C35/C30 /C11/C2/C19/C14/C6 /C42/C41/C39/C42/C38/C40 /C17/C6/C9/C2/C19/C14/C19/C9/C48/C3/C17/C19/C16/C15/C14/C19/C2/C9/C20 /C45/C0/C7/C19/C9/C19/C9/C48/C3/C44/C43/C47/C6/C4/C8/C19/C46/C6 /C67/C1/C1/C3 /C11/C2/C19/C14/C6 Figure 2. Overview of the Marigold fine-tuning protocol. Start- ing from pretrained Stable Diffusion, we encode the image x and depth d into the latent space using the original Stable Diffusion V AE. We fine-tune just the U-Net by optimizing the standard diffu- sion objective relative to the depth latent code. Image conditioning is achieved by concatenating the two latent codes before feeding them into the U-Net. The first layer of the U-Net is modified to ac- cept concatenated latent codes. See details in Sec. 3. 2 and Sec. 3. 3. Unlike diffusion models that work directly on the data, latent diffusion models perform diffusion steps in a low- dimensional latent space, offering computational efficiency and suitability for high-resolution image generation [ 38]."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.5830161571502686,
+      "text": "Table 1:Quantitative results on the KITTI dataset. For the error-based metrics , the lower value is better; and for the accuracy-based metrics , the higher value is better. The best and second-best results are marked in boldand underline. Jaeho et al* is a combined model that applies both Jaeho’s[34] (handle dynamic objects) and TriDepth’s[5] (solve edge flatten) approach. Jasmine* and Jasmine are the same model but use different alignments (discussed in Sec. 4. 3). In the data column, Syn, K, and H represent the synthetic, KITTI, and Hypersim datasets, respectively. The number of images and depth labels usage are in brackets. All experiments are conducted at 1024×320 resolution (Performance of Marigold/E2E FT/Lotus is robust to this resolution). Method Venue Notes Data AbsRelSqRel RMSERMSElog a1 a2 a3 Marigold[25] CVPR2024ZeroShotSyn(74K+74K)0. 120 0. 672 4. 033 0. 184 0. 874 0. 968 0. 985E2E FT[33] W ACV2025ZeroShotSyn(74K+74K)0. 112 0. 649 4. 099 0. 180 0. 890 0. 969 0. 985Lotus[21] ICLR2025ZeroShotSyn(59K+59K)0. 110 0. 611 3. 807 0. 175 0. 892 0. 970 0. 986Jasmine* - Mono KH(68K+0) 0. 102 0. 540 3. 728 0. 162 0. 907 0. 973 0. 987 Monodepth2[15]ICCV2019 Mono K(40K+0) 0. 115 0."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.5816212892532349,
+      "text": "/C10/C7/C8/C6/C9/C8/C4 /C3/C6/C5/C2/C1/C6/C0 /C10/C7/C8/C6/C9/C8/C4 /C16/C9/C5/C2/C1/C6/C0 /C24/C8/C7/C9/C1/C7/C0/C1/C4 /C32/C2/C25/C28/C6 /C38/C37/C35/C38/C34/C36 /C10/C7/C8/C6/C9/C8/C4 /C3/C25/C44/C43/C28/C25/C2/C9/C48 /C41/C40/C32/C6/C8 /C3/C6/C9/C2/C25/C28/C6 Figure 3. Overview of the Marigold inference scheme. Given an input image x, we encode it with the original Stable Diffusion V AE into the latent code z(x), and concatenate with the depth latent z(d) t before giving it to the modified fine-tuned U-Net on every denoising iteration. After executing the schedule of T steps, the resulting depth latent z(d) 0 is decoded into an image, whose 3 channels are averaged to get the final estimation ˆd. See Sec. 3. 4 for details. possible form of depth, which is guaranteed by the rendering pipeline. If our assumption about the possibility of fine- tuning a generalizable depth estimation from a text-to-image LDM is correct, then synthetic depth gives the cleanest set of examples and reduces noise in gradient updates during the short fine-tuning protocol."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p31_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 31,
+      "score": 0.6556669473648071,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31",
+      "estimated_tokens": 84
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p31_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 31,
+      "score": 0.6556669473648071,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31",
+      "estimated_tokens": 84
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p23_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 23,
+      "score": 0.6546666622161865,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23",
+      "estimated_tokens": 84
+    },
+    {
+      "id": "semantic_chunk::dav2_p25_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 25,
+      "score": 0.6482874155044556,
+      "text": "Image Marigold Depth Anything V2 Figure 14: Comparison between Marigold [31] and our V2 in open-world images. 25",
+      "estimated_tokens": 31
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 283,
+    "compressed_context_tokens": 283,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 283,
+  "context_tokens": 283,
+  "prompt_token_estimate": 720,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_marigold_training_and_inference_settings",
+  "answer": "<think>The user is asking about the key training and inference settings of Marigold in the paper. Let me look at the provided sources carefully.\n\nLooking at sources [1], [2], [3], [4] - they all appear to be figure captions or page snippets showing visual comparisons between Marigold and other depth estimation methods (DiverseDepth, MiDaS, LeReS, DPT, Omnidata, Depth Anything V2) on NYUv2 dataset and open-world images.\n\nThe sources contain:\n- Image comparisons/captions\n- No detailed information about Marigold's training settings\n- No detailed information about Marigold's inference settings\n\nThe question asks about Marigold's \"关键训练与推理设置\" (key training and inference settings), but the provided sources only contain figure captions showing visual comparisons. There is no information in the provided sources about:\n- Training dataset\n- Training hyperparameters\n- Learning rate\n- Batch size\n- Optimizer\n- Number of training steps\n- Inference settings\n- Model architecture details\n\nThe sources are insufficient to answer this question. I should indicate that the information is missing.</think>\n\n```json\n{\n  \"answer\": \"所提供资料仅为论文中关于 Marigold 与其他方法在 NYUv2 等数据集上的视觉效果对比图（页面 23/25/31）及其图注说明，未包含 Marigold 的训练与推理设置细节，因此无法基于资料给出具体答案。\",\n  \"items\": [],\n  \"missing_information\": \"缺少 Marigold 的训练设置（如训练数据集、迭代步数、学习率、批量大小、优化器、噪声调度、参数高效微调方法如 LoRA 设定等）以及推理设置（如推理步数、CFG、噪声采样区间、是否使用 ensembling、单目深度归一化策略等）的具体描述。\"\n}\n```",
+  "usage": {
+    "prompt_tokens": 754,
+    "completion_tokens": 380,
+    "total_tokens": 1134,
+    "model": "MiniMax-M3"
+  }
+}

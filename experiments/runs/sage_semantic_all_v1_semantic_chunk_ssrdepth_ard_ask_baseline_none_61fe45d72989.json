@@ -1,0 +1,430 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_ssrdepth_ard_ask_baseline_none_61fe45d72989",
+  "dry_run": false,
+  "query": "SSRDepth 的 ARD 模块如何预测 semantic-aware relative depth？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.8167685270309448,
+      "text": "Based on this, we propose SSRDepth, a uniﬁed framework for SIDE that decomposes the task into segmentation scale predic- tion and semantic-aware relative depth estimation, while lever- aging semantic segmentation for feature guidance. This framework includes a Segmentation Proposal Scale module (SPS), an Adaptive Relative Depth (ARD) module, and a Segmentation Query Guided Aggre- gation module (SQGA). The SQGA module uses a new feature interaction method to aggregate features within semantic segments, guided by se- mantic masks from a Segmentation Mask Generator (SMG) at each scale. The SPS module employs segmentation queries we designed to predict segmentation scale, uses semantic constraints to predict pixel proba- bilities for semantic segments, applies scale alignment to obtain depth coeﬃcients, and weights these coeﬃcients by probabilities to produce segmentation scale. The ARD module employs bin queries we designed to predict semantic-aware relative depth, calculates the probability of pixels belonging to each bin, weights bin centers within normalized depth space to obtain relative depth."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.8143042325973511,
+      "text": "Contents lists available at ScienceDirect Pattern Recognition journal homepage: www.elsevier.com/locate/pr SSRDepth: Combining semantic segmentation and relative depth for monocular metric depth estimation Yuhang Zou, Xiaoming Chen, Zhangyan Zhao ∗, Chenghua Zhang, Haipeng Liu School of Transportation and Logistics Engineering, Wuhan University of Technology, Wuhan, 430063, Hubei, China a r t i c l e i n f o Keywords: Monocular depth estimation Semantic segment Relative depth Masked transformer a b s t r a c t Monocular depth estimation is a pivotal task in computer vision, aimed to predict a dense depth map from a single image. Existing methods can achieve satisfactory performance through carefully designed network architectures. However, they often ignore the semantic information of scene structures, leading to poor performance in the se- mantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular depth estimation method that leverages semantic segmentation to improve metric depth prediction."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.8045819997787476,
+      "text": "Finally, the semantic-aware rel- ative depth is multiplied by the segmentation scale to obtain the metric depth. In summary, our main contributions are as follows: • We propose a novel monocular depth estimation framework- SSRDepth, which decomposes metric depth into segmentation scale and semantic-aware relative depth. Ultimately, the multiplication of these two components yields accurate metric depth. • Our proposed SQGA module employs a new feature interaction pat- tern, combined with the binary masks of semantic segments gener- ated by our designed SMG, ensuring the eﬀectiveness of multi-scale semantic feature aggregation and the recovery of structural regular- ities within semantic segments. • Our proposed SPS module predicts segmentation scale with ex- plicit constraints, allowing the model to preserve sharp semantic boundaries. The ARD module predicts semantic-aware relative depth within a normalized depth space using a hybrid regression approach, providing the necessary foundation for the prediction of metric depth."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.7812261581420898,
+      "text": "Conclusion In this paper, we propose SSRDepth, a monocular depth estimation framework leverages semantic segmentation to improve metric depth prediction. The framework decomposes the metric depth estimation task into two parts: segmentation scale prediction through the Segmenta- tion Proposal Scale (SPS) module and semantic-aware relative depth estimation through the Adaptive Relative Depth (ARD) module. Addi- tionally, the framework includes the Segmentation Query Guided Ag- gregation (SQGA) module, which is designed to recover the structural information of local semantic segments. Our method excels not only in Pattern Recognition 171 (2026) 112279 12"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.7774432897567749,
+      "text": "Then, the 𝑅 is computed through a weighted sum with respect to 𝑐𝑖: 𝑃𝐵 = 𝐸𝐵 × 𝐹 ⊤ 𝑝 , (9) 𝑅(𝑥, 𝑦) = 𝑁∑ 𝑘=1 𝑠𝑜𝑓 𝑡𝑚𝑎𝑥(𝑐𝑘)𝑝𝑘(𝑥, 𝑦), (10) where 𝑝𝑘(𝑥, 𝑦) represents the probability value at pixel location (𝑥, 𝑦) for the corresponding channel in the 𝑃𝐵, and 𝑅(𝑥, 𝑦) represents the semantic-aware relative depth value at the corresponding pixel location. Note that the semantic-aware relative depth here diﬀers from conven- tional relative depth, as it only establishes relative depth relationships within the same semantic segments. We provide a detailed description of this phenomenon in Section 4. 6. Finally, we obtain the true metric depth map 𝐷𝑚 ∈ ℝ1× 𝐻 4 × 𝑊 4 by per- forming pixel-wise multiplication between 𝐷𝑆 and 𝑅: 𝐷𝑚 = 𝐷𝑆 ⋅ 𝑅. (11) 3. 5. Loss function Depth and semantic segmentation loss."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7753245830535889,
+      "text": "Y. Zou et al. Fig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module (SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module (ARD) that we propose. Additionally, we propose the segmentation proposal scale alignment loss (𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance. 3. The proposed method In this section, we ﬁrst introduce the overall architecture of SSRDepth (Section 3. 1). Then, we present the key components of SSRDepth: the Segmentation Query Guided Aggregation module (Section 3. 2), the Segmentation Proposal Scale module (Section 3. 3), and the Adaptive Relative Depth module (Section 3. 4). 3. 1. Framework overview As shown in Fig. 2, given an input image 𝐼 ∈ ℝ3×𝐻×𝑊 , we ﬁrst extract image features through the Image Encoder and then decode them into multi-scale features {𝐹𝑙}3 𝑙=1 and per-pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 employing the Pixel Decoder, where 𝐶 is the number of channels, and 𝐻 × 𝑊 is the resolution."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p4_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.7606441974639893,
+      "text": "(6) Segmentation scale prediction. First, we apply a softmax on the segmentation probability map 𝑃𝑆 to normalize the probability values between 0 and 1. Then, we perform a weighted calculation with the depth coeﬃcients value 𝑜𝑟 as follows: 𝐷𝑆 (𝑥, 𝑦) = 𝑀∑ 𝑟=1 𝑠𝑜𝑓 𝑡𝑚𝑎𝑥(𝑠𝑟(𝑥, 𝑦))𝑜𝑟, (7) where 𝑠𝑟(𝑥, 𝑦) represents the probability value at pixel location (𝑥, 𝑦) for the corresponding channel in the 𝑃𝑆 , and 𝐷𝑠(𝑥, 𝑦) denotes the segmen- tation scale value at the corresponding pixel location. 3. 4. Adaptive relative depth module To obtain the ﬁnal metric depth, it is not only necessary to predict the segmentation scale but also to establish relative depth among pix- els within each segment. To achieve this, we propose the ARD module, which adaptively predicts semantic-aware relative depth and combines it with the segmentation scale to obtain the metric depth. The prediction of semantic-aware relative depth employs the hybrid regression method [10]. Speciﬁcally, the scene depth range is ﬁrst discretized into 𝑁 bins (each bin representing a depth class). Then, the pixels within these bins are classiﬁed by calculating the similarity between image features and the bins. Bin center prediction."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7596212029457092,
+      "text": "Subsequently, we initialize a set of learnable queries 𝑄 ∈ ℝ(𝑀+𝑁)×𝐶 and feed them into the SQGA module to interact with the multi-scale features 𝐹𝑙. During the interaction, in- spired by the masked attention mechanism [28], we design the Segmen- tation Mask Generator (SMG) to generate segmentation attention masks 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻 4 × 𝑊 4 that guide the updates of the queries 𝑄. To decom- pose metric depth into segmentation scale and semantic-aware relative depth, we also decompose 𝑄 into segmentation queries 𝑄𝑆 ∈ ℝ𝑀×𝐶 and bin queries 𝑄𝐵 ∈ ℝ𝑁×𝐶 , where 𝑀 and 𝑁 are the numbers of 𝑄𝑆 and 𝑄𝐵, respectively. 𝑄𝑆 and 𝐹𝑝 are fed into the SPS module to generate the semantic segmentation map 𝑆 ∈ ℝ1× 𝐻 4 × 𝑊 4 and the segmentation scale map 𝐷𝑆 ∈ ℝ1× 𝐻 4 × 𝑊 4 , while 𝑄𝐵 and 𝐹𝑝 are fed into the ARD module to generate the semantic-aware relative depth map 𝑅 ∈ ℝ1× 𝐻 4 × 𝑊 4 . Finally, the metric depth map 𝐷𝑚 ∈ ℝ1× 𝐻 4 × 𝑊 4 is obtained by multiplying 𝑅 with the corresponding elements of 𝐷𝑆 . Additionally, the semantic segmenta- tion map 𝑆 is employed only for auxiliary supervision of the SPS module during training and is not needed in the inference process. 3. 2."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.7588129043579102,
+      "text": "Y. Zou et al. Fig. 5. Visualization of segmentation scale. Fig. 6. Segmentation proposal scale module. Since typical classiﬁcation losses neglect the ordinal information be- tween discrete labels, we convert the predicted bins B into bin center depths 𝐶 = {𝑐1, 𝑐2, … , 𝑐𝑖, … , 𝑐𝑁 } to preserve the depth ordering. Given a set of 𝑄𝐵 ∈ ℝ𝑁×𝐶 , two independent MLPs are used to predict the bins B and the bin embeddings 𝐸𝐵 ∈ ℝ𝑁×𝐶 . Then, the bin center depths value 𝑐𝑖 are computed utilizing the bin width values 𝑏𝑖: 𝑐𝑖 = 𝜖 + 1 2 𝑏𝑖 + 𝑖−1∑ 𝑗=1 𝑏𝑗 , (8) where 𝜖 = 0. 001, this small positive value ensures that each 𝑐𝑖 is greater than 0. Semantic-aware relative depth prediction. To obtain the semantic-aware relative depth map 𝑅 ∈ ℝ1× 𝐻 4 × 𝑊 4 , we multiply the per- pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 with the bin embeddings 𝐸𝐵 ∈ ℝ𝑁×𝐶 to get the probability distribution 𝑃𝐵 ∈ ℝ𝑁× 𝐻 4 × 𝑊 4 for each pixel across the 𝐶."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc6",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7577755451202393,
+      "text": "For example, TRL [24] improved the predictive performance of both tasks by alternating between semantic and depth tasks in a temporal sequence. MTFormer [25] introduced a cross-task attention mechanism to maintain the performance of depth estimation while reducing spatial and temporal complexity. Recent methods high- lighted RDE’s generalization capabilities, using semantic knowledge to recover lost scale/shift in relative depth for better performance. For example, SDC-Depth[26] decomposed images into semantic segments, with independent depth heads predicting 0-1 range depth maps per seg- ment. ScaleDepth [27] implicitly combined scene structure and seman- tics to predict precise scales, building semantic constraints via gener- ated scene labels. In contrast, we explicitly construct a set of semantic segment planes with depth information and combine the depth relative relationships provided by RDE to accurately predict the metric depth. Pattern Recognition 171 (2026) 112279 2"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.7569581866264343,
+      "text": "We employ scale- invariant loss [4] and cross-entropy loss respectively to provide depth and semantic segmentation constraints, with the expressions of 𝑆𝐼𝑙𝑜𝑔 and 𝐶𝐸 are as follows: 𝑆𝐼𝑙𝑜𝑔 = √√√√√ 1 𝑉 ∑ 𝑖 𝑑2 𝑖 − 𝜆 𝑉 2 ( ∑ 𝑖 𝑑𝑖 )2 , (12) 𝐶𝐸 = − 1 𝑉 𝑉∑ 𝑖 𝑆∗(𝑖) log 𝑆(𝑖), (13) in the formula, 𝑑𝑖 = log 𝐷𝑚(𝑖) − log 𝐷∗ 𝑚(𝑖), where 𝐷𝑚(𝑖) and 𝐷∗ 𝑚(𝑖) denote the predicted metric depth and ground truth (GT) metric depths at pixel 𝑖, respectively, while 𝑆(𝑖) and 𝑆∗(𝑖) represent the predicted semantic annotation and ground truth (GT) semantic annotations at pixel 𝑖. 𝑉 denotes the number of pixels in the image that provide valid ground truth depth values. In our experiments, we conventionally set 𝜆 to 0. 15. Segmentation proposal scale alignment loss. To improve the per- formance of depth estimation, we propose a segmentation proposal scale alignment loss (𝑆𝑃 𝑆𝐴 ). Inspired by [29], in order to make the pixel scales within each semantic segment converge to similar values, we crop the ground truth (GT) and predicted depths into 𝑈 patches according to the predicted semantic segmentation annotation, and then apply the me- dian absolute deviation for each patch."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7482662796974182,
+      "text": "Speciﬁcally, we decompose metric depth into segmentation scale and semantic-aware relative depth, which are predicted separately through Segmentation Proposal Scale (SPS) module and an Adaptive Relative Depth (ARD) module. The SPS module predicts the segmentation scale under the constraints of semantic segmentation and scale align- ment, endowing the model with semantic awareness and maintaining sharp semantic boundaries. Meanwhile, the ARD module adaptively predicts semantic-aware relative depth within a normalized depth space through a hybrid regression approach. Furthermore, to eﬀectively capture structural details in semantic segments, we propose the Segmentation Query Guided Aggregation (SQGA) module, which utilizes a novel feature interaction approach to enhance the aggregation of multi-scale features, guided by masks produced through a Segmentation Mask Generator (SMG). Extensive experiments show that our method achieves competitive results on the indoor, outdoor, and unseen datasets. 1."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p6_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 6,
+      "score": 0.7451250553131104,
+      "text": "Y. Zou et al. Fig. 7. Adaptive relative depth module. 4. Experiments 4. 1. Datasets NYU-Depth v2 is an indoor dataset [30] containing 120k images with depth annotations. We employ a state-of-the-art semantic segmen- tation model [31] trained on this dataset to add semantic segmenta- tion annotations to all images. According to the oﬃcial split, we utilize 24231 images for training and 654 images for testing. In the ablation experiment section, we also use its subset, called NYU1449 (1,449 im- ages). Unlike the main dataset, NYU1449 provides raw depth annota- tions and completed reﬁned depth annotations. There are 40 semantic classes, and the image resolution is 640 × 480. KITTI is an outdoor dataset [32]. We adopt the method from Eigen [4] to split it into 23158 training images and 652 testing images. Sim- ilar to [11], we directly employ the Mask2Former [28] model trained on Cityscapes to generate the corresponding semantic segmentation an- notations. Finally, we crop all images to a resolution of 1216 × 352, and the dataset contains 19 semantic classes. Cityscapes is a dataset [33] primarily used for semantic scene under- standing."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7434871196746826,
+      "text": "Y. Zou et al. Fig. 1. Explanation of our motivation. We provide an example of semantic boundary areas with a “smooth transition” (a), where our method successfully alleviates this issue. similarity. If we can explicitly model diﬀerent semantic segments, break- ing down a scene into multiple segmented planes with varying depths, then the model only needs to focus on inferring the relative depth rela- tionships within each segment. (2) How to eﬀectively aggregate im- age features within semantic segments. In the real world, there are regular structural relationships within the same semantic segment. For example, as shown in Fig. 1(b), the depth of the sky is eﬀectively inﬁnite and tends towards a uniform depth value. Meanwhile, the depth span of the road surface is relatively large, yet it varies smoothly along the vertical direction. We believe that aggregating relevant features within semantic segments can better restore their internal relative depth rela- tionships."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc5",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.741557240486145,
+      "text": "MiDaS [21] introduced a ﬂexible training objective and a multi- objective learning strategy, allowing models to mix multiple datasets with diﬀerent characteristics during training. However, the shortcom- ings of RDE are also apparent; they cannot directly address complex real-world applications and still require obtaining scene scale and shift to convert to metric depth. Unlike these methods, we leverage RDE to enhance our model’s MDE performance, and by obtaining the necessary scale and shift through semantic information, we make the model more convenient and directly applicable to real-world scenarios. Semantic guidance for depth estimation. In addition to optimizing network structures, integrating semantic information into SIDE is also a direction worthy of in-depth research. For instance, SceneNet [22] inte- grated semantic understanding from semantic segmentation to generate a uniﬁed scene representation. Guizilini [23] proposed employing se- mantic guidance to enhance depth features. Not content with merely es- timating depth, some methods included additional segmentation heads for multi-task learning."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.7398144602775574,
+      "text": "DepthDark: Robust Monocular Depth Estimation for Low-Light Environments Longjian Zeng 245060073@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Zunjie Zhu∗ zunjiezhu@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Rongfeng Lu rongfeng-lu@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Ming Lu lu199192@gmail.com Intel Labs China Beijing, China Bolun Zheng blzheng@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Chenggang Yan cgyan@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Anke Xue akxue@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Abstract In recent years, foundation models for monocular depth estimation have received increasing attention. Current methods mainly address typical daylight conditions, but their effectiveness notably decreases in low-light environments. There is a lack of robust foundational models for monocular depth estimation specifically designed for low-light scenarios. This largely stems from the absence of large- scale, high-quality paired depth datasets for low-light conditions and the effective parameter-efficient fine-tuning (PEFT) strategy."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7392394542694092,
+      "text": "Therefore, we have summarized two key points that need to be care- fully considered to help the model eﬀectively learn semantic priors: (1) How to eﬀectively utilize the semantic information of the scene to guide SIDE. As shown in Fig. 1(b), all objects in the depth map have nearly identical contours with their semantic segments, and the depth values within the some semantic segments also exhibit a high degree of https://doi.org/10. 1016/j.patcog. 2025. 112279 Received 29 December 2024; Received in revised form 23 July 2025; Accepted 9 August 2025 Pattern Recognition 171 (2026) 112279 Available online 18 August 2025 0031-3203/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p8_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.7369484901428223,
+      "text": "As a result, our Depth Anything model exhibits excellent zero-shot depth estimation ability, and also serves as a promising initialization for downstream metric depth estimation and semantic segmentation tasks. Acknowledgement. This work is supported by the National Natural Science Foundation of China (No. 62201484), HKU Startup Fund, and HKU Seed Fund for Basic Research. 10378"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc6",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.7360761165618896,
+      "text": "Fine-tuning Depth Anything V2, our method, DepthDark, achieves state-of-the-art performance on the nuScenes-Night and RobotCar-Night datasets, surpassing existing methods in qualita- tive results in low-light scenarios. Ultimately, our proposed LLDG and LLPEFT modules provide a novel and viable approach for fine- tuning large-scale foundation models in low-light monocular depth estimation."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p10_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.7358547449111938,
+      "text": "This choice can not to fully demonstrate the model’s perfor- mance. Therefore, we train our method on both the raw depth annota- tions(rawDepths) and the completed reﬁned depth annotations(Depths) from NYU1449. The experimental results are shown in Table 8. Our Pattern Recognition 171 (2026) 112279 10"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p10_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.7349898219108582,
+      "text": "The prediction maps in the upper part are trained under raw depth annotations, while those in the lower part are trained under reﬁned depth annotations. of hybrid regression in Model [b] yield a signiﬁcant enhancement in performance. Building upon this, the incorporation of the SPS module to segment the scene into semantic segments enriched with depth informa- tion further ameliorates the predictive eﬃcacy of Model [c]. Moreover, by employing the SMG module to generate masks, the masked attention mechanism is leveraged to enhance Model [d]’s focus on the informa- tion within the region of interest, thereby improving the eﬃciency of feature aggregation. Ultimately, as anticipated, the decomposition of metric depth enables Model [e] to successfully integrate segmentation scale and semantic-aware relative depth within a uniﬁed framework, thereby achieving state-of-the-art performance. Depth annotation types: Depth Anything v2 [44] has proven that the key to sharp depth prediction is training data with sharp depth boundaries. However, our method is only trained on imperfect real datasets, which typically have a lot of empty pixels around the bound- ary."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7345683574676514,
+      "text": "While RDE serves as a valid estimation paradigm, it has limitations in real-world applications. ∗ Corresponding author. E-mail address: zhao13871001982@whut.edu.cn (Z. Zhao). Consequently, MDE methods have gradually become the mainstream [8]. MDE methods typically directly regress the metric depth of each pixel. Some MDE methods [9,10] employ a hybrid regression strategy, adaptively dividing the image depth range into discrete bins and then predicting the probability of pixels belonging to each bin to achieve ac- curate metric depth estimation. Despite their excellent performance in various benchmarks, these methods often neglect the semantic informa- tion of real-world scene structures, leading to “smooth transition” char- acteristics in the semantic boundaries areas of the predicted depth maps, as shown in Fig. 1(a). Therefore, the introduction of semantic priors is essential. However, existing methods [11] focus on implicitly constructing scene structural relationships utilizing semantic information, but with- out explicit constraints, models may struggle to learn semantic priors."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p4_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.7344156503677368,
+      "text": "Be- sides, in our specific context of leveraging unlabeled images, these auxiliary supervision signals from other tasks can also combat the potential noise in our pseudo depth label. Therefore, we made an initial attempt by carefully assign- ing semantic segmentation labels to our unlabeled images with a combination of RAM [85] + GroundingDINO [37] + HQ-SAM [25] models. After post-processing, this yields a class space containing 4K classes. In the joint-training stage, the model is enforced to produce both depth and segmenta- tion predictions with a shared encoder and two individual decoders. Unfortunately, after trial and error, we still could not boost the performance of the original MDE model. We speculated that, decoding an image into a discrete class space indeed loses too much semantic information. The limited information in these semantic masks is hard to further boost our depth model, especially when our depth model has es- tablished very competitive results. Therefore, we aim to seek more informative semantic sig- nals to serve as auxiliary supervision for our depth estimation task."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.7336891889572144,
+      "text": "The expression for 𝑆𝑃 𝑆𝐴 is as follows: 𝑆𝑃 𝑆𝐴 = 1 𝑈 𝑉 𝑈∑ 𝑝𝑖 𝑉∑ 𝑗 |||𝛾𝐷 𝑆 (𝑝𝑖, 𝑗) − 𝜇(𝐷∗ 𝑆 (𝑝𝑖, 𝑗))|||, (14) where 𝐷𝑆 (𝑝𝑖, 𝑗) and 𝐷∗ 𝑆 (𝑝𝑖, 𝑗) represent the predicted and ground truth (GT) segmentation scale at pixel 𝑗 within the patch 𝑝𝑖, respectively. 𝜇(⋅) denotes the median of the depths, 𝑈 is the number of semantic seg- mentation patches, and 𝑉 represents the number of valid pixels in each patch. However, predicting the median of the metric depth for each se- mantic segment can cause the ﬁnal prediction to be generally smaller than the ground truth. To address this issue, we set a scaling factor 𝛾 to ensure the predicted segmentation scale values larger than the median depth of each semantic segment. In our experiments, 𝛾 is set to 0. 5. We also adopt the multi-scale supervision strategy from BinsFormer [10], applying the SPS and ARD modules at each feature scale to provide auxiliary supervision. Finally, the total loss is deﬁned as: 𝑡𝑜𝑡𝑎𝑙 = 3∑ 𝑙 ( 𝑤𝑙 𝐿∑ 𝑛 ( 𝛼𝑙,𝑛 𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛 𝐶𝐸 + 𝛿𝑙,𝑛 𝑆𝑃 𝑆𝐴 )) , (15) where 𝐿 represents the number of stacked masked transformer layers at each feature scale. 𝑤𝑙 is the scale weight, which is set to 1 23−𝑙 ."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p2_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 2,
+      "score": 0.7301877737045288,
+      "text": "Estimating depth “in the wild” refers to methods that are successful across a wide range of (possibly unfamiliar) set- tings, a particularly challenging task. It has been addressed by constructing large and diverse depth datasets and design- ing algorithms to handle that diversity. DIW [8] was perhaps the earliest work to introduce an uncontrolled dataset and to predict relative (ordinal) depth for it. OASIS [ 9] intro- duced relative depth and normals to better generalize across scenes. However, relative depth predictions (depth ordering) are of limited use for many downstream tasks, which has led several authors to consider affine-invariant depth. In that setting, depth is estimated up to an unknown (global) offset and scale. It offers a viable compromise between the ordinal and metric cases: on the one hand, it can handle general scenes consisting of unfamiliar objects; on the other hand, depth differences between different objects or scene parts are still geometrically meaningful relative to each other."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p2_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 2,
+      "score": 0.7301877737045288,
+      "text": "Estimating depth “in the wild” refers to methods that are successful across a wide range of (possibly unfamiliar) set- tings, a particularly challenging task. It has been addressed by constructing large and diverse depth datasets and design- ing algorithms to handle that diversity. DIW [8] was perhaps the earliest work to introduce an uncontrolled dataset and to predict relative (ordinal) depth for it. OASIS [ 9] intro- duced relative depth and normals to better generalize across scenes. However, relative depth predictions (depth ordering) are of limited use for many downstream tasks, which has led several authors to consider affine-invariant depth. In that setting, depth is estimated up to an unknown (global) offset and scale. It offers a viable compromise between the ordinal and metric cases: on the one hand, it can handle general scenes consisting of unfamiliar objects; on the other hand, depth differences between different objects or scene parts are still geometrically meaningful relative to each other."
+    },
+    {
+      "id": "semantic_chunk::ACD_p2_sc3",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.7297687530517578,
+      "text": "• We propose the multi-granularity knowledge distillation strategy (MKD) to achieve the complete transfer and alignment of capabilities from the teacher model to stu- dent model. In addition, we introduce the ordinal guid- ance distillation mechanism (OGD) to heartens the net- work to focus on uncertain regions through differential ranking. • Extensive experiments demonstrate the effectiveness of ACDepth, surpassing md4all-DD by 2. 50% for night scene and 2. 61% for rainy scene on the nuScenes dataset in terms of absRel metric. 2 Related Work 2. 1 Monocular Depth Estimation Before the advent of deep neural networks, traditional depth estimation methods primarily rely on handcrafted priors to explore the limited physical and geometric properties. Deep learning methods [Sun et al., 2012; Liu et al., 2015b; Liu et al., 2015a ] have emerged as a preferable alternative due to their ability to learn generalizable priors from large- scale data, such as depth maps from LiDAR or RGB-D cam- eras."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p4_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 4,
+      "score": 0.728779673576355,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 4 allows imposing a knowledge distillation loss on the denoised depth. The knowledge distillation paradigm distills knowledge from the teacher model to a student model, which is beneficial to improve the results [11]. To mitigate the adverse impact of depth error in the pseudo ground-truth, we apply a multi-view check filter [25] to filter out erroneous depth. The knowledge distillation loss is thus defined as LKD = X p Φ(p) ⊙ \u0000 Dt (p) − Dpseudo (p) \u0001 , (10) where Φ(p) stands for the multi-view check filter, ⊙ denotes the element-wise multiplication. The core principle of multi- view check is similar to that of the novel view synthesis. We draw on Eq. 5 to get each projected point pt→s in the source view and acquire a warped depth map, Ds→t(p) = Ds pt→s , (11) where Ds stands for the depth map of source frame. Similar to the projection procedure above, we leverage Ds to perform a reprojection procedure to acquire each reprojected 2D point eps→t and depth map eD s→t (p) in the target view."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p10_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.7283672094345093,
+      "text": "Model components: To verify the eﬀectiveness of various compo- nents of our model, we decompose our method into ﬁve diﬀerent con- ﬁgurations. Notably, the SQGA module is indispensable as our baseline structure, so all conﬁgurations are modiﬁed based on SQGA. Model [a] is established by directly appending a continuous regression head subse- quent to the SQGA. Model [b] incorporates the ARD module, discretizes the depth range into bins, and then performs hybrid regression, replac- ing the continuous regression head. Model [c] further integrates the SPS module to predict segmentation scale. Subsequently, Models [d] and [e] incorporate the SMG module on the basis of Models [b] and [c], respectively, to generate semantic segmentation attention masks that guide query interaction. The experimental results are shown in Table 7. Our results suggest that, in comparison to the traditional con- tinuous regression model [a], the discretization of depth and adoption Fig. 14. Visualization of raw depth annotations, reﬁned depth annotations and corresponding prediction maps."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.7276284694671631,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT DomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ (HB→HB)6. 1204 0. 0903 0. 0233 0. 1353 13. 4847 3. 3579 0. 9489 0. 9812 0. 9908(HB→LED)17. 3113 0. 4479 0. 1955 0. 6817 52. 5132 20. 0263 0. 4699 0. 6652 0. 7658 (LED→LED)5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927(LED→HB)8. 05370. 15110. 0338 0. 2026 20. 11208. 19990. 9158 0. 9626 0. 9796 Table 4:Encoder-decoder performance across domains of NSDD. We denote (training domain→testing domain). The model trained on (HB) fails entirely when tested on (LED). Yet, (LED)-trained models are able to estimate depth when tested on the (HB) domain. Pattern# Images RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ HB Zero-shot19. 058 0. 430 0. 243 0. 587 27. 004 8. 134 0. 086 0. 186 0. 785LED 18. 023 0. 420 0. 232 0. 563 25. 500 7. 779 0. 096 0. 214 0. 867 HB 100 6. 499 0. 075 0. 033 0. 133 12. 894 0. 992 0. 9290. 977 0. 991LED 6. 198 0. 073 0. 032 0. 131 12. 182 0. 898 0. 933 0. 9770. 991 HB 500 5. 447 0. 0580. 0250. 112 10. 629 0. 688 0. 950 0. 9850. 995LED 5. 225 0. 057 0. 025 0. 108 10. 038 0. 648 0. 953 0. 986 0. 995 HB 1000 5. 124 0."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.7262682914733887,
+      "text": "Copyrights for third-party components of this work must be honored. For all other uses, contact the owner/author(s). MM ’25, Dublin, Ireland. © 2025 Copyright held by the owner/author(s). ACM ISBN 979-8-4007-2035-2/2025/10 https://doi.org/10. 1145/3746027. 3754871 Keywords Low-Light Monocular Depth Estimation, Parameter-Efficient Fine- Tuning, Foundation Model ACM Reference Format: Longjian Zeng, Zunjie Zhu, Rongfeng Lu, Ming Lu, Bolun Zheng, Cheng- gang Yan, and Anke Xue. 2025. DepthDark: Robust Monocular Depth Esti- mation for Low-Light Environments. In Proceedings of the 33rd ACM Inter- national Conference on Multimedia (MM ’25), October 27–31, 2025, Dublin, Ireland. ACM, New York, NY, USA, 10 pages. https://doi.org/10. 1145/3746027. 3754871 1 Introduction In recent years, with the rapid advancement of convolutional neural networks [14] and vision transformers [9], the fields of computer vision and natural language processing are undergoing a signifi- cant revolution."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc3",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7252346277236938,
+      "text": "The proposed objective minimizes the distances be- tween each pair of scaled and shifted predictions ( ˆd′i, ˆd′j), where ˆd′ = ˆd × ˆs + ˆt. In each optimization step, we cal- culate the merged depth map m by the taking pixel-wise median m(x, y) = median( ˆd′1(x, y), . ,ˆd′N (x, y)). An extra regularization term R = |min(m)| + |1 − max(m)|, is added to prevent collapse to the trivial solution and enforce the unit scale of m. Thus, the objective function can be written as follows: mins1,...,sN t1,...,tN vuut 1 b N −1X i=1 NX j=i+1 ∥ ˆd′i − ˆd′j∥2 2 + λR ! (4) where the binominal coefficient b = \u0000N 2 \u0001 represents the number of possible combinations of image pairs from N im- ages. After the iterative optimization for spatial alignment, the merged depth m is taken as our ensembled prediction. Note that this ensembling step requires no ground truth for aligning independent predictions. This scheme enables a flexible trade-off between computation efficiency and pre- diction quality by choosing N accordingly. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc3",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7252346277236938,
+      "text": "The proposed objective minimizes the distances be- tween each pair of scaled and shifted predictions ( ˆd′i, ˆd′j), where ˆd′ = ˆd × ˆs + ˆt. In each optimization step, we cal- culate the merged depth map m by the taking pixel-wise median m(x, y) = median( ˆd′1(x, y), . ,ˆd′N (x, y)). An extra regularization term R = |min(m)| + |1 − max(m)|, is added to prevent collapse to the trivial solution and enforce the unit scale of m. Thus, the objective function can be written as follows: mins1,...,sN t1,...,tN vuut 1 b N −1X i=1 NX j=i+1 ∥ ˆd′i − ˆd′j∥2 2 + λR ! (4) where the binominal coefficient b = \u0000N 2 \u0001 represents the number of possible combinations of image pairs from N im- ages. After the iterative optimization for spatial alignment, the merged depth m is taken as our ensembled prediction. Note that this ensembling step requires no ground truth for aligning independent predictions. This scheme enables a flexible trade-off between computation efficiency and pre- diction quality by choosing N accordingly. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::dav2_p6_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 6,
+      "score": 0.7251120805740356,
+      "text": "On pseudo-labeled images, we follow V1 to add an additional feature alignment loss to preserve informative semantics from pre-trained DINOv2 encoders. 2To offer capablemetric depth models, we further fine-tune our basic models with metric depth (Section 7. 3). 6"
+    },
+    {
+      "id": "semantic_chunk::ACD_p2_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.7242234945297241,
+      "text": "To address these issues, we propose to optimize the data generation and domain adaptation learning, and construct the degradation-agnostic robust monocular depth estimation method (ACDepth). Speciﬁcally, we fully explore the po- tential generation capability of diffusion model and employ LoRA adapters to encourage the network to generalize to diverse scene generation. Meanwhile, we integrate circular consistency loss and adversarial training to guarantee the nat- uralness and consistency of translated images. To achieve full transfer and alignment of capabilities, we propose the multi- granularity knowledge distillation strategy (MKD), which borrows priors from the teacher model to provide comprehen- sive supervision and guidance to the student model. Besides the commonly used feature and result distillation learning, we pioneer the ordinal guidance distillation mechanism (OGD). In summary, the contributions are as follows: • We propose a practical multi-tuple degradation dataset generation scheme, and develop a novel robust monocu- lar depth estimation framework, termed as ACDepth for high-quality depth estimation under adverse weather."
+    },
+    {
+      "id": "semantic_chunk::dav2_p14_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 14,
+      "score": 0.7228667140007019,
+      "text": "3, 7, 8, 9, 10, 18, 19, 20, 22 [71] Kihyuk Sohn, David Berthelot, Nicholas Carlini, Zizhao Zhang, Han Zhang, Colin A Raffel, Ekin Dogus Cubuk, Alexey Kurakin, and Chun-Liang Li. Fixmatch: Simplifying semi- supervised learning with consistency and confidence. In NeurIPS, 2020. 10 [72] Jaime Spencer, Fabio Tosi, Matteo Poggi, Ripudaman Singh Arora, Chris Russell, Simon Hadfield, Richard Bowden, GuangYuan Zhou, ZhengXin Li, Qiang Rao, et al. The third monocular depth estimation challenge. arXiv:2404. 16831, 2024. 2, 6 [73] Rupesh K Srivastava, Klaus Greff, and Jürgen Schmidhuber. Training very deep networks. In NeurIPS, 2015. 10 [74] Robin Strudel, Ricardo Garcia, Ivan Laptev, and Cordelia Schmid. Segmenter: Transformer for semantic segmentation. In ICCV, 2021. 18 [75] Yonglong Tian, Lijie Fan, Kaifeng Chen, Dina Katabi, Dilip Krishnan, and Phillip Isola. Learning vision from models rivals learning vision from data. In CVPR, 2024. 5, 20 [76] Igor Vasiljevic, Nick Kolkin, Shanyi Zhang, Ruotian Luo, Haochen Wang, Falcon Z Dai, Andrea F Daniele, Mohammadreza Mostajabi, Steven Basart, Matthew R Walter, et al. Diode: A dense indoor and outdoor depth dataset. arXiv:1908. 00463, 2019."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p13_sc5",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.7226474285125732,
+      "text": "Snavely, MegaDepth: learning single-view depth prediction from internet photos, in: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2018, pp. 2041–2050. [21] R. Ranftl, K. Lasinger, D. Hafner, K. Schindler, V. Koltun, Towards robust monocular depth estimation: mixing datasets for zero-shot cross-dataset transfer, IEEE Trans. Pattern Anal. Mach. Intell. 44 (3) (2022) 1623–1637. [22] P.-Y. Chen, A. H. Liu, Y.-C. Liu, Y.-C. F. Wang, Towards scene understanding: unsu- pervised monocular depth estimation with semantic-aware representation, in: Pro- ceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2019, pp. 2624–2632. [23] V. Guizilini, R. Hou, J. Li, R. Ambrus, A. Gaidon, Semantically-guided representa- tion learning for self-supervised monocular depth, in: International Conference on Learning Representations, 2020. [24] Z. Zhang, Z. Cui, C. Xu, Z. Jie, X. Li, J. Yang, Joint task-recursive learning for seman- tic segmentation and depth estimation, in: Computer Vision - ECCV 2018, 2018, pp. 238–255. [25] X. Xu, H. Zhao, V. Vineet, S.-N. Lim, A."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7219529151916504,
+      "text": "For example, AdaBins [9] ﬁrst adaptively divided the image’s depth range into discrete bins and predicted pixel probabilities for each bin. Building on this, LocalBins [18] predicted depth distributions within local pixels rather than global ranges to divide bins. BinsFormer [10] generated discrete bins with a multi-scale supervision strategy. Despite excellent performance, current MDE methods are limited by scene scale diﬀerences, facing challenges in handling varying depth ranges. Relative depth estimation. In contrast to MDE, Relative Depth Es- timation (RDE) methods focus solely on the relative depth relationships between pixels, unaﬀected by diﬀerences in scene scales, thus easily generalizing to any scene. Zoran [6] ﬁrst utilized CNN to estimate the ordinal depth predictions for intrinsic image decomposition. Zhou [19] proposed a structure-guided ranking loss for depth ordering of all pix- els. Thereafter, RDE methods primarily focused on training with larger- scale depth data to achieve more generalized and versatile models. For instance, Magedepth [20] was the ﬁrst to demonstrate that training on a diverse dataset could extend monocular depth prediction to other do- mains."
+    },
+    {
+      "id": "semantic_chunk::LED_p2_sc1",
+      "source": "data\\LED.pdf",
+      "page": 2,
+      "score": 0.7212324738502502,
+      "text": "While foundation models [8, 23, 48, 49] show great improvement for depth estimation on multiple domains, they are still not robust to nighttime images that are long-tail in the training data distribution. The availability of labeled data necessary for training high-capacity deep neural networks is an additional challenge. For the task of depth estimation, some methods rely on supervised learning [1, 4, 24, 27], but most use self-supervised methods [5, 19, 20, 35, 38, 47, 50, 51, 52] since obtaining ground truth depth information is expensive. While dedicated approaches for specific conditions have emerged in recent years [28, 40, 42, 47, 51], they still only partially mitigate these issues. To the best of our knowledge, they remain limited to self-supervised strategies, due to the lack of publicly available, large-scale annotated datasets suitable for nighttime depth estimation. To address this gap, this paper releases a synthetic nighttime dataset annotated with dense depth maps, along with additional labels."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p4_sc2",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.7211556434631348,
+      "text": "We first interpolate a random pair of unlabeled images ua and ub spatially: uab = ua ⊙ M + ub ⊙ (1 − M ), (5) where M is a binary mask with a rectangle region set as 1. The unlabeled loss Lu is obtained by first computing affine-invariant losses in valid regions defined by M and 1 − M, respectively: LM u = ρ \u0000 S(uab) ⊙ M, T(ua) ⊙ M \u0001 , (6) L1−M u = ρ \u0000 S(uab) ⊙ (1 − M ), T(ub) ⊙ (1 − M ) \u0001 , (7) where we omit the P and pixel subscript i for simplicity. Then we aggregate the two losses via weighted averaging: Lu = P M HW LM u + P(1 − M ) HW L1−M u . (8) We use CutMix with 50% probability. The unlabeled images for CutMix are already strongly distorted in color, but the unlabeled images fed into the teacher model T for pseudo labeling are clean, without any distortions. 3. 3. Semantic-Assisted Perception There exist some works [9, 20, 27, 71] improving depth es- timation with an auxiliary semantic segmentation task. We believe that arming our depth estimation model with such high-level semantic-related information is beneficial."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p11_sc0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.7207304239273071,
+      "text": "[64] Tobias Weyand, Andre Araujo, Bingyi Cao, and Jack Sim. Google landmarks dataset v2-a large-scale benchmark for instance-level recognition and retrieval. In CVPR, 2020. 3 [65] Diana Wofk, Fangchang Ma, Tien-Ju Yang, Sertac Karaman, and Vivienne Sze. Fastdepth: Fast monocular depth estima- tion on embedded systems. In ICRA, 2019. 1 [66] Ke Xian, Chunhua Shen, Zhiguo Cao, Hao Lu, Yang Xiao, Ruibo Li, and Zhenbo Luo. Monocular relative depth per- ception with web stereo data supervision. In CVPR, 2018. 2, 3 [67] Ke Xian, Jianming Zhang, Oliver Wang, Long Mai, Zhe Lin, and Zhiguo Cao. Structure-guided ranking loss for single image depth prediction. In CVPR, 2020. 2, 3, 7 [68] Tete Xiao, Yingcheng Liu, Bolei Zhou, Yuning Jiang, and Jian Sun. Unified perceptual parsing for scene understanding. In ECCV, 2018. 7 [69] Enze Xie, Wenhai Wang, Zhiding Yu, Anima Anandkumar, Jose M Alvarez, and Ping Luo. Segformer: Simple and efficient design for semantic segmentation with transformers. In NeurIPS, 2021. 3, 7 [70] Mengde Xu, Zheng Zhang, Han Hu, Jianfeng Wang, Lijuan Wang, Fangyun Wei, Xiang Bai, and Zicheng Liu. End-to-end semi-supervised object detection with soft teacher. In ICCV, 2021."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p3_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 3,
+      "score": 0.7206848859786987,
+      "text": "In contrast, our wavelet- based method intrinsically provides sparsity in outputs and intermediate activations, and the wavelet predictions coin- cide with edges in the depth map, knowledge of which has direct applications e.g. in augmented reality [53, 29]. While most works focus on classiﬁcation, channel prun- ing has also been successfully applied to depth estima- tion in the aforementioned FastDepth [65], which uses Net- Adapt [68] to perform channel pruning. Sparse inference. Another recent work considers spa- tially sparse inference in image-to-image translation tasks. PointRend [35] treats semantic segmentation as a render- ing process, where a high-resolution estimate is obtained from a low-resolution one through a cascade of upsampling and sparse reﬁnement operations. The location of these sparse rendering operations is chosen based on an uncer- tainty measure of the classiﬁcation method. However, while they demonstrate the efﬁciency and applicability of their method to classiﬁcation tasks, their method cannot directly be applied to regression tasks because of the requirement to evaluate an uncertainty heuristic for all pixel locations."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.720444917678833,
+      "text": "This is because the segmentation scale deﬁnes indepen- dent modeling spaces for each semantic segment, allowing the model to predict the relative depth relationships only within the corresponding segment, without the need to additionally recover them between dif- ferent semantic segments. For instance, in columns 3 and 4 of Fig. 16, while the metric depth values of wheel/pedestrian-foot pixels and adja- cent road-surface pixels are similar, the presence of segmentation scale causes them to diﬀer in the predicted semantic-aware relative depth values. The number of bin queries: As indicated in Table 13, we investi- gate the impact of varying the number of bin queries on performance. The results demonstrate that optimal performance is achieved with 128 queries. We posit that a scarcity of queries makes it challenging to cover all depth intervals within a scene, while an excess of queries increases the complexity of the model’s learning process. Additionally, for seg- mentation queries, we follow the conclusion from Mask2Former [28] and set the number of segmentation queries to 20, aligning with the number of categories present in the Cityscapes dataset. 5."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p18_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 18,
+      "score": 0.7193752527236938,
+      "text": "To address this issue, we introduce a sky loss: Lsky =η sky ·L 1(D, Dmax ·1 D, Msky),(19) where D is the predicted depth, Dmax is the maximum depth value, 1D is a tensor of ones with the same shape as D, and Msky is the sky mask derived from the semantic segmentation. ηsky is a weighting factor set to 0. 1. Note that the sky loss does not add extra details. As shown in Fig. 7 (b-2) and (b-3), the original details are already captured by the model; the sky loss merely sets the sky depth to infinity. 18"
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7193447947502136,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9 Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderLB 14. 199 0. 187 0. 072 0. 292 28. 938 5. 620 0. 772 0. 909 0. 956LED 0. 5°11. 089 0. 119 0. 050 0. 213 21. 251 2. 304 0. 864 0. 950 0. 977LED 0. 25°8. 6950. 1090. 040 0. 190 18. 635 2. 1280. 899 0. 9630. 984LED 0. 125°10. 1540. 096 0. 040 0. 19018. 862 2. 1320. 907 0. 969 0. 984 DepthF ormerLB 8. 777 0. 138 0. 050 0. 186 17. 170 3. 365 0. 864 0. 957 0. 983LED 0. 5°6. 810 0. 101 0. 041 0. 152 14. 380 1. 376 0. 890 0. 969 0. 989LED 0. 25°5. 6210. 0820. 0300. 126 11. 7351. 1630. 923 0. 978 0. 992LED 0. 125°5. 7270. 076 0. 030 0. 116 10. 7541. 2610. 940 0. 987 0. 995 DepthAnythingV2 - 1000 training imagesLB 7. 637 0. 104 0. 044 0. 160 14. 617 1. 401 0. 891 0. 972 0. 990LED 0. 5°7. 017 0. 109 0. 047 0. 161 14. 044 1. 260 0. 877 0. 9697 0. 989LED 0. 25°6. 304 0. 102 0. 044 0. 146 12. 300 1. 079 0. 885 0. 9730. 993LED 0. 125°5. 785 0. 082 0. 037 0. 126 10. 673 0. 840 0. 921 0. 9810. 992 Table 6:Performance comparison on real-world data using various pattern resolutions."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p10_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 10,
+      "score": 0.7184538245201111,
+      "text": "Objects365: A large-scale, high-quality dataset for object detection. InICCV, 2019. 3 [53] Shuwei Shao, Zhongcai Pei, Weihai Chen, Xingming Wu, and Zhengguo Li. Nddepth: Normal-distance assisted monocular depth estimation. In ICCV, 2023. 2, 6 [54] Nathan Silberman, Derek Hoiem, Pushmeet Kohli, and Rob Fergus. Indoor segmentation and support inference from rgbd images. In ECCV, 2012. 1, 2, 3, 5, 6, 7 [55] Kihyuk Sohn, David Berthelot, Nicholas Carlini, Zizhao Zhang, Han Zhang, Colin A Raffel, Ekin Dogus Cubuk, Alexey Kurakin, and Chun-Liang Li. Fixmatch: Simplifying semi-supervised learning with consistency and confidence. In NeurIPS, 2020. 2, 4 [56] Shuran Song, Samuel P Lichtenberg, and Jianxiong Xiao. Sun rgb-d: A rgb-d scene understanding benchmark suite. In CVPR, 2015. 6, 7 [57] Robin Strudel, Ricardo Garcia, Ivan Laptev, and Cordelia Schmid. Segmenter: Transformer for semantic segmentation. In ICCV, 2021. 7 [58] Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Mar- tinet, Marie-Anne Lachaux, Timoth ´ee Lacroix, Baptiste Rozi`ere, Naman Goyal, Eric Hambro, Faisal Azhar, et al. Llama: Open and efficient foundation language models. arXiv:2302. 13971, 2023."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p9_sc0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 9,
+      "score": 0.7177655100822449,
+      "text": "References [1] Manuel L´opez Antequera, Pau Gargallo, Markus Hofinger, Samuel Rota Bul `o, Yubin Kuang, and Peter Kontschieder. Mapillary planet-scale depth dataset. In ECCV, 2020. 7 [2] Hangbo Bao, Li Dong, Songhao Piao, and Furu Wei. Beit: Bert pre-training of image transformers. In ICLR, 2022. 7 [3] Shariq Farooq Bhat, Ibraheem Alhashim, and Peter Wonka. Adabins: Depth estimation using adaptive bins. In CVPR, 2021. 2, 6 [4] Shariq Farooq Bhat, Reiner Birkl, Diana Wofk, Peter Wonka, and Matthias M¨uller. Zoedepth: Zero-shot transfer by com- bining relative and metric depth. arXiv:2302. 12288, 2023. 2, 6, 7 [5] Reiner Birkl, Diana Wofk, and Matthias M ¨uller. Midas v3. 1–a model zoo for robust monocular relative depth estimation. arXiv:2307. 14460, 2023. 2, 3, 5, 7, 8 [6] Rishi Bommasani, Drew A Hudson, Ehsan Adeli, Russ Altman, Simran Arora, Sydney von Arx, Michael S Bern- stein, Jeannette Bohg, Antoine Bosselut, Emma Brunskill, et al. On the opportunities and risks of foundation models. arXiv:2108. 07258, 2021. 1 [7] Daniel J Butler, Jonas Wulff, Garrett B Stanley, and Michael J Black. A naturalistic open source movie for optical flow evaluation. In ECCV, 2012."
+    },
+    {
+      "id": "semantic_chunk::dav2_p11_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 11,
+      "score": 0.717720627784729,
+      "text": "References [1] Manuel López Antequera, Pau Gargallo, Markus Hofinger, Samuel Rota Bulò, Yubin Kuang, and Peter Kontschieder. Mapillary planet-scale depth dataset. In ECCV, 2020. 18 [2] Jimmy Ba and Rich Caruana. Do deep nets really need to be deep? In NeurIPS, 2014. 10 [3] Mohamed El Banani, Amit Raj, Kevis-Kokitsi Maninis, Abhishek Kar, Yuanzhen Li, Michael Rubinstein, Deqing Sun, Leonidas Guibas, Justin Johnson, and Varun Jampani. Probing the 3d awareness of visual foundation models. In CVPR, 2024. 8, 20 [4] Hangbo Bao, Li Dong, Songhao Piao, and Furu Wei. Beit: Bert pre-training of image transformers. In ICLR, 2022. 2, 5, 18, 20 [5] Shariq Farooq Bhat, Ibraheem Alhashim, and Peter Wonka. Adabins: Depth estimation using adaptive bins. In CVPR, 2021. 9, 10 [6] Shariq Farooq Bhat, Reiner Birkl, Diana Wofk, Peter Wonka, and Matthias Müller. Zoedepth: Zero-shot transfer by combining relative and metric depth. arXiv:2302. 12288, 2023. 2, 9, 26 [7] Reiner Birkl, Diana Wofk, and Matthias Müller. Midas v3. 1–a model zoo for robust monocular relative depth estimation. arXiv:2307. 14460, 2023."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc3",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.7175877094268799,
+      "text": "We define N sub-intervals be- tween dmin and dmax, where each interval has a length of L = dmax−dmin N , with center bn = dmin + L(n + 1 2 ) for interval n. Using two sigmoid functions σ to model the ker- nel function K(x) = σ(x)σ(−x), the probability of a depth map D falling within interval k is P (n) = 1 HW HWX x=1 [σ( D(x) − bn + L 2 a ) − σ( D(x) − bn − L 2 a )], (12) where P is the differentiable probability function and a is a bandwidth factor. Finally, the Distday, Distadv are consist of Pday, Padv: Distday = {bn, Pday(n)}N n=1, (13) Distadv = {bn, Padv(n)}N n=1. (14) Noted that Distday is calculated among the whole day- time training set instead of one sample. The objective is to minimize the distribution distances betweenDistday and Distadv by K-L divergence: LKL dis = NX i=1 Padv(i) · log Padv(i) Pday(i) . (15) Apart from Lcd and LKL dis , we also utilize Lcv and LT as in previous stage. Thus, the total objective functionLreal is Lreal = α1Lcd + α2LKL dis + α3Lcv + α4LT (16) With the designed learning procedure, our model can gradually fit better to multiple real conditions, rather than only learn from the synthetic conditions. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc4",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7174223065376282,
+      "text": "Since the official code for TDDC is not publicly available, we use the experimental results reported in their paper. Additionally, we attempt to reproduce TDDC’s approach and provide the general (G) version results for each DA method to facilitate further com- parison. Our final experiments indicate that the G-version results are largely consistent with those reported in TDDC. For a more comprehensive comparison, we further compare our experimental results with state-of-the-art methods, including Depth Anything, Depth Anything V2, and TDDC. Evaluations on both nuScenes-Night and RobotCar-Night datasets demonstrate that our method exhibits superior robustness in low-light scenarios. 4. 3 Comparison with other methods. 4. 3. 1 Quantitative Results. We performed a quantitative evalua- tion of DepthDark and compared it with various state-of-the-art methods. As shown in Tab. 4. 1, the overall performance demon- strates that results on the nuScenes-Night dataset are generally worse compared to RobotCar-Night. This is primarily due to the strong corrective effects of the ISP in RobotCar-Night, which results in a cleaner image plane compared to nuScenes-Night."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.8167685270309448,
+      "text": "Based on this, we propose SSRDepth, a uniﬁed framework for SIDE that decomposes the task into segmentation scale predic- tion and semantic-aware relative depth estimation, while lever- aging semantic segmentation for feature guidance. This framework includes a Segmentation Proposal Scale module (SPS), an Adaptive Relative Depth (ARD) module, and a Segmentation Query Guided Aggre- gation module (SQGA). The SQGA module uses a new feature interaction method to aggregate features within semantic segments, guided by se- mantic masks from a Segmentation Mask Generator (SMG) at each scale. The SPS module employs segmentation queries we designed to predict segmentation scale, uses semantic constraints to predict pixel proba- bilities for semantic segments, applies scale alignment to obtain depth coeﬃcients, and weights these coeﬃcients by probabilities to produce segmentation scale. The ARD module employs bin queries we designed to predict semantic-aware relative depth, calculates the probability of pixels belonging to each bin, weights bin centers within normalized depth space to obtain relative depth.",
+      "estimated_tokens": 220
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.8143042325973511,
+      "text": "Contents lists available at ScienceDirect Pattern Recognition journal homepage: www.elsevier.com/locate/pr SSRDepth: Combining semantic segmentation and relative depth for monocular metric depth estimation Yuhang Zou, Xiaoming Chen, Zhangyan Zhao ∗, Chenghua Zhang, Haipeng Liu School of Transportation and Logistics Engineering, Wuhan University of Technology, Wuhan, 430063, Hubei, China a r t i c l e i n f o Keywords: Monocular depth estimation Semantic segment Relative depth Masked transformer a b s t r a c t Monocular depth estimation is a pivotal task in computer vision, aimed to predict a dense depth map from a single image. Existing methods can achieve satisfactory performance through carefully designed network architectures. However, they often ignore the semantic information of scene structures, leading to poor performance in the se- mantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular depth estimation method that leverages semantic segmentation to improve metric depth prediction.",
+      "estimated_tokens": 209
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.8045819997787476,
+      "text": "Finally, the semantic-aware rel- ative depth is multiplied by the segmentation scale to obtain the metric depth. In summary, our main contributions are as follows: • We propose a novel monocular depth estimation framework- SSRDepth, which decomposes metric depth into segmentation scale and semantic-aware relative depth. Ultimately, the multiplication of these two components yields accurate metric depth. • Our proposed SQGA module employs a new feature interaction pat- tern, combined with the binary masks of semantic segments gener- ated by our designed SMG, ensuring the eﬀectiveness of multi-scale semantic feature aggregation and the recovery of structural regular- ities within semantic segments. • Our proposed SPS module predicts segmentation scale with ex- plicit constraints, allowing the model to preserve sharp semantic boundaries. The ARD module predicts semantic-aware relative depth within a normalized depth space using a hybrid regression approach, providing the necessary foundation for the prediction of metric depth.",
+      "estimated_tokens": 189
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.7812261581420898,
+      "text": "Conclusion In this paper, we propose SSRDepth, a monocular depth estimation framework leverages semantic segmentation to improve metric depth prediction. The framework decomposes the metric depth estimation task into two parts: segmentation scale prediction through the Segmenta- tion Proposal Scale (SPS) module and semantic-aware relative depth estimation through the Adaptive Relative Depth (ARD) module. Addi- tionally, the framework includes the Segmentation Query Guided Ag- gregation (SQGA) module, which is designed to recover the structural information of local semantic segments. Our method excels not only in Pattern Recognition 171 (2026) 112279 12",
+      "estimated_tokens": 129
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc6",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7577755451202393,
+      "text": "For example, TRL [24] improved the predictive performance of both tasks by alternating between semantic and depth tasks in a temporal sequence. MTFormer [25] introduced a cross-task attention mechanism to maintain the performance of depth estimation while reducing spatial and temporal complexity. Recent methods high- lighted RDE’s generalization capabilities, using semantic knowledge to recover lost scale/shift in relative depth for better performance. For example, SDC-Depth[26] decomposed images into semantic segments, with independent depth heads predicting 0-1 range depth maps per seg- ment. ScaleDepth [27] implicitly combined scene structure and seman- tics to predict precise scales, building semantic constraints via gener- ated scene labels. In contrast, we explicitly construct a set of semantic segment planes with depth information and combine the depth relative relationships provided by RDE to accurately predict the metric depth. Pattern Recognition 171 (2026) 112279 2",
+      "estimated_tokens": 191
+    },
+    {
+      "id": "semantic_chunk::dav2_p6_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 6,
+      "score": 0.7251120805740356,
+      "text": "On pseudo-labeled images, we follow V1 to add an additional feature alignment loss to preserve informative semantics from pre-trained DINOv2 encoders. 2To offer capablemetric depth models, we further fine-tune our basic models with metric depth (Section 7. 3). 6",
+      "estimated_tokens": 61
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 999,
+    "compressed_context_tokens": 999,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 999,
+  "context_tokens": 999,
+  "prompt_token_estimate": 1405,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_ssrdepth_ard_module_mechanism",
+  "answer": "<think>\nThe question asks how the ARD module in SSRDepth predicts semantic-aware relative depth.\n\nFrom the source [1], I can find:\n\"The ARD module employs bin queries we designed to predict semantic-aware relative depth, calculates the probability of pixels belonging to each bin, weights bin centers within normalized depth space to obtain relative depth.\"\n\nThis is the direct answer from the source.\n</think>\n{\"answer\":\"ARD 模块使用设计的 bin queries 来预测 semantic-aware relative depth，计算像素属于每个 bin 的概率，并在归一化深度空间内对 bin 中心进行加权以获得相对深度。\",\"items\":[{\"name\":\"ARD 模块预测 semantic-aware relative depth 的方式\",\"description\":\"ARD 模块通过设计的 bin queries 预测 semantic-aware relative depth，计算像素属于每个 bin 的概率，对归一化深度空间中的 bin 中心进行加权，从而得到相对深度。\",\"citations\":[1]}],\"missing_information\":\"\"}",
+  "usage": {
+    "prompt_tokens": 1436,
+    "completion_tokens": 181,
+    "total_tokens": 1617,
+    "model": "MiniMax-M3"
+  }
+}

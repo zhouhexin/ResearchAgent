@@ -1,0 +1,398 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_ssrdepth_arc_ask_baseline_none_b1fb797051b4",
+  "dry_run": false,
+  "query": "SSRDepth 的整体架构包含哪些核心组件？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6190248727798462,
+      "text": "Y. Zou et al. Fig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module (SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module (ARD) that we propose. Additionally, we propose the segmentation proposal scale alignment loss (𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance. 3. The proposed method In this section, we ﬁrst introduce the overall architecture of SSRDepth (Section 3. 1). Then, we present the key components of SSRDepth: the Segmentation Query Guided Aggregation module (Section 3. 2), the Segmentation Proposal Scale module (Section 3. 3), and the Adaptive Relative Depth module (Section 3. 4). 3. 1. Framework overview As shown in Fig. 2, given an input image 𝐼 ∈ ℝ3×𝐻×𝑊 , we ﬁrst extract image features through the Image Encoder and then decode them into multi-scale features {𝐹𝑙}3 𝑙=1 and per-pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 employing the Pixel Decoder, where 𝐶 is the number of channels, and 𝐻 × 𝑊 is the resolution."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p8_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6126792430877686,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 8 ID SD PGD LKD MVC Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 1 0. 107 0. 787 4. 580 0. 182 0. 887 0. 963 0. 983 2 ✓ 0. 434 4. 630 11. 99 0. 579 0. 306 0. 568 0. 777 3 ✓ 0. 105 0. 757 4. 521 0. 181 0. 889 0. 964 0. 984 4 ✓ ✓ 0. 104 0. 741 4. 489 0. 180 0. 890 0. 964 0. 984 5 ✓ ✓ ✓ 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 TABLE IV ABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD: PSEUDO GROUND -TRUTH DIFFUSION ; MVC: MASKED VISUAL CONDITION MECHANISM . Inference step Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 2 1. 812 75. 600 30. 791 6. 160 0. 070 0. 141 0. 213 5 1. 503 58. 013 27. 140 5. 464 0. 125 0. 241 0. 340 10 0. 226 3. 730 9. 571 0. 754 0. 703 0. 878 0. 938 15 0. 822 28. 099 19. 232 2. 972 0. 357 0. 548 0. 653 20 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 25 0. 431 10. 382 12. 709 1. 206 0. 503 0. 723 0. 827 TABLE V ABLATION STUDY ON DIFFERENT INFERENCE STEPS . Fig. 7. Visualization of the denoising process involving 20 inference steps in total. E."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p15_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 15,
+      "score": 0.5853303670883179,
+      "text": "While channel pruning can, in practice, greatly reduce both complexity and memory footprint, it requires heavy hyper- parameter search that we therefore choose to leave for fu- ture work. 9. 4. Input resolution Finally, one important factor that makes FastDepth ef- ﬁcient is that it is trained with 224× 224 inputs, against C H W (a) C H W (b) Figure 9: Channel pruning (a) vs our sparse computation (b). Our sparse computation enabled by wavelets is complimentary with the channel pruning strategy to reduce the amount of computation, as both computation reduction methods operate in orthogonal dimen- sions. our 640× 480 input. While our method is best designed for higher-resolution regime where sparsity of wavelets is stronger, we still show that our method achieves decent re- sults even at low-resolution, and report our scores in Ta- ble 12."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.5852055549621582,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.5852055549621582,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.5817473530769348,
+      "text": "180 0. 808 0. 966 0. 989 WSGD[Vankadariet al., 2023] R d&n 640× 320 40 0. 123 0. 694 3. 957 0. 163 0. 835 0. 978 0. 995 DA ITDFA[Zhaoet al., 2022a] R d&n 640× 320 40 0. 156 0. 786 3. 971 0. 192 0. 778 0. 965 0. 992 ADDS[Liu et al., 2021]† R d&n 640× 320 40 0. 109 0. 584 3. 578 0. 153 0. 631 0. 908 0. 962 ADDS[Liu et al., 2021] R d&n 640× 320 40 0. 120 0. 778 4. 113 0. 172 0. 856 0. 967 0. 987 RNW[Wanget al., 2021] R d&n 640× 320 40 0. 156 0. 701 3. 838 0. 202 0. 768 0. 958 0. 991 G ITDFA[Zhaoet al., 2022a] N d&n 640× 320 40 0. 230 2. 018 6. 336 0. 281 0. 653 0. 875 0. 956 ADDS[Liu et al., 2021] N d&n 640× 320 40 0. 180 1. 441 5. 680 0. 232 0. 727 0. 930 0. 981 RNW[Wanget al., 2021] N d&n 640× 320 40 0. 271 3. 939 9. 204 0. 314 0. 661 0. 830 0. 927 MonoFormer[Baeet al., 2023] K 768 × 256 40 0. 138 0. 665 3. 730 0. 181 0. 824 0. 971 0. 993 MonoViT[Zhaoet al., 2022b] K 768 × 256 40 0. 102 0. 500 3. 364 0. 147 0. 905 0. 977 0. 992 Ours K 768 × 256 40 0. 109 0. 477 3. 261 0. 151 0. 891 0. 978 0. 993 Table E. 1: Effective test on nuScenes-Day [Wang et al., 2021; Caesar et al., 2020] and Robotcar-Day [Liu et al., 2021; Maddern et al., 2017]."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.5805025100708008,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.5805025100708008,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.579210102558136,
+      "text": "996 [18] Monodepth2 Resnet18 \u0013 MS 192 × 640 0. 084 0. 494 3. 739 0. 132 0. 918 0. 983 0. 995 WaveletMonodepth Resnet18 \u0013 MS 192 × 640 0. 085 0. 497 3. 804 0. 134 0. 912 0. 982 0. 995 [63] Depth Hints \u0013 MS +SSGM 192 × 640 0. 087 0. 526 3. 776 0. 133 0. 915 0. 982 0. 995 WaveletMonodepth Resnet18 \u0013 MS +SSGM 192 × 640 0. 086 0. 497 3. 699 0. 131 0. 914 0. 983 0. 996 [18] Monodepth2 Resnet18 \u0013 S 320 × 1024 0. 082 0. 497 3. 637 0. 132 0. 924 0. 982 0. 994 WaveletMonodepth Resnet18 \u0013 S 320 × 1024 0. 080 0. 443 3. 544 0. 130 0. 919 0. 983 0. 995 WaveletMonodepth Resnet50 \u0013 S 320 × 1024 0. 076 0. 413 3. 434 0. 126 0. 926 0. 984 0. 995 [63] Depth Hints \u0013 SSGM 320 × 1024 0. 077 0. 404 3. 345 0. 119 0. 930 0. 988 0. 997 WaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0. 078 0. 397 3. 316 0. 121 0. 928 0. 987 0. 997 Depth Hints Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 363 3. 198 0. 114 0. 936 0. 989 0. 997 WaveletMonodepth Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 357 3. 170 0. 114 0. 936 0. 989 0. 997 Table 9: Quantitative results on the improved KITTI benchmark. We compare our method to our baselines on the KITTI [15] improved dataset introduced by [61], using the Eigen split."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p14_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.5767090320587158,
+      "text": "Method Train Abs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Zhou [76]† M 0. 176 1. 532 6. 129 0. 244 0. 758 0. 921 0. 971 Mahjourian [40] M 0. 134 0. 983 5. 501 0. 203 0. 827 0. 944 0. 981 GeoNet [71] M 0. 132 0. 994 5. 240 0. 193 0. 833 0. 953 0. 985 DDVO [62] M 0. 126 0. 866 4. 932 0. 185 0. 851 0. 958 0. 986 Ranjan [51] M 0. 123 0. 881 4. 834 0. 181 0. 860 0. 959 0. 985 EPC++ [38] M 0. 120 0. 789 4. 755 0. 177 0. 856 0. 961 0. 987 Monodepth2w/o pretrainingM 0. 112 0. 715 4. 502 0. 167 0. 876 0. 967 0. 990 Monodepth2 M 0. 090 0. 545 3. 942 0. 137 0. 914 0. 983 0. 995 Monodepth [15] S 0. 109 0. 811 4. 568 0. 166 0. 877 0. 967 0. 988 3net [50] (VGG) S 0. 119 0. 920 4. 824 0. 182 0. 856 0. 957 0. 985 3net [50] (ResNet 50) S 0. 102 0. 675 4. 293 0. 159 0. 881 0. 969 0. 991 SuperDepth [47] + pp S 0. 090 0. 542 3. 967 0. 144 0. 901 0. 976 0. 993 Monodepth2w/o pretrainingS 0. 110 0. 849 4. 580 0. 173 0. 875 0. 962 0. 986 Monodepth2 S 0. 085 0. 537 3. 868 0. 139 0. 912 0. 979 0. 993 Zhan FullNYU [73] D*MS 0. 130 1. 520 5. 184 0. 205 0. 859 0. 955 0. 981 EPC++ [38] MS 0. 123 0. 754 4. 453 0. 172 0. 863 0. 964 0. 989 Monodepth2w/o pretrainingMS 0. 107 0. 720 4. 345 0. 161 0. 890 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p14_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.5767090320587158,
+      "text": "Method Train Abs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Zhou [76]† M 0. 176 1. 532 6. 129 0. 244 0. 758 0. 921 0. 971 Mahjourian [40] M 0. 134 0. 983 5. 501 0. 203 0. 827 0. 944 0. 981 GeoNet [71] M 0. 132 0. 994 5. 240 0. 193 0. 833 0. 953 0. 985 DDVO [62] M 0. 126 0. 866 4. 932 0. 185 0. 851 0. 958 0. 986 Ranjan [51] M 0. 123 0. 881 4. 834 0. 181 0. 860 0. 959 0. 985 EPC++ [38] M 0. 120 0. 789 4. 755 0. 177 0. 856 0. 961 0. 987 Monodepth2w/o pretrainingM 0. 112 0. 715 4. 502 0. 167 0. 876 0. 967 0. 990 Monodepth2 M 0. 090 0. 545 3. 942 0. 137 0. 914 0. 983 0. 995 Monodepth [15] S 0. 109 0. 811 4. 568 0. 166 0. 877 0. 967 0. 988 3net [50] (VGG) S 0. 119 0. 920 4. 824 0. 182 0. 856 0. 957 0. 985 3net [50] (ResNet 50) S 0. 102 0. 675 4. 293 0. 159 0. 881 0. 969 0. 991 SuperDepth [47] + pp S 0. 090 0. 542 3. 967 0. 144 0. 901 0. 976 0. 993 Monodepth2w/o pretrainingS 0. 110 0. 849 4. 580 0. 173 0. 875 0. 962 0. 986 Monodepth2 S 0. 085 0. 537 3. 868 0. 139 0. 912 0. 979 0. 993 Zhan FullNYU [73] D*MS 0. 130 1. 520 5. 184 0. 205 0. 859 0. 955 0. 981 EPC++ [38] MS 0. 123 0. 754 4. 453 0. 172 0. 863 0. 964 0. 989 Monodepth2w/o pretrainingMS 0. 107 0. 720 4. 345 0. 161 0. 890 0."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.5760488510131836,
+      "text": "Cit. Method PP Data H ×W Abs Rel Sq Rel RMSE RMSE log δ<1. 25 δ<1. 252 δ<1. 253 [18] Monodepth2 Resnet18 \u0013 S 192×640 0. 108 0. 842 4. 891 0. 207 0. 866 0. 949 0. 976 WaveletMonodepthResnet18 \u0013 S 192×640 0. 110 0. 876 4. 916 0. 206 0. 864 0. 950 0. 976 Monodepth2 Resnet50 \u0013 S 192×640 0. 108 0. 802 4. 577 0. 185 0. 886 0. 963 0. 983 WaveletMonodepthResnet50 \u0013 S 192×640 0. 106 0. 824 4. 824 0. 205 0. 870 0. 949 0. 975 [63] Depth Hints \u0013 SSGM 192×640 0. 106 0. 780 4. 695 0. 193 0. 875 0. 958 0. 980 WaveletMonodepthResnet18 \u0013 SSGM 192×640 0. 106 0. 813 4. 693 0. 193 0. 876 0. 957 0. 980 Depth Hints Resnet50 \u0013 SSGM 192×640 0. 102 0. 762 4. 602 0. 189 0. 880 0. 960 0. 981 WaveletMonodepthResnet50 \u0013 SSGM 192×640 0. 105 0. 813 4. 625 0. 191 0. 879 0. 959 0. 981 [18] Monodepth2 Resnet18 \u0013 MS 192×640 0. 104 0. 786 4. 687 0. 194 0. 876 0. 958 0. 980 WaveletMonodepthResnet18 \u0013 MS 192×640 0. 109 0. 814 4. 808 0. 198 0. 868 0. 955 0. 980 [63] Depth Hints \u0013 MS +SSGM 192×640 0. 105 0. 769 4. 627 0. 189 0. 875 0. 959 0. 982 WaveletMonodepthResnet18 \u0013 MS +SSGM 192×640 0. 110 0. 840 4. 741 0. 195 0. 868 0. 956 0. 981 [18] Monodepth2 Resnet18 \u0013 S 320×1024 0. 105 0. 822 4. 692 0. 199 0. 876 0. 954 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.5744478106498718,
+      "text": "Method Train Abs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Eigen [9] D 0. 203 1. 548 6. 307 0. 282 0. 702 0. 890 0. 890Liu [36] D 0. 201 1. 584 6. 471 0. 273 0. 680 0. 898 0. 967Klodt [28] D*M 0. 166 1. 490 5. 998 - 0. 778 0. 919 0. 966AdaDepth [45] D* 0. 167 1. 257 5. 578 0. 237 0. 771 0. 922 0. 971Kuznietsov [30] DS 0. 113 0. 741 4. 621 0. 189 0. 862 0. 960 0. 986DVSO [68] D*S 0. 097 0. 734 4. 442 0. 187 0. 888 0. 958 0. 980SVSM FT [39] DS 0. 094 0. 626 4. 252 0. 177 0. 891 0. 965 0. 984Guo [16] DS 0. 096 0. 641 4. 095 0. 168 0. 892 0. 967 0. 986DORN [10] D 0. 072 0. 307 2. 727 0. 120 0. 932 0. 984 0. 994 Zhou [76]† M 0. 183 1. 595 6. 709 0. 270 0. 734 0. 902 0. 959Yang [70] M 0. 182 1. 481 6. 501 0. 267 0. 725 0. 906 0. 963Mahjourian [40] M 0. 163 1. 240 6. 220 0. 250 0. 762 0. 916 0. 968GeoNet [71]† M 0. 149 1. 060 5. 567 0. 226 0. 796 0. 935 0. 975DDVO [62] M 0. 151 1. 257 5. 583 0. 228 0. 810 0. 936 0. 974DF-Net [78] M 0. 150 1. 124 5. 507 0. 223 0. 806 0. 933 0. 973LEGO [69] M 0. 162 1. 352 6. 276 0. 252 - - -Ranjan [51] M 0. 148 1. 149 5. 464 0. 226 0. 815 0. 935 0. 973EPC++ [38] M 0. 141 1. 029 5. 350 0. 216 0. 816 0. 941 0. 976Struct2depth ‘(M)’ [5] M 0. 141 1."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.5744478106498718,
+      "text": "Method Train Abs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Eigen [9] D 0. 203 1. 548 6. 307 0. 282 0. 702 0. 890 0. 890Liu [36] D 0. 201 1. 584 6. 471 0. 273 0. 680 0. 898 0. 967Klodt [28] D*M 0. 166 1. 490 5. 998 - 0. 778 0. 919 0. 966AdaDepth [45] D* 0. 167 1. 257 5. 578 0. 237 0. 771 0. 922 0. 971Kuznietsov [30] DS 0. 113 0. 741 4. 621 0. 189 0. 862 0. 960 0. 986DVSO [68] D*S 0. 097 0. 734 4. 442 0. 187 0. 888 0. 958 0. 980SVSM FT [39] DS 0. 094 0. 626 4. 252 0. 177 0. 891 0. 965 0. 984Guo [16] DS 0. 096 0. 641 4. 095 0. 168 0. 892 0. 967 0. 986DORN [10] D 0. 072 0. 307 2. 727 0. 120 0. 932 0. 984 0. 994 Zhou [76]† M 0. 183 1. 595 6. 709 0. 270 0. 734 0. 902 0. 959Yang [70] M 0. 182 1. 481 6. 501 0. 267 0. 725 0. 906 0. 963Mahjourian [40] M 0. 163 1. 240 6. 220 0. 250 0. 762 0. 916 0. 968GeoNet [71]† M 0. 149 1. 060 5. 567 0. 226 0. 796 0. 935 0. 975DDVO [62] M 0. 151 1. 257 5. 583 0. 228 0. 810 0. 936 0. 974DF-Net [78] M 0. 150 1. 124 5. 507 0. 223 0. 806 0. 933 0. 973LEGO [69] M 0. 162 1. 352 6. 276 0. 252 - - -Ranjan [51] M 0. 148 1. 149 5. 464 0. 226 0. 815 0. 935 0. 973EPC++ [38] M 0. 141 1. 029 5. 350 0. 216 0. 816 0. 941 0. 976Struct2depth ‘(M)’ [5] M 0. 141 1."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5703619718551636,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Type Method Train on Train Res. Max depth ABS rel ↓ Sq rel ↓ RMSE ↓ RMSE log ↓ 𝛿 1 ↑ 𝛿 2 ↑ 𝛿 3 ↑ Test on nuScenes-Night DT MonoViT[51] N 𝑑 &𝑛 640 × 320 60 1. 726 93. 031 30. 321 2. 183 0. 143 0. 291 0. 437 WSGD[35] N 𝑑 &𝑛 640 × 320 60 0. 663 9. 573 15. 200 0. 755 0. 199 0. 388 0. 567 DA ITDFA[50] N 𝑑 &𝑛 640 × 320 60 0. 337 4. 511 10. 118 0. 403 0. 515 0. 767 0. 890 RNW[36] N 𝑑 &𝑛 640 × 320 60 0. 341 5. 516 11. 152 0. 406 0. 531 0. 789 0. 902 ADDS[24] N 𝑑 &𝑛 640 × 320 60 0. 299 4. 790 10. 372 0. 371 0. 620 0. 814 0. 907 G ITDFA[50] R 𝑑 &𝑛 640 × 320 60 0. 362 3. 760 10. 252 0. 441 0. 418 0. 702 0. 867 RNW[36] R 𝑑 &𝑛 640 × 320 60 0. 376 4. 732 11. 193 0. 506 0. 451 0. 712 0. 835 ADDS[24] R 𝑑 &𝑛 640 × 320 60 0. 322 4. 401 10. 584 0. 397 0. 527 0. 786 0. 892 MonoFormer[1] K 768 × 256 60 0. 307 3. 591 10. 162 0. 413 0. 521 0. 762 0. 872 TDDC[40] K 768 × 256 60 0. 259 3. 147 8. 547 0. 344 0. 641 0. 850 0. 928 Depth Anything[41] UD & LD - 60 0. 302 3. 051 9. 233 0. 321 0. 487 0. 784 0. 972 Depth Anything V2[42] RD & SD - 60 0. 272 2. 551 8. 576 0. 304 0. 518 0. 843 0. 971 Ours DepthDark H, VK - 60 0. 210 1. 910 7. 764 0."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.5680239796638489,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Method ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑ Test on nuScenes-Night Depth Anything V2 0. 272 2. 5518. 576 0. 304 0. 518 0. 843 0. 971 + Only LLDG 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914 + Only LLPEFT 0. 255 3. 050 7. 686 0. 302 0. 619 0. 836 0. 934 DepthDark 0. 210 1. 910 7. 764 0. 260 0. 630 0. 914 0. 976 Test on RobotCar-Night Depth Anything V2 0. 235 2. 474 6. 239 0. 268 0. 697 0. 868 0. 946 + Only LLDG 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972 + Only LLPEFT 0. 177 1. 584 6. 727 0. 245 0. 700 0. 895 0. 973 DepthDark 0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 2: Efficacy of Proposed Modules: Ablation studies on nuScenes-Night and RobotCar-Night demonstrate that each module enhances DepthDark’s performance, with combined use significantly improving robustness."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.5662569999694824,
+      "text": "Table 3. Comparison on the Unpaired Datasets. Red(Green) denotes the improvement(reduction) of performance. Note that all the models were trained on the LOLv2-synthetic dataset. Method DICM MEF LIME NPE VV A VGNIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑Restormer 3. 220 58. 525 3. 885 2. 8003. 660 56. 528 3. 215 2. 4153. 660 58. 461 3. 267 2. 4663. 470 61. 031 3. 781 2. 7353. 290 37. 919 3. 710 2. 2643. 460 54. 493 3. 572 2. 536Restormer with GT-mean loss (ours) 3. 180 58. 604 3. 913 2. 8213. 630 56. 522 3. 208 2. 4313. 630 58. 124 3. 380 2. 5213. 450 60. 971 3. 820 2. 7693. 300 38. 290 3. 712 2. 2553. 440(-)54. 502(+)3. 607(+)2. 559(+) MIRNET 3. 820 52. 467 3. 111 2. 3373. 670 47. 399 2. 742 2. 0564. 230 54. 837 2. 860 2. 0883. 470 58. 641 3. 285 2. 3743. 640 54. 566 2. 955 2. 1623. 770 53. 582 2. 991 2. 203MIRNET with GT-mean loss(ours)3. 200 53. 188 3. 295 2. 3753. 600 47. 611 2. 817 2. 0674. 330 55. 776 2. 747 2. 0583. 500 58. 718 3. 366 2. 4283. 710 54. 891 3. 120 2. 2153. 670(-)54. 037(+)3. 069(+)2. 229(+) Retinexformer 3. 230 57. 398 3. 800 2. 7403. 860 56. 170 3. 137 2. 3733."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.5662569999694824,
+      "text": "Table 3. Comparison on the Unpaired Datasets. Red(Green) denotes the improvement(reduction) of performance. Note that all the models were trained on the LOLv2-synthetic dataset. Method DICM MEF LIME NPE VV A VGNIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑Restormer 3. 220 58. 525 3. 885 2. 8003. 660 56. 528 3. 215 2. 4153. 660 58. 461 3. 267 2. 4663. 470 61. 031 3. 781 2. 7353. 290 37. 919 3. 710 2. 2643. 460 54. 493 3. 572 2. 536Restormer with GT-mean loss (ours) 3. 180 58. 604 3. 913 2. 8213. 630 56. 522 3. 208 2. 4313. 630 58. 124 3. 380 2. 5213. 450 60. 971 3. 820 2. 7693. 300 38. 290 3. 712 2. 2553. 440(-)54. 502(+)3. 607(+)2. 559(+) MIRNET 3. 820 52. 467 3. 111 2. 3373. 670 47. 399 2. 742 2. 0564. 230 54. 837 2. 860 2. 0883. 470 58. 641 3. 285 2. 3743. 640 54. 566 2. 955 2. 1623. 770 53. 582 2. 991 2. 203MIRNET with GT-mean loss(ours)3. 200 53. 188 3. 295 2. 3753. 600 47. 611 2. 817 2. 0674. 330 55. 776 2. 747 2. 0583. 500 58. 718 3. 366 2. 4283. 710 54. 891 3. 120 2. 2153. 670(-)54. 037(+)3. 069(+)2. 229(+) Retinexformer 3. 230 57. 398 3. 800 2. 7403. 860 56. 170 3. 137 2. 3733."
+    },
+    {
+      "id": "semantic_chunk::ACD_p7_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5652207136154175,
+      "text": "Trailing 0 added to the values from [V ankadari et al., 2023 ] and [Tosi et al., 2025 ]. Notation from Table 1. :\u0012\u0003'/\u000e)&& 2ULJLQ\u0003,PDJH :\u0012\u0003'/ :\u0012\u0003'/\u000e)&&\u000e2*' Figure 5: Visualization of ablation study on the distillation learning, feature consistency constraint and ordinal guidance distillation. DL OGD FCC day-clear night day-rain absRel RMSE absRel RMSE absRel RMSE N 0. 1333 6. 459 0. 2419 10. 922 0. 1572 7. 453 ✓ 0. 1335 6. 408 0. 1883 8. 398 0. 1404 7. 092 ✓✓ 0. 1325 6. 328 0. 1879 8. 353 0. 1414 7. 084 ✓✓ ✓ 0. 1355 6. 340 0. 1872 8. 125 0. 1377 6. 999 DL OGD FCC day night absRel RMSE sqRel absRel RMSE sqRel R 0. 1209 3. 335 0. 723 0. 3909 8. 227 3. 547 ✓ 0. 1123 3. 135 0. 631 0. 1233 3. 476 0. 720 ✓✓ 0. 1117 3. 115 0. 615 0. 1224 3. 458 0. 704 ✓✓ ✓ 0. 1107 3. 084 0. 591 0. 1206 3. 432 0. 690 Table 3: Ablation study of Design Components. N: nuScenes, R: RobotCar, DL: distillation learning, OGD: ordinal guidance distilla- tion, FCC: feature consistency constraint. provements in model performance, reducing the absRel met- ric by 0. 54% for day scene and 0. 73% for night scene on the RobotCar."
+    },
+    {
+      "id": "semantic_chunk::ACD_p4_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.5626009702682495,
+      "text": "Similar to the existing technol- ogy [Gasperini et al., 2023 ], the commonly used multi-scale feature distillation loss between the teacher model (F T(·)) and student model (F S(·)) is employed to facilitate the per- ception of the student model to the adverse weather. For the given normal inputei and the produced degraded sample (hc i ), the distillation loss function is deﬁned as: Ld = 1 S S∑ s=1 1 Ns Ns∑ j=1 ⏐⏐ ⏐F T (ei)js −FS (mi)js ⏐ ⏐ ⏐ FS (mi)js , (7) where S denotes the number of different scales and mi rep- resents a sample randomly selected from the mixed training set. Ordinal Guidance Distillation. 1) Uncertain Region Def- inition: We use the output from Depth Anything V2 model as the supervisory signal because it ensures accurate depth prediction while maintaining acceptable inference speed. D T and DS represent the inverse depth of the teacher model and student model, respectively, and Dv represents the output depth of Depth Anything V2. We ﬁrst identify the regions with signiﬁcant discrepancies between D T and DS for re- ﬁnement: ¯D = |DT −DS|, (8) where ¯D reﬂects the difference between the output of the teacher model and the student model."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.5610153079032898,
+      "text": "880 57. 262 3. 111 2. 3233. 380 60. 507 3. 673 2. 6992. 730 37. 513 3. 471 2. 1543. 420 53. 77 3. 438 2. 458Retinexformer with GT-mean loss (ours) 3. 210 57. 247 3. 805 2. 7733. 820 56. 633 3. 195 2. 4123. 840 57. 374 3. 273 2. 4233. 370 60. 682 3. 706 2. 7192. 770 37. 654 3. 517 2. 1663. 400(-)53. 918(+)3. 499(+)2. 498(+) SNR 6. 070 47. 025 3. 379 2. 5264. 270 48. 685 2. 531 1. 9436. 060 49. 216 2. 836 2. 1026. 470 46. 441 3. 445 2. 55111. 520 23. 186 3. 067 1. 9556. 880 42. 911 3. 052 2. 215SNR with GT-mean loss (ours) 6. 120 47. 430 3. 521 2. 5714. 260 48. 780 2. 571 1. 9576. 110 49. 008 2. 946 2. 1526. 460 46. 602 3. 580 2. 60511. 550 23. 853 3. 137 1. 9976. 900(+)43. 135(+)3. 151(+)2. 256(+) Uformer 3. 080 58. 084 2. 971 2. 1443. 720 56. 177 3. 177 2. 4033. 660 57. 698 2. 646 1. 9673. 400 61. 310 2. 938 2. 1312. 700 36. 235 2. 904 1. 8393. 310 53. 901 2. 927 2. 097Uformer with GT-mean loss (ours) 3. 120 58. 981 3. 067 2. 1803. 690 56. 641 3. 229 2. 4263. 640 58. 200 2. 712 1. 9733. 380 61. 704 2. 956 2. 1132. 700 36. 695 3. 001 1. 8483. 300(-)54. 444(+)2. 993(+)2. 108(+) LLformer 3. 260 56. 642 3. 832 2. 7883. 750 53. 335 2. 667 1. 9934. 010 55. 671 3. 040 2. 3433. 320 59."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.5610153079032898,
+      "text": "880 57. 262 3. 111 2. 3233. 380 60. 507 3. 673 2. 6992. 730 37. 513 3. 471 2. 1543. 420 53. 77 3. 438 2. 458Retinexformer with GT-mean loss (ours) 3. 210 57. 247 3. 805 2. 7733. 820 56. 633 3. 195 2. 4123. 840 57. 374 3. 273 2. 4233. 370 60. 682 3. 706 2. 7192. 770 37. 654 3. 517 2. 1663. 400(-)53. 918(+)3. 499(+)2. 498(+) SNR 6. 070 47. 025 3. 379 2. 5264. 270 48. 685 2. 531 1. 9436. 060 49. 216 2. 836 2. 1026. 470 46. 441 3. 445 2. 55111. 520 23. 186 3. 067 1. 9556. 880 42. 911 3. 052 2. 215SNR with GT-mean loss (ours) 6. 120 47. 430 3. 521 2. 5714. 260 48. 780 2. 571 1. 9576. 110 49. 008 2. 946 2. 1526. 460 46. 602 3. 580 2. 60511. 550 23. 853 3. 137 1. 9976. 900(+)43. 135(+)3. 151(+)2. 256(+) Uformer 3. 080 58. 084 2. 971 2. 1443. 720 56. 177 3. 177 2. 4033. 660 57. 698 2. 646 1. 9673. 400 61. 310 2. 938 2. 1312. 700 36. 235 2. 904 1. 8393. 310 53. 901 2. 927 2. 097Uformer with GT-mean loss (ours) 3. 120 58. 981 3. 067 2. 1803. 690 56. 641 3. 229 2. 4263. 640 58. 200 2. 712 1. 9733. 380 61. 704 2. 956 2. 1132. 700 36. 695 3. 001 1. 8483. 300(-)54. 444(+)2. 993(+)2. 108(+) LLformer 3. 260 56. 642 3. 832 2. 7883. 750 53. 335 2. 667 1. 9934. 010 55. 671 3. 040 2. 3433. 320 59."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.560814380645752,
+      "text": "To balance the weights of diﬀerent losses, we set 𝛼 = 10, 𝛽 = 2, and 𝛿 = 0. 1. Pattern Recognition 171 (2026) 112279 5"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p6_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.5599785447120667,
+      "text": "Type Method Train on Train Res. Max depth ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ δ1 ↑ δ2 ↑ δ3 ↑ Test on nuScenes-Night DT MonoViT[Zhaoet al., 2022b] Nd&n 640×320 60 1. 726 93. 031 30. 321 2. 183 0. 143 0. 291 0. 437 WSGD[Vankadariet al., 2023] Nd&n 640×320 60 0. 663 9. 573 15. 200 0. 755 0. 199 0. 388 0. 567 DA ITDFA[Zhaoet al., 2022a] Nd&n 640×320 60 0. 337 4. 511 10. 118 0. 403 0. 515 0. 767 0. 890 RNW[Wanget al., 2021]† N d&n 768×384 60 0. 315 3. 792 9. 641 0. 403 0. 508 0. 778 0. 896 RNW[Wanget al., 2021] Nd&n 640×320 60 0. 341 5. 516 11. 152 0. 406 0. 531 0. 789 0. 902 ADDS[Liuet al., 2021] Nd&n 640×320 60 0. 299 4. 790 10. 372 0. 371 0. 620 0. 814 0. 907 G WSGD[Vankadariet al., 2023] Rd&n 640×320 60 0. 314 3. 567 10. 058 0. 408 0. 520 0. 758 0. 881 ITDFA[Zhaoet al., 2022a] Rd&n 640×320 60 0. 362 3. 760 10. 252 0. 441 0. 418 0. 702 0. 867 RNW[Wanget al., 2021] Rd&n 640×320 60 0. 376 4. 732 11. 193 0. 506 0. 451 0. 712 0. 835 ADDS[Liuet al., 2021] Rd&n 640×320 60 0. 322 4. 401 10. 584 0. 397 0. 527 0. 786 0. 892 MonoFormer[Baeet al., 2023]‡ K 768 ×256 60 0. 307 3. 591 10. 162 0. 413 0. 521 0. 762 0. 872 MonoViT[Zhaoet al., 2022b] K 768 ×256 60 0. 348 4. 144 11. 086 0. 473 0. 417 0."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.5595085620880127,
+      "text": "056(-0. 001)3. 197(↑) 2. 130(↑) Restormer 26. 288 0. 944 0. 045 30. 57 0. 955 0. 039 3. 350 2. 187Restormer with GT-mean loss(ours) 26. 630(+0. 342)0. 946(+0. 002)0. 041(-0. 004)31. 001(+0. 431)0. 957(+0. 002)0. 036(-0. 003)3. 404(↑) 2. 218(↑) LLFormer 24. 195 0. 918 0. 07 27. 862 0. 930 0. 064 3. 176 2. 137LLFormer with GT-mean loss(ours) 25. 152( +0. 957)0. 932(+0. 014)0. 058(-0. 012)29. 266(+1. 404)0. 945(+0. 015)0. 051(-0. 013)3. 283(↑) 2. 177(↑) SNR-Aware 24. 173 0. 924 0. 064 27. 756 0. 937 0. 058 3. 275 2. 209SNR-Aware with GT-mean loss(ours) 24. 301(+0. 128)0. 933(+0. 009)0. 057(-0. 007) 28. 525(+0. 769)0. 945(+0. 008)0. 050(-0. 008)3. 326(↑) 2. 207(↓) meaningful evaluations. For unpaired datasets, we evaluated the model per- formance using QALIGN’s IQA and IAA modules, NIQE [24], and MUSIQ [14]. Implementation Details. To retrain the baselines equipped with GT-mean loss functions, we followed the their official settings, which can be found in Appendix. 4. 2. Quantitative Results Paired Datasets."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.5595085620880127,
+      "text": "056(-0. 001)3. 197(↑) 2. 130(↑) Restormer 26. 288 0. 944 0. 045 30. 57 0. 955 0. 039 3. 350 2. 187Restormer with GT-mean loss(ours) 26. 630(+0. 342)0. 946(+0. 002)0. 041(-0. 004)31. 001(+0. 431)0. 957(+0. 002)0. 036(-0. 003)3. 404(↑) 2. 218(↑) LLFormer 24. 195 0. 918 0. 07 27. 862 0. 930 0. 064 3. 176 2. 137LLFormer with GT-mean loss(ours) 25. 152( +0. 957)0. 932(+0. 014)0. 058(-0. 012)29. 266(+1. 404)0. 945(+0. 015)0. 051(-0. 013)3. 283(↑) 2. 177(↑) SNR-Aware 24. 173 0. 924 0. 064 27. 756 0. 937 0. 058 3. 275 2. 209SNR-Aware with GT-mean loss(ours) 24. 301(+0. 128)0. 933(+0. 009)0. 057(-0. 007) 28. 525(+0. 769)0. 945(+0. 008)0. 050(-0. 008)3. 326(↑) 2. 207(↓) meaningful evaluations. For unpaired datasets, we evaluated the model per- formance using QALIGN’s IQA and IAA modules, NIQE [24], and MUSIQ [14]. Implementation Details. To retrain the baselines equipped with GT-mean loss functions, we followed the their official settings, which can be found in Appendix. 4. 2. Quantitative Results Paired Datasets."
+    },
+    {
+      "id": "semantic_chunk::s_p6_sc0",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.5589427351951599,
+      "text": "Method Test nuScenes-day nuScenes-night nuScenes-rain frames AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ Monodepth2 [10] 1 0. 1333 1. 820 6. 459 85. 88 0. 2419 2. 776 10. 922 58. 17 0. 1572 2. 273 7. 453 79. 49 R4Dyn† (Radar) [7] 1 0. 1259 1. 661 6. 434 86. 97 0. 2194 2. 889 10. 542 62. 28 0. 1337 1. 938 7. 131 83. 91 RNW [30] 1 0. 2872 3. 433 9. 185 56. 21 0. 3333 4. 066 10. 098 43. 72 0. 2952 3. 796 9. 341 57. 21 md4all-AD [8] 1 0. 1523 2. 141 6. 853 83. 11 0. 2187 2. 991 9. 003 68. 84 0. 1601 2. 259 7. 832 78. 97 robust-depth [22] 1 0. 1436 1. 862 6. 802 82. 95 0. 2101 2. 691 8. 673 69. 58 0. 1458 1. 891 7. 371 80. 21 md4all-DD [8] 1 0. 1366 1. 752 6. 452 84. 61 0. 1921 2. 386 8. 507 71. 07 0. 1414 1. 829 7. 228 80. 98 DM-MDE [25] 1 0. 1280 - 6. 449 84. 03 0. 1910 - 8. 433 71. 14 0. 1390 - 7. 129 81. 36 Ours-Single 1 0. 1239 1. 454 6. 214 85. 66 0. 1792 1. 896 7. 949 71. 08 0. 1331 1. 616 6. 926 81. 68 Manydepth [33] 2(-1,0) 0. 1213 1. 699 6. 183 87. 05 0. 2442 3. 347 11. 38 57. 04 0. 1347 1. 730 7. 110 81. 24 Manydepth [33]+[8] 2(-1,0) 0. 1202 1. 417 6. 111 86. 62 0. 1865 2. 255 8. 245 72. 58 0. 1310 1. 717 6. 840 82. 61 Ours-Multi 2(-1,0) 0."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.5584707260131836,
+      "text": "Contents lists available at ScienceDirect Pattern Recognition journal homepage: www.elsevier.com/locate/pr SSRDepth: Combining semantic segmentation and relative depth for monocular metric depth estimation Yuhang Zou, Xiaoming Chen, Zhangyan Zhao ∗, Chenghua Zhang, Haipeng Liu School of Transportation and Logistics Engineering, Wuhan University of Technology, Wuhan, 430063, Hubei, China a r t i c l e i n f o Keywords: Monocular depth estimation Semantic segment Relative depth Masked transformer a b s t r a c t Monocular depth estimation is a pivotal task in computer vision, aimed to predict a dense depth map from a single image. Existing methods can achieve satisfactory performance through carefully designed network architectures. However, they often ignore the semantic information of scene structures, leading to poor performance in the se- mantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular depth estimation method that leverages semantic segmentation to improve metric depth prediction."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.5547099709510803,
+      "text": "Type Method Train on Train Res. Max depth ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ δ1 ↑ δ2 ↑ δ3 ↑ Test on nuScenes-Day DT MonoViT[Zhaoet al., 2022b] N d&n 640× 320 60 0. 201 4. 346 7. 316 0. 261 0. 792 0. 931 0. 966 WSGD[Vankadariet al., 2023] N d&n 640× 320 60 0. 405 4. 500 11. 281 0. 521 0. 355 0. 618 0. 793 DA ITDFA[Zhaoet al., 2022a] N d&n 640× 320 60 0. 352 7. 941 12. 706 0. 395 0. 583 0. 812 0. 906 RNW[Wanget al., 2021] N d&n 640× 320 60 0. 268 3. 722 8. 897 0. 333 0. 621 0. 855 0. 938 ADDS[Liu et al., 2021] N d&n 640× 320 60 0. 183 2. 525 7. 728 0. 259 0. 783 0. 926 0. 967 G ITDFA[Zhaoet al., 2022a] R d&n 640× 320 60 0. 279 2. 502 7. 938 0. 346 0. 526 0. 819 0. 934 RNW[Wanget al., 2021] R d&n 640× 320 60 0. 286 2. 991 8. 819 0. 383 0. 544 0. 799 0. 910 ADDS[Liu et al., 2021] R d&n 640× 320 60 0. 250 3. 863 9. 257 0. 319 0. 678 0. 870 0. 943 MonoFormer[Baeet al., 2023] K 768 × 256 60 0. 204 2. 219 7. 332 0. 286 0. 697 0. 901 0. 963 MonoViT[Zhaoet al., 2022b] K 768 × 256 60 0. 181 1. 918 7. 070 0. 274 0. 743 0. 911 0. 964 Ours K 768 × 256 60 0. 183 1. 888 7. 019 0. 276 0. 736 0. 908 0. 964 Test on RobotCar-Day DT MonoViT[Zhaoet al., 2022b] R d&n 640× 320 40 0. 140 1. 010 4. 713 0."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.5546316504478455,
+      "text": "(a) L1 loss curve (b) GT-mean L1 loss curves (c) Curves of the weight W Figure 6. Loss curves and weight curves for analyzing the effectiveness of the GT-mean loss. loss under different σ values. We selected 10 different σ values, running each setting three times for consistency. Notably, σ = 0 represents a special case where the GT- mean L1 loss degrades to the original L1 loss. For every 1,000 (1K) iterations in the 150K iterations, we calculated mean and variance of PSNR, shown in Figure 5 for demon- strating the trend during training. In the early stages (as can be seen in Figure 5 (a)), the curve tendencies under different σ settings are similar. Considering the curve with σ = 0is the original L1 loss, we can verify that the GT-mean loss at the early stage behaves like the originalL1 loss. In contrast, as shown in the zoomed-in views of the last 30K iterations (Figure 5 (b)), we observe that all settings become stable, and the settings with non-zero σ consistently perform bet- ter than σ = 0. This observation shows that the GT-mean loss diverges significantly from the original L1 loss in the late training stage. The second term in Eq."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.5546316504478455,
+      "text": "(a) L1 loss curve (b) GT-mean L1 loss curves (c) Curves of the weight W Figure 6. Loss curves and weight curves for analyzing the effectiveness of the GT-mean loss. loss under different σ values. We selected 10 different σ values, running each setting three times for consistency. Notably, σ = 0 represents a special case where the GT- mean L1 loss degrades to the original L1 loss. For every 1,000 (1K) iterations in the 150K iterations, we calculated mean and variance of PSNR, shown in Figure 5 for demon- strating the trend during training. In the early stages (as can be seen in Figure 5 (a)), the curve tendencies under different σ settings are similar. Considering the curve with σ = 0is the original L1 loss, we can verify that the GT-mean loss at the early stage behaves like the originalL1 loss. In contrast, as shown in the zoomed-in views of the last 30K iterations (Figure 5 (b)), we observe that all settings become stable, and the settings with non-zero σ consistently perform bet- ter than σ = 0. This observation shows that the GT-mean loss diverges significantly from the original L1 loss in the late training stage. The second term in Eq."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.5536164045333862,
+      "text": "987Restormer with GT-mean loss(ours) 20. 717(+0. 482)0. 845(+0. 004)0. 149(-0. 013)28. 440(+0. 281)0. 884(+0. 004)0. 135(-0. 012)3. 554(↑) 2. 020(↑) LLFormer 21. 308 0. 803 0. 248 27. 052 0. 828 0. 236 2. 882 1. 827LLFormer with GT-mean loss(ours) 22. 291(+0. 983)0. 844( +0. 041)0. 166(-0. 082)28. 334(+1. 282)0. 870( +0. 042)0. 156(-0. 080)3. 104(↑) 1. 880(↑) SNR-Aware 21. 103 0. 839 0. 169 26. 971 0. 866 0. 161 3. 354 1. 879SNR-Aware with GT-mean loss(ours) 21. 350(+0. 247)0. 844(+0. 005)0. 164(-0. 005)27. 740(+0. 770)0. 875(+0. 010)0. 154(-0. 007)3. 468(↑) 1. 889(↑) LOLv2-synthetic Uformer 24. 693 0. 932 0. 060 27. 438 0. 941 0. 055 3. 148 2. 114Uformer with GT-mean loss(ours) 25. 319(+0. 626)0. 940( +0. 007)0. 049(-0. 011)28. 683(+1. 245)0. 948(+0. 007)0. 045(-0. 010)3. 191(↑) 2. 144(↑) MIRNet 22. 059 0. 894 0. 122 25. 274 0. 908 0. 114 2. 956 2. 145MIRNet with GT-mean loss(ours) 22. 576(+0. 517)0. 906(+0. 011)0. 104(-0. 018)26. 215(+0. 941)0. 918(+0. 010)0. 094(-0. 020)3. 064(↑) 2. 187(↑) RetinexFormer 25. 281 0. 928 0. 064 28. 827 0. 939 0. 057 3. 102 2. 099RetinexFormer with GT-mean loss(ours)25. 583(+0. 299)0. 933(+0. 005)0. 063(-0. 001)29. 261(+0. 434)0. 944(+0. 005)0."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.5536164045333862,
+      "text": "987Restormer with GT-mean loss(ours) 20. 717(+0. 482)0. 845(+0. 004)0. 149(-0. 013)28. 440(+0. 281)0. 884(+0. 004)0. 135(-0. 012)3. 554(↑) 2. 020(↑) LLFormer 21. 308 0. 803 0. 248 27. 052 0. 828 0. 236 2. 882 1. 827LLFormer with GT-mean loss(ours) 22. 291(+0. 983)0. 844( +0. 041)0. 166(-0. 082)28. 334(+1. 282)0. 870( +0. 042)0. 156(-0. 080)3. 104(↑) 1. 880(↑) SNR-Aware 21. 103 0. 839 0. 169 26. 971 0. 866 0. 161 3. 354 1. 879SNR-Aware with GT-mean loss(ours) 21. 350(+0. 247)0. 844(+0. 005)0. 164(-0. 005)27. 740(+0. 770)0. 875(+0. 010)0. 154(-0. 007)3. 468(↑) 1. 889(↑) LOLv2-synthetic Uformer 24. 693 0. 932 0. 060 27. 438 0. 941 0. 055 3. 148 2. 114Uformer with GT-mean loss(ours) 25. 319(+0. 626)0. 940( +0. 007)0. 049(-0. 011)28. 683(+1. 245)0. 948(+0. 007)0. 045(-0. 010)3. 191(↑) 2. 144(↑) MIRNet 22. 059 0. 894 0. 122 25. 274 0. 908 0. 114 2. 956 2. 145MIRNet with GT-mean loss(ours) 22. 576(+0. 517)0. 906(+0. 011)0. 104(-0. 018)26. 215(+0. 941)0. 918(+0. 010)0. 094(-0. 020)3. 064(↑) 2. 187(↑) RetinexFormer 25. 281 0. 928 0. 064 28. 827 0. 939 0. 057 3. 102 2. 099RetinexFormer with GT-mean loss(ours)25. 583(+0. 299)0. 933(+0. 005)0. 063(-0. 001)29. 261(+0. 434)0. 944(+0. 005)0."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.5531274080276489,
+      "text": "2, this study conducts systematic ablation experiments to evaluate the performance gains introduced by the LLDG and LLPEFT modules. The experimental results demonstrate Method ParameterABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑Test on nuScenes-NightDepth Anything V2 97. 470M 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914+ AMFG 99. 229M 0. 243 2. 351 5. 416 0. 267 0. 674 0. 862 0. 945+ LoRA 99. 830M 0. 233 2. 112 5. 220 0. 259 0. 6850. 8650. 947+ LLPEFT 97. 479M0. 210 1. 910 7. 764 0. 260 0. 6300. 914 0. 976Test on RobotCar-NightDepth Anything V2 97. 470M 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972+ AMFG 99. 229M 0. 168 1. 481 6. 470 0. 234 0. 717 0. 908 0. 976+ LoRA 99. 830M 0. 173 1. 260 4. 527 0. 217 0. 7380. 9190. 981+ LLPEFT 97. 479M0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 3: We conduct comprehensive ablation studies on PEFT methods for Depth Anything V2 across both nuScenes- Night and RobotCar-Night datasets, with quantitative analy- sis of parameter counts for each fine-tuned variant."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.552973747253418,
+      "text": "day-clear – nuScenes night – nuScenes day-rain – nuScenes Method sup. tr.data absRel RMSE δ1 absRel RMSE δ1 absRel RMSE δ1 Monodepth2 [11] M ∗ a: dnr 0. 1477 6. 771 85. 25 2. 3332 32. 940 10. 54 0. 4114 9. 442 60. 58 Monodepth2 [11] M ∗ d 0. 1374 6. 692 85. 00 0. 2828 ....... 9. 729 51. 83 0. 1727 7. 743 77. 57 PackNet-SfM [12] Mv d 0. 1567 7. 230 82. 64 0. 2617 11. 063 56. 64 0. 1645 8. 288 77. 07 R4Dyn w/o r in [8] Mv r d 0. 1296 6. 536 ...... 85. 76 0. 2731 12. 430 52. 85 ........ 0. 1465 7. 533 ...... 80. 59 R4Dyn [8] (radar) Mv r d 0. 1259 6. 434 86. 97 ........ 0. 2194 10. 542 ...... 62. 28 0. 1337 7. 131 83. 91 RNW [38] M ∗ dn 0. 2872 9. 185 56. 21 0. 3333 10. 098 43. 72 0. 2952 9. 341 57. 21 [ours] baseline Mv d ........ 0. 1333 ....... 6. 459 85. 88 0. 2419 10. 922 58. 17 0. 1572 ....... 7. 453 79. 49 [ours] md4all-AD Mv dT(nr) 0. 1523 6. 853 83. 11 0. 2187 9. 003 68. 84 0. 1601 7. 832 78. 97 [ours] md4all-DD Mv dT(nr) 0. 1366 6. 452 84. 61 0. 1921 8. 507 71. 07 0. 1414 7. 228 80. 98 AdaBins [1] GT a: dnr 0. 1384 5. 582 81. 31 0. 2296 7. 344 63. 95 0. 1726 6. 267 76. 01 [ours] md4all-AD GT dnT(r) 0. 1206 4. 806 88. 03 0. 1821 6. 372 75. 33 0. 1562 5. 903 82. 82 Table 1."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p16_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 16,
+      "score": 0.5529385805130005,
+      "text": "Method Train Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 Monodepth2 w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 Monodepth2 w/o pretraining + pp M 0. 129 1. 003 5. 072 0. 207 0. 848 0. 949 0. 978 Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2 + pp M 0. 112 0. 851 4. 754 0. 190 0. 881 0. 960 0. 981 Monodepth2 (1024× 320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Monodepth2 (1024× 320) + pp M 0. 112 0. 838 4. 607 0. 187 0. 883 0. 962 0. 982 Monodepth2 w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968 Monodepth2 w/o pretraining + pp S 0. 128 1. 089 5. 385 0. 229 0. 832 0. 934 0. 969 Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2 + pp S 0. 108 0. 842 4. 891 0. 207 0. 866 0. 949 0. 976 Monodepth2 (1024× 320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 Monodepth2 (1024× 320) + pp S 0. 105 0. 822 4. 692 0. 199 0. 876 0. 954 0. 977 Monodepth2 w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974 Monodepth2 w/o pretraining + pp MS 0. 125 1. 000 5. 205 0. 218 0. 837 0. 944 0. 974 Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p16_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 16,
+      "score": 0.5529385805130005,
+      "text": "Method Train Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 Monodepth2 w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 Monodepth2 w/o pretraining + pp M 0. 129 1. 003 5. 072 0. 207 0. 848 0. 949 0. 978 Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2 + pp M 0. 112 0. 851 4. 754 0. 190 0. 881 0. 960 0. 981 Monodepth2 (1024× 320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Monodepth2 (1024× 320) + pp M 0. 112 0. 838 4. 607 0. 187 0. 883 0. 962 0. 982 Monodepth2 w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968 Monodepth2 w/o pretraining + pp S 0. 128 1. 089 5. 385 0. 229 0. 832 0. 934 0. 969 Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2 + pp S 0. 108 0. 842 4. 891 0. 207 0. 866 0. 949 0. 976 Monodepth2 (1024× 320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 Monodepth2 (1024× 320) + pp S 0. 105 0. 822 4. 692 0. 199 0. 876 0. 954 0. 977 Monodepth2 w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974 Monodepth2 w/o pretraining + pp MS 0. 125 1. 000 5. 205 0. 218 0. 837 0. 944 0. 974 Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5528659820556641,
+      "text": "In our supplementary material, we provide additional tests on nuScenes-Day and Robotcar-Day, give a complete qual- itative comparison on nuScenes-Night/nuScenes-Day and RobotCar-Night/RobotCar-Day, and offer additional visual results on other nighttime datasets to further prove the effec- tiveness of our method. 4. 3 Ablation Test on Pre-processing Contribution of Each Part Table 4. 2 shows the contributions of each pre-processing part. The comparison of different self-supervised training ap- proaches is left to the supplementary material to further prove the effectiveness of our training framework. In nuScenes-Night, compared with the baseline, BPG im- proves ABS rel by 19. 3% and RMSE by 14. 0%, and ING im- proves ABS rel by 18. 0% and RMSE by 9. 1%. Besides, the joint application of BPG and ING achieves the best scores with 20. 8% improvement on ABS rel, 20. 1% on RMSE and 35. 3% on δ1. For RobotCar-Night, the joint application of BPG and ING still achieves a significant boost with 13. 2% on ABS rel and 9. 7% on RMSE. In addition, Table 4. 2 shows that the joint application of BPG and ING significantly improves RMSE (7. 2% in nuScenec-Night and 8."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc1",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.5509235262870789,
+      "text": "However, since ΦD−syn is optimized for the synthetic do- main and may not perform well in real adverse conditions, it is intuitive to emphasize supervision on the more reliable parts. To address this, we also leverage ΦD−day to provide predictions Dday on real images across diverse conditions. Our strategy compares Dday and Dsyn, assigning higher weights to consistent regions and lower weights to highly inconsistent areas. Using an exponential function [34], we design a confidence map Ccst based on the consistency and transform it into a reweighting map Wcst: Ccst = e−β |Dsyn −Dday | Dsyn , (9) Wcst = Ccst + ϵ. (10) The β is a scale factor and the ϵ is a weight bias to guar- antee a weak supervision. The supervision forDreal will be changed into a reweighting consistent-depth loss Lcd: Lcd = 1 HW HWX Wcst| Dreal − Dsyn Dreal |. (11) Structure Prior Constraint Although pseudo-label learn- ing is reweighted, it still cannot perfectly supervise real ad- verse predictions, motivating us to seek more explicit pri- ors from daytime data and depth. To investigate further, we calculate and visualize the predicted depth distributions of ΦD−day and ΦD−syn on the real training set in Fig."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.5490540266036987,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Pretrained Full Eigen split Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Baseline + min reproj. ✓ ✓ 0. 122 1. 081 5. 116 0. 199 0. 866 0. 957 0. 980 Baseline + automasking ✓ 0. 124 0. 936 5. 010 0. 206 0. 858 0. 952 0. 977 Baseline + full-res m.s. ✓ ✓ 0. 124 1. 170 5. 249 0. 203 0. 865 0. 953 0. 978 Monodepth2 w/o min reprojection ✓ ✓ ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 with [76]’s mask ✓ ✓ ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 Monodepth2(full) ✓ ✓ ✓ ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2w/o pt ✓ ✓ ✓ 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Baseline (full Eigen dataset) ✓ ✓ 0. 146 1. 876 5. 666 0. 230 0. 848 0. 945 0. 972 Monodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.5490540266036987,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Pretrained Full Eigen split Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Baseline + min reproj. ✓ ✓ 0. 122 1. 081 5. 116 0. 199 0. 866 0. 957 0. 980 Baseline + automasking ✓ 0. 124 0. 936 5. 010 0. 206 0. 858 0. 952 0. 977 Baseline + full-res m.s. ✓ ✓ 0. 124 1. 170 5. 249 0. 203 0. 865 0. 953 0. 978 Monodepth2 w/o min reprojection ✓ ✓ ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 with [76]’s mask ✓ ✓ ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 Monodepth2(full) ✓ ✓ ✓ ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2w/o pt ✓ ✓ ✓ 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Baseline (full Eigen dataset) ✓ ✓ 0. 146 1. 876 5. 666 0. 230 0. 848 0. 945 0. 972 Monodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::s_p6_sc2",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.547389805316925,
+      "text": "86 Manydepth [33] [self] 1 0. 1200 0. 802 3. 413 87. 46 0. 4974 5. 517 10. 21 14. 87 Manydepth [33]+[8] [self] 1 0. 1092 0. 759 3. 355 88. 32 0. 1257 0. 930 3. 904 85. 24 Ours-Single [self] 1 0. 1063 0. 646 3. 171 88. 29 0. 1103 0. 693 3. 455 86. 15 Table 2. Quantitative comparison on Robotcar dataset [19] in different conditions (daytime and nighttime). Source indicates where the metrics are cited, and [self] refers to our own implementations. Method Test DrivingStereo-rain frames AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ robust-depth [22] 1 0. 2622 4. 309 11. 657 59. 58 md4all [8] 1 0. 1822 2. 007 8. 465 70. 35 Manydepth [33]+[8] 1 0. 1852 2. 020 8. 515 69. 24 Ours-Single 1 0. 1707 1. 755 8. 004 72. 98 Method Test DrivingStereo-fog frames AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ robust-depth [22] 1 0. 1366 1. 260 6. 876 84. 01 md4all [8] 1 0. 1259 1. 081 6. 383 86. 16 Manydepth [33]+[8] 1 0. 1335 1. 162 6. 740 83. 50 Ours-Single 1 0. 1281 1. 023 6. 422 84. 52 Table 3. Zero-shot evaluation on DrivingStereo (rain, fog). Noted that our method is designed for both single-frame and multi-frame settings, and definitely defeats the compared baseline [33]+[8]. and trained for 10 epochs."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.5467014312744141,
+      "text": "Dtc provides direct supervision but has a performance upper bound, which can stabilize model training in the early stages while gradually decreasing loss weights throughout the training process: Ltc = (LB (norm(D tc), DSSI) +LB (Dtc, D1)·η t1 +LB (filter(D tc), DSI )·η t2)/η step,(11) where LB is the Berhu Loss, “norm” is the [-1,1] normalization, and “filter” are adaptive strategies to avoid performance bottlenecks. Through extensive experimentation and error bar analysis, we 6"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p3_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 3,
+      "score": 0.5459271669387817,
+      "text": "In the forward process, which starts at d0 := d from the conditional distribution, Gaussian noise is gradually added at levels t ∈ {1, ..., T} to obtain noisy samples dt as dt = √¯αtd0 + √ 1 − ¯αtϵ (1) where ϵ ∼ N(0, I), ¯αt := Qt s=1 1−βs, and {β1, . , βT } is the variance schedule of a process with T steps. In the reverse process, the conditional denoising model ϵθ(·) pa- rameterized with learned parameters θ gradually removes noise from dt to obtain dt−1. At training time, parameters θ are updated by taking a data pair (x, d) from the training set, noising d with sam- pled noise ϵ at a random timestep t, computing the noise estimate ˆϵ = ϵθ(dt, x, t) and minimizing one of the denois- ing diffusion objective functions. The canonical standard noise objective L is given as follows [20]: L = Ed0,ϵ∼N (0,I),t∼U (T ) ∥ϵ − ˆϵ∥2 2 . (2) At inference time, d := d0 is reconstructed starting from a normally-distributed variable dT , by iteratively applying the learned denoiser ϵθ(dt, x, t). 3"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p3_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.5459271669387817,
+      "text": "In the forward process, which starts at d0 := d from the conditional distribution, Gaussian noise is gradually added at levels t ∈ {1, ..., T} to obtain noisy samples dt as dt = √¯αtd0 + √ 1 − ¯αtϵ (1) where ϵ ∼ N(0, I), ¯αt := Qt s=1 1−βs, and {β1, . , βT } is the variance schedule of a process with T steps. In the reverse process, the conditional denoising model ϵθ(·) pa- rameterized with learned parameters θ gradually removes noise from dt to obtain dt−1. At training time, parameters θ are updated by taking a data pair (x, d) from the training set, noising d with sam- pled noise ϵ at a random timestep t, computing the noise estimate ˆϵ = ϵθ(dt, x, t) and minimizing one of the denois- ing diffusion objective functions. The canonical standard noise objective L is given as follows [20]: L = Ed0,ϵ∼N (0,I),t∼U (T ) ∥ϵ − ˆϵ∥2 2 . (2) At inference time, d := d0 is reconstructed starting from a normally-distributed variable dT , by iteratively applying the learned denoiser ϵθ(dt, x, t). 3"
+    },
+    {
+      "id": "semantic_chunk::dav2_p9_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 9,
+      "score": 0.5452281832695007,
+      "text": "Method Higher is better ↑ Lower is better ↓ δ1 δ2 δ3 AbsRel RMSE log10 AdaBins [5] 0. 903 0. 984 0. 997 0. 103 0. 364 0. 044 DPT [55] 0. 904 0. 988 0. 998 0. 110 0. 357 0. 045 P3Depth [51] 0. 898 0. 981 0. 996 0. 104 0. 356 0. 043 SwinV2 [44] 0. 949 0. 994 0. 999 0. 083 0. 287 0. 035 AiT [49] 0. 954 0. 994 0. 999 0. 076 0. 275 0. 033 VPD [102] 0. 964 0. 995 0. 999 0. 069 0. 254 0. 030 IEBins [67] 0. 936 0. 992 0. 998 0. 087 0. 314 0. 038 ZoeDepth [6] 0. 951 0. 994 0. 999 0. 077 0. 282 0. 033 Ours (ViT-S) 0. 961 0. 996 0. 999 0. 073 0. 261 0. 032 Ours (ViT-B) 0. 977 0. 997 1. 000 0. 063 0. 228 0. 027 Ours (ViT-L) 0. 984 0. 998 1. 000 0. 056 0. 206 0. 024 (a) NYU-D dataset Method Higher is better ↑ Lower is better ↓ δ1 δ2 δ3 AbsRel RMSE RMSE log AdaBins [5] 0. 964 0. 995 0. 999 0. 058 2. 360 0. 088 P3Depth [51] 0. 953 0. 993 0. 998 0. 071 2. 842 0. 103 NeWCRFs [99] 0. 974 0. 997 0. 999 0. 052 2. 129 0. 079 SwinV2 [44] 0. 977 0. 998 1. 000 0. 050 1. 966 0. 075 NDDepth [66] 0. 978 0. 998 0. 999 0. 050 2. 025 0. 075 GEDepth [91] 0. 976 0. 997 0. 999 0. 048 2. 044 0. 076 IEBins [67] 0. 978 0. 998 0. 999 0. 050 2. 011 0. 075 ZoeDepth [6] 0. 971 0. 996 0. 999 0. 054 2. 281 0."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p16_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 16,
+      "score": 0.5449751615524292,
+      "text": "Cit. Method PP Data H × W Abs Rel Sq Rel RMSE RMSE log δ<1. 25 δ<1. 252 δ<1. 253 [63] Depth Hints \u0013 SSGM 192 × 640 0. 106 0. 780 4. 695 0. 193 0. 875 0. 958 0. 980 WaveletMonodepth MobileNetv2 \u0013 SSGM 192 × 640 0. 109 0. 851 4. 754 0. 194 0. 870 0. 957 0. 980 WaveletMonodepth Resnet18 \u0013 SSGM 192 × 640 0. 107 0. 829 4. 693 0. 193 0. 873 0. 957 0. 980 WaveletMonodepth Resnet50 \u0013 SSGM 192 × 640 0. 105 0. 813 4. 625 0. 191 0. 879 0. 959 0. 981 [63] Depth Hints \u0013 SSGM 320 × 1024 0. 099 0. 723 4. 445 0. 187 0. 886 0. 961 0. 982 WaveletMonodepth MobileNetv2 \u0013 SSGM 320 × 1024 0. 104 0. 772 4. 545 0. 188 0. 880 0. 960 0. 982 WaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0. 102 0. 739 4. 452 0. 188 0. 883 0. 960 0. 981 Depth Hints Resnet50 \u0013 SSGM 320 × 1024 0. 096 0. 710 4. 393 0. 185 0. 890 0. 962 0. 981 WaveletMonodepth Resnet50 \u0013 SSGM 320 × 1024 0. 097 0. 718 4. 387 0. 184 0. 891 0. 962 0. 982 Table 10: Quantitative results on the KITTI dataset using MobileNetv2 encoder. We evaluate results of our method using a lighter encoder on KITTI [15], using the Eigen split."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.5402766466140747,
+      "text": "Lp and Ls are calculated at all decoder scales, upsampled to the input size [11]. So far, this is equivalent to Monodepth2 [11]. Then, we add the weak velocity supervision Lv to achieve scale- awareness [12] and allow consistent predictions, beneficial when distilling knowledge between different models. Architecture Unlike previous works having specialized branches [22, 43], we leave the architecture unchanged (e.g., [11]). Instead, we act on the training process. Our approach is general and not bound to a specific architecture. 3. 1. 2 md4all-AD: Always Daytime, No Bad Weather Our md4all-AD configuration is shown in Figure 4. The core idea is learning from easy samples, even when given challenging ones (e.g., night) as if it was always daytime with good visibility (i.e., sunny or cloudy). This allows us- ing the same established losses described in Section 3. 1. 1, which would otherwise fail with difficult inputs. Day-to-adverse translation To achieve the above, we need easy samples corresponding to the challenging ones."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.5393277406692505,
+      "text": "To validate the combined effect of the GT-Mean loss and perceptual loss, the baselines include SNR-aware [41] and CID-Net [42], both of which incorpo- rate perceptual loss. All baselines and their original loss functions are listed in Table 1: Table 1. Baselines and Their Loss Functions Method Loss Function Restormer [45]L1lossRetinexFormer [4]L1lossLLFormer [32] SmoothL1loss [8]MIRNet [44] Charbonnier loss [1]Uformer [35] Charbonnier loss [1]SNR-Aware [41] Charbonnier loss [1], perceptual loss [12]CID-Net [42]L1loss, edge loss [27], perceptual loss [12] Datasets. We conducted experiments on both paired and unpaired datasets to evaluate our loss. For paired datasets, we used LOLv1 [36], LOLv2-real [43], and LOLv2-syn [43]. Specifically, the LOLv1 dataset includes 485 train- ing images and 15 testing images. The LOLv2-real dataset includes 689 training images and 100 testing images. The LOLv2-synthetic dataset includes 900 training images and 100 testing images. For unpaired datasets, we chose DICM [15], VV [29], NPE [31], MEF [21], and LIME [9] as the test sets. Evaluation Metrics."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p4_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 4,
+      "score": 0.5393277406692505,
+      "text": "To validate the combined effect of the GT-Mean loss and perceptual loss, the baselines include SNR-aware [41] and CID-Net [42], both of which incorpo- rate perceptual loss. All baselines and their original loss functions are listed in Table 1: Table 1. Baselines and Their Loss Functions Method Loss Function Restormer [45]L1lossRetinexFormer [4]L1lossLLFormer [32] SmoothL1loss [8]MIRNet [44] Charbonnier loss [1]Uformer [35] Charbonnier loss [1]SNR-Aware [41] Charbonnier loss [1], perceptual loss [12]CID-Net [42]L1loss, edge loss [27], perceptual loss [12] Datasets. We conducted experiments on both paired and unpaired datasets to evaluate our loss. For paired datasets, we used LOLv1 [36], LOLv2-real [43], and LOLv2-syn [43]. Specifically, the LOLv1 dataset includes 485 train- ing images and 15 testing images. The LOLv2-real dataset includes 689 training images and 100 testing images. The LOLv2-synthetic dataset includes 900 training images and 100 testing images. For unpaired datasets, we chose DICM [15], VV [29], NPE [31], MEF [21], and LIME [9] as the test sets. Evaluation Metrics."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p15_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 15,
+      "score": 0.5853303670883179,
+      "text": "While channel pruning can, in practice, greatly reduce both complexity and memory footprint, it requires heavy hyper- parameter search that we therefore choose to leave for fu- ture work. 9. 4. Input resolution Finally, one important factor that makes FastDepth ef- ﬁcient is that it is trained with 224× 224 inputs, against C H W (a) C H W (b) Figure 9: Channel pruning (a) vs our sparse computation (b). Our sparse computation enabled by wavelets is complimentary with the channel pruning strategy to reduce the amount of computation, as both computation reduction methods operate in orthogonal dimen- sions. our 640× 480 input. While our method is best designed for higher-resolution regime where sparsity of wavelets is stronger, we still show that our method achieves decent re- sults even at low-resolution, and report our scores in Ta- ble 12.",
+      "estimated_tokens": 191
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.560814380645752,
+      "text": "To balance the weights of diﬀerent losses, we set 𝛼 = 10, 𝛽 = 2, and 𝛿 = 0. 1. Pattern Recognition 171 (2026) 112279 5",
+      "estimated_tokens": 53
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 244,
+    "compressed_context_tokens": 244,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 244,
+  "context_tokens": 244,
+  "prompt_token_estimate": 606,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_ssrdepth_architecture_components",
+  "answer": "<think>\nThe user is asking about the core components of SSRDepth's overall architecture. Let me check the provided materials.\n\nMaterial [1] is about FastDepth and wavelet decomposition - not about SSRDepth architecture.\nMaterial [2] is from SSRDepth paper but only mentions loss weight settings (α=10, β=2, δ=0.1), not architecture components.\n\nNeither material provides information about SSRDepth's overall architecture components. I should indicate that the information is missing.\n</think>\n{\"answer\":\"资料中未提供 SSRDepth 整体架构的核心组件信息。\",\"items\":[],\"missing_information\":\"两份资料中，[1] 介绍的是 FastDepth 与小波分解方法，[2] 仅提及 SSRDepth 的损失函数权重设置（α=10, β=2, δ=0.1），均未涉及 SSRDepth 的整体架构及其核心组件的描述。\"}",
+  "usage": {
+    "prompt_tokens": 666,
+    "completion_tokens": 179,
+    "total_tokens": 845,
+    "model": "MiniMax-M3"
+  }
+}

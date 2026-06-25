@@ -1,0 +1,414 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_ssrdepth_sqga_smg_mec_ask_baseline_none_26ff8d4a37e0",
+  "dry_run": false,
+  "query": "SSRDepth 的 SQGA 与 SMG 如何进行语义段内特征聚合？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::SSRDepth_p3_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7206417918205261,
+      "text": "Y. Zou et al.\nFig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module \n(SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module ("
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6558542251586914,
+      "text": "𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance.\n3.  The proposed method\nIn this section, we ﬁrst introduce the overall architecture of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth"
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6534398794174194,
+      "text": "alization of the model’s intermediate prediction results.\nTable 9 \nAblation study on the number of masked transformer layers in the SQGA \nmodule.\nMasked transformer\nlayer\n SMG 𝛿1 ↑  AbsRel↓  RMSE↓ log10 ↓\n3 ×  0.792  0.238  2.043  0.078\n✓  0.794  0.234  1."
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6474525928497314,
+      "text": "𝐷!K\nScale Shift Transformer\nV\nKV\nSep-Conv GRU\n\t𝜎: Sigmoid Conv⊕:\tPixel addition⊗: Concatenation⊙: Pixel multiplyDiffusion\tℰ\n𝐡\" 𝐡\"#$𝐷\"#$⊕𝑠%+𝑠&×Q\nMLP\n𝒙\"\n(b)(a)\nTransformerMLP𝑠&\n𝑠%\n𝐳𝑰\n 𝐷\"\niteration𝑘\nFigure 4:(a): Model Structure of SSG. It corresponds to the"
+    },
+    {
+      "id": "chunk::SSRDepth_p4_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.634169340133667,
+      "text": "Y. Zou et al.\nFig. 3. SQGA module and its constituent components. The bottom left and bottom right corners show the SMG module and the masked transformer layer in the \nSQGA module, respectively.\nFig. 4. Visualization of attention activation areas. After be"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_13",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6307123899459839,
+      "text": "process.\n3.2.  Segmentation query guided aggregation module\nThe proposed Segmentation Query Guided Aggregation (SQGA) \nmodule is shown in the upper half of Fig. 3. Given the multi-scale fea-\ntures {𝐹𝑙}3\n𝑙=1, we sequentially feed them into the masked trans"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_10",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6301172971725464,
+      "text": "Aggregation (SQGA) module, which utilizes a novel feature interaction \napproach to enhance the aggregation of multi-scale features, guided by masks produced through a Segmentation \nMask Generator (SMG). Extensive experiments show that our method achieves c"
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_8",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.6246362328529358,
+      "text": "structure, so all conﬁgurations are modiﬁed based on SQGA. Model [a]\nis established by directly appending a continuous regression head subse-\nquent to the SQGA. Model [b] incorporates the ARD module, discretizes \nthe depth range into bins, and then perfo"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.618466854095459,
+      "text": "%\n𝐳𝑰\n 𝐷\"\niteration𝑘\nFigure 4:(a): Model Structure of SSG. It corresponds to the gray rectangle shown in Fig. 2, standing for an\niteration within two consecutive ones. The pipeline of SSG is comprehensively described in Sec. 3.3 (DepthHead\nis omit in (a) fo"
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.6165325045585632,
+      "text": "rify the eﬀectiveness of various compo-\nnents of our model, we decompose our method into ﬁve diﬀerent con-\nﬁgurations. Notably, the SQGA module is indispensable as our baseline \nstructure, so all conﬁgurations are modiﬁed based on SQGA. Model [a]\nis establ"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_4",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.6148313283920288,
+      "text": ".991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2w/o pretrainingS 0.110 0.849 4.580 0.173 0.875 0.962 0.986\nMonodepth2 S 0.085 0.537 3.868 0.139 0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.9"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_4",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.6148313283920288,
+      "text": ".991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2w/o pretrainingS 0.110 0.849 4.580 0.173 0.875 0.962 0.986\nMonodepth2 S 0.085 0.537 3.868 0.139 0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.9"
+    },
+    {
+      "id": "chunk::SSRDepth_p11_chunk_6",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.6142256259918213,
+      "text": "erfect real \ndatasets, as the predicted performance obtained from training on both \ndepth annotations are extremely similar.\nMask generation of the SMG module: As shown in Fig. 15, we vi-\nsualize the mask activation areas. Unlike BinsFormer [10], which ada"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6131349205970764,
+      "text": "ure of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth: the Segmentation Query Guided Aggregation module\n(Section 3.2), the Segmentation Proposal Scale module (Section 3.3), \nand the Adaptive Relative Depth module (Section 3.4).\n3"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6073347926139832,
+      "text": "Jasmine’s SSG module on the KITTI test set. The standard SI and SSI depths are obtained by applying Eq. 9 and\ndividing the maximum value to the depth GT, respectively.\nbe recovered by the least squares alignment in evaluation. Consequently, SD-based MDE p"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_14",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.6043034791946411,
+      "text": "tion of \nthese two components yields accurate metric depth.\n• Our proposed SQGA module employs a new feature interaction pat-\ntern, combined with the binary masks of semantic segments gener-\nated by our designed SMG, ensuring the eﬀectiveness of multi-scal"
+    },
+    {
+      "id": "chunk::Jasmine_p17_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.6025320291519165,
+      "text": "99, s=srecon))\n9:▷Scale-Shift GRU (SSG)\n10:D list ←SSG(D ssi, zI\nt )▷ D list contains[D ssi, D1, Dsi]\n11:pose←PoseNet(I[’I_t’],I[’I_t”])▷Pose Estimation for Self-Supervision\n12:loss←compute_loss(I, D list, pose, Irec)▷Loss Computation and Optimization\n13:o"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.602359414100647,
+      "text": "0.591 3.971 0.918 0.972\nIn sub-table(b), we further melted down\nour proposed SSG. ID (6) reveals that the\nnaive GRU can initially solve the distribu-\ntion misalignment by estimating the Dδ\n(Eq. 4). However, the scale difference be-\ntween SSI and SI depth"
+    },
+    {
+      "id": "chunk::SSRDepth_p11_chunk_4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.5988740921020508,
+      "text": "odel components on the Cityscapes dataset.\n    Model  ARD  SPS  SMG 𝛿1 ↑  AbsRel↓  RMSE↓ log10 ↓ \n  a × × ×  0.732  0.303  2.122  0.090  \n  b ✓ × ×  0.790  0.280  2.026  0.078  \n  c ✓ ✓ ×  0.779  0.233  1.934  0.078  \n  d ✓ × ✓  0.774  0.254  1.935  0.075"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.5967202186584473,
+      "text": "s\nprofound scene understanding, and the scale (sc) and shift (sh) factors are tightly coupled. Therefore,\nas shown in Fig. 4(a), compared to traditional GRU, SSG introduces a core component Scale-Shift\nTransformer (SST), and modifies the iterative predicti"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_5",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.5955622792243958,
+      "text": "th creates barriers for SD integration, and the\nSSG is specifically designed to fix it.\nThe Design of SSG.Transforming the depth distribution from SSI depth to SI depth requires\nprofound scene understanding, and the scale (sc) and shift (sh) factors are ti"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_chunk_9",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.5954465866088867,
+      "text": "× 1024 0.080 0.443 3.544 0.130 0.919 0.983 0.995\nWaveletMonodepth Resnet50 \u0013 S 320 × 1024 0.076 0.413 3.434 0.126 0.926 0.984 0.995\n[63] Depth Hints \u0013 SSGM 320 × 1024 0.077 0.404 3.345 0.119 0.930 0.988 0.997\nWaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0."
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_7",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5948052406311035,
+      "text": "on=r\nBatch Norm\n1×1 point-wise\nGELU\n1×1 point-wise\nCDC Module LGFI Module\nLinear\n1×1 point-wise\nGELU\nLinear Linear\nLayerNorm\n   \nSoftmax\nLinear\nLayerNorm\n1×1 point-wise\n𝑄𝑇 \n𝑄 \n𝐾 \n𝑉 \nRepeat × N\nFigure 3. Structures of the proposed Consecutive Dilated Con-\nv"
+    },
+    {
+      "id": "chunk::SSRDepth_p11_chunk_11",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.5944586992263794,
+      "text": "nd 12-layer models. Regard-\nless of whether the SMG module is used, the 9-layer model achieves \nthe best prediction performance. In addition, model performance does \nnot always improve with the increasing number of layers. The 12-layer \nmodel’s prediction"
+    },
+    {
+      "id": "chunk::SSRDepth_p6_chunk_17",
+      "source": "data\\SSRDepth.pdf",
+      "page": 6,
+      "score": 0.5927690863609314,
+      "text": "of \n1\n32 , 1\n16 , and 1\n8 of the original image 𝐼. (3) SQGA module: Before the \nSQGA module, we generate a set of queries initialized to 0, totaling 148, \nwhich includes 𝑀 = 20 segmentation queries and 𝑁 = 128 bin queries. \nIn addition, we stack 𝐿 = 3 mas"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_chunk_4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.5922002792358398,
+      "text": "[18] Monodepth2 Resnet18 \u0013 MS 192×640 0.104 0.786 4.687 0.194 0.876 0.958 0.980\nWaveletMonodepthResnet18 \u0013 MS 192×640 0.109 0.814 4.808 0.198 0.868 0.955 0.980\n[63] Depth Hints \u0013 MS +SSGM 192×640 0.105 0.769 4.627 0.189 0.875 0.959 0.982\nWaveletMonodepthRe"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_25",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.5916272401809692,
+      "text": "𝑠(𝑥, 𝑦) = 0 , (2)\nwhere 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻\n4 × 𝑊\n4  is the binarized attention mask predicted by \nthe SMG module. In the masked attention mechanism, regions with a \nmask value of 0 are excluded from the computations, thereby conﬁning \nthe focus to the features"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_chunk_10",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.5910525321960449,
+      "text": "404 3.345 0.119 0.930 0.988 0.997\nWaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0.078 0.397 3.316 0.121 0.928 0.987 0.997\nDepth Hints Resnet50 \u0013 SSGM 320 × 1024 0.074 0.363 3.198 0.114 0.936 0.989 0.997\nWaveletMonodepth Resnet50 \u0013 SSGM 320 × 1024 0.074 0.357"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.5902949571609497,
+      "text": "ift GRU\n(5) w/o SSG 0.129 0.938 4.470 0.872 0.956\n(6) w/o SST 0.098 0.715 4.350 0.909 0.969\n(c) Mix-batch Image Reconstruction\n(7) w/o MIR 0.132 0.673 4.271 0.852 0.967\n(8) Direct 0.129 0.679 4.385 0.858 0.962\n(9) Only Hy 0.106 0.614 4.181 0.901 0.970\n(10)"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_28",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.5883434414863586,
+      "text": "ed transformer layer is deﬁned as:\n𝑄𝑜𝑢𝑡 = 𝐹 𝐹 𝑁(𝑀𝑆𝐴 (𝑀𝑀𝐴 (𝑄𝑖𝑛, 𝐹𝑙))). (3)\nSegmentation mask generator. To aggregate image features within \nsemantic segments, we utilize the SMG to generate binary segmenta-\ntion masks 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻\n4 × 𝑊\n4  prior to each m"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_21",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.5874975919723511,
+      "text": "upervision strategy from BinsFormer \n[10], applying the SPS and ARD modules at each feature scale to provide \nauxiliary supervision. Finally, the total loss is deﬁned as:\n𝑡𝑜𝑡𝑎𝑙 =\n3∑\n𝑙\n(\n𝑤𝑙\n𝐿∑\n𝑛\n(\n𝛼𝑙,𝑛\n𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛\n𝐶𝐸 + 𝛿𝑙,𝑛\n𝑆𝑃 𝑆𝐴\n))\n, (15)\nwhere 𝐿 repr"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.5867230892181396,
+      "text": "ine of SSG is comprehensively described in Sec. 3.3 (DepthHead\nis omit in (a) for clear).(b): Depth distribution alignment visualization. We statistically analyze each stage of\nJasmine’s SSG module on the KITTI test set. The standard SI and SSI depths are"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_29",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.5864388942718506,
+      "text": "to generate binary segmenta-\ntion masks 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻\n4 × 𝑊\n4  prior to each masked transformer layer. \nThe structure of the SMG module is illustrated in the lower left corner \nof Fig. 3. Given 𝑄𝑆 ∈ ℝ𝑀×𝐶 , we obtain the segmentation embeddings \n𝐸𝑆 ∈ ℝ𝑀×𝐶"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p16_chunk_3",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 16,
+      "score": 0.5849310159683228,
+      "text": "× 1024 0.104 0.772 4.545 0.188 0.880 0.960 0.982\nWaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0.102 0.739 4.452 0.188 0.883 0.960 0.981\nDepth Hints Resnet50 \u0013 SSGM 320 × 1024 0.096 0.710 4.393 0.185 0.890 0.962 0.981\nWaveletMonodepth Resnet50 \u0013 SSGM 320 ×"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_chunk_5",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.5848639011383057,
+      "text": "\u0013 MS +SSGM 192×640 0.105 0.769 4.627 0.189 0.875 0.959 0.982\nWaveletMonodepthResnet18 \u0013 MS +SSGM 192×640 0.110 0.840 4.741 0.195 0.868 0.956 0.981\n[18] Monodepth2 Resnet18 \u0013 S 320×1024 0.105 0.822 4.692 0.199 0.876 0.954 0.977\nWaveletMonodepthResnet18 \u0013 S"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_chunk_8",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.5848336219787598,
+      "text": "MS +SSGM 192 × 640 0.086 0.497 3.699 0.131 0.914 0.983 0.996\n[18] Monodepth2 Resnet18 \u0013 S 320 × 1024 0.082 0.497 3.637 0.132 0.924 0.982 0.994\nWaveletMonodepth Resnet18 \u0013 S 320 × 1024 0.080 0.443 3.544 0.130 0.919 0.983 0.995\nWaveletMonodepth Resnet50 \u0013 S"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.5839738845825195,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_13",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.5833390355110168,
+      "text": "depth distribution, while D1\nand D2 progressively converge towards the SI depth. This clearly demonstrates that SSG iteratively\naligns SSI depth to SI depth by refining the scale-shift parameters. GRU is preferred over other\narchitectures due to its reset"
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.5832902789115906,
+      "text": ".4 Mix-batch Ratio Ablation Details . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21\nF Analysis of SD Prior Degradation via Self-Supervision 22\nG Evaluation Metrics 22\nH Error Bar Analysis 22\nI Limitation and Future Work 23\nA Proof of Scale-Invar"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_chunk_4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.5812094211578369,
+      "text": ".137 0.914 0.980 0.994\nWaveletMonodepth Resnet50 \u0013 S 192 × 640 0.081 0.477 3.658 0.133 0.920 0.981 0.994\n[63] Depth Hints \u0013 SSGM 192 × 640 0.085 0.487 3.670 0.131 0.917 0.983 0.996\nWaveletMonodepth Resnet18 \u0013 SSGM 192 × 640 0.083 0.476 3.635 0.129 0.920 0."
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_18",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.5807725191116333,
+      "text": "systematic ablation\nexperiments to evaluate the performance gains introduced by the\nLLDG and LLPEFT modules. The experimental results demonstrate\nMethod ParameterABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑Test on nuScenes-NightDepth Anything V2 97.470M 0."
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_8",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.5807431936264038,
+      "text": "denotes the iteration step and h denotes the hidden state (prelimi-\nnaries of GRU in Sec D). Specifically, the SST employs learnable scale/shift queries (QSC /QSH ) that\ninteract with SD’s hidden states (keys/values) via cross-attention. The output vector"
+    },
+    {
+      "id": "chunk::Lite-Mono_p9_chunk_25",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 9,
+      "score": 0.5796935558319092,
+      "text": "TPAMI , 38(10):2024–\n2039, 2015. 2\n[26] Ilya Loshchilov and Frank Hutter. SGDR: Stochastic gradi-\nent descent with warm restarts. In ICLR, 2017. 6\n[27] Ilya Loshchilov and Frank Hutter. Decoupled weight decay\nregularization. In ICLR, 2018. 6\n[28] Xiaoyang"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p6_chunk_15",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 6,
+      "score": 0.5789501667022705,
+      "text": "velet coefﬁcients while suffering a maximum relative perfor-\nmance loss of less than 0.2%.\n6 8 10 12 14 16 18\nGFLOPs\n0.096\n0.097\n0.098\n0.099\n0.100Abs rel\nDepth Hints \n (ResNet50)\n0.891\n0.890\n0.889\n0.888\n0.887\n< 1.25\nDepth Hints \n (ResNet50)\nFigure 6: Analy"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_chunk_19",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.57867431640625,
+      "text": "ss(ours) 26.630(+0.342)0.946(+0.002)0.041(-0.004)31.001(+0.431)0.957(+0.002)0.036(-0.003)3.404(↑) 2.218(↑)\nLLFormer 24.195 0.918 0.07 27.862 0.930 0.064 3.176 2.137LLFormer with GT-mean loss(ours) 25.152( +0.957)0.932(+0.014)0.058(-0.012)29.266(+1.404)0.94"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_chunk_19",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.57867431640625,
+      "text": "ss(ours) 26.630(+0.342)0.946(+0.002)0.041(-0.004)31.001(+0.431)0.957(+0.002)0.036(-0.003)3.404(↑) 2.218(↑)\nLLFormer 24.195 0.918 0.07 27.862 0.930 0.064 3.176 2.137LLFormer with GT-mean loss(ours) 25.152( +0.957)0.932(+0.014)0.058(-0.012)29.266(+1.404)0.94"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_chunk_1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.5779605507850647,
+      "text": "et18 \u0013 S 192×640 0.110 0.876 4.916 0.206 0.864 0.950 0.976\nMonodepth2 Resnet50 \u0013 S 192×640 0.108 0.802 4.577 0.185 0.886 0.963 0.983\nWaveletMonodepthResnet50 \u0013 S 192×640 0.106 0.824 4.824 0.205 0.870 0.949 0.975\n[63] Depth Hints \u0013 SSGM 192×640 0.106 0.780"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.5778106451034546,
+      "text": "framework \nincludes a Segmentation Proposal Scale module (SPS), an Adaptive\nRelative Depth (ARD) module, and a Segmentation Query Guided Aggre-\ngation module (SQGA). The SQGA module uses a new feature interaction \nmethod to aggregate features within semant"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_chunk_5",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.5773341655731201,
+      "text": ".996\nWaveletMonodepth Resnet18 \u0013 SSGM 192 × 640 0.083 0.476 3.635 0.129 0.920 0.983 0.995\nDepth Hints Resnet50 \u0013 SSGM 192 × 640 0.081 0.432 3.510 0.124 0.924 0.985 0.996\nWaveletMonodepth Resnet50 \u0013 SSGM 192 × 640 0.081 0.449 3.509 0.125 0.923 0.986 0.996\n["
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p16_chunk_2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 16,
+      "score": 0.577333390712738,
+      "text": "\u0013 SSGM 192 × 640 0.105 0.813 4.625 0.191 0.879 0.959 0.981\n[63] Depth Hints \u0013 SSGM 320 × 1024 0.099 0.723 4.445 0.187 0.886 0.961 0.982\nWaveletMonodepth MobileNetv2 \u0013 SSGM 320 × 1024 0.104 0.772 4.545 0.188 0.880 0.960 0.982\nWaveletMonodepth Resnet18 \u0013 SS"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::SSRDepth_p3_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7206417918205261,
+      "text": "Y. Zou et al.\nFig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module \n(SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module (",
+      "estimated_tokens": 61
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6558542251586914,
+      "text": "𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance.\n3.  The proposed method\nIn this section, we ﬁrst introduce the overall architecture of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth",
+      "estimated_tokens": 71
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6534398794174194,
+      "text": "alization of the model’s intermediate prediction results.\nTable 9 \nAblation study on the number of masked transformer layers in the SQGA \nmodule.\nMasked transformer\nlayer\n SMG 𝛿1 ↑  AbsRel↓  RMSE↓ log10 ↓\n3 ×  0.792  0.238  2.043  0.078\n✓  0.794  0.234  1.",
+      "estimated_tokens": 96
+    },
+    {
+      "id": "chunk::SSRDepth_p4_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.634169340133667,
+      "text": "Y. Zou et al.\nFig. 3. SQGA module and its constituent components. The bottom left and bottom right corners show the SMG module and the masked transformer layer in the \nSQGA module, respectively.\nFig. 4. Visualization of attention activation areas. After be",
+      "estimated_tokens": 59
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 287,
+    "compressed_context_tokens": 287,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 287,
+  "context_tokens": 287,
+  "prompt_token_estimate": 673,
+  "run_label": "sage_semantic_all_v1_chunk_ssrdepth_sqga_smg_mechanism",
+  "answer": "<think>\nThe user is asking about how SSRDepth's SQGA and SMG perform intra-segmentation feature aggregation. Let me look at the provided materials carefully.\n\nFrom the materials:\n- [1] mentions SQGA is one of the key components of SSRDepth, along with Image Encoder and Pixel Decoder\n- [2] mentions Section 3.1 introduces the overall architecture\n- [3] shows an ablation study on the number of masked transformer layers in the SQGA module, with metrics like SMG, δ1, AbsRel, RMSE, log10\n- [4] shows Figure 3 which is about SQGA module and its constituent components, including the SMG module and the masked transformer layer\n\nThe materials describe the existence of SQGA and SMG modules but don't provide detailed information about how they perform \"semantic segment intra-feature aggregation\" (语义段内特征聚合). Figure 3 is referenced but the actual content/description of how the aggregation works is not provided in the text.\n\nThe materials are insufficient to fully answer the specific question about how SQGA and SMG perform intra-segmentation feature aggregation. We can only see that:\n- SQGA contains SMG module and masked transformer layer\n- There's a multi-scale supervision strategy\n- An ablation on number of masked transformer layers is presented\n\nBut the actual mechanism of how they aggregate features within semantic segments is not detailed in the provided text excerpts.\n\nI should indicate missing information.\n</think>\n{\"answer\":\"给定资料仅说明 SQGA 由 SMG 模块和 masked transformer layer 构成（Fig.3），并采用多尺度监督策略，但未提供 SQGA 与 SMG 如何在语义段内进行特征聚合的具体机制描述。\",\"items\":[{\"name\":\"SQGA 与 SMG 的组成关系\",\"description\":\"资料[4]指出 SQGA 包含 SMG 模块和 masked transformer layer，但未展开二者在段内特征聚合的具体计算流程。\",\"citations\":[4]}],\"missing_information\":\"缺少 SQGA 中 SMG 模块如何对语义段内特征进行聚合（如掩码生成、注意力计算、特征融合方式）的文字说明；Fig.3 的具体内容未在所给文本中呈现，仅有图题。\" }",
+  "usage": {
+    "prompt_tokens": 720,
+    "completion_tokens": 446,
+    "total_tokens": 1166,
+    "model": "MiniMax-M3"
+  }
+}

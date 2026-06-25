@@ -1,0 +1,406 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_lite_mono_ar_ask_baseline_none_fcc59af6b177",
+  "dry_run": false,
+  "query": "Lite-Mono 的网络架构包含哪些主要组件？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::MonoDiffusion_p5_sc1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6877875924110413,
+      "text": "3M Lite-Mono [18] 2023 M 0. 107 0. 765 4. 561 0. 183 0. 886 0. 963 0. 983 3. 1M MonoDiffusion (ours) 2023 M 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 3. 1M Monodepth2-Res18 [15] 2019 M† 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 14. 3M Monodepth2-Res50 [15] 2019 M† 0. 131 1. 023 5. 064 0. 206 0. 849 0. 951 0. 979 32. 5M R-MSFM3 [53] 2021 M† 0. 128 0. 965 5. 019 0. 207 0. 853 0. 951 0. 977 3. 5M R-MSFM6 [53] 2021 M† 0. 126 0. 944 4. 981 0. 204 0. 857 0. 952 0. 978 3. 8M Lite-Mono [18] 2023 M† 0. 121 0. 876 4. 918 0. 199 0. 859 0. 953 0. 980 3. 1M MonoDiffusion (ours) 2023 M† 0. 119 0. 843 4. 868 0. 196 0. 858 0. 955 0. 981 3. 1M Monodepth2-Res18 [15] 2019 M* 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 14. 3M R-MSFM3 [53] 2021 M* 0. 112 0. 773 4. 581 0. 189 0. 879 0. 960 0. 982 3. 5M R-MSFM6 [53] 2021 M* 0. 108 0. 748 4. 470 0. 185 0. 889 0. 963 0. 982 3. 8M HR-Depth [52] 2021 M* 0. 106 0. 755 4. 472 0. 181 0. 892 0. 966 0. 984 14. 7M SRDepth-Res18 [25] 2023 M* 0. 106 0. 673 4. 379 0. 180 0. 886 0. 965 0. 984 23. 3M Lite-Mono [18] 2023 M* 0. 102 0. 746 4. 444 0. 179 0. 896 0. 965 0. 983 3. 1M Lite-Mono-8M [18] 2023 M* 0. 097 0. 710 4. 309 0. 174 0. 905 0. 967 0."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p6_sc1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 6,
+      "score": 0.6758533120155334,
+      "text": "802 4. 671 0. 186 0. 879 0. 961 0. 982 2. 5M Lite-Mono (Ours)2023 M 0. 107 0. 765 4. 561 0. 183 0. 886 0. 963 0. 983 3. 1M Monodepth2-Res18 [15] 2019 M†0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 14. 3M Monodepth2-Res50 [15] 2019 M†0. 131 1. 023 5. 064 0. 206 0. 849 0. 951 0. 979 32. 5M R-MSFM3 [46] 2021 M† 0. 128 0. 965 5. 019 0. 207 0. 853 0. 951 0. 977 3. 5M R-MSFM6 [46] 2021 M† 0. 126 0. 944 4. 981 0. 204 0. 857 0. 952 0. 978 3. 8M Lite-Mono-tiny (Ours)2023 M† 0. 125 0. 935 4. 986 0. 204 0. 853 0. 950 0. 978 2. 2M Lite-Mono-small (Ours)2023 M† 0. 123 0. 919 4. 926 0. 202 0. 859 0. 951 0. 977 2. 5M Lite-Mono (Ours)2023 M† 0. 121 0. 876 4. 918 0. 199 0. 859 0. 953 0. 980 3. 1M Monodepth2-Res18 [15] 2019 M*0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 14. 3M R-MSFM3 [46] 2021 M* 0. 112 0. 773 4. 581 0. 189 0. 879 0. 960 0. 982 3. 5M R-MSFM6 [46] 2021 M* 0. 108 0. 748 4. 470 0. 185 0. 889 0. 963 0. 982 3. 8M HR-Depth [28] 2021 M* 0. 106 0. 755 4. 472 0. 181 0. 892 0. 966 0. 984 14. 7M Lite-Mono-tiny (Ours)2023 M* 0. 104 0. 764 4. 487 0. 180 0. 892 0. 964 0. 983 2. 2M Lite-Mono-small (Ours)2023 M* 0. 103 0. 757 4. 449 0. 180 0. 894 0. 964 0. 983 2."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p7_sc1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.65503990650177,
+      "text": "Speciﬁcally, Lite-Mono greatly exceeds Monodepth2 [15] with a ResNet18 [17] backbone, but the model size is only about one-ﬁfth of this model. It also outperforms the ResNet50 version of Monodepth2, which is the largest model (32. 5M) in this table. Besides, Lite-Mono surpasses the recent well-designed small model R-MSFM [46]. Com- pared with the new MonoFormer [3] with a ResNet50 back- bone the proposed Lite-Mono outperforms it in all metrics. Our other two smaller models also achieve satisfactory re- sults, considering that they have fewer trainable parameters. In the last two rows of the table, the proposed Lite-Mono- 8M also performs better than MonoViT-tiny, the smallest model of MonoViT [43], with fewer parameters. Figure 4 shows that Lite-Mono achieves satisfactory results, even on challenging images where moving objects are close to the camera (column 1). 4. 4. Make3D results The proposed method is evaluated on the Make3D dataset to show its generalization ability in different out- door scenes. The model trained on KITTI is directly in- ferred without any ﬁne-tuning. Table 3 shows the compar- ison of Lite-Mono with the other three methods, and Lite- Mono performs the best."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p6_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 6,
+      "score": 0.6476707458496094,
+      "text": "5M Lite-Mono (Ours)2023 M* 0. 102 0. 746 4. 444 0. 179 0. 896 0. 965 0. 983 3. 1M Lite-Mono-8M (Ours)2023 M* 0. 097 0. 710 4. 309 0. 174 0. 905 0. 967 0. 984 8. 7M MonoViT-tiny [43] 2022 M 0. 102 0. 733 4. 459 0. 177 0. 895 0. 965 0. 984 10. 3M Lite-Mono-8M (Ours)2023 M 0. 101 0. 729 4. 454 0. 178 0. 897 0. 965 0. 983 8. 7M Table 2. Comparison of Lite-Mono with some recent representative methods on the KITTI benchmark using the Eigen split [9]. All input images are resized to 640× 192 unless otherwise speciﬁed. The best and the second best results are highlighted in bold and underlined, respectively. ”M”: KITTI monocular videos, ”M+Se”: monocular videos + semantic segmentation, ”M*”: input resolution 1024× 320, ”M†”: without pre-training on ImageNet [7]. Input Monodepth2 R-MSFM3 R-MSFM6 Lite-Mono -small Lite-Mono input Monodepth2 R-MSFM6 Lite-Mono (Ours) Figure 4. Qualitative results on KITTI. Here are some depth maps generated by Monodepth2 [15], R-MSFM3 [46], R-MSFM6 [46], Lite-Mono-small (ours), and Lite-Mono (ours), respectively. Monodepth2 and R-MSFM have limited receptive ﬁelds, so they yield some inaccurate depth predictions. Instead, our models can generate better results."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p7_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6432121992111206,
+      "text": "Figure 5 shows some qualitative results. Owing to the proposed feature extraction modules Lite-Mono is able to model both local and global contexts, and perceives objects with different sizes. 4. 5. Complexity and speed evaluation The proposed models’ parameters, FLOPs (ﬂoating point of operations), and inference time are evaluated on an Method Abs Rel Sq Rel RMSE RMSE log DDVO [36] 0. 387 4. 720 8. 090 0. 204 Monodepth2 [15]0. 322 3. 589 7. 417 0. 163 R-MSFM6 [46] 0. 334 3. 285 7. 212 0. 169 Lite-Mono (Ours)0. 305 3. 060 6. 981 0. 158 Table 3. Comparison of the proposed Lite-Mono to some other methods on the Make3D [32] dataset. All models are trained on KITTI [13] with an image resolution of 640× 192. Input Monodepth2 R-MSFM6 Lite-Mono input Monodepth2 R-MSFM6 Lite-Mono (Ours) Figure 5. Qualitative results on the Make3D dataset. Lite-Mono is compared to Monodepth2 [15] and R-MSFM [46]. Lite-Mono can perceive different sizes of objects. NVIDIA TITAN Xp and a Jetson Xavier and are compared with Monodepth2 [15], R-MSFM [46], and MonoViT- tiny [43]. Table 4 shows that the proposed design has a good balance between model size and speed."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6266624927520752,
+      "text": "Output Size Layers Lite-Mono-tiny Lite-Mono-small Lite-Mono Lite-Mono-8M 640×192 Input 320×96 Conv Stem 3×3,32,stride= 2 3 ×3,48,stride= 2 3 ×3,48,stride= 2 3 ×3,64,stride= 2 [3×3,32]×2 [3 ×3,48]×2 [3 ×3,48]×2 [3 ×3,64]×2 160×48 Downsampling3×3,32,stride= 2 3 ×3,48,stride= 2 3 ×3,48,stride= 2 3 ×3,64,stride= 2 Stage 1 CDC blocks [3×3,32]×3 [3 ×3,48]×3 [3 ×3,48]×3 [3 ×3,64]×3 LGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 80×24 Downsampling3×3,64,stride= 2 3 ×3,80,stride= 2 3 ×3,80,stride= 2 3 ×3,128,stride= 2 Stage 2 CDC blocks [3×3,64]×3 [3 ×3,80]×3 [3 ×3,80]×3 [3 ×3,128]×3 LGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 40×12 Downsampling3×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2 Stage 3 CDC blocks [3×3,128]×6 [3 ×3,128]×6 [3 ×3,128]×9 [3 ×3,224]×9 LGFI blockdilation= 1,2,3,2,4,6 dilation= 1,2,3,2,4,6 dilation= [1,2,3]×2,2,4,6 dilation= [1,2,3]×2,2,4,6 #Params. (M) 2. 0 2. 3 2. 9 8. 1 Table 1. Four variants of the proposed depth encoder. [3× 3, C]× N means that a CDC block uses the 3× 3 kernel size to output C channels, and repeats for N times."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p7_sc3",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6115487813949585,
+      "text": "Notice that Lite- Mono-tiny outperforms Monodepth2 both in speed and ac- curacy (Table 2). Although R-MSFM [46] is a lightweight model it is slow. The latest MonoViT-tiny [43] runs the slowest due to its parallel blocks and multiple layers of self-attention. Our models also infer quickly on the Jetson Xavier, which allows them to be used on edge devices. 4. 6. Ablation study on model architectures To further demonstrate the effectiveness of the proposed model the ablation study is conducted to evaluate the impor- tance of different designs in the architecture. We remove or adjust some modules in the network, and report their results on KITTI, as shown in Table 5. The beneﬁt of LGFI blocks. When all the LGFI blocks in stage 2, 3, and 4 are removed, the model size decreases by 0. 4M, but the accuracy also drops. The proposed LGFI is crucial to make Mono-Lite encode long-range global con- texts, thus making up for the drawback that CNNs can only extract local features. The beneﬁt of dilated convolutions. If all the dilation rates of convolutions in CDC blocks are set to 1, i.e., there are no dilated convolutions used in the network."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p1_sc0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.599703311920166,
+      "text": "Lite-Mono: A Lightweight CNN and Transformer Architecture for Self-Supervised Monocular Depth Estimation Ning Zhang* Francesco Nex George V osselman Norman Kerle University of Twente {n.zhang, f.nex, george.vosselman, n.kerle }@utwente.nl Abstract Self-supervised monocular depth estimation that does not require ground truth for training has attracted attention in recent years. It is of high interest to design lightweight but effective models so that they can be deployed on edge devices. Many existing architectures beneﬁt from using heavier backbones at the expense of model sizes. This paper achieves comparable results with a lightweight architecture. Speciﬁcally, the efﬁcient combination of CNNs and Trans- formers is investigated, and a hybrid architecture called Lite-Mono is presented. A Consecutive Dilated Convolu- tions (CDC) module and a Local-Global Features Interac- tion (LGFI) module are proposed. The former is used to extract rich multi-scale local features, and the latter takes advantage of the self-attention mechanism to encode long- range global information into the features."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p1_sc1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.5878751277923584,
+      "text": "Experiments demonstrate that Lite-Mono outperforms Monodepth2 by a large margin in accuracy, with about 80% fewer train- able parameters. Our codes and models are available at https://github.com/noahzn/Lite-Mono. 1. Introduction Many applications in the ﬁeld of robotics, autonomous driving, and augmented reality rely on depth maps, which represent the 3D geometry of a scene. Since depth sen- sors increase costs, research on inferring depth maps us- ing Convolutional Neural Networks (CNNs) from images emerged. With the annotated depth one can train a regres- sion CNN to predict the depth value of each pixel on a sin- gle image [10, 11, 22]. Lacking large-scale accurate dense ground-truth depth for supervised learning, self-supervised methods that seek supervisory signals from stereo-pairs of frames or monocular videos are favorable and have made great progress in recent years. These methods regard the depth estimation task as a novel view synthesis problem and minimize an image reconstruction loss [5,14,15,41,45]. *Corresponding Author Input Monodepth2 R-MSFM3 R-MSFM6 Lite-Mono -small Lite-Mono Input Monodepth2 R-MSFM6 Lite-Mono (Ours) Figure 1."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p7_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.5872459411621094,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 7 Input Monodepth2 Lite-Mono MonoDiffusion (ours) Fig. 5. Qualitative depth comparison on the Make3D dataset . Input Monodepth2 Lite-Mono MonoDiffusion (ours) Fig. 6. Qualitative point cloud results on the Make3D dataset. Method Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log↓ Monodepth [59] 0. 544 10. 940 11. 760 0. 193 SfMLearner [5] 0. 383 5. 321 10. 470 0. 478 DDVO [50] 0. 387 4. 720 8. 090 0. 204 Monodepth2 [15] 0. 322 3. 589 7. 417 0. 163 R-MSFM6 [53] 0. 334 3. 285 7. 212 0. 169 Lite-Mono [18] 0. 305 3. 060 6. 981 0. 158 MonoDiffusion (ours) 0. 295 2. 849 6. 854 0. 150 TABLE III QUANTITATIVE COMPARISON ON THE MAKE 3D [29] DATASET. ALL MODELS ARE TRAINED ON KITTI [28] WITH AN IMAGE RESOLUTION OF 640 × 192. in Table II. As we can see, MonoDiffusion is able to exceed the compared methods in each setting and beats recent Lite-Mono with almost identical number of parameters. Moreover, even compared to semantic segmentation-assisted methods such as SGDepth, MonoDiffusion shows great advantages. In Fig. 3, we show a qualitative depth comparison."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p8_sc0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.5869091153144836,
+      "text": "Encoder Decoder Full Model Speed (ms) Method Params. (M) FLOPs (G)Params. (M) FLOPs (G)Params. (M) FLOPs (G)Titan XP Jetson Xavier Monodepth2 [15] 11. 2 4. 5 3. 1 3. 5 14. 3 8. 0 3. 8 14. 3 R-MSFM3 [46] 0. 7 2. 4 2. 8 14. 1 3. 5 16. 5 7. 8 22. 3 R-MSFM6 [46] 0. 7 2. 4 3. 1 28. 8 3. 8 31. 2 13. 1 41. 7 MonoViT-tiny [43] 5. 6 7. 8 4. 7 15. 9 10. 3 23. 7 13. 5 47. 4 Lite-Mono-tiny (Ours)2. 0 2. 4 0. 2 0. 5 2. 2 2. 9 3. 3 12. 7 Lite-Mono-small (Outs)2. 3 4. 1 0. 2 0. 7 2. 5 4. 8 4. 3 19. 2 Lite-Mono (Ours) 2. 9 4. 4 0. 2 0. 7 3. 1 5. 1 4. 5 20. 0 Lite-Mono-8M (Ours)8. 1 9. 5 0. 6 1. 7 8. 7 11. 2 6. 5 32. 2 Table 4. Model complexity and speed evaluation. We compare parameters, FLOPs (ﬂoating point of operations), and inference speed. The input size is 640× 192, and the batch size is 16. Architecture Params. Speed(ms)Abs Rel Sq Rel RMSE RMSE logδ <1. 25 δ <1. 252 δ <1. 253 Lite-Mono full model3. 069M 4. 5 0. 107 0. 765 4. 561 0. 183 0. 886 0. 963 0. 983 w/o LGFI blocks 2. 661M 3. 2 0. 111 0. 854 4. 705 0. 187 0. 881 0. 960 0. 982 w/o dilated convolutions3. 069M 4. 5 0. 112 0. 836 4. 685 0. 187 0. 880 0. 960 0. 982 w/o pooled concatenations3. 062M 4. 4 0. 109 0. 842 4. 700 0. 186 0."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p8_sc3",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.5864133238792419,
+      "text": "Ablation study on dilation rates. 5. Conclusions This paper presents a novel architecture Lite-Mono for lightweight self-supervised monocular depth estimation. A hybrid CNN and Transformer architecture is designed to model both multi-scale enhanced local features and long- range global contexts. The experimental results on the KITTI dataset demonstrate the superiority of our method. By setting optimized dilation rates in the proposed CDC blocks and inserting the LGFI modules to obtain the local- global feature correlations, Lite-Mono can perceive dif- ferent scales of objects, even challenging moving objects closed to the camera. The generalization ability of the model is also validated on the Make3D dataset. Besides, Lite-Mono achieves a good trade-off between model com- plexity and inference speed. Acknowledgements This project has received funding from the European Union’s Horizon 2020 Research and Innovation Programme and the Korean Government under Grant Agreement No 833435. Content reﬂects only the authors’ view and the Research Executive Agency (REA) and the European Com- mission are not responsible for any use that may be made of the information it contains."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p8_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.5737863779067993,
+      "text": "(2) Based on the default setting the dilation rates of the last three blocks are set to 1, 2, and 3, respectively. (3) Similar to the default setting we set 1, 2, and 5 in every three CDC blocks as a group. (4) Based on the default setting the dilation rates in the last two CDC blocks are set to 2, 4, 6 and 4, 8, 12, respectively. Table 6 lists the accuracy under different dila- tion settings. Comparing (2) with (3) the accuracy beneﬁts from larger dilation rates. However, (4) using very large di- lation rates in the late CDC blocks does not help. Simply pursuing larger dilation rates will result in the loss of local information, which is not good for the network to perceive small and medium-sized objects. Therefore, the proposed Lite-Mono adopts the setting (1) to extract multi-scale lo- cal features, i.e., smaller dilation rates are used in shallow layers, and they are doubled in the last three CDC modules. NO. Abs Rel Sq Rel RMSE RMSE logδ1 δ2 δ3 1 0. 107 0. 765 4. 561 0. 183 0. 886 0. 963 0. 983 2 0. 110 0. 867 4. 681 0. 187 0. 885 0. 961 0. 981 3 0. 108 0. 835 4. 652 0. 186 0. 885 0. 962 0. 982 4 0. 110 0. 855 4. 642 0. 187 0. 885 0. 961 0. 981 Table 6."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p3_sc3",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.573035478591919,
+      "text": "Comparing with the original self-attention [8] it reduces the memory complexity from O(hN 2+Nd ) toO(d2/h+Nd ), and reduces the time com- plexity fromO(N 2d) toO(Nd 2/h), whereh is the number of attention heads. The proposed architecture is described in detail below. 3. 2. DepthNet Depth encoder. The proposed Lite-Mono aggregates multi-scale features across four stages. The input image"
+    },
+    {
+      "id": "semantic_chunk::LED_p15_sc1",
+      "source": "data\\LED.pdf",
+      "page": 15,
+      "score": 0.5695557594299316,
+      "text": "Regarding regulation, HD headlight technology is novel and the European regulation has authorized just recently the projection of specific HD pattern onto the road. Thus, laws are moving in this direction and evolving with the technology. B Encoder-Decoder Details B. 1 Encoder-Decoder Architecture LED uses a single pattern implicitly learned by the model, making it architecture-agnostic. This characteristic is demonstrated in the main paper (see section section 5. 1) by applying LED to multiple state-of-the-art architectures [4, 27, 49]. To prove our concept and conduct experiments, we opt for an encoder-decoder architecture with skip connections [37]. The © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.5694016218185425,
+      "text": "882 4. 701 0. 190 0. 879 0. 961 0. 982HR-Depth[31] AAAI2021 Mono K(40K+0) 0. 106 0. 755 4. 472 0. 181 0. 892 0. 966 0. 984R-MSFM6[72]ICCV2021 Mono K(40K+0) 0. 108 0. 748 4. 470 0. 185 0. 889 0. 963 0. 982DevNet[70] ECCV2022Mono K(40K+0) 0. 100 0. 699 4. 412 0. 174 0. 893 0. 966 0. 985DepthSegNet[32]ECCV2022Mono K(40K+0) 0. 099 0. 624 4. 165 0. 171 0. 902 0. 969 0. 985SD-SSMDE[37]CVPR2022 Mono K(40K+0) 0. 098 0. 674 4. 187 0. 170 0. 902 0. 968 0. 985MonoViT[68] 3DV 2022 Mono K(40K+0) 0. 096 0. 714 4. 292 0. 172 0. 908 0. 968 0. 984LiteMono[67] CVPR2023 Mono K(40K+0) 0. 102 0. 746 4. 444 0. 179 0. 896 0. 965 0. 983DaCCN[20] ICCV2023 Mono K(40K+0) 0. 094 0. 624 4. 145 0. 169 0. 909 0. 970 0. 985Jaeho et al*.[5, 34]CVPR2024 Mono K(40K+0) 0. 091 0. 604 4. 066 0. 164 0. 913 0. 9700. 986RPrDepth[19] ECCV2024Mono K(40K+0) 0. 091 0. 612 4. 098 0. 162 0. 910 0. 971 0. 986Mono-ViFI[29]ECCV2024Mono K(40K+0) 0. 093 0. 589 4. 072 0. 168 0. 909 0. 969 0. 985Jasmine - Mono KH(68K+0) 0. 090 0. 581 3. 944 0. 161 0. 919 0. 972 0. 986 Table 2:Quantitative zero-shot results on the CityScape and DrivingStereo dataset and its variants (Rainy, Cloudy, Foggy)."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p3_sc1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.5672259330749512,
+      "text": "The encoder of the DepthNet consists of four stages, and it uses Consecutive Dilated Convolutions (CDC) modules and Local-Global Features Interaction (LGFI) modules to extract rich hierarchical features. The details of these modules are shown in Figure 3. trainable parameters and have a large speed gap compared with methods only using CNNs [35]. MonoViT [43] uses MPViT [23] as its encoder and has achieved state-of-the-art accuracy. Nevertheless, the use of multiple parallel blocks in MonoViT slows down its speed. 3. The proposed framework: Lite-Mono 3. 1. Design motivation and choices Several papers demonstrated that a good encoder can extract more effective features, thus improving the ﬁnal result [15, 17, 44]. This paper focuses on designing a lightweight encoder that can encode effective features from the input images. Figure 2 shows the proposed architec- ture. It consists of an encoder-decoder DepthNet (Section 3. 2) and a PoseNet (Section 3. 3). The DepthNet estimates multi-scale inverse depth maps of the input image, and the PoseNet estimates the camera motion between two adjacent frames."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p17_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 17,
+      "score": 0.5668794512748718,
+      "text": "Input DT: MonoViT DT: WSGD DA: ITDFA DA: RNW DA: ADDS G: ITDFA G: RNW G: ADDS G: MonoFormer G: MonoViT G: Ours Figure E. 3: Qualitative results on RobotCar-Night and RobotCar-Day [Liu et al., 2021; Maddern et al., 2017]."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.5644293427467346,
+      "text": "2, this study conducts systematic ablation experiments to evaluate the performance gains introduced by the LLDG and LLPEFT modules. The experimental results demonstrate Method ParameterABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑Test on nuScenes-NightDepth Anything V2 97. 470M 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914+ AMFG 99. 229M 0. 243 2. 351 5. 416 0. 267 0. 674 0. 862 0. 945+ LoRA 99. 830M 0. 233 2. 112 5. 220 0. 259 0. 6850. 8650. 947+ LLPEFT 97. 479M0. 210 1. 910 7. 764 0. 260 0. 6300. 914 0. 976Test on RobotCar-NightDepth Anything V2 97. 470M 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972+ AMFG 99. 229M 0. 168 1. 481 6. 470 0. 234 0. 717 0. 908 0. 976+ LoRA 99. 830M 0. 173 1. 260 4. 527 0. 217 0. 7380. 9190. 981+ LLPEFT 97. 479M0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 3: We conduct comprehensive ablation studies on PEFT methods for Depth Anything V2 across both nuScenes- Night and RobotCar-Night datasets, with quantitative analy- sis of parameter counts for each fine-tuned variant."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5628019571304321,
+      "text": "260 0. 630 0. 914 0. 976 Test on RobotCar-Night DT MonoViT[51] R 𝑑 &𝑛 640 × 320 40 0. 513 13. 558 9. 867 0. 479 0. 588 0. 846 0. 918 WSGD[35] R 𝑑 &𝑛 640 × 320 40 0. 202 1. 835 5. 985 0. 231 0. 737 0. 934 0. 977 DA ITDFA[50] R 𝑑 &𝑛 640 × 320 40 0. 266 3. 010 8. 293 0. 287 0. 567 0. 888 0. 962 ADDS[24] R 𝑑 &𝑛 640 × 320 40 0. 209 2. 179 6. 808 0. 254 0. 704 0. 918 0. 965 RNW[36] R 𝑑 &𝑛 640 × 320 40 0. 197 1. 789 5. 896 0. 234 0. 742 0. 930 0. 972 G ITDFA[50] N 𝑑 &𝑛 640 × 320 40 0. 302 3. 692 8. 642 0. 327 0. 548 0. 852 0. 938 ADDS[24] N 𝑑 &𝑛 640 × 320 40 0. 265 3. 651 8. 700 0. 309 0. 640 0. 870 0. 945 RNW[36] N 𝑑 &𝑛 640 × 320 40 0. 237 2. 958 8. 187 0. 298 0. 683 0. 885 0. 948 MonoFormer[1] K 768 × 256 40 0. 289 2. 893 7. 468 0. 302 0. 543 0. 873 0. 964 TDDC[40] K 768 × 256 40 0. 210 1. 515 5. 386 0. 238 0. 676 0. 936 0. 980 Depth Anything[41] UD & LD - 40 0. 302 3. 331 6. 622 0. 314 0. 635 0. 822 0. 918 Depth Anything V2[42] RD & SD - 40 0. 235 2. 474 6. 239 0. 268 0. 697 0. 868 0. 946 Ours DepthDark H, VK - 40 0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 1: The best results are in bold, while the second-best scores are underline."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p2_sc0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 2,
+      "score": 0.5583695769309998,
+      "text": "global contexts into the features. To reduce the computa- tional complexity the cross-covariance attention [1] is cal- culated in the channel dimension instead of the spatial di- mension. The contributions of this paper can be summa- rized in three aspects. • A new lightweight architecture, dubbed Lite-Mono, for self-supervised monocular depth estimation, is pro- posed. Its effectiveness with regard to the model size and FLOPs is demonstrated. • The proposed architecture shows superior accuracy on the KITTI [13] dataset compared with competitive larger models. It achieves state-of-the-art with the least trainable parameters. The model’s generalization abil- ity is further validated on the Make3D [32] dataset. Additional ablation experiments are conducted to ver- ify the effectiveness of different design choices. • The inference time of the proposed method is tested on an NVIDIA TITAN Xp and a Jetson Xavier platform, which demonstrates its good trade-off between model complexity and inference speed. The remainder of the paper is organized as follows. Sec- tion 2 reviews some related research work. Section 3 illus- trates the proposed method in detail."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p1_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.5568670034408569,
+      "text": "The proposed Lite-Mono has fewer parameters than Monodepth2 [15] and R-MSFM [46], but generates more accurate depth maps. The camera motion is known when using stereo-pairs of im- ages, so a single depth estimation network is adopted to pre- dict depth. But if only using monocular videos for training an additional pose network is needed to estimate the motion of the camera. Despite this, self-supervised methods that only require monocular videos are preferred, as collecting stereo data needs complicated conﬁgurations and data pro- cessing. Therefore, this paper also focuses on monocular video training. In addition to increasing the accuracy of monocular training by introducing improved loss functions [15] and semantic information [5, 21] to mitigate the occlusion and moving objects problems, many works focused on design- ing more effective CNN architectures [17, 33, 39, 41, 46]. However, the convolution operation in CNNs has a local receptive ﬁeld, which cannot capture long-range global in- formation. To achieve better results a CNN-based model can use a deeper backbone or a more complicated archi- tecture [15, 28, 44], which also results in a larger model size."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p31_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 31,
+      "score": 0.5550384521484375,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p31_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 31,
+      "score": 0.5550384521484375,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p16_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 16,
+      "score": 0.5525697469711304,
+      "text": "Input DT: MonoViT DT: WSGD DA: ITDFA DA: RNW DA: ADDS G: ITDFA G: RNW G: ADDS G: MonoFormer G: MonoViT G: Ours Figure E. 2: Qualitative results on nuScenes-Night and nuScenes-Day [Wang et al., 2021; Caesar et al., 2020]."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.5518561601638794,
+      "text": "Application of Phong Model. Finally, with the 3D structure, material information, and the color of the light source IF , the reflection image I R i will be C1(u) = max (0, N (u) ∗ Li (u))/ri (u)2 , C2(u) = max (0, Ri (u) ∗ Vi (u))gr /ri (u)2 , I R i = sF IF (KdC1 + KsC2). (24) Following [Phong, 1975 ], we set the exponential gr to 8. Here, sF is the scale factor of light source image LS. D. 3 Training detail Following [Godard et al., 2019; Zhao et al., 2022b], we use AdamW [Loshchilov and Hutter, 2017] as the optimizer, and the batch size is set to 12. We setlr of the Transformer-based encoder to 5e−5 and double it for the rest trainable part. An exponential decay learning rate scheduler is also used with 0. 9 as exponential. The total training step is set to 40,000. We use the same augmentation for the image splits as applied in [Liu et al., 2021; Wang et al., 2021; Godard et al., 2019; Zhao et al., 2022b]. For BPG, we set F min = smin F = 0. 5 , empirically. Be- sides, we use smax F = 2, Fmax = 2 as the default setting. As to ING, we set K min = 0. 1 following ELD [Wei et al., 2020]. We use K max = 1with P + T Las the default setting."
+    },
+    {
+      "id": "semantic_chunk::ACD_p8_sc3",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5511043071746826,
+      "text": "Learning depth from single monocu- lar images using deep convolutional neural ﬁelds. IEEE Transactions on Pattern Analysis and Machine Intelli- gence, 38:2024–2039, 2015. [Liu et al., 2021 ] Lina Liu, Xibin Song, Mengmeng Wang, Y ong Liu, and Liangjun Zhang. Self-supervised monocu- lar depth estimation for all day images using domain sep- aration. In ICCV, pages 12737–12746, 2021. [Lyu et al., 2021 ] Xiaoyang Lyu, Liang Liu, Mengmeng Wang, Xin Kong, Lina Liu, Y ong Liu, Xinxin Chen, and Yi Y uan. Hr-depth: High resolution self-supervised monocular depth estimation. In AAAI, pages 2294–2301, 2021. [Maddern et al., 2017 ] Will Maddern, Geoffrey Pascoe, Chris Linegar, and Paul Newman. 1 year, 1000 km: The oxford robotcar dataset. The International Journal of Robotics Research, 36:3–15, 2017. [Mou et al., 2024 ] Chong Mou, Xintao Wang, Liangbin Xie, Y anze Wu, Jian Zhang, Zhongang Qi, and Ying Shan. T2i- adapter: Learning adapters to dig out more controllable ability for text-to-image diffusion models. In AAAI, pages 4296–4304, 2024. [P armar et al., 2024 ] Gaurav Parmar, Taesung Park, Srini- vasa Narasimhan, and Jun-Y an Zhu. One-step image trans- lation with text-to-image models."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p24_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 24,
+      "score": 0.549372136592865,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 24"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p24_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 24,
+      "score": 0.549372136592865,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 24"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.5488848090171814,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Method ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑ Test on nuScenes-Night Depth Anything V2 0. 272 2. 5518. 576 0. 304 0. 518 0. 843 0. 971 + Only LLDG 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914 + Only LLPEFT 0. 255 3. 050 7. 686 0. 302 0. 619 0. 836 0. 934 DepthDark 0. 210 1. 910 7. 764 0. 260 0. 630 0. 914 0. 976 Test on RobotCar-Night Depth Anything V2 0. 235 2. 474 6. 239 0. 268 0. 697 0. 868 0. 946 + Only LLDG 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972 + Only LLPEFT 0. 177 1. 584 6. 727 0. 245 0. 700 0. 895 0. 973 DepthDark 0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 2: Efficacy of Proposed Modules: Ablation studies on nuScenes-Night and RobotCar-Night demonstrate that each module enhances DepthDark’s performance, with combined use significantly improving robustness."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p23_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 23,
+      "score": 0.5485599040985107,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p23_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 23,
+      "score": 0.5485599040985107,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p14_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.5459980368614197,
+      "text": "23 [64] Zhenlong Yuan, Dapeng Zhang, Zehao Li, Chengxuan Qian, Jianing Chen, Yinda Chen, Kehua Chen, Tianlu Mao, Zhaoxin Li, Hao Jiang, and Zhaoqi Wang. Dvp-mvs++: Synergize depth-normal-edge and harmonized visibility prior for multi-view stereo, 2025. 23 [65] Zongsheng Yue, Kang Liao, and Chen Change Loy. Arbitrary-steps image super-resolution via diffusion inversion.arXiv preprint arXiv:2412. 09013, 2024. 3 [66] Ziyao Zeng, Jingcheng Ni, Daniel Wang, Patrick Rim, Younjoon Chung, Fengyu Yang, Byung-Woo Hong, and Alex Wong. Priordiffusion: Leverage language prior in diffusion models for monocular depth estimation, 2024. 3 [67] Ning Zhang, Francesco Nex, George V osselman, and Norman Kerle. Lite-mono: A lightweight cnn and transformer architecture for self-supervised monocular depth estimation. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18537–18546, 2023. 8 [68] Chaoqiang Zhao, Youmin Zhang, Matteo Poggi, Fabio Tosi, Xianda Guo, Zheng Zhu, Guan Huang, Yang Tang, and Stefano Mattoccia. Monovit: Self-supervised monocular depth estimation with a vision transformer. In2022 international conference on 3D vision (3DV), pages 668–678."
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.5452307462692261,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9 Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderLB 14. 199 0. 187 0. 072 0. 292 28. 938 5. 620 0. 772 0. 909 0. 956LED 0. 5°11. 089 0. 119 0. 050 0. 213 21. 251 2. 304 0. 864 0. 950 0. 977LED 0. 25°8. 6950. 1090. 040 0. 190 18. 635 2. 1280. 899 0. 9630. 984LED 0. 125°10. 1540. 096 0. 040 0. 19018. 862 2. 1320. 907 0. 969 0. 984 DepthF ormerLB 8. 777 0. 138 0. 050 0. 186 17. 170 3. 365 0. 864 0. 957 0. 983LED 0. 5°6. 810 0. 101 0. 041 0. 152 14. 380 1. 376 0. 890 0. 969 0. 989LED 0. 25°5. 6210. 0820. 0300. 126 11. 7351. 1630. 923 0. 978 0. 992LED 0. 125°5. 7270. 076 0. 030 0. 116 10. 7541. 2610. 940 0. 987 0. 995 DepthAnythingV2 - 1000 training imagesLB 7. 637 0. 104 0. 044 0. 160 14. 617 1. 401 0. 891 0. 972 0. 990LED 0. 5°7. 017 0. 109 0. 047 0. 161 14. 044 1. 260 0. 877 0. 9697 0. 989LED 0. 25°6. 304 0. 102 0. 044 0. 146 12. 300 1. 079 0. 885 0. 9730. 993LED 0. 125°5. 785 0. 082 0. 037 0. 126 10. 673 0. 840 0. 921 0. 9810. 992 Table 6:Performance comparison on real-world data using various pattern resolutions."
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.5450177192687988,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17 Ldepth Lgrad Lnormal Metrics L1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ ✓ ✗ ✗ ✗ ✗ 5. 9790. 1910. 020 0. 13213. 032 14. 3520. 957 0. 982 0. 991 ✗ ✓ ✗ ✗ ✗ 5. 852 0. 187 0. 021 0. 13213. 12212. 9840. 9570. 9830. 992 ✗ ✓ ✓ ✗ ✗ 5. 760 0. 201 0. 020 0. 137 13. 616 16. 174 0. 9580. 9830. 992 ✗ ✓ ✗ ✓ ✗ 5. 386 0. 2020. 0210. 12412. 373 15. 901 0. 9580. 985 0. 993 ✗ ✓ ✗ ✗ ✓ 5. 3090. 206 0. 022 0. 149 14. 862 16. 048 0. 954 0. 981 0. 990 ✗ ✓ ✗ ✓ ✓ 5. 8090. 186 0. 0180. 125 12. 21014. 6830. 961 0. 985 0. 993 ✗ ✓ ✓ ✗ ✓ 5. 4220. 2000. 0180. 125 12. 50316. 1200. 961 0. 985 0. 993 Table S1:Loss study. Performance comparison using several combination of losses:1st best, 2nd best,3rd best. Figure S2:Few-shot learning performances of Depth Anything V2 on our real dataset. All LED patterns demonstrate superior performances over LB. The model is near its maximal performances with only 1,000 training images. L=L depth +λ 1Lgrad +λ 2Lnormal .(4) B. 3 Loss Study To determine the impact of each individual loss, we conduct an ablation study (see table S1)."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p6_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 6,
+      "score": 0.5440986156463623,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 6 Input Monodepth2 Lite-Mono MonoDiffusion (ours) Fig. 3. Qualitative depth comparison on the KITTI dataset. The red boxes indicate the regions to emphasize. Input Monodepth2 Lite-Mono MonoDiffusion (ours) Fig. 4. Qualitative point cloud results on the KITTI dataset. the self-supervised MDE system has inherent scale ambiguity, we make use of the median scaling technique introduced by [5] to recover the absolute scale for depth evaluation. C. Implementation Details MonoDiffusion is implemented in the PyTorch library and trained on a single NVIDIA TITAN RTX. We use the AdamW optimizer [57] where the weight decay is 1e-2 and the batch size is set to 12. When training models from scratch, an initial learning rate of 5e-4 is adopted along with a cosine learning rate schedule [58]. The training process runs a total number of 35 epochs in this scenario. It is observed that pre-training on the ImageNet [56] accelerates network convergence, resulting in a shorter training time of 30 epochs when loading the pre- trained weights. Moreover, the initial learning rate is adjusted to 1e-4."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p9_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 9,
+      "score": 0.543520450592041,
+      "text": "[Jung et al., 2021] Hyunyoung Jung, Eunhyeok Park, and Sungjoo Yoo. Fine-grained semantics-aware representa- tion enhancement for self-supervised monocular depth es- timation. In ICCV, pages 12642–12652, 2021. [Kakimoto et al., 2004] Masanori Kakimoto, Kaoru Mat- suoka, Tomoyuki Nishita, Takeshi Naemura, and Hiroshi Harashima. Glare generation based on wave optics. InPG, pages 133–140. IEEE, 2004. [Klingner et al., 2020] Marvin Klingner, Jan-Aike Term¨ohlen, Jonas Mikolajczyk, and Tim Fingscheidt. Self-supervised monocular depth estimation: Solving the dynamic object problem by semantic guidance. In ECCV, pages 582–600, 2020. [Lee et al., 2021] Seokju Lee, Sunghoon Im, Stephen Lin, and In So Kweon. Learning monocular depth in dynamic scenes via instance-aware projection consistency. InAAAI, pages 1863–1872, 2021. [Li et al., 2021] Hanhan Li, Ariel Gordon, Hang Zhao, Vin- cent Casser, and Anelia Angelova. Unsupervised monoc- ular depth learning in dynamic scenes. In CoRL, pages 1908–1917, 2021. [Lipson et al., 2010] Ariel Lipson, Stephen G Lipson, and Henry Lipson. Optical physics . Cambridge University Press, 2010."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5417962670326233,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5417962670326233,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p9_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 9,
+      "score": 0.5415995121002197,
+      "text": "[Liu et al., 2021] Lina Liu, Xibin Song, Mengmeng Wang, Yong Liu, and Liangjun Zhang. Self-supervised monocu- lar depth estimation for all day images using domain sep- aration. In ICCV, pages 12737–12746, 2021. [Loshchilov and Hutter, 2017] Ilya Loshchilov and Frank Hutter. Decoupled weight decay regularization. arXiv, 2017. [Luidolt et al., 2020] Laura R Luidolt, Michael Wimmer, and Katharina Kr ¨osl. Gaze-dependent simulation of light perception in virtual reality. IEEE Transactions on Visual- ization and Computer Graphics, 26(12):3557–3567, 2020. [Lyu et al., 2021] Xiaoyang Lyu, Liang Liu, Mengmeng Wang, Xin Kong, Lina Liu, Yong Liu, Xinxin Chen, and Yi Yuan. Hr-depth: High resolution self-supervised monocular depth estimation. In AAAI, pages 2294–2301, 2021. [Ma et al., 2022] Jingyuan Ma, Xiangyu Lei, Nan Liu, Xian Zhao, and Shiliang Pu. Towards comprehensive represen- tation enhancement in semantics-guided self-supervised monocular depth estimation. In ECCV, pages 304–321, 2022. [Maddern et al., 2017] Will Maddern, Geoffrey Pascoe, Chris Linegar, and Paul Newman. 1 year, 1000 km: The oxford robotcar dataset. The International Journal of Robotics Research, 36(1):3–15, 2017."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p5_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.5406211018562317,
+      "text": "Specifically, we introduce illumi- nation guidance term𝐼𝐹𝑁𝑔 in the LLPEFT strategy, which is defined as follows: 𝐼𝐹𝑁 𝑔 =𝑚𝑒𝑎𝑛𝑐 \u0000𝐿𝐿𝐷𝐺(𝐼)\u0001, (7) The operation𝑚𝑒𝑎𝑛𝑐 computes the mean value of each pixel along the channel dimension. As shown in Fig. 1. 1, the low-light image𝐼𝐹𝑁 is synthesized from the daytime image𝐼 using LLDG, while𝐼𝐹𝑁𝑔 is generated from𝐼𝐹𝑁 using illumination guidance. This process effectively simplifies the illumination guidance procedure by converting the low-light image into a grayscale representation using a simple but efficient approach. This transformation helps to reduce noise, enhance the brightness distribution, and simplify the information structure. Although this approach results in the loss of color information, it does not significantly affect the final outcome, as the color information is already preserved in the low-light image 𝐼𝐹𝑁 . Ultimately, by introducing this illumination guidance, the model can focus on learning robust feature representations, thereby miti- gating noise amplification, color distortion, and artifacts caused by long exposure and high ISO settings. 3. 2. 2 Multiscale Feature Fusion."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5385758876800537,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024)."
+    },
+    {
+      "id": "semantic_chunk::ACD_p7_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5382175445556641,
+      "text": "Trailing 0 added to the values from [V ankadari et al., 2023 ] and [Tosi et al., 2025 ]. Notation from Table 1. :\u0012\u0003'/\u000e)&& 2ULJLQ\u0003,PDJH :\u0012\u0003'/ :\u0012\u0003'/\u000e)&&\u000e2*' Figure 5: Visualization of ablation study on the distillation learning, feature consistency constraint and ordinal guidance distillation. DL OGD FCC day-clear night day-rain absRel RMSE absRel RMSE absRel RMSE N 0. 1333 6. 459 0. 2419 10. 922 0. 1572 7. 453 ✓ 0. 1335 6. 408 0. 1883 8. 398 0. 1404 7. 092 ✓✓ 0. 1325 6. 328 0. 1879 8. 353 0. 1414 7. 084 ✓✓ ✓ 0. 1355 6. 340 0. 1872 8. 125 0. 1377 6. 999 DL OGD FCC day night absRel RMSE sqRel absRel RMSE sqRel R 0. 1209 3. 335 0. 723 0. 3909 8. 227 3. 547 ✓ 0. 1123 3. 135 0. 631 0. 1233 3. 476 0. 720 ✓✓ 0. 1117 3. 115 0. 615 0. 1224 3. 458 0. 704 ✓✓ ✓ 0. 1107 3. 084 0. 591 0. 1206 3. 432 0. 690 Table 3: Ablation study of Design Components. N: nuScenes, R: RobotCar, DL: distillation learning, OGD: ordinal guidance distilla- tion, FCC: feature consistency constraint. provements in model performance, reducing the absRel met- ric by 0. 54% for day scene and 0. 73% for night scene on the RobotCar."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.5382067561149597,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT DomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ (HB→HB)6. 1204 0. 0903 0. 0233 0. 1353 13. 4847 3. 3579 0. 9489 0. 9812 0. 9908(HB→LED)17. 3113 0. 4479 0. 1955 0. 6817 52. 5132 20. 0263 0. 4699 0. 6652 0. 7658 (LED→LED)5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927(LED→HB)8. 05370. 15110. 0338 0. 2026 20. 11208. 19990. 9158 0. 9626 0. 9796 Table 4:Encoder-decoder performance across domains of NSDD. We denote (training domain→testing domain). The model trained on (HB) fails entirely when tested on (LED). Yet, (LED)-trained models are able to estimate depth when tested on the (HB) domain. Pattern# Images RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ HB Zero-shot19. 058 0. 430 0. 243 0. 587 27. 004 8. 134 0. 086 0. 186 0. 785LED 18. 023 0. 420 0. 232 0. 563 25. 500 7. 779 0. 096 0. 214 0. 867 HB 100 6. 499 0. 075 0. 033 0. 133 12. 894 0. 992 0. 9290. 977 0. 991LED 6. 198 0. 073 0. 032 0. 131 12. 182 0. 898 0. 933 0. 9770. 991 HB 500 5. 447 0. 0580. 0250. 112 10. 629 0. 688 0. 950 0. 9850. 995LED 5. 225 0. 057 0. 025 0. 108 10. 038 0. 648 0. 953 0. 986 0. 995 HB 1000 5. 124 0."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p19_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 19,
+      "score": 0.5382018685340881,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 19"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p19_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 19,
+      "score": 0.5382018685340881,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 19"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p15_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 15,
+      "score": 0.5380350947380066,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 15"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p15_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 15,
+      "score": 0.5380350947380066,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 15"
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p5_sc2",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.537976086139679,
+      "text": "984 8. 7M MonoDiffusion (ours) 2023 M* 0. 099 0. 702 4. 305 0. 175 0. 903 0. 967 0. 984 3. 1M MonoDiffusion-8M (ours) 2023 M* 0. 094 0. 662 4. 235 0. 171 0. 908 0. 968 0. 984 8. 8M MonoViT-tiny [55] 2022 M 0. 102 0. 733 4. 459 0. 177 0. 895 0. 965 0. 984 10. 3M Lite-Mono-8M [18] 2023 M 0. 101 0. 729 4. 454 0. 178 0. 897 0. 965 0. 983 8. 7M MonoDiffusion-8M (ours) 2023 M 0. 099 0. 692 4. 377 0. 175 0. 899 0. 966 0. 984 8. 8M TABLE II QUANTITATIVE DEPTH COMPARISON ON THE KITTI DATASET WITH THE EIGEN SPLIT [4]. THE DEFAULT RESIZING FOR ALL INPUT IMAGES IS SET TO 640 × 192, UNLESS OTHERWISE SPECIFIED . THE BEST AND SECOND BEST RESULTS ARE INDICATED IN BOLD AND UNDERLINED , RESPECTIVELY . THE FOLLOWING ABBREVIATIONS ARE USED : “M” STANDS FOR KITTI MONOCULAR VIDEOS , “M+S E” INDICATES MONOCULAR VIDEOS WITH ADDED SEMANTIC SEGMENTATION , “M*” REPRESENTS INPUT RESOLUTION OF 1024 × 320, AND “M†” DENOTES BACKBONES WITHOUT PRE -TRAINING ON IMAGE NET [56]. M ONO DIFFUSION AND MONO DIFFUSION -8M USES LITE -MONO AND LITE -MONO -8M AS ENCODERS , RESPECTIVELY . A SIDE FROM THE DEPTH ERROR AND ACCURACY , WE REPORT THE MODEL SIZE . where λ1, λ2, λ3 and λ4 are empirically set to 1, 1, 0."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p3_sc0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.5378615856170654,
+      "text": "Downsample CDC Blocks LGFI Block Stage 2 Downsample CDC Blocks LGFI Block Stage 2 𝐻 4 × 𝑊 4 × 𝐶2 Conv stem 𝐻 2 × 𝑊 2 × 𝐶1 𝐻 8 × 𝑊 8 × 𝐶3 𝐻 16 × 𝑊 16 × 𝐶4 Downsample CDC Blocks LGFI Block Downsample CDC Blocks LGFI Block Upsampling Block Stage 1 Stage 4 Upsampling Block Upsampling Block Downsample CDC Blocks LGFI Block Downsample CDC Blocks LGFI Block Stage 3 Downsample CDC Blocks LGFI Block Stage 3 Concat Concat 𝐻 4 × 𝑊 4 × 1 𝐻 2 × 𝑊 2 × 1 𝐻 × 𝑊 × 1 Prediction Head Prediction Head Prediction Head × 𝑵𝟏 × 𝑵𝟐 × 𝑵𝟑 DepthNet 𝐼𝑡 Concat Upsampling Block 3×3 Conv Upsample 3×3 Conv 3×3 Conv Upsample 3×3 Conv Prediction Head Data Flow Skip Connection 1×1 Conv Upsample Sigmoid Pooled Concatenation ResNet-18 PoseNet 𝐼𝑠 ∈ [−1, 1] ResNet-18 PoseNet 𝐼𝑠 ∈ [−1, 1] 𝑃 Cross-Stage Connection Image reconstruction Optimization AvgPool Figure 2. Overview of the proposed Lite-Mono. Lite-Mono has an encoder-decoder DepthNet for depth prediction, and a commonly used PoseNet [15, 46] to estimate poses between adjacent monocular frames."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::MonoDiffusion_p5_sc1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6877875924110413,
+      "text": "3M Lite-Mono [18] 2023 M 0. 107 0. 765 4. 561 0. 183 0. 886 0. 963 0. 983 3. 1M MonoDiffusion (ours) 2023 M 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 3. 1M Monodepth2-Res18 [15] 2019 M† 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 14. 3M Monodepth2-Res50 [15] 2019 M† 0. 131 1. 023 5. 064 0. 206 0. 849 0. 951 0. 979 32. 5M R-MSFM3 [53] 2021 M† 0. 128 0. 965 5. 019 0. 207 0. 853 0. 951 0. 977 3. 5M R-MSFM6 [53] 2021 M† 0. 126 0. 944 4. 981 0. 204 0. 857 0. 952 0. 978 3. 8M Lite-Mono [18] 2023 M† 0. 121 0. 876 4. 918 0. 199 0. 859 0. 953 0. 980 3. 1M MonoDiffusion (ours) 2023 M† 0. 119 0. 843 4. 868 0. 196 0. 858 0. 955 0. 981 3. 1M Monodepth2-Res18 [15] 2019 M* 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 14. 3M R-MSFM3 [53] 2021 M* 0. 112 0. 773 4. 581 0. 189 0. 879 0. 960 0. 982 3. 5M R-MSFM6 [53] 2021 M* 0. 108 0. 748 4. 470 0. 185 0. 889 0. 963 0. 982 3. 8M HR-Depth [52] 2021 M* 0. 106 0. 755 4. 472 0. 181 0. 892 0. 966 0. 984 14. 7M SRDepth-Res18 [25] 2023 M* 0. 106 0. 673 4. 379 0. 180 0. 886 0. 965 0. 984 23. 3M Lite-Mono [18] 2023 M* 0. 102 0. 746 4. 444 0. 179 0. 896 0. 965 0. 983 3. 1M Lite-Mono-8M [18] 2023 M* 0. 097 0. 710 4. 309 0. 174 0. 905 0. 967 0.",
+      "estimated_tokens": 797
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p3_sc3",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.573035478591919,
+      "text": "Comparing with the original self-attention [8] it reduces the memory complexity from O(hN 2+Nd ) toO(d2/h+Nd ), and reduces the time com- plexity fromO(N 2d) toO(Nd 2/h), whereh is the number of attention heads. The proposed architecture is described in detail below. 3. 2. DepthNet Depth encoder. The proposed Lite-Mono aggregates multi-scale features across four stages. The input image",
+      "estimated_tokens": 102
+    },
+    {
+      "id": "semantic_chunk::TDDC_p17_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 17,
+      "score": 0.5668794512748718,
+      "text": "Input DT: MonoViT DT: WSGD DA: ITDFA DA: RNW DA: ADDS G: ITDFA G: RNW G: ADDS G: MonoFormer G: MonoViT G: Ours Figure E. 3: Qualitative results on RobotCar-Night and RobotCar-Day [Liu et al., 2021; Maddern et al., 2017].",
+      "estimated_tokens": 87
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 986,
+    "compressed_context_tokens": 986,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 986,
+  "context_tokens": 986,
+  "prompt_token_estimate": 1353,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_lite_mono_architecture_components",
+  "answer": "<think>\nThe user is asking about the main components of the Lite-Mono network architecture. Let me look at the provided materials.\n\nMaterial [1] is from MonoDiffusion.pdf - it contains a table of results comparing different methods including Lite-Mono, but doesn't describe the architecture in detail.\n\nMaterial [2] is from Lite-Mono.pdf - it mentions:\n- Self-attention comparison (reduces memory complexity)\n- DepthNet with Depth encoder\n- \"The proposed Lite-Mono aggregates multi-scale features across four stages\"\n\nMaterial [3] is from TDDC.pdf - not relevant to Lite-Mono architecture.\n\nSo from material [2], I can extract:\n1. Self-attention mechanism (modified version that reduces memory and time complexity)\n2. DepthNet - Depth encoder\n3. The architecture aggregates multi-scale features across four stages\n\nThis is limited information. The material only provides partial details about the architecture. The full architecture details are not available in the provided materials.\n</think>\n```json\n{\n  \"answer\": \"根据资料，Lite-Mono 的网络架构主要包含一个采用改进自注意力机制的 DepthNet，其中 DepthNet 的深度编码器在四个阶段中聚合多尺度特征。详细架构组件信息在所提供资料中有限。\",\n  \"items\": [\n    {\n      \"name\": \"DepthNet（深度网络）\",\n      \"description\": \"包含一个深度编码器（Depth encoder），用于在四个阶段中聚合多尺度特征。\",\n      \"citations\": [2]\n    },\n    {\n      \"name\": \"改进的自注意力机制\",\n      \"description\": \"相比原始自注意力，将内存复杂度从 O(hN²+Nd) 降低到 O(d²/h+Nd)，时间复杂度从 O(N²d) 降低到 O(Nd²/h)，其中 h 为注意力头数。\",\n      \"citations\": [2]\n    }\n  ],\n  \"missing_information\": \"资料中仅提及 DepthNet 及其深度编码器在四个阶段聚合多尺度特征，以及所采用的自注意力机制复杂度信息，未提供 Lite-Mono 完整的网络架构细节（如完整的编码器-解码器结构、损失函数、具体各阶段的特征维度等）。\"\n}\n```",
+  "usage": {
+    "prompt_tokens": 1405,
+    "completion_tokens": 448,
+    "total_tokens": 1853,
+    "model": "MiniMax-M3"
+  }
+}

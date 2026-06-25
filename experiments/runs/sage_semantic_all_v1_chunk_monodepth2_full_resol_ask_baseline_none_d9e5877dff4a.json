@@ -1,0 +1,422 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_monodepth2_full_resol_ask_baseline_none_d9e5877dff4a",
+  "dry_run": false,
+  "query": "Monodepth2的full-resolution multi-scale sampling解决了什么问题？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.7740611433982849,
+      "text": "obabilistically choose\nthe dataset and then draw samples from it. We ablate the\nBernoulli parameter of dataset sampling in Appendix B.4.\nA.2. Annealed Multi-Resolution Noise\nIn the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.7740611433982849,
+      "text": "obabilistically choose\nthe dataset and then draw samples from it. We ablate the\nBernoulli parameter of dataset sampling in Appendix B.4.\nA.2. Annealed Multi-Resolution Noise\nIn the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_5",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.773473858833313,
+      "text": "the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled to form a pyramid of resolutions\nand then subsequently combined by upsampling, weighted\naveraging, and renormalization. The weight for the i-th\npyramid level is computed as si"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_5",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.773473858833313,
+      "text": "the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled to form a pyramid of resolutions\nand then subsequently combined by upsampling, weighted\naveraging, and renormalization. The weight for the i-th\npyramid level is computed as si"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p3_chunk_23",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 3,
+      "score": 0.7545833587646484,
+      "text": "2D\nsignal at twice the resolution of the coefﬁcient maps.\nThe multi-scale and multi-frequency wavelet represen-\ntation is build by recursively applying DWT to the low-\nfrequency coefﬁcient map LL, starting from the input\nimage—see Figure 2(a). Similarly,"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_10",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7507996559143066,
+      "text": "substantially improve performance\nover the standard DDPM formulation. The multi-resolution\nnoise is composed by superimposing several random Gaus-\nsian noise images of different scales, all upsampled to the\nU-Net input resolution. The proposed annealed sch"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_10",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7507996559143066,
+      "text": "substantially improve performance\nover the standard DDPM formulation. The multi-resolution\nnoise is composed by superimposing several random Gaus-\nsian noise images of different scales, all upsampled to the\nU-Net input resolution. The proposed annealed sch"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p8_chunk_4",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 8,
+      "score": 0.7493504285812378,
+      "text": "cate (right).\nwith occlusions between frames in monocular video, (ii)\nan auto-masking loss to ignore confusing, stationary pixels,\nand (iii) a full-resolution multi-scale sampling method. We\nshowed how together they give a simple and efﬁcient model\nfor dep"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p8_chunk_4",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 8,
+      "score": 0.7493504285812378,
+      "text": "cate (right).\nwith occlusions between frames in monocular video, (ii)\nan auto-masking loss to ignore confusing, stationary pixels,\nand (iii) a full-resolution multi-scale sampling method. We\nshowed how together they give a simple and efﬁcient model\nfor dep"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p7_chunk_1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 7,
+      "score": 0.7480335831642151,
+      "text": "a subset of wavelet scales, we run the inverse\nwavelet transform up to the highest scale with those coefﬁcients, then perform a bilinear upsampling up to the full resolution. For each\nexperiment, the bottom line shows theℓ1 error map between the considere"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_14",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7432095408439636,
+      "text": "better results than with\nmulti-resolution noise, although the model is trained on the\nlatter. We follow DDIM’s [ 49] approach to perform non-\nMarkovian sampling with re-spaced steps for accelerated\ninference. The final depth map is decoded from the latent"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_14",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7432095408439636,
+      "text": "better results than with\nmulti-resolution noise, although the model is trained on the\nlatter. We follow DDIM’s [ 49] approach to perform non-\nMarkovian sampling with re-spaced steps for accelerated\ninference. The final depth map is decoded from the latent"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_16",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.742737352848053,
+      "text": "h [47] comes a close sec-\nond to our algorithm in the S category, they are run at high\nresolution (1024× 384 vs. our 640× 192), and in Table 1\nwe show that at higher resolutions our model’s performance\nalso increases.\nD.2. Single-Scale Evaluation\nOur monoc"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_16",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.742737352848053,
+      "text": "h [47] comes a close sec-\nond to our algorithm in the S category, they are run at high\nresolution (1024× 384 vs. our 640× 192), and in Table 1\nwe show that at higher resolutions our model’s performance\nalso increases.\nD.2. Single-Scale Evaluation\nOur monoc"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p5_chunk_2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 5,
+      "score": 0.7427160739898682,
+      "text": "e bilinear sampler [21], and\nto prevent the training objective getting stuck in local min-\nima, existing models use multi-scale depth prediction and\nimage reconstruction. Here, the total loss is the combina-\ntion of the individual losses at each scale in t"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p5_chunk_2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7427160739898682,
+      "text": "e bilinear sampler [21], and\nto prevent the training objective getting stuck in local min-\nima, existing models use multi-scale depth prediction and\nimage reconstruction. Here, the total loss is the combina-\ntion of the individual losses at each scale in t"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p15_chunk_15",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 15,
+      "score": 0.7423601746559143,
+      "text": "unt of computation, as\nboth computation reduction methods operate in orthogonal dimen-\nsions.\nour 640× 480 input. While our method is best designed\nfor higher-resolution regime where sparsity of wavelets is\nstronger, we still show that our method achieves"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p4_chunk_11",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 4,
+      "score": 0.73972487449646,
+      "text": "le. At any\nscale, we assume that these pixel locations with non-zero\nvalues can be determined from high-frequency coefﬁcient\nmaps estimated at the previous scale deﬁned by a mask M\ndescribed in GetSparseMask of Algorithm 1.\nThe sparsity level achieved by u"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_11",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7389701008796692,
+      "text": "t scales, all upsampled to the\nU-Net input resolution. The proposed annealed schedule\ninterpolates between the multi-resolution noise at t = T and\nstandard Gaussian noise at t = 0.\n3.4. Inference\nLatent diffusion denoising. The overall inference pipeline\ni"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_11",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7389701008796692,
+      "text": "t scales, all upsampled to the\nU-Net input resolution. The proposed annealed schedule\ninterpolates between the multi-resolution noise at t = T and\nstandard Gaussian noise at t = 0.\n3.4. Inference\nLatent diffusion denoising. The overall inference pipeline\ni"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p16_chunk_9",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 16,
+      "score": 0.7366853952407837,
+      "text": "tion.\nTrain ResolutionFull-res multi-scaleAbs RelSq RelRMSERMSE logδ <1.25 δ <1.252 δ <1.253 Train. time (h)\nMonodepth2M 416×128 ✓ 0.128 1.087 5.171 0.204 0.855 0.953 0.978 9\nMonodepth2M 640×192 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981 12\nMonodepth2M 10"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p16_chunk_9",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 16,
+      "score": 0.7366853952407837,
+      "text": "tion.\nTrain ResolutionFull-res multi-scaleAbs RelSq RelRMSERMSE logδ <1.25 δ <1.252 δ <1.253 Train. time (h)\nMonodepth2M 416×128 ✓ 0.128 1.087 5.171 0.204 0.855 0.953 0.978 9\nMonodepth2M 640×192 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981 12\nMonodepth2M 10"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_chunk_24",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.7361152172088623,
+      "text": "the last scale performs on par with\nour network supervised at all scales, which shows that a full\nmulti-scale wavelet reconstruction network can be trained\nend-to-end. Qualitative results from NYUv2 are shown in\nFigure 7 (right).\n5. Conclusion\nIn this wor"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p3_chunk_21",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 3,
+      "score": 0.7351158261299133,
+      "text": "2D image into\nfour coefﬁcient maps: a low-frequency ( L) component LL\nand three high-frequency ( H) components LH, HL, HH at\nhalf the resolution of the input image. For the remainder\nof the paper, we refer to the coefﬁcient maps as the output\nof the DWT. T"
+    },
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_21",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.7317330837249756,
+      "text": "ITTI dataset demonstrate the superiority of our method.\nBy setting optimized dilation rates in the proposed CDC\nblocks and inserting the LGFI modules to obtain the local-\nglobal feature correlations, Lite-Mono can perceive dif-\nferent scales of objects, ev"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_30",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.7285615801811218,
+      "text": "hat our target to reconstruction is the\ndenoised depth rather than the RGB image.\nTo summarize, our contributions are listed as follows:\n• We propose a novel framework, dubbed MonoDiffusion,\narXiv:2311.07198v1  [cs.CV]  13 Nov 2023"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p15_chunk_23",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 15,
+      "score": 0.7281206846237183,
+      "text": "an ablation showing that, even at\nthe highest resolution, our full-res multi-scale still provides\nbeneﬁt beyond just higher resolution training (vs. ‘Ours w/o\nfull-res multi-scale’).\nOur high resolution models were initialized using the\nweights from our s"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p15_chunk_23",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 15,
+      "score": 0.7281206846237183,
+      "text": "an ablation showing that, even at\nthe highest resolution, our full-res multi-scale still provides\nbeneﬁt beyond just higher resolution training (vs. ‘Ours w/o\nfull-res multi-scale’).\nOur high resolution models were initialized using the\nweights from our s"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.7280325889587402,
+      "text": "e\np\nt\nh\n \n  \n⊗\nSSIM\n \n⊗\nSSIM\nUpsample\nBaseline Ours\nDepth \ndecoder\n \nBaseline Ours\n⊗\nSSIM\nloss\n⊗\n \n \nUpscale\n(c) Our appearance loss (d) Our full-res multi-scale\nDepth decoder\n \nBaseline Ours\n⊗\nSSIM\nSSIM\n⊗\n \n Upscale\n(c) Our reprojection loss\n(b) Pose net"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7280325889587402,
+      "text": "e\np\nt\nh\n \n  \n⊗\nSSIM\n \n⊗\nSSIM\nUpsample\nBaseline Ours\nDepth \ndecoder\n \nBaseline Ours\n⊗\nSSIM\nloss\n⊗\n \n \nUpscale\n(c) Our appearance loss (d) Our full-res multi-scale\nDepth decoder\n \nBaseline Ours\n⊗\nSSIM\nSSIM\n⊗\n \n Upscale\n(c) Our reprojection loss\n(b) Pose net"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_27",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.7279014587402344,
+      "text": "are identical,\nthough they can be different. Following [21] we use bilin-\near sampling to sample the source images, which is locally\nsub-differentiable, and we follow [75, 15] in using L1 and\nSSIM [64] to make our photometric error functionpe, i.e.\npe(Ia,I"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_27",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7279014587402344,
+      "text": "are identical,\nthough they can be different. Following [21] we use bilin-\near sampling to sample the source images, which is locally\nsub-differentiable, and we follow [75, 15] in using L1 and\nSSIM [64] to make our photometric error functionpe, i.e.\npe(Ia,I"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p3_chunk_10",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 3,
+      "score": 0.7277018427848816,
+      "text": "ned\nfrom a low-resolution one through a cascade of upsampling\nand sparse reﬁnement operations. The location of these\nsparse rendering operations is chosen based on an uncer-\ntainty measure of the classiﬁcation method. However, while\nthey demonstrate the ef"
+    },
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_16",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.7266197800636292,
+      "text": "sult in the loss of local\ninformation, which is not good for the network to perceive\nsmall and medium-sized objects. Therefore, the proposed\nLite-Mono adopts the setting (1) to extract multi-scale lo-\ncal features, i.e., smaller dilation rates are used in"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p5_chunk_1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 5,
+      "score": 0.726436197757721,
+      "text": "g. 5).\nWe show experimentally that this simple and inexpensive\nmodiﬁcation to the loss brings signiﬁcant improvements.\nMulti-scale Estimation\nDue to the gradient locality of the bilinear sampler [21], and\nto prevent the training objective getting stuck in"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p5_chunk_1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.726436197757721,
+      "text": "g. 5).\nWe show experimentally that this simple and inexpensive\nmodiﬁcation to the loss brings signiﬁcant improvements.\nMulti-scale Estimation\nDue to the gradient locality of the bilinear sampler [21], and\nto prevent the training objective getting stuck in"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_26",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.7253847718238831,
+      "text": "image,\nand input corresponds to the input of each layer where ↑ is a 2×\nnearest-neighbor upsampling of the layer."
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_26",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.7253847718238831,
+      "text": "image,\nand input corresponds to the input of each layer where ↑ is a 2×\nnearest-neighbor upsampling of the layer."
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p1_chunk_6",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 1,
+      "score": 0.7248779535293579,
+      "text": "multi-scale\nsampling method that reduces visual artifacts, and (iii) an\nauto-masking loss to ignore training pixels that violate cam-\nera motion assumptions. We demonstrate the effectiveness\nof each component in isolation, and show high quality,\nstate-of-"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p1_chunk_6",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 1,
+      "score": 0.7248779535293579,
+      "text": "multi-scale\nsampling method that reduces visual artifacts, and (iii) an\nauto-masking loss to ignore training pixels that violate cam-\nera motion assumptions. We demonstrate the effectiveness\nof each component in isolation, and show high quality,\nstate-of-"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p3_chunk_24",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 3,
+      "score": 0.7243553400039673,
+      "text": "cy coefﬁcient map LL, starting from the input\nimage—see Figure 2(a). Similarly, the multi-scale repre-\nsentation can be recursively inverted to reconstruct a full\nresolution image (Figure 2(b)). This synthesis operation is\nthe building block of our depth r"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.7237570881843567,
+      "text": "0.973\nMonodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0.117 0.878 4.846 0.196 0.870 0.957 0.980\nMonodepth2 w/o auto-masking ✓ ✓ R18 ✓ 0.120 1.097 5.074 0.197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMono"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.7237570881843567,
+      "text": "0.973\nMonodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0.117 0.878 4.846 0.196 0.870 0.957 0.980\nMonodepth2 w/o auto-masking ✓ ✓ R18 ✓ 0.120 1.097 5.074 0.197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMono"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p6_chunk_8",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 6,
+      "score": 0.7228896617889404,
+      "text": "solution after bilinearly upsampling.\n4.2. Efﬁciency vs. Accuracy Trade-off Analysis\nIn this section, we study the relation between accuracy,\nsparsity, and efﬁciency of WaveletMonoDepth. For each\nset of experiments, we compare our method to an equiva-\nlent"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_13",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.7222515940666199,
+      "text": "tleneck feature into the size of\nH×W× 1. Most of the previous studies have convention-\nally stacked multiple bilinear upsampling with convolution or\ndeconvolution layers to recover the original size. However,\nwe empirically observe that the model can achie"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_13",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.7211856245994568,
+      "text": "ic vehicle-rich urban scenes, using ground truth from [52].\nMIR Analysis Datasets ETH3D[41]: We resize this high-resolution (6048 ×4032) dataset to 4K\nresolution, then randomly cropped to 1024×320 per iteration (898 total samples). Virtual KITTI[4]\nis a sy"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p2_chunk_0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 2,
+      "score": 0.7203853130340576,
+      "text": "ing wavelet decomposition. We call this system Wavelet-\nMonodepth. We make the observation that depth images of\nthe man-made world are typically made up of many piece-\nwise ﬂat regions, with a few ‘jumps’ in depth between the\nﬂat regions. This structure le"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p5_chunk_24",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 5,
+      "score": 0.7195925116539001,
+      "text": "ithout requiring Lidar depth supervision. At each scale\ns of the Monodepth2 decoder there is a layer which outputs\na one-channel disparity. We replace this layer at each scale"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_14",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.7193671464920044,
+      "text": "s. We\nmanually estimate the scale, shift, and intrinsics of “in-the-\nwild” samples, where ground truth and camera intrinsics\nare unavailable. For some samples, camera intrinsics can\nalso be extracted from the EXIF metadata. To visualize nor-\nmals, we perfo"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_14",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.7193671464920044,
+      "text": "s. We\nmanually estimate the scale, shift, and intrinsics of “in-the-\nwild” samples, where ground truth and camera intrinsics\nare unavailable. For some samples, camera intrinsics can\nalso be extracted from the EXIF metadata. To visualize nor-\nmals, we perfo"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.7740611433982849,
+      "text": "obabilistically choose\nthe dataset and then draw samples from it. We ablate the\nBernoulli parameter of dataset sampling in Appendix B.4.\nA.2. Annealed Multi-Resolution Noise\nIn the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.7740611433982849,
+      "text": "obabilistically choose\nthe dataset and then draw samples from it. We ablate the\nBernoulli parameter of dataset sampling in Appendix B.4.\nA.2. Annealed Multi-Resolution Noise\nIn the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_5",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.773473858833313,
+      "text": "the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled to form a pyramid of resolutions\nand then subsequently combined by upsampling, weighted\naveraging, and renormalization. The weight for the i-th\npyramid level is computed as si",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_5",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.773473858833313,
+      "text": "the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled to form a pyramid of resolutions\nand then subsequently combined by upsampling, weighted\naveraging, and renormalization. The weight for the i-th\npyramid level is computed as si",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p3_chunk_23",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 3,
+      "score": 0.7545833587646484,
+      "text": "2D\nsignal at twice the resolution of the coefﬁcient maps.\nThe multi-scale and multi-frequency wavelet represen-\ntation is build by recursively applying DWT to the low-\nfrequency coefﬁcient map LL, starting from the input\nimage—see Figure 2(a). Similarly,",
+      "estimated_tokens": 64
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 282,
+    "compressed_context_tokens": 282,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 282,
+  "context_tokens": 282,
+  "prompt_token_estimate": 743,
+  "run_label": "sage_semantic_all_v1_chunk_monodepth2_full_resolution_multiscale",
+  "answer": "<think>\nThe user is asking about Monodepth2's \"full-resolution multi-scale sampling\" and what problem it solves. Let me look at the provided materials.\n\nThe materials are about:\n1. Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation\n2. Single Image Depth Prediction with Wavelet Decomposition\n\nNone of these materials mention Monodepth2 or its full-resolution multi-scale sampling. The materials discuss:\n- Annealed Multi-Resolution Noise\n- Wavelet decomposition for depth prediction\n- Diffusion-based approaches\n\nThere's no information about Monodepth2's full-resolution multi-scale sampling in the provided materials. I should indicate that the information is missing.\n</think>\n{\"answer\": \"资料中未提及 Monodepth2 的 full-resolution multi-scale sampling，无法回答该问题。\", \"items\": [], \"missing_information\": \"提供的资料均未涉及 Monodepth2 及其 full-resolution multi-scale sampling 方法，缺少相关信息。\"}",
+  "usage": {
+    "prompt_tokens": 797,
+    "completion_tokens": 198,
+    "total_tokens": 995,
+    "model": "MiniMax-M3"
+  }
+}

@@ -1,0 +1,390 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_jasmine_main_ask_baseline_none_dd69ccea0e81",
+  "dry_run": false,
+  "query": "Jasmine这篇论文的主要贡献有哪些？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Jasmine_p15_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.5962125658988953,
+      "text": "Appendix In this appendix, we provide more implementation details, experiments, analysis, and discussions for a comprehensive evaluation and understanding of Jasmine. Detailed contents are listed as follows: Contents A Proof of Scale-Invariant Depth 15 B Detailed Training Workflow and Pseudocode 16 B. 1 Step-by-Step Workflow . 16 B. 2 Training Pseudocode . 17 C Supervision Details 17 C. 1 SGD Loss for Dynamic Object . 18 C. 2 Edge Loss for Sharp Prediction . 18 C. 3 Sky Loss for Anti-artifact . 18 C. 4 Eliminating the Bottleneck of Teacher Loss . 19 D Preliminaries of GRU 20 E Addition Experiments Results 21 E. 1 Evaluation on KITTI Improved Benchmark . 21 E. 2 Comparison with Other Self-Supervised Settings . 21 E. 3 Qualitative Comparisons . 21 E. 4 Mix-batch Ratio Ablation Details . 21 F Analysis of SD Prior Degradation via Self-Supervision 22 G Evaluation Metrics 22 H Error Bar Analysis 22 I Limitation and Future Work 23 A Proof of Scale-Invariant Depth For SSI depth, we assume that the estimated depth ˆD and the ground truth depth D have the following relationship: ˆD=s cD+s h Meanwhile, the depth from another viewpoint can be denoted as g1(D′)."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p7_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.5624651908874512,
+      "text": "demonstrate that this pseudo-label training proves particularly crucial for steady training in complex, multi-module self-supervised systems. The implementation details are in Sec. C. Finally, the total training loss of the Jasmine model is: L=L s +L ph +L tc +L a ·η a,(12) where Ls refers to Eq. 5, Lph refers to Eq. 2, Ltc refers to Eq. 11, and La is some auxiliary adjustment losses (e.g.,gds loss[ 34] LGDS, edge loss Le, etc.) with a tiny weight. They will be detailed in supplementary material Sec. C. 4 Experiment 4. 1 Implement Details We implement the proposed Jasmine using Accelerate[16] and PyTorch[35] with Stable Diffusion v2[39] as the backbone. Following the pipeline in Fig. 2, we disable text conditioning while maintaining most hyperparameter consistency with E2E FT[33]. The loss weights specified in Sec. 3 are empirically configured as: ηa = 8e−3, ηt1 = 0. 6, ηt2 = 0. 9, ηp1 = 0. 85, ηp2 = 0. 15, ηstep = max(1,30·(step now/stepmax)). Training uses the AdamW optimizer[ 30] with a base learning rate of 3e−5 . All experiments are conducted on 8 NVIDIA A800 GPUs with a total batch size of 32, training for a total of 25k training steps, requiring around 1 day."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.5587761402130127,
+      "text": "194 0. 787 0. 1236. 618 0. 852 0. 133 5. 651 0. 849 0. 098 5. 702 0. 902 Generalization ResultsCompared to in-domain evaluation, Jasmine exhibits even more remark- able results in zero-shot generalization. Due to the large number of comparison datasets and the unavailability of some models’ open-source code, we only compare with Monodepth2 (the most classic model), MonoViT (renowned for its robustness), MonoViFi (the latest model), and Weath- erDepth (trained with additional weather-augmented data, totaling 278k samples), all of which are self-supervised models. In fact, MonoViT already surpasses the zero-shot capability for nearly all models in the SSMDE, making it a sufficiently strong baseline[ 42]. Additionally, SD-based methods have excelled in generalization, allowing us to conduct a fair zero-shot comparison here. As shown in Table 2, Jasmine demonstrated state-of-the-art performance on the datasets of Cityscape Figure 5:Qualitative resultson KITTI, DrivingStereo, and CityScape datasets. We compare Jasmine with the most generalizable and best-performing SSMDE methods in both in-domain and zero-shot scenarios. 8"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc4",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.5538734197616577,
+      "text": "Extensive experiments demonstrate that Jasmine achieves SoTA performance on KITTI and superior zero-shot generalization across datasets. Our approach establishes a new paradigm for unsupervised depth estimation, paving the way for future advancements in self-supervised learning. 10"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p17_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.534125804901123,
+      "text": "– A photometric reprojection loss, Lph, is calculated by comparing the synthesized image ˆIt with the original target imageI t. – This loss, Lph, is the core self-supervised signal. If the predicted depth D is incorrect, the reprojected image ˆIt will not match the originalI t, resulting in a high loss. •Step 5: End-to-End Backpropagation: – The gradient from Lph is backpropagated through the entire computational graph. This means the gradient flows back to update the weights of both thePoseNetand, most importantly, the SD U-Net(f z θ ). •Output:The predicted depth mapDobtained from Step 1. B. 2 Training Pseudocode Algorithm 1 outlines the complete training procedure for Jasmine, incorporating all components including MIR, SSG, and the full loss computation (Corresponds to the pipeline in Fig. 2)."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p9_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.5308061838150024,
+      "text": "However, when computing overall accuracy, a′ or a are typically outside the threshold for a1 and thus do not affect it, while the originally accurate predictions for other points become less accurate due to the shift introduced by LSQ alignment. Similarly, first-order metrics also degrade due to these shifts. This explains why Jasmine* achieves better RMSE and SqRel but worsea 1 and AbsRel compared to Jasmine. For the last observation, in in-domain scenarios (Table 1), Jasmine outperforms Jasmine* because the shift-free estimation learned by Jasmine is disrupted by LSQ alignment, introducing a suboptimal shift and degrading performance. In out-of-domain scenarios (Table 2), Jasmine* performs better, as the depth distributions of different datasets may differ significantly, and using least-squares to estimate the best fit is clearly a better choice. 9"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.5159489512443542,
+      "text": "5 Inference Latency As shown in the table below (MACs and Runtime are measured on a image with 1024×320 resolution on RTX 4090.), while Jasmine is more computationally expensive than prior self-supervised methods, it follows the trend of models like Marigold in trading cost for superior performance. Notably, our SSG module adds negligible latency, with Jasmine’s runtime being comparable to Lotus. Method Marigold Lotus E2E-Mono Monodepth2 MonoViT MonoViFi Jasmine MACs 133T 2. 65T 2. 65T 21. 43G 25. 63G 28. 79G 2. 83T Runtime 9. 88s 157ms 152ms 33ms 29ms 25ms 172ms 5 Conclusion We propose Jasmine, the first SD-based self-supervised framework for monocular depth estimation, effectively leveraging SD’s priors to enhance sharpness and generalization without high-precision supervision. To achieve this objective, we introduce two novel modules: Mix-batch Image Recon- struction (MIR) for mitigating reprojection artifacts and preserving Stable Diffusion’s latent priors, alongside Scale-Shift GRU (SSG) to align scale-invariant depth predictions while suppressing noisy gradients."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p7_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.5131663084030151,
+      "text": "MIR Analysis Datasets ETH3D[41]: We resize this high-resolution (6048 ×4032) dataset to 4K resolution, then randomly cropped to 1024×320 per iteration (898 total samples). Virtual KITTI[4] is a synthetic street scene dataset. We processed this dataset identically to real KITTI data. 4. 2. 2 Performance Comparison For all the evaluations, only Jasmine*, Marigold, E2E FT, and Lotus adopt the least squares alignment. The other self-supervised methods use median alignment. The definitions and differences of these alignments are detailed discussed in Sec. 4. 3. The meaning of each metric is detailed in Sec. G. KITTI resultTo fully demonstrate the advantages of our approach, we compare Jasmine against the most efficient SSMDE models and SoTA SD-based methods. As shown in Table 1,Jasmine achieves the best performanceacross all metrics on the KITTI benchmark. Notably, our method makes significant progress on the a1 metric, reflecting an overall improvement in depth estimation accuracy. This systematic advancement stems from the rich prior knowledge of SD. As shown in Fig."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p31_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 31,
+      "score": 0.5122019648551941,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p31_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 31,
+      "score": 0.5122019648551941,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p23_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 23,
+      "score": 0.5074762105941772,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p23_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 23,
+      "score": 0.5074762105941772,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23"
+    },
+    {
+      "id": "semantic_chunk::dav2_p32_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 32,
+      "score": 0.5044179558753967,
+      "text": "Answer: [NA] Justification: This paper does not involves theoretical result. Guidelines: • The answer NA means that the paper does not include theoretical results. • All the theorems, formulas, and proofs in the paper should be numbered and cross- referenced. • All assumptions should be clearly stated or referenced in the statement of any theorems. • The proofs can either appear in the main paper or the supplemental material, but if they appear in the supplemental material, the authors are encouraged to provide a short proof sketch to provide intuition. • Inversely, any informal proof provided in the core of the paper should be complemented by formal proofs provided in appendix or supplemental material. • Theorems and Lemmas that the proof relies upon should be properly referenced. 4. Experimental Result Reproducibility Question: Does the paper fully disclose all the information needed to reproduce the main ex- perimental results of the paper to the extent that it affects the main claims and/or conclusions of the paper (regardless of whether the code and data are provided or not)?"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p24_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 24,
+      "score": 0.5037132501602173,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 24"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p24_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 24,
+      "score": 0.5037132501602173,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 24"
+    },
+    {
+      "id": "semantic_chunk::s_p9_sc3",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.5032634735107422,
+      "text": "Exploiting multi-view part-wise correlation via an ef- ficient transformer for vehicle re-identification. IEEE Trans- actions on Multimedia, 25:919–929, 2023. [16] Ming Li, Xiangyu Xu, Hehe Fan, Pan Zhou, Jun Liu, Jia-Wei Liu, Jiahe Li, Jussi Keppo, Mike Zheng Shou, and Shuicheng Yan. Stprivacy: Spatio-temporal privacy-preserving action recognition. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 5106–5115, 2023. [17] Ming Li, Pan Zhou, Jia-Wei Liu, Jussi Keppo, Min Lin, Shuicheng Yan, and Xiangyu Xu. Instant3d: Instant text- to-3d generation. arxiv: 2311. 08403, 2023. 2 [18] Lina Liu, Xibin Song, Mengmeng Wang, Yong Liu, and Liangjun Zhang. Self-supervised monocular depth estima- tion for all day images using domain separation. In Proceed- ings of the IEEE/CVF International Conference on Com- puter Vision, pages 12737–12746, 2021. 1, 2, 6, 7 [19] W. Maddern, G. Pascoe, C. Linegar, and P. Newman. 1 year, 1000 km: The oxford robotcar dataset. International Journal of Robotics Research, page 0278364916679498, 2016. 2, 3, 6, 7 [20] Rui Peng, Ronggang Wang, Yawen Lai, Luyang Tang, and Yangang Cai."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p1_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.5018905997276306,
+      "text": "Jasmine: Harnessing Diffusion Prior for Self-Supervised Depth Estimation Jiyuan Wang1 Chunyu Lin1† Cheng Guan1 Lang Nie4 Jing He3 Haodong Li3 Kang Liao2 Yao Zhao1 1BJTU 2NTU 3HKUST 4CQUPT †Corresponding Author Figure 1:Without any high-precision depth supervision, Jasmine achieves remarkably detailed and accurate depth estimation results through zero-shot generalization across diverse scenarios. Abstract In this paper, we proposeJasmine, the first Stable Diffusion (SD)-based self- supervised framework for monocular depth estimation, which effectively harnesses SD’s visual priors to enhance the sharpness and generalization of unsupervised prediction. Previous SD-based methods are all supervised since adapting diffusion models for dense prediction requires high-precision supervision. In contrast, self- supervised reprojection suffers from inherent challenges (e.g., occlusions, texture- less regions, illumination variance), and the predictions exhibit blurs and artifacts that severely compromise SD’s latent priors. To resolve this, we construct a novel surrogate task of mix-batch image reconstruction."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p22_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 22,
+      "score": 0.4992770552635193,
+      "text": "G Evaluation Metrics Similar to [15], we employ the following evaluation metrics in our experiments, AbsRel: 1 |Mvl| P d∈Mvl |d−d gt|/d gt; SqRel: 1 |Mvl| P d∈Mvl ∥d−d gt∥2 /dgt; RMSE: q 1 |Mvl| P d∈Mvl ∥d−d gt∥2; RMSElog: q 1 |Mvl| P d∈Mvl ∥log(d)−log(d gt)∥2; at: percentage of d such that max( d dgt , dgt d )<1. 25 t ; where dgt and d denote the GT and estimated pixel depth,M vl is the valid mask set to1e−3< d gt <80. H Error Bar Analysis Figure 9:Error Bar Analysis on KITTI Eigen test split. We conduct this analysis through multiple training runs and observe the performance oscillations after 25k steps. As highlighted in Sec 3. 4, directly training Jasmine can be unstable due to the SD’s enormous size, joint training across mod- ules, and indirect self-supervisory mecha- nisms. To further ensure stability, we also implement a module-wise freezing training strategy, which involves 3 key phases: In the beginning, we enable gradient updates for all network components. Subsequently, we freeze the SSG and Posenet modules to decouple depth-pose optimization while maintaining fixed parameters."
+    },
+    {
+      "id": "semantic_chunk::dav2_p35_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 35,
+      "score": 0.49617859721183777,
+      "text": "• Released models that have a high risk for misuse or dual-use should be released with necessary safeguards to allow for controlled use of the model, for example by requiring that users adhere to usage guidelines or restrictions to access the model or implementing safety filters. • Datasets that have been scraped from the Internet could pose safety risks. The authors should describe how they avoided releasing unsafe images. • We recognize that providing effective safeguards is challenging, and many papers do not require this, but we encourage authors to take this into account and make a best faith effort. 12. Licenses for existing assets Question: Are the creators or original owners of assets (e.g., code, data, models), used in the paper, properly credited and are the license and terms of use explicitly mentioned and properly respected? Answer: [Yes] Justification: We properly credited the creators or original owners of assets (e.g., code, data, models), used in the paper and conformed the license and terms. Guidelines: • The answer NA means that the paper does not use existing assets. • The authors should cite the original paper that produced the code package or dataset."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.4960763454437256,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024)."
+    },
+    {
+      "id": "semantic_chunk::dav2_p35_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 35,
+      "score": 0.4959126114845276,
+      "text": "• The authors should state which version of the asset is used and, if possible, include a URL. • The name of the license (e.g., CC-BY 4. 0) should be included for each asset. • For scraped data from a particular source (e.g., website), the copyright and terms of service of that source should be provided. 35"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.49529117345809937,
+      "text": "Table 1:Quantitative results on the KITTI dataset. For the error-based metrics , the lower value is better; and for the accuracy-based metrics , the higher value is better. The best and second-best results are marked in boldand underline. Jaeho et al* is a combined model that applies both Jaeho’s[34] (handle dynamic objects) and TriDepth’s[5] (solve edge flatten) approach. Jasmine* and Jasmine are the same model but use different alignments (discussed in Sec. 4. 3). In the data column, Syn, K, and H represent the synthetic, KITTI, and Hypersim datasets, respectively. The number of images and depth labels usage are in brackets. All experiments are conducted at 1024×320 resolution (Performance of Marigold/E2E FT/Lotus is robust to this resolution). Method Venue Notes Data AbsRelSqRel RMSERMSElog a1 a2 a3 Marigold[25] CVPR2024ZeroShotSyn(74K+74K)0. 120 0. 672 4. 033 0. 184 0. 874 0. 968 0. 985E2E FT[33] W ACV2025ZeroShotSyn(74K+74K)0. 112 0. 649 4. 099 0. 180 0. 890 0. 969 0. 985Lotus[21] ICLR2025ZeroShotSyn(59K+59K)0. 110 0. 611 3. 807 0. 175 0. 892 0. 970 0. 986Jasmine* - Mono KH(68K+0) 0. 102 0. 540 3. 728 0. 162 0. 907 0. 973 0. 987 Monodepth2[15]ICCV2019 Mono K(40K+0) 0. 115 0."
+    },
+    {
+      "id": "semantic_chunk::dav2_p36_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 36,
+      "score": 0.49434369802474976,
+      "text": "• If assets are released, the license, copyright information, and terms of use in the package should be provided. For popular datasets, paperswithcode.com/datasets has curated licenses for some datasets. Their licensing guide can help determine the license of a dataset. • For existing datasets that are re-packaged, both the original license and the license of the derived asset (if it has changed) should be provided. • If this information is not available online, the authors are encouraged to reach out to the asset’s creators. 13. New Assets Question: Are new assets introduced in the paper well documented and is the documentation provided alongside the assets? Answer: [Yes] Justification: We communicated the details of the dataset/code/model as part of their submission. Guidelines: • The answer NA means that the paper does not release new assets. • Researchers should communicate the details of the dataset/code/model as part of their submissions via structured templates. This includes details about training, license, limitations, etc. • The paper should discuss whether and how consent was obtained from people whose asset is used."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p13_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.4937214255332947,
+      "text": "Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly, J. Uszkoreit, N. Houlsby, An image is worth 16x16 words: transformers for image recognition at scale, in: International Conference on Learning Representations, 2021. [16] W. Yuan, X. Gu, Z. Dai, S. Zhu, P. Tan, Neural window fully-connected CRFs for monocular depth estimation, in: Proceedings of the IEEE/CVF Conference on Com- puter Vision and Pattern Recognition, 2022, pp. 3916–3925. [17] Z. Liu, Y. Lin, Y. Cao, H. Hu, Y. Wei, Z. Zhang, S. Lin, B. Guo, Swin transformer: hier- archical vision transformer using shifted windows, in: Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021, pp. 10012–10022. [18] S. F. Bhat, I. Alhashim, P. Wonka, LocalBins: improving depth estimation by learning local distributions, in: Computer Vision – ECCV 2022, Cham, 2022, pp. 480–496. [19] K. Xian, J. Zhang, O. Wang, L. Mai, Z. Lin, Z. Cao, Structure-guided ranking loss for single image depth prediction, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2020, pp. 608–617. [20] Z. Li, N."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.49352097511291504,
+      "text": "Despite these inherent disadvantages, as shown in Table 4, our method still outperforms the state- of-the-art approaches in both multi-frame and stereo-supervision domains across most metrics. This remarkable achievement, especially considering our more challenging problem setting, further demonstrates the substantial strength and generalizability of our approach. E. 3 Qualitative Comparisons Table 6:Ablation Studieson the mix-batch ratio. Ph refers to supervision using Eq. 5, while Latent refers to supervision using Eq. 4 . The notation +λ denotes the proportion of the KITTI dataset used (e.g., +0. 3 indicates a KITTI:Hypersim ratio of 3:7 in the MIR training data.) (ID) Method AbsRel SqRel RMSE a1 a2 Ph+0 0. 089 0. 5733. 973 0. 918 0. 972 Ph+0. 3 0. 090 0. 581 3. 944 0. 9190. 972 Ph+0. 6 0. 092 0. 5933. 933 0. 9150. 973 Ph+1 0. 093 0. 590 3. 970 0. 9150. 973 Latent+0 0. 106 0. 614 4. 181 0. 901 0. 970 Latent+0. 3 0. 095 0. 6064. 138 0. 909 0. 970 Latent+0. 6 0. 121 0. 649 4. 322 0. 8760. 970 Latent+1 0. 129 0. 679 4. 385 0. 858 0. 962 In Fig. 8, we further compare the perfor- mance of our Jasmine with other methods in multi scenes."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p25_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 25,
+      "score": 0.4931231141090393,
+      "text": "KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 25"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p25_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 25,
+      "score": 0.4931231141090393,
+      "text": "KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 25"
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p8_sc1",
+      "source": "data\\Global-Local.pdf",
+      "page": 8,
+      "score": 0.4920942187309265,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 8375–8384, 2020. [Yun et al., 2019] Sangdoo Yun, Dongyoon Han, Seong Joon Oh, Sanghyuk Chun, Junsuk Choe, and Youngjoon Yoo. Cutmix: Regularization strategy to train strong classiﬁers with localizable features. CoRR, abs/1905. 04899, 2019. [Zheng et al., 2021] Sixiao Zheng, Jiachen Lu, Hengshuang Zhao, Xiatian Zhu, Zekun Luo, Yabiao Wang, Yanwei Fu, Jianfeng Feng, Tao Xiang, Philip HS Torr, et al. Rethink- ing semantic segmentation from a sequence-to-sequence perspective with transformers. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 6881–6890, 2021."
+    },
+    {
+      "id": "semantic_chunk::dav2_p32_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 32,
+      "score": 0.4914034605026245,
+      "text": "Answer: [Yes] Justification: We provide detailed information about experiments in the appendix and provide the source code that can reproduce reported results. Guidelines: • The answer NA means that the paper does not include experiments. • If the paper includes experiments, a No answer to this question will not be perceived well by the reviewers: Making the paper reproducible is important, regardless of whether the code and data are provided or not. • If the contribution is a dataset and/or model, the authors should describe the steps taken to make their results reproducible or verifiable. • Depending on the contribution, reproducibility can be accomplished in various ways. For example, if the contribution is a novel architecture, describing the architecture fully might suffice, or if the contribution is a specific model and empirical evaluation, it may be necessary to either make it possible for others to replicate the model with the same dataset, or provide access to the model. In general."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p16_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 16,
+      "score": 0.49022209644317627,
+      "text": "1 Step-by-Step Workflow In this section, we temporarily omit the specifics of MIR and SSG to clarify the integration of self-supervision with the Stable Diffusion framework in Jasmine: • Input:A sequence of temporally adjacent images (like video frames), e.g., a source image It′ and a target imageI t. – Here It is exactly the training image, It′ can be the previous frame It−1 or the next frame It+1 ofI t. •Step 1: Depth Prediction (via SD U-Net): – The SD U-Net, f z θ , takes the latent of the target image, zI =V AE.encode(It), and a pure noise vector,n, as input. – It performs a single-step denoising process to predict the latent representation of a depth map, zy 0 . * This is the key point we mentioned in Sec 3. 1: single-step denoising make this step become a fast, feed-forward process rather than computationally prohibitive with slow, iterative denoising. –The V AE decoder then convertsz y 0 into the final depth map,D=V AE.decode(z y 0 ). – Crucially, no GT depth is ever used in this step. •Step 2: Pose Prediction: – A separate PoseNet takes the image pair (It, It′) as input and predicts the relative camera pose (rotation and translation),T t→t′."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p8_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 8,
+      "score": 0.4872261881828308,
+      "text": "Acknowledgements Thanks to the authors who shared their results, and Peter Hedman, Daniyar Turmukhambetov, and Aron Monszpart for their helpful discussions."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p8_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 8,
+      "score": 0.4872261881828308,
+      "text": "Acknowledgements Thanks to the authors who shared their results, and Peter Hedman, Daniyar Turmukhambetov, and Aron Monszpart for their helpful discussions."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p23_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 23,
+      "score": 0.4849216639995575,
+      "text": "while the second and third phases automatically transitioned, sharing an additional 10k steps for a total of 25k training steps. As illustrated in Fig. 9, we demonstrate that the pseudo-label supervision and module-wise freezing training are particularly crucial for steady training in complex, multi-module self-supervised systems. I Limitation and Future Work As noted in Sec. 2, the ubiquitously available videos suggest that the self-supervised methods possess significant data advantages and working potential. In this paper, Jasmine is trained on only tens of thousands of data samples and only on a driving dataset (KITTI), leaving room for further exploration in scaling up training data to other domains (industry, indoor, etc). We believe that if there really emerges a ‘GPT’ moment for 3D perception in the future, it will more likely involve self-supervised methods trained on videos rather than learning from annotated depth. Furthermore, we believe that the unsupervised Stable Diffusion fine-tuning paradigm proposed in this paper can be applied to other related fields, such as depth completion [56, 54, 57], depth super-resolution [55, 51], and Multi-view Stereo [63, 64, 61, 62]. 23"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p26_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 26,
+      "score": 0.4848901629447937,
+      "text": "KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 26"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p26_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 26,
+      "score": 0.4848901629447937,
+      "text": "KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 26"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p14_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 14,
+      "score": 0.4829466938972473,
+      "text": "Zhangyan Zhao received the BS degree in mechanical engineering from Southwest Jiao Tong University, Chengdu, China, in 1985, and the MS and PhD degrees in mechanical engineering from the Wuhan University of Technology, Wuhan, China, in 1991 and 2001, respectively. He is currently a Professor and a Doctoral Supervisor at the Wuhan University of Technology. His research topics are focused on metal structure fault diagnosis and safety evaluation, computer vision, and computer-aided engineering and manufacturing. Chenghua Zhang received the BS degree in mechanical design and manufacturing and automation from the North China University of Science and Technology, Tangshan, China, in 2016, and the MS degree in mechanical engineering from the Wuhan University of Technology, Wuhan, China, in 2018, where he is currently pursuing the PhD degree. His research interests include computer vision and close-range photogrammetry. Haipeng Liu is a Master’s candidate in Mechanical Engineering at Wuhan University of Technology, Wuhan, China. His research focuses on machine vision and image processing. Pattern Recognition 171 (2026) 112279 14"
+    },
+    {
+      "id": "semantic_chunk::dav2_p31_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 31,
+      "score": 0.482231080532074,
+      "text": "Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it fails to handle technical jargon. • The authors should discuss the computational efficiency of the proposed algorithms and how they scale with dataset size. • If applicable, the authors should discuss possible limitations of their approach to address problems of privacy and fairness. • While the authors might fear that complete honesty about limitations might be used by reviewers as grounds for rejection, a worse outcome might be that reviewers discover limitations that aren’t acknowledged in the paper. The authors should use their best judgment and recognize that individual actions in favor of transparency play an impor- tant role in developing norms that preserve the integrity of the community. Reviewers will be specifically instructed to not penalize honesty concerning limitations. 3. Theory Assumptions and Proofs Question: For each theoretical result, does the paper provide the full set of assumptions and a complete (and correct) proof? 31"
+    },
+    {
+      "id": "semantic_chunk::ACD_p9_sc4",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.48216548562049866,
+      "text": "In CVPR, pages 1851– 1858, 2017. [Zhu et al., 2017 ] Jun-Y an Zhu, Taesung Park, Phillip Isola, and Alexei A Efros. Unpaired image-to-image transla- tion using cycle-consistent adversarial networks. In CVPR, pages 2223–2232, 2017. [Zhu et al., 2023 ] Ruijie Zhu, Ziyang Song, Chuxin Wang, Jianfeng He, and Tianzhu Zhang. Ec-depth: Exploring the consistency of self-supervised monocular depth estimation under challenging scenes. arXiv, 2023. Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1259"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p17_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.4814091920852661,
+      "text": "Algorithm 1Jasmine Training Algorithm 1:Initialize:SD U-Net, PoseNet, SSG, V AE, optimizer 2:V AE.eval()▷V AE weights are frozen 3:foreach batch of inputs ‘I’ in dataloaderdo 4:▷Mix-batch Image Reconstruction (MIR) 5:s depth ←[1,0],s recon ←[0,1]▷Task switchers 6:z I t , zI m, zn ←V AE.encode(I[’I_t’],I[’I_m’],noise) 7:D ssi ←V AE.decode(SD_UNet([zI t , zn], t= 999, s=sdepth)) 8:I rec ←V AE.decode(SD_UNet([zI m, zn], t= 999, s=srecon)) 9:▷Scale-Shift GRU (SSG) 10:D list ←SSG(D ssi, zI t )▷ D list contains[D ssi, D1, Dsi] 11:pose←PoseNet(I[’I_t’],I[’I_t”])▷Pose Estimation for Self-Supervision 12:loss←compute_loss(I, D list, pose, Irec)▷Loss Computation and Optimization 13:optimizer.zero_grad() 14:loss.backward() 15:optimizer.step() 16:end for 17:functionCOMPUTE_LOSS(inputs,D list, pose,I rec) 18:D si, Dssi ←D list[−1], Dlist[0] 19:reproj_img←reproject(inputs[’I_t”], D si, pose) 20:L ph ←photometric_loss(reproj_img,inputs[’I_t’])▷Core self-supervised signal 21:L s ←photometric_loss(I rec,inputs[’I_m’])▷Surrogate task signal 22:L tc ←teacher_loss(D list,inputs[’D_tc’])▷As per Eq. 11 23:L a ←compute_auxiliary_loss(inputs, Dsi, Dssi) 24:loss←L ph +L s +L tc +L a ·0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.4808984696865082,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.4808984696865082,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p2_sc6",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.48083552718162537,
+      "text": "Prompt-tuning techniques [2, 26, 44, 47, 52] have shown that by designing appropriate prompts, VFMs can be effec- tively tailored to specific scenarios. Feature adaptation approaches [2, 10, 13, 16, 53, 54] further enhance the applicability of VFMs across different tasks. VPD [ 53] has demonstrated the potential of extracting features from pre-trained text-to-image models for"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p10_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.4804413616657257,
+      "text": "[52] Hengrun Zhao, Bolun Zheng, Shanxin Yuan, Hua Zhang, Chenggang Yan, Liang Li, and Gregory Slabaugh. 2022. CBREN: Convolutional Neural Networks for Constant Bit Rate Video Quality Enhancement. IEEE Transactions on Circuits and Systems for Video Technology 32, 7 (2022), 4138–4149. [53] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. 2023. Unleashing text-to-image diffusion models for visual perception. In Proceedings of the IEEE/CVF International Conference on Computer Vision . 5729– 5739. [54] B Zheng, S Yuan, C Yan, X Tian, J Zhang, Y Sun, L Liu, A Leonardis, and G Slabaugh. 2022. Learning Frequency Domain Priors for Image Demoireing. IEEE Transactions on Pattern Analysis and Machine Intelligence44, 11 (2022), 7705–7717."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p9_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 9,
+      "score": 0.48014548420906067,
+      "text": "Y. Zou et al. Fig. 10. Qualitative comparison on the Cityscapes dataset. Table 4 Zero-shot quantitative results on two unseen datasets. Method SUN RGB-D Virtual KITTI 2 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ BTS [12] 0. 740 0. 933 0. 172 0. 515 0. 075 0. 831 0. 948 0. 115 5. 368 0. 054 AdaBins [9] 0. 771 0. 944 0. 159 0. 476 0. 068 0. 862 0. 957 0. 112 5. 218 0. 048 LocalBins [18] 0. 777 0. 949 0. 156 0. 470 0. 067 0. 810 0. 940 0. 127 5. 981 0. 061 NeWCRFs [16] 0. 798 0. 967 0. 151 0. 424 0. 064 0. 829 0. 951 0. 117 5. 691 0. 056 BinsFormer [10] 0. 805 0. 963 0. 143 0. 421 0. 061 – – – – – ZoeDepth [41] 0. 856 0. 979 0. 123 0. 356 0. 053 0. 850 0. 965 0. 105 5. 095 0. 050 Ours 0. 822 0. 969 0. 135 0. 395 0. 057 0. 890 0. 964 0. 098 4. 878 0. 043 Fig. 11. Qualitative zero-shot results on the SUN RGB-D dataset. Pattern Recognition 171 (2026) 112279 9"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p9_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.48003527522087097,
+      "text": "and four weather scenarios of driving stereo. Remarkably, our methodmaintains effectiveness in out-of-distribution (OOD) rainy conditions even without specialized training on weather-enhanced datasetslike WeatherKITTI[ 48]. As illustrated in Fig. 1, Jasmine successfully identifies water surface reflections while producing refined depth estimates. The fine-grain estimation details are further demonstrated in Fig. 5, pedestrian chins (second row), tree support structures (third row), and bicycle-rider contours (fourth row) are all predicted delicately and precisely. These sharp results were completely disrupted by the reprojection loss in previous self-supervised methods. Further AnalysisWe also deeply compare Jasmine with other SSDE configurations (stereo training and multi-frame inference) and on KITTI improved GT benchmark in Sec. E. 2, E. 1. 4. 3 Analysis of Depth De-normalization Figure 6:Comparison of different de-normalization schemes. The blue points are predictions after align- ment and the green line is the ideal GT depth. Sub- figures (a,c) are the results of LSQ alignment, while (b,d) are median alignment."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.4796697497367859,
+      "text": "880 57. 262 3. 111 2. 3233. 380 60. 507 3. 673 2. 6992. 730 37. 513 3. 471 2. 1543. 420 53. 77 3. 438 2. 458Retinexformer with GT-mean loss (ours) 3. 210 57. 247 3. 805 2. 7733. 820 56. 633 3. 195 2. 4123. 840 57. 374 3. 273 2. 4233. 370 60. 682 3. 706 2. 7192. 770 37. 654 3. 517 2. 1663. 400(-)53. 918(+)3. 499(+)2. 498(+) SNR 6. 070 47. 025 3. 379 2. 5264. 270 48. 685 2. 531 1. 9436. 060 49. 216 2. 836 2. 1026. 470 46. 441 3. 445 2. 55111. 520 23. 186 3. 067 1. 9556. 880 42. 911 3. 052 2. 215SNR with GT-mean loss (ours) 6. 120 47. 430 3. 521 2. 5714. 260 48. 780 2. 571 1. 9576. 110 49. 008 2. 946 2. 1526. 460 46. 602 3. 580 2. 60511. 550 23. 853 3. 137 1. 9976. 900(+)43. 135(+)3. 151(+)2. 256(+) Uformer 3. 080 58. 084 2. 971 2. 1443. 720 56. 177 3. 177 2. 4033. 660 57. 698 2. 646 1. 9673. 400 61. 310 2. 938 2. 1312. 700 36. 235 2. 904 1. 8393. 310 53. 901 2. 927 2. 097Uformer with GT-mean loss (ours) 3. 120 58. 981 3. 067 2. 1803. 690 56. 641 3. 229 2. 4263. 640 58. 200 2. 712 1. 9733. 380 61. 704 2. 956 2. 1132. 700 36. 695 3. 001 1. 8483. 300(-)54. 444(+)2. 993(+)2. 108(+) LLformer 3. 260 56. 642 3. 832 2. 7883. 750 53. 335 2. 667 1. 9934. 010 55. 671 3. 040 2. 3433. 320 59."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.4796697497367859,
+      "text": "880 57. 262 3. 111 2. 3233. 380 60. 507 3. 673 2. 6992. 730 37. 513 3. 471 2. 1543. 420 53. 77 3. 438 2. 458Retinexformer with GT-mean loss (ours) 3. 210 57. 247 3. 805 2. 7733. 820 56. 633 3. 195 2. 4123. 840 57. 374 3. 273 2. 4233. 370 60. 682 3. 706 2. 7192. 770 37. 654 3. 517 2. 1663. 400(-)53. 918(+)3. 499(+)2. 498(+) SNR 6. 070 47. 025 3. 379 2. 5264. 270 48. 685 2. 531 1. 9436. 060 49. 216 2. 836 2. 1026. 470 46. 441 3. 445 2. 55111. 520 23. 186 3. 067 1. 9556. 880 42. 911 3. 052 2. 215SNR with GT-mean loss (ours) 6. 120 47. 430 3. 521 2. 5714. 260 48. 780 2. 571 1. 9576. 110 49. 008 2. 946 2. 1526. 460 46. 602 3. 580 2. 60511. 550 23. 853 3. 137 1. 9976. 900(+)43. 135(+)3. 151(+)2. 256(+) Uformer 3. 080 58. 084 2. 971 2. 1443. 720 56. 177 3. 177 2. 4033. 660 57. 698 2. 646 1. 9673. 400 61. 310 2. 938 2. 1312. 700 36. 235 2. 904 1. 8393. 310 53. 901 2. 927 2. 097Uformer with GT-mean loss (ours) 3. 120 58. 981 3. 067 2. 1803. 690 56. 641 3. 229 2. 4263. 640 58. 200 2. 712 1. 9733. 380 61. 704 2. 956 2. 1132. 700 36. 695 3. 001 1. 8483. 300(-)54. 444(+)2. 993(+)2. 108(+) LLformer 3. 260 56. 642 3. 832 2. 7883. 750 53. 335 2. 667 1. 9934. 010 55. 671 3. 040 2. 3433. 320 59."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.47909015417099,
+      "text": "Alignment protocols and annotation rules follow Table 1’s specifications. AbsRel, RMSE, anda 1 metrics are shown. Method DrivingStereo Rainy CityScape Cloudy Foggy AbsRelRMSE a1 AbsRelRMSE a1 AbsRelRMSE a1 AbsRelRMSE a1 AbsRelRMSE a1 Marigold[25] 0. 178 6. 638 0. 749 0. 1486. 770 0. 801 0. 164 6. 632 0. 763 0. 173 6. 881 0. 751 0. 146 6. 545 0. 798 E2E FT[33] 0. 160 5. 4370. 795 0. 164 6. 671 0. 793 0. 160 6. 944 0. 792 0. 157 5. 5220. 797 0. 141 6. 0340. 836 Lotus[21] 0. 173 5. 816 0. 771 0. 167 6. 675 0. 775 0. 147 6. 5820. 824 0. 159 5. 640 0. 795 0. 150 6. 173 0. 798 Jasmine* 0. 134 4. 666 0. 854 0. 159 6. 071 0. 8250. 107 5. 000 0. 907 0. 134 4. 762 0. 846 0. 113 4. 883 0. 897 MonoDepth2[15]0. 191 8. 359 0. 770 0. 260 12. 577 0. 6090. 158 8. 185 0. 783 0. 192 10. 07 0. 775 0. 156 10. 425 0. 799 MonoViT[68] 0. 150 7. 657 0. 8150. 190 9. 407 0. 724 0. 140 7. 913 0. 802 0. 134 7. 2800. 849 0. 107 7. 899 0. 882 Mono-ViFI[29] 0. 158 6. 723 0. 798 0. 400 13. 960 0. 4840. 134 7. 372 0. 8170. 154 6. 883 0. 800 0. 160 8. 494 0. 769 WeatherDepth[48]0. 166 6. 986 0. 796 0. 166 8. 8440. 748 0. 1376. 5150. 837 0. 167 7. 566 0. 793 0. 132 7. 679 0. 859 Jasmine 0. 136 5. 340 0. 850 0. 160 7."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.47900378704071045,
+      "text": "882 4. 701 0. 190 0. 879 0. 961 0. 982HR-Depth[31] AAAI2021 Mono K(40K+0) 0. 106 0. 755 4. 472 0. 181 0. 892 0. 966 0. 984R-MSFM6[72]ICCV2021 Mono K(40K+0) 0. 108 0. 748 4. 470 0. 185 0. 889 0. 963 0. 982DevNet[70] ECCV2022Mono K(40K+0) 0. 100 0. 699 4. 412 0. 174 0. 893 0. 966 0. 985DepthSegNet[32]ECCV2022Mono K(40K+0) 0. 099 0. 624 4. 165 0. 171 0. 902 0. 969 0. 985SD-SSMDE[37]CVPR2022 Mono K(40K+0) 0. 098 0. 674 4. 187 0. 170 0. 902 0. 968 0. 985MonoViT[68] 3DV 2022 Mono K(40K+0) 0. 096 0. 714 4. 292 0. 172 0. 908 0. 968 0. 984LiteMono[67] CVPR2023 Mono K(40K+0) 0. 102 0. 746 4. 444 0. 179 0. 896 0. 965 0. 983DaCCN[20] ICCV2023 Mono K(40K+0) 0. 094 0. 624 4. 145 0. 169 0. 909 0. 970 0. 985Jaeho et al*.[5, 34]CVPR2024 Mono K(40K+0) 0. 091 0. 604 4. 066 0. 164 0. 913 0. 9700. 986RPrDepth[19] ECCV2024Mono K(40K+0) 0. 091 0. 612 4. 098 0. 162 0. 910 0. 971 0. 986Mono-ViFI[29]ECCV2024Mono K(40K+0) 0. 093 0. 589 4. 072 0. 168 0. 909 0. 969 0. 985Jasmine - Mono KH(68K+0) 0. 090 0. 581 3. 944 0. 161 0. 919 0. 972 0. 986 Table 2:Quantitative zero-shot results on the CityScape and DrivingStereo dataset and its variants (Rainy, Cloudy, Foggy)."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p11_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.4789906144142151,
+      "text": "Cutmix: Regu- larization strategy to train strong classifiers with localizable features. In ICCV, 2019. 4 [84] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, 2023. 8 [85] Youcai Zhang, Xinyu Huang, Jinyu Ma, Zhaoyang Li, Zhaochuan Luo, Yanchun Xie, Yuzhuo Qin, Tong Luo, Yaqian Li, Shilong Liu, et al. Recognize anything: A strong image tagging model. arXiv:2306. 03514, 2023. 4 [86] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. In ICCV, 2023. 6 [87] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba. Places: A 10 million image database for scene recognition. TPAMI, 2017. 3 [88] Bolei Zhou, Hang Zhao, Xavier Puig, Sanja Fidler, Adela Bar- riuso, and Antonio Torralba. Scene parsing through ade20k dataset. In CVPR, 2017. 6 [89] Barret Zoph, Golnaz Ghiasi, Tsung-Yi Lin, Yin Cui, Hanx- iao Liu, Ekin Dogus Cubuk, and Quoc Le. Rethinking pre- training and self-training. In NeurIPS, 2020. 2 10381"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Jasmine_p15_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.5962125658988953,
+      "text": "Appendix In this appendix, we provide more implementation details, experiments, analysis, and discussions for a comprehensive evaluation and understanding of Jasmine. Detailed contents are listed as follows: Contents A Proof of Scale-Invariant Depth 15 B Detailed Training Workflow and Pseudocode 16 B. 1 Step-by-Step Workflow . 16 B. 2 Training Pseudocode . 17 C Supervision Details 17 C. 1 SGD Loss for Dynamic Object . 18 C. 2 Edge Loss for Sharp Prediction . 18 C. 3 Sky Loss for Anti-artifact . 18 C. 4 Eliminating the Bottleneck of Teacher Loss . 19 D Preliminaries of GRU 20 E Addition Experiments Results 21 E. 1 Evaluation on KITTI Improved Benchmark . 21 E. 2 Comparison with Other Self-Supervised Settings . 21 E. 3 Qualitative Comparisons . 21 E. 4 Mix-batch Ratio Ablation Details . 21 F Analysis of SD Prior Degradation via Self-Supervision 22 G Evaluation Metrics 22 H Error Bar Analysis 22 I Limitation and Future Work 23 A Proof of Scale-Invariant Depth For SSI depth, we assume that the estimated depth ˆD and the ground truth depth D have the following relationship: ˆD=s cD+s h Meanwhile, the depth from another viewpoint can be denoted as g1(D′).",
+      "estimated_tokens": 300
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 300,
+    "compressed_context_tokens": 300,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 300,
+  "context_tokens": 300,
+  "prompt_token_estimate": 643,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_jasmine_main_contributions",
+  "answer": "<think>The user wants me to answer a question about the main contributions of the \"Jasmine\" paper based only on the provided material. Let me examine the given material carefully.\n\nThe provided material is from the Appendix of the Jasmine paper (source: data\\Jasmine.pdf), which lists contents like:\n- A Proof of Scale-Invariant Depth\n- B Detailed Training Workflow and Pseudocode\n- C Supervision Details (SGD Loss, Edge Loss, Sky Loss, etc.)\n- D Preliminaries of GRU\n- E Addition Experiments Results (KITTI evaluation, self-supervised comparisons, qualitative comparisons, mix-batch ratio ablation)\n- F Analysis of SD Prior Degradation via Self-Supervision\n- G Evaluation Metrics\n- H Error Bar Analysis\n- I Limitation and Future Work\n\nHowever, the actual content provided only includes the table of contents and a tiny bit of section A (the beginning of the proof). The main contributions of the paper are not explicitly stated in the provided excerpt.\n\nThe appendix mentions:\n- SSI (Scale-Invariant) depth estimation\n- Training workflow with specific losses (SGD Loss for Dynamic Object, Edge Loss for Sharp Prediction, Sky Loss for Anti-artifact)\n- Teacher Loss elimination\n- GRU preliminaries\n- Evaluation on KITTI Improved Benchmark\n- Self-supervised settings comparison\n- Mix-batch Ratio ablation\n\nBut none of this directly states the \"main contributions\" of the paper. The main paper content (not the appendix) would typically describe the contributions in the introduction.\n\nGiven that the provided material is only an appendix and doesn't explicitly state the main contributions, I should indicate that the information is missing.\n\nWait, let me reconsider. The appendix contents do suggest some contributions:\n1. A new method for dynamic object handling (SGD Loss for Dynamic Object)\n2. Edge Loss for Sharp Prediction\n3. Sky Loss for Anti-artifact\n4. Scale-Invariant depth estimation\n5. Using GRU (preliminaries section)\n6. Mix-batch training strategy\n7. Self-supervised approach\n\nBut these are inferences from appendix sections, not explicit statements of contributions.\n\nI should be honest that the provided material doesn't explicitly state the main contributions. The material only contains the appendix table of contents and a partial section.\n\nLet me provide a response that acknowledges the limited information available.</think>\n\n{\"answer\": \"所提供资料仅为Jasmine论文的附录目录及部分小节开头，未包含论文正文（特别是引言/摘要）中对主要贡献的明确阐述，因此无法直接列出作者声称的核心贡献。\", \"items\": [], \"missing_information\": \"缺少Jasmine论文正文（引言或结论）中对其主要贡献的明确陈述；目前仅有附录目录，可推测涉及尺度不变深度（SSI）、动态目标SGD损失、边缘损失、天空损失、GRU、教师损失消除、混合批次策略及KITTI评测等组件，但这些仅为附录章节标题，并非论文正式声明的贡献。\"}",
+  "usage": {
+    "prompt_tokens": 684,
+    "completion_tokens": 598,
+    "total_tokens": 1282,
+    "model": "MiniMax-M3"
+  }
+}

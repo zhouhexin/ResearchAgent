@@ -1,0 +1,422 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_paper_bpg_co_ask_baseline_none_7301cc6f4ca7",
+  "dry_run": false,
+  "query": "Brightness Peak Generator (BPG) 由哪些关键步骤或子模块组成？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::TDDC_p4_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.7877792119979858,
+      "text": "3. 3 Photometric distribution modeling In this part, we model the nonuniform photometric distribu- tion at night by adding additional light sources. The wave optics/diffraction effect of light source imaging and reflec- tions are considered in the sampling. Since it makes peaks of brightness in the original image plane, we call it Brightness Peak Generator (BPG). Light Source Sample Due to the diffraction/wave optics effects[Lipson et al., 2010; Goodman, 2005 ], when a point light is viewed through an aperture that is not an ideal circle or a lens that is stained or scratched, the imaging results of the light source will be a combination of glare, streak, and shimmer, instead of a dot [Dai et al. , 2022; Kakimoto et al. , 2004 ]. In computer graphics, some methods [Kakimoto et al. , 2004; Luidolt et al., 2020] approximate this optical phenomenon by using the 2D Fourier transform, but the output is uncontrol- lable and the cost is expensive. Therefore, instead of simulat- ing the light source image directly, we construct a light source bank based on Flare7K [Dai et al., 2022] dataset, which is the only light source dataset with 7000 samples."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7564558982849121,
+      "text": "Light Intensity Adaptation: Since daytime images typically ex- hibit sufficient illumination and high overall brightness, directly applying light source imaging𝐿𝑆 tends to fail in generating promi- nent brightness peaks. To address this issue, we apply a simple random darkening oper- ation to the input image, where the brightness scaling factor𝑠𝑏 is sampled from a uniform distribution. To enrich the diversity of light sources while avoiding excessively glaring effects, the peak bright- ness intensity𝐹 is defined as the product of the number of light sources𝑁𝐹 and the scaling factor 𝑠𝐹 , both𝑠𝐹 and𝐹 are sampled from a log-uniform distribution: 𝑠𝐹∼ exp \u0010 𝑈(log𝑠𝑚𝑖𝑛 𝐹 , log𝑠𝑚𝑎𝑥 𝐹 ) \u0011 , 𝐹∼ exp \u0010 𝑈(log𝐹𝑚𝑖𝑛, log𝐹𝑚𝑎𝑥) \u0011 . (2) where𝑠𝐹 is the scale factor and𝐹𝑚𝑖𝑛,𝐹𝑚𝑎𝑥 represents the intensity range. The total number of light sources𝑁𝐹 is computed as: 𝑁𝐹 = max \u0012\u0016 𝐹 𝑠𝐹 + 0. 5 \u0017 , 1 \u0013 . (3) Additionally, the brightness scale𝑠𝑏 is sampled as𝑠𝑏∼𝑈(0. 4, 1), and the gamma correction factor is sampled as 𝑔𝐹 ∼ 𝑈(1. 8, 2. 2)."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc3",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7479104995727539,
+      "text": "4 More visualization for ablation analyses In Fig E. 1, the BPG helps the regions where highlight spots frequently occur, such as the cars and the road, as shown in the cyan dashed boxes. The ING simulates the potential imaging noises in the dark area, thus present better depth pre- diction at the background, such as the sky. The full model receives the merits of BPG and ING, and thus has the best prediction performance at the mentioned areas. More quanti- tative study is in Sec. 4. 4 in the main paper. Input Baseline BPG ING Full Figure E. 1: Ablation test. Left: test on nuScenes-Night. Right: test on RobotCar-Night. Baseline, BPG, ING, and Full mean us- ing nothing, Brightness Peak Generator, Image Noise Generator and BPG+ING for data compensation, respectively."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p4_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.7442923784255981,
+      "text": "(2) Random Darken The above light source imaging LS cannot produce signifi- cant peaks of brightness on the image because the daytime image is usually well-lit with high brightness. To efficiently improve the role of LS on the photometric distribution, a simple random darkening operation is applied. The illumi- nation scale rate is set to follow uniform distribution, i.e. sd ∼ U(0. 4, 1). BPG Intensity F We use the product of the light sources number NF and a resize scale rate sF as the BPG IntensityF . To enrich outputs while avoiding numerous aggressive results, a log uniform distribution is applied to select NF and F : log sF ∼ U(log smin F , log smax F ), log F ∼ U(log F min, log F max), NF = max(⌊ F sF + 1 2 ⌋, 1). (3) Following Flare7K [Dai et al., 2022], BPG adds the light source within the gamma range of gf ∼ U(1. 8, 2. 2). The sampled image on current stage, I L t , will be I L t = (sdIt)gf + NFX i=1 ss (LS, sF , pi)gf ! 1/gf . (4) NF is the total number of light sources, and ss(., ., .) repre- sents scaling and shifting the sampledLS by the scale rate sF and the 2D coordinate pi. Figure 3. 1: Example visualizations of Re-rendering. Top: Reflec- tion images."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p4_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.7408427000045776,
+      "text": "When applied, BPG randomly samples a single image from the light source bank. Then, the image will be scaled to the standard size which is determined by the long side of It (A square whose sides are equal to the long side of It ). Simple image augmentation is further applied to expand the num- ber of light source images. The scaled and augmented light source image is used as the standard light source image LS. 3D Position of Light Source The sampled light source is assumed to be randomly dis- tributed in the scene. We do not model the location because it is costly to include precise segmentation information in our training which requires large trained models. Firstly, a 2D coordinatepi is randomly appointed as the lo- cation of the light source. We limit the depth of it,zi, with the predicted scale depth map (discussed latter in this section). A up range with higher priority was manually set to 25m as far- ther light sources produce almost invisible reflection images. Then, the appointed 3D position will be: Pi = ziK −1 I ˙pi."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p2_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.715796172618866,
+      "text": "distribution are located as two key components. Then, we build up corresponding modules for simulation. Considering the wave optics/diffraction effect of light sources as well as reflections, we propose Brightness Peak Generator (BPG) to model the difference in photometric distribution. Based on the shot-read noise model, we build up Imaging Noise Gen- erator (ING) to model nighttime noise distribution. The joint application of BPG and ING together with the day-image dis- tribution results in a fused distribution that has a photometric and noise distribution close to the night images. The fused distribution is randomly sampled and used for the training of the depth network. As shown in Fig. 1. 1, thoughno night im- age is seen during training, our method still achieves superior performance compared to existing nighttime methods. Our main contributions are summarized as follows: (I) We propose a nighttime monocular depth training framework that use day image pairs as the stable source of self-supervision. (II) Our training framework requires no night images dur- ing training. We accomplish this design by day-to-night data distribution compensation."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7143692374229431,
+      "text": "In our supplementary material, we provide additional tests on nuScenes-Day and Robotcar-Day, give a complete qual- itative comparison on nuScenes-Night/nuScenes-Day and RobotCar-Night/RobotCar-Day, and offer additional visual results on other nighttime datasets to further prove the effec- tiveness of our method. 4. 3 Ablation Test on Pre-processing Contribution of Each Part Table 4. 2 shows the contributions of each pre-processing part. The comparison of different self-supervised training ap- proaches is left to the supplementary material to further prove the effectiveness of our training framework. In nuScenes-Night, compared with the baseline, BPG im- proves ABS rel by 19. 3% and RMSE by 14. 0%, and ING im- proves ABS rel by 18. 0% and RMSE by 9. 1%. Besides, the joint application of BPG and ING achieves the best scores with 20. 8% improvement on ABS rel, 20. 1% on RMSE and 35. 3% on δ1. For RobotCar-Night, the joint application of BPG and ING still achieves a significant boost with 13. 2% on ABS rel and 9. 7% on RMSE. In addition, Table 4. 2 shows that the joint application of BPG and ING significantly improves RMSE (7. 2% in nuScenec-Night and 8."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.7125333547592163,
+      "text": "We further discuss the effect of F max, Kmax as well as the composition of ING in our main paper. Since the processing of Re-rendering requires the corre- sponding depth map as input, decay usage of BPG and ING is applied, and the starting step is set to 20,000. To maintain performance on daytime images, BPG and ING processing rates are set to 0. 5, and these two probabilities are indepen- dent of each other. D. 4 Augmentation on light source images For the sampled light source image, a random rotation U (0, 2π) and a random flip is applied. Then, a random weight follows U (1, 3) is used to scale the brightness. U (0. 8, 1. 2) is used for the scale of contrast and saturation. A Gaussian blur is also used with a sigma limit range of[0. 1, 3] to enhance the low-passing glow effect. D. 5 Pre-crop of nuScenes and Oxford RobotCar Pre-cropping is used in RNW [Wang et al. , 2021 ] and ADDS [Liu et al. , 2021 ] to balance the image aspect ratio and cut out the imaging of car hoods. We follow the same approach as proposed in these papers. For nuScenes, the im- ages are first center-cropped from 1600 ×900 to 1536 ×768 before testing or the training of DA or DT types methods."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p6_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 6,
+      "score": 0.7013362646102905,
+      "text": "• Full Brightness Alignment : Exclusive use of the brightness-aligned loss throughout training. • GT-Mean Loss: Our proposed dynamic combination of the baseline and brightness-aligned losses. Metrics were recorded every 5K iterations over a total of 150K iterations, including perceptual quality (LPIPS), pixel fidelity (PSNR), and brightness discrepancy |E[y] − E[f (x)]|. 4. 3. 2. Quantitative Analysis. As shown in Figure 4A, three key findings are revealed: Does brightness alignment improve perception? We first compare the hybrid strategy with baseline. When brightness alignment is introduced at 80K iterations, the hybrid ap- proach achieves 0. 129 LPIPS (vs. baseline 0. 155), indicat- ing enhanced perceptual quality. However, this comes at the cost of increased mean brightness discrepancy (from 0. 028 to 0. 075) and 4. 6dB PSNR drop. These results suggest that while the introduction of brightness alignment in the hybrid strategy benefits human perception, its linear implementa- tion disrupts the learning of brightness distribution. 6"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p6_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 6,
+      "score": 0.7013362646102905,
+      "text": "• Full Brightness Alignment : Exclusive use of the brightness-aligned loss throughout training. • GT-Mean Loss: Our proposed dynamic combination of the baseline and brightness-aligned losses. Metrics were recorded every 5K iterations over a total of 150K iterations, including perceptual quality (LPIPS), pixel fidelity (PSNR), and brightness discrepancy |E[y] − E[f (x)]|. 4. 3. 2. Quantitative Analysis. As shown in Figure 4A, three key findings are revealed: Does brightness alignment improve perception? We first compare the hybrid strategy with baseline. When brightness alignment is introduced at 80K iterations, the hybrid ap- proach achieves 0. 129 LPIPS (vs. baseline 0. 155), indicat- ing enhanced perceptual quality. However, this comes at the cost of increased mean brightness discrepancy (from 0. 028 to 0. 075) and 4. 6dB PSNR drop. These results suggest that while the introduction of brightness alignment in the hybrid strategy benefits human perception, its linear implementa- tion disrupts the learning of brightness distribution. 6"
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6976149082183838,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9 Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderLB 14. 199 0. 187 0. 072 0. 292 28. 938 5. 620 0. 772 0. 909 0. 956LED 0. 5°11. 089 0. 119 0. 050 0. 213 21. 251 2. 304 0. 864 0. 950 0. 977LED 0. 25°8. 6950. 1090. 040 0. 190 18. 635 2. 1280. 899 0. 9630. 984LED 0. 125°10. 1540. 096 0. 040 0. 19018. 862 2. 1320. 907 0. 969 0. 984 DepthF ormerLB 8. 777 0. 138 0. 050 0. 186 17. 170 3. 365 0. 864 0. 957 0. 983LED 0. 5°6. 810 0. 101 0. 041 0. 152 14. 380 1. 376 0. 890 0. 969 0. 989LED 0. 25°5. 6210. 0820. 0300. 126 11. 7351. 1630. 923 0. 978 0. 992LED 0. 125°5. 7270. 076 0. 030 0. 116 10. 7541. 2610. 940 0. 987 0. 995 DepthAnythingV2 - 1000 training imagesLB 7. 637 0. 104 0. 044 0. 160 14. 617 1. 401 0. 891 0. 972 0. 990LED 0. 5°7. 017 0. 109 0. 047 0. 161 14. 044 1. 260 0. 877 0. 9697 0. 989LED 0. 25°6. 304 0. 102 0. 044 0. 146 12. 300 1. 079 0. 885 0. 9730. 993LED 0. 125°5. 785 0. 082 0. 037 0. 126 10. 673 0. 840 0. 921 0. 9810. 992 Table 6:Performance comparison on real-world data using various pattern resolutions."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p5_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.6926561594009399,
+      "text": "How- ever, raw images or the exact inverse ISP are not available in most daytime datasets. The simplest ISP includes white bal- ance, binning, denoising, color collection and gamma com- pression [Chen et al., 2018; Brooks et al., 2019]. Fortunately, except for denoising and gamma compression, rest operations can be viewed as approximately linear processes. We con- sider the gamma compression in ING as it’s strongly nonlin- ear. Following ELD, we set gn = 1/2. 2. To simulate the low photon count C in the dark, a light scale factor sn is proposed follows U (100, 300) [Wei et al., 2020]. Then, the simulated raw image will be RLR t = sbit(I LR t )1/gn sn , (13) where sbit denotes quantization factor equals to 2bit − 1. ING Intensity K According to Eq. 9, Eq. 11 and Eq. 12, system gain K has a positive relationship with the noise intensity. Therefore, we appoint K as ING Intensity. Similar in BPG, we make ING Intensity following the log uniform: log K ∼ U(log K min, log K max). (14) Finally, with the simulated raw image RLR t , the sampled shot noise Np and read noise Nread, the output of ING will be I LRN t = \u0012 snRLR t + KN p + Nread sbit \u0013gn . (15) Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.6905618906021118,
+      "text": "824 3. 657 2. 7163. 160 60. 885 3. 557 2. 2493. 500 57. 271 3. 351 2. 418LLformer with GT-mean loss(ours)3. 050 57. 038 3. 910 2. 8373. 650 53. 842 2. 706 2. 0174. 070 55. 830 3. 118 2. 4163. 330 60. 044 3. 707 2. 7312. 990 60. 858 3. 563 2. 2313. 410(-)57. 522(+)3. 401(+)2. 446(+) Brightness discrepancy Iterations(K) PNSR Iterations(K) 50K 100K 150K with GT-mean loss baseline with GT-mean loss GT input C baseline B LPIPS Iterations(K) A Figure 4. Impact of GT-Mean Loss integration on training dynamics and enhancement quality. (A) Evolution of LPIPS (perceptual quality), PSNR (pixel fidelity), and brightness discrepancy ( |E[y] − E[f (x)]|) across four training strategies. (B) Absolute residual heatmaps (|y − f (x)|) at critical training stages. (C) Final output comparison showing improvements in color fidelity and detail preservation. Can brightness alignment alone achieve performance improvement? We found that the full brightness align- ment strategy causes a monotonic increase in LPIPS from 0. 191 to 0. 473, and PSNR decreases from 18. 6 dB to 7. 9 dB. These results demonstrate that the original loss term is crucial to the model’s training process."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.6905618906021118,
+      "text": "824 3. 657 2. 7163. 160 60. 885 3. 557 2. 2493. 500 57. 271 3. 351 2. 418LLformer with GT-mean loss(ours)3. 050 57. 038 3. 910 2. 8373. 650 53. 842 2. 706 2. 0174. 070 55. 830 3. 118 2. 4163. 330 60. 044 3. 707 2. 7312. 990 60. 858 3. 563 2. 2313. 410(-)57. 522(+)3. 401(+)2. 446(+) Brightness discrepancy Iterations(K) PNSR Iterations(K) 50K 100K 150K with GT-mean loss baseline with GT-mean loss GT input C baseline B LPIPS Iterations(K) A Figure 4. Impact of GT-Mean Loss integration on training dynamics and enhancement quality. (A) Evolution of LPIPS (perceptual quality), PSNR (pixel fidelity), and brightness discrepancy ( |E[y] − E[f (x)]|) across four training strategies. (B) Absolute residual heatmaps (|y − f (x)|) at critical training stages. (C) Final output comparison showing improvements in color fidelity and detail preservation. Can brightness alignment alone achieve performance improvement? We found that the full brightness align- ment strategy causes a monotonic increase in LPIPS from 0. 191 to 0. 473, and PSNR decreases from 18. 6 dB to 7. 9 dB. These results demonstrate that the original loss term is crucial to the model’s training process."
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc2",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6901035308837891,
+      "text": "The HB- trained model fails significantly on pattern data (+182. 85% RMSE), while the LED-trained model performs reasonably on HB, with a +32. 63% RMSE. The LED→HB performance is ∼8 m RMSE, compared to∼17 m RMSE for HB→LED. Furthermore, we show that incor- porating only 10% of HB data reduces performance drop (see fig. 6 (c)), limiting RMSE increase to just +17. 11%. It enables a single network to perform well across both domains. This adaptability broadens the method’s applications, allowing selective use of the pattern for higher precision, its absence to avoid glare, or focused pattern projection on specific regions, such as objects of interest 5. 6 Real-world Scenarios We show the applicability of our method in real world scenarios using our in-house dataset. We report results in table 6. LED significantly boosts performance over LB across all met- rics. DepthFormer (0. 5°) shows -22. 4% RMSE improvement. The qualitative results in fig. 7 show LED’s robustness under interfering light sources,e.g., car headlights, street lights. To account for objects passing through the pattern illumination, we investigate the impact of smaller checkerboard cells. Using a size of 0."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p5_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.6898810267448425,
+      "text": "Specifically, we introduce illumi- nation guidance term𝐼𝐹𝑁𝑔 in the LLPEFT strategy, which is defined as follows: 𝐼𝐹𝑁 𝑔 =𝑚𝑒𝑎𝑛𝑐 \u0000𝐿𝐿𝐷𝐺(𝐼)\u0001, (7) The operation𝑚𝑒𝑎𝑛𝑐 computes the mean value of each pixel along the channel dimension. As shown in Fig. 1. 1, the low-light image𝐼𝐹𝑁 is synthesized from the daytime image𝐼 using LLDG, while𝐼𝐹𝑁𝑔 is generated from𝐼𝐹𝑁 using illumination guidance. This process effectively simplifies the illumination guidance procedure by converting the low-light image into a grayscale representation using a simple but efficient approach. This transformation helps to reduce noise, enhance the brightness distribution, and simplify the information structure. Although this approach results in the loss of color information, it does not significantly affect the final outcome, as the color information is already preserved in the low-light image 𝐼𝐹𝑁 . Ultimately, by introducing this illumination guidance, the model can focus on learning robust feature representations, thereby miti- gating noise amplification, color distortion, and artifacts caused by long exposure and high ISO settings. 3. 2. 2 Multiscale Feature Fusion."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.688434362411499,
+      "text": "This perceptual characteristic motivates our probabilis- tic modeling of brightness distributions: by treating E[·] as a random variable rather than a fixed value, we represent the inherent uncertainty in human perception of brightness. This modeling approach enhances the controllability of the loss function during training, as it allows us to estimate the weight W using common metrics like the Kullback-Leibler (KL) divergence or Wasserstein distance. These metrics en- sure a smooth transition between the two terms in Eq. 1, avoiding abrupt changes that could destabilize the optimiza- tion process. Consequently, the loss function exhibits good continuity with respect to parameter changes and features flat regions around its minima. These flat regions indicate that small perturbations in brightness do not significantly affect the loss value, making the optimization process more robust (as exemplified in Section 4. 5). Based on these considerations, we treat E[·] as an ob- servation from a random variable eE[·] that follows a Gaus- sian distribution."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.6884343028068542,
+      "text": "This perceptual characteristic motivates our probabilis- tic modeling of brightness distributions: by treating E[·] as a random variable rather than a fixed value, we represent the inherent uncertainty in human perception of brightness. This modeling approach enhances the controllability of the loss function during training, as it allows us to estimate the weight W using common metrics like the Kullback-Leibler (KL) divergence or Wasserstein distance. These metrics en- sure a smooth transition between the two terms in Eq. 1, avoiding abrupt changes that could destabilize the optimiza- tion process. Consequently, the loss function exhibits good continuity with respect to parameter changes and features flat regions around its minima. These flat regions indicate that small perturbations in brightness do not significantly affect the loss value, making the optimization process more robust (as exemplified in Section 4. 5). Based on these considerations, we treat E[·] as an ob- servation from a random variable eE[·] that follows a Gaus- sian distribution."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.687214195728302,
+      "text": "4% in RobotCar-Night compared to the second-best), suggesting that our data distribution com- pensation benefits on the prediction robustness. Ablating into BPG and ING Fig. 4. 2 visualizes a further ablation study on our BPG. The experiments show that our Re-rendering submodule plays an important role within BPG. Besides, BPG achieves the best result when F max is set to 2. Meanwhile, Fig. 4. 3 presents a detailed ablation on our ING. Apart from the stan- dard groups ( P + T Land P + N ), we also test P, N and T L(Eq. 10, Eq. 11 and Eq. 12) alone. Taken the three metrics shown in Fig. 4. 3 together, P + T Land P + N still achieve better performance. According to Fig. 4. 3(b) and Fig. 4. 3(c), P + T Lmaintains the most consistent performance as K max changes. In addition, we set K max to 1 as ABS rel increases after K max is greater than 1, which suggests that inappropri- ately high intensity of ING will lead to overly conservative predictions. 5 Conclusion This paper proposes a self-supervised monocular depth train- ing framework for nighttime, which requires no nighttime im- age during training but day-to-night data distribution com- pensation."
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.686937689781189,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17 Ldepth Lgrad Lnormal Metrics L1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ ✓ ✗ ✗ ✗ ✗ 5. 9790. 1910. 020 0. 13213. 032 14. 3520. 957 0. 982 0. 991 ✗ ✓ ✗ ✗ ✗ 5. 852 0. 187 0. 021 0. 13213. 12212. 9840. 9570. 9830. 992 ✗ ✓ ✓ ✗ ✗ 5. 760 0. 201 0. 020 0. 137 13. 616 16. 174 0. 9580. 9830. 992 ✗ ✓ ✗ ✓ ✗ 5. 386 0. 2020. 0210. 12412. 373 15. 901 0. 9580. 985 0. 993 ✗ ✓ ✗ ✗ ✓ 5. 3090. 206 0. 022 0. 149 14. 862 16. 048 0. 954 0. 981 0. 990 ✗ ✓ ✗ ✓ ✓ 5. 8090. 186 0. 0180. 125 12. 21014. 6830. 961 0. 985 0. 993 ✗ ✓ ✓ ✗ ✓ 5. 4220. 2000. 0180. 125 12. 50316. 1200. 961 0. 985 0. 993 Table S1:Loss study. Performance comparison using several combination of losses:1st best, 2nd best,3rd best. Figure S2:Few-shot learning performances of Depth Anything V2 on our real dataset. All LED patterns demonstrate superior performances over LB. The model is near its maximal performances with only 1,000 training images. L=L depth +λ 1Lgrad +λ 2Lnormal .(4) B. 3 Loss Study To determine the impact of each individual loss, we conduct an ablation study (see table S1)."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.686171293258667,
+      "text": "Based on this, LGT (f (x), y) is formulated as follows: LGT (f (x), y) = W · L(f (x), y)| {z } original loss + (1 − W ) · L \u0012 E[y] E[f (x)] f (x), y \u0013 | {z } brightness−aligned loss , (1) where E[y] E[f (x)] is a scaling factor for aligning the average brightness of f (x) and y. To clarify, E[y] and E[f (x)] de- note the average brightness of the ground truth image y ∈ R1×3×H×W and the enhanced image f (x) ∈ R1×3×H×W , respectively. The weight W ∈ [0, 1] balances the two terms in LGT . It is noted that the choice of L(·) is is arbitrary, provided that it accepts f (x) and y as inputs. 3. 2. Weight Design 3. 2. 1. Probabilistic Modeling on Average Brightness According to the Contrast Sensitivity Function [3, 26], hu- man vision is sensitive to local contrasts (e.g., edges, tex- tures, and intensity variations) but less sensitive to minor shifts in average brightness E[·]. Moreover, research by Mathys [5, 6] has shown that uncertainty in human per- ceptual behavior is often well modeled by Gaussian dis- tributions, making them a suitable choice for representing brightness perception variability."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.686171293258667,
+      "text": "Based on this, LGT (f (x), y) is formulated as follows: LGT (f (x), y) = W · L(f (x), y)| {z } original loss + (1 − W ) · L \u0012 E[y] E[f (x)] f (x), y \u0013 | {z } brightness−aligned loss , (1) where E[y] E[f (x)] is a scaling factor for aligning the average brightness of f (x) and y. To clarify, E[y] and E[f (x)] de- note the average brightness of the ground truth image y ∈ R1×3×H×W and the enhanced image f (x) ∈ R1×3×H×W , respectively. The weight W ∈ [0, 1] balances the two terms in LGT . It is noted that the choice of L(·) is is arbitrary, provided that it accepts f (x) and y as inputs. 3. 2. Weight Design 3. 2. 1. Probabilistic Modeling on Average Brightness According to the Contrast Sensitivity Function [3, 26], hu- man vision is sensitive to local contrasts (e.g., edges, tex- tures, and intensity variations) but less sensitive to minor shifts in average brightness E[·]. Moreover, research by Mathys [5, 6] has shown that uncertainty in human per- ceptual behavior is often well modeled by Gaussian dis- tributions, making them a suitable choice for representing brightness perception variability."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.6844814419746399,
+      "text": "Using the Phong illumination model [28, 40], the final flare image at the current stage,𝐼𝐹 , is calculated by the following equation: 𝐼𝐹 =(𝑠𝑏·𝐼)𝑔𝐹+ 𝑁𝐹∑︁ 𝑖=1 (𝑠𝑠(𝐿𝑆,𝑠𝐹,𝑃𝑖))𝑔𝐹 , (4) where𝐼 is the daytime image and𝑠𝑠(.) represents scaling and shifting the sampled𝐿𝑆 by the scale rate𝑠𝐹 and the 2D coordinate 𝑃𝑖. Ultimately, FSM generates more realistic nighttime flare images by incorporating existing synthetic flare images, applying random darkening operations, and adopting an adaptive light source inten- sity strategy. This approach effectively mitigates the photometric inconsistency issues in nighttime images and significantly enhances the diversity and quality of the training dataset. 𝐼 𝐼𝐹 𝐼𝐹𝑁 Figure 3. 1: Paired visual examples for different scenes, 𝐼 rep- resents the image under normal lighting conditions, 𝐼𝐹 rep- resents the visualization result of adding FSM to the normal lighting image, and 𝐼𝐹𝑁 represents the visualization result of adding both FSM and NSM to the normal lighting image. 3. 1. 2 Noise Simulation Module. In the previous section, we derived the calculation process of 𝐼𝐹 ."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.684113621711731,
+      "text": "To pursue comprehensive visual quality enhancement, LLIE models tend to incorporate multiple loss functions. While this strategy can lead to improved results, it also in- creases the burden of model design and hyperparameter tun- ing. More importantly, as the existing loss functions over- look the brightness mismatch factor, the fundamental chal- lenges brought by this factor remain unaddressed. 3. METHOD In Section 3. 1 present the formulation of the GT-mean loss. In Section 3. 2 detail the crucial component W of this loss function. Section 3. 3 summarizes the features of the pro- posed loss. 3. 1. GT-mean loss In general, the GT-mean loss LGT (f (x), y) can be re- garded as an extension of the existing loss L(f (x), y) used for LLIE. To deal with the issues arising from brightness mismatch, the key to constructing LGT (f (x), y) is match- ing the average brightness of f (x) and y. Furthermore, LGT (f (x), y) is designed to retain the form and effec- tiveness of the original loss L(f (x), y)."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.684113621711731,
+      "text": "To pursue comprehensive visual quality enhancement, LLIE models tend to incorporate multiple loss functions. While this strategy can lead to improved results, it also in- creases the burden of model design and hyperparameter tun- ing. More importantly, as the existing loss functions over- look the brightness mismatch factor, the fundamental chal- lenges brought by this factor remain unaddressed. 3. METHOD In Section 3. 1 present the formulation of the GT-mean loss. In Section 3. 2 detail the crucial component W of this loss function. Section 3. 3 summarizes the features of the pro- posed loss. 3. 1. GT-mean loss In general, the GT-mean loss LGT (f (x), y) can be re- garded as an extension of the existing loss L(f (x), y) used for LLIE. To deal with the issues arising from brightness mismatch, the key to constructing LGT (f (x), y) is match- ing the average brightness of f (x) and y. Furthermore, LGT (f (x), y) is designed to retain the form and effec- tiveness of the original loss L(f (x), y)."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.6822329759597778,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement Jingxi Liao, Shijie Hao*, Richang Hong, Meng Wang, Hefei University of Technology, Hefei, China {jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.com Abstract Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting con- ditions. In supervised LLIE research, there exists a signifi- cant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth coun- terpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss func- tion directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT- mean form with minimal additional computational costs."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.6822329759597778,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement Jingxi Liao, Shijie Hao*, Richang Hong, Meng Wang, Hefei University of Technology, Hefei, China {jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.com Abstract Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting con- ditions. In supervised LLIE research, there exists a signifi- cant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth coun- terpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss func- tion directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT- mean form with minimal additional computational costs."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.6821882724761963,
+      "text": "Application of Phong Model. Finally, with the 3D structure, material information, and the color of the light source IF , the reflection image I R i will be C1(u) = max (0, N (u) ∗ Li (u))/ri (u)2 , C2(u) = max (0, Ri (u) ∗ Vi (u))gr /ri (u)2 , I R i = sF IF (KdC1 + KsC2). (24) Following [Phong, 1975 ], we set the exponential gr to 8. Here, sF is the scale factor of light source image LS. D. 3 Training detail Following [Godard et al., 2019; Zhao et al., 2022b], we use AdamW [Loshchilov and Hutter, 2017] as the optimizer, and the batch size is set to 12. We setlr of the Transformer-based encoder to 5e−5 and double it for the rest trainable part. An exponential decay learning rate scheduler is also used with 0. 9 as exponential. The total training step is set to 40,000. We use the same augmentation for the image splits as applied in [Liu et al., 2021; Wang et al., 2021; Godard et al., 2019; Zhao et al., 2022b]. For BPG, we set F min = smin F = 0. 5 , empirically. Be- sides, we use smax F = 2, Fmax = 2 as the default setting. As to ING, we set K min = 0. 1 following ELD [Wei et al., 2020]. We use K max = 1with P + T Las the default setting."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p13_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 13,
+      "score": 0.679746687412262,
+      "text": "We use a sequential fea- ture decoder (ICN) to estimate the linear brightness change {Ct,t+n ∈ RH×W ×1, Bt,t+n ∈ RH×W ×1}. The reconstruc- tion of It can be described as ˙Vt,t+n(u) =KI Tt,t+nDt(u)K −1 I ˙u, ˜It+n = bs(It+n ⊙ Ct,t+n + Bt,t+n, Vt,t+n), (16) with u being a pixel in frame It, ˙u being the corresponding homogeneous form, and ˜It+n being the reconstructed version of target frame It. We assume the camera intrinsic KI ∈ R3×3 is already known during the training. Following [Vankadari et al. , 2023; Godard et al. , 2019; Wang et al., 2021], we choose the combination of Structured Similarity Index Measure (SSIM) [Wang et al., 2004] and the L1 difference as the measure of photometric error, i.e. pe( ˜I, I) = α 2 (1 − SSIM( ˜I, I)) + (1− α)| ˜I − I|, (17) where we set α to 0. 85 in all our experiments. To handle potential occlusions within image sequences, we use the popular minimum re-projection and Auto-mask strate- gies [Godard et al., 2019] in the per-pixel photometric loss: Lss = min ˜I pe( ˜I, It), (18) with ˜I ∈ {˜It+n, ˜It−n, It+n, It−n}."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6790913343429565,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT DomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ (HB→HB)6. 1204 0. 0903 0. 0233 0. 1353 13. 4847 3. 3579 0. 9489 0. 9812 0. 9908(HB→LED)17. 3113 0. 4479 0. 1955 0. 6817 52. 5132 20. 0263 0. 4699 0. 6652 0. 7658 (LED→LED)5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927(LED→HB)8. 05370. 15110. 0338 0. 2026 20. 11208. 19990. 9158 0. 9626 0. 9796 Table 4:Encoder-decoder performance across domains of NSDD. We denote (training domain→testing domain). The model trained on (HB) fails entirely when tested on (LED). Yet, (LED)-trained models are able to estimate depth when tested on the (HB) domain. Pattern# Images RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ HB Zero-shot19. 058 0. 430 0. 243 0. 587 27. 004 8. 134 0. 086 0. 186 0. 785LED 18. 023 0. 420 0. 232 0. 563 25. 500 7. 779 0. 096 0. 214 0. 867 HB 100 6. 499 0. 075 0. 033 0. 133 12. 894 0. 992 0. 9290. 977 0. 991LED 6. 198 0. 073 0. 032 0. 131 12. 182 0. 898 0. 933 0. 9770. 991 HB 500 5. 447 0. 0580. 0250. 112 10. 629 0. 688 0. 950 0. 9850. 995LED 5. 225 0. 057 0. 025 0. 108 10. 038 0. 648 0. 953 0. 986 0. 995 HB 1000 5. 124 0."
+    },
+    {
+      "id": "semantic_chunk::LED_p6_sc0",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6778914928436279,
+      "text": "6DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT Figure 5:Qualitative results on NSDD. LED results exhibit higher precision, and more ac- curate object boundaries and shapes compared to HB. Red boxes indicate enhanced regions. Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderHB 6. 12040. 09030. 0233 0. 1353 13. 48473. 35790. 9489 0. 9812 0. 9908LED5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927 AdabinsHB 7. 3520 0. 1360 0. 0320 0. 1230 10. 1880 4. 2770 0. 8790 0. 9440 0. 9740LED5. 5830 0. 0690 0. 0240 0. 0920 7. 7290 2. 5090 0. 9210 0. 9680 0. 9840 DepthF ormerHB 5. 85280. 06870. 0281 0. 1205 11. 38410. 83280. 9432 0. 9802 0. 9913LED5. 38450. 12150. 0276 0. 1111 10. 41463. 40150. 9497 0. 9838 0. 9950 Table 1:Comparison of depth estimation performances on NSDD:HB models are trained on high beam data and LED on HD light pattern. LED models outperform HB models across all metrics, exceptions are for Abs Rel and Sq Rel. Metrics are computed in the ROI. tion, are due to these imperfections."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6762203574180603,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.6762203574180603,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p3_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.676094651222229,
+      "text": "\u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 , \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 Pose decoder ICN decoder Day - Image Splits Sample ING ( sec. 3. 4 ) BPG ( sec. 3. 3 ) \u0000 \u0000 3D position appointing Random darken Intensity \u0000 sampling Re - rendering Dark raw image simulation Intensity \u0000 sampling Noise simulation with calibration \u0000′ \u0000 \u0000 \u0000 \u0000 \u0000 \u0000\u0000 \u0000 \u0000 \u0000\u0000\u0000 \u0000 \u0000 \u0000\u0000 \u0000 \u0000 \u0000\u0000\u0000 Light Source Bank Prepare& Sample ING DepthNet DepthNet Detached Transformer Base CNN Base \u0000 \u0000 \u0000\u0000 BPG \u0000 \u0000 \u0000 \u0000 Photometric Loss Smooth Loss \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 , \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 Figure 2. 1: Overview of our data distribution compensation training framework . The proposed BPG and ING form our compensation stage, whose simple processes are also visualized in the top right. Note that BPG and ING will not participate in the backward propagation. Their input and output are detached. The Transformer-CNN hybrid DepthNet, CNN-based PoseNet and CNN-based Illuminating Change Net (ICN) constitute the trainable part of our framework. The two DepthNets share the same weights during training and the left one are frozen during the whole training."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.6756312847137451,
+      "text": "• Inevitable Brightness Residual : The inconsistency in overall brightness between the supervised low-light im- age enhancement (LLIE) function f (x) and the target image y is a common occurrence. The inherent nonlin- ear mapping from low-light to well-lit images inevitably leaves behind a small brightness residual, which can be simply expressed as E[f (x)] ̸= E[y]. We refer to this phenomenon as brightness mismatch. • Sensitivity of Loss Functions : Pixel-level losses (e.g., L1/L2) lack a perceptual saturation mechanism—they pe- nalize brightness discrepancy regardless of whether these mismatches are visually negligible once E[f (x)] ̸= E[y]. • Misalignment with Human Perception : Under ade- quate brightness, human vision prioritizes noise suppres- sion and color fidelity [2, 28], yet these factors contribute far less to pixel-level losses than brightness residuals. As a result, the model disproportionately pursues marginal benefits in brightness alignment, entering a futile optimization cycle. This misguided effort directly contra- dicts the priorities of human vision—once basic brightness is met, noise and color accuracy dominate perceptual qual- ity."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.6756312847137451,
+      "text": "• Inevitable Brightness Residual : The inconsistency in overall brightness between the supervised low-light im- age enhancement (LLIE) function f (x) and the target image y is a common occurrence. The inherent nonlin- ear mapping from low-light to well-lit images inevitably leaves behind a small brightness residual, which can be simply expressed as E[f (x)] ̸= E[y]. We refer to this phenomenon as brightness mismatch. • Sensitivity of Loss Functions : Pixel-level losses (e.g., L1/L2) lack a perceptual saturation mechanism—they pe- nalize brightness discrepancy regardless of whether these mismatches are visually negligible once E[f (x)] ̸= E[y]. • Misalignment with Human Perception : Under ade- quate brightness, human vision prioritizes noise suppres- sion and color fidelity [2, 28], yet these factors contribute far less to pixel-level losses than brightness residuals. As a result, the model disproportionately pursues marginal benefits in brightness alignment, entering a futile optimization cycle. This misguided effort directly contra- dicts the priorities of human vision—once basic brightness is met, noise and color accuracy dominate perceptual qual- ity."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_sc4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.6743856072425842,
+      "text": "Specifically, for a single ground truth y ∈ R1×3×H×W , it can be regarded as an observation from eE[y], represented as: eE[y] =αE[y], α ∼ N(1, σ2 α), (2) where α determines the probability distribution type of eE[y], and σ2 α defines its spread. Therefore, we have av- erage brightness distribution p(eE[y]) = N (µy, σ2 y), with µy = E[y] and σy = σαE[y]. Similarly, for a single enhanced image f (x) ∈ R1×3×H×W , its average bright- ness E[f (x)] can also be regarded as an observation from eE[f (x)], represented as: eE[f (x)] =βE[f (x)], β ∼ N(1, σ2 β), (3) where β determines the probability distribution type of eE[f (x)], and σ2 β defines its spread. Consequently, we have average brightness distributionq(eE[f (x)]) =N (µf x, σ2 f x), with µf x= E[f (x)] and σf x= σβE[f (x)]. 3"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_sc4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.6743856072425842,
+      "text": "Specifically, for a single ground truth y ∈ R1×3×H×W , it can be regarded as an observation from eE[y], represented as: eE[y] =αE[y], α ∼ N(1, σ2 α), (2) where α determines the probability distribution type of eE[y], and σ2 α defines its spread. Therefore, we have av- erage brightness distribution p(eE[y]) = N (µy, σ2 y), with µy = E[y] and σy = σαE[y]. Similarly, for a single enhanced image f (x) ∈ R1×3×H×W , its average bright- ness E[f (x)] can also be regarded as an observation from eE[f (x)], represented as: eE[f (x)] =βE[f (x)], β ∼ N(1, σ2 β), (3) where β determines the probability distribution type of eE[f (x)], and σ2 β defines its spread. Consequently, we have average brightness distributionq(eE[f (x)]) =N (µf x, σ2 f x), with µf x= E[f (x)] and σf x= σβE[f (x)]. 3"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.6740437150001526,
+      "text": "1 allows the GT- mean loss to continuously improve model performance. In addition, the experiment shows that the choice of σ value is open. As σ measures the spread of the random variable eE[·] deviating from the observed average image brightness E[·] in our modeling, we recommend using a small value, such as σ = 0. 1 for real world application. 4. 5. Further analysis on the GT-mean loss In this experiment, we further investigate the difference be- tween the original loss and the GT-mean loss. Specifically, we randomly selected a batch of low-light images (batchsize = 8) and their corresponding ground truth images. These images were enhanced using RetinexFormer to produce en- hanced outputs f (x). To simulate the varying brightness, we introduced a unified scaling factorη ranging from 0 to 3, simulating the progression of the enhanced images η · f (x) from dark to bright. This experiment setting simulates how the loss value varies under different brightness levels, facil- itating us to investigate the loss curve with respect to the brightness variation only."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.6740436553955078,
+      "text": "1 allows the GT- mean loss to continuously improve model performance. In addition, the experiment shows that the choice of σ value is open. As σ measures the spread of the random variable eE[·] deviating from the observed average image brightness E[·] in our modeling, we recommend using a small value, such as σ = 0. 1 for real world application. 4. 5. Further analysis on the GT-mean loss In this experiment, we further investigate the difference be- tween the original loss and the GT-mean loss. Specifically, we randomly selected a batch of low-light images (batchsize = 8) and their corresponding ground truth images. These images were enhanced using RetinexFormer to produce en- hanced outputs f (x). To simulate the varying brightness, we introduced a unified scaling factorη ranging from 0 to 3, simulating the progression of the enhanced images η · f (x) from dark to bright. This experiment setting simulates how the loss value varies under different brightness levels, facil- itating us to investigate the loss curve with respect to the brightness variation only."
+    },
+    {
+      "id": "semantic_chunk::LED_p5_sc2",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.6713065505027771,
+      "text": "Figure 4:Simulation of HD pattern:Top- left: control matrix of the HD headlight. Bottom-left: photometry considering aberra- tions created by the headlight lens. Right: Re- sulting image using the photometry. The area outlined in red is the region of interest. The dataset consists of 5 different maps (3 train / 1 val / 1 test), with 4,999 frames generated for both pattern and HB illumi- nated images in each. These maps represent major cities. Both parts of the dataset share the same randomization code, making the domains comparable. To closely replicate reality, we account for the optical imperfections of headlights using real measured photometry data (see fig. 4). Aberrations observed in the pattern, particularly along the edges of the projec-"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.6695228815078735,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. directly simulating light source images, we construct a light source library based on the Flare7K dataset [8]. Flare7K is currently the only large-scale dataset containing 7,000 light source samples. A light source can be randomly sampled from this dataset and resized to match the dimensions of the input image, ensuring compatibility. Additionally, we apply simple image augmentation operations, such as resizing and cropping, to diversify the light source patterns, with the enhanced light source denoted as𝐿𝑆. The sampled light sources are randomly positioned in the 3D scene to simulate realistic depth relationships. A depth constraint is applied to limit the effective range of the light source, ensuring that distant light sources do not produce excessive flare artifacts. The 3D position of the light source is given by: 𝑃𝑖 =𝑧𝑖·𝐾−1 𝐼  𝑢𝑖 𝑣𝑖 1  , (1) where𝑧𝑖 represents the depth of the light source, and its upper limit is 20m,𝐾𝐼 is the intrinsic camera matrix, and(𝑢𝑖,𝑣𝑖) are the 2D coordinates of the light source."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6681373715400696,
+      "text": "N-N & R-N DA: RNW DA: ADDS G: Ours Figure 4. 1: Qualitative results on nuScenes-Night (First four columns) and RobotCar-Night (Last four columns). We leave more visual comparisons to the supplementary material. Compare to DA types methods, our training applies no images from the nuScenes or Oxford RobotCar datasets. 0 1 2 3 4 0. 260. 270. 280. 290. 300. 310. 320. 33 BPG wo. R-R BPG w. R-RA BS rel (a) ABS rel 0 1 2 3 4 9. 09. 39. 69. 910. 210. 510. 8RMSE (b) RMSE 0 1 2 3 4 0. 440. 460. 480. 500. 520. 540. 560. 580. 60 (c) δ1 Figure 4. 2: Ablation on BPG. F max = 0 indicates the baseline. The result of BPG with or without Re-rendering is shown. (Best viewed with zoom.) (a) ABS rel 0 . 010 . 11 1 01 009. 29. 49. 69. 810. 010. 210. 410. 610. 8RMSE 0 (b) RMSE 0 . 010 . 11 1 01 000. 450. 480. 510. 540. 570. 60 0 (c) δ1 Figure 4. 3: Ablation on ING. K max = 0 represents the baseline. Result of N , P, T L, P + N and P + T Lis shown. presents that these methods generalize poorly to unseen night scenes, while our approach does not suffer from such a draw- back, and note that no specific nighttime dataset is used as the target dataset during our training."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6672805547714233,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6672805547714233,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.667262077331543,
+      "text": "3. 2. 2. Estimation of W To quantify the divergence between the two distributions, we employ the Bhattacharyya distance [13], which offers a closed-form solution for Gaussian distributions, signifi- cantly enhancing computational efficiency. For Gaussian distributions p(eE[y]) = N (µy, σ2 y) and q(eE[f (x)]) = N (µf x, σ2 f x), the closed-form expression for the Bhat- tacharyya distanceDB is given by: DB(p∥q) = 1 4 (µy − µf x)2 σ2y + σ2 f x + 1 2 ln σ2 y + σ2 f x 2σyσf x ! , (4) where µy ≜ E[y] and µf x ≜ E[f (x)] denote the ex- pected brightness values, while σ2 y = ( σαE[y])2 and σ2 f x= (σβE[f (x)])2 characterize distribution spreads de- rived from Eq. (2) and Eq. (3). To enforce W as a normalized weighting coefficient, we apply value clipping: W ← clip (DB(p∥q), 0, 1) (5) This operation induces three interpretable regimes: • W = 1: Maximum emphasis on general quality when eE[y] and eE[f (x)] exhibit strong divergence (DB ≥ 1). • W = 0: Exclusive focus on brightness-aligned refine- ment when distributions coincide (DB = 0). • Smooth transition via W ∈ (0, 1) during intermediate phases ."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p4_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 4,
+      "score": 0.667262077331543,
+      "text": "3. 2. 2. Estimation of W To quantify the divergence between the two distributions, we employ the Bhattacharyya distance [13], which offers a closed-form solution for Gaussian distributions, signifi- cantly enhancing computational efficiency. For Gaussian distributions p(eE[y]) = N (µy, σ2 y) and q(eE[f (x)]) = N (µf x, σ2 f x), the closed-form expression for the Bhat- tacharyya distanceDB is given by: DB(p∥q) = 1 4 (µy − µf x)2 σ2y + σ2 f x + 1 2 ln σ2 y + σ2 f x 2σyσf x ! , (4) where µy ≜ E[y] and µf x ≜ E[f (x)] denote the ex- pected brightness values, while σ2 y = ( σαE[y])2 and σ2 f x= (σβE[f (x)])2 characterize distribution spreads de- rived from Eq. (2) and Eq. (3). To enforce W as a normalized weighting coefficient, we apply value clipping: W ← clip (DB(p∥q), 0, 1) (5) This operation induces three interpretable regimes: • W = 1: Maximum emphasis on general quality when eE[y] and eE[f (x)] exhibit strong divergence (DB ≥ 1). • W = 0: Exclusive focus on brightness-aligned refine- ment when distributions coincide (DB = 0). • Smooth transition via W ∈ (0, 1) during intermediate phases ."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc4",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.666801929473877,
+      "text": "(6) Where𝐾 denotes the total system gain, whose value is deter- mined by the camera’s ISO setting,𝑁𝑝 represents the photon shot noise, which depends on the incident light intensity and follows a Poisson distribution.𝑁𝑟𝑒𝑎𝑑 is a unified term encompassing multi- ple noise sources, including dark current noise, thermal noise, and source follower noise.𝑁𝑟 typically manifests as horizontal or verti- cal lines in the image and is modeled as a fixed offset applied to each column or row, sampled from a zero-mean Gaussian distribution with variance𝜆𝑟𝑜𝑤 .𝑁𝑞 is introduced by the finite bit depth of the sensor and is modeled as a uniform sampling of pixel values, with the variance parameterized by𝜆𝑞𝑢𝑎𝑛𝑡 . All of the above parameters follow the design principles outlined in ELD [37] and we give some paired visual examples of𝐼𝐹𝑁 in Fig. 3. 1. 3. 2 Low-Light Parameter-Efficient Fine-Tuning Although we synthesized large-scale paired depth data for day- time and low-light scenarios through LLDG, we observed that the directly fine-tuned foundation model exhibited unstable loss con- vergence during training, while full model optimization required"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6645159721374512,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6645159721374512,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::TDDC_p4_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.7877792119979858,
+      "text": "3. 3 Photometric distribution modeling In this part, we model the nonuniform photometric distribu- tion at night by adding additional light sources. The wave optics/diffraction effect of light source imaging and reflec- tions are considered in the sampling. Since it makes peaks of brightness in the original image plane, we call it Brightness Peak Generator (BPG). Light Source Sample Due to the diffraction/wave optics effects[Lipson et al., 2010; Goodman, 2005 ], when a point light is viewed through an aperture that is not an ideal circle or a lens that is stained or scratched, the imaging results of the light source will be a combination of glare, streak, and shimmer, instead of a dot [Dai et al. , 2022; Kakimoto et al. , 2004 ]. In computer graphics, some methods [Kakimoto et al. , 2004; Luidolt et al., 2020] approximate this optical phenomenon by using the 2D Fourier transform, but the output is uncontrol- lable and the cost is expensive. Therefore, instead of simulat- ing the light source image directly, we construct a light source bank based on Flare7K [Dai et al., 2022] dataset, which is the only light source dataset with 7000 samples.",
+      "estimated_tokens": 280
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7564558982849121,
+      "text": "Light Intensity Adaptation: Since daytime images typically ex- hibit sufficient illumination and high overall brightness, directly applying light source imaging𝐿𝑆 tends to fail in generating promi- nent brightness peaks. To address this issue, we apply a simple random darkening oper- ation to the input image, where the brightness scaling factor𝑠𝑏 is sampled from a uniform distribution. To enrich the diversity of light sources while avoiding excessively glaring effects, the peak bright- ness intensity𝐹 is defined as the product of the number of light sources𝑁𝐹 and the scaling factor 𝑠𝐹 , both𝑠𝐹 and𝐹 are sampled from a log-uniform distribution: 𝑠𝐹∼ exp \u0010 𝑈(log𝑠𝑚𝑖𝑛 𝐹 , log𝑠𝑚𝑎𝑥 𝐹 ) \u0011 , 𝐹∼ exp \u0010 𝑈(log𝐹𝑚𝑖𝑛, log𝐹𝑚𝑎𝑥) \u0011 . (2) where𝑠𝐹 is the scale factor and𝐹𝑚𝑖𝑛,𝐹𝑚𝑎𝑥 represents the intensity range. The total number of light sources𝑁𝐹 is computed as: 𝑁𝐹 = max \u0012\u0016 𝐹 𝑠𝐹 + 0. 5 \u0017 , 1 \u0013 . (3) Additionally, the brightness scale𝑠𝑏 is sampled as𝑠𝑏∼𝑈(0. 4, 1), and the gamma correction factor is sampled as 𝑔𝐹 ∼ 𝑈(1. 8, 2. 2).",
+      "estimated_tokens": 411
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc3",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7479104995727539,
+      "text": "4 More visualization for ablation analyses In Fig E. 1, the BPG helps the regions where highlight spots frequently occur, such as the cars and the road, as shown in the cyan dashed boxes. The ING simulates the potential imaging noises in the dark area, thus present better depth pre- diction at the background, such as the sky. The full model receives the merits of BPG and ING, and thus has the best prediction performance at the mentioned areas. More quanti- tative study is in Sec. 4. 4 in the main paper. Input Baseline BPG ING Full Figure E. 1: Ablation test. Left: test on nuScenes-Night. Right: test on RobotCar-Night. Baseline, BPG, ING, and Full mean us- ing nothing, Brightness Peak Generator, Image Noise Generator and BPG+ING for data compensation, respectively.",
+      "estimated_tokens": 193
+    },
+    {
+      "id": "semantic_chunk::TDDC_p4_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.7442923784255981,
+      "text": "(2) Random Darken The above light source imaging LS cannot produce signifi- cant peaks of brightness on the image because the daytime image is usually well-lit with high brightness. To efficiently improve the role of LS on the photometric distribution, a simple random darkening operation is applied. The illumi- nation scale rate is set to follow uniform distribution, i.e. sd ∼ U(0. 4, 1). BPG Intensity F We use the product of the light sources number NF and a resize scale rate sF as the BPG IntensityF . To enrich outputs while avoiding numerous aggressive results, a log uniform distribution is applied to select NF and F : log sF ∼ U(log smin F , log smax F ), log F ∼ U(log F min, log F max), NF = max(⌊ F sF + 1 2 ⌋, 1). (3) Following Flare7K [Dai et al., 2022], BPG adds the light source within the gamma range of gf ∼ U(1. 8, 2. 2). The sampled image on current stage, I L t , will be I L t = (sdIt)gf + NFX i=1 ss (LS, sF , pi)gf ! 1/gf . (4) NF is the total number of light sources, and ss(., ., .) repre- sents scaling and shifting the sampledLS by the scale rate sF and the 2D coordinate pi. Figure 3. 1: Example visualizations of Re-rendering. Top: Reflec- tion images.",
+      "estimated_tokens": 348
+    },
+    {
+      "id": "semantic_chunk::TDDC_p4_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.7408427000045776,
+      "text": "When applied, BPG randomly samples a single image from the light source bank. Then, the image will be scaled to the standard size which is determined by the long side of It (A square whose sides are equal to the long side of It ). Simple image augmentation is further applied to expand the num- ber of light source images. The scaled and augmented light source image is used as the standard light source image LS. 3D Position of Light Source The sampled light source is assumed to be randomly dis- tributed in the scene. We do not model the location because it is costly to include precise segmentation information in our training which requires large trained models. Firstly, a 2D coordinatepi is randomly appointed as the lo- cation of the light source. We limit the depth of it,zi, with the predicted scale depth map (discussed latter in this section). A up range with higher priority was manually set to 25m as far- ther light sources produce almost invisible reflection images. Then, the appointed 3D position will be: Pi = ziK −1 I ˙pi.",
+      "estimated_tokens": 225
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1457,
+    "compressed_context_tokens": 1457,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1457,
+  "context_tokens": 1457,
+  "prompt_token_estimate": 1854,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_paper_bpg_components",
+  "answer": "<think>The user wants me to answer a question about the Brightness Peak Generator (BPG) based on the provided materials. Let me analyze the materials carefully.\n\nFrom the materials:\n\n[1] - Talks about photometric distribution modeling, BPG (Brightness Peak Generator), light source bank based on Flare7K dataset\n[2] - Light Intensity Adaptation: random darkening operation, brightness scaling factor, peak brightness intensity F, gamma correction factor\n[3] - Ablation analysis mentioning BPG\n[4] - Detailed BPG description: Random Darken, BPG Intensity F (with light sources number NF, resize scale rate sF, log uniform distribution), gamma correction, final formula\n[5] - Light source sampling from light source bank, scaling to standard size, image augmentation, 3D Position of Light Source\n\nKey steps/submodules of BPG:\n1. Light Source Sample - from Flare7K dataset bank\n2. Random Darken - brightness scaling factor sd ~ U(0.4, 1)\n3. BPG Intensity F - product of light sources number NF and scale rate sF, log uniform distribution\n4. Gamma correction - gf ~ U(1.8, 2.2)\n5. 3D Position of Light Source - random 2D coordinate, depth limited with predicted scale depth map, up range 25m\n6. Light Source Bank - based on Flare7K dataset\n\nLet me construct the answer based on the materials.</think>\n\n{\"answer\":\"BPG 主要由光源库采样、随机暗化、光源强度采样、伽马校正及光源 3D 位置采样等关键步骤组成，通过在图像上叠加光源图像来模拟夜间非均匀光度分布。\",\"items\":[{\"name\":\"Light Source Bank / 光源库构建\",\"description\":\"基于 Flare7K 数据集构建光源图像库，从中随机采样一张作为标准光源图像 LS，并经缩放与简单数据增广。\",\"citations\":[1,5]},{\"name\":\"Random Darken / 随机暗化\",\"description\":\"对输入图像施加随机暗化操作以减弱白天高亮度的影响，照度缩放因子 sd ∼ U(0.4, 1)。\",\"citations\":[2,4]},{\"name\":\"BPG Intensity F / 光源强度采样\",\"description\":\"将光源数量 NF 与缩放率 sF 的乘积作为峰值亮度 F，sF 与 F 均从对数均匀分布中采样，并由 F = max(⌊F/sF + 1/2⌋, 1)·sF 计算 NF。\",\"citations\":[2,4]},{\"name\":\"Gamma Correction / 伽马校正\",\"description\":\"在添加光源前后使用伽马校正，伽马因子 gf ∼ U(1.8, 2.2)。\",\"citations\":[2,4]},{\"name\":\"3D Position of Light Source / 光源 3D 位置采样\",\"description\":\"为光源随机指定 2D 坐标 pi，深度 zi 受预测的尺度深度图限制且上限为 25m，再由 Pi = ziK⁻¹ṗi 得到 3D 位置。\",\"citations\":[5]}],\"missing_information\":\"\"}",
+  "usage": {
+    "prompt_tokens": 1826,
+    "completion_tokens": 670,
+    "total_tokens": 2496,
+    "model": "MiniMax-M3"
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_ssrdepth_metric_depth_ask_baseline_none_cdc161c23f22",
+  "dry_run": false,
+  "query": "SSRDepth 如何将度量深度估计分解并恢复最终的 metric depth？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::SSRDepth_p2_chunk_12",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7362045049667358,
+      "text": ". Finally, the semantic-aware rel-\native depth is multiplied by the segmentation scale to obtain the metric \ndepth.\nIn summary, our main contributions are as follows:\n• We propose a novel monocular depth estimation framework-\nSSRDepth, which decomposes met"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7298399209976196,
+      "text": "ure of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth: the Segmentation Query Guided Aggregation module\n(Section 3.2), the Segmentation Proposal Scale module (Section 3.3), \nand the Adaptive Relative Depth module (Section 3.4).\n3"
+    },
+    {
+      "id": "chunk::Depth_Anything_p2_chunk_29",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 2,
+      "score": 0.728350043296814,
+      "text": "epth infor-\nmation. Recently, some works [4, 21, 78] take a step further\nto estimate the metric depth. However, in our practice, we\nobserve such methods exhibit poorer generalization ability\nthan MiDaS, especially its latest version [ 5]. Besides, as\ndemon"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_5",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.719916820526123,
+      "text": "s of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular \ndepth estimation method that leverages semantic segmentation to improve metric depth prediction. Speciﬁcally, \nwe decompose metric depth into segmentation scale and sem"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7193708419799805,
+      "text": "carefully designed network architectures. \nHowever, they often ignore the semantic information of scene structures, leading to poor performance in the se-\nmantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a mon"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_43",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7181800007820129,
+      "text": "lative \nrelationships provided by RDE to accurately predict the metric depth.\nPattern Recognition 171 (2026) 112279 \n2"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7103478908538818,
+      "text": "𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance.\n3.  The proposed method\nIn this section, we ﬁrst introduce the overall architecture of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.7092546224594116,
+      "text": "for metric evaluation. The typical de-\nnormalization strategies include:\n❶No operation: Models predict metric depth [23]:D eval =D pred.\n❷ Median Alignment: Models predict SI Depth [ 15], which can be recovered by scaling the\nratio of the median of the GT"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7059621810913086,
+      "text": "Y. Zou et al.\nFig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module \n(SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module ("
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.7052359580993652,
+      "text": "depth [15] S 0.109 0.811 4.568 0.166 0.877 0.967 0.988\n3net [50] (VGG) S 0.119 0.920 4.824 0.182 0.856 0.957 0.985\n3net [50] (ResNet 50) S 0.102 0.675 4.293 0.159 0.881 0.969 0.991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.7052359580993652,
+      "text": "depth [15] S 0.109 0.811 4.568 0.166 0.877 0.967 0.988\n3net [50] (VGG) S 0.119 0.920 4.824 0.182 0.856 0.957 0.985\n3net [50] (ResNet 50) S 0.102 0.675 4.293 0.159 0.881 0.969 0.991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_13",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7032428979873657,
+      "text": "ose a novel monocular depth estimation framework-\nSSRDepth, which decomposes metric depth into segmentation scale \nand semantic-aware relative depth. Ultimately, the multiplication of \nthese two components yields accurate metric depth.\n• Our proposed SQGA"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7005956172943115,
+      "text": "Contents lists available at ScienceDirect\nPattern Recognition\njournal homepage: www.elsevier.com/locate/pr\nSSRDepth: Combining semantic segmentation and relative depth for \nmonocular metric depth estimation \nYuhang Zou, Xiaoming Chen, Zhangyan Zhao\n ∗, Che"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_11",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6962536573410034,
+      "text": "𝑖\n𝑑2\n𝑖 − 𝜆\n𝑉 2\n(\n∑\n𝑖\n𝑑𝑖\n)2\n, (12)\n𝐶𝐸 = − 1\n𝑉\n𝑉∑\n𝑖\n𝑆∗(𝑖) log 𝑆(𝑖), (13)\nin the formula, 𝑑𝑖 = log 𝐷𝑚(𝑖) − log 𝐷∗\n𝑚(𝑖), where 𝐷𝑚(𝑖) and 𝐷∗\n𝑚(𝑖) denote \nthe predicted metric depth and ground truth (GT) metric depths at pixel \n𝑖, respectively, while 𝑆(𝑖) and"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p12_chunk_25",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 12,
+      "score": 0.6941463947296143,
+      "text": "keep all four levels of\nwavelet decomposition.\nSupervised losses For our NYU results in the main paper,\nwe supervise depth using an L1 loss and SSIM:\nLD(y,y∗) = λ1ℓ1(y,y∗) (9)"
+    },
+    {
+      "id": "chunk::s_p6_chunk_10",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.6918153166770935,
+      "text": "0.3340 4.589 8.606 58.60\nADIDS [18] [27] 1 0.2390 2.089 6.743 61.40 0.2870 2.569 7.985 49.00\nRNW [30] [27] 1 0.2970 2.608 7.996 43.10 0.1850 1.710 6.549 73.30\nWSGD [27] [27] 1 0.1760 1.603 6.036 75.00 0.1740 1.637 6.302 75.40\nrobust-depth [22] [self] 1 0."
+    },
+    {
+      "id": "chunk::Depth_Anything_p6_chunk_10",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 6,
+      "score": 0.6915786862373352,
+      "text": "main Metric Depth Estimation\nAs shown in Table 3 of NYUv2 [54], our model outperforms\nthe previous best method VPD [86] remarkably, improving\nthe δ1 (↑) from 0.964 → 0.984 and AbsRel (↓) from 0.069\nto 0.056. Similar improvements can be observed in Table 4"
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_18",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6914591193199158,
+      "text": "ing with the \nnumber of categories present in the Cityscapes dataset.\n5.  Conclusion\nIn this paper, we propose SSRDepth, a monocular depth estimation \nframework leverages semantic segmentation to improve metric depth \nprediction. The framework decomposes t"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_6",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.69019615650177,
+      "text": "diction. Speciﬁcally, \nwe decompose metric depth into segmentation scale and semantic-aware relative depth, which are predicted \nseparately through Segmentation Proposal Scale (SPS) module and an Adaptive Relative Depth (ARD) module. \nThe SPS module predic"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_4",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.6871809363365173,
+      "text": ".991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2w/o pretrainingS 0.110 0.849 4.580 0.173 0.875 0.962 0.986\nMonodepth2 S 0.085 0.537 3.868 0.139 0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.9"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_4",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.6871809363365173,
+      "text": ".991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2w/o pretrainingS 0.110 0.849 4.580 0.173 0.875 0.962 0.986\nMonodepth2 S 0.085 0.537 3.868 0.139 0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.9"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_18",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6861082315444946,
+      "text": "denotes the median of the depths, 𝑈 is the number of semantic seg-\nmentation patches, and 𝑉  represents the number of valid pixels in each \npatch. However, predicting the median of the metric depth for each se-\nmantic segment can cause the ﬁnal prediction"
+    },
+    {
+      "id": "chunk::LED_p5_chunk_4",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.6855318546295166,
+      "text": "ly on the toolbox [26] for Depth-\nFormer [27]. We apply Depth Anything V2 [49] official fine-tuning code to adapt the model\nfor metric depth estimation. The only changes are limited to dataset format compatibility.\nThe training setup follows the original p"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p6_chunk_15",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 6,
+      "score": 0.6828761100769043,
+      "text": "velet coefﬁcients while suffering a maximum relative perfor-\nmance loss of less than 0.2%.\n6 8 10 12 14 16 18\nGFLOPs\n0.096\n0.097\n0.098\n0.099\n0.100Abs rel\nDepth Hints \n (ResNet50)\n0.891\n0.890\n0.889\n0.888\n0.887\n< 1.25\nDepth Hints \n (ResNet50)\nFigure 6: Analy"
+    },
+    {
+      "id": "chunk::Depth_Anything_p6_chunk_6",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 6,
+      "score": 0.6820572018623352,
+      "text": "Depth Anything\nmodel as a promising weight initialization for downstream\nmetric depth estimation. We initialize the encoder of down-\nstream MDE models with our pre-trained encoder parameters\nand leave the decoder randomly initialized. The model is\nfine-tun"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_3",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6817898154258728,
+      "text": "0.0690 0.0240 0.0920 7.7290 2.5090 0.9210 0.9680 0.9840\nDepthF ormerHB 5.85280.06870.0281 0.1205 11.38410.83280.9432 0.9802 0.9913LED5.38450.12150.0276 0.1111 10.41463.40150.9497 0.9838 0.9950\nTable 1:Comparison of depth estimation performances on NSDD:HB"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_29",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6787388324737549,
+      "text": "q Rel, RMSE and RMSE log are depth error metrics\nand the lower the better. δ <1.25, δ <1.252 and δ <1.253\nare depth accuracy metrics and the higher the better. Because"
+    },
+    {
+      "id": "chunk::Lite-Mono_p5_chunk_16",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 5,
+      "score": 0.6783933639526367,
+      "text": "d by [15, 44]:\nLsmooth =|∂xd∗\nt|e−|∂xIt| +|∂xd∗\nt|e−|∂yIt|, (10)\nwhere d∗\nt = dt/ ˆdt denotes the mean-normalized inverse\ndepth. The total loss can be expressed as:\nL = 1\n3\n∑\ns∈{1, 1\n2 , 1\n4}\n(Lr +λLsmooth), (11)\nwheres is the different scale output by the"
+    },
+    {
+      "id": "chunk::Jasmine_p20_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 20,
+      "score": 0.674401044845581,
+      "text": "For the SSI depth supervision, we perform a normalization similar to Eq. 9 in paper:\nNorm(Dtc) = 2·\n\u0012 Dtc −min(D tc)\nmax(Dtc)−min(D tc) −0.5\n\u0013\n.(20)\nFurthermore, to avoid the performance ceiling imposed by the teacher model, we draw inspiration\nfrom D4RD[4"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6737011671066284,
+      "text": "ents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith signiﬁcant discrepancies between D\nT and DS for re-\nﬁnement:\n¯D = |DT −DS|, (8)\nwhere ¯D reﬂects the difference between the output of the\nteacher model and the student model. We"
+    },
+    {
+      "id": "chunk::dav2_p3_chunk_13",
+      "source": "data\\dav2.pdf",
+      "page": 3,
+      "score": 0.6734106540679932,
+      "text": "effort to enhance estimation performance. Notably, Depth Anything\nV1 [89], Metric3D V1 [95] and V2 [28], as well as ZeroDepth [26], have amassed 1.5M, 8M, 16M,\nand 15M labeled images from various sources for training, respectively. However, few studies hav"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_8",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6715389490127563,
+      "text": "analysis of how these choices\naffect evaluation.\nDepth de-normalization refers to the pro-\ncess of transforming the model’s predicted\ndepth values back to the GT distribution\nfor metric evaluation. The typical de-\nnormalization strategies include:\n❶No ope"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_14",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6708850264549255,
+      "text": "synthetic datasets.𝑑 and𝑛 refer to the daytime and nighttime training splits proposed by RNW [ 36] and ADDS [ 24]. Max\ndepth refers to the upper limit of the ground truth depth values.\ntraining, and our model was eventually fine-tuned for downstream\nmonoc"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_10",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6701992750167847,
+      "text": "SFM3 [53] 2021 M* 0.112 0.773 4.581 0.189 0.879 0.960 0.982 3.5M\nR-MSFM6 [53] 2021 M* 0.108 0.748 4.470 0.185 0.889 0.963 0.982 3.8M\nHR-Depth [52] 2021 M* 0.106 0.755 4.472 0.181 0.892 0.966 0.984 14.7M\nSRDepth-Res18 [25] 2023 M* 0.106 0.673 4.379 0.180 0."
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_11",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.66976398229599,
+      "text": "Squares (LSQ) Alignment: Models predict SSI Depth [ 25], which can be recovered by\naffine transformation (scaled and shifted) to best fit the GT depth. The evaluated depth is given by:\nDeval =s ∗Dpred +t ∗. where the optimal scale s∗ and shift t∗ are deter"
+    },
+    {
+      "id": "chunk::s_p4_chunk_10",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6693292856216431,
+      "text": "n are Dsyn, Tsyn. The distillation ob-\njective is the absolute relative depth loss:\nLd = 1\nHW\nHWX\n| Dday − Dsyn\nDsyn\n|. (6)\nHowever, learning from only depth pseudo labels is still\nchallenging to learn about the adverse patterns [29, 46],\nwhich motivates u"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p3_chunk_23",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.6690531969070435,
+      "text": "finement of random depth distri-\nbution Dτ into a depth estimate,\npθ (Dτ −1 |Dτ , c ) := N\n\u0000\nDτ −1; µθ (Dτ , τ,c) , σ2\nτ I\n\u0001\n, (8)\nwhere c stands for the conditions. To speed up the inference\nprocess, we employ an improved inference process from [41],\nwher"
+    },
+    {
+      "id": "chunk::SSRDepth_p13_chunk_41",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.6681517362594604,
+      "text": "ern Recognition, 2020, pp. 538–547. \n[27] R. Zhu, C. Wang, Z. Song, L. Liu, T. Zhang, Y. Zhang, ScaleDepth: decomposing \nmetric depth estimation into scale prediction and relative depth estimation, 2024. \narXiv:2407.08187\n[28] B. Cheng, I. Misra, A.G. Schw"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_10",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6677422523498535,
+      "text": "epth [ 15], which can be recovered by scaling the\nratio of the median of the GT depth to the median of the predicted depth: Deval =D pred ·\nmedian(DGT )/median(Dpred).\n❸ Least-Squares (LSQ) Alignment: Models predict SSI Depth [ 25], which can be recovered"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p2_chunk_33",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 2,
+      "score": 0.667668342590332,
+      "text": "T [36] and Omnidata [ 13]. LeReS [ 57] proposed a\ntwo-stage framework that first predicts affine-invariant depth,\nthen upgrades it to metric depth by estimating the shift and\n2"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p2_chunk_33",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 2,
+      "score": 0.667668342590332,
+      "text": "T [36] and Omnidata [ 13]. LeReS [ 57] proposed a\ntwo-stage framework that first predicts affine-invariant depth,\nthen upgrades it to metric depth by estimating the shift and\n2"
+    },
+    {
+      "id": "chunk::SSRDepth_p6_chunk_20",
+      "source": "data\\SSRDepth.pdf",
+      "page": 6,
+      "score": 0.6673746109008789,
+      "text": "rror (AbsRel), \nsquared mean relative error (SqRel), log error (log10), root mean square \nerror (RMSE), and its logarithmic form (RMSEL). Especially, 𝛿1, RMSE, \nand AbsRel are recognized as key metrics for depth estimation. Dur-\ning the evaluation, we set"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_18",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.6671797633171082,
+      "text": "with a\nmetric scale. Nonetheless, we anticipate that there could\nbe value in estimating depth-outputs that are, without spe-\ncial measures, consistent with each other across all predic-\ntions. In [76], the authors independently scale each pre-\ndicted dept"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_18",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.6671797633171082,
+      "text": "with a\nmetric scale. Nonetheless, we anticipate that there could\nbe value in estimating depth-outputs that are, without spe-\ncial measures, consistent with each other across all predic-\ntions. In [76], the authors independently scale each pre-\ndicted dept"
+    },
+    {
+      "id": "chunk::SSRDepth_p8_chunk_10",
+      "source": "data\\SSRDepth.pdf",
+      "page": 8,
+      "score": 0.6652367115020752,
+      "text": "depth prediction. Our method achieves the best predictive perfor-\nmance, ranking ﬁrst in all seven metrics. Compared to the second-ranked \nBinsFormer, we reduce the RMSE by 4.8 % and increase the 𝛿1 by 1.0 %, \nrespectively. Additionally, by employing Swin"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_5",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6647177934646606,
+      "text": "47 8.547 0.344 0.641 0.850 0.928\nDepth Anything[41] UD & LD - 60 0.302 3.051 9.233 0.321 0.487 0.784 0.972\nDepth Anything V2[42] RD & SD - 60 0.272 2.551 8.576 0.304 0.518 0.843 0.971\nOurs DepthDark H, VK - 60 0.210 1.910 7.764 0.260 0.630 0.914 0.976\nTest"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_25",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.664431095123291,
+      "text": "eature. We will verify the effec-\ntiveness of the proposed decoder in section 4.4.\n3.5 V ertical CutDepth\nRecently, a depth-speciﬁc data augmentation method named\nCutDepth has been proposed [Ishii and Yamashita, 2021 ],\nwhich replaces a part of the input i"
+    },
+    {
+      "id": "chunk::dav2_p22_chunk_2",
+      "source": "data\\dav2.pdf",
+      "page": 22,
+      "score": 0.6643885374069214,
+      "text": "rtual KITTI [ 9]. In Figure 15, we compare our metric depth predictions with\nZoeDepth, which is trained on real datasets like NYUv2 [70].\nB.13 Qualitative comparison between w/ and w/o pseudo-labeled real images\nPlease refer to Figure 16. As shown, purely"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_19",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.6641317009925842,
+      "text": "ons on the unseen \ndatasets.\n2.  Related work\nMetric depth estimation. Metric depth estimation (MDE) meth-\nods can be categorized by network architecture into two types: con-\ntinuous regression-based and hybrid regression-based methods. Contin-\nuous regres"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6636966466903687,
+      "text": "n outlined in section B.2\ndemonstrates the most favorable trade-off between metrics.\nC Depth Anything V2 Details\nTo fine-tune Depth Anything V2 [49] on our datasets, we used the metric model pre-trained\non KITTI. We follow their indications for specializin"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::SSRDepth_p2_chunk_12",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7362045049667358,
+      "text": ". Finally, the semantic-aware rel-\native depth is multiplied by the segmentation scale to obtain the metric \ndepth.\nIn summary, our main contributions are as follows:\n• We propose a novel monocular depth estimation framework-\nSSRDepth, which decomposes met",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7298399209976196,
+      "text": "ure of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth: the Segmentation Query Guided Aggregation module\n(Section 3.2), the Segmentation Proposal Scale module (Section 3.3), \nand the Adaptive Relative Depth module (Section 3.4).\n3",
+      "estimated_tokens": 70
+    },
+    {
+      "id": "chunk::Depth_Anything_p2_chunk_29",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 2,
+      "score": 0.728350043296814,
+      "text": "epth infor-\nmation. Recently, some works [4, 21, 78] take a step further\nto estimate the metric depth. However, in our practice, we\nobserve such methods exhibit poorer generalization ability\nthan MiDaS, especially its latest version [ 5]. Besides, as\ndemon",
+      "estimated_tokens": 68
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_5",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.719916820526123,
+      "text": "s of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular \ndepth estimation method that leverages semantic segmentation to improve metric depth prediction. Speciﬁcally, \nwe decompose metric depth into segmentation scale and sem",
+      "estimated_tokens": 53
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7193708419799805,
+      "text": "carefully designed network architectures. \nHowever, they often ignore the semantic information of scene structures, leading to poor performance in the se-\nmantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a mon",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_43",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7181800007820129,
+      "text": "lative \nrelationships provided by RDE to accurately predict the metric depth.\nPattern Recognition 171 (2026) 112279 \n2",
+      "estimated_tokens": 28
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7103478908538818,
+      "text": "𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance.\n3.  The proposed method\nIn this section, we ﬁrst introduce the overall architecture of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth",
+      "estimated_tokens": 71
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.7092546224594116,
+      "text": "for metric evaluation. The typical de-\nnormalization strategies include:\n❶No operation: Models predict metric depth [23]:D eval =D pred.\n❷ Median Alignment: Models predict SI Depth [ 15], which can be recovered by scaling the\nratio of the median of the GT",
+      "estimated_tokens": 59
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_13",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7032428979873657,
+      "text": "ose a novel monocular depth estimation framework-\nSSRDepth, which decomposes metric depth into segmentation scale \nand semantic-aware relative depth. Ultimately, the multiplication of \nthese two components yields accurate metric depth.\n• Our proposed SQGA",
+      "estimated_tokens": 47
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 497,
+    "compressed_context_tokens": 497,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 497,
+  "context_tokens": 497,
+  "prompt_token_estimate": 953,
+  "run_label": "sage_semantic_all_v1_chunk_ssrdepth_metric_depth_decomposition",
+  "answer": "<think>The user wants me to answer how SSRDepth decomposes metric depth estimation and recovers the final metric depth, based on the provided materials.\n\nLet me analyze the materials:\n\n[1] \"the semantic-aware relative depth is multiplied by the segmentation scale to obtain the metric depth.\"\n[4] \"SSRDepth, a monocular depth estimation method that leverages semantic segmentation to improve metric depth prediction. Specifically, we decompose metric depth into segmentation scale and sem...\"\n[5] \"we propose SSRDepth, a mon...\"\n[9] \"SSRDepth, which decomposes metric depth into segmentation scale and semantic-aware relative depth. Ultimately, the multiplication of these two components yields accurate metric depth.\"\n\nSo the answer is: SSRDepth decomposes metric depth into two components: segmentation scale and semantic-aware relative depth. The final metric depth is obtained by multiplying these two components.\n\nKey citations:\n- [1]: mentions multiplication of semantic-aware relative depth and segmentation scale\n- [4]: mentions decomposition into segmentation scale and sem(antic-aware relative depth)\n- [9]: explicitly states the decomposition and multiplication\n\nLet me construct the JSON response.</think>\n\n{\n  \"answer\": \"SSRDepth 将度量深度分解为 segmentation scale（分割尺度）与 semantic-aware relative depth（语义感知相对深度），最终将二者相乘得到 metric depth。\",\n  \"items\": [\n    {\n      \"name\": \"分解方式\",\n      \"description\": \"SSRDepth 将 metric depth 分解为 segmentation scale（分割尺度）与 semantic-aware relative depth（语义感知相对深度）两个组成部分。\",\n      \"citations\": [4, 9]\n    },\n    {\n      \"name\": \"恢复最终 metric depth 的方式\",\n      \"description\": \"将语义感知的相对深度乘以分割尺度（segmentation scale），即可得到最终的 metric depth。\",\n      \"citations\": [1, 9]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 984,
+    "completion_tokens": 387,
+    "total_tokens": 1371,
+    "model": "MiniMax-M3"
+  }
+}

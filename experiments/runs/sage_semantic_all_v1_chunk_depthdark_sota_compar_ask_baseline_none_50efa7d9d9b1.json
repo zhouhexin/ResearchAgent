@@ -1,0 +1,414 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_depthdark_sota_compar_ask_baseline_none_50efa7d9d9b1",
+  "dry_run": false,
+  "query": "DepthDark 与哪些方法进行了比较？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::DepthDark_p8_chunk_4",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.7782794833183289,
+      "text": "emonstrate that each\nmodule enhances DepthDark’s performance, with combined\nuse significantly improving robustness.\nTo comprehensively evaluate the effectiveness and efficiency of\nour training framework and ensure a fair comparison with domain\nadaptation m"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_29",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7650929689407349,
+      "text": "onstrate that our\nmethod exhibits superior robustness in low-light scenarios.\n4.3 Comparison with other methods.\n4.3.1 Quantitative Results. We performed a quantitative evalua-\ntion of DepthDark and compared it with various state-of-the-art\nmethods. As sho"
+    },
+    {
+      "id": "chunk::Jasmine_p13_chunk_22",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.7501956224441528,
+      "text": "feys. Depthsplat: Connecting gaussian splatting and depth.arXiv preprint arXiv:2410.13862, 2024. 1\n[54] Zhiqiang Yan, Yuankai Lin, Kun Wang, Yupeng Zheng, Yufei Wang, Zhenyu Zhang, Jun Li, and Jian\nYang. Tri-perspective view decomposition for geometry-awar"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.7457841634750366,
+      "text": "ents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith signiﬁcant discrepancies between D\nT and DS for re-\nﬁnement:\n¯D = |DT −DS|, (8)\nwhere ¯D reﬂects the difference between the output of the\nteacher model and the student model. We"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.7453274726867676,
+      "text": "pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything v2.arXiv preprint arXiv:2406.09414, 2024. 3\n[61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tian"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_20",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7414151430130005,
+      "text": "h-aligned dataset for training our proposed DepthDark model.\n4.2.2 Evaluation Protocol. To evaluate our method, we selected two\nchallenging benchmark datasets: nuScenes-Night and RobotCar-\nNight, which are, to the best of our knowledge, the most widely\nuse"
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_15",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.7413429021835327,
+      "text": "Format:\nLongjian Zeng, Zunjie Zhu, Rongfeng Lu, Ming Lu, Bolun Zheng, Cheng-\ngang Yan, and Anke Xue. 2025. DepthDark: Robust Monocular Depth Esti-\nmation for Low-Light Environments. In Proceedings of the 33rd ACM Inter-\nnational Conference on Multimedia ("
+    },
+    {
+      "id": "chunk::DepthDark_p3_chunk_3",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.7406127452850342,
+      "text": "1: Overview of our DepthDark Training Framework. The framework consists of LLDG and LLPEFT. The Patch Embed\nmodule is inspired by vision transformers[9] for efficient feature extraction.\ndomain-specific depth estimation. Meanwhile, I-LoRA [10] demon-\nstrat"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_35",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.7399276494979858,
+      "text": "ion,\nenhancing the model’s robustness and adaptability in low-light con-\nditions. Fine-tuning Depth Anything V2, our method, DepthDark,\nachieves state-of-the-art performance on the nuScenes-Night and\nRobotCar-Night datasets, surpassing existing methods in"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_19",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.731918215751648,
+      "text": "our training data. As these datasets con-\ntain only daytime images, we employed the techniques described\nin Section 3.1 to synthesize a high-quality, large-scale low-light\ndepth-aligned dataset for training our proposed DepthDark model.\n4.2.2 Evaluation Pr"
+    },
+    {
+      "id": "chunk::DepthDark_p3_chunk_0",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.7317600250244141,
+      "text": "DepthDark: Robust Monocular Depth Estimation for Low-Light Environments MM ’25, October 27–31, 2025, Dublin, Ireland.\nDepthDark\nTransformer\nBlock\nLLPEFT\n𝑰𝑭𝑵 𝑬𝑨\n𝑭𝑵\nConv \nk1c32\nConv \nk1c32\nConv \nk1c32\nConv \nk1c32\nConv \nk1c32\nTransformer\nBlock\nConv \nk1c32\nCon"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_30",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7315587401390076,
+      "text": "tion of DepthDark and compared it with various state-of-the-art\nmethods. As shown in Tab. 4.1, the overall performance demon-\nstrates that results on the nuScenes-Night dataset are generally\nworse compared to RobotCar-Night. This is primarily due to the\ns"
+    },
+    {
+      "id": "chunk::Jasmine_p19_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 19,
+      "score": 0.7301986813545227,
+      "text": "tain the depthD tc through:\n1\nDtc\n=clip\n\u0012 1\nDmax\n+\n\u0012 1\nDmin\n− 1\nDmax\n\u0013\n·dp,0,3\n\u0013\n,\nwhere Dmin and Dmax are set to 0.1 and 100, respectivley. We find that the depth range at range\n[0,3] can already describe all information within the maximum depth.\n19"
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_20",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.7299761772155762,
+      "text": "del’s perfor-\nmance. Therefore, we train our method on both the raw depth annota-\ntions(rawDepths) and the completed reﬁned depth annotations(Depths) \nfrom NYU1449. The experimental results are shown in Table 8. Our \nPattern Recognition 171 (2026) 112279"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p13_chunk_15",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 13,
+      "score": 0.7282074689865112,
+      "text": "v2 [58] dataset Note that as in\nDenseDepth [2] we produce a depth map at half-resolution. Ta-\nble adapted from [18].\nDepth Decoder\nlayer k s chns res input activation\nupconv53 1 1104 32 econv5 Linear\nLevel 3 coefﬁcients predictions\niconv4 3 1 552 16 ↑upcon"
+    },
+    {
+      "id": "chunk::DepthDark_p2_chunk_19",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.7274976372718811,
+      "text": "usion.\n• DepthDark achieves state-of-the-art performance on the\nnuScenes-Night and RobotCar-Night datasets with a single\nconsumer-grade GPU, short training times, and minimal\ntraining data.\n2 Related Work\nEarly studies on monocular depth estimation [15, 18"
+    },
+    {
+      "id": "chunk::DepthDark_p2_chunk_11",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.7266805171966553,
+      "text": "les the model to integrate information across different\nscales, improving depth perception and accuracy. This combination\nallows DepthDark to effectively tackle the challenges posed by low-\nlight conditions, resulting in robust depth estimation performance"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.7266344428062439,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7266344428062439,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p3_chunk_23",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.725608229637146,
+      "text": "finement of random depth distri-\nbution Dτ into a depth estimate,\npθ (Dτ −1 |Dτ , c ) := N\n\u0000\nDτ −1; µθ (Dτ , τ,c) , σ2\nτ I\n\u0001\n, (8)\nwhere c stands for the conditions. To speed up the inference\nprocess, we employ an improved inference process from [41],\nwher"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_54",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.7252030372619629,
+      "text": "tion Compensa-\ntion. arXiv preprint arXiv:2404.13854 (2024).\n[41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng-\nshuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla-\nbeled data. In Proceedings of the IEEE/"
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.7244417667388916,
+      "text": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data\nLihe Yang1 Bingyi Kang2 † Zilong Huang2 Xiaogang Xu3,4 Jiashi Feng2 Hengshuang Zhao1‡\n1HKU 2TikTok 3CUHK 4ZJU\n† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_0",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.7218647003173828,
+      "text": "DepthDark: Robust Monocular Depth Estimation for Low-Light Environments MM ’25, October 27–31, 2025, Dublin, Ireland.\n7 Acknowledgments\nThis work was supported by the National Key Research and Devel-\nopment Program of China (U22A2047), the Key R&D Program"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p11_chunk_0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 11,
+      "score": 0.7208746671676636,
+      "text": "[74] Zhenyu Zhang, Chunyan Xu, Jian Yang, Ying Tai, and Liang\nChen. Deep hierarchical guidance and regularization learn-\ning for end-to-end depth estimation. Pattern Recognition,\n2018.\n[75] Hang Zhao, Orazio Gallo, Iuri Frosio, and Jan Kautz. Loss\nfunction"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p11_chunk_0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.7208746671676636,
+      "text": "[74] Zhenyu Zhang, Chunyan Xu, Jian Yang, Ying Tai, and Liang\nChen. Deep hierarchical guidance and regularization learn-\ning for end-to-end depth estimation. Pattern Recognition,\n2018.\n[75] Hang Zhao, Orazio Gallo, Iuri Frosio, and Jan Kautz. Loss\nfunction"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p17_chunk_16",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 17,
+      "score": 0.7182319760322571,
+      "text": "This takes signiﬁcantly longer to train, but results in\nqualitatively better depth maps on this dataset. Examples of\npredicted depths can be seen in Fig. 12.\n2https://www.youtube.com/channel/\nUCPur06mx78RtwgHJzxpu2ew\nFigure 12. Additional Wander results. W"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p17_chunk_16",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 17,
+      "score": 0.7182319760322571,
+      "text": "This takes signiﬁcantly longer to train, but results in\nqualitatively better depth maps on this dataset. Examples of\npredicted depths can be seen in Fig. 12.\n2https://www.youtube.com/channel/\nUCPur06mx78RtwgHJzxpu2ew\nFigure 12. Additional Wander results. W"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_24",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.7163306474685669,
+      "text": "gen-\neration scheme to produce the multi-tuple depth dataset with\ndiverse degradations, which signiﬁcantly mitigates the prob-\nlem of data scarcity. Meanwhile, we construct an effec-\ntive multi-granularity knowledge distillation (MKD) strategy\nto achieve t"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_10",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.715514600276947,
+      "text": "h\nphenomena are common in real-world nighttime environments and\nare critical for practical applications. Therefore, we selected diverse\nlow-light scenarios for thorough testing and analysis. To ensure an\nobjective evaluation of DepthDark, we carefully chos"
+    },
+    {
+      "id": "chunk::SSRDepth_p11_chunk_5",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.7153996825218201,
+      "text": "c ✓ ✓ ×  0.779  0.233  1.934  0.078  \n  d ✓ × ✓  0.774  0.254  1.935  0.075  \n  e ✓ ✓ ✓  0.799  0.230  1.901  0.073 \nmethod is able to provide sharp depth boundaries on imperfect real \ndatasets, as the predicted performance obtained from training on bo"
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_1",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.7151981592178345,
+      "text": "† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1. Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [35]. Middle two:\nSA-1B [26] (a hold-out unseen set). Right two: p"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_8",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7145853042602539,
+      "text": "into the latent space, for a given depth map d, the corre-\nsponding latent code is given by the encoderE: z(d) = E(d).\nGiven a depth latent code, a depth map can be recovered\nwith the decoder D: ˆd = D(z(d)). The conditioning im-\nage x is also naturally t"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_8",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.7145852446556091,
+      "text": "into the latent space, for a given depth map d, the corre-\nsponding latent code is given by the encoderE: z(d) = E(d).\nGiven a depth latent code, a depth map can be recovered\nwith the decoder D: ˆd = D(z(d)). The conditioning im-\nage x is also naturally t"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_16",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.7131364941596985,
+      "text": "019;\nGuizilini et al. , 2020b; Jung et al. , 2021; Ma et al. , 2022;\nKlingner et al., 2020] introduce and fuse semantic informa-\ntion into training to improve the depth estimation perfor-\nmance. Many methods [Zhao et al., 2022b; Lyu et al., 2021;\nGuizilini"
+    },
+    {
+      "id": "chunk::DepthDark_p3_chunk_18",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.7130088806152344,
+      "text": "Sec. 3.2. The overall framework of DepthDark is\nillustrated in Fig. 1.1.\n3.1 Low Light Dataset Generation\nTo address the significant discrepancies between daytime and night-\ntime image distributions, we propose the Low-Light Dataset Gen-\neration (LLDG). T"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_22",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.7118149995803833,
+      "text": "tion. For the ground\ntruth depth maps d, we implement a linear normalization\nsuch that the depth primarily falls in the value range [−1, 1],\nto match the designed input value range of the V AE. Such\nnormalization serves two purposes. First, it is the conve"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_22",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7118149995803833,
+      "text": "tion. For the ground\ntruth depth maps d, we implement a linear normalization\nsuch that the depth primarily falls in the value range [−1, 1],\nto match the designed input value range of the V AE. Such\nnormalization serves two purposes. First, it is the conve"
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.7117533087730408,
+      "text": "contents are listed as follows:\nContents\nA Proof of Scale-Invariant Depth 15\nB Detailed Training Workflow and Pseudocode 16\nB.1 Step-by-Step Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16\nB.2 Training Pseudocode . . . . . . . ."
+    },
+    {
+      "id": "chunk::Jasmine_p13_chunk_21",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.7111348509788513,
+      "text": "multi-frame monocular depth. InCVPR, pages 1164–1174, 2021. 3,\n7, 16\n[53] Haofei Xu, Songyou Peng, Fangjinhua Wang, Hermann Blum, Daniel Barath, Andreas Geiger, and Marc\nPollefeys. Depthsplat: Connecting gaussian splatting and depth.arXiv preprint arXiv:2"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_26",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7109022736549377,
+      "text": "hown in Fig. 1(b), all objects in the depth map have \nnearly identical contours with their semantic segments, and the depth \nvalues within the some semantic segments also exhibit a high degree of\nhttps://doi.org/10.1016/j.patcog.2025.112279\nReceived 29 Dec"
+    },
+    {
+      "id": "chunk::DepthDark_p3_chunk_2",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.7105674147605896,
+      "text": "t Intensity \nAdaptation\nNoise Simulation\nModule\nLLPEFT\nIllumination \nGuidance\nConv \nk1c32\nConv \nk3c32\nConv \nk5c32\nConv \nk1c32\nc\n𝑰𝒈𝑭𝑵\n𝑰𝑭𝑵\n𝑰𝑨\n𝑭𝑵\n𝑬𝑨\n𝑭𝑵\nQ\nK\nV\nQ\nK\nV\nQ\nK\nV\nFigure 1.1: Overview of our DepthDark Training Framework. The framework consists of LLDG"
+    },
+    {
+      "id": "chunk::DepthDark_p2_chunk_3",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.7097700834274292,
+      "text": "ficient fine-\ntuning (PEFT) for low-light monocular depth estimation is urgent\nand essential.\nIn this study, we comprehensively address the challenges in low-\nlight monocular depth estimation by introducing an innovative\napproach, DepthDark, to overcome th"
+    },
+    {
+      "id": "chunk::s_p6_chunk_19",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.7094719409942627,
+      "text": "o 1 × 10−4 with a decreasing factor of 0.5 every 5 epochs.\nFor the adaptive depth bins in Manydepth [33], we fix them\nto 3.5 − 80m since [8, 11, 25] all use a weak velocity loss\nto align the scales. Thanks to [8, 25], we can utilize the\nsynthetic data from"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_11",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.7092275619506836,
+      "text": "and analysis. To ensure an\nobjective evaluation of DepthDark, we carefully chose comparison\nmethods. Due to the unavailability of TDDC’s official code, we\nselected ADDS as it is among the most advanced and representative\nlow-light depth estimation methods"
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_6",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.7087566256523132,
+      "text": "and the effective parameter-efficient fine-tuning (PEFT) strategy.\nTo address these challenges, we propose DepthDark, a robust foun-\ndation model for low-light monocular depth estimation. We first\nintroduce a flare-simulation module and a noise-simulation"
+    },
+    {
+      "id": "chunk::DepthDark_p5_chunk_31",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.7079787254333496,
+      "text": "riments\n4.1 Implementation Details\nTo train foundation models for monocular depth estimation un-\nder low-light conditions, we implemented DepthDark using the\nPyTorch framework. During training, we adopted the training set-\ntings from Depth Anything V2 and"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.7078855037689209,
+      "text": "depth [15] S 0.109 0.811 4.568 0.166 0.877 0.967 0.988\n3net [50] (VGG) S 0.119 0.920 4.824 0.182 0.856 0.957 0.985\n3net [50] (ResNet 50) S 0.102 0.675 4.293 0.159 0.881 0.969 0.991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.7078855037689209,
+      "text": "depth [15] S 0.109 0.811 4.568 0.166 0.877 0.967 0.988\n3net [50] (VGG) S 0.119 0.920 4.824 0.182 0.856 0.957 0.985\n3net [50] (ResNet 50) S 0.102 0.675 4.293 0.159 0.881 0.969 0.991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2"
+    },
+    {
+      "id": "chunk::DepthDark_p2_chunk_18",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.7071689367294312,
+      "text": "ficient fine-tuning (PEFT)\nstrategy that significantly enhances the model’s robustness\nin low-light environments by incorporating illumination\nguidance and multiscale feature fusion.\n• DepthDark achieves state-of-the-art performance on the\nnuScenes-Night a"
+    },
+    {
+      "id": "chunk::Depth_Anything_p5_chunk_22",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 5,
+      "score": 0.70716392993927,
+      "text": "date the zero-shot depth estimation capability\nof our Depth Anything model on six representative unseen\ndatasets: KITTI [17], NYUv2 [54], Sintel [7], DDAD [19],\nETH3D [51], and DIODE [59]. We compare with the best\nDPT-BEiTL-512 model from the latest MiDaS"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::DepthDark_p8_chunk_4",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.7782794833183289,
+      "text": "emonstrate that each\nmodule enhances DepthDark’s performance, with combined\nuse significantly improving robustness.\nTo comprehensively evaluate the effectiveness and efficiency of\nour training framework and ensure a fair comparison with domain\nadaptation m",
+      "estimated_tokens": 45
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_29",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7650929689407349,
+      "text": "onstrate that our\nmethod exhibits superior robustness in low-light scenarios.\n4.3 Comparison with other methods.\n4.3.1 Quantitative Results. We performed a quantitative evalua-\ntion of DepthDark and compared it with various state-of-the-art\nmethods. As sho",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::Jasmine_p13_chunk_22",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.7501956224441528,
+      "text": "feys. Depthsplat: Connecting gaussian splatting and depth.arXiv preprint arXiv:2410.13862, 2024. 1\n[54] Zhiqiang Yan, Yuankai Lin, Kun Wang, Yupeng Zheng, Yufei Wang, Zhenyu Zhang, Jun Li, and Jian\nYang. Tri-perspective view decomposition for geometry-awar",
+      "estimated_tokens": 84
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.7457841634750366,
+      "text": "ents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith signiﬁcant discrepancies between D\nT and DS for re-\nﬁnement:\n¯D = |DT −DS|, (8)\nwhere ¯D reﬂects the difference between the output of the\nteacher model and the student model. We",
+      "estimated_tokens": 77
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 263,
+    "compressed_context_tokens": 263,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 263,
+  "context_tokens": 263,
+  "prompt_token_estimate": 637,
+  "run_label": "sage_semantic_all_v1_chunk_depthdark_sota_comparison_methods",
+  "answer": "<think>\nThe user is asking what methods DepthDark was compared with. Let me look at the provided sources carefully.\n\nFrom the sources:\n- [1] mentions \"Comparison with other methods\" section but doesn't list specific methods\n- [2] mentions \"compared it with various state-of-the-art methods\" but doesn't list them\n- [3] is about Depthsplat and other references\n- [4] is about Depth Anything V2\n\nThe sources provided don't actually list the specific methods that DepthDark was compared with. They only mention that comparisons were made with \"state-of-the-art methods\" and \"various\" methods, but don't name them specifically.\n\nSo I should indicate that the information is missing/not available in the provided sources.\n</think>\n{\"answer\": \"给定资料未列出 DepthDark 具体与哪些方法进行比较，仅提及与多种 state-of-the-art 方法进行了定量比较。\", \"items\": [], \"missing_information\": \"资料中未提供 DepthDark 具体对比的方法名称列表，仅提到与 'various state-of-the-art methods' 进行了比较，但未列举具体方法名称。\"}",
+  "usage": {
+    "prompt_tokens": 684,
+    "completion_tokens": 220,
+    "total_tokens": 904,
+    "model": "MiniMax-M3"
+  }
+}

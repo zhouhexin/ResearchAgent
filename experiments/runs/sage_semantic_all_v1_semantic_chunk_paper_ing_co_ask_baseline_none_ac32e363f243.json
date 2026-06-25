@@ -1,0 +1,422 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_paper_ing_co_ask_baseline_none_ac32e363f243",
+  "dry_run": false,
+  "query": "Imaging Noise Generator (ING) 如何建模夜间成像噪声？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7784914970397949,
+      "text": "However, low-light images often suffer from amplified noise due to low photon counts and high system gain in camera sensors. Inspired by the physical priors of noise formation, we introduce the Noise Simulation Module (NSM) technique to simulate the noise distribution in nighttime scenes. Based on the shot-read noise model [12, 37, 40], we take the flare image as input and precisely simulate noise under low-light conditions in a physically decoupled manner. This approach ensures that the synthesized images closely resemble those captured in real low-light scenarios. Therefore, the final low-light image𝐼𝐹𝑁 can be expressed by the following formula: 𝐼𝐹𝑁 =𝐼𝐹+𝑁, (5) where𝐼𝐹 represents the flare image of the real scene, and𝑁 refers to the summation of all physical noise. According to the physical noise models used in base image denoising [48], the overall noise 𝑁 can be decomposed into four components: photon shot noise𝑁𝑝, read noise𝑁𝑟𝑒𝑎𝑑 , row noise𝑁𝑟 , and quantization noise𝑁𝑞: 𝑁 =𝐾𝑁𝑝+𝑁𝑟𝑒𝑎𝑑+𝑁𝑟+𝑁𝑞."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p5_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7702299356460571,
+      "text": "with simple but effective Phong illumination model [Phong, 1975]. The sampled image on current stage, I LR t , will be: I LR t = I L t + NFX i=1 I R i . (7) The detailed calculation of I R i is shown in the supplementary, and we give some examples of re-rendering in Fig. 3. 1. 3. 4 Imaging noise modeling Heavy noise at night corrupts the local distribution and makes fake textures. Based on the shot-read noise model [Wei et al., 2020; Wei et al., 2021], we build our Imaging Noise Genera- tor (ING) using color images as input. Noise Model For a camera imaging system, if without Image Signal Pro- cessor (ISP), a linear model can generally formulate the digit sensor raw image [Wei et al., 2020; Feng et al., 2022]: R∗ = KC + N = R + N, (8) where C is the number of photon, K donates the overall sys- tem gain, and N refers to the summation of all physical noise. In the physical model base image denoising[Wei et al., 2020; Wei et al., 2021; Zhang et al., 2021], the overall noise N, is roughly separated into shot noise Np and read noise Nread: N = KN p + Nread. (9) Here, Shot noise is caused by the collection uncertainty of photons, which follows (C + Np) ∼ P(C)."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc4",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7282469272613525,
+      "text": "(6) Where𝐾 denotes the total system gain, whose value is deter- mined by the camera’s ISO setting,𝑁𝑝 represents the photon shot noise, which depends on the incident light intensity and follows a Poisson distribution.𝑁𝑟𝑒𝑎𝑑 is a unified term encompassing multi- ple noise sources, including dark current noise, thermal noise, and source follower noise.𝑁𝑟 typically manifests as horizontal or verti- cal lines in the image and is modeled as a fixed offset applied to each column or row, sampled from a zero-mean Gaussian distribution with variance𝜆𝑟𝑜𝑤 .𝑁𝑞 is introduced by the finite bit depth of the sensor and is modeled as a uniform sampling of pixel values, with the variance parameterized by𝜆𝑞𝑢𝑎𝑛𝑡 . All of the above parameters follow the design principles outlined in ELD [37] and we give some paired visual examples of𝐼𝐹𝑁 in Fig. 3. 1. 3. 2 Low-Light Parameter-Efficient Fine-Tuning Although we synthesized large-scale paired depth data for day- time and low-light scenarios through LLDG, we observed that the directly fine-tuned foundation model exhibited unstable loss con- vergence during training, while full model optimization required"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.7121032476425171,
+      "text": "Extreme low-light environment- driven image denoising over permanently shadowed lunar regions with a physical noise model. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021. 1 [26] J. G. Robson. Spatial and temporal contrast-sensitivity func- tions of the visual system. J. Opt. Soc. Am. , 56(8):1141– 1142, 1966. 3 [27] George Seif and Dimitrios Androutsos. Edge-based loss function for single image super-resolution. In Proceedings of IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2018. 4 [28] M. Treisman. Noise and weber’s law: the discrimination of brightness and other dimensions. Psychological Review, 71: 314–330, 1964. 1 [29] Vassilios V onikakis, Rigas Kouskouridas, and Antonios Gasteratos. On the evaluation of illumination compensa- tion algorithms. Multimedia Tools and Applications , page 9211–9231, 2018. 4 [30] Chenxi Wang, Hongjun Wu, and Zhi Jin. Fourllie: Boosting low-light image enhancement by fourier frequency informa- 9"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.7121032476425171,
+      "text": "Extreme low-light environment- driven image denoising over permanently shadowed lunar regions with a physical noise model. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021. 1 [26] J. G. Robson. Spatial and temporal contrast-sensitivity func- tions of the visual system. J. Opt. Soc. Am. , 56(8):1141– 1142, 1966. 3 [27] George Seif and Dimitrios Androutsos. Edge-based loss function for single image super-resolution. In Proceedings of IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2018. 4 [28] M. Treisman. Noise and weber’s law: the discrimination of brightness and other dimensions. Psychological Review, 71: 314–330, 1964. 1 [29] Vassilios V onikakis, Rigas Kouskouridas, and Antonios Gasteratos. On the evaluation of illumination compensa- tion algorithms. Multimedia Tools and Applications , page 9211–9231, 2018. 4 [30] Chenxi Wang, Hongjun Wu, and Zhi Jin. Fourllie: Boosting low-light image enhancement by fourier frequency informa- 9"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p3_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 3,
+      "score": 0.7030073404312134,
+      "text": "In the forward process, which starts at d0 := d from the conditional distribution, Gaussian noise is gradually added at levels t ∈ {1, ..., T} to obtain noisy samples dt as dt = √¯αtd0 + √ 1 − ¯αtϵ (1) where ϵ ∼ N(0, I), ¯αt := Qt s=1 1−βs, and {β1, . , βT } is the variance schedule of a process with T steps. In the reverse process, the conditional denoising model ϵθ(·) pa- rameterized with learned parameters θ gradually removes noise from dt to obtain dt−1. At training time, parameters θ are updated by taking a data pair (x, d) from the training set, noising d with sam- pled noise ϵ at a random timestep t, computing the noise estimate ˆϵ = ϵθ(dt, x, t) and minimizing one of the denois- ing diffusion objective functions. The canonical standard noise objective L is given as follows [20]: L = Ed0,ϵ∼N (0,I),t∼U (T ) ∥ϵ − ˆϵ∥2 2 . (2) At inference time, d := d0 is reconstructed starting from a normally-distributed variable dT , by iteratively applying the learned denoiser ϵθ(dt, x, t). 3"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p3_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7030073404312134,
+      "text": "In the forward process, which starts at d0 := d from the conditional distribution, Gaussian noise is gradually added at levels t ∈ {1, ..., T} to obtain noisy samples dt as dt = √¯αtd0 + √ 1 − ¯αtϵ (1) where ϵ ∼ N(0, I), ¯αt := Qt s=1 1−βs, and {β1, . , βT } is the variance schedule of a process with T steps. In the reverse process, the conditional denoising model ϵθ(·) pa- rameterized with learned parameters θ gradually removes noise from dt to obtain dt−1. At training time, parameters θ are updated by taking a data pair (x, d) from the training set, noising d with sam- pled noise ϵ at a random timestep t, computing the noise estimate ˆϵ = ϵθ(dt, x, t) and minimizing one of the denois- ing diffusion objective functions. The canonical standard noise objective L is given as follows [20]: L = Ed0,ϵ∼N (0,I),t∼U (T ) ∥ϵ − ˆϵ∥2 2 . (2) At inference time, d := d0 is reconstructed starting from a normally-distributed variable dT , by iteratively applying the learned denoiser ϵθ(dt, x, t). 3"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p3_sc4",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.7011141180992126,
+      "text": "Besides, on the image coordinates, the correspondence between the brightness gradient and the textures fails because the significant brightness peaks caused by the light sources overwhelm the texture gradient of scenes. Imaging noise Since cameras are not perfect imaging device, it has a lim- ited dynamic range and introduces noise at most stages of the imaging process [Chen et al. , 2018 ]. At night, the camera adjusts the system gain to compensate for the lower number of input photons, so noise is amplified and appears more pro- nounced in the raw image [Wei et al., 2020; Wei et al., 2021; Zhang et al., 2021]. When the noise intensity exceeds the de- noising capability of the Image Sensor Processor (ISP)[Chen et al., 2018; Brooks et al., 2019], it will not be negligible in the output image. Heavy noise distorts the local distribution and creates fake textures on both foreground and background, and such fake textures confuse the daytime depth model dur- ing testing."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p2_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.6996397972106934,
+      "text": "distribution are located as two key components. Then, we build up corresponding modules for simulation. Considering the wave optics/diffraction effect of light sources as well as reflections, we propose Brightness Peak Generator (BPG) to model the difference in photometric distribution. Based on the shot-read noise model, we build up Imaging Noise Gen- erator (ING) to model nighttime noise distribution. The joint application of BPG and ING together with the day-image dis- tribution results in a fused distribution that has a photometric and noise distribution close to the night images. The fused distribution is randomly sampled and used for the training of the depth network. As shown in Fig. 1. 1, thoughno night im- age is seen during training, our method still achieves superior performance compared to existing nighttime methods. Our main contributions are summarized as follows: (I) We propose a nighttime monocular depth training framework that use day image pairs as the stable source of self-supervision. (II) Our training framework requires no night images dur- ing training. We accomplish this design by day-to-night data distribution compensation."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6979124546051025,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6979124546051025,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p12_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 12,
+      "score": 0.6913989782333374,
+      "text": "night scenes, can corrupt the depth-dependent high-frequency part of the image (i.e., object edges). Thus, the partial com- pensation of hightlights and noise (BPG and ING) allows the depth network to suppress these depth-uncorrelated disturb- ing terms and better generalize to the challenging nighttime scenes. Table B. 1 shows the comparison between our compensa- tion and other full compensation (image transfer). Although CUT and Qs-Atten get better FID score on the nuScenes- Night testing set, indicating that their methods produce more night-like images, our methods still get better night depth es- timation results. Compared to the second best, we improve ABS rel by 9. 8% and RMSE by 9. 8%. Compensation methodABS rel↓ Sq rel↓ RMSE↓ δ1↑ δ2↑ δ3↑ FID↓Train on KITTI - Test on nuScenes-NightNone 0. 327 3. 740 10. 70 0. 451 0. 733 0. 855 -Cut I2I: K to N-N 0. 300 3. 771 9. 596 0. 565 0. 793 0. 895 46. 26Qs-Atten I2I: K to N-N 0. 291 3. 659 9. 554 0. 577 0. 801 0. 90345. 05Ours compensation 0. 259 3. 147 8. 547 0. 641 0. 850 0. 92860. 01±1. 81Train on nuScenes - Test on nuScenes-NightCut I2I: N-D to N-N 0. 290 3. 653 9. 614 0. 580 0. 807 0. 911 54. 40Qs-Atten I2I: N-D to N-N 0. 287 3."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p5_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.6881332993507385,
+      "text": "How- ever, raw images or the exact inverse ISP are not available in most daytime datasets. The simplest ISP includes white bal- ance, binning, denoising, color collection and gamma com- pression [Chen et al., 2018; Brooks et al., 2019]. Fortunately, except for denoising and gamma compression, rest operations can be viewed as approximately linear processes. We con- sider the gamma compression in ING as it’s strongly nonlin- ear. Following ELD, we set gn = 1/2. 2. To simulate the low photon count C in the dark, a light scale factor sn is proposed follows U (100, 300) [Wei et al., 2020]. Then, the simulated raw image will be RLR t = sbit(I LR t )1/gn sn , (13) where sbit denotes quantization factor equals to 2bit − 1. ING Intensity K According to Eq. 9, Eq. 11 and Eq. 12, system gain K has a positive relationship with the noise intensity. Therefore, we appoint K as ING Intensity. Similar in BPG, we make ING Intensity following the log uniform: log K ∼ U(log K min, log K max). (14) Finally, with the simulated raw image RLR t , the sampled shot noise Np and read noise Nread, the output of ING will be I LRN t = \u0012 snRLR t + KN p + Nread sbit \u0013gn . (15) Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6877682209014893,
+      "text": "Thus, the remaining concern is the sufficient diversity or domain gaps between synthetic and real data, which sometimes limits generalization ability. As demonstrated in our experiments, our choice of synthetic datasets leads to impressive zero-shot transfer. Annealed multi-resolution noise. Previous works have explored deviations from the original DDPM formulations, such as non-Gaussian noise [30] or non-Markovian schedule shortcuts [49]. Our proposed setting and the fine-tuning pro- tocol outlined above are permissive to changes to the noise schedule at the fine-tuning stage. We identified a combina- tion of multi-resolution noise [23] and an annealed schedule to converge faster and substantially improve performance over the standard DDPM formulation. The multi-resolution noise is composed by superimposing several random Gaus- sian noise images of different scales, all upsampled to the U-Net input resolution. The proposed annealed schedule interpolates between the multi-resolution noise at t = T and standard Gaussian noise at t = 0. 3. 4. Inference Latent diffusion denoising. The overall inference pipeline is presented in Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6877682209014893,
+      "text": "Thus, the remaining concern is the sufficient diversity or domain gaps between synthetic and real data, which sometimes limits generalization ability. As demonstrated in our experiments, our choice of synthetic datasets leads to impressive zero-shot transfer. Annealed multi-resolution noise. Previous works have explored deviations from the original DDPM formulations, such as non-Gaussian noise [30] or non-Markovian schedule shortcuts [49]. Our proposed setting and the fine-tuning pro- tocol outlined above are permissive to changes to the noise schedule at the fine-tuning stage. We identified a combina- tion of multi-resolution noise [23] and an annealed schedule to converge faster and substantially improve performance over the standard DDPM formulation. The multi-resolution noise is composed by superimposing several random Gaus- sian noise images of different scales, all upsampled to the U-Net input resolution. The proposed annealed schedule interpolates between the multi-resolution noise at t = T and standard Gaussian noise at t = 0. 3. 4. Inference Latent diffusion denoising. The overall inference pipeline is presented in Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.6864569783210754,
+      "text": "Dark- ness and adverse weather conditions (e.g., night, rain, snow, and fog) introduce noise in the pixel correspondences. As displayed in Figure 1, this is detrimental to the effectiveness of such methods, thereby requiring ad hoc solutions. As shown in Figure 2, this problem is particularly se- vere at nighttime due to reflections (e.g., caused by street- lights and vehicle headlights), noise, and the general inabil- ity of the embedded cameras to capture details in dark ar- eas. This leads to wrong depth estimates, which can be dan- gerous in safety-critical settings. A few pioneering works have already explored this problem, albeit with highly- This ICCV paper is the Open Access version, provided by the Computer Vision Foundation. Except for this watermark, it is identical to the accepted version; the final published version of the proceedings is available on IEEE Xplore. 8177"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p8_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 8,
+      "score": 0.6828590631484985,
+      "text": "5. 49 5. 65 5. 81 5. 97 6. 13AbsRel (%) NYUv2 AbsRel δ1 1 2 5 10 20 # Predictions 11. 22 11. 39 11. 55 11. 72 11. 89AbsRel (%) KITTI AbsRel δ1 95. 90 96. 07 96. 25 96. 43 96. 60 δ1 (%) 87. 55 87. 87 88. 19 88. 50 88. 82 δ1 (%) Figure 6. Ablation of ensemble size. We observe a monotonic improvement with the growth of ensemble size. This improvement starts to diminish after 10 predictions per sample. Table 2. Ablation of training noise. Multi-resolution noise im- proves over Gaussian noise; annealing yields further improvement. Multi-res. noise Annealed NYUv2 KITTI AbsRel↓ δ1↑ AbsRel↓ δ1↑ ✗ - 7. 7 93. 4 14. 2 82. 1 ✓ ✗ 5. 8 96. 1 12. 1 87. 1 ✓ ✓ 5. 6 96. 5 11. 3 88. 7 images from the KITTI Eigen [14] training split. Refer to supplementary sections for extra ablations and discussion. Training noise. We investigate the impact of three types of noise during the training phase. As shown in Tab. 2, training with multi-resolution noise significantly improves the depth prediction accuracy over using standard Gaussian noise. Fur- thermore, the gradual annealing of multi-resolution noise yields an additional improvement."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p8_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 8,
+      "score": 0.682858943939209,
+      "text": "5. 49 5. 65 5. 81 5. 97 6. 13AbsRel (%) NYUv2 AbsRel δ1 1 2 5 10 20 # Predictions 11. 22 11. 39 11. 55 11. 72 11. 89AbsRel (%) KITTI AbsRel δ1 95. 90 96. 07 96. 25 96. 43 96. 60 δ1 (%) 87. 55 87. 87 88. 19 88. 50 88. 82 δ1 (%) Figure 6. Ablation of ensemble size. We observe a monotonic improvement with the growth of ensemble size. This improvement starts to diminish after 10 predictions per sample. Table 2. Ablation of training noise. Multi-resolution noise im- proves over Gaussian noise; annealing yields further improvement. Multi-res. noise Annealed NYUv2 KITTI AbsRel↓ δ1↑ AbsRel↓ δ1↑ ✗ - 7. 7 93. 4 14. 2 82. 1 ✓ ✗ 5. 8 96. 1 12. 1 87. 1 ✓ ✓ 5. 6 96. 5 11. 3 88. 7 images from the KITTI Eigen [14] training split. Refer to supplementary sections for extra ablations and discussion. Training noise. We investigate the impact of three types of noise during the training phase. As shown in Tab. 2, training with multi-resolution noise significantly improves the depth prediction accuracy over using standard Gaussian noise. Fur- thermore, the gradual annealing of multi-resolution noise yields an additional improvement."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p8_sc4",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6813850402832031,
+      "text": "[Huang et al., 2022] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. Neighbor2neighbor: A self-supervised framework for deep image denoising. IEEE Transactions on Image Processing , 31:4023–4038, 2022. [Jaderberg et al., 2015] Max Jaderberg, Karen Simonyan, Andrew Zisserman, et al. Spatial transformer networks. Advances in Neural Information Processing Systems , 28, 2015. [Joiner and Rosenblatt, 1971] Brian L Joiner and Joan R Rosenblatt. Some properties of the range in samples from tukey’s symmetric lambda distributions. Journal of the American Statistical Association, 66(334):394–399, 1971."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6812708377838135,
+      "text": "[5] Yuanhao Cai, Hao Bian, Jing Lin, Haoqian Wang, Radu Timofte, and Yulun Zhang. 2023. Retinexformer: One-stage retinex-based transformer for low-light image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision. 12504–12513. [6] Wei-Ting Chen, Yu-Jiet Vong, Sy-Yen Kuo, Sizhou Ma, and Jian Wang. 2024. RobustSAM: Segment Anything Robustly on Degraded Images. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 4081–4091. [7] Ri Cheng, Yuqi Sun, Bo Yan, Weimin Tan, and Chenxi Ma. 2022. Geometry-aware reference synthesis for multi-view image super-resolution. In Proceedings of the 30th ACM International Conference on Multimedia . 6083–6093. [8] Yuekun Dai, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. 2022. Flare7k: A phenomenological nighttime flare removal dataset. Advances in Neural Information Processing Systems 35 (2022), 3926–3937. [9] Alexey Dosovitskiy. 2020. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010. 11929 (2020). [10] Xiaodan Du, Nicholas Kolkin, Greg Shakhnarovich, and Anand Bhattad. 2023. Generative models: What do they know?"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6778781414031982,
+      "text": "The quantitative results obviously demonstrate that our method can produce much finer and more accurate depth predictions, particularly in complex regions with intricate structures, which sometimes cannot be reflected by the met- rics. E. 4 Mix-batch Ratio Ablation Details In the paper, Fig. 3 (g) illustrates the per- formance variation versus the mix-batch ratio under two supervision schemes. We further present 1Discussed in MonoDepth2 repository: https://github.com/nianticlabs/monodepth2/issues/274 21"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.6751717925071716,
+      "text": "We evaluate the consistency of predictions of three models, trained differently,i.e., with Gaussian noise, multi-resolution noise, and annealed multi-resolution noise. We train with two synthetic datasets and validate with the training split of NYUv2 [31] and a subsampled Eigen training split [14] of the KITTI dataset [17]. Specifically, we perform inference 10 times for each sample and compute pixel-wise statis- tics over the resulting depth predictions. Subsequently, we 11"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.6751717925071716,
+      "text": "We evaluate the consistency of predictions of three models, trained differently,i.e., with Gaussian noise, multi-resolution noise, and annealed multi-resolution noise. We train with two synthetic datasets and validate with the training split of NYUv2 [31] and a subsampled Eigen training split [14] of the KITTI dataset [17]. Specifically, we perform inference 10 times for each sample and compute pixel-wise statis- tics over the resulting depth predictions. Subsequently, we 11"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p5_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.6709710359573364,
+      "text": "Specifically, we introduce illumi- nation guidance term𝐼𝐹𝑁𝑔 in the LLPEFT strategy, which is defined as follows: 𝐼𝐹𝑁 𝑔 =𝑚𝑒𝑎𝑛𝑐 \u0000𝐿𝐿𝐷𝐺(𝐼)\u0001, (7) The operation𝑚𝑒𝑎𝑛𝑐 computes the mean value of each pixel along the channel dimension. As shown in Fig. 1. 1, the low-light image𝐼𝐹𝑁 is synthesized from the daytime image𝐼 using LLDG, while𝐼𝐹𝑁𝑔 is generated from𝐼𝐹𝑁 using illumination guidance. This process effectively simplifies the illumination guidance procedure by converting the low-light image into a grayscale representation using a simple but efficient approach. This transformation helps to reduce noise, enhance the brightness distribution, and simplify the information structure. Although this approach results in the loss of color information, it does not significantly affect the final outcome, as the color information is already preserved in the low-light image 𝐼𝐹𝑁 . Ultimately, by introducing this illumination guidance, the model can focus on learning robust feature representations, thereby miti- gating noise amplification, color distortion, and artifacts caused by long exposure and high ISO settings. 3. 2. 2 Multiscale Feature Fusion."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6709290742874146,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.6709290742874146,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.669262170791626,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.669262170791626,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p3_sc1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.6688228249549866,
+      "text": "Then, we elabo- rate on the proposed MonoDiffusion, namely, depth estimation as denoising, pseudo ground-truth diffusion and masked visual condition. Finally, we demonstrate the overall architecture and loss. An overview of the whole framework is shown in Fig. 2. A. Preliminaries Diffusion models , for example, [38], [41], [45], belong to the category of latent variable models and widely employed in generative tasks. In practice, they are trained to denoise images blurred with Gaussian noise and reverse the diffusion process q (xτ |x0 ), which involves the iterative addition of noise to a desired image distribution x0 and allows acquiring the latent noisy sample xτ . Mathematically, q (xτ |x0 ) := N \u0000 xτ √ατ x0, (1 − ατ )I \u0001 , (1) with ατ := Yτ n=0 ατ = Yτ n=0 (1 − βn), (2) and xτ = √ατ x0 + √ 1 − ατ ϵ, ϵ ∼ N(0, 1) , (3) where τ consists of T steps, βn stands for the noise variance schedule as DDPM [38] and N stands for the Gaussian noise. For the denoising process, a noise predictor ϵθ (xτ , τ) learns to reverse the diffusion process and recover x0."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p4_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.6681102514266968,
+      "text": "Afterward, gaussian noise is gradually added at levels τ∈[1, T] into zy to obtain the noisy sample, with zy τ = √ατ zy + √1− ατ ϵ, then the model learns to iteratively reverse it by removing the predicted noise: ˆϵ=f ϵ θ (zy τ−1 |zy τ ,z I),(3) and finally decodes the depth prediction with D=D(z y 0). Here ϵ∼ N(0, I), fϵ θ is the ϵ-prediction U-Net, αt := Qt s=1(1−β s), D is the V AE decoder and{β1, β2, . , βT } is the noise schedule with Tsteps. Equation 1 demonstrates that the self-supervised approach needs the depth predictionDfor image warping. However, obtaining zy 0 requires iterative computation of Eq. 3, which becomes computation- ally infeasible considering the enormous size of SD models. Fortunately, Lotus and E2E FT[33, 21] demonstrate that we can obtain comparable results with single-step denoising and directly predict depth, D=D \u0000 f z θ \u0000 zy τ ,z I\u0001\u0001 , τ=T , which makes it possible to train SD with self-supervision. The step-by-step workflow is detailed in Sec B. 3. 2 Surrogate Task: Image Reconstruction Self-supervision Compromise SD Prior. The photometric reconstruction losses (Eq."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p6_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 6,
+      "score": 0.6673592925071716,
+      "text": "Specifically, the baseline results of Retinexformer and Uformer show ar- tifacts in sky regions and paper textures respectively. For MIRNet and SNR-Aware, the baseline outputs exhibit no- ticeable halo artifacts around object contours. Restormer and LLformer represent typical cases of over-exposure and under-exposure in their baseline results. Despite the diverse failure patterns observed across these baseline models, all these issues are effectively mitigated through the integra- tion of our GT-Mean loss. This comprehensive improve- ment demonstrates the robustness and adaptability of our approach in enhancing image quality across diverse model architectures. 4. 3. Impact of GT-Mean Loss on Training 4. 3. 1. Experimental Configuration. We evaluate training dynamics using Retinexformer [4] on the LOLv1 training dataset with four distinct strategies: • Baseline: Original Retinexformer loss (L1 loss). • Hybrid: A phased approach transitioning from the base- line loss (0–70K iterations) to a brightness-aligned loss in Eq. 1 (80K–150K iterations), with linear interpolation between 70K and 80K iterations."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p6_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 6,
+      "score": 0.6673592925071716,
+      "text": "Specifically, the baseline results of Retinexformer and Uformer show ar- tifacts in sky regions and paper textures respectively. For MIRNet and SNR-Aware, the baseline outputs exhibit no- ticeable halo artifacts around object contours. Restormer and LLformer represent typical cases of over-exposure and under-exposure in their baseline results. Despite the diverse failure patterns observed across these baseline models, all these issues are effectively mitigated through the integra- tion of our GT-Mean loss. This comprehensive improve- ment demonstrates the robustness and adaptability of our approach in enhancing image quality across diverse model architectures. 4. 3. Impact of GT-Mean Loss on Training 4. 3. 1. Experimental Configuration. We evaluate training dynamics using Retinexformer [4] on the LOLv1 training dataset with four distinct strategies: • Baseline: Original Retinexformer loss (L1 loss). • Hybrid: A phased approach transitioning from the base- line loss (0–70K iterations) to a brightness-aligned loss in Eq. 1 (80K–150K iterations), with linear interpolation between 70K and 80K iterations."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.6646788716316223,
+      "text": "The weight for the i-th pyramid level is computed as si, where 0 < s < 1 is a strength of influence of lower-resolution noise. To bring such noise closer to the Gaussian used in the original DDPM formulation, we propose to anneal the weight of levels i >0 based on the diffusion schedule. Specifically, we assign thei- th level at timestep t the weight (st/T )i, where T is the total number of diffusion steps. Thus, a smaller weight is given to lower-resolution levels at timesteps closer to the noise-free end of the schedule. In addition to the ablation study in the main paper, we further demonstrate the effectiveness of annealing and other noise settings in Appendix B. 3. A. 3. Alignment with Ground Truth Depth Following the established evaluation protocol [35], we use least squares fitting over pixels with valid ground truth values to compute the scale and shift factors of the affine-invariant predictions. Note that, while some methods predict affine- invariant disparities [ 13, 35, 36], others (including ours) predict affine-invariant depth values [ 56, 57, 60]. We ap- ply least squares fitting accordingly, i.e. the disparities are aligned to the inverse ground truth depth. A. 4."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.6646788716316223,
+      "text": "The weight for the i-th pyramid level is computed as si, where 0 < s < 1 is a strength of influence of lower-resolution noise. To bring such noise closer to the Gaussian used in the original DDPM formulation, we propose to anneal the weight of levels i >0 based on the diffusion schedule. Specifically, we assign thei- th level at timestep t the weight (st/T )i, where T is the total number of diffusion steps. Thus, a smaller weight is given to lower-resolution levels at timesteps closer to the noise-free end of the schedule. In addition to the ablation study in the main paper, we further demonstrate the effectiveness of annealing and other noise settings in Appendix B. 3. A. 3. Alignment with Ground Truth Depth Following the established evaluation protocol [35], we use least squares fitting over pixels with valid ground truth values to compute the scale and shift factors of the affine-invariant predictions. Note that, while some methods predict affine- invariant disparities [ 13, 35, 36], others (including ours) predict affine-invariant depth values [ 56, 57, 60]. We ap- ply least squares fitting accordingly, i.e. the disparities are aligned to the inverse ground truth depth. A. 4."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p6_sc3",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 6,
+      "score": 0.6643136739730835,
+      "text": "Figure 7 shows the sharpening effect of wavelets qualitatively on KITTI and NYUv2 images. Activated HF AbsRel SqRel R Rlog δ1 δ2 δ3 LL only 0. 104 0. 668 4. 415 0. 179 0. 878 0. 962 0. 985 [3] 0. 097 0. 659 4. 321 0. 177 0. 887 0. 964 0. 984 [3, 2] 0. 096 0. 679 4. 333 0. 179 0. 890 0. 963 0. 983 [3, 2, 1] 0. 096 0. 702 4. 366 0. 180 0. 891 0. 963 0. 983 [3, 2, 1, 0] 0. 097 0. 714 4. 386 0. 181 0. 891 0. 963 0. 983 Table 1: Ablation study on high frequency coefﬁcients on KITTI. While most of the relevant depth information is captured by the low-frequency estimate, predicting higher frequency coef- ﬁcients increases accuracy. Results are evaluated without post- processing. Wavelets are sparse. Next, we show that high-frequency coefﬁcients are sparse. As an example, Figure 1(b) shows one low-frequency and three high-frequency coefﬁcient"
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p10_sc0",
+      "source": "data\\Global-Local.pdf",
+      "page": 10,
+      "score": 0.6607553958892822,
+      "text": "7 Appendix: Robustness of the Model In Table 8, we report a full table of the results on the corrupted NYU Depth V2 dataset. (Section 4. 5 of the main paper) Corruption Type Method δ1↑ δ2↑ δ3↑ AbsRel↓ SqRel↓ RMSE↓ RMSElog↓ Clean BTS 0. 885 0. 978 0. 994 0. 110 0. 066 0. 392 0. 142 Adabins 0. 903 0. 984 0. 997 0. 103 0. 057 0. 364 0. 130 Ours 0. 915 0. 988 0. 997 0. 098 0. 049 0. 344 0. 124 Noise Gaussian Noise BTS 0. 223 0. 384 0. 543 0. 435 0. 824 1. 589 0. 743 Adabins 0. 347 0. 553 0. 708 0. 343 0. 578 1. 299 0. 544 Ours 0. 775 0. 940 0. 983 0. 161 0. 126 0. 541 0. 198 Shot BTS 0. 280 0. 448 0. 600 0. 399 0. 736 1. 482 0. 669 Adabins 0. 436 0. 653 0. 791 0. 293 0. 460 1. 141 0. 454 Ours 0. 791 0. 949 0. 986 0. 152 0. 114 0. 523 0. 189 Impulse BTS 0. 116 0. 249 0. 420 0. 504 1. 006 1. 818 0. 875 Adabins 0. 377 0. 589 0. 736 0. 327 0. 541 1. 246 0. 518 Ours 0. 760 0. 938 0. 984 0. 167 0. 131 0. 556 0. 204 Speckle BTS 0. 456 0. 633 0. 756 0. 302 0. 500 1. 159 0. 492 Adabins 0. 639 0. 834 0. 918 0. 200 0. 244 0. 805 0. 294 Ours 0. 830 0. 965 0. 991 0. 136 0. 091 0. 467 0. 168 Blur Motion BTS 0. 677 0. 850 0. 922 0. 189 0. 207 0. 701 0. 279 Adabins 0. 697 0. 859 0. 927 0. 180 0."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p6_sc4",
+      "source": "data\\Global-Local.pdf",
+      "page": 6,
+      "score": 0.6604241728782654,
+      "text": "Table 4 presents the depth estimation results for the cor- rupted images of the NYU Depth V2 test set. Due to space constraints, we provide the complete table in the supplemen- tary material and present results on a few corruption types in Table 4. The results show that our model is clearly more ro- bust to all types of corruption than the compared models. The experimental results indicate that our model shows stronger robustness and thus is more appropriate for safety-critical ap- plications."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc7",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6582884788513184,
+      "text": "[35] Madhu Vankadari, Stuart Golodetz, Sourav Garg, Sangyun Shin, Andrew Markham, and Niki Trigoni. 2023. When the sun goes down: Repairing pho- tometric losses for all-day depth estimation. In Conference on Robot Learning . PMLR, 1992–2003. [36] Kun Wang, Zhenyu Zhang, Zhiqiang Yan, Xiang Li, Baobei Xu, Jun Li, and Jian Yang. 2021. Regularizing nighttime weirdness: Efficient self-supervised monoc- ular depth estimation in the dark. In Proceedings of the IEEE/CVF international conference on computer vision . 16055–16064. [37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. 2020. A physics-based noise formation model for extreme low-light raw denoising. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 2758–2767. [38] Ke Xian, Jianming Zhang, Oliver Wang, Long Mai, Zhe Lin, and Zhiguo Cao. 2020. Structure-guided ranking loss for single image depth prediction. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 611–620. [39] Zhongwei Xuan, Zunjie Zhu, Shuai Wang, Haibing Yin, Hongkui Wang, and Ming Lu. 2024. Superpixel-based Efficient Sampling for Learning Neural Fields from Large Input."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p12_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 12,
+      "score": 0.6579896807670593,
+      "text": "aggregate these statistics across entire datasets and report them in Tab. S2. As seen from the values, training with the multi-resolution noises increases the prediction consis- tency at inference, and the annealed version brings further improvement. Fig. S1 demonstrates predictions for a single sample with three models and varying starting noise. Table S2. Pixel-wise consistency of depth predictions made by models trained with three different noise types. The reported numbers are averaged over entire datasets, wherein each sample was processed 10 times, starting from a new noise sample. Multi-res. noise Annealed NYUv2 KITTI std max −min std max −min ✗ ✗ 0. 086 0. 260 0. 050 0. 152 ✓ ✗ 0. 037 0. 117 0. 030 0. 094 ✓ ✓ 0. 033 0. 106 0. 025 0. 079 Figure S1. Example of predictions on the same input by models trained with (top-down) Gaussian, multi-resolution, and annealed multi-resolution noise. The last row exhibits the least variance. B. 4. Ratio of Mixed Training Datasets To further investigate the impact of the synthetic datasets used in our fine-tuning protocol, we ablate the mixing ratio of the datasets, discussed in Appendix A. 1."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p12_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6579896807670593,
+      "text": "aggregate these statistics across entire datasets and report them in Tab. S2. As seen from the values, training with the multi-resolution noises increases the prediction consis- tency at inference, and the annealed version brings further improvement. Fig. S1 demonstrates predictions for a single sample with three models and varying starting noise. Table S2. Pixel-wise consistency of depth predictions made by models trained with three different noise types. The reported numbers are averaged over entire datasets, wherein each sample was processed 10 times, starting from a new noise sample. Multi-res. noise Annealed NYUv2 KITTI std max −min std max −min ✗ ✗ 0. 086 0. 260 0. 050 0. 152 ✓ ✗ 0. 037 0. 117 0. 030 0. 094 ✓ ✓ 0. 033 0. 106 0. 025 0. 079 Figure S1. Example of predictions on the same input by models trained with (top-down) Gaussian, multi-resolution, and annealed multi-resolution noise. The last row exhibits the least variance. B. 4. Ratio of Mixed Training Datasets To further investigate the impact of the synthetic datasets used in our fine-tuning protocol, we ablate the mixing ratio of the datasets, discussed in Appendix A. 1."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6564008593559265,
+      "text": "[16] Edward J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, and Weizhu Chen. 2021. Lora: Low-rank adaptation of large language models. arXiv preprint arXiv:2106. 09685 (2021). [17] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. 2021. Neigh- bor2neighbor: Self-supervised denoising from single noisy images. InProceedings of the IEEE/CVF conference on computer vision and pattern recognition . 14781– 14790. [18] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. 2022. Neigh- bor2Neighbor: A self-supervised framework for deep image denoising. IEEE Transactions on Image Processing 31 (2022), 4023–4038. [19] Bingxin Ke, Anton Obukhov, Shengyu Huang, Nando Metzger, Rodrigo Caye Daudt, and Konrad Schindler. 2024. Repurposing diffusion-based image genera- tors for monocular depth estimation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 9492–9502. [20] Bo Li, Chunhua Shen, Yuchao Dai, Anton Van Den Hengel, and Mingyi He. 2015. Depth and surface normal estimation from monocular images using regression on deep features and hierarchical crfs."
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc2",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.6544690728187561,
+      "text": "Accurate depth estimation is a crucial aspect © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p7_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 7,
+      "score": 0.6541926860809326,
+      "text": "Figures 4 and 5 show relative score changes with varying sparsity threshold on KITTI and NYU datasets respectively. Note that a ﬁxed value of η produces different sparsity lev- els depending on the content of an image, so we also plot standard deviation of sparsity levels for each η value. Fig- ure 4 indicates that computing the wavelet coefﬁcients at only 10 percent of pixel locations results in a relative loss in scores of less than 1. 4% for KITTI images. Similarly, Figure 5 shows that we can compute wavelet coefﬁcients at only 5 percent of pixel locations while suffering a loss in scores of less than 0. 20% for NYU images. Finally, we demonstrate how sparsity of high-frequency coefﬁcient maps can be exploited for efﬁciency gains in the decoder. Figure 6 shows Abs Rel and δ1 scores for varying η used during prediction. As can be seen, the score change is minimal when using half multiply-add operations in the decoder and the performance is comparable to SOTA meth- ods using only a third of multiply-add operations. Note that biggest efﬁciency gains are obtained at higher resolution, as sparsity increases with resolution."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc2",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6537715792655945,
+      "text": "We encode the input image into the latent space, initialize depth latent as standard Gaussian noise, and progressively denoise it with the same schedule as during fine-tuning. We empirically find that initializing with standard Gaussian noise gives better results than with multi-resolution noise, although the model is trained on the latter. We follow DDIM’s [ 49] approach to perform non- Markovian sampling with re-spaced steps for accelerated inference. The final depth map is decoded from the latent code using the V AE decoder and postprocessed by averaging channels. Test-time ensembling. The stochastic nature of the infer- ence pipeline leads to varying predictions depending on the initialization noise in z(d) T . Capitalizing on that, we propose the following test-time ensembling scheme, capable of com- bining multiple inference passes over the same input. For each input sample, we can run inference N times. To aggre- gate these affine-invariant depth predictions {ˆd1, . ,ˆdN }, we jointly estimate the corresponding scale ˆsi and shift ˆti, relative to some canonical scale and range, in an iterative manner."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc2",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6537715792655945,
+      "text": "We encode the input image into the latent space, initialize depth latent as standard Gaussian noise, and progressively denoise it with the same schedule as during fine-tuning. We empirically find that initializing with standard Gaussian noise gives better results than with multi-resolution noise, although the model is trained on the latter. We follow DDIM’s [ 49] approach to perform non- Markovian sampling with re-spaced steps for accelerated inference. The final depth map is decoded from the latent code using the V AE decoder and postprocessed by averaging channels. Test-time ensembling. The stochastic nature of the infer- ence pipeline leads to varying predictions depending on the initialization noise in z(d) T . Capitalizing on that, we propose the following test-time ensembling scheme, capable of com- bining multiple inference passes over the same input. For each input sample, we can run inference N times. To aggre- gate these affine-invariant depth predictions {ˆd1, . ,ˆdN }, we jointly estimate the corresponding scale ˆsi and shift ˆti, relative to some canonical scale and range, in an iterative manner."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.6536295413970947,
+      "text": "As shown in Table 2, we evaluated the performance of the GT-Mean loss on three paired datasets, covering reference-based evaluation metrics (PSNR, SSIM, LPIPS) and their GT-Mean versions (GT-Mean PSNR, GT- Mean SSIM, GT-Mean LPIPS), along with QALIGN for image quality assessment (IQA) and image alignment as- sessment (IAA). The experimental results demonstrate that, across the seven baseline models, regardless of the type of original loss function, extending them with the GT-Mean loss consistently improves performance across all evaluation metrics. This outcome validates the universal effectiveness of the GT-Mean loss in LLIE tasks. Notably, both SNR- aware and CIDNet methods exhibit significant performance improvements after incorporating the GT-Mean loss, indicating that the GT-Mean loss effectively complements perceptual loss. One possible explanation is that the GT-Mean loss compensates for the lack of pixel-level per- ception in perceptual loss. Furthermore, since the weight W is computed analytically during training and does not require gradient propagation, its cost is negligible."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.6536295413970947,
+      "text": "As shown in Table 2, we evaluated the performance of the GT-Mean loss on three paired datasets, covering reference-based evaluation metrics (PSNR, SSIM, LPIPS) and their GT-Mean versions (GT-Mean PSNR, GT- Mean SSIM, GT-Mean LPIPS), along with QALIGN for image quality assessment (IQA) and image alignment as- sessment (IAA). The experimental results demonstrate that, across the seven baseline models, regardless of the type of original loss function, extending them with the GT-Mean loss consistently improves performance across all evaluation metrics. This outcome validates the universal effectiveness of the GT-Mean loss in LLIE tasks. Notably, both SNR- aware and CIDNet methods exhibit significant performance improvements after incorporating the GT-Mean loss, indicating that the GT-Mean loss effectively complements perceptual loss. One possible explanation is that the GT-Mean loss compensates for the lack of pixel-level per- ception in perceptual loss. Furthermore, since the weight W is computed analytically during training and does not require gradient propagation, its cost is negligible."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p8_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6530566215515137,
+      "text": "[Dosovitskiy et al., 2020] Alexey Dosovitskiy, Lucas Beyer, Alexander Kolesnikov, Dirk Weissenborn, Xiaohua Zhai, Thomas Unterthiner, Mostafa Dehghani, Matthias Min- derer, Georg Heigold, Sylvain Gelly, et al. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv, 2020. [Eigen et al., 2014] David Eigen, Christian Puhrsch, and Rob Fergus. Depth map prediction from a single image using a multi-scale deep network. Advances in Neural In- formation Processing Systems, 27, 2014. [Feng et al., 2022] Hansen Feng, Lizhi Wang, Yuzhi Wang, and Hua Huang. Learnability enhancement for low-light raw denoising: Where paired real data meets noise model- ing. In ACM MM, pages 1436–1444, 2022. [Geiger et al., 2013] Andreas Geiger, Philip Lenz, Christoph Stiller, and Raquel Urtasun. Vision meets robotics: The kitti dataset. The International Journal of Robotics Re- search, 32(11):1231–1237, 2013. [Godard et al., 2019] Cl´ement Godard, Oisin Mac Aodha, Michael Firman, and Gabriel J Brostow. Digging into self- supervised monocular depth estimation. In ICCV, pages 3828–3838, 2019. [Goodman, 2005] Joseph W Goodman. Introduction to F ourier optics."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.653046727180481,
+      "text": "We further discuss the effect of F max, Kmax as well as the composition of ING in our main paper. Since the processing of Re-rendering requires the corre- sponding depth map as input, decay usage of BPG and ING is applied, and the starting step is set to 20,000. To maintain performance on daytime images, BPG and ING processing rates are set to 0. 5, and these two probabilities are indepen- dent of each other. D. 4 Augmentation on light source images For the sampled light source image, a random rotation U (0, 2π) and a random flip is applied. Then, a random weight follows U (1, 3) is used to scale the brightness. U (0. 8, 1. 2) is used for the scale of contrast and saturation. A Gaussian blur is also used with a sigma limit range of[0. 1, 3] to enhance the low-passing glow effect. D. 5 Pre-crop of nuScenes and Oxford RobotCar Pre-cropping is used in RNW [Wang et al. , 2021 ] and ADDS [Liu et al. , 2021 ] to balance the image aspect ratio and cut out the imaging of car hoods. We follow the same approach as proposed in these papers. For nuScenes, the im- ages are first center-cropped from 1600 ×900 to 1536 ×768 before testing or the training of DA or DT types methods."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p10_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.6525136232376099,
+      "text": "[52] Hengrun Zhao, Bolun Zheng, Shanxin Yuan, Hua Zhang, Chenggang Yan, Liang Li, and Gregory Slabaugh. 2022. CBREN: Convolutional Neural Networks for Constant Bit Rate Video Quality Enhancement. IEEE Transactions on Circuits and Systems for Video Technology 32, 7 (2022), 4138–4149. [53] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. 2023. Unleashing text-to-image diffusion models for visual perception. In Proceedings of the IEEE/CVF International Conference on Computer Vision . 5729– 5739. [54] B Zheng, S Yuan, C Yan, X Tian, J Zhang, Y Sun, L Liu, A Leonardis, and G Slabaugh. 2022. Learning Frequency Domain Priors for Image Demoireing. IEEE Transactions on Pattern Analysis and Machine Intelligence44, 11 (2022), 7705–7717."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7784914970397949,
+      "text": "However, low-light images often suffer from amplified noise due to low photon counts and high system gain in camera sensors. Inspired by the physical priors of noise formation, we introduce the Noise Simulation Module (NSM) technique to simulate the noise distribution in nighttime scenes. Based on the shot-read noise model [12, 37, 40], we take the flare image as input and precisely simulate noise under low-light conditions in a physically decoupled manner. This approach ensures that the synthesized images closely resemble those captured in real low-light scenarios. Therefore, the final low-light image𝐼𝐹𝑁 can be expressed by the following formula: 𝐼𝐹𝑁 =𝐼𝐹+𝑁, (5) where𝐼𝐹 represents the flare image of the real scene, and𝑁 refers to the summation of all physical noise. According to the physical noise models used in base image denoising [48], the overall noise 𝑁 can be decomposed into four components: photon shot noise𝑁𝑝, read noise𝑁𝑟𝑒𝑎𝑑 , row noise𝑁𝑟 , and quantization noise𝑁𝑞: 𝑁 =𝐾𝑁𝑝+𝑁𝑟𝑒𝑎𝑑+𝑁𝑟+𝑁𝑞.",
+      "estimated_tokens": 309
+    },
+    {
+      "id": "semantic_chunk::TDDC_p5_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7702299356460571,
+      "text": "with simple but effective Phong illumination model [Phong, 1975]. The sampled image on current stage, I LR t , will be: I LR t = I L t + NFX i=1 I R i . (7) The detailed calculation of I R i is shown in the supplementary, and we give some examples of re-rendering in Fig. 3. 1. 3. 4 Imaging noise modeling Heavy noise at night corrupts the local distribution and makes fake textures. Based on the shot-read noise model [Wei et al., 2020; Wei et al., 2021], we build our Imaging Noise Genera- tor (ING) using color images as input. Noise Model For a camera imaging system, if without Image Signal Pro- cessor (ISP), a linear model can generally formulate the digit sensor raw image [Wei et al., 2020; Feng et al., 2022]: R∗ = KC + N = R + N, (8) where C is the number of photon, K donates the overall sys- tem gain, and N refers to the summation of all physical noise. In the physical model base image denoising[Wei et al., 2020; Wei et al., 2021; Zhang et al., 2021], the overall noise N, is roughly separated into shot noise Np and read noise Nread: N = KN p + Nread. (9) Here, Shot noise is caused by the collection uncertainty of photons, which follows (C + Np) ∼ P(C).",
+      "estimated_tokens": 327
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc4",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7282469272613525,
+      "text": "(6) Where𝐾 denotes the total system gain, whose value is deter- mined by the camera’s ISO setting,𝑁𝑝 represents the photon shot noise, which depends on the incident light intensity and follows a Poisson distribution.𝑁𝑟𝑒𝑎𝑑 is a unified term encompassing multi- ple noise sources, including dark current noise, thermal noise, and source follower noise.𝑁𝑟 typically manifests as horizontal or verti- cal lines in the image and is modeled as a fixed offset applied to each column or row, sampled from a zero-mean Gaussian distribution with variance𝜆𝑟𝑜𝑤 .𝑁𝑞 is introduced by the finite bit depth of the sensor and is modeled as a uniform sampling of pixel values, with the variance parameterized by𝜆𝑞𝑢𝑎𝑛𝑡 . All of the above parameters follow the design principles outlined in ELD [37] and we give some paired visual examples of𝐼𝐹𝑁 in Fig. 3. 1. 3. 2 Low-Light Parameter-Efficient Fine-Tuning Although we synthesized large-scale paired depth data for day- time and low-light scenarios through LLDG, we observed that the directly fine-tuned foundation model exhibited unstable loss con- vergence during training, while full model optimization required",
+      "estimated_tokens": 301
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.7121032476425171,
+      "text": "Extreme low-light environment- driven image denoising over permanently shadowed lunar regions with a physical noise model. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021. 1 [26] J. G. Robson. Spatial and temporal contrast-sensitivity func- tions of the visual system. J. Opt. Soc. Am. , 56(8):1141– 1142, 1966. 3 [27] George Seif and Dimitrios Androutsos. Edge-based loss function for single image super-resolution. In Proceedings of IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2018. 4 [28] M. Treisman. Noise and weber’s law: the discrimination of brightness and other dimensions. Psychological Review, 71: 314–330, 1964. 1 [29] Vassilios V onikakis, Rigas Kouskouridas, and Antonios Gasteratos. On the evaluation of illumination compensa- tion algorithms. Multimedia Tools and Applications , page 9211–9231, 2018. 4 [30] Chenxi Wang, Hongjun Wu, and Zhi Jin. Fourllie: Boosting low-light image enhancement by fourier frequency informa- 9",
+      "estimated_tokens": 279
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.7121032476425171,
+      "text": "Extreme low-light environment- driven image denoising over permanently shadowed lunar regions with a physical noise model. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2021. 1 [26] J. G. Robson. Spatial and temporal contrast-sensitivity func- tions of the visual system. J. Opt. Soc. Am. , 56(8):1141– 1142, 1966. 3 [27] George Seif and Dimitrios Androutsos. Edge-based loss function for single image super-resolution. In Proceedings of IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 2018. 4 [28] M. Treisman. Noise and weber’s law: the discrimination of brightness and other dimensions. Psychological Review, 71: 314–330, 1964. 1 [29] Vassilios V onikakis, Rigas Kouskouridas, and Antonios Gasteratos. On the evaluation of illumination compensa- tion algorithms. Multimedia Tools and Applications , page 9211–9231, 2018. 4 [30] Chenxi Wang, Hongjun Wu, and Zhi Jin. Fourllie: Boosting low-light image enhancement by fourier frequency informa- 9",
+      "estimated_tokens": 279
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1495,
+    "compressed_context_tokens": 1495,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1495,
+  "context_tokens": 1495,
+  "prompt_token_estimate": 1923,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_paper_ing_components",
+  "answer": "<think>\nThe user is asking about how the Imaging Noise Generator (ING) models nighttime imaging noise. I need to look at the provided sources to find information about ING.\n\nLooking at source [2] (TDDC.pdf), it mentions:\n- \"Heavy noise at night corrupts the local distribution and makes fake textures. Based on the shot-read noise model [Wei et al., 2020; Wei et al., 2021], we build our Imaging Noise Generator (ING) using color images as input.\"\n- \"Noise Model For a camera imaging system, if without Image Signal Processor (ISP), a linear model can generally formulate the digit sensor raw image [Wei et al., 2020; Feng et al., 2022]: R* = KC + N = R + N, (8) where C is the number of photon, K donates the overall system gain, and N refers to the summation of all physical noise.\"\n- \"In the physical model base image denoising[Wei et al., 2020; Wei et al., 2021; Zhang et al., 2021], the overall noise N, is roughly separated into shot noise Np and read noise Nread: N = KNp + Nread. (9) Here, Shot noise is caused by the collection uncertainty of photons, which follows (C + Np) ∼ P(C).\"\n\nSource [1] (DepthDark.pdf) also describes a similar noise simulation but uses NSM (Noise Simulation Module), not ING. It decomposes noise into four components: photon shot noise Np, read noise Nread, row noise Nr, and quantization noise Nq.\n\nThe question specifically asks about ING (Imaging Noise Generator), which is mentioned in source [2]. Source [2] only describes the noise model in two components (shot noise and read noise), while source [1] describes a more detailed four-component decomposition in NSM (not ING).\n\nI should base my answer on source [2] since it specifically discusses ING. The ING uses the shot-read noise model with shot noise (Poisson distribution) and read noise components.\n\nLet me structure the answer:\n- ING is based on the shot-read noise model\n- Uses a linear camera imaging model: R* = KC + N\n- Decomposes total noise N into shot noise Np and read noise Nread: N = KNp + Nread\n- Shot noise follows Poisson distribution due to photon collection uncertainty\n\nThe citations should be [2] as the main source.\n</think>\n{\n  \"answer\": \"Imaging Noise Generator (ING) 基于 shot-read 噪声模型，以彩色图像为输入，通过线性相机成像模型 R* = KC + N 将总噪声 N 分解为 shot noise Np 和 read noise Nread（公式 N = K·Np + Nread），其中 shot noise 由光子采集不确定性引起并服从泊松分布。\",\n  \"items\": [\n    {\n      \"name\": \"ING 的整体建模思路\",\n      \"description\": \"ING 基于 shot-read 噪声模型构建，以彩色图像为输入，对夜间重噪声进行物理建模。\",\n      \"citations\": [2]\n    },\n    {\n      \"name\": \"线性相机成像模型\",\n      \"description\": \"在不含 ISP 的情况下，使用线性模型 R* = KC + N 描述传感器 raw 图像，其中 C 为光子数，K 为系统增益，N 为物理噪声总和。\",\n      \"citations\": [2]\n    },\n    {\n      \"name\": \"噪声分解\",\n      \"description\": \"总噪声 N 被分解为 shot noise Np 与 read noise Nread 两部分：N = K·Np + Nread。\",\n      \"citations\": [2]\n    },\n    {\n      \"name\": \"Shot noise 的统计特性\",\n      \"description\": \"Shot noise 由光子采集不确定性引起，服从 (C + Np) ∼ P(C) 的泊松分布。\",\n      \"citations\": [2]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1896,
+    "completion_tokens": 822,
+    "total_tokens": 2718,
+    "model": "MiniMax-M3"
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_paper_effective_test__ask_baseline_none_37b22b7e0376",
+  "dry_run": false,
+  "query": "论文主实验在 nuScenes-Night 和 RobotCar-Night 上得到哪些关键结论？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::TDDC_p7_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7849491238594055,
+      "text": "nighttime dataset is used as the\ntarget dataset during our training.\nIn our supplementary material, we provide additional tests\non nuScenes-Day and Robotcar-Day, give a complete qual-\nitative comparison on nuScenes-Night/nuScenes-Day and\nRobotCar-Night/Rob"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7705615758895874,
+      "text": "N-N & R-N\nDA: RNW\nDA: ADDS\nG: Ours\nFigure 4.1: Qualitative results on nuScenes-Night (First four columns) and RobotCar-Night (Last four columns). We leave more visual\ncomparisons to the supplementary material. Compare to DA types methods, our training appl"
+    },
+    {
+      "id": "chunk::DepthDark_p7_chunk_6",
+      "source": "data\\DepthDark.pdf",
+      "page": 7,
+      "score": 0.7618573904037476,
+      "text": "-of-the-art performance on the nuScenes-Night dataset\n(with only the𝛿1 metric ranking second) and attained comprehen-\nsive leading results across all metrics on RobotCar-Night. This\nremarkable advantage stems from our innovative fine-tuning strat-\negy, whi"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_20",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.7599771022796631,
+      "text": "uned it on the nuScenes\ntraining set. For RobotCar, we used T c to translate all day\nsamples E into night ones. RobotCar contains more night\nsamples than nuScenes, so we trained T c directly on its\ntraining set. We share publicly all generated hc\ni images."
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_7",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7558943033218384,
+      "text": "e qual-\nitative comparison on nuScenes-Night/nuScenes-Day and\nRobotCar-Night/RobotCar-Day, and offer additional visual\nresults on other nighttime datasets to further prove the effec-\ntiveness of our method.\n4.3 Ablation Test on Pre-processing\nContribution"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_27",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.7558485269546509,
+      "text": "We provide a complete quantitative comparison in this part.\nThe visual results tested on nuScenes-Night and nuScenes-\nDay are shown in Fig. E.2 and those on RobotCar-Night and\nRobotCar-Day are shown in Fig. E.3."
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_12",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.7536369562149048,
+      "text": "2 0.908 0.977\nOurs K 768 ×256 40 0.210 1.515 5.386 0.238 0.676 0.936 0.980\nTable 4.1: Effective test on nuScenes-Night [Wang et al., 2021; Caesar et al., 2020] and Robotcar-Night [Liu et al., 2021; Maddern et al.,\n2017]. All methods use the same DepthNet b"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_19",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.7505877017974854,
+      "text": "cular depth es-\ntimation frameworks (tested on day and night). To com-\nplete our effective testing part, in Table E.1, we present the\nqualitative comparison on nuScenes-Day [Wang et al., 2021;\nCaesar et al. , 2020 ] and RobotCar-Day [Liu et al. , 2021;\nMad"
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_25",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7375503778457642,
+      "text": "o et al. , 2022a ]\nand DT (Direct training): WSGD [Vankadari et al., 2023] on\nnuScenes-Night and RobotCar-Night, respectively. To make"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_29",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.7350517511367798,
+      "text": "nuScnce-Night. The light sources do not image streak\nand there is little noise in the sky. Here, we use RobotCar-\nNight to test the effectiveness of our method when the wave\noptics effect and noise are not significant.\nThe bottom half of Table 4.1 shows qu"
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_22",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7308669686317444,
+      "text": "s used as the training set due to\nits high-quality images, and we also regard it as our basic\nday-image distribution.\nFor evaluation, we use the nuScenes-Night test split from\nRNW [Wang et al., 2021] and the RobotCar-Night test split\nproposed in ADDS [Liu"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_31",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.727794885635376,
+      "text": "t are generally\nworse compared to RobotCar-Night. This is primarily due to the\nstrong corrective effects of the ISP in RobotCar-Night, which results\nin a cleaner image plane compared to nuScenes-Night."
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_22",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7277754545211792,
+      "text": "RobotCar [23]. nuScenes\nis a challenging large-scale dataset with 15h of driving in\nBoston and Singapore, diverse scenes, and difficult con-\nditions. We distinguished good visibility (i.e., day-clear),\n8181"
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_10",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.717938244342804,
+      "text": "RobotCar-\nNight datasets, validating its effectiveness using limited training\ndata and computing resources.\nCCS Concepts\n• Computing methodologies→ Computer vision; Image pro-\ncessing; Virtual reality.\n∗Corresponding Author.\nPermission to make digital or h"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_13",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.712307333946228,
+      "text": "l. , 2014; Geiger et al. ,\n2013], nuScenes [Caesar et al., 2020] and Oxford RobotCar [Maddern et al., 2017] datasets accordingly. d and n refer to the day and night\ntraining splits proposed by ADDS [Liu et al., 2021] or RNW [Wang et al., 2021]. † means the"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_37",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.7071791887283325,
+      "text": "e-\nsults on both nuScenes-Night and Robotcar-Night, although\nno image from these two datasets is used during training.\nComparison of G Results\nIn Table 4.1, we also provide the G results of domain\nadaptation-based methods. Their decrease in accuracy"
+    },
+    {
+      "id": "chunk::s_p6_chunk_13",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.706986665725708,
+      "text": "+[8] [self] 1 0.1092 0.759 3.355 88.32 0.1257 0.930 3.904 85.24\nOurs-Single [self] 1 0.1063 0.646 3.171 88.29 0.1103 0.693 3.455 86.15\nTable 2. Quantitative comparison on Robotcar dataset [19] in different conditions (daytime and nighttime). Source indicat"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_18",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.7068281173706055,
+      "text": "ABS rel.\nE Additional results\nE.1 Evaluation on nuScenes-Day and\nRobotCar-Day\nBoth ADDS [Liu et al. , 2021 ] and WSGD [Vankadari et\nal., 2023 ] are proposed to be all-day monocular depth es-\ntimation frameworks (tested on day and night). To com-\nplete our"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_24",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.7060888409614563,
+      "text": "uScenes-Night and\nRobotCar-Night datasets, with particularly notable improvements\non RobotCar-Night. Specifically, the large-scale paired low-light\ndataset generated by LLDG addresses the challenge of collecting\ntraining data for low-light foundation model"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_30",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7037441730499268,
+      "text": "tion of DepthDark and compared it with various state-of-the-art\nmethods. As shown in Tab. 4.1, the overall performance demon-\nstrates that results on the nuScenes-Night dataset are generally\nworse compared to RobotCar-Night. This is primarily due to the\ns"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_21",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7036159038543701,
+      "text": "nd RobotCar-\nNight, which are, to the best of our knowledge, the most widely\nused benchmarks for low-light monocular depth estimation tasks.\nThe evaluation settings for nuScenes-Night follow RNW [36], while\nthose for RobotCar-Night follow ADDS [24]. Moreov"
+    },
+    {
+      "id": "chunk::TDDC_p1_chunk_7",
+      "source": "data\\TDDC.pdf",
+      "page": 1,
+      "score": 0.7036052346229553,
+      "text": "ervised manner. Though\nno nighttime images are considered during training,\nqualitative and quantitative results demonstrate that\nour method achieves SoTA depth estimating results\non the challenging nuScenes-Night and RobotCar-\nNight compared with existing"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_28",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.7017845511436462,
+      "text": "nd\nbright scenes.\nEvaluation on RobotCar-Night\nAs shown in Fig. 4.1, the strong corrective effect of ISP in\nRobotCar-Night results in a cleaner image plane compared to\nthat in nuScnce-Night. The light sources do not image streak\nand there is little noise i"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_21",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7004868984222412,
+      "text": "and Results\n4.1. Experimental Setup\nDatasets and metrics We used two public driving\ndatasets containing various illumination and weather condi-\ntions: nuScenes [3] and Oxford RobotCar [23]. nuScenes\nis a challenging large-scale dataset with 15h of driving"
+    },
+    {
+      "id": "chunk::TDDC_p1_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 1,
+      "score": 0.6998414993286133,
+      "text": "of Science and Technology\n2Beihang University\n{haolinyang, zhaocq}@mail.ecust.edu.cn, lsheng@buaa.edu.cn, yangtang@ecust.edu.cn\nAbstract\nNighttime self-supervised monocular depth esti-\nmation has received increasing attention in recent\nyears. However, usin"
+    },
+    {
+      "id": "chunk::s_p9_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.6991530656814575,
+      "text": "ang Xu, Anush Krishnan, Yu Pan,\nGiancarlo Baldan, and Oscar Beijbom. nuscenes: A mul-\ntimodal dataset for autonomous driving. arXiv preprint\narXiv:1903.11027, 2019. 2, 3, 6, 7\n[6] Ziyue Feng, Liang Yang, Longlong Jing, Haiyan Wang,\nYingLi Tian, and Bing Li"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6967359781265259,
+      "text": "day – RobotCar night – RobotCar\nMethod source sup. tr.data absRel sqRel RMSE δ1 absRel sqRel RMSE δ1\nMonodepth2 [11] [ours] M ∗ d 0.1196 0.670 3.164 ......86.38 0.3029 1.724 5.038 45.88\nDeFeatNet [33] [37] M ∗ a: dn 0.2470 2.980 7.884 65.00 0.3340 4.589 8."
+    },
+    {
+      "id": "chunk::LED_p10_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.6966915726661682,
+      "text": "performance. We\nalso release the Nighttime Synthetic Drive Dataset, comprising 49,995 fully annotated im-\nages. We hope it will serve as a valuable resource for the research community, supporting\nexploration of various nighttime perception tasks.\nAcknowle"
+    },
+    {
+      "id": "chunk::s_p6_chunk_23",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.6966863870620728,
+      "text": "[5]\nand Robotcar [19] which are used for training and testing,\nand DrivingStereo [37] dataset which is used for zero-shot\nevaluation to verify the effectiveness of our pipeline.\nNuScenes [5] is a large benchmark which owns real data\nin daytime, nighttime,"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_28",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6956746578216553,
+      "text": "ur\nexperimental results with state-of-the-art methods, including Depth\nAnything, Depth Anything V2, and TDDC. Evaluations on both\nnuScenes-Night and RobotCar-Night datasets demonstrate that our\nmethod exhibits superior robustness in low-light scenarios.\n4."
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_6",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6905869245529175,
+      "text": "3 0.971\nOurs DepthDark H, VK - 60 0.210 1.910 7.764 0.260 0.630 0.914 0.976\nTest on RobotCar-Night\nDT MonoViT[51] R 𝑑 &𝑛 640 × 320 40 0.513 13.558 9.867 0.479 0.588 0.846 0.918\nWSGD[35] R 𝑑 &𝑛 640 × 320 40 0.202 1.835 5.985 0.231 0.737 0.934 0.977\nDA\nITDFA"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_24",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.689654529094696,
+      "text": "tic imaging compared to that in RobotCar-Night, it in-\ntroduces further disadvantages in the photometric loss. Thus,\ntwo DT methods strongly diverge on this dataset.\nMeanwhile, our method generalizes well to these unseen\nnighttime scenes and outperforms al"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.6886245012283325,
+      "text": "day – RobotCar night – RobotCar\nMethod sup. tr.data absRel sqRel RMSE δ1 absRel sqRel RMSE δ1\nMonodepth2 [Godard et al., 2019] M∗ d 0.1196 0.670 3.164 86.38 0.3029 1.724 5.038 45.88\nDeFeatNet [Spencer et al., 2020] M∗ a: dn 0.2470 2.980 7.884 65.00 0.3340"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p9_chunk_4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 9,
+      "score": 0.6885973215103149,
+      "text": "dan, and Oscar Beijbom. nuScenes: A multi-\nmodal dataset for autonomous driving. In Proceedings of\nthe IEEE/CVF Conference on Computer Vision and Pattern\nRecognition, pages 11621–11631, 2020. 1, 2, 4, 5, 6, 7, 8\n[4] Carlos A Diaz-Ruiz, Youya Xia, Yurong Yo"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_14",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.687785267829895,
+      "text": "d can produce rea-\nsonable and reliable predictions of depth information in night\nscenes, such as trees and cars under low-light conditions.\nComparison on the RobotCar . To further verify the effec-\ntiveness, we compare our ACDepth with existing state-of-t"
+    },
+    {
+      "id": "chunk::LED_p1_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.6869774460792542,
+      "text": "Finally, we release the Nighttime Synthetic Drive Dataset, a synthetic and photo-\nrealistic nighttime dataset, which comprises 49,990 comprehensively annotated images.\nTo facilitate further research, both synthetic dataset and code are publicly available a"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_16",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.6848841905593872,
+      "text": "ness of our method on unseen\nnighttime scenes, we show the visual results on darkZurich\n(Fig. E.4) and NightCity (Fig. E.5), correspondingly. Note\nthat darkZurich and NightCity are two popular used night-\ntime segmentation datasets. As shown in Fig. E.5, t"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_19",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.6840783357620239,
+      "text": "8.547 0.344 0.641 0.850 0.928Test on RobotCar-NightBaseline 0.242 1.882 5.962 0.261 0.600 0.915 0.979BPG Only 0.2161.827 5.986 0.248 0.6860.9200.976ING Only 0.238 1.8175.882 0.257 0.620 0.9200.980Full Method0.210 1.515 5.386 0.238 0.6760.936 0.980\nTable 4."
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_3",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.6838763356208801,
+      "text": "727 0.245 0.700 0.895 0.973\nDepthDark 0.157 1.063 4.284 0.202 0.760 0.941 0.985\nTable 4.2: Efficacy of Proposed Modules: Ablation studies on\nnuScenes-Night and RobotCar-Night demonstrate that each\nmodule enhances DepthDark’s performance, with combined\nuse"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_36",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.6826902627944946,
+      "text": "ed\nand photometric loss repair-based methods are still limited\nby the quality of night images. Meanwhile, using the same\nbackbone of DepthNet, our method maintains convincing re-\nsults on both nuScenes-Night and Robotcar-Night, although\nno image from these"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_11",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.6826530694961548,
+      "text": "56 40 0.102 0.500 3.364 0.147 0.905 0.977 0.992\nOurs K 768 × 256 40 0.109 0.477 3.261 0.151 0.891 0.978 0.993\nTable E.1: Effective test on nuScenes-Day [Wang et al., 2021; Caesar et al., 2020] and Robotcar-Day [Liu et al., 2021; Maddern et al.,\n2017]. All"
+    },
+    {
+      "id": "chunk::s_p10_chunk_26",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.6817630529403687,
+      "text": "upeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang\nGao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue\nZhou, Qichao Zhang, and Dongbin Zhao. Steps: Joint self-\nsupervised nighttime image enhancement and depth estima-\ntion. In 2023 IEEE International Con"
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_22",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.6815122365951538,
+      "text": "th esti-\nmation, such as RNW [36], ADDS [24], MonoVit [51], MonoFormer\n[1], and TDDC [40], focus primarily on nighttime autonomous driv-\ning, which limits their applicability to other applications. Conse-\nquently, developing a foundation model capable of e"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.6807816028594971,
+      "text": "al., 2022b] K 768 ×256 60 0.348 4.144 11.086 0.473 0.417 0.708 0.843\nOurs K 768 ×256 60 0.259 3.147 8.547 0.344 0.641 0.850 0.928\nTest on RobotCar-Night\nDT MonoViT[Zhaoet al., 2022b] Rd&n 640×320 40 0.513 13.558 9.867 0.479 0.588 0.846 0.918\nWSGD[Vankadar"
+    },
+    {
+      "id": "chunk::TDDC_p1_chunk_8",
+      "source": "data\\TDDC.pdf",
+      "page": 1,
+      "score": 0.6798086166381836,
+      "text": "ts\non the challenging nuScenes-Night and RobotCar-\nNight compared with existing methods.\n1 Introduction\nMonocular depth estimation plays a key role in several ap-\nplications, such as augmented reality [Azuma et al. , 2001],\nautonomous driving [Menze and Ge"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_5",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6789515614509583,
+      "text": "results for\nRobotCar [23]. Here we compare with various approaches\nthat also target depth estimation in challenging condi-\ntions [33, 22, 38, 37]. They all focus on night issues, tested\nhere. Our md4all outperforms them all across the board,\nwith substanti"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_8",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.6780725717544556,
+      "text": "achieves SoTA performance on\nthe challenging nuScenes-Night and RobotCar-Night dataset,\nthough no nighttime images are used in our training frame-\nwork.\n2 Related work\nEstimating depth from a single image is an ill-posed prob-\nlem, and deep learning-based"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_7",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.6770546436309814,
+      "text": "pthDark, Figs. 4.1 and 4.2 presents qualitative results on the\nnuScenes-Night and RobotCar-Night low-light datasets, comparing\nour method with other monocular depth estimation approaches.\nAs shown in the first row of Figs. 4.1 and 4.2, low-light conditions"
+    },
+    {
+      "id": "chunk::TDDC_p9_chunk_21",
+      "source": "data\\TDDC.pdf",
+      "page": 9,
+      "score": 0.6766800284385681,
+      "text": ", 2021] Xin Tan, Ke Xu, Ying Cao, Yiheng Zhang,\nLizhuang Ma, and Rynson W. H. Lau. Night-time scene\nparsing with a large real dataset. IEEE Transactions on\nImage Processing, 30:9085–9098, 2021.\n[Tang et al., 2013] Shuai Tang, Xiaoyu Wang, Xutao Lv,\nTony X"
+    },
+    {
+      "id": "chunk::LED_p13_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 13,
+      "score": 0.6761103868484497,
+      "text": "nade, and Srinivasa G. Narasimhan. Programmable Automotive Headlights. In\nECCV, 2014.\n[42] Madhu Vankadari, Sourav Garg, Anima Majumder, Swagat Kumar, and Ardhendu Be-\nhera. Unsupervised monocular depth estimation for night-time images using adversar-\nial"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::TDDC_p7_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7849491238594055,
+      "text": "nighttime dataset is used as the\ntarget dataset during our training.\nIn our supplementary material, we provide additional tests\non nuScenes-Day and Robotcar-Day, give a complete qual-\nitative comparison on nuScenes-Night/nuScenes-Day and\nRobotCar-Night/Rob",
+      "estimated_tokens": 60
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7705615758895874,
+      "text": "N-N & R-N\nDA: RNW\nDA: ADDS\nG: Ours\nFigure 4.1: Qualitative results on nuScenes-Night (First four columns) and RobotCar-Night (Last four columns). We leave more visual\ncomparisons to the supplementary material. Compare to DA types methods, our training appl",
+      "estimated_tokens": 73
+    },
+    {
+      "id": "chunk::DepthDark_p7_chunk_6",
+      "source": "data\\DepthDark.pdf",
+      "page": 7,
+      "score": 0.7618573904037476,
+      "text": "-of-the-art performance on the nuScenes-Night dataset\n(with only the𝛿1 metric ranking second) and attained comprehen-\nsive leading results across all metrics on RobotCar-Night. This\nremarkable advantage stems from our innovative fine-tuning strat-\negy, whi",
+      "estimated_tokens": 61
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_20",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.7599771022796631,
+      "text": "uned it on the nuScenes\ntraining set. For RobotCar, we used T c to translate all day\nsamples E into night ones. RobotCar contains more night\nsamples than nuScenes, so we trained T c directly on its\ntraining set. We share publicly all generated hc\ni images.",
+      "estimated_tokens": 64
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 258,
+    "compressed_context_tokens": 258,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 258,
+  "context_tokens": 258,
+  "prompt_token_estimate": 656,
+  "run_label": "sage_semantic_all_v1_chunk_paper_effective_test_findings",
+  "answer": "<think>\nThe user is asking about the key conclusions from the main experiments on nuScenes-Night and RobotCar-Night datasets based on the provided materials.\n\nLet me analyze the materials:\n\n[1] Mentions that nuScenes-Night is used as the target dataset during training, and they provide additional tests on nuScenes-Day and Robotcar-Day.\n\n[2] Shows qualitative results on nuScenes-Night and RobotCar-Night, comparing to DA (Domain Adaptation) type methods.\n\n[3] States that they achieved state-of-the-art performance on the nuScenes-Night dataset (with only the δ1 metric ranking second) and attained comprehensive leading results across all metrics on RobotCar-Night. This advantage stems from their innovative fine-tuning strategy.\n\n[4] Discusses training details - for RobotCar, they used Tc to translate all day samples into night ones, and they share publicly all generated images.\n\nKey conclusions:\n1. State-of-the-art (SOTA) performance on nuScenes-Night dataset (with only δ1 metric ranking second)\n2. Comprehensive leading results across all metrics on RobotCar-Night\n3. These results are due to their innovative fine-tuning strategy\n\nLet me construct the JSON response.\n</think>\n{\n  \"answer\": \"论文在 nuScenes-Night 和 RobotCar-Night 两个夜间数据集主实验上取得了领先效果：在 nuScenes-Night 上达到 SOTA（仅 δ1 指标排名第二），在 RobotCar-Night 上所有指标全面领先。\",\n  \"items\": [\n    {\n      \"name\": \"nuScenes-Night 表现\",\n      \"description\": \"在 nuScenes-Night 数据集上达到了 state-of-the-art 性能，仅 δ1 指标排名第二，其余指标领先。\",\n      \"citations\": [3]\n    },\n    {\n      \"name\": \"RobotCar-Night 表现\",\n      \"description\": \"在 RobotCar-Night 数据集上所有指标均取得全面领先的结果。\",\n      \"citations\": [3]\n    },\n    {\n      \"name\": \"优势来源\",\n      \"description\": \"上述显著优势得益于论文提出的创新性微调策略（fine-tuning strategy）。\",\n      \"citations\": [3]\n    },\n    {\n      \"name\": \"实验设置\",\n      \"description\": \"nuScenes-Night 作为训练时的目标域数据集；对 RobotCar，使用 Tc 将所有日间样本翻译为夜间样本，并公开了生成图像。\",\n      \"citations\": [1, 4]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 709,
+    "completion_tokens": 525,
+    "total_tokens": 1234,
+    "model": "MiniMax-M3"
+  }
+}

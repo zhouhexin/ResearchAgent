@@ -1,0 +1,422 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_paper_traini_ask_baseline_none_a70e2e54e051",
+  "dry_run": false,
+  "query": "论文主自监督训练目标由哪几类损失组成？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5696369409561157,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024)."
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc2",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.5619827508926392,
+      "text": "Accurate depth estimation is a crucial aspect © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p14_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.5421513915061951,
+      "text": "IEEE, 2022. 1, 2, 8, 21 [69] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. ICCV, 2023. 3 [70] Kaichen Zhou, Lanqing Hong, Changhao Chen, Hang Xu, Chaoqiang Ye, Qingyong Hu, and Zhenguo Li. Devnet: Self-supervised monocular depth learning via density volume construction. InECCV, pages 125–142, 2022. 2, 8 [71] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video, 2017. 7 [72] Zhongkai Zhou, Xinnan Fan, Pengfei Shi, and Yuanxue Xin. R-msfm: Recurrent multi-scale feature modulation for monocular depth estimating. InICCV, pages 12757–12766, 2021. 2, 8 14"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p10_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 10,
+      "score": 0.5420223474502563,
+      "text": "2, 6, 11, 12 [57] Wei Yin, Jianming Zhang, Oliver Wang, Simon Niklaus, Long Mai, Simon Chen, and Chunhua Shen. Learning to recover 3d scene shape from a single image. In CVPR, 2021. 2, 6, 11, 12 [58] Wei Yin, Chi Zhang, Hao Chen, Zhipeng Cai, Gang Yu, Kaix- uan Wang, Xiaozhi Chen, and Chunhua Shen. Metric3D: Towards zero-shot metric 3d prediction from a single image. In ICCV, 2023. 2, 6 [59] Weihao Yuan, Xiaodong Gu, Zuozhuo Dai, Siyu Zhu, and Ping Tan. NeWCRFs: Neural window fully-connected CRFs for monocular depth estimation. In CVPR, 2022. 2 [60] Chi Zhang, Wei Yin, Billzb Wang, Gang Yu, Bin Fu, and Chunhua Shen. Hierarchical normalization for robust monoc- ular depth estimation. NeurIPS, 35, 2022. 3, 6, 11 [61] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, pages 3836–3847, 2023. 3 [62] Renrui Zhang, Rongyao Fang, Wei Zhang, Peng Gao, Kunchang Li, Jifeng Dai, Yu Qiao, and Hongsheng Li. Tip-adapter: Training-free CLIP-adapter for better vision- language modeling. arXiv:2111. 03930, 2021. 3 [63] Renrui Zhang, Xiangfei Hu, Bohao Li, Siyuan Huang, Hanqiu Deng, Yu Qiao, Peng Gao, and Hongsheng Li."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p10_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 10,
+      "score": 0.5420223474502563,
+      "text": "2, 6, 11, 12 [57] Wei Yin, Jianming Zhang, Oliver Wang, Simon Niklaus, Long Mai, Simon Chen, and Chunhua Shen. Learning to recover 3d scene shape from a single image. In CVPR, 2021. 2, 6, 11, 12 [58] Wei Yin, Chi Zhang, Hao Chen, Zhipeng Cai, Gang Yu, Kaix- uan Wang, Xiaozhi Chen, and Chunhua Shen. Metric3D: Towards zero-shot metric 3d prediction from a single image. In ICCV, 2023. 2, 6 [59] Weihao Yuan, Xiaodong Gu, Zuozhuo Dai, Siyu Zhu, and Ping Tan. NeWCRFs: Neural window fully-connected CRFs for monocular depth estimation. In CVPR, 2022. 2 [60] Chi Zhang, Wei Yin, Billzb Wang, Gang Yu, Bin Fu, and Chunhua Shen. Hierarchical normalization for robust monoc- ular depth estimation. NeurIPS, 35, 2022. 3, 6, 11 [61] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, pages 3836–3847, 2023. 3 [62] Renrui Zhang, Rongyao Fang, Wei Zhang, Peng Gao, Kunchang Li, Jifeng Dai, Yu Qiao, and Hongsheng Li. Tip-adapter: Training-free CLIP-adapter for better vision- language modeling. arXiv:2111. 03930, 2021. 3 [63] Renrui Zhang, Xiangfei Hu, Bohao Li, Siyuan Huang, Hanqiu Deng, Yu Qiao, Peng Gao, and Hongsheng Li."
+    },
+    {
+      "id": "semantic_chunk::ACD_p8_sc4",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5405317544937134,
+      "text": "arXiv, 2024. [Ranftl et al., 2020 ] Ren´e Ranftl, Katrin Lasinger, David Hafner, Konrad Schindler, and Vladlen Koltun. Towards robust monocular depth estimation: Mixing datasets for zero-shot cross-dataset transfer. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(3):1623– 1637, 2020. [Ranftl et al., 2021 ] Ren´e Ranftl, Alexey Bochkovskiy, and Vladlen Koltun. Vision transformers for dense prediction. In CVPR, pages 12179–12188, 2021. [Sauer et al., 2025 ] Axel Sauer, Dominik Lorenz, Andreas Blattmann, and Robin Rombach. Adversarial diffusion distillation. In ECCV, pages 87–103, 2025. Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1258"
+    },
+    {
+      "id": "semantic_chunk::dav2_p16_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 16,
+      "score": 0.5402874946594238,
+      "text": "10 [101] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, 2023. 2, 23 [102] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. In ICCV, 2023. 9 [103] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba. Places: A 10 million image database for scene recognition. TPAMI, 2017. 18, 28 16"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p10_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.539538562297821,
+      "text": "[52] Hengrun Zhao, Bolun Zheng, Shanxin Yuan, Hua Zhang, Chenggang Yan, Liang Li, and Gregory Slabaugh. 2022. CBREN: Convolutional Neural Networks for Constant Bit Rate Video Quality Enhancement. IEEE Transactions on Circuits and Systems for Video Technology 32, 7 (2022), 4138–4149. [53] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. 2023. Unleashing text-to-image diffusion models for visual perception. In Proceedings of the IEEE/CVF International Conference on Computer Vision . 5729– 5739. [54] B Zheng, S Yuan, C Yan, X Tian, J Zhang, Y Sun, L Liu, A Leonardis, and G Slabaugh. 2022. Learning Frequency Domain Priors for Image Demoireing. IEEE Transactions on Pattern Analysis and Machine Intelligence44, 11 (2022), 7705–7717."
+    },
+    {
+      "id": "semantic_chunk::ACD_p9_sc4",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.538554310798645,
+      "text": "In CVPR, pages 1851– 1858, 2017. [Zhu et al., 2017 ] Jun-Y an Zhu, Taesung Park, Phillip Isola, and Alexei A Efros. Unpaired image-to-image transla- tion using cycle-consistent adversarial networks. In CVPR, pages 2223–2232, 2017. [Zhu et al., 2023 ] Ruijie Zhu, Ziyang Song, Chuxin Wang, Jianfeng He, and Tianzhu Zhang. Ec-depth: Exploring the consistency of self-supervised monocular depth estimation under challenging scenes. arXiv, 2023. Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1259"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p14_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.5382037162780762,
+      "text": "InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 10371–10381, 2024. 3 [60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything v2.arXiv preprint arXiv:2406. 09414, 2024. 3 [61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tianlu Mao, and Zhaoqi Wang. MSP-MVS: Multi-granularity segmentation prior guided multi-view stereo. InProceedings of the AAAI Conference on Artificial Intelligence, volume 39, pages 9753–9762, 2025. 23 [62] Zhenlong Yuan, Jinguo Luo, Fei Shen, Zhaoxin Li, Cong Liu, Tianlu Mao, and Zhaoqi Wang. DVP-MVS: Synergize depth-edge and visibility prior for multi-view stereo. InProceedings of the AAAI Conference on Artificial Intelligence, volume 39, pages 9743–9752, 2025. 23 [63] Zhenlong Yuan, Zhidong Yang, Yujun Cai, Kuangxin Wu, Mufan Liu, Dapeng Zhang, Hao Jiang, Zhaoxin Li, and Zhaoqi Wang. SED-MVS: Segmentation-Driven and Edge-Aligned Deformation Multi-View Stereo with Depth Restoration and Occlusion Constraint. IEEE Transactions on Circuits and Systems for Video Technology, 2025."
+    },
+    {
+      "id": "semantic_chunk::dav2_p35_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 35,
+      "score": 0.538000226020813,
+      "text": "• The authors should state which version of the asset is used and, if possible, include a URL. • The name of the license (e.g., CC-BY 4. 0) should be included for each asset. • For scraped data from a particular source (e.g., website), the copyright and terms of service of that source should be provided. 35"
+    },
+    {
+      "id": "semantic_chunk::ACD_p9_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.5375274419784546,
+      "text": "[Wang et al., 2024b ] Jiyuan Wang, Chunyu Lin, Lang Nie, Kang Liao, Shuwei Shao, and Y ao Zhao. Digging into contrastive learning for robust depth estimation with dif- fusion models. In ACM MM, pages 4129–4137, 2024. [Xian et al., 2020 ] Ke Xian, Jianming Zhang, Oliver Wang, Long Mai, Zhe Lin, and Zhiguo Cao. Structure-guided ranking loss for single image depth prediction. In CVPR, pages 611–620, 2020. [Xue et al., 2020 ] Feng Xue, Guirong Zhuo, Ziyuan Huang, Wufei Fu, Zhuoyue Wu, and Marcelo H Ang. Toward hier- archical self-supervised monocular absolute depth estima- tion for autonomous driving applications. In IROS, pages 2330–2337, 2020. [Y anget al., 2024a ] Haolin Y ang, Chaoqiang Zhao, Lu Sheng, and Y ang Tang. Self-supervised monocu- lar depth estimation in the dark: Towards data distribution compensation. In IJCAI, pages 1561–1569, 2024. [Y anget al., 2024b] Lihe Y ang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything v2. In NeurIPS, 2024. [Yin et al., 2022 ] Wei Yin, Jianming Zhang, Oliver Wang, Simon Niklaus, Simon Chen, Yifan Liu, and Chunhua Shen."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p13_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.5363229513168335,
+      "text": "Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly, J. Uszkoreit, N. Houlsby, An image is worth 16x16 words: transformers for image recognition at scale, in: International Conference on Learning Representations, 2021. [16] W. Yuan, X. Gu, Z. Dai, S. Zhu, P. Tan, Neural window fully-connected CRFs for monocular depth estimation, in: Proceedings of the IEEE/CVF Conference on Com- puter Vision and Pattern Recognition, 2022, pp. 3916–3925. [17] Z. Liu, Y. Lin, Y. Cao, H. Hu, Y. Wei, Z. Zhang, S. Lin, B. Guo, Swin transformer: hier- archical vision transformer using shifted windows, in: Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021, pp. 10012–10022. [18] S. F. Bhat, I. Alhashim, P. Wonka, LocalBins: improving depth estimation by learning local distributions, in: Computer Vision – ECCV 2022, Cham, 2022, pp. 480–496. [19] K. Xian, J. Zhang, O. Wang, L. Mai, Z. Lin, Z. Cao, Structure-guided ranking loss for single image depth prediction, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2020, pp. 608–617. [20] Z. Li, N."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p10_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.536231279373169,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 10 [18] Ning Zhang, Francesco Nex, George V osselman, and Norman Kerle. Lite-mono: A lightweight cnn and transformer architecture for self- supervised monocular depth estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 18537– 18546, 2023. [19] Emiel Hoogeboom, Vıctor Garcia Satorras, Cl ´ement Vignac, and Max Welling. Equivariant diffusion for molecule generation in 3d. In Inter- national Conference on Machine Learning , pages 8867–8887. PMLR, 2022. [20] Brian L Trippe, Jason Yim, Doug Tischer, Tamara Broderick, David Baker, Regina Barzilay, and Tommi Jaakkola. Diffusion probabilistic modeling of protein backbones in 3d for the motif-scaffolding problem. arXiv preprint arXiv:2206. 04119 , 2022. [21] Shoufa Chen, Peize Sun, Yibing Song, and Ping Luo. Diffusiondet: Diffusion model for object detection. arXiv preprint arXiv:2211. 09788, 2022. [22] Ting Chen, Lala Li, Saurabh Saxena, Geoffrey Hinton, and David J Fleet. A generalist framework for panoptic segmentation of images and videos. arXiv preprint arXiv:2210. 06366 , 2022. [23] Saurabh Saxena, Abhishek Kar, Mohammad Norouzi, and David J Fleet."
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc4",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.5354747176170349,
+      "text": "2 [44] Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang, and Dongbin Zhao. Steps: Joint self- supervised nighttime image enhancement and depth estima- tion. In 2023 IEEE International Conference on Robotics and Automation (ICRA), pages 4916–4923, 2023. 1, 2 [45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork- gan: Seeing into the rainy night. In The IEEE European Conference on Computer Vision (ECCV), 2020. 2, 4 [46] Hanyu Zhou, Yi Chang, Wending Yan, and Luxin Yan. Un- supervised cumulative domain adaptation for foggy scene optical flow. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9569– 9578, 2023. 4, 5 [47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING, Yuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the common appearance-boundary adaptation for nighttime op- tical flow. InThe Twelfth International Conference on Learn- ing Representations, 2024. 2 [48] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video."
+    },
+    {
+      "id": "semantic_chunk::dav2_p14_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 14,
+      "score": 0.5349137783050537,
+      "text": "Inserf: Text-driven generative object insertion in neural 3d scenes. arXiv:2401. 05335, 2024. 2 [65] Shuai Shao, Zeming Li, Tianyuan Zhang, Chao Peng, Gang Yu, Xiangyu Zhang, Jing Li, and Jian Sun. Objects365: A large-scale, high-quality dataset for object detection. In ICCV, 2019. 18, 28 [66] Shuwei Shao, Zhongcai Pei, Weihai Chen, Xingming Wu, and Zhengguo Li. Nddepth: Normal-distance assisted monocular depth estimation. In ICCV, 2023. 9 [67] Shuwei Shao, Zhongcai Pei, Xingming Wu, Zhong Liu, Weihai Chen, and Zhengguo Li. Iebins: Iterative elastic bins for monocular depth estimation. In NeurIPS, 2023. 9 [68] Jaidev Shriram, Alex Trevithick, Lingjie Liu, and Ravi Ramamoorthi. Realmdreamer: Text- driven 3d scene generation with inpainting and depth diffusion. arXiv:2404. 07199, 2024. 2 [69] Changyong Shu, Yifan Liu, Jianfei Gao, Zheng Yan, and Chunhua Shen. Channel-wise knowledge distillation for dense prediction. In ICCV, 2021. 10 [70] Nathan Silberman, Derek Hoiem, Pushmeet Kohli, and Rob Fergus. Indoor segmentation and support inference from rgbd images. In ECCV, 2012."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.5329056978225708,
+      "text": "882 4. 701 0. 190 0. 879 0. 961 0. 982HR-Depth[31] AAAI2021 Mono K(40K+0) 0. 106 0. 755 4. 472 0. 181 0. 892 0. 966 0. 984R-MSFM6[72]ICCV2021 Mono K(40K+0) 0. 108 0. 748 4. 470 0. 185 0. 889 0. 963 0. 982DevNet[70] ECCV2022Mono K(40K+0) 0. 100 0. 699 4. 412 0. 174 0. 893 0. 966 0. 985DepthSegNet[32]ECCV2022Mono K(40K+0) 0. 099 0. 624 4. 165 0. 171 0. 902 0. 969 0. 985SD-SSMDE[37]CVPR2022 Mono K(40K+0) 0. 098 0. 674 4. 187 0. 170 0. 902 0. 968 0. 985MonoViT[68] 3DV 2022 Mono K(40K+0) 0. 096 0. 714 4. 292 0. 172 0. 908 0. 968 0. 984LiteMono[67] CVPR2023 Mono K(40K+0) 0. 102 0. 746 4. 444 0. 179 0. 896 0. 965 0. 983DaCCN[20] ICCV2023 Mono K(40K+0) 0. 094 0. 624 4. 145 0. 169 0. 909 0. 970 0. 985Jaeho et al*.[5, 34]CVPR2024 Mono K(40K+0) 0. 091 0. 604 4. 066 0. 164 0. 913 0. 9700. 986RPrDepth[19] ECCV2024Mono K(40K+0) 0. 091 0. 612 4. 098 0. 162 0. 910 0. 971 0. 986Mono-ViFI[29]ECCV2024Mono K(40K+0) 0. 093 0. 589 4. 072 0. 168 0. 909 0. 969 0. 985Jasmine - Mono KH(68K+0) 0. 090 0. 581 3. 944 0. 161 0. 919 0. 972 0. 986 Table 2:Quantitative zero-shot results on the CityScape and DrivingStereo dataset and its variants (Rainy, Cloudy, Foggy)."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p10_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 10,
+      "score": 0.531304657459259,
+      "text": "3 [40] Chitwan Saharia, William Chan, Huiwen Chang, Chris Lee, Jonathan Ho, Tim Salimans, David Fleet, and Mohammad Norouzi. Palette: Image-to-image diffusion models. In ACM SIGGRAPH, pages 1–10, 2022. 3 [41] Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily L Denton, Kamyar Ghasemipour, Raphael Gontijo Lopes, Burcu Karagol Ayan, Tim Salimans, et al. Pho- torealistic text-to-image diffusion models with deep language understanding. NeurIPS, 35, 2022. 2, 3 [42] Tim Salimans and Jonathan Ho. Progressive distillation for fast sampling of diffusion models. arXiv preprint arXiv:2202. 00512, 2022. 5 [43] Saurabh Saxena, Charles Herrmann, Junhwa Hur, Abhishek Kar, Mohammad Norouzi, Deqing Sun, and David J. Fleet. The surprising effectiveness of diffusion models for opti- cal flow and monocular depth estimation. arXiv preprint arXiv:2306. 01923, 2023. 2, 3 [44] Saurabh Saxena, Abhishek Kar, Mohammad Norouzi, and David J Fleet. Monocular depth estimation using diffusion models. arXiv preprint arXiv:2302. 14816, 2023. 2, 3 [45] Thomas Schops, Johannes L Schonberger, Silvano Galliani, Torsten Sattler, Konrad Schindler, Marc Pollefeys, and An- dreas Geiger."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p10_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 10,
+      "score": 0.531304657459259,
+      "text": "3 [40] Chitwan Saharia, William Chan, Huiwen Chang, Chris Lee, Jonathan Ho, Tim Salimans, David Fleet, and Mohammad Norouzi. Palette: Image-to-image diffusion models. In ACM SIGGRAPH, pages 1–10, 2022. 3 [41] Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily L Denton, Kamyar Ghasemipour, Raphael Gontijo Lopes, Burcu Karagol Ayan, Tim Salimans, et al. Pho- torealistic text-to-image diffusion models with deep language understanding. NeurIPS, 35, 2022. 2, 3 [42] Tim Salimans and Jonathan Ho. Progressive distillation for fast sampling of diffusion models. arXiv preprint arXiv:2202. 00512, 2022. 5 [43] Saurabh Saxena, Charles Herrmann, Junhwa Hur, Abhishek Kar, Mohammad Norouzi, Deqing Sun, and David J. Fleet. The surprising effectiveness of diffusion models for opti- cal flow and monocular depth estimation. arXiv preprint arXiv:2306. 01923, 2023. 2, 3 [44] Saurabh Saxena, Abhishek Kar, Mohammad Norouzi, and David J Fleet. Monocular depth estimation using diffusion models. arXiv preprint arXiv:2302. 14816, 2023. 2, 3 [45] Thomas Schops, Johannes L Schonberger, Silvano Galliani, Torsten Sattler, Konrad Schindler, Marc Pollefeys, and An- dreas Geiger."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p10_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 10,
+      "score": 0.5293859839439392,
+      "text": "Rethinking noise synthesis and modeling in raw denoising. In ICCV, pages 4593–4601, 2021. [Zhao et al., 2020] Chaoqiang Zhao, Qiyu Sun, Chongzhen Zhang, Yang Tang, and Feng Qian. Monocular depth es- timation based on deep learning: An overview. Science China Technological Sciences, 63(9):1612–1627, 2020. [Zhao et al., 2022a] Chaoqiang Zhao, Yang Tang, and Qiyu Sun. Unsupervised monocular depth estimation in highly complex environments. IEEE Transactions on Emerging Topics in Computational Intelligence , 6(5):1237–1246, 2022. [Zhao et al., 2022b] Chaoqiang Zhao, Youmin Zhang, Mat- teo Poggi, Fabio Tosi, Xianda Guo, Zheng Zhu, Guan Huang, Yang Tang, and Stefano Mattoccia. Monovit: Self- supervised monocular depth estimation with a vision trans- former. In 3DV, 2022. [Zhou et al., 2017] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G Lowe. Unsupervised learning of depth and ego-motion from video. In CVPR, pages 1851– 1858, 2017. [Zhu et al., 2017] Jun-Yan Zhu, Taesung Park, Phillip Isola, and Alexei A Efros. Unpaired image-to-image transla- tion using cycle-consistent adversarial networks. InCVPR, pages 2223–2232, 2017."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p14_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.5291990041732788,
+      "text": "23 [64] Zhenlong Yuan, Dapeng Zhang, Zehao Li, Chengxuan Qian, Jianing Chen, Yinda Chen, Kehua Chen, Tianlu Mao, Zhaoxin Li, Hao Jiang, and Zhaoqi Wang. Dvp-mvs++: Synergize depth-normal-edge and harmonized visibility prior for multi-view stereo, 2025. 23 [65] Zongsheng Yue, Kang Liao, and Chen Change Loy. Arbitrary-steps image super-resolution via diffusion inversion.arXiv preprint arXiv:2412. 09013, 2024. 3 [66] Ziyao Zeng, Jingcheng Ni, Daniel Wang, Patrick Rim, Younjoon Chung, Fengyu Yang, Byung-Woo Hong, and Alex Wong. Priordiffusion: Leverage language prior in diffusion models for monocular depth estimation, 2024. 3 [67] Ning Zhang, Francesco Nex, George V osselman, and Norman Kerle. Lite-mono: A lightweight cnn and transformer architecture for self-supervised monocular depth estimation. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18537–18546, 2023. 8 [68] Chaoqiang Zhao, Youmin Zhang, Matteo Poggi, Fabio Tosi, Xianda Guo, Zheng Zhu, Guan Huang, Yang Tang, and Stefano Mattoccia. Monovit: Self-supervised monocular depth estimation with a vision transformer. In2022 international conference on 3D vision (3DV), pages 668–678."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5287771821022034,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5287771821022034,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc4",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5284832715988159,
+      "text": "In Proceedings of the IEEE conference on computer vision and pattern recognition . 1119–1127. [21] Lifeng Lin, Rongfeng Lu, Quan Chen, Haofan Ren, Ming Lu, Yaoqi Sun, Cheng- gang Yan, and Anke Xue. 2025. VGNC: Reducing the Overfitting of Sparse- view 3DGS via Validation-guided Gaussian Number Control. arXiv preprint arXiv:2504. 14548 (2025). [22] Ariel Lipson, Stephen G Lipson, and Henry Lipson. 2010. Optical physics. Cam- bridge University Press. [23] Ce Liu, Jenny Yuen, Antonio Torralba, Josef Sivic, and William T Freeman. 2008. Sift flow: Dense correspondence across different scenes. In Computer Vision– ECCV 2008: 10th European Conference on Computer Vision, Marseille, France, Octo- ber 12-18, 2008, Proceedings, Part III 10 . Springer, 28–42. [24] Lina Liu, Xibin Song, Mengmeng Wang, Yong Liu, and Liangjun Zhang. 2021. Self-supervised monocular depth estimation for all day images using domain separation. In Proceedings of the IEEE/CVF international conference on computer vision. 12737–12746. [25] Rongfeng Lu, Hangyu Chen, Zunjie Zhu, Yuhang Qin, Ming Lu, Le Zhang, Cheng- gang Yan, and Anke Xue. 2024. Thermalgaussian: Thermal 3d gaussian splatting. arXiv preprint arXiv:2409."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p10_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 10,
+      "score": 0.5273083448410034,
+      "text": "PMLR, 2023. 2, 3, 6, 7, 8 [38] Kun Wang, Zhenyu Zhang, Zhiqiang Yan, Xiang Li, Baobei Xu, Jun Li, and Jian Yang. Regularizing Nighttime Weird- ness: Efficient self-supervised monocular depth estimation in the dark. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 16055–16064, 2021. 2, 3, 6, 7 [39] Zhou Wang, Alan C Bovik, Hamid R Sheikh, and Eero P Si- moncelli. Image quality assessment: From error visibility to structural similarity. IEEE Transactions on Image Process- ing, 13(4):600–612, 2004. 4 [40] Mengchen Xiong, Xiao Xu, Dong Yang, and Eckehard Stein- bach. Robust depth estimation in foggy environments com- bining RGB images and mmWave radar. In International Symposium on Multimedia, pages 34–41. IEEE, 2022. 2, 3 [41] Jiaxing Yan, Hong Zhao, Penghui Bu, and YuSheng Jin. Channel-wise attention-based network for self-supervised monocular depth estimation. In International Conference on 3D vision (3DV), pages 464–473. IEEE, 2021. 1 [42] Fisher Yu, Haofeng Chen, Xin Wang, Wenqi Xian, Yingying Chen, Fangchen Liu, Vashisht Madhavan, and Trevor Dar- rell. BDD100K: A diverse driving dataset for heterogeneous multitask learning."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p12_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 12,
+      "score": 0.5271623134613037,
+      "text": "[18] S. Mahdi H. Miangoleh, Mahesh Reddy, and Ya˘gız Aksoy. Scale-invariant monocular depth estimation via ssi depth. InSpecial Interest Group on Computer Graphics and Interactive Techniques Conference Conference Papers ’24, SIGGRAPH ’24, page 1–11. ACM, July 2024. 15 [19] Wencheng Han and Jianbing Shen. High-precision self-supervised monocular depth estimation with rich-resource prior. InEuropean Conference on Computer Vision, pages 146–162. Springer, 2024. 2, 8 [20] Wencheng Han, Junbo Yin, and Jianbing Shen. Self-supervised monocular depth estimation by direction- aware cumulative convolution network. InICCV, 2023. 2, 8 [21] Jing He, Haodong Li, Wei Yin, Yixun Liang, Leheng Li, Kaiqiang Zhou, Hongbo Zhang, Bingbing Liu, and Ying-Cong Chen. Lotus: Diffusion-based visual foundation model for high-quality dense prediction. arXiv preprint arXiv:2409. 18124, 2024. 1, 2, 3, 4, 8, 21 [22] Jonathan Ho, Ajay Jain, and Pieter Abbeel. Denoising diffusion probabilistic models, 2020. 3 [23] Mu Hu, Wei Yin, Chi Zhang, Zhipeng Cai, Xiaoxiao Long, Hao Chen, Kaixuan Wang, Gang Yu, Chunhua Shen, and Shaojie Shen."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5246621370315552,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5246621370315552,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p12_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 12,
+      "score": 0.5242649912834167,
+      "text": "1, 2, 3, 4, 7, 8, 21 [34] Jaeho Moon, Juan Luis Gonzalez Bello, Byeongjun Kwon, and Munchurl Kim. From-ground-to-objects: Coarse-to-fine self-supervised monocular depth estimation of dynamic objects with ground contact prior. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 10519– 10529, 2024. 2, 7, 8, 18, 20 [35] Adam Paszke et al. Pytorch: An imperative style, high-performance deep learning library. InNeurIPS, pages 8026–8037, 2019. 7 [36] Rui Peng, Ronggang Wang, Yawen Lai, Luyang Tang, and Yangang Cai. Excavating the potential capacity of selfsupervised monocular depth estimation. InICCV, pages 15560–15569, 2021. 16 12"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.5236594080924988,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. directly simulating light source images, we construct a light source library based on the Flare7K dataset [8]. Flare7K is currently the only large-scale dataset containing 7,000 light source samples. A light source can be randomly sampled from this dataset and resized to match the dimensions of the input image, ensuring compatibility. Additionally, we apply simple image augmentation operations, such as resizing and cropping, to diversify the light source patterns, with the enhanced light source denoted as𝐿𝑆. The sampled light sources are randomly positioned in the 3D scene to simulate realistic depth relationships. A depth constraint is applied to limit the effective range of the light source, ensuring that distant light sources do not produce excessive flare artifacts. The 3D position of the light source is given by: 𝑃𝑖 =𝑧𝑖·𝐾−1 𝐼  𝑢𝑖 𝑣𝑖 1  , (1) where𝑧𝑖 represents the depth of the light source, and its upper limit is 20m,𝐾𝐼 is the intrinsic camera matrix, and(𝑢𝑖,𝑣𝑖) are the 2D coordinates of the light source."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p9_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 9,
+      "score": 0.5236531496047974,
+      "text": "arXiv preprint arXiv:2204. 00987, 2022. 2 [27] Zhenyu Li, Zehui Chen, Xianming Liu, and Junjun Jiang. Depthformer: Exploiting long-range correlation and local in- formation for accurate monocular depth estimation. Machine Intelligence Research, pages 1–18, 2023. 2 [28] Ce Liu, Suryansh Kumar, Shuhang Gu, Radu Timofte, and Luc Van Gool. V A-DepthNet: A variational approach to single image depth prediction. In ICLR, 2023. 2 [29] Mehdi Mirza and Simon Osindero. Conditional generative adversarial nets. arXiv preprint arXiv:1411. 1784, 2014. 3 [30] Eliya Nachmani, Robin San Roman, and Lior Wolf. Non Gaussian denoising diffusion models. arXiv preprint arXiv:2106. 07582, 2021. 5 [31] Pushmeet Kohli Nathan Silberman, Derek Hoiem and Rob Fergus. Indoor segmentation and support inference from RGBD images. In ECCV, 2012. 6, 11, 12, 23, 24, 31 [32] Jia Ning, Chen Li, Zheng Zhang, Chunyu Wang, Zigang Geng, Qi Dai, Kun He, and Han Hu. All in tokens: Unifying output space of visual tasks via soft token. In ICCV, pages 19900–19910, 2023. 2 [33] Omiros Pantazis, Gabriel Brostow, Kate Jones, and Oisin Mac Aodha. SVL-adapter: Self-supervised adapter for vision- language pretrained models."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p9_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 9,
+      "score": 0.5236531496047974,
+      "text": "arXiv preprint arXiv:2204. 00987, 2022. 2 [27] Zhenyu Li, Zehui Chen, Xianming Liu, and Junjun Jiang. Depthformer: Exploiting long-range correlation and local in- formation for accurate monocular depth estimation. Machine Intelligence Research, pages 1–18, 2023. 2 [28] Ce Liu, Suryansh Kumar, Shuhang Gu, Radu Timofte, and Luc Van Gool. V A-DepthNet: A variational approach to single image depth prediction. In ICLR, 2023. 2 [29] Mehdi Mirza and Simon Osindero. Conditional generative adversarial nets. arXiv preprint arXiv:1411. 1784, 2014. 3 [30] Eliya Nachmani, Robin San Roman, and Lior Wolf. Non Gaussian denoising diffusion models. arXiv preprint arXiv:2106. 07582, 2021. 5 [31] Pushmeet Kohli Nathan Silberman, Derek Hoiem and Rob Fergus. Indoor segmentation and support inference from RGBD images. In ECCV, 2012. 6, 11, 12, 23, 24, 31 [32] Jia Ning, Chen Li, Zheng Zhang, Chunyu Wang, Zigang Geng, Qi Dai, Kun He, and Han Hu. All in tokens: Unifying output space of visual tasks via soft token. In ICCV, pages 19900–19910, 2023. 2 [33] Omiros Pantazis, Gabriel Brostow, Kate Jones, and Oisin Mac Aodha. SVL-adapter: Self-supervised adapter for vision- language pretrained models."
+    },
+    {
+      "id": "semantic_chunk::dav2_p32_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 32,
+      "score": 0.5233166813850403,
+      "text": "(d) We recognize that reproducibility may be tricky in some cases, in which case authors are welcome to describe the particular way they provide for reproducibility. In the case of closed-source models, it may be that access to the model is limited in some way (e.g., to registered users), but it should be possible for other researchers to have some path to reproducing or verifying the results. 5. Open access to data and code 32"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p9_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 9,
+      "score": 0.5224892497062683,
+      "text": "[Jung et al., 2021] Hyunyoung Jung, Eunhyeok Park, and Sungjoo Yoo. Fine-grained semantics-aware representa- tion enhancement for self-supervised monocular depth es- timation. In ICCV, pages 12642–12652, 2021. [Kakimoto et al., 2004] Masanori Kakimoto, Kaoru Mat- suoka, Tomoyuki Nishita, Takeshi Naemura, and Hiroshi Harashima. Glare generation based on wave optics. InPG, pages 133–140. IEEE, 2004. [Klingner et al., 2020] Marvin Klingner, Jan-Aike Term¨ohlen, Jonas Mikolajczyk, and Tim Fingscheidt. Self-supervised monocular depth estimation: Solving the dynamic object problem by semantic guidance. In ECCV, pages 582–600, 2020. [Lee et al., 2021] Seokju Lee, Sunghoon Im, Stephen Lin, and In So Kweon. Learning monocular depth in dynamic scenes via instance-aware projection consistency. InAAAI, pages 1863–1872, 2021. [Li et al., 2021] Hanhan Li, Ariel Gordon, Hang Zhao, Vin- cent Casser, and Anelia Angelova. Unsupervised monoc- ular depth learning in dynamic scenes. In CoRL, pages 1908–1917, 2021. [Lipson et al., 2010] Ariel Lipson, Stephen G Lipson, and Henry Lipson. Optical physics . Cambridge University Press, 2010."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p7_sc4",
+      "source": "data\\Global-Local.pdf",
+      "page": 7,
+      "score": 0.5223346948623657,
+      "text": "[Ranftl et al., 2021] Ren ´e Ranftl, Alexey Bochkovskiy, and Vladlen Koltun. Vision transformers for dense prediction. arXiv preprint arXiv:2103. 13413, 2021. [Saxena et al., 2008] Ashutosh Saxena, Min Sun, and An- drew Y Ng. Make3d: Learning 3d scene structure from a single still image. IEEE transactions on pattern analysis and machine intelligence, 31(5):824–840, 2008. [Silberman et al., 2012] Nathan Silberman, Derek Hoiem, Pushmeet Kohli, and Rob Fergus. Indoor segmentation and support inference from rgbd images. In European conference on computer vision , pages 746–760. Springer, 2012. [Song et al., 2015] Shuran Song, Samuel P. Lichtenberg, and Jianxiong Xiao. Sun rgb-d: A rgb-d scene understanding benchmark suite. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) , June 2015."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc5",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5216897130012512,
+      "text": "07200 (2024). [26] Rongfeng Lu, Zunjie Zhu, Sheng Fu, Shenrong Chen, Tingyu Wang, Chenggang Yan, and Feng Xu. 2023. Self-supervised camera relocalization with hierarchical fern encoding. IEEE Transactions on Instrumentation and Measurement 73 (2023), 1–12. [27] YiFan Lu, Ning Xie, and Heng Tao Shen. 2020. DMCR-GAN: adversarial denoising for monte carlo renderings with residual attention networks and hierarchical features modulation of auxiliary buffers. In SIGGRAPH Asia 2020 Technical Communications. 1–4. [28] Bui Tuong Phong. 1998. Illumination for computer generated pictures. InSeminal graphics: pioneering efforts that shaped the field . 95–101. [29] Weichao Qiu, Fangwei Zhong, Yi Zhang, Siyuan Qiao, Zihao Xiao, Tae Soo Kim, and Yizhou Wang. 2017. Unrealcv: Virtual worlds for computer vision. In Proceedings of the 25th ACM international conference on Multimedia . 1221–1224. [30] René Ranftl, Alexey Bochkovskiy, and Vladlen Koltun. 2021. Vision transformers for dense prediction. In Proceedings of the IEEE/CVF international conference on computer vision. 12179–12188."
+    },
+    {
+      "id": "semantic_chunk::ACD_p9_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.521086573600769,
+      "text": "[Sun et al., 2023 ] Libo Sun, Jia-Wang Bian, Huangying Zhan, Wei Yin, Ian Reid, and Chunhua Shen. Sc-depthv3: Robust self-supervised monocular depth estimation for dy- namic scenes. IEEE Transactions on Pattern Analysis and Machine Intelligence, 46:497–508, 2023. [Tosi et al., 2025 ] Fabio Tosi, Pierluigi Zama Ramirez, and Matteo Poggi. Diffusion models for monocular depth es- timation: Overcoming challenging conditions. In ECCV, pages 236–257, 2025. [V ankadariet al., 2023] Madhu V ankadari, Stuart Golodetz, Sourav Garg, Sangyun Shin, Andrew Markham, and Niki Trigoni. When the sun goes down: Repairing photometric losses for all-day depth estimation. In CoRL, pages 1992– 2003, 2023. [Wang et al., 2021 ] Kun Wang, Zhenyu Zhang, Zhiqiang Y an, Xiang Li, Baobei Xu, Jun Li, and Jian Y ang. Reg- ularizing nighttime weirdness: Efﬁcient self-supervised monocular depth estimation in the dark. In ICCV, pages 16055–16064, 2021. [Wang et al., 2024a] Jiyuan Wang, Chunyu Lin, Lang Nie, Shujun Huang, Y ao Zhao, Xing Pan, and Rui Ai. Weatherdepth: Curriculum contrastive learning for self- supervised depth estimation under adverse weather con- ditions. In ICRA, pages 4976–4982, 2024."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p11_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.5207904577255249,
+      "text": "7, 8, 9, 22 [16] Sylvain Gugger, Lysandre Debut, Thomas Wolf, Philipp Schmid, Zachary Mueller, Sourab Mangrulkar, Marc Sun, and Benjamin Bossan. Accelerate: Training and inference at scale made simple, efficient and adaptable.https://github.com/huggingface/accelerate, 2022. 7 [17] Vitor Guizilini, Rares Ambrus, Dian Chen, Sergey Zakharov, and Adrien Gaidon. Multi-frame self- supervised depth with transformers. InCVPR, pages 160–170, 2022. 3 11"
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p11_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.5206520557403564,
+      "text": "Cutmix: Regu- larization strategy to train strong classifiers with localizable features. In ICCV, 2019. 4 [84] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, 2023. 8 [85] Youcai Zhang, Xinyu Huang, Jinyu Ma, Zhaoyang Li, Zhaochuan Luo, Yanchun Xie, Yuzhuo Qin, Tong Luo, Yaqian Li, Shilong Liu, et al. Recognize anything: A strong image tagging model. arXiv:2306. 03514, 2023. 4 [86] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. In ICCV, 2023. 6 [87] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba. Places: A 10 million image database for scene recognition. TPAMI, 2017. 3 [88] Bolei Zhou, Hang Zhao, Xavier Puig, Sanja Fidler, Adela Bar- riuso, and Antonio Torralba. Scene parsing through ade20k dataset. In CVPR, 2017. 6 [89] Barret Zoph, Golnaz Ghiasi, Tsung-Yi Lin, Yin Cui, Hanx- iao Liu, Ekin Dogus Cubuk, and Quoc Le. Rethinking pre- training and self-training. In NeurIPS, 2020. 2 10381"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc7",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5205681920051575,
+      "text": "[35] Madhu Vankadari, Stuart Golodetz, Sourav Garg, Sangyun Shin, Andrew Markham, and Niki Trigoni. 2023. When the sun goes down: Repairing pho- tometric losses for all-day depth estimation. In Conference on Robot Learning . PMLR, 1992–2003. [36] Kun Wang, Zhenyu Zhang, Zhiqiang Yan, Xiang Li, Baobei Xu, Jun Li, and Jian Yang. 2021. Regularizing nighttime weirdness: Efficient self-supervised monoc- ular depth estimation in the dark. In Proceedings of the IEEE/CVF international conference on computer vision . 16055–16064. [37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. 2020. A physics-based noise formation model for extreme low-light raw denoising. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 2758–2767. [38] Ke Xian, Jianming Zhang, Oliver Wang, Long Mai, Zhe Lin, and Zhiguo Cao. 2020. Structure-guided ranking loss for single image depth prediction. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 611–620. [39] Zhongwei Xuan, Zunjie Zhu, Shuai Wang, Haibing Yin, Hongkui Wang, and Ming Lu. 2024. Superpixel-based Efficient Sampling for Learning Neural Fields from Large Input."
+    },
+    {
+      "id": "semantic_chunk::dav2_p32_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 32,
+      "score": 0.5197255611419678,
+      "text": "Answer: [NA] Justification: This paper does not involves theoretical result. Guidelines: • The answer NA means that the paper does not include theoretical results. • All the theorems, formulas, and proofs in the paper should be numbered and cross- referenced. • All assumptions should be clearly stated or referenced in the statement of any theorems. • The proofs can either appear in the main paper or the supplemental material, but if they appear in the supplemental material, the authors are encouraged to provide a short proof sketch to provide intuition. • Inversely, any informal proof provided in the core of the paper should be complemented by formal proofs provided in appendix or supplemental material. • Theorems and Lemmas that the proof relies upon should be properly referenced. 4. Experimental Result Reproducibility Question: Does the paper fully disclose all the information needed to reproduce the main ex- perimental results of the paper to the extent that it affects the main claims and/or conclusions of the paper (regardless of whether the code and data are provided or not)?"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5195242166519165,
+      "text": "[16] Edward J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, and Weizhu Chen. 2021. Lora: Low-rank adaptation of large language models. arXiv preprint arXiv:2106. 09685 (2021). [17] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. 2021. Neigh- bor2neighbor: Self-supervised denoising from single noisy images. InProceedings of the IEEE/CVF conference on computer vision and pattern recognition . 14781– 14790. [18] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. 2022. Neigh- bor2Neighbor: A self-supervised framework for deep image denoising. IEEE Transactions on Image Processing 31 (2022), 4023–4038. [19] Bingxin Ke, Anton Obukhov, Shengyu Huang, Nando Metzger, Rodrigo Caye Daudt, and Konrad Schindler. 2024. Repurposing diffusion-based image genera- tors for monocular depth estimation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 9492–9502. [20] Bo Li, Chunhua Shen, Yuchao Dai, Anton Van Den Hengel, and Mingyi He. 2015. Depth and surface normal estimation from monocular images using regression on deep features and hierarchical crfs."
+    },
+    {
+      "id": "semantic_chunk::dav2_p12_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 12,
+      "score": 0.5185309052467346,
+      "text": "2 [33] Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer Whitehead, Alexander C Berg, Wan-Yen Lo, et al. Segment anything. In ICCV, 2023. 5, 7, 9, 18, 19, 20, 28 [34] Alex Krizhevsky, Geoffrey Hinton, et al. Learning multiple layers of features from tiny images. 2009. 10 [35] Alina Kuznetsova, Hassan Rom, Neil Alldrin, Jasper Uijlings, Ivan Krasin, Jordi Pont-Tuset, Shahab Kamali, Stefan Popov, Matteo Malloci, Alexander Kolesnikov, et al. The open images dataset v4: Unified image classification, object detection, and visual relationship detection at scale. IJCV, 2020. 18, 28 [36] Dong-Hyun Lee et al. Pseudo-label: The simple and efficient semi-supervised learning method for deep neural networks. In ICMLW, 2013. 10 [37] Zhengqi Li and Noah Snavely. Megadepth: Learning single-view depth prediction from internet photos. In CVPR, 2018. 3, 4 [38] Zhenyu Li, Shariq Farooq Bhat, and Peter Wonka. Patchfusion: An end-to-end tile-based framework for high-resolution monocular metric depth estimation. In CVPR, 2024. 2 [39] Jun Hao Liew, Hanshu Yan, Jianfeng Zhang, Zhongcong Xu, and Jiashi Feng."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p8_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.5172947645187378,
+      "text": "As a result, our Depth Anything model exhibits excellent zero-shot depth estimation ability, and also serves as a promising initialization for downstream metric depth estimation and semantic segmentation tasks. Acknowledgement. This work is supported by the National Natural Science Foundation of China (No. 62201484), HKU Startup Fund, and HKU Seed Fund for Basic Research. 10378"
+    },
+    {
+      "id": "semantic_chunk::s_p9_sc3",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.5172587633132935,
+      "text": "Exploiting multi-view part-wise correlation via an ef- ficient transformer for vehicle re-identification. IEEE Trans- actions on Multimedia, 25:919–929, 2023. [16] Ming Li, Xiangyu Xu, Hehe Fan, Pan Zhou, Jun Liu, Jia-Wei Liu, Jiahe Li, Jussi Keppo, Mike Zheng Shou, and Shuicheng Yan. Stprivacy: Spatio-temporal privacy-preserving action recognition. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 5106–5115, 2023. [17] Ming Li, Pan Zhou, Jia-Wei Liu, Jussi Keppo, Min Lin, Shuicheng Yan, and Xiangyu Xu. Instant3d: Instant text- to-3d generation. arxiv: 2311. 08403, 2023. 2 [18] Lina Liu, Xibin Song, Mengmeng Wang, Yong Liu, and Liangjun Zhang. Self-supervised monocular depth estima- tion for all day images using domain separation. In Proceed- ings of the IEEE/CVF International Conference on Com- puter Vision, pages 12737–12746, 2021. 1, 2, 6, 7 [19] W. Maddern, G. Pascoe, C. Linegar, and P. Newman. 1 year, 1000 km: The oxford robotcar dataset. International Journal of Robotics Research, page 0278364916679498, 2016. 2, 3, 6, 7 [20] Rui Peng, Ronggang Wang, Yawen Lai, Luyang Tang, and Yangang Cai."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p8_sc1",
+      "source": "data\\Global-Local.pdf",
+      "page": 8,
+      "score": 0.5169966816902161,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 8375–8384, 2020. [Yun et al., 2019] Sangdoo Yun, Dongyoon Han, Seong Joon Oh, Sanghyuk Chun, Junsuk Choe, and Youngjoon Yoo. Cutmix: Regularization strategy to train strong classiﬁers with localizable features. CoRR, abs/1905. 04899, 2019. [Zheng et al., 2021] Sixiao Zheng, Jiachen Lu, Hengshuang Zhao, Xiatian Zhu, Zekun Luo, Yabiao Wang, Yanwei Fu, Jianfeng Feng, Tao Xiang, Philip HS Torr, et al. Rethink- ing semantic segmentation from a sequence-to-sequence perspective with transformers. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 6881–6890, 2021."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p9_sc4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.5166310667991638,
+      "text": "[11] Shuwei Shao, Zhongcai Pei, Weihai Chen, Ran Li, Zhong Liu, and Zhengguo Li. Urcdc-depth: Uncertainty rectified cross-distillation with cutflip for monocular depth estimation. arXiv preprint arXiv:2302. 08149, 2023. [12] Xinchen Ye, Xin Fan, Mingliang Zhang, Rui Xu, and Wei Zhong. Un- supervised monocular depth estimation via recursive stereo distillation. IEEE Transactions on Image Processing , 30:4492–4504, 2021. [13] Rui Peng, Ronggang Wang, Yawen Lai, Luyang Tang, and Yangang Cai. Excavating the potential capacity of self-supervised monocular depth estimation. In Proceedings of the IEEE International Conference on Computer Vision , pages 15560–15569, 2021. [14] Aleksei Karpov and Ilya Makarov. Exploring efficiency of vision trans- formers for self-supervised monocular depth estimation. In 2022 IEEE International Symposium on Mixed and Augmented Reality (ISMAR) , pages 711–719. IEEE, 2022. [15] Cl ´ement Godard, Oisin Mac Aodha, Michael Firman, and Gabriel J Brostow. Digging into self-supervised monocular depth estimation. In Proceedings of the IEEE International Conference on Computer Vision , pages 3828–3838, 2019. [16] Hyunyoung Jung, Eunhyeok Park, and Sungjoo Yoo."
+    },
+    {
+      "id": "semantic_chunk::ACD_p8_sc3",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5163775086402893,
+      "text": "Learning depth from single monocu- lar images using deep convolutional neural ﬁelds. IEEE Transactions on Pattern Analysis and Machine Intelli- gence, 38:2024–2039, 2015. [Liu et al., 2021 ] Lina Liu, Xibin Song, Mengmeng Wang, Y ong Liu, and Liangjun Zhang. Self-supervised monocu- lar depth estimation for all day images using domain sep- aration. In ICCV, pages 12737–12746, 2021. [Lyu et al., 2021 ] Xiaoyang Lyu, Liang Liu, Mengmeng Wang, Xin Kong, Lina Liu, Y ong Liu, Xinxin Chen, and Yi Y uan. Hr-depth: High resolution self-supervised monocular depth estimation. In AAAI, pages 2294–2301, 2021. [Maddern et al., 2017 ] Will Maddern, Geoffrey Pascoe, Chris Linegar, and Paul Newman. 1 year, 1000 km: The oxford robotcar dataset. The International Journal of Robotics Research, 36:3–15, 2017. [Mou et al., 2024 ] Chong Mou, Xintao Wang, Liangbin Xie, Y anze Wu, Jian Zhang, Zhongang Qi, and Ying Shan. T2i- adapter: Learning adapters to dig out more controllable ability for text-to-image diffusion models. In AAAI, pages 4296–4304, 2024. [P armar et al., 2024 ] Gaurav Parmar, Taesung Park, Srini- vasa Narasimhan, and Jun-Y an Zhu. One-step image trans- lation with text-to-image models."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p9_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 9,
+      "score": 0.5161474347114563,
+      "text": "Bernstein, Jeannette Bohg, Antoine Bosselut, Emma Brunskill, Erik Brynjolfsson, et al. On the opportunities and risks of founda- tion models. arXiv preprint arXiv:2108. 07258, 2022. 3 [7] Yohann Cabon, Naila Murray, and Martin Humenberger. Vir- tual KITTI 2. arXiv preprint arXiv:2001. 10773, 2020. 2, 6, 8, 11, 12 [8] Weifeng Chen, Zhao Fu, Dawei Yang, and Jia Deng. Single- image depth perception in the wild. NeurIPS, 29, 2016. 2 [9] Weifeng Chen, Shengyi Qian, David Fan, Noriyuki Kojima, Max Hamilton, and Jia Deng. OASIS: A large-scale dataset for single image 3d in the wild. In CVPR, 2020. 2 [10] Angela Dai, Angel X. Chang, Manolis Savva, Maciej Halber, Thomas Funkhouser, and Matthias Nießner. ScanNet: Richly- annotated 3d reconstructions of indoor scenes. In CVPR, 2017. 6, 12, 28, 29 [11] Xiaodan Du, Nicholas Kolkin, Greg Shakhnarovich, and Anand Bhattad. Generative models: What do they know? do they know things? let’s find out! arXiv, 2023. 3 [12] Yiqun Duan, Xianda Guo, and Zheng Zhu. DiffusionDepth: Diffusion denoising approach for monocular depth estimation. arXiv preprint arXiv:2303. 05021, 2023. 2, 3 [13] Ainaz Eftekhar, Alexander Sax, Jitendra Malik, and Amir Zamir."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p9_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 9,
+      "score": 0.5161474347114563,
+      "text": "Bernstein, Jeannette Bohg, Antoine Bosselut, Emma Brunskill, Erik Brynjolfsson, et al. On the opportunities and risks of founda- tion models. arXiv preprint arXiv:2108. 07258, 2022. 3 [7] Yohann Cabon, Naila Murray, and Martin Humenberger. Vir- tual KITTI 2. arXiv preprint arXiv:2001. 10773, 2020. 2, 6, 8, 11, 12 [8] Weifeng Chen, Zhao Fu, Dawei Yang, and Jia Deng. Single- image depth perception in the wild. NeurIPS, 29, 2016. 2 [9] Weifeng Chen, Shengyi Qian, David Fan, Noriyuki Kojima, Max Hamilton, and Jia Deng. OASIS: A large-scale dataset for single image 3d in the wild. In CVPR, 2020. 2 [10] Angela Dai, Angel X. Chang, Manolis Savva, Maciej Halber, Thomas Funkhouser, and Matthias Nießner. ScanNet: Richly- annotated 3d reconstructions of indoor scenes. In CVPR, 2017. 6, 12, 28, 29 [11] Xiaodan Du, Nicholas Kolkin, Greg Shakhnarovich, and Anand Bhattad. Generative models: What do they know? do they know things? let’s find out! arXiv, 2023. 3 [12] Yiqun Duan, Xianda Guo, and Zheng Zhu. DiffusionDepth: Diffusion denoising approach for monocular depth estimation. arXiv preprint arXiv:2303. 05021, 2023. 2, 3 [13] Ainaz Eftekhar, Alexander Sax, Jitendra Malik, and Amir Zamir."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5696369409561157,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024).",
+      "estimated_tokens": 226
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc2",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.5619827508926392,
+      "text": "Accurate depth estimation is a crucial aspect © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms.",
+      "estimated_tokens": 35
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p14_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.5421513915061951,
+      "text": "IEEE, 2022. 1, 2, 8, 21 [69] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. ICCV, 2023. 3 [70] Kaichen Zhou, Lanqing Hong, Changhao Chen, Hang Xu, Chaoqiang Ye, Qingyong Hu, and Zhenguo Li. Devnet: Self-supervised monocular depth learning via density volume construction. InECCV, pages 125–142, 2022. 2, 8 [71] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video, 2017. 7 [72] Zhongkai Zhou, Xinnan Fan, Pengfei Shi, and Yuanxue Xin. R-msfm: Recurrent multi-scale feature modulation for monocular depth estimating. InICCV, pages 12757–12766, 2021. 2, 8 14",
+      "estimated_tokens": 242
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p10_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 10,
+      "score": 0.5420223474502563,
+      "text": "2, 6, 11, 12 [57] Wei Yin, Jianming Zhang, Oliver Wang, Simon Niklaus, Long Mai, Simon Chen, and Chunhua Shen. Learning to recover 3d scene shape from a single image. In CVPR, 2021. 2, 6, 11, 12 [58] Wei Yin, Chi Zhang, Hao Chen, Zhipeng Cai, Gang Yu, Kaix- uan Wang, Xiaozhi Chen, and Chunhua Shen. Metric3D: Towards zero-shot metric 3d prediction from a single image. In ICCV, 2023. 2, 6 [59] Weihao Yuan, Xiaodong Gu, Zuozhuo Dai, Siyu Zhu, and Ping Tan. NeWCRFs: Neural window fully-connected CRFs for monocular depth estimation. In CVPR, 2022. 2 [60] Chi Zhang, Wei Yin, Billzb Wang, Gang Yu, Bin Fu, and Chunhua Shen. Hierarchical normalization for robust monoc- ular depth estimation. NeurIPS, 35, 2022. 3, 6, 11 [61] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, pages 3836–3847, 2023. 3 [62] Renrui Zhang, Rongyao Fang, Wei Zhang, Peng Gao, Kunchang Li, Jifeng Dai, Yu Qiao, and Hongsheng Li. Tip-adapter: Training-free CLIP-adapter for better vision- language modeling. arXiv:2111. 03930, 2021. 3 [63] Renrui Zhang, Xiangfei Hu, Bohao Li, Siyuan Huang, Hanqiu Deng, Yu Qiao, Peng Gao, and Hongsheng Li.",
+      "estimated_tokens": 410
+    },
+    {
+      "id": "semantic_chunk::dav2_p35_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 35,
+      "score": 0.538000226020813,
+      "text": "• The authors should state which version of the asset is used and, if possible, include a URL. • The name of the license (e.g., CC-BY 4. 0) should be included for each asset. • For scraped data from a particular source (e.g., website), the copyright and terms of service of that source should be provided. 35",
+      "estimated_tokens": 76
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 989,
+    "compressed_context_tokens": 989,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 989,
+  "context_tokens": 989,
+  "prompt_token_estimate": 1401,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_paper_training_supervision",
+  "answer": "<think>The user is asking about the self-supervised training objective loss components in a paper. Let me look through the provided materials to find this information.\n\nLooking at the materials:\n- [1] is about DepthDark - mentions self-supervised monocular depth estimation in the dark\n- [2] is about LED - mentions depth estimation\n- [3] is about Jasmine - references various depth estimation papers\n- [4] is about Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation\n- [5] is about dav2 (Depth Anything V2)\n\nThe question asks about \"论文主\" (the main paper) self-supervised training objective loss components. But the materials provided are just reference lists/bibliographies from various papers, not the main content of any specific paper. There's no specific paper identified as \"the main paper\" being discussed.\n\nLooking more carefully, none of the provided excerpts contain actual training loss formulations. They are just reference lists. The question seems to be asking about a specific paper but it's unclear which one.\n\nSince the materials don't contain information about specific training loss components (they're all reference lists from different papers), I cannot determine which paper is being referred to as \"the main paper\" nor can I find the specific loss components.\n\nI should indicate that the information is missing from the provided materials.</think>\n\n{\"answer\": \"资料中未包含任何论文主体的自监督训练损失组成信息，所提供的均为参考文献列表片段，无法回答该问题。\", \"items\": [], \"missing_information\": \"需要提供包含自监督深度估计训练目标（损失函数）具体描述的论文正文内容；现有资料仅为各篇论文的参考文献条目，未涉及损失函数的定义与组成。\"}",
+  "usage": {
+    "prompt_tokens": 1427,
+    "completion_tokens": 348,
+    "total_tokens": 1775,
+    "model": "MiniMax-M3"
+  }
+}

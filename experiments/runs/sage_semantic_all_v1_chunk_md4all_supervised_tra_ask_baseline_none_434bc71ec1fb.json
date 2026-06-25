@@ -1,0 +1,438 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_md4all_supervised_tra_ask_baseline_none_434bc71ec1fb",
+  "dry_run": false,
+  "query": "md4all 在全监督单目深度估计中如何避免恶劣天气下 LiDAR 伪影的影响？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_5",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7737032771110535,
+      "text": "Figure 2, rain leads to artifacts in the LiDAR\nground truth, which cause the standard fully-supervised Ad-\naBins [1] to learn them and estimate the road wrongly. Our\nsupervised md4all exhibits no such artifacts as it was not\ntrained with the problematic ra"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_14",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7532644271850586,
+      "text": "butions (e.g., light snow vs. overcast) may create prob-\nlems. md4all is applicable to stereo-based models too, but\nonly given consistent translations for the stereo images. Fu-\nture work may focus on eliminating the dependency on the\nGAN. Furthermore, md4"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_17",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7484424114227295,
+      "text": "snow and fog, and sample translations.\n5. Conclusion\nWe presented the simple and effective md4all, enabling\na single monocular model to estimate depth robustly in both\nstandard and challenging conditions (e.g., night, rain). We\nshowed md4all delivering sig"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_chunk_2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.7448948621749878,
+      "text": "nder challenging illumination and\nweather conditions, such as at nighttime or in the presence\nof rain. In this paper, we uncover these safety-critical is-\nsues and tackle them with md4all: a simple and effective\nsolution that works reliably under both adve"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7382670640945435,
+      "text": "x % (1 − x) %\nx %\nmd4all-AD: Always Daytime, No Bad Weather\nmd4all\nmd4all\nmd4all\nmd4all\nany - input image depth predictiondepth model\nweights being trained\nfrozen weights day\nnight\nrain\ntraining\nfog\nsnow\none of\ninference\nalternative paths (random)rain\nmd4a"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_29",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.7329801321029663,
+      "text": "pite being based on the\nsame model as md2, atnight, our simple techniques reduced\nabsRel by 32% and relatively increased δ1 by 37% (DD).\nOur md4all also outperformed the radar-based R4Dyn at\nnight. This is thanks to the ability of our method to extract\nrob"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_6",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7309060096740723,
+      "text": "s, tested\nhere. Our md4all outperforms them all across the board,\nwith substantially better estimates at night than theirs dur-\ning the day: the previous best WSGD [37]’s day absRel\nerror is 45% higher than ours at night. This is thanks to the\nsimplicity o"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p3_chunk_27",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 3,
+      "score": 0.7286036014556885,
+      "text": "og and snow).\n3.1. md4all - Self-Supervised\nWe build upon a scale-aware video-based monocular\nmethod (Section 3.1.1). As described in Section 2.2.1, night\nand bad weather cause issues to self-supervised approaches.\nWe address this with md4allby computing t"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.722865879535675,
+      "text": "md4all\nmd4all\nmd4all\nmd4all\ndepth model\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\ntranslation model\nadverse - translated image\nday - input image\nday - input sequence\nday - pose model\nmd4all\nmd4all\nday - input imageday - reconstructed input\nde"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_1",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.7227756977081299,
+      "text": "RobotCar [Maddern et al., 2017 ]. We compare the ACDepth approach\nwith md4all-DD and MonoDepth2, all of which use the same backbone. To better illustrate the results, the real point cloud is projected onto\nthe original image, and no ground truth (GT) is r"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.722081184387207,
+      "text": "md4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nday - depth model\ntranslation model\nday - input image\nadverse - translated image\ndepth model\ndepth prediction\nday - depth prediction\nmd4all\nmd4all\nany - input image depth prediction\ndepth model\nday di"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_24",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7212399244308472,
+      "text": "ncludes preliminary results withsnow\nand fog on the challenging DENSE dataset [2].\nAD and DD Our md4all delivers improvements both as\nDD and AD (Tables 1 and 2). While the two are applica-\nble under both supervisions, available and reliable ground\ntruth al"
+    },
+    {
+      "id": "chunk::ACD_p2_chunk_5",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.7208718061447144,
+      "text": "ition, existing methods are often vulnerable to distur-\nbances in complex scenes due to slack constraints between\nthe teacher and student models, leading to incomplete knowl-\nedge transfer. Consequently, as shown in Figure. 1(b), md4all\nsuffers from nonneg"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7175536155700684,
+      "text": "ight\nrain\ntraining\nfog\nsnow\none of\ninference\nalternative paths (random)rain\nmd4all\nmd4all\n(same as in md4all-DD)\nT\nFigure 4. Our self-supervised md4all-AD framework. With x = 0, it is equivalent to the day - depth model in Figure 3 and the baseline.\nThe de"
+    },
+    {
+      "id": "chunk::ACD_p2_chunk_6",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.7132508754730225,
+      "text": "dge transfer. Consequently, as shown in Figure. 1(b), md4all\nsuffers from nonnegligible performance decline when there\nare signiﬁcant domain differences between scenes, making it\nfar from generalizing to various degraded scenarios.\nOverall, two critical is"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_15",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7122918367385864,
+      "text": "-\nture work may focus on eliminating the dependency on the\nGAN. Furthermore, md4all does not address the issue of\ndynamic objects, so flow [14] or weak radar supervision [8]\nmay be beneficial, albeit adding complexity. The core ideas\nof this work can be ex"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_chunk_20",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.710135281085968,
+      "text": "are open-source images in adverse\nconditions corresponding to the sunny and cloudy sam-\nples of nuScenes [3] and Oxford Robotcar [23].\nWith md4all, we substantially outperform prior solutions\ndelivering robust estimates in a variety of conditions.\n2. Relat"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_6",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7068692445755005,
+      "text": "md4all exhibits no such artifacts as it was not\ntrained with the problematic rainy samples but rather on our\ntranslated ones, which have reliable ground truth. Instead,\nself-supervised methods have issues at night. While Mon-\nodepth2 [11] could identify c"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_14",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7050803899765015,
+      "text": "eliminating the artifacts. Therefore, these com-\nparisons are more meaningful when considered alongside\nqualitative outputs (Figure 5). Our supervised md4all per-\nformed better than AdaBins both quantitatively and quali-\ntatively, eliminating the dependen"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7018440961837769,
+      "text": "nce\nday - pose model\nmd4all\nmd4all\nday - input imageday - reconstructed input\ndepth prediction\nodometry informationcamera pose estimation\nphotometric \nloss\nweak \nvelocity loss\nx % (1 − x) %\nx %\nmd4all-AD: Always Daytime, No Bad Weather\nmd4all\nmd4all\nmd4all"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_18",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.701839804649353,
+      "text": "se depth maps\nover those of md4all-DD on both day and night scenes. We\nspeculate that these considerable improvement of this study\nstems from the more reliable data generation and compre-\nhensive prior constraints, which contribute more to the robust\nmodel"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_18",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7013570070266724,
+      "text": "and challenging conditions (e.g., night, rain). We\nshowed md4all delivering significant improvements under\nboth fully- or self-supervised settings, overcoming the detri-\nmental factors that make adverse conditions problematic.\n8184"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.7006559371948242,
+      "text": ",PDJH\u0003\t\u0003*7 PG\u0017DOO\u0010'' 2XUV\n ,PDJH\u0003\t\u0003*7 PG\u0017DOO\u0010'' 2XUV\n\u000bD\f QX6FHQHV \u000bE\f 2[IRUG\u00035RERW&DU\n0RQRGHSWK\u0015 0RQRGHSWK\u0015\nFigure 4: Qualitative results on nuScenes [Caesar et al., 2020 ] and RobotCar [Maddern et al., 2017 ]. We compare the ACDepth approach\nwith md4all-D"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_11",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6986817717552185,
+      "text": "lls’ dimension. Ground truth is obtained from LiDAR data\nusing the DOC-Depth method [13] and Exwayz software [14]. More details are available in\nsupplementary materials.\n5 Experiments\nWe evaluate our method through extensive experiments on the Nighttime Sy"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_21",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6983805298805237,
+      "text": "[38] is meant for operating only at night.\nAll conditions Remarkably, across all tested conditions,\nmd4all significantly improves over Monodepth2 and Ad-\naBins on which we applied it, without the need for spe-\ncialized branches (Tables 1 and 2). There is n"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_9",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6977710723876953,
+      "text": "Ouputs of WSGD are from [37].\nwith brighter night samples, as shown in the Appendix. Our\nself-supervised md4all delivered sharp estimates, identify-\ning even the two trees on the left side of the bottom in-\nput, which are particularly hard to see. For Robo"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_23",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.6956616640090942,
+      "text": "igher quality ground truth\ndepths provided by [59]. Like [1], we use these instead\nof the reprojected LIDAR scans to compare our method\nagainst several existing baseline algorithms, still showing\nsuperior performance.\nMake3D In Table 3 we report performanc"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_23",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.6956616640090942,
+      "text": "igher quality ground truth\ndepths provided by [59]. Like [1], we use these instead\nof the reprojected LIDAR scans to compare our method\nagainst several existing baseline algorithms, still showing\nsuperior performance.\nMake3D In Table 3 we report performanc"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p3_chunk_26",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 3,
+      "score": 0.6943056583404541,
+      "text": "is suitable to both\nself-supervised (Section 3.1) and supervised (Section 3.2)\nframeworks and is general to operate under various weather\nand illumination settings (including fog and snow).\n3.1. md4all - Self-Supervised\nWe build upon a scale-aware video-ba"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_9",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6924816370010376,
+      "text": "for md4all-AD: we aim to learn\ndepth only from E, pretending that the conditions C detri-\nmental for the losses never occur.\nOur md4all-DD framework mimics model estimates in\nideal settings E, regardless of the difficulty of the input. As\nshown in Figure 3"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_9",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6910921335220337,
+      "text": "wn in\nTable 1, with all methods performing better with rain than\nat night. Our self-supervised monocular md4all-DD signif-\nicantly improved over Monodepth2 and the baseline, per-\nforming close to the radar-based R4Dyn [8].\nFully-supervised Table 1 reports"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_20",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6889586448669434,
+      "text": "nchanged. While md4all-DD (Section 3.1.3) also\napplies to the supervised case, using AD is more reasonable\nsince reliable ground truth data from ei is available.\n4. Experiments and Results\n4.1. Experimental Setup\nDatasets and metrics We used two public dri"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_chunk_1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.6870464086532593,
+      "text": "h prediction\nmd4all\nmd4all\nany - input image depth prediction\ndepth model\nday distillation loss\nx %\n(1 − x) %\nx %\nweights being trained\nfrozen weights\nday\nnight\nrain\ntraining\nfog\nsnow\none of\ninference\nmd4all-DD: Day Distillation\nalternative paths (random)"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_13",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6868481636047363,
+      "text": "se the ground truth is wrong (Figure 2). So, while\nwe can assess the improvements of md4all at handling the\nblur caused by raindrops, we cannot correctly quantify its\nimpact on eliminating the artifacts. Therefore, these com-\nparisons are more meaningful w"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6857194900512695,
+      "text": "input image ground truth\n AdaBins md4all (sup.) [ours]\n Monodepth2 md4all (self-sup.) [ours]\nfully-supervised self-supervised\nFigure 5. Comparison on nuScenes [3] between fully-sup. AdaBins [1] w/o and w/ ours, and self-sup. Monodepth2 [11] w/o and w/ ours"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_18",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6854184865951538,
+      "text": "ing the self-supervised definition (Sec-\ntion 3.1.2), except for the supervision signal. Thus, we train\nthe depth model with mi and learn from the LiDAR sig-\nnal of ei. Thus, the supervision is from artifact-free data in\nideal conditions E, such that the m"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p10_chunk_20",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 10,
+      "score": 0.6844385266304016,
+      "text": "Xiv:1908.00463, 2019.\n6, 12, 29\n[51] Wolfgang Wagner, Andreas Ullrich, Vesna Ducic, Thomas\nMelzer, and Nick Studnicka. Gaussian decomposition and\ncalibration of a novel small-footprint full-waveform digitising\nairborne laser scanner. ISPRS journal of Photo"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p10_chunk_20",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 10,
+      "score": 0.6844385266304016,
+      "text": "Xiv:1908.00463, 2019.\n6, 12, 29\n[51] Wolfgang Wagner, Andreas Ullrich, Vesna Ducic, Thomas\nMelzer, and Nick Studnicka. Gaussian decomposition and\ncalibration of a novel small-footprint full-waveform digitising\nairborne laser scanner. ISPRS journal of Photo"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_chunk_14",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.6843306422233582,
+      "text": "er both supervisions,\nour md4all makes the same models robust in all conditions.\nto learn depth estimation in a self-supervised manner [11,\n25, 34, 7, 10]. Monocular training solutions are the most\ninexpensive and rely on the smallest amount of assumptions"
+    },
+    {
+      "id": "chunk::ACD_p1_chunk_10",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.6830588579177856,
+      "text": "differential ranking,\nleading to a more precise depth estimation. Experi-\nmental results demonstrate that our ACDepth sur-\npasses md4all-DD by 2.50% for night scene and\n2.61% for rainy scene on the nuScenes dataset in\nterms of the absRel metric.\n1 Introduc"
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6829330921173096,
+      "text": "TTI dataset is typically conducted using the raw\nLiDAR GT. However, due to the noisy nature of LiDAR data and known preprocessing issues 1,\nwe also provide the eigen improved benchmark result. Following the practice adopted in Mono-\nViFi [29], as shown in"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_11",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6811315417289734,
+      "text": "ess of an issue. Instead, rain inputs are partic-\nularly interesting for supervised works due to the reflection\nissues shown in Figures 1 and 2. For supervised settings, we\napplied our method on AdaBins [1]. It is to be considered\nthat LiDAR artifacts may"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_5",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6803935766220093,
+      "text": "results for\nRobotCar [23]. Here we compare with various approaches\nthat also target depth estimation in challenging condi-\ntions [33, 22, 38, 37]. They all focus on night issues, tested\nhere. Our md4all outperforms them all across the board,\nwith substanti"
+    },
+    {
+      "id": "chunk::ACD_p5_chunk_29",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.6803786158561707,
+      "text": "h\nestimation method md4all-DD. DMMDE [Tosi et al., 2025 ]\nuses different depth models as prior information to guide im-\nage translation, and achieves improvements over md4all-DD.\nHowever, due to the scale-and-shift-invariant loss, the scaling\nrelation of d"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.6794047355651855,
+      "text": "0.2419 10.922 58.17 0.1572 .......7.453 79.49\n[ours] md4all-AD Mv dT(nr) 0.1523 6.853 83.11 0.2187 9.003 68.84 0.1601 7.832 78.97\n[ours] md4all-DD Mv dT(nr) 0.1366 6.452 84.61 0.1921 8.507 71.07 0.1414 7.228 80.98\nAdaBins [1] GT a: dnr 0.1384 5.582 81.31 0"
+    },
+    {
+      "id": "chunk::s_p10_chunk_24",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.679147481918335,
+      "text": "sion (3DV) , pages 668–678.\nIEEE, 2022. 1, 2\n[43] Ce Zheng, Yecheng Lyu, Ming Li, and Ziming Zhang.\nLodonet: A deep neural network with 2d keypoint match-\ning for 3d lidar odometry estimation. In Proceedings of the\n28th ACM International Conference on Mult"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_chunk_3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.6778775453567505,
+      "text": "with md4all: a simple and effective\nsolution that works reliably under both adverse and ideal\nconditions, as well as for different types of learning super-\nvision. We achieve this by exploiting the efficacy of existing\nmethods under perfect settings. There"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_5",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.6774770021438599,
+      "text": "0.1921 8.507 71.07 0.1414 7.228 80.98\nAdaBins [1] GT a: dnr 0.1384 5.582 81.31 0.2296 7.344 63.95 0.1726 6.267 76.01\n[ours] md4all-AD GT dnT(r) 0.1206 4.806 88.03 0.1821 6.372 75.33 0.1562 5.903 82.82\nTable 1. Evaluation of self- and GT-supervised methods"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_15",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.6771625280380249,
+      "text": "ther verify the effec-\ntiveness, we compare our ACDepth with existing state-of-the-\nart approaches on the RobotCar benchmark. As expected in\nTable 2, our method achieves the best performance in almost\nall metrics. Compared to md4all-DD, our approach reduce"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_11",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6771302223205566,
+      "text": "in Table 2, our md4all de-\nlivered better and sharper estimates in both conditions, cor-\nrectly estimating the people’s distance.\nLimitations md4all improves in all tested conditions,\nbut DD may propagate errors from the baseline. Thus,\na stronger baseline"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_5",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7737032771110535,
+      "text": "Figure 2, rain leads to artifacts in the LiDAR\nground truth, which cause the standard fully-supervised Ad-\naBins [1] to learn them and estimate the road wrongly. Our\nsupervised md4all exhibits no such artifacts as it was not\ntrained with the problematic ra",
+      "estimated_tokens": 61
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_14",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7532644271850586,
+      "text": "butions (e.g., light snow vs. overcast) may create prob-\nlems. md4all is applicable to stereo-based models too, but\nonly given consistent translations for the stereo images. Fu-\nture work may focus on eliminating the dependency on the\nGAN. Furthermore, md4",
+      "estimated_tokens": 60
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_17",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7484424114227295,
+      "text": "snow and fog, and sample translations.\n5. Conclusion\nWe presented the simple and effective md4all, enabling\na single monocular model to estimate depth robustly in both\nstandard and challenging conditions (e.g., night, rain). We\nshowed md4all delivering sig",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_chunk_2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.7448948621749878,
+      "text": "nder challenging illumination and\nweather conditions, such as at nighttime or in the presence\nof rain. In this paper, we uncover these safety-critical is-\nsues and tackle them with md4all: a simple and effective\nsolution that works reliably under both adve",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7382670640945435,
+      "text": "x % (1 − x) %\nx %\nmd4all-AD: Always Daytime, No Bad Weather\nmd4all\nmd4all\nmd4all\nmd4all\nany - input image depth predictiondepth model\nweights being trained\nfrozen weights day\nnight\nrain\ntraining\nfog\nsnow\none of\ninference\nalternative paths (random)rain\nmd4a",
+      "estimated_tokens": 85
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_29",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.7329801321029663,
+      "text": "pite being based on the\nsame model as md2, atnight, our simple techniques reduced\nabsRel by 32% and relatively increased δ1 by 37% (DD).\nOur md4all also outperformed the radar-based R4Dyn at\nnight. This is thanks to the ability of our method to extract\nrob",
+      "estimated_tokens": 69
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_6",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7309060096740723,
+      "text": "s, tested\nhere. Our md4all outperforms them all across the board,\nwith substantially better estimates at night than theirs dur-\ning the day: the previous best WSGD [37]’s day absRel\nerror is 45% higher than ours at night. This is thanks to the\nsimplicity o",
+      "estimated_tokens": 68
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 456,
+    "compressed_context_tokens": 456,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 456,
+  "context_tokens": 456,
+  "prompt_token_estimate": 965,
+  "run_label": "sage_semantic_all_v1_chunk_md4all_supervised_training",
+  "answer": "<think>\nThe user wants me to answer a question about how md4all avoids LiDAR artifact issues in adverse weather conditions during fully-supervised monocular depth estimation.\n\nLet me look at the relevant citations:\n\n[1] \"Figure 2, rain leads to artifacts in the LiDAR ground truth, which cause the standard fully-supervised AdaBins [1] to learn them and estimate the road wrongly. Our supervised md4all exhibits no such artifacts as it was not trained with the problematic ra...\" - This is cut off but tells us that md4all was not trained with the problematic rain data (which has LiDAR artifacts).\n\n[2] \"butions (e.g., light snow vs. overcast) may create problems. md4all is applicable to stereo-based models too, but only given consistent translations for the stereo images. Future work may focus on eliminating the dependency on the GAN. Furthermore, md...\"\n\n[3] \"snow and fog, and sample translations. 5. Conclusion We presented the simple and effective md4all, enabling a single monocular model to estimate depth robustly in both standard and challenging conditions (e.g., night, rain). We showed md4all delivering sig...\"\n\n[4] \"nder challenging illumination and weather conditions, such as at nighttime or in the presence of rain. In this paper, we uncover these safety-critical issues and tackle them with md4all: a simple and effective solution that works reliably under both adve...\"\n\n[5] \"x % (1 − x) % x % md4all-AD: Always Daytime, No Bad Weather md4all md4all md4all md4all any - input image depth predictiondepth model weights being trained frozen weights day night rain training fog snow one of inference alternative paths (random)rain md4a...\"\n\n[6] \"pite being based on the same model as md2, atnight, our simple techniques reduced absRel by 32% and relatively increased δ1 by 37% (DD). Our md4all also outperformed the radar-based R4Dyn at night. This is thanks to the ability of our method to extract rob...\"\n\n[7] \"s, tested here. Our md4all outperforms them all across the board, with substantially better estimates at night than theirs during the day: the previous best WSGD [37]'s day absRel error is 45% higher than ours at night. This is thanks to the simplicity o...\"\n\nBased on these, the key information is that:\n- Rain leads to artifacts in LiDAR ground truth\n- These artifacts cause the standard fully-supervised AdaBins to learn them and estimate wrongly\n- md4all avoids this by not being trained with the problematic rain data (text is cut off but it says \"it was not trained with the problematic ra...\" - likely \"rain\")\n- From [5], md4all seems to use a domain translation/adversarial approach to translate adverse weather images to clear weather before depth estimation\n\nSo the answer is that md4all avoids LiDAR artifacts by not training on problematic adverse weather data directly, instead using a GAN-based translation approach to convert adverse weather images to clear weather ones, and then applying the depth model on the translated clear-weather images. This way, the depth model is only trained on reliable ground truth.\n\nLet me construct the JSON response.\n</think>\n{\n  \"answer\": \"md4all 通过不直接使用包含 LiDAR 伪影的恶劣天气数据进行深度模型训练来避免该问题，而是将恶劣天气图像通过 GAN 翻译为清晰天气图像后，再送入仅在干净数据上训练的深度模型，从而避免模型学到 LiDAR 伪影。\",\n  \"items\": [\n    {\n      \"name\": \"避免使用含伪影的恶劣天气标签训练\",\n      \"description\": \"雨水会在 LiDAR 真值中产生伪影，导致全监督 AdaBins 学到这些伪影并在估计路面时出错；而 md4all 没有用存在问题的雨天气数据训练深度模型，因此不会出现此类伪影。\",\n      \"citations\": [1]\n    },\n    {\n      \"name\": \"采用 GAN 翻译 + 固定深度模型的策略\",\n      \"description\": \"md4all 在推理时将夜晚、雨、雪、雾等恶劣条件图像通过 GAN 翻译为白天清晰图像，由仅在干净数据上训练且权重冻结的深度模型估计深度，从而绕开恶劣天气下不可靠的 LiDAR 监督信号。\",\n      \"citations\": [5, 2]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 997,
+    "completion_tokens": 929,
+    "total_tokens": 1926,
+    "model": "MiniMax-M3"
+  }
+}

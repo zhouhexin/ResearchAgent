@@ -1,0 +1,446 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_paper_training_superv_ask_baseline_none_9c42b46230ba",
+  "dry_run": false,
+  "query": "论文主自监督训练目标由哪几类损失组成？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.601809024810791,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_12",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.6015526652336121,
+      "text": "ided that copies are not made or distributed\nfor profit or commercial advantage and that copies bear this notice and the full citation\non the first page. Copyrights for third-party components of this work must be honored.\nFor all other uses, contact the ow"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5920601487159729,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci"
+    },
+    {
+      "id": "chunk::SSRDepth_p13_chunk_31",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.5883116722106934,
+      "text": "sion – ECCV 2022, Cham, 2022, pp. 480–496. \n[19] K. Xian, J. Zhang, O. Wang, L. Mai, Z. Lin, Z. Cao, Structure-guided ranking loss \nfor single image depth prediction, in: Proceedings of the IEEE/CVF Conference on \nComputer Vision and Pattern Recognition, 2"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.5864492058753967,
+      "text": "pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything v2.arXiv preprint arXiv:2406.09414, 2024. 3\n[61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tian"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_56",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5861535668373108,
+      "text": "ang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and\nHengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406.09414\n(2024)."
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5833498239517212,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f"
+    },
+    {
+      "id": "chunk::s_p9_chunk_22",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.583244264125824,
+      "text": "tion. In Proceedings of the IEEE/CVF International\nConference on Computer Vision (ICCV), pages 5106–5115,\n2023.\n[17] Ming Li, Pan Zhou, Jia-Wei Liu, Jussi Keppo, Min Lin,\nShuicheng Yan, and Xiangyu Xu. Instant3d: Instant text-\nto-3d generation. arxiv: 2311"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p10_chunk_6",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.5820294618606567,
+      "text": "of images and\nvideos. arXiv preprint arXiv:2210.06366 , 2022.\n[23] Saurabh Saxena, Abhishek Kar, Mohammad Norouzi, and David J Fleet.\nMonocular depth estimation using diffusion models. arXiv preprint\narXiv:2302.14816, 2023.\n[24] Yiqun Duan, Xianda Guo, and"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_54",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5800307393074036,
+      "text": "tion Compensa-\ntion. arXiv preprint arXiv:2404.13854 (2024).\n[41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng-\nshuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla-\nbeled data. In Proceedings of the IEEE/"
+    },
+    {
+      "id": "chunk::LED_p1_chunk_13",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.5796670317649841,
+      "text": "document resides with its authors.\nIt may be distributed unchanged freely in print or electronic forms."
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_21",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.5791499614715576,
+      "text": "ent. This work is supported by the National\nNatural Science Foundation of China (No. 62201484), HKU\nStartup Fund, and HKU Seed Fund for Basic Research.\n10378"
+    },
+    {
+      "id": "chunk::s_p10_chunk_13",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.5783206224441528,
+      "text": "c fusion.\narXiv preprint arXiv:2407.09303, 2024. 1, 2, 5\n[35] Yihang Wu, Xiao Cao, Kaixin Li, Zitan Chen, Haonan Wang,\nLei Meng, and Zhiyong Huang. Towards better text-to-\nimage generation alignment via attention modulation.ArXiv,\nabs/2404.13899, 2024. 2\n["
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.5767279863357544,
+      "text": "Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. In ECCV, pages 696–712, 2022. 3\nAppendix\nIn this supplementary material, we provide additional im-\nplementation details in Appendix A and present additional\nquantitative and qua"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.5767279863357544,
+      "text": "Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. In ECCV, pages 696–712, 2022. 3\nAppendix\nIn this supplementary material, we provide additional im-\nplementation details in Appendix A and present additional\nquantitative and qua"
+    },
+    {
+      "id": "chunk::ACD_p9_chunk_14",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.5753891468048096,
+      "text": "f-\nfusion models. In ACM MM, pages 4129–4137, 2024.\n[Xian et al., 2020 ] Ke Xian, Jianming Zhang, Oliver Wang,\nLong Mai, Zhe Lin, and Zhiguo Cao. Structure-guided\nranking loss for single image depth prediction. In CVPR,\npages 611–620, 2020.\n[Xue et al., 20"
+    },
+    {
+      "id": "chunk::TDDC_p9_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 9,
+      "score": 0.5728489756584167,
+      "text": "ipson, and\nHenry Lipson. Optical physics . Cambridge University\nPress, 2010.\n[Liu et al., 2021] Lina Liu, Xibin Song, Mengmeng Wang,\nYong Liu, and Liangjun Zhang. Self-supervised monocu-\nlar depth estimation for all day images using domain sep-\naration. In"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p10_chunk_4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.5726413726806641,
+      "text": "3d for the motif-scaffolding problem.\narXiv preprint arXiv:2206.04119 , 2022.\n[21] Shoufa Chen, Peize Sun, Yibing Song, and Ping Luo. Diffusiondet:\nDiffusion model for object detection. arXiv preprint arXiv:2211.09788,\n2022.\n[22] Ting Chen, Lala Li, Saura"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.5720471143722534,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.5720471143722534,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_20",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5719597339630127,
+      "text": "e, 38:2024–2039, 2015.\n[Liu et al., 2021 ] Lina Liu, Xibin Song, Mengmeng Wang,\nY ong Liu, and Liangjun Zhang. Self-supervised monocu-\nlar depth estimation for all day images using domain sep-\naration. In ICCV, pages 12737–12746, 2021.\n[Lyu et al., 2021 ]"
+    },
+    {
+      "id": "chunk::dav2_p15_chunk_7",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.5707372426986694,
+      "text": "2, 19\n[83] Ke Xian, Jianming Zhang, Oliver Wang, Long Mai, Zhe Lin, and Zhiguo Cao. Structure-guided\nranking loss for single image depth prediction. In CVPR, 2020. 3, 4, 21\n[84] Tete Xiao, Yingcheng Liu, Bolei Zhou, Yuning Jiang, and Jian Sun. Unified perc"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.5704081058502197,
+      "text": "92\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.3090.206 0.022 0.149 14.862 16.048 0.954 0.981 0.990\n✗ ✓ ✗ ✓ ✓ 5.8090.186 0.0180.125 12.21014.6830.961 0.985 0.993\n✗ ✓ ✓ ✗ ✓ 5.4220.2000.0180.125 12.50316.1200.961 0.985 0.993\nTab"
+    },
+    {
+      "id": "chunk::LED_p15_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 15,
+      "score": 0.5695630311965942,
+      "text": "2025. The copyright of this document resides with its authors.\nIt may be distributed unchanged freely in print or electronic forms."
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.5694729089736938,
+      "text": "[64] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie\nZhou, and Jiwen Lu. Unleashing text-to-image diffusion\nmodels for visual perception. arXiv:2303.02153, 2023. 3\n[65] Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. I"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.5694727897644043,
+      "text": "[64] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie\nZhou, and Jiwen Lu. Unleashing text-to-image diffusion\nmodels for visual perception. arXiv:2303.02153, 2023. 3\n[65] Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. I"
+    },
+    {
+      "id": "chunk::s_p9_chunk_23",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.5684749484062195,
+      "text": "heng Yan, and Xiangyu Xu. Instant3d: Instant text-\nto-3d generation. arxiv: 2311.08403, 2023. 2\n[18] Lina Liu, Xibin Song, Mengmeng Wang, Yong Liu, and\nLiangjun Zhang. Self-supervised monocular depth estima-\ntion for all day images using domain separation."
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5675703287124634,
+      "text": "ce\nFoundation of China under Grant 62233005, in part by the\nNational Natural Science Foundation of China under Grant\n62203173, in part by the Program of Introducing Talents\nof Discipline to Universities through the 111 Project under\nGrant B17017 and Shangh"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_25",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5664777755737305,
+      "text": "4296–4304, 2024.\n[P\narmar et al., 2024 ] Gaurav Parmar, Taesung Park, Srini-\nvasa Narasimhan, and Jun-Y an Zhu. One-step image trans-\nlation with text-to-image models. arXiv, 2024.\n[Ranftl et al., 2020 ] Ren´e Ranftl, Katrin Lasinger, David\nHafner, Konrad"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.5630919337272644,
+      "text": "✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.021 0.13213.12212.9840.9570.9830.992\n✗ ✓ ✓ ✗ ✗ 5.760 0.201 0.020 0.137 13.616 16.174 0.9580.9830.992\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.309"
+    },
+    {
+      "id": "chunk::TDDC_p10_chunk_8",
+      "source": "data\\TDDC.pdf",
+      "page": 10,
+      "score": 0.5621221661567688,
+      "text": "e\nChina Technological Sciences, 63(9):1612–1627, 2020.\n[Zhao et al., 2022a] Chaoqiang Zhao, Yang Tang, and Qiyu\nSun. Unsupervised monocular depth estimation in highly\ncomplex environments. IEEE Transactions on Emerging\nTopics in Computational Intelligence"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p9_chunk_3",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 9,
+      "score": 0.5620042085647583,
+      "text": "asey Chu,\nYunxin Jiao, and Aditya Ramesh. Improving image genera-\ntion with better captions. https://cdn.openai.com/\npapers/dall-e-3.pdf , 2023. 2\n[4] Shariq Farooq Bhat, Ibraheem Alhashim, and Peter Wonka.\nAdaBins: Depth estimation using adaptive bins. In"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p9_chunk_3",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 9,
+      "score": 0.5620042085647583,
+      "text": "asey Chu,\nYunxin Jiao, and Aditya Ramesh. Improving image genera-\ntion with better captions. https://cdn.openai.com/\npapers/dall-e-3.pdf , 2023. 2\n[4] Shariq Farooq Bhat, Ibraheem Alhashim, and Peter Wonka.\nAdaBins: Depth estimation using adaptive bins. In"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_1",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5619909763336182,
+      "text": "Key Research and Devel-\nopment Program of China (U22A2047), the Key R&D Program of\nZhejiang under Grant No. (2025C03001, 2023C01044), the Funda-\nmental Research Funds for the Provincial Universities of Zhejiang\n(GK259909299001-023), the National Nature Sci"
+    },
+    {
+      "id": "chunk::SSRDepth_p13_chunk_30",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.5618059635162354,
+      "text": "rence on Computer Vision, 2021, pp. 10012–10022. \n[18] S.F. Bhat, I. Alhashim, P. Wonka, LocalBins: improving depth estimation by learning \nlocal distributions, in: Computer Vision – ECCV 2022, Cham, 2022, pp. 480–496. \n[19] K. Xian, J. Zhang, O. Wang, L."
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_25",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.561661422252655,
+      "text": "al., 2021] Tao Huang, Songjiang Li, Xu Jia,\nHuchuan Lu, and Jianzhuang Liu. Neighbor2neighbor:\nSelf-supervised denoising from single noisy images. In\nCVPR, pages 14781–14790, 2021.\n[Huang et al., 2022] Tao Huang, Songjiang Li, Xu Jia,\nHuchuan Lu, and Jianz"
+    },
+    {
+      "id": "chunk::dav2_p33_chunk_0",
+      "source": "data\\dav2.pdf",
+      "page": 33,
+      "score": 0.5609420537948608,
+      "text": "Question: Does the paper provide open access to the data and code, with sufficient instruc-\ntions to faithfully reproduce the main experimental results, as described in supplemental\nmaterial?\nAnswer: [Yes]\nJustification: We will release of code and data.\nG"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_1",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5608435869216919,
+      "text": "tional Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund from Guangdong Laboratory of Artiﬁcial Intel-\nligence and Digital Economy (SZ) (GML-KF-24-09).\nReferences\n[Arampatzakis et al., 2023 ] V asileios Arampatzakis, George\nPavlidis,"
+    },
+    {
+      "id": "chunk::Jasmine_p12_chunk_22",
+      "source": "data\\Jasmine.pdf",
+      "page": 12,
+      "score": 0.5603499412536621,
+      "text": "ing library. InNeurIPS,\npages 8026–8037, 2019. 7\n[36] Rui Peng, Ronggang Wang, Yawen Lai, Luyang Tang, and Yangang Cai. Excavating the potential capacity\nof selfsupervised monocular depth estimation. InICCV, pages 15560–15569, 2021. 16\n12"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.5598589777946472,
+      "text": "cf\nDepth Anything \nV2\n௖\nௗ\n௥\nOne batch\nStable Diffusion \nTurbo v2.1\nDecoder\nEncoder Decoder\nTD\nSD\nVD\nie\nim\nSD\n0p\n1p\n\u001f\n0p 1p\u001f\nVD\n\u000b\f\n\u000b\f\n01\n2log 1 0\n00\npp\neL\n\u0010\u0010­ \u000ez° ®\n °¯\n\u000b\n \f\n\u000b\n \f\n1\npp\n0\n\u000b\n\u000b\n \f\n01\n0\n01\n01\n11\n11 1\n0\npp\npp\notherwise\nW\nW\n\n\n\n\n­\u000et \u000e\n°° \u0010 \u001f® \u000e°\n°¯"
+    },
+    {
+      "id": "chunk::Global-Local_p7_chunk_27",
+      "source": "data\\Global-Local.pdf",
+      "page": 7,
+      "score": 0.5593817830085754,
+      "text": "Xiv preprint arXiv:2103.13413, 2021.\n[Saxena et al., 2008] Ashutosh Saxena, Min Sun, and An-\ndrew Y Ng. Make3d: Learning 3d scene structure from\na single still image. IEEE transactions on pattern analysis\nand machine intelligence, 31(5):824–840, 2008.\n[Sil"
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_15",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.559231162071228,
+      "text": "Format:\nLongjian Zeng, Zunjie Zhu, Rongfeng Lu, Ming Lu, Bolun Zheng, Cheng-\ngang Yan, and Anke Xue. 2025. DepthDark: Robust Monocular Depth Esti-\nmation for Low-Light Environments. In Proceedings of the 33rd ACM Inter-\nnational Conference on Multimedia ("
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_5",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5583620071411133,
+      "text": "[3] Shariq Farooq Bhat, Reiner Birkl, Diana Wofk, Peter Wonka, and Matthias Müller.\n2023. Zoedepth: Zero-shot transfer by combining relative and metric depth.arXiv\npreprint arXiv:2302.12288 (2023).\n[4] Yohann Cabon, Naila Murray, and Martin Humenberger. 20"
+    },
+    {
+      "id": "chunk::DepthDark_p10_chunk_14",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.5583094358444214,
+      "text": "d\nSystems for Video Technology 32, 7 (2022), 4138–4149.\n[53] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen\nLu. 2023. Unleashing text-to-image diffusion models for visual perception. In\nProceedings of the IEEE/CVF International Con"
+    },
+    {
+      "id": "chunk::ACD_p9_chunk_28",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.5582147836685181,
+      "text": "nzhu Zhang. Ec-depth: Exploring the\nconsistency of self-supervised monocular depth estimation\nunder challenging scenes. arXiv, 2023.\nProceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25)\n1259"
+    },
+    {
+      "id": "chunk::s_p10_chunk_9",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.5579965114593506,
+      "text": "Conference on Computer Vision and Pat-\ntern Recognition (CVPR), pages 21425–21434, 2023. 1\n[32] Youhong Wang, Yunji Liang, Hao Xu, Shaohui Jiao, and\nHongkai Yu. Sqldepth: Generalizable self-supervised fine-\nstructured monocular depth estimation, 2023. 1\n[3"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p10_chunk_7",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.5575207471847534,
+      "text": "models. arXiv preprint\narXiv:2302.14816, 2023.\n[24] Yiqun Duan, Xianda Guo, and Zheng Zhu. Diffusiondepth: Diffusion\ndenoising approach for monocular depth estimation. arXiv preprint\narXiv:2303.05021, 2023.\n[25] Zhong Liu, Ran Li, Shuwei Shao, Xingming Wu"
+    },
+    {
+      "id": "chunk::dav2_p14_chunk_19",
+      "source": "data\\dav2.pdf",
+      "page": 14,
+      "score": 0.5574139356613159,
+      "text": "er, et al. Diode:\nA dense indoor and outdoor depth dataset. arXiv:1908.00463, 2019. 8, 9, 10, 18, 19, 20\n14"
+    },
+    {
+      "id": "chunk::LED_p18_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 18,
+      "score": 0.5560119152069092,
+      "text": "e from section section 5.1.\nResolutionRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n200 px 5.94130.10730.0206 0.1270 12.62273.97360.9545 0.9228 0.9921\n320 px 5.42590.1996 0.01880.1253 12.490016.1224 0.96030.9846 0.9927\n640 px 5.7050 0.21090.01850.14"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p9_chunk_28",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 9,
+      "score": 0.5560047030448914,
+      "text": "esearch, pages 1–18, 2023. 2\n[28] Ce Liu, Suryansh Kumar, Shuhang Gu, Radu Timofte, and\nLuc Van Gool. V A-DepthNet: A variational approach to\nsingle image depth prediction. In ICLR, 2023. 2\n[29] Mehdi Mirza and Simon Osindero. Conditional generative\nadvers"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.601809024810791,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K",
+      "estimated_tokens": 66
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_12",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.6015526652336121,
+      "text": "ided that copies are not made or distributed\nfor profit or commercial advantage and that copies bear this notice and the full citation\non the first page. Copyrights for third-party components of this work must be honored.\nFor all other uses, contact the ow",
+      "estimated_tokens": 51
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5920601487159729,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::SSRDepth_p13_chunk_31",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.5883116722106934,
+      "text": "sion – ECCV 2022, Cham, 2022, pp. 480–496. \n[19] K. Xian, J. Zhang, O. Wang, L. Mai, Z. Lin, Z. Cao, Structure-guided ranking loss \nfor single image depth prediction, in: Proceedings of the IEEE/CVF Conference on \nComputer Vision and Pattern Recognition, 2",
+      "estimated_tokens": 83
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.5864492058753967,
+      "text": "pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything v2.arXiv preprint arXiv:2406.09414, 2024. 3\n[61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tian",
+      "estimated_tokens": 102
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_56",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5861535668373108,
+      "text": "ang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and\nHengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406.09414\n(2024).",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5833498239517212,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f",
+      "estimated_tokens": 65
+    },
+    {
+      "id": "chunk::LED_p1_chunk_13",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.5796670317649841,
+      "text": "document resides with its authors.\nIt may be distributed unchanged freely in print or electronic forms.",
+      "estimated_tokens": 18
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 499,
+    "compressed_context_tokens": 499,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 499,
+  "context_tokens": 499,
+  "prompt_token_estimate": 931,
+  "run_label": "sage_semantic_all_v1_chunk_paper_training_supervision",
+  "answer": "<think>\nThe user is asking about the self-supervised training objective losses in a paper. However, looking at the provided materials, they are mostly acknowledgment sections, copyright notices, and reference lists. None of the provided materials actually describe the self-supervised training objectives or losses used in the paper.\n\nLet me check each source:\n- [1] Jasmine.pdf: Acknowledgment section with grant numbers\n- [2] DepthDark.pdf: Copyright notice\n- [3] TDDC.pdf: Acknowledgment section\n- [4] SSRDepth.pdf: Reference list\n- [5] Jasmine.pdf: More references\n- [6] DepthDark.pdf: Reference (Depth Anything V2)\n- [7] ACD.pdf: Acknowledgment section\n- [8] LED.pdf: Copyright notice\n\nNone of these contain information about the specific self-supervised training objective losses. The materials only contain acknowledgments, copyright notices, and references. I cannot determine the composition of self-supervised training objectives from these materials.\n\nI should indicate that the information is missing.\n</think>\n{\"answer\":\"资料中未包含关于自监督训练目标损失组成的描述，无法回答。\",\"items\":[],\"missing_information\":\"提供的资料仅为致谢、版权声明和参考文献片段，未包含任何关于自监督训练目标（如光度损失、对抗损失、特征一致性损失等）组成的说明。需要论文方法章节中关于损失函数的具体描述。\"}",
+  "usage": {
+    "prompt_tokens": 971,
+    "completion_tokens": 283,
+    "total_tokens": 1254,
+    "model": "MiniMax-M3"
+  }
+}

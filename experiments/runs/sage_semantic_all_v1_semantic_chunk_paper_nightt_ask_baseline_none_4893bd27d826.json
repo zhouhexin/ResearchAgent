@@ -1,0 +1,470 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_paper_nightt_ask_baseline_none_4893bd27d826",
+  "dry_run": false,
+  "query": "相关工作部分明确讨论的夜间自监督单目深度估计方法包括哪些？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.509245753288269,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024)."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5092092752456665,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5092092752456665,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc2",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.5039994716644287,
+      "text": "Accurate depth estimation is a crucial aspect © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms."
+    },
+    {
+      "id": "semantic_chunk::dav2_p22_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 22,
+      "score": 0.502684473991394,
+      "text": "For most pairs in DIW, we cannot decide the relative depth or hold the opposite opinion as the provided label. This can also be supported by MiDaS [7] that, better and larger models instead perform worse on DIW. In comparison, our DA-2K is precise, because we exclude many hard-to-decide or controversial pairs. • (better organized) DIW randomly downloads images from Flickr, without carefully organiz- ing. This would make users struggle to obtain straightforward insights from the evaluation results. In comparison, our DA-2K organizes all images by application scenarios, and thus can provide results for each individual application scenario. 22"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p4_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.5000048875808716,
+      "text": "The structure of the ARD module is shown in Fig. 7. We ﬁrst predict a set of discrete bins 𝐵 = {𝑏1, 𝑏2, … , 𝑏𝑖, … , 𝑏𝑁 }. Pattern Recognition 171 (2026) 112279 4"
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.49714139103889465,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.49714139103889465,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.4969819188117981,
+      "text": "The quantitative results obviously demonstrate that our method can produce much finer and more accurate depth predictions, particularly in complex regions with intricate structures, which sometimes cannot be reflected by the met- rics. E. 4 Mix-batch Ratio Ablation Details In the paper, Fig. 3 (g) illustrates the per- formance variation versus the mix-batch ratio under two supervision schemes. We further present 1Discussed in MonoDepth2 repository: https://github.com/nianticlabs/monodepth2/issues/274 21"
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc4",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.4969363212585449,
+      "text": "2 [44] Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang, and Dongbin Zhao. Steps: Joint self- supervised nighttime image enhancement and depth estima- tion. In 2023 IEEE International Conference on Robotics and Automation (ICRA), pages 4916–4923, 2023. 1, 2 [45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork- gan: Seeing into the rainy night. In The IEEE European Conference on Computer Vision (ECCV), 2020. 2, 4 [46] Hanyu Zhou, Yi Chang, Wending Yan, and Luxin Yan. Un- supervised cumulative domain adaptation for foggy scene optical flow. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9569– 9578, 2023. 4, 5 [47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING, Yuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the common appearance-boundary adaptation for nighttime op- tical flow. InThe Twelfth International Conference on Learn- ing Representations, 2024. 2 [48] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.4959799647331238,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.4959799647331238,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::dav2_p32_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 32,
+      "score": 0.4949437379837036,
+      "text": "(d) We recognize that reproducibility may be tricky in some cases, in which case authors are welcome to describe the particular way they provide for reproducibility. In the case of closed-source models, it may be that access to the model is limited in some way (e.g., to registered users), but it should be possible for other researchers to have some path to reproducing or verifying the results. 5. Open access to data and code 32"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p11_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.4946048855781555,
+      "text": "Furthermore, Pattern Recognition 171 (2026) 112279 11"
+    },
+    {
+      "id": "semantic_chunk::dav2_p35_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 35,
+      "score": 0.4925840497016907,
+      "text": "• The authors should state which version of the asset is used and, if possible, include a URL. • The name of the license (e.g., CC-BY 4. 0) should be included for each asset. • For scraped data from a particular source (e.g., website), the copyright and terms of service of that source should be provided. 35"
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p8_sc1",
+      "source": "data\\Global-Local.pdf",
+      "page": 8,
+      "score": 0.49250584840774536,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 8375–8384, 2020. [Yun et al., 2019] Sangdoo Yun, Dongyoon Han, Seong Joon Oh, Sanghyuk Chun, Junsuk Choe, and Youngjoon Yoo. Cutmix: Regularization strategy to train strong classiﬁers with localizable features. CoRR, abs/1905. 04899, 2019. [Zheng et al., 2021] Sixiao Zheng, Jiachen Lu, Hengshuang Zhao, Xiatian Zhu, Zekun Luo, Yabiao Wang, Yanwei Fu, Jianfeng Feng, Tao Xiang, Philip HS Torr, et al. Rethink- ing semantic segmentation from a sequence-to-sequence perspective with transformers. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 6881–6890, 2021."
+    },
+    {
+      "id": "semantic_chunk::ACD_p5_sc5",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.49151521921157837,
+      "text": "For better convincing, Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1255"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p13_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.4903332591056824,
+      "text": "Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly, J. Uszkoreit, N. Houlsby, An image is worth 16x16 words: transformers for image recognition at scale, in: International Conference on Learning Representations, 2021. [16] W. Yuan, X. Gu, Z. Dai, S. Zhu, P. Tan, Neural window fully-connected CRFs for monocular depth estimation, in: Proceedings of the IEEE/CVF Conference on Com- puter Vision and Pattern Recognition, 2022, pp. 3916–3925. [17] Z. Liu, Y. Lin, Y. Cao, H. Hu, Y. Wei, Z. Zhang, S. Lin, B. Guo, Swin transformer: hier- archical vision transformer using shifted windows, in: Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021, pp. 10012–10022. [18] S. F. Bhat, I. Alhashim, P. Wonka, LocalBins: improving depth estimation by learning local distributions, in: Computer Vision – ECCV 2022, Cham, 2022, pp. 480–496. [19] K. Xian, J. Zhang, O. Wang, L. Mai, Z. Lin, Z. Cao, Structure-guided ranking loss for single image depth prediction, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2020, pp. 608–617. [20] Z. Li, N."
+    },
+    {
+      "id": "semantic_chunk::s_p11_sc0",
+      "source": "data\\s.pdf",
+      "page": 11,
+      "score": 0.48985886573791504,
+      "text": "(ICCV), 2017 IEEE International Conference on , 2017. 2, 4"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc4",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.48982247710227966,
+      "text": "In Proceedings of the IEEE conference on computer vision and pattern recognition . 1119–1127. [21] Lifeng Lin, Rongfeng Lu, Quan Chen, Haofan Ren, Ming Lu, Yaoqi Sun, Cheng- gang Yan, and Anke Xue. 2025. VGNC: Reducing the Overfitting of Sparse- view 3DGS via Validation-guided Gaussian Number Control. arXiv preprint arXiv:2504. 14548 (2025). [22] Ariel Lipson, Stephen G Lipson, and Henry Lipson. 2010. Optical physics. Cam- bridge University Press. [23] Ce Liu, Jenny Yuen, Antonio Torralba, Josef Sivic, and William T Freeman. 2008. Sift flow: Dense correspondence across different scenes. In Computer Vision– ECCV 2008: 10th European Conference on Computer Vision, Marseille, France, Octo- ber 12-18, 2008, Proceedings, Part III 10 . Springer, 28–42. [24] Lina Liu, Xibin Song, Mengmeng Wang, Yong Liu, and Liangjun Zhang. 2021. Self-supervised monocular depth estimation for all day images using domain separation. In Proceedings of the IEEE/CVF international conference on computer vision. 12737–12746. [25] Rongfeng Lu, Hangyu Chen, Zunjie Zhu, Yuhang Qin, Ming Lu, Le Zhang, Cheng- gang Yan, and Anke Xue. 2024. Thermalgaussian: Thermal 3d gaussian splatting. arXiv preprint arXiv:2409."
+    },
+    {
+      "id": "semantic_chunk::ACD_p4_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.48932480812072754,
+      "text": "We normalize the depth difference ¯D to obtain ˆD, which takes values between 0 and 1. We deﬁne U as the region of focus for the loss, and the region of focus is determined by the following equation: U = { 1 di >γ 0 di ≤ γ, (9) where γ is the threshold for dividing the key regions, set to 95% of ˆD. These key regions correspond to areas with im- paired perception in challenging scenes, as shown in Fig 3(e). 2) Depth Ordinal Strategy: We sample a pixel fromU∗DS , with the corresponding depth valuep0, and another pixel from (∼ U) ∗ DS , with the corresponding depth value p1. The ranking loss [Xian et al., 2020; Sun et al., 2023 ] for the pair [p0,p 1] is computed as follows: ψ(p0,p 1)= {log2 ( 1+ e−ℓ(p0−p1 )) ℓ̸=0 ℓ(p0 −p1)2 ℓ=0 , (10) The ordinal label ℓis calculated as follows: ℓ= ⎧ ⎪⎨ ⎪⎩ +1 p∗ 0 p∗ 1 ≥ 1+ τ −1 p∗ 0 p∗ 1 < 1 1+τ 0 otherwise, (11) where τ is a hyperparameter used to control the selection of pixel pairs for the sorting. p∗ 0 is sampled from the region U ∗ Dv , and p∗ 1 is sampled from the complementary region (∼ U) ∗ Dv . These two pixels, [p∗ 0 ,p∗ 1 ], form an ordinal pair."
+    },
+    {
+      "id": "semantic_chunk::dav2_p7_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 7,
+      "score": 0.4883665144443512,
+      "text": "However, there may be cases where all models incorrectly predict challenging pairs, and they are not flagged. To address this, we introduce a second pipeline, where we carefully analyze images and manually identify challenging pairs. 7"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc3",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.4883195757865906,
+      "text": "The proposed objective minimizes the distances be- tween each pair of scaled and shifted predictions ( ˆd′i, ˆd′j), where ˆd′ = ˆd × ˆs + ˆt. In each optimization step, we cal- culate the merged depth map m by the taking pixel-wise median m(x, y) = median( ˆd′1(x, y), . ,ˆd′N (x, y)). An extra regularization term R = |min(m)| + |1 − max(m)|, is added to prevent collapse to the trivial solution and enforce the unit scale of m. Thus, the objective function can be written as follows: mins1,...,sN t1,...,tN vuut 1 b N −1X i=1 NX j=i+1 ∥ ˆd′i − ˆd′j∥2 2 + λR ! (4) where the binominal coefficient b = \u0000N 2 \u0001 represents the number of possible combinations of image pairs from N im- ages. After the iterative optimization for spatial alignment, the merged depth m is taken as our ensembled prediction. Note that this ensembling step requires no ground truth for aligning independent predictions. This scheme enables a flexible trade-off between computation efficiency and pre- diction quality by choosing N accordingly. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc3",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.4883195757865906,
+      "text": "The proposed objective minimizes the distances be- tween each pair of scaled and shifted predictions ( ˆd′i, ˆd′j), where ˆd′ = ˆd × ˆs + ˆt. In each optimization step, we cal- culate the merged depth map m by the taking pixel-wise median m(x, y) = median( ˆd′1(x, y), . ,ˆd′N (x, y)). An extra regularization term R = |min(m)| + |1 − max(m)|, is added to prevent collapse to the trivial solution and enforce the unit scale of m. Thus, the objective function can be written as follows: mins1,...,sN t1,...,tN vuut 1 b N −1X i=1 NX j=i+1 ∥ ˆd′i − ˆd′j∥2 2 + λR ! (4) where the binominal coefficient b = \u0000N 2 \u0001 represents the number of possible combinations of image pairs from N im- ages. After the iterative optimization for spatial alignment, the merged depth m is taken as our ensembled prediction. Note that this ensembling step requires no ground truth for aligning independent predictions. This scheme enables a flexible trade-off between computation efficiency and pre- diction quality by choosing N accordingly. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.4879536032676697,
+      "text": "180 0. 808 0. 966 0. 989 WSGD[Vankadariet al., 2023] R d&n 640× 320 40 0. 123 0. 694 3. 957 0. 163 0. 835 0. 978 0. 995 DA ITDFA[Zhaoet al., 2022a] R d&n 640× 320 40 0. 156 0. 786 3. 971 0. 192 0. 778 0. 965 0. 992 ADDS[Liu et al., 2021]† R d&n 640× 320 40 0. 109 0. 584 3. 578 0. 153 0. 631 0. 908 0. 962 ADDS[Liu et al., 2021] R d&n 640× 320 40 0. 120 0. 778 4. 113 0. 172 0. 856 0. 967 0. 987 RNW[Wanget al., 2021] R d&n 640× 320 40 0. 156 0. 701 3. 838 0. 202 0. 768 0. 958 0. 991 G ITDFA[Zhaoet al., 2022a] N d&n 640× 320 40 0. 230 2. 018 6. 336 0. 281 0. 653 0. 875 0. 956 ADDS[Liu et al., 2021] N d&n 640× 320 40 0. 180 1. 441 5. 680 0. 232 0. 727 0. 930 0. 981 RNW[Wanget al., 2021] N d&n 640× 320 40 0. 271 3. 939 9. 204 0. 314 0. 661 0. 830 0. 927 MonoFormer[Baeet al., 2023] K 768 × 256 40 0. 138 0. 665 3. 730 0. 181 0. 824 0. 971 0. 993 MonoViT[Zhaoet al., 2022b] K 768 × 256 40 0. 102 0. 500 3. 364 0. 147 0. 905 0. 977 0. 992 Ours K 768 × 256 40 0. 109 0. 477 3. 261 0. 151 0. 891 0. 978 0. 993 Table E. 1: Effective test on nuScenes-Day [Wang et al., 2021; Caesar et al., 2020] and Robotcar-Day [Liu et al., 2021; Maddern et al., 2017]."
+    },
+    {
+      "id": "semantic_chunk::dav2_p31_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 31,
+      "score": 0.4879035949707031,
+      "text": "Or a speech-to-text system might not be used reliably to provide closed captions for online lectures because it fails to handle technical jargon. • The authors should discuss the computational efficiency of the proposed algorithms and how they scale with dataset size. • If applicable, the authors should discuss possible limitations of their approach to address problems of privacy and fairness. • While the authors might fear that complete honesty about limitations might be used by reviewers as grounds for rejection, a worse outcome might be that reviewers discover limitations that aren’t acknowledged in the paper. The authors should use their best judgment and recognize that individual actions in favor of transparency play an impor- tant role in developing norms that preserve the integrity of the community. Reviewers will be specifically instructed to not penalize honesty concerning limitations. 3. Theory Assumptions and Proofs Question: For each theoretical result, does the paper provide the full set of assumptions and a complete (and correct) proof? 31"
+    },
+    {
+      "id": "semantic_chunk::ACD_p8_sc4",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.48773807287216187,
+      "text": "arXiv, 2024. [Ranftl et al., 2020 ] Ren´e Ranftl, Katrin Lasinger, David Hafner, Konrad Schindler, and Vladlen Koltun. Towards robust monocular depth estimation: Mixing datasets for zero-shot cross-dataset transfer. IEEE Transactions on Pattern Analysis and Machine Intelligence, 44(3):1623– 1637, 2020. [Ranftl et al., 2021 ] Ren´e Ranftl, Alexey Bochkovskiy, and Vladlen Koltun. Vision transformers for dense prediction. In CVPR, pages 12179–12188, 2021. [Sauer et al., 2025 ] Axel Sauer, Dominik Lorenz, Andreas Blattmann, and Robin Rombach. Adversarial diffusion distillation. In ECCV, pages 87–103, 2025. Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1258"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_sc4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.4873914420604706,
+      "text": "Specifically, for a single ground truth y ∈ R1×3×H×W , it can be regarded as an observation from eE[y], represented as: eE[y] =αE[y], α ∼ N(1, σ2 α), (2) where α determines the probability distribution type of eE[y], and σ2 α defines its spread. Therefore, we have av- erage brightness distribution p(eE[y]) = N (µy, σ2 y), with µy = E[y] and σy = σαE[y]. Similarly, for a single enhanced image f (x) ∈ R1×3×H×W , its average bright- ness E[f (x)] can also be regarded as an observation from eE[f (x)], represented as: eE[f (x)] =βE[f (x)], β ∼ N(1, σ2 β), (3) where β determines the probability distribution type of eE[f (x)], and σ2 β defines its spread. Consequently, we have average brightness distributionq(eE[f (x)]) =N (µf x, σ2 f x), with µf x= E[f (x)] and σf x= σβE[f (x)]. 3"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_sc4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.4873914420604706,
+      "text": "Specifically, for a single ground truth y ∈ R1×3×H×W , it can be regarded as an observation from eE[y], represented as: eE[y] =αE[y], α ∼ N(1, σ2 α), (2) where α determines the probability distribution type of eE[y], and σ2 α defines its spread. Therefore, we have av- erage brightness distribution p(eE[y]) = N (µy, σ2 y), with µy = E[y] and σy = σαE[y]. Similarly, for a single enhanced image f (x) ∈ R1×3×H×W , its average bright- ness E[f (x)] can also be regarded as an observation from eE[f (x)], represented as: eE[f (x)] =βE[f (x)], β ∼ N(1, σ2 β), (3) where β determines the probability distribution type of eE[f (x)], and σ2 β defines its spread. Consequently, we have average brightness distributionq(eE[f (x)]) =N (µf x, σ2 f x), with µf x= E[f (x)] and σf x= σβE[f (x)]. 3"
+    },
+    {
+      "id": "semantic_chunk::ACD_p4_sc3",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.48698005080223083,
+      "text": "The ranking loss aims to enhance the student model’s performance by focusing on poorly predicted regions. How- ever, we found that the constraints imposed by the distillation loss sometimes conﬂicted with the ranking loss. To mitigate this issue, after identifying each ordinal pair, we compute the average depth value of the surrounding 5×5 pixel region for each sample point and use this average value to calculate the ranking loss. Considering the increase in computational over- head, we control the number of selected points in each itera- tion by setting τ =0 . 15 to select fewer sample points. Sim- ilarly, we set the proportion of sample pairs selected from U to 0. 05. Finally, we randomly sample ordinal pairs from the Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1254"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p18_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 18,
+      "score": 0.4869665801525116,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 18"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p18_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 18,
+      "score": 0.4869665801525116,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 18"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.48690927028656006,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.48690927028656006,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p7_sc4",
+      "source": "data\\Global-Local.pdf",
+      "page": 7,
+      "score": 0.48665300011634827,
+      "text": "[Ranftl et al., 2021] Ren ´e Ranftl, Alexey Bochkovskiy, and Vladlen Koltun. Vision transformers for dense prediction. arXiv preprint arXiv:2103. 13413, 2021. [Saxena et al., 2008] Ashutosh Saxena, Min Sun, and An- drew Y Ng. Make3d: Learning 3d scene structure from a single still image. IEEE transactions on pattern analysis and machine intelligence, 31(5):824–840, 2008. [Silberman et al., 2012] Nathan Silberman, Derek Hoiem, Pushmeet Kohli, and Rob Fergus. Indoor segmentation and support inference from rgbd images. In European conference on computer vision , pages 746–760. Springer, 2012. [Song et al., 2015] Shuran Song, Samuel P. Lichtenberg, and Jianxiong Xiao. Sun rgb-d: A rgb-d scene understanding benchmark suite. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR) , June 2015."
+    },
+    {
+      "id": "semantic_chunk::dav2_p35_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 35,
+      "score": 0.4860824942588806,
+      "text": "• Released models that have a high risk for misuse or dual-use should be released with necessary safeguards to allow for controlled use of the model, for example by requiring that users adhere to usage guidelines or restrictions to access the model or implementing safety filters. • Datasets that have been scraped from the Internet could pose safety risks. The authors should describe how they avoided releasing unsafe images. • We recognize that providing effective safeguards is challenging, and many papers do not require this, but we encourage authors to take this into account and make a best faith effort. 12. Licenses for existing assets Question: Are the creators or original owners of assets (e.g., code, data, models), used in the paper, properly credited and are the license and terms of use explicitly mentioned and properly respected? Answer: [Yes] Justification: We properly credited the creators or original owners of assets (e.g., code, data, models), used in the paper and conformed the license and terms. Guidelines: • The answer NA means that the paper does not use existing assets. • The authors should cite the original paper that produced the code package or dataset."
+    },
+    {
+      "id": "semantic_chunk::LED_p12_sc2",
+      "source": "data\\LED.pdf",
+      "page": 12,
+      "score": 0.48597317934036255,
+      "text": "[32] Pushmeet Kohli Nathan Silberman, Derek Hoiem and Rob Fergus. Indoor segmentation and support inference from rgbd images. InECCV, 2012."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p7_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 7,
+      "score": 0.48499178886413574,
+      "text": "Y. Zou et al. Table 1 Quantitative comparison on the NYU-Depth V2 dataset. The best results are indicated in bold, and the second-best results are underlined. Method Venue Backbone 𝛿1 ↑ 𝛿2 ↑ 𝛿3 ↑ RMSE↓ AbsRel↓ log10↓ BTS [12] arXiv 2019 DenseNet-161 0. 871 0. 977 0. 995 0. 407 0. 113 0. 049 AdaBins [9] CVPR 2019 EﬃcientNet-B5 0. 903 0. 984 0. 997 0. 364 0. 103 0. 044 LocalBins [18] ECCV 2022 ResNet-101 0. 898 0. 987 0. 998 0. 357 – 0. 042 P3Depth [13] CVPR 2022 Swin-Large 0. 907 0. 981 0. 996 0. 356 0. 104 0. 043 NeWCRFs [16] CVPR 2022 Swin-Large 0. 927 0. 989 0. 998 0. 334 0. 095 0. 039 PixelFormer [39] WCAV 2023 Swin-Large 0. 929 0. 991 0. 998 0. 322 0. 090 0. 039 BinsFormer [10] TIP 2024 Swin-Large 0. 925 0. 991 0. 997 0. 330 0. 094 0. 040 iDisc [40] CVPR 2023 Swin-Large 0. 936 0. 992 0. 998 0. 313 0. 086 0. 037 ZoeDepth [41] arXiv 2023 Swin-Large 0. 937 0. 992 0. 998 0. 310 0. 086 0. 037 WorDepth [42] CVPR 2024 Swin-Large 0. 932 0. 992 0. 998 0. 317 0. 088 0. 038 Ours – Swin-Tiny 0. 893 0. 981 0. 995 0. 377 0. 107 0. 045 Swin-Large 0. 933 0. 991 0. 998 0. 316 0. 086 0. 037 Convnext-Large 0. 938 0. 991 0. 998 0. 308 0. 084 0. 036 Fig. 8."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p10_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.4848936200141907,
+      "text": "[52] Hengrun Zhao, Bolun Zheng, Shanxin Yuan, Hua Zhang, Chenggang Yan, Liang Li, and Gregory Slabaugh. 2022. CBREN: Convolutional Neural Networks for Constant Bit Rate Video Quality Enhancement. IEEE Transactions on Circuits and Systems for Video Technology 32, 7 (2022), 4138–4149. [53] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. 2023. Unleashing text-to-image diffusion models for visual perception. In Proceedings of the IEEE/CVF International Conference on Computer Vision . 5729– 5739. [54] B Zheng, S Yuan, C Yan, X Tian, J Zhang, Y Sun, L Liu, A Leonardis, and G Slabaugh. 2022. Learning Frequency Domain Priors for Image Demoireing. IEEE Transactions on Pattern Analysis and Machine Intelligence44, 11 (2022), 7705–7717."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.48439228534698486,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Type Method Train on Train Res. Max depth ABS rel ↓ Sq rel ↓ RMSE ↓ RMSE log ↓ 𝛿 1 ↑ 𝛿 2 ↑ 𝛿 3 ↑ Test on nuScenes-Night DT MonoViT[51] N 𝑑 &𝑛 640 × 320 60 1. 726 93. 031 30. 321 2. 183 0. 143 0. 291 0. 437 WSGD[35] N 𝑑 &𝑛 640 × 320 60 0. 663 9. 573 15. 200 0. 755 0. 199 0. 388 0. 567 DA ITDFA[50] N 𝑑 &𝑛 640 × 320 60 0. 337 4. 511 10. 118 0. 403 0. 515 0. 767 0. 890 RNW[36] N 𝑑 &𝑛 640 × 320 60 0. 341 5. 516 11. 152 0. 406 0. 531 0. 789 0. 902 ADDS[24] N 𝑑 &𝑛 640 × 320 60 0. 299 4. 790 10. 372 0. 371 0. 620 0. 814 0. 907 G ITDFA[50] R 𝑑 &𝑛 640 × 320 60 0. 362 3. 760 10. 252 0. 441 0. 418 0. 702 0. 867 RNW[36] R 𝑑 &𝑛 640 × 320 60 0. 376 4. 732 11. 193 0. 506 0. 451 0. 712 0. 835 ADDS[24] R 𝑑 &𝑛 640 × 320 60 0. 322 4. 401 10. 584 0. 397 0. 527 0. 786 0. 892 MonoFormer[1] K 768 × 256 60 0. 307 3. 591 10. 162 0. 413 0. 521 0. 762 0. 872 TDDC[40] K 768 × 256 60 0. 259 3. 147 8. 547 0. 344 0. 641 0. 850 0. 928 Depth Anything[41] UD & LD - 60 0. 302 3. 051 9. 233 0. 321 0. 487 0. 784 0. 972 Depth Anything V2[42] RD & SD - 60 0. 272 2. 551 8. 576 0. 304 0. 518 0. 843 0. 971 Ours DepthDark H, VK - 60 0. 210 1. 910 7. 764 0."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p17_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 17,
+      "score": 0.4840216636657715,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 17"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p17_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 17,
+      "score": 0.4840216636657715,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 17"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p19_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 19,
+      "score": 0.4839622378349304,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 19"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p19_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 19,
+      "score": 0.4839622378349304,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 19"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.4832065999507904,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pat- tern Recognition (CVPR), 2022. 4, 11 [36] Chen Wei, Wenjing Wang, Wenhan Yang, and Jiaying Liu. Deep retinex decomposition for low-light enhancement. In Proceedings of British Machine Vision Conference(BMVC), 2018. 2, 3, 4 [37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. A physics-based noise formation model for extreme low-light raw denoising. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020. 1 [38] Haoning Wu, Zicheng Zhang, Weixia Zhang, Chaofeng Chen, Liang Liao, Chunyi Li, Yixuan Gao, Annan Wang, Erli Zhang, Wenxiu Sun, Qiong Yan, Xiongkuo Min, Guang- tao Zhai, and Weisi Lin. Q-align: Teaching LMMs for visual scoring via discrete text-defined levels. In Proceedings of the International Conference on Machine Learning (ICML), pages 54015–54029. PMLR, 2024. 1, 4 [39] Wenhui Wu, Jian Weng, Pingping Zhang, Xu Wang, Wenhan Yang, and Jianmin Jiang. Uretinex-net: Retinex-based deep unfolding network for low-light image enhancement. InPro- ceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.4832065999507904,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pat- tern Recognition (CVPR), 2022. 4, 11 [36] Chen Wei, Wenjing Wang, Wenhan Yang, and Jiaying Liu. Deep retinex decomposition for low-light enhancement. In Proceedings of British Machine Vision Conference(BMVC), 2018. 2, 3, 4 [37] Kaixuan Wei, Ying Fu, Jiaolong Yang, and Hua Huang. A physics-based noise formation model for extreme low-light raw denoising. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2020. 1 [38] Haoning Wu, Zicheng Zhang, Weixia Zhang, Chaofeng Chen, Liang Liao, Chunyi Li, Yixuan Gao, Annan Wang, Erli Zhang, Wenxiu Sun, Qiong Yan, Xiongkuo Min, Guang- tao Zhai, and Weisi Lin. Q-align: Teaching LMMs for visual scoring via discrete text-defined levels. In Proceedings of the International Conference on Machine Learning (ICML), pages 54015–54029. PMLR, 2024. 1, 4 [39] Wenhui Wu, Jian Weng, Pingping Zhang, Xu Wang, Wenhan Yang, and Jianmin Jiang. Uretinex-net: Retinex-based deep unfolding network for low-light image enhancement. InPro- ceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p8_sc4",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.48289960622787476,
+      "text": "[Huang et al., 2022] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. Neighbor2neighbor: A self-supervised framework for deep image denoising. IEEE Transactions on Image Processing , 31:4023–4038, 2022. [Jaderberg et al., 2015] Max Jaderberg, Karen Simonyan, Andrew Zisserman, et al. Spatial transformer networks. Advances in Neural Information Processing Systems , 28, 2015. [Joiner and Rosenblatt, 1971] Brian L Joiner and Joan R Rosenblatt. Some properties of the range in samples from tukey’s symmetric lambda distributions. Journal of the American Statistical Association, 66(334):394–399, 1971."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p21_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 21,
+      "score": 0.48278138041496277,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 21"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p21_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 21,
+      "score": 0.48278138041496277,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 21"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p20_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 20,
+      "score": 0.48213452100753784,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 20"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.509245753288269,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024).",
+      "estimated_tokens": 226
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5092092752456665,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J.",
+      "estimated_tokens": 354
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5092092752456665,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J.",
+      "estimated_tokens": 354
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc2",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.5039994716644287,
+      "text": "Accurate depth estimation is a crucial aspect © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms.",
+      "estimated_tokens": 35
+    },
+    {
+      "id": "semantic_chunk::dav2_p22_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 22,
+      "score": 0.502684473991394,
+      "text": "For most pairs in DIW, we cannot decide the relative depth or hold the opposite opinion as the provided label. This can also be supported by MiDaS [7] that, better and larger models instead perform worse on DIW. In comparison, our DA-2K is precise, because we exclude many hard-to-decide or controversial pairs. • (better organized) DIW randomly downloads images from Flickr, without carefully organiz- ing. This would make users struggle to obtain straightforward insights from the evaluation results. In comparison, our DA-2K organizes all images by application scenarios, and thus can provide results for each individual application scenario. 22",
+      "estimated_tokens": 134
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p4_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.5000048875808716,
+      "text": "The structure of the ARD module is shown in Fig. 7. We ﬁrst predict a set of discrete bins 𝐵 = {𝑏1, 𝑏2, … , 𝑏𝑖, … , 𝑏𝑁 }. Pattern Recognition 171 (2026) 112279 4",
+      "estimated_tokens": 71
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.4969819188117981,
+      "text": "The quantitative results obviously demonstrate that our method can produce much finer and more accurate depth predictions, particularly in complex regions with intricate structures, which sometimes cannot be reflected by the met- rics. E. 4 Mix-batch Ratio Ablation Details In the paper, Fig. 3 (g) illustrates the per- formance variation versus the mix-batch ratio under two supervision schemes. We further present 1Discussed in MonoDepth2 repository: https://github.com/nianticlabs/monodepth2/issues/274 21",
+      "estimated_tokens": 110
+    },
+    {
+      "id": "semantic_chunk::dav2_p32_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 32,
+      "score": 0.4949437379837036,
+      "text": "(d) We recognize that reproducibility may be tricky in some cases, in which case authors are welcome to describe the particular way they provide for reproducibility. In the case of closed-source models, it may be that access to the model is limited in some way (e.g., to registered users), but it should be possible for other researchers to have some path to reproducing or verifying the results. 5. Open access to data and code 32",
+      "estimated_tokens": 93
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p11_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.4946048855781555,
+      "text": "Furthermore, Pattern Recognition 171 (2026) 112279 11",
+      "estimated_tokens": 15
+    },
+    {
+      "id": "semantic_chunk::dav2_p35_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 35,
+      "score": 0.4925840497016907,
+      "text": "• The authors should state which version of the asset is used and, if possible, include a URL. • The name of the license (e.g., CC-BY 4. 0) should be included for each asset. • For scraped data from a particular source (e.g., website), the copyright and terms of service of that source should be provided. 35",
+      "estimated_tokens": 76
+    },
+    {
+      "id": "semantic_chunk::ACD_p5_sc5",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.49151521921157837,
+      "text": "For better convincing, Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1255",
+      "estimated_tokens": 31
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1499,
+    "compressed_context_tokens": 1499,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1499,
+  "context_tokens": 1499,
+  "prompt_token_estimate": 2010,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_paper_nighttime_related_methods",
+  "answer": "<think>\nThe user is asking about nighttime self-supervised monocular depth estimation methods explicitly discussed in the related work section. Let me look through the provided materials.\n\nLooking at the materials:\n- [1] is from DepthDark.pdf, which mentions references [40] \"Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensation\" by Haolin Yang et al., 2024. This appears to be a reference in a paper, not a method discussed in a related work section of the given documents.\n- The other documents don't seem to explicitly discuss nighttime self-supervised monocular depth estimation methods in a related work section.\n\nWait, the question asks about methods discussed in the \"相关工作部分\" (related work section) of these papers. The provided materials appear to be fragments of various papers, mostly reference lists and small excerpts. None of them appear to contain a full \"related work\" section that explicitly discusses nighttime self-supervised monocular depth estimation methods.\n\nMaterial [1] mentions a paper called \"Self-Supervised Monocular Depth Estimation in the Dark\" by Yang et al. 2024, but this is just a reference, not necessarily a discussion in a related work section of the materials provided.\n\nGiven the limited information, the materials don't contain a clear discussion of nighttime self-supervised monocular depth estimation methods in a related work section. The only relevant reference is [40] mentioned in material [1], but the material itself is just a reference list fragment, not a related work discussion.\n\nI should indicate that the information is insufficient to answer this question definitively based on the provided materials.\n\nActually, let me reconsider. The question is about what methods are discussed in the related work section. Looking more carefully:\n\n- Material [1] is from DepthDark.pdf and it lists references including [40] about \"Self-Supervised Monocular Depth Estimation in the Dark\". This is likely the DepthDark paper itself, which would discuss related work on nighttime self-supervised monocular depth estimation. But the provided excerpt only shows the references, not the related work section text.\n\nThe materials provided are mostly fragments that don't contain the actual related work discussion text. So I cannot determine what methods are explicitly discussed in the related work sections.\n\nI should state that the information is insufficient.\n</think>\n{\"answer\":\"所提供的资料中未包含各论文相关工作部分的正文内容，无法明确列出其中讨论的夜间自监督单目深度估计方法。\",\"items\":[],\"missing_information\":\"资料[1]–[11]均为参考列表或局部片段，未提供DepthDark等论文相关工作(Related Work)部分的完整文本，因此无法确认其中明确讨论的夜间自监督单目深度估计方法。资料[1]中仅在参考文献中出现了Yang et al. 2024的《Self-Supervised Monocular Depth Estimation in the Dark》，但无相关工作对其的讨论说明。\"}",
+  "usage": {
+    "prompt_tokens": 2008,
+    "completion_tokens": 583,
+    "total_tokens": 2591,
+    "model": "MiniMax-M3"
+  }
+}

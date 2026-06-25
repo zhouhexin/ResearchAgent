@@ -1,0 +1,438 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_depth_anythi_ask_baseline_none_1f629b24ab31",
+  "dry_run": false,
+  "query": "Depth Anything 在训练无标注图像时使用了哪些强扰动方法？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Depth_Anything_p8_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6989840269088745,
+      "text": "As a result, our Depth Anything model exhibits excellent zero-shot depth estimation ability, and also serves as a promising initialization for downstream metric depth estimation and semantic segmentation tasks. Acknowledgement. This work is supported by the National Natural Science Foundation of China (No. 62201484), HKU Startup Fund, and HKU Seed Fund for Basic Research. 10378"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6816567182540894,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024)."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p1_sc0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.6813449263572693,
+      "text": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data Lihe Yang1 Bingyi Kang2 † Zilong Huang2 Xiaogang Xu3,4 Jiashi Feng2 Hengshuang Zhao1‡ 1HKU 2TikTok 3CUHK 4ZJU † project lead ‡ corresponding author https://depth-anything.github.io Figure 1. Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [35]. Middle two: SA-1B [26] (a hold-out unseen set). Right two: photos captured by ourselves. Our model works robustly in low-light environments (1st and 3rd column), complex scenes (2nd and 5th column), foggy weather (5th column), and ultra-remote distance (5th and 6th column), etc. Abstract This work presents Depth Anything1, a highly practical solution for robust monocular depth estimation. Without pur- suing novel technical modules, we aim to build a simple yet powerful foundation model dealing with any images under any circumstances. To this end, we scale up the dataset by designing a data engine to collect and automatically anno- tate large-scale unlabeled data (∼62M), which significantly enlarges the data coverage and thus is able to reduce the generalization error."
+    },
+    {
+      "id": "semantic_chunk::dav2_p1_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 1,
+      "score": 0.6505864858627319,
+      "text": "Depth Anything V2 Lihe Yang1 Bingyi Kang2† Zilong Huang2 Zhen Zhao Xiaogang Xu Jiashi Feng 2 Hengshuang Zhao1‡ 1HKU 2TikTok †project lead ‡corresponding author https://depth-anything-v2.github.io Ours-Large Marigold(LCM) DepthFM Ours-Small latency (V100) parameters 5. 2s 2. 1s 213ms | 335M 60ms | 25M 948M 891M 86. 8% accuracy on our proposed benchmark 97. 1% 85. 8% 95. 3% Marigold Depth Anything V1 Marigold Depth Anything V1 Depth Anything V1 Figure 1: Depth Anything V2 significantly outperforms V1 [89] in robustness and fine-grained details. Compared with SD-based models [31, 25], it enjoys faster inference speed, fewer parameters, and higher depth accuracy. Abstract This work presents Depth Anything V2. Without pursuing fancy techniques, we aim to reveal crucial findings to pave the way towards building a powerful monocular depth estimation model. Notably, compared with V1 [89], this version produces much finer and more robust depth predictions through three key practices: 1) replacing all labeled real images with synthetic images, 2) scaling up the capacity of our teacher model, and 3) teaching student models via the bridge of large-scale pseudo-labeled real images."
+    },
+    {
+      "id": "semantic_chunk::dav2_p24_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 24,
+      "score": 0.6500548720359802,
+      "text": "Image Depth Anything V1 Depth Anything V2 Figure 13: Comparison between Depth Anything V1 [89] and our V2 in open-world images. 24"
+    },
+    {
+      "id": "semantic_chunk::LED_p4_sc2",
+      "source": "data\\LED.pdf",
+      "page": 4,
+      "score": 0.6366829872131348,
+      "text": "In spite of its straight-forward architecture, it achieves results on par with or superior to other state-of-the-art (SOTA) methods (see section 5. 1). We also successfully apply our method to more complex SOTA architectures, such as DepthFormer [27] and Ad- abins [4], with similar performance gains (see section 5. 1). Finally, we show that finetuning Depth Anything V2 [49] with LED, on a reduced amount of training samples, enable robust and precise depth estimation. 3. 3 Implementation Details We implement the encoder-decoder in PyTorch [34]. The model is trained from scratch during 70 epochs using the AdamW optimizer [29], with a batch size of 32 and a learning rate"
+    },
+    {
+      "id": "semantic_chunk::dav2_p10_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 10,
+      "score": 0.6349694728851318,
+      "text": "We aim to reveal the importance of large-scale unlabeled data and larger teacher model, rather than delicate loss designs [43, 69] or distillation pipelines [10]. Moreover, it is indeed non-trivial and risky to directly distill feature representations between two models with a tremendous scale gap [48]. In comparison, our pseudo-label distillation is easier and safer. 9 Conclusion In this work, we present Depth Anything V2, a more powerful foundation model for monocular depth estimation. It is capable of 1) providing robust and fine-grained depth prediction, 2) supporting extensive applications with varied model sizes (from 25M to 1. 3B parameters), and 3) being easily fine-tuned to downstream tasks as a promising model initialization. We reveal crucial findings to pave the way towards building a strong MDE model. Furthermore, realizing the poor diversity and rich noise in existing test sets, we construct a versatile evaluation benchmark DA-2K, covering diverse high-resolution images with precise and challenging sparse depth labels. Acknowledgment. This work is supported by the National Natural Science Foundation of China (No."
+    },
+    {
+      "id": "semantic_chunk::dav2_p2_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 2,
+      "score": 0.6336586475372314,
+      "text": "• contain fine details (comparable to the details of Marigold) in the predicted depth maps, including but not limited to thin objects (e.g., chair legs) [42], small holes, etc. • provide varied model scales and inference efficiency to support extensive applications [82]. • be generalizable enough to be transferred (i.e., fine-tuned) to downstream tasks, e.g., Depth Anything V1 serves as the pre-trained model for all the leading teams in the 3rd MDEC1 [72]. Since the nature of MDE is a discriminative task, we start from Depth Anything V1 [89], aiming to maintain its strengths and rectify its weaknesses. Intriguingly, we will demonstrate that, to achieve 1https://jspenmar.github.io/MDEC 2"
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc2",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.6322140693664551,
+      "text": "Accurate depth estimation is a crucial aspect © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p10_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.6273567080497742,
+      "text": "This choice can not to fully demonstrate the model’s perfor- mance. Therefore, we train our method on both the raw depth annota- tions(rawDepths) and the completed reﬁned depth annotations(Depths) from NYU1449. The experimental results are shown in Table 8. Our Pattern Recognition 171 (2026) 112279 10"
+    },
+    {
+      "id": "semantic_chunk::dav2_p17_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 17,
+      "score": 0.626636266708374,
+      "text": "Appendix For a thorough understanding and visualization of our Depth Anything V2, we compile a comprehen- sive appendix. The following table of contents will direct you to specific sections of interest. Contents A Sources of Training Data 17 B Experiments 17 B. 1 Fine-tuned to semantic segmentation . 17 B. 2 Transferring performance of each labeled dataset . 18 B. 3 Transferring performance of each unlabeled dataset . 19 B. 4 Are such large-scale unlabeled images really necessary? 19 B. 5 Performance on transparent or reflective surfaces . 19 B. 6 Comparison among various pre-trained encoders . 20 B. 7 Benefit of gradient matching loss to fine-grained predictions . 20 B. 8 Test-time resolution scaling up . 20 B. 9 Harm of real labeled images to fine-grained predictions . 21 B. 10 Qualitative comparison between Depth Anything V1 and V2 . 21 B. 11 Qualitative comparison between Marigold and Depth Anything V2 . 22 B. 12 Qualitative comparison between our metric depth models and ZoeDepth . 22 B. 13 Qualitative comparison between w/ and w/o pseudo-labeled real images . 22 B. 14 Qualitative results of produced pseudo labels . 22 B. 15 Qualitative results on test benchmarks ."
+    },
+    {
+      "id": "semantic_chunk::ACD_p9_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.6257229447364807,
+      "text": "[Wang et al., 2024b ] Jiyuan Wang, Chunyu Lin, Lang Nie, Kang Liao, Shuwei Shao, and Y ao Zhao. Digging into contrastive learning for robust depth estimation with dif- fusion models. In ACM MM, pages 4129–4137, 2024. [Xian et al., 2020 ] Ke Xian, Jianming Zhang, Oliver Wang, Long Mai, Zhe Lin, and Zhiguo Cao. Structure-guided ranking loss for single image depth prediction. In CVPR, pages 611–620, 2020. [Xue et al., 2020 ] Feng Xue, Guirong Zhuo, Ziyuan Huang, Wufei Fu, Zhuoyue Wu, and Marcelo H Ang. Toward hier- archical self-supervised monocular absolute depth estima- tion for autonomous driving applications. In IROS, pages 2330–2337, 2020. [Y anget al., 2024a ] Haolin Y ang, Chaoqiang Zhao, Lu Sheng, and Y ang Tang. Self-supervised monocu- lar depth estimation in the dark: Towards data distribution compensation. In IJCAI, pages 1561–1569, 2024. [Y anget al., 2024b] Lihe Y ang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything v2. In NeurIPS, 2024. [Yin et al., 2022 ] Wei Yin, Jianming Zhang, Oliver Wang, Simon Niklaus, Simon Chen, Yifan Liu, and Chunhua Shen."
+    },
+    {
+      "id": "semantic_chunk::dav2_p29_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 29,
+      "score": 0.6250140070915222,
+      "text": "Image Depth Anything V2Depth Anything V1 Figure 18: Qualitative results on widely adopted test benchmarks, e.g., KITTI, NYU, and DIODE. 29"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc6",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.6247521638870239,
+      "text": "Fine-tuning Depth Anything V2, our method, DepthDark, achieves state-of-the-art performance on the nuScenes-Night and RobotCar-Night datasets, surpassing existing methods in qualita- tive results in low-light scenarios. Ultimately, our proposed LLDG and LLPEFT modules provide a novel and viable approach for fine- tuning large-scale foundation models in low-light monocular depth estimation."
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc1",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6229854822158813,
+      "text": "Both L1 and Log L1 losses are tested forL depth andL grad. Our findings indicate that each selected loss positively influences performance. The combination outlined in section B. 2 demonstrates the most favorable trade-off between metrics. C Depth Anything V2 Details To fine-tune Depth Anything V2 [49] on our datasets, we used the metric model pre-trained on KITTI. We follow their indications for specializing the model to metric depth estimation. For each given number of training images, the split was selected randomly in the whole dataset. Figure S2 illustrates the RMSE of Depth Anything V2 across different numbers of fine-tuning images. We observe that the model is near its performance peak with just 1,000 images. All LED-enhanced models outperform the LB, also this architecture benefits from finer resolution in the pattern, demonstrating its best performances with LED 0. 125°."
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6214337348937988,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17 Ldepth Lgrad Lnormal Metrics L1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ ✓ ✗ ✗ ✗ ✗ 5. 9790. 1910. 020 0. 13213. 032 14. 3520. 957 0. 982 0. 991 ✗ ✓ ✗ ✗ ✗ 5. 852 0. 187 0. 021 0. 13213. 12212. 9840. 9570. 9830. 992 ✗ ✓ ✓ ✗ ✗ 5. 760 0. 201 0. 020 0. 137 13. 616 16. 174 0. 9580. 9830. 992 ✗ ✓ ✗ ✓ ✗ 5. 386 0. 2020. 0210. 12412. 373 15. 901 0. 9580. 985 0. 993 ✗ ✓ ✗ ✗ ✓ 5. 3090. 206 0. 022 0. 149 14. 862 16. 048 0. 954 0. 981 0. 990 ✗ ✓ ✗ ✓ ✓ 5. 8090. 186 0. 0180. 125 12. 21014. 6830. 961 0. 985 0. 993 ✗ ✓ ✓ ✗ ✓ 5. 4220. 2000. 0180. 125 12. 50316. 1200. 961 0. 985 0. 993 Table S1:Loss study. Performance comparison using several combination of losses:1st best, 2nd best,3rd best. Figure S2:Few-shot learning performances of Depth Anything V2 on our real dataset. All LED patterns demonstrate superior performances over LB. The model is near its maximal performances with only 1,000 training images. L=L depth +λ 1Lgrad +λ 2Lnormal .(4) B. 3 Loss Study To determine the impact of each individual loss, we conduct an ablation study (see table S1)."
+    },
+    {
+      "id": "semantic_chunk::LED_p5_sc0",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.621244490146637,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT5 Figure 3:Nighttime Synthetic Drive Dataset examples:(A) depicts HD pattern and (B) high-beam illumination. Ground truth annotations include dense depth maps, semantic seg- mentation, instance segmentation labels and bounding boxes. of 10−3. Input and output resolutions are set to 320×320 px. Similar to [22], our learning objective combines losses based on Log L1, gradient and normals. More information is available in the supplementary. The selection of the best epoch is based on the Root Mean Square Error (RMSE). The training process takes 4 hours on a single Nvidia RTX 4090. We implement Adabins [4] using the official code and rely on the toolbox [26] for Depth- Former [27]. We apply Depth Anything V2 [49] official fine-tuning code to adapt the model for metric depth estimation. The only changes are limited to dataset format compatibility. The training setup follows the original papers’ recommendations, excluding data augmenta- tion to preserve the HD pattern from cropping. 4 Dataset 4."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p12_sc4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 12,
+      "score": 0.6205945014953613,
+      "text": "4, which predicts 224× 224 depth maps given a 224× 224 input image, we keep all four levels of wavelet decomposition. Supervised losses For our NYU results in the main paper, we supervise depth using an L1 loss and SSIM: LD(y,y∗) = λ1ℓ1(y,y∗) (9)"
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p4_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 4,
+      "score": 0.6205105185508728,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 4 allows imposing a knowledge distillation loss on the denoised depth. The knowledge distillation paradigm distills knowledge from the teacher model to a student model, which is beneficial to improve the results [11]. To mitigate the adverse impact of depth error in the pseudo ground-truth, we apply a multi-view check filter [25] to filter out erroneous depth. The knowledge distillation loss is thus defined as LKD = X p Φ(p) ⊙ \u0000 Dt (p) − Dpseudo (p) \u0001 , (10) where Φ(p) stands for the multi-view check filter, ⊙ denotes the element-wise multiplication. The core principle of multi- view check is similar to that of the novel view synthesis. We draw on Eq. 5 to get each projected point pt→s in the source view and acquire a warped depth map, Ds→t(p) = Ds pt→s , (11) where Ds stands for the depth map of source frame. Similar to the projection procedure above, we leverage Ds to perform a reprojection procedure to acquire each reprojected 2D point eps→t and depth map eD s→t (p) in the target view."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc4",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6199619770050049,
+      "text": "Since the official code for TDDC is not publicly available, we use the experimental results reported in their paper. Additionally, we attempt to reproduce TDDC’s approach and provide the general (G) version results for each DA method to facilitate further com- parison. Our final experiments indicate that the G-version results are largely consistent with those reported in TDDC. For a more comprehensive comparison, we further compare our experimental results with state-of-the-art methods, including Depth Anything, Depth Anything V2, and TDDC. Evaluations on both nuScenes-Night and RobotCar-Night datasets demonstrate that our method exhibits superior robustness in low-light scenarios. 4. 3 Comparison with other methods. 4. 3. 1 Quantitative Results. We performed a quantitative evalua- tion of DepthDark and compared it with various state-of-the-art methods. As shown in Tab. 4. 1, the overall performance demon- strates that results on the nuScenes-Night dataset are generally worse compared to RobotCar-Night. This is primarily due to the strong corrective effects of the ISP in RobotCar-Night, which results in a cleaner image plane compared to nuScenes-Night."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.6195262670516968,
+      "text": "To ensure an objective evaluation of DepthDark, we carefully chose comparison methods. Due to the unavailability of TDDC’s official code, we selected ADDS as it is among the most advanced and representative low-light depth estimation methods. As illustrated in Figs. 4. 1 and 4. 2, ADDS produces depth maps that significantly deviate from the ground truth. While Depth Any- thing and Depth Anything V2 can roughly estimate object contours and depth information, their predictions still exhibit noticeable discrepancies, particularly in the contours of vehicles and build- ings. This is because ADDS is specifically designed for night scenes with strong artificial lighting, whereas Depth Anything and Depth Anything V2 were trained on large-scale daytime image datasets. In contrast, our approach demonstrates superior performance across diverse low-light conditions, generating more accurate and clearer depth maps. Even in the presence of strong noise and sig- nificant photometric distortions, our method remains robust, high- lighting the necessity of efficiently fine-tuning Depth Anything V2 for low-light scenarios. 5 Ablation Studies 5. 1 Ablation on Each Component As presented in Tab. 4."
+    },
+    {
+      "id": "semantic_chunk::dav2_p15_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.619072437286377,
+      "text": "2 [89] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything: Unleashing the power of large-scale unlabeled data. In CVPR, 2024. 1, 2, 3, 5, 6, 7, 8, 9, 10, 17, 19, 21, 22, 24 [90] Lihe Yang, Zhen Zhao, Lei Qi, Yu Qiao, Yinghuan Shi, and Hengshuang Zhao. Shrinking class space for enhanced certainty in semi-supervised learning. In ICCV, 2023. 10 [91] Xiaodong Yang, Zhuang Ma, Zhiyu Ji, and Zhe Ren. Gedepth: Ground embedding for monocular depth estimation. In ICCV, 2023. 9 [92] Yao Yao, Zixin Luo, Shiwei Li, Jingyang Zhang, Yufan Ren, Lei Zhou, Tian Fang, and Long Quan. Blendedmvs: A large-scale dataset for generalized multi-view stereo networks. In CVPR, 2020. 18 [93] Chongjie Ye, Yinyu Nie, Jiahao Chang, Yuantao Chen, Yihao Zhi, and Xiaoguang Han. Gaustudio: A modular framework for 3d gaussian splatting and beyond. arXiv:2403. 19632, 2024. 2 [94] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. Enforcing geometric constraints of virtual normal for depth prediction. In ICCV, 2019. 10 15"
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p6_sc4",
+      "source": "data\\Global-Local.pdf",
+      "page": 6,
+      "score": 0.6187916994094849,
+      "text": "Table 4 presents the depth estimation results for the cor- rupted images of the NYU Depth V2 test set. Due to space constraints, we provide the complete table in the supplemen- tary material and present results on a few corruption types in Table 4. The results show that our model is clearly more ro- bust to all types of corruption than the compared models. The experimental results indicate that our model shows stronger robustness and thus is more appropriate for safety-critical ap- plications."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.6182239055633545,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Method ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑ Test on nuScenes-Night Depth Anything V2 0. 272 2. 5518. 576 0. 304 0. 518 0. 843 0. 971 + Only LLDG 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914 + Only LLPEFT 0. 255 3. 050 7. 686 0. 302 0. 619 0. 836 0. 934 DepthDark 0. 210 1. 910 7. 764 0. 260 0. 630 0. 914 0. 976 Test on RobotCar-Night Depth Anything V2 0. 235 2. 474 6. 239 0. 268 0. 697 0. 868 0. 946 + Only LLDG 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972 + Only LLPEFT 0. 177 1. 584 6. 727 0. 245 0. 700 0. 895 0. 973 DepthDark 0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 2: Efficacy of Proposed Modules: Ablation studies on nuScenes-Night and RobotCar-Night demonstrate that each module enhances DepthDark’s performance, with combined use significantly improving robustness."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc4",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.6171764135360718,
+      "text": "Although foundation models such as Depth Anything [41], Depth Anything V2 [42] and Marigold [19] demonstrate strong performance under typical day- light conditions, their effectiveness in complex low-light scenarios remains constrained due to limitations in training data coverage. arXiv:2507. 18243v1 [cs. CV] 24 Jul 2025"
+    },
+    {
+      "id": "semantic_chunk::LED_p14_sc0",
+      "source": "data\\LED.pdf",
+      "page": 14,
+      "score": 0.6157650947570801,
+      "text": "14DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT [48] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything: Unleashing the power of large-scale unlabeled data. InCVPR, 2024. [49] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything v2.arXiv:2406. 09414, 2024. [50] Zhichao Yin and Jianping Shi. Geonet: Unsupervised learning of dense depth, optical flow and camera pose. InCVPR, 2018. [51] Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang, et al. Steps: Joint self-supervised nighttime image enhancement and depth estimation. InICRA, 2023. [52] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G Lowe. Unsupervised learning of depth and ego-motion from video. InCVPR, 2017."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p14_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 14,
+      "score": 0.6154605150222778,
+      "text": "Y. Zou et al. [42] Z. Zeng, D. Wang, F. Yang, H. Park, S. Soatto, D. Lao, A. Wong, WorDepth: variational language prior for monocular depth estimation, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2024, pp. 9708–9719. [43] A. Bochkovskii, A. Delaunoy, H. Germain, M. Santos, Y. Zhou, S. R. Richter, V. Koltun, Depth Pro: sharp monocular metric depth in less than a second, in: Interna- tional Conference on Learning Representations, 2025. [44] L. Yang, B. Kang, Z. Huang, Z. Zhao, X. Xu, J. Feng, H. Zhao, Depth anything V2, in: Advances in Neural Information Processing Systems, 37, 2024, pp. 21875–21911. Yuhang Zou is a Master’s candidate in Mechanical Engineering at Wuhan University of Technology, Wuhan, China. His research focuses on machine vision and image processing. Xiaoming Chen is a PhD candidate in Mechanical Engineering at Wuhan University of Technology, Wuhan, China. In 2019, he received his master’s degree in Logistics Engineer- ing from the same university. His research interests include image recognition, computer neural networks, and data mining."
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6142388582229614,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9 Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderLB 14. 199 0. 187 0. 072 0. 292 28. 938 5. 620 0. 772 0. 909 0. 956LED 0. 5°11. 089 0. 119 0. 050 0. 213 21. 251 2. 304 0. 864 0. 950 0. 977LED 0. 25°8. 6950. 1090. 040 0. 190 18. 635 2. 1280. 899 0. 9630. 984LED 0. 125°10. 1540. 096 0. 040 0. 19018. 862 2. 1320. 907 0. 969 0. 984 DepthF ormerLB 8. 777 0. 138 0. 050 0. 186 17. 170 3. 365 0. 864 0. 957 0. 983LED 0. 5°6. 810 0. 101 0. 041 0. 152 14. 380 1. 376 0. 890 0. 969 0. 989LED 0. 25°5. 6210. 0820. 0300. 126 11. 7351. 1630. 923 0. 978 0. 992LED 0. 125°5. 7270. 076 0. 030 0. 116 10. 7541. 2610. 940 0. 987 0. 995 DepthAnythingV2 - 1000 training imagesLB 7. 637 0. 104 0. 044 0. 160 14. 617 1. 401 0. 891 0. 972 0. 990LED 0. 5°7. 017 0. 109 0. 047 0. 161 14. 044 1. 260 0. 877 0. 9697 0. 989LED 0. 25°6. 304 0. 102 0. 044 0. 146 12. 300 1. 079 0. 885 0. 9730. 993LED 0. 125°5. 785 0. 082 0. 037 0. 126 10. 673 0. 840 0. 921 0. 9810. 992 Table 6:Performance comparison on real-world data using various pattern resolutions."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p17_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 17,
+      "score": 0.6137474775314331,
+      "text": "RGB / Mask[J] DepthJ LHJ HLJ HHJ Error[J] Figure 10: Qualitative results of predicted wavelets coefﬁcients of depth maps on the NYU dataset (1/3). Our predicted wavelets have two desirable properties: they are sparse, allowing for efﬁcient computation, and they are accurately located around depth edges without needing to supervise them. Results are obtained with η = 0. 04. For each block of results, each row shows coefﬁcients and depth maps obtained at scale J in the decoder from lowest to highest scale (decreasing J), as well as the (signed-)error between DepthJ and the Depth map obtained with dense wavelet coefﬁcients at all scales. Error is displayed within range [−1. 5m, 1. 5m]."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p18_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 18,
+      "score": 0.6133909225463867,
+      "text": "RGB / Mask[J] DepthJ LHJ HLJ HHJ Error[J] Figure 11: Qualitative results of predicted wavelets coefﬁcients of depth maps on the NYU dataset (2/3). Our predicted wavelets have two desirable properties: they are sparse, allowing for efﬁcient computation, and they are accurately located around depth edges without needing to supervise them. Results are obtained with η = 0. 04. For each block of results, each row shows coefﬁcients and depth maps obtained at scale J in the decoder from lowest to highest scale (decreasing J), as well as the (signed-)error between DepthJ and the Depth map obtained with dense wavelet coefﬁcients at all scales. Error is displayed within range [−1. 5m, 1. 5m]."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p11_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 11,
+      "score": 0.6129926443099976,
+      "text": "[74] Zhenyu Zhang, Chunyan Xu, Jian Yang, Ying Tai, and Liang Chen. Deep hierarchical guidance and regularization learn- ing for end-to-end depth estimation. Pattern Recognition, 2018. [75] Hang Zhao, Orazio Gallo, Iuri Frosio, and Jan Kautz. Loss functions for image restoration with neural networks. Trans- actions on Computational Imaging, 2017. [76] Tinghui Zhou, Matthew Brown, Noah Snavely, and David Lowe. Unsupervised learning of depth and ego-motion from video. In CVPR, 2017. [77] Daniel Zoran, Phillip Isola, Dilip Krishnan, and William T Freeman. Learning ordinal relationships for mid-level vi- sion. In ICCV, 2015. [78] Yuliang Zou, Zelun Luo, and Jia-Bin Huang. DF-Net: Un- supervised joint learning of depth and ﬂow using cross-task consistency. In ECCV, 2018."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p11_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.6129926443099976,
+      "text": "[74] Zhenyu Zhang, Chunyan Xu, Jian Yang, Ying Tai, and Liang Chen. Deep hierarchical guidance and regularization learn- ing for end-to-end depth estimation. Pattern Recognition, 2018. [75] Hang Zhao, Orazio Gallo, Iuri Frosio, and Jan Kautz. Loss functions for image restoration with neural networks. Trans- actions on Computational Imaging, 2017. [76] Tinghui Zhou, Matthew Brown, Noah Snavely, and David Lowe. Unsupervised learning of depth and ego-motion from video. In CVPR, 2017. [77] Daniel Zoran, Phillip Isola, Dilip Krishnan, and William T Freeman. Learning ordinal relationships for mid-level vi- sion. In ICCV, 2015. [78] Yuliang Zou, Zelun Luo, and Jia-Bin Huang. DF-Net: Un- supervised joint learning of depth and ﬂow using cross-task consistency. In ECCV, 2018."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p19_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 19,
+      "score": 0.6128764748573303,
+      "text": "RGB / Mask[J] DepthJ LHJ HLJ HHJ Error[J] Figure 12: Qualitative results of predicted wavelets coefﬁcients of depth maps on the NYU dataset (3/3). Our predicted wavelets have two desirable properties: they are sparse, allowing for efﬁcient computation, and they are accurately located around depth edges without needing to supervise them. Results are obtained with η = 0. 04. For each block of results, each row shows coefﬁcients and depth maps obtained at scale J in the decoder from lowest to highest scale (decreasing J), as well as the (signed-)error between DepthJ and the Depth map obtained with dense wavelet coefﬁcients at all scales. Error is displayed within range [−1. 5m, 1. 5m]."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p8_sc2",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6104542016983032,
+      "text": "Qualitative Results We visualize our model predictions on the six unseen datasets in Figure 3. Our model is robust to test images from various domains. In addition, we compare our model with MiDaS in Figure 4. We also attempt to synthesis new images con- ditioned on the predicted depth maps with ControlNet [84]. Our model produces more accurate depth estimation than MiDaS, as well as better synthesis results. For more accurate synthesis, we re-trained a better depth-conditioned Control- Net based on our Depth Anything, aiming to provide better control signals for image synthesis and video editing. Please refer to our project page for more qualitative results on video editing [34] with our Depth Anything. 5. Conclusion In this work, we present Depth Anything, a highly practical solution to robust monocular depth estimation. Different from prior arts, we especially highlight the value of cheap and diverse unlabeled images. We design two simple yet highly effective strategies to fully exploit their value: 1) posing a more challenging optimization target when learning unlabeled images, and 2) preserving rich semantic priors from pre-trained models."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p3_sc4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 3,
+      "score": 0.6087506413459778,
+      "text": "It builds on a recursive use of IDWT operation applied to predicted coefﬁcient maps. Thus, we reconstruct a depth map at the input scale by ﬁrst predict-"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p5_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.6083910465240479,
+      "text": "1 satisfies the V AE’s[27] inherent boundary [-1, 1], typically obtained by: y= ((DGT −D GT,2 )/(DGT,98 −D GT,2 )−0. 5)×2,(9) where DGT,i corresponds to the i% percentiles of individual depth maps. Obviously, compared to the raw depth, y is normalized and differs from DGT by an absolute scale and shift, which can 5"
+    },
+    {
+      "id": "semantic_chunk::dav2_p8_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 8,
+      "score": 0.6071303486824036,
+      "text": "However, DA-2K can be considered a prerequisite for accurate dense depth. As such, we believe DA-2K can serve asa valuable supplement to existing benchmarks due to its extensive scene coverage and precision. It can also serve as a quick prior validation for users selecting community models for specific scenarios covered in DA-2K. Lastly, we believe it is also a potential testbed for the 3D awareness of future multimodal LLMs [41, 21, 3]. 7 Experiment 7. 1 Implementation details Follow Depth Anything V1 [89], we use DPT [55] as our depth decoder, built on DINOv2 encoders. All images are trained at the resolution of 518×518 by resizing the shorter size to 518 followed by a random crop. When training the teacher model on synthetic images, we use a batch size of 64 for 160K iterations. In the third stage of training on pseudo-labeled real images, the model is trained with a batch size of 192 for 480K iterations. We use the Adam optimizer and set the learning rate of the encoder and the decoder as 5e-6 and 5e-5, respectively. In both training stages, we do not balance the training datasets, but simply concatenate them. The weight ratio of Lssi and Lgm is set as 1:2. 7."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc3",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6066812872886658,
+      "text": "We define N sub-intervals be- tween dmin and dmax, where each interval has a length of L = dmax−dmin N , with center bn = dmin + L(n + 1 2 ) for interval n. Using two sigmoid functions σ to model the ker- nel function K(x) = σ(x)σ(−x), the probability of a depth map D falling within interval k is P (n) = 1 HW HWX x=1 [σ( D(x) − bn + L 2 a ) − σ( D(x) − bn − L 2 a )], (12) where P is the differentiable probability function and a is a bandwidth factor. Finally, the Distday, Distadv are consist of Pday, Padv: Distday = {bn, Pday(n)}N n=1, (13) Distadv = {bn, Padv(n)}N n=1. (14) Noted that Distday is calculated among the whole day- time training set instead of one sample. The objective is to minimize the distribution distances betweenDistday and Distadv by K-L divergence: LKL dis = NX i=1 Padv(i) · log Padv(i) Pday(i) . (15) Apart from Lcd and LKL dis , we also utilize Lcv and LT as in previous stage. Thus, the total objective functionLreal is Lreal = α1Lcd + α2LKL dis + α3Lcv + α4LT (16) With the designed learning procedure, our model can gradually fit better to multiple real conditions, rather than only learn from the synthetic conditions. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::ACD_p6_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.605599045753479,
+      "text": "4(a), the obvious errors of depth estimation are observed in the regions of water surface reﬂections. In addition for nighttime scenes, md4all- DD is hard to predict the real depth of regions hidden in the darkness. In contrast, our ACDepth method can produce rea- sonable and reliable predictions of depth information in night scenes, such as trees and cars under low-light conditions. Comparison on the RobotCar . To further verify the effec- tiveness, we compare our ACDepth with existing state-of-the- art approaches on the RobotCar benchmark. As expected in Table 2, our method achieves the best performance in almost all metrics. Compared to md4all-DD, our approach reduces RMSE by 8. 80% on the standard benchmark and 11. 99% on the challenging benchmark, highlighting the superiority of our approach. To demonstrate the effectiveness of our method, Figure. 4(b) provides the visual comparisons, show- ing that our ACDepth can produce more precise depth maps over those of md4all-DD on both day and night scenes."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p2_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 2,
+      "score": 0.6053426861763,
+      "text": "ing wavelet decomposition. We call this system Wavelet- Monodepth. We make the observation that depth images of the man-made world are typically made up of many piece- wise ﬂat regions, with a few ‘jumps’ in depth between the ﬂat regions. This structure lends itself well to wavelets. A low-frequency component can represent the overall scene structure, while the ‘jumps’ can be well captured in high- frequency components. Crucially, the high-frequency com- ponents are sparse, which means computation can be fo- cused only in certain areas. This has the effect of sav- ing run-time computation, while still enabling high-quality depths to be estimated. To the best of our knowledge, we are the ﬁrst to train a single-image depth estimation network that reconstructs depth by predicting wavelet coefﬁcients. Furthermore, we show that our models can be trained with self-supervised loss on the ﬁnal depth signal, in contrast to other methods that directly supervise predicted wavelet coefﬁcients. We evaluate on NYU and KITTI datasets, where we train supervised and self-supervised, respectively."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p7_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 7,
+      "score": 0.6051293611526489,
+      "text": "DepthDark: Robust Monocular Depth Estimation for Low-Light Environments MM ’25, October 27–31, 2025, Dublin, Ireland. N-N & R-N ADDS Depth Anything Depth Anything V2 Ours DepthDark Figure 4. 1: Qualitative comparison results of different monocular depth estimation methods on the nuScenes-Night dataset. For conciseness, we present a visual comparison of four state-of-the-art methods with the most competitive performance, where the red dashed boxes distinctly indicate the regions where our approach demonstrates significant advantages. N-N & R-N ADDS Depth Anything Depth Anything V2 Ours DepthDark Figure 4. 2: Qualitative comparison results of different monocular depth estimation methods on the RobotCar-Night dataset. We systematically evaluate performance across scenes with varying noise levels, where red dashed boxes clearly demarcate regions where our method demonstrates substantial performance advantages. As demonstrated in Tab. 4."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p1_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 1,
+      "score": 0.6048375368118286,
+      "text": "Single Image Depth Prediction with Wavelet Decomposition Micha¨el Ramamonjisoa1,∗ Michael Firman2 Jamie Watson2 Vincent Lepetit1 Daniyar Turmukhambetov2 1LIGM, IMAGINE, Ecole des Ponts, Univ Gustave Eiffel, CNRS 2Niantic www.github.com/nianticlabs/wavelet-monodepth Abstract We present a novel method for predicting accurate depths from monocular images with high efﬁciency. This optimal efﬁciency is achieved by exploiting wavelet de- composition, which is integrated in a fully differentiable encoder-decoder architecture. We demonstrate that we can reconstruct high-ﬁdelity depth maps by predicting sparse wavelet coefﬁcients. In contrast with previous works, we show that wavelet coefﬁcients can be learned without direct supervision on coefﬁcients. Instead we supervise only the ﬁnal depth im- age that is reconstructed through the inverse wavelet trans- form. We additionally show that wavelet coefﬁcients can be learned in fully self-supervised scenarios, without access to ground-truth depth."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p5_sc5",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.6038811802864075,
+      "text": "1 Implementation Details To train foundation models for monocular depth estimation un- der low-light conditions, we implemented DepthDark using the PyTorch framework. During training, we adopted the training set- tings from Depth Anything V2 and used the DPT decoder [30] in the ZoeDepth [3] pipeline, built on the DINOv2 encoder. All images in the training dataset were resized to a resolution of 518× 518 for"
+    },
+    {
+      "id": "semantic_chunk::dav2_p8_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 8,
+      "score": 0.6032626032829285,
+      "text": "Similar results (i.e., better model but worse score) are also observed in [7, 28]. Method Community Models Depth Anything V2 (Ours) Marigold [31] Geowizard [20] DepthFM [25] Depth Anything V1 [89] ViT-S ViT-B ViT-L ViT-G Accuracy (%) 86. 8 88. 1 85. 8 88. 5 95. 3 97. 0 97. 1 97. 4 Table 3: Performance on our proposed DA-2K evaluation benchmark, which encompasses eight representative scenarios. Even our most lightweight model is superior to all other community models. To ensure preciseness, all annotations are triple-checked by the other two annotators. To ensure diversity, we first summarize eight important application scenarios of MDE (Figure 9b), and ask GPT- 4 to produce diverse keywords related to each scenario. We then use these keywords to download corresponding images from Flickr. Finally, we annotate 1K images with 2K pixel pairs in total. Limited by space, please refer to Section C for details and comparisons with DIW [11]. Position of DA-2K. Despite the advantages, we do not expect DA-2K to replace current benchmarks. Accurate sparse depth is still far from the precise dense depth required for scene reconstruction."
+    },
+    {
+      "id": "semantic_chunk::ACD_p4_sc0",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.602425217628479,
+      "text": "cf Depth Anything V2 ௖ ௗ ௥ One batch Stable Diffusion Turbo v2. 1 Decoder Encoder Decoder TD SD VD ie im SD 0p 1p 0p 1p VD 01 2log 1 0 00 pp eL \u0010\u0010­ \u000ez° ® °¯ 1 pp 0 01 0 01 01 11 11 1 0 pp pp otherwise W W ­\u000et \u000e °° \u0010 ® \u000e° °¯ 1 p 1 p ® ® ® Without Gradient Clear Feature Complex Feature Frozen ModelTraining Model Scene Condition Pull To ௥ Depth Ranking Loss Sample Generation Encoder Figure 2: Overview of our ACDepth for robust monocular depth estimation. The teacher model is trained on simple samples using self- supervised learning, and the student model is trained on a mixed dataset of simple and complex samples using distillation learning. To provide the student model with supervisory signals beyond those from the teacher model, we designed a depth ranking loss Lr leveraging ordinal information from the Depth Anything V2 model. To improve the student model’s generalization across diverse scenarios, we incorporated a feature constraint loss L c. Distillation Learning."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p9_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 9,
+      "score": 0.6017079949378967,
+      "text": "arXiv preprint arXiv:2204. 00987, 2022. 2 [27] Zhenyu Li, Zehui Chen, Xianming Liu, and Junjun Jiang. Depthformer: Exploiting long-range correlation and local in- formation for accurate monocular depth estimation. Machine Intelligence Research, pages 1–18, 2023. 2 [28] Ce Liu, Suryansh Kumar, Shuhang Gu, Radu Timofte, and Luc Van Gool. V A-DepthNet: A variational approach to single image depth prediction. In ICLR, 2023. 2 [29] Mehdi Mirza and Simon Osindero. Conditional generative adversarial nets. arXiv preprint arXiv:1411. 1784, 2014. 3 [30] Eliya Nachmani, Robin San Roman, and Lior Wolf. Non Gaussian denoising diffusion models. arXiv preprint arXiv:2106. 07582, 2021. 5 [31] Pushmeet Kohli Nathan Silberman, Derek Hoiem and Rob Fergus. Indoor segmentation and support inference from RGBD images. In ECCV, 2012. 6, 11, 12, 23, 24, 31 [32] Jia Ning, Chen Li, Zheng Zhang, Chunyu Wang, Zigang Geng, Qi Dai, Kun He, and Han Hu. All in tokens: Unifying output space of visual tasks via soft token. In ICCV, pages 19900–19910, 2023. 2 [33] Omiros Pantazis, Gabriel Brostow, Kate Jones, and Oisin Mac Aodha. SVL-adapter: Self-supervised adapter for vision- language pretrained models."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p9_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 9,
+      "score": 0.6017079949378967,
+      "text": "arXiv preprint arXiv:2204. 00987, 2022. 2 [27] Zhenyu Li, Zehui Chen, Xianming Liu, and Junjun Jiang. Depthformer: Exploiting long-range correlation and local in- formation for accurate monocular depth estimation. Machine Intelligence Research, pages 1–18, 2023. 2 [28] Ce Liu, Suryansh Kumar, Shuhang Gu, Radu Timofte, and Luc Van Gool. V A-DepthNet: A variational approach to single image depth prediction. In ICLR, 2023. 2 [29] Mehdi Mirza and Simon Osindero. Conditional generative adversarial nets. arXiv preprint arXiv:1411. 1784, 2014. 3 [30] Eliya Nachmani, Robin San Roman, and Lior Wolf. Non Gaussian denoising diffusion models. arXiv preprint arXiv:2106. 07582, 2021. 5 [31] Pushmeet Kohli Nathan Silberman, Derek Hoiem and Rob Fergus. Indoor segmentation and support inference from RGBD images. In ECCV, 2012. 6, 11, 12, 23, 24, 31 [32] Jia Ning, Chen Li, Zheng Zhang, Chunyu Wang, Zigang Geng, Qi Dai, Kun He, and Han Hu. All in tokens: Unifying output space of visual tasks via soft token. In ICCV, pages 19900–19910, 2023. 2 [33] Omiros Pantazis, Gabriel Brostow, Kate Jones, and Oisin Mac Aodha. SVL-adapter: Self-supervised adapter for vision- language pretrained models."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6015068888664246,
+      "text": "H, VK, K, N, and R denote the Hypersim, Virtual KITTI, KITTI, nuScenes-Night, and RobotCar-Night datasets. UD and LD refer to Depth Anything being trained on 62M unlabeled datasets and 1. 5M labeled datasets. RD and SD denote that Depth Anything V2 is trained on 62M real datasets and 0. 5M synthetic datasets.𝑑 and𝑛 refer to the daytime and nighttime training splits proposed by RNW [ 36] and ADDS [ 24]. Max depth refers to the upper limit of the ground truth depth values. training, and our model was eventually fine-tuned for downstream monocular depth estimation tasks. Additionally, data augmentation techniques, including random cropping and horizontal flipping, were employed to enhance the training dataset, ensuring efficient use of memory resources on a single Nvidia RTX 3090 GPU. 4. 2 Datasets 4. 2. 1 Training Datasets. Since we observed that the ground truth data in the KITTI training dataset is unreliable in certain scenarios and suffers from limited data volume and weak scene generaliza- tion, it is not ideal for training foundation models. Therefore, we selected the Hypersim [31] indoor dataset and the Virtual KITTI [4] synthetic outdoor dataset as our training data."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p20_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 20,
+      "score": 0.6011348366737366,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 20"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p20_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 20,
+      "score": 0.6011348366737366,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 20"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Depth_Anything_p8_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6989840269088745,
+      "text": "As a result, our Depth Anything model exhibits excellent zero-shot depth estimation ability, and also serves as a promising initialization for downstream metric depth estimation and semantic segmentation tasks. Acknowledgement. This work is supported by the National Natural Science Foundation of China (No. 62201484), HKU Startup Fund, and HKU Seed Fund for Basic Research. 10378",
+      "estimated_tokens": 74
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6816567182540894,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024).",
+      "estimated_tokens": 226
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p1_sc0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.6813449263572693,
+      "text": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data Lihe Yang1 Bingyi Kang2 † Zilong Huang2 Xiaogang Xu3,4 Jiashi Feng2 Hengshuang Zhao1‡ 1HKU 2TikTok 3CUHK 4ZJU † project lead ‡ corresponding author https://depth-anything.github.io Figure 1. Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [35]. Middle two: SA-1B [26] (a hold-out unseen set). Right two: photos captured by ourselves. Our model works robustly in low-light environments (1st and 3rd column), complex scenes (2nd and 5th column), foggy weather (5th column), and ultra-remote distance (5th and 6th column), etc. Abstract This work presents Depth Anything1, a highly practical solution for robust monocular depth estimation. Without pur- suing novel technical modules, we aim to build a simple yet powerful foundation model dealing with any images under any circumstances. To this end, we scale up the dataset by designing a data engine to collect and automatically anno- tate large-scale unlabeled data (∼62M), which significantly enlarges the data coverage and thus is able to reduce the generalization error.",
+      "estimated_tokens": 281
+    },
+    {
+      "id": "semantic_chunk::dav2_p1_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 1,
+      "score": 0.6505864858627319,
+      "text": "Depth Anything V2 Lihe Yang1 Bingyi Kang2† Zilong Huang2 Zhen Zhao Xiaogang Xu Jiashi Feng 2 Hengshuang Zhao1‡ 1HKU 2TikTok †project lead ‡corresponding author https://depth-anything-v2.github.io Ours-Large Marigold(LCM) DepthFM Ours-Small latency (V100) parameters 5. 2s 2. 1s 213ms | 335M 60ms | 25M 948M 891M 86. 8% accuracy on our proposed benchmark 97. 1% 85. 8% 95. 3% Marigold Depth Anything V1 Marigold Depth Anything V1 Depth Anything V1 Figure 1: Depth Anything V2 significantly outperforms V1 [89] in robustness and fine-grained details. Compared with SD-based models [31, 25], it enjoys faster inference speed, fewer parameters, and higher depth accuracy. Abstract This work presents Depth Anything V2. Without pursuing fancy techniques, we aim to reveal crucial findings to pave the way towards building a powerful monocular depth estimation model. Notably, compared with V1 [89], this version produces much finer and more robust depth predictions through three key practices: 1) replacing all labeled real images with synthetic images, 2) scaling up the capacity of our teacher model, and 3) teaching student models via the bridge of large-scale pseudo-labeled real images.",
+      "estimated_tokens": 320
+    },
+    {
+      "id": "semantic_chunk::dav2_p24_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 24,
+      "score": 0.6500548720359802,
+      "text": "Image Depth Anything V1 Depth Anything V2 Figure 13: Comparison between Depth Anything V1 [89] and our V2 in open-world images. 24",
+      "estimated_tokens": 33
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc2",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.6322140693664551,
+      "text": "Accurate depth estimation is a crucial aspect © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms.",
+      "estimated_tokens": 35
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p20_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 20,
+      "score": 0.6011348366737366,
+      "text": "Input RGB Image Marigold (ours, depth) LeReS (depth) MiDaS (disparity) 20",
+      "estimated_tokens": 26
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 995,
+    "compressed_context_tokens": 995,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 995,
+  "context_tokens": 995,
+  "prompt_token_estimate": 1434,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_depth_anything_perturbation_methods",
+  "answer": "<think>\nThe user is asking about what strong perturbation methods Depth Anything used when training on unlabeled images. Let me search through the provided materials.\n\nLooking at the materials:\n- [1] source: data\\Depth_Anything.pdf - mentions Depth Anything model but doesn't specifically discuss perturbation methods\n- [3] source: data\\Depth_Anything.pdf - this is the abstract of Depth Anything paper, mentions data engine and unlabeled data\n- [4] source: data\\dav2.pdf - Depth Anything V2\n\nThe materials don't contain specific information about the strong perturbation methods used during training of unlabeled images. I need to check if any of the materials mention this.\n\nLooking more carefully, none of the provided materials seem to explicitly detail the strong perturbation methods used. The Depth Anything paper typically uses color jittering, Gaussian noise, cutmix, and other strong augmentations as a teacher-student training paradigm, but this specific information is not in the provided excerpts.\n\nSince the materials don't explicitly contain this information, I should indicate that the information is missing.\n</think>\n{\"answer\": \"资料中未明确给出 Depth Anything 在训练无标注图像时所使用的强扰动方法的具体内容。\", \"items\": [], \"missing_information\": \"需要 Depth Anything 论文中关于训练无标注图像时强扰动（strong perturbation）方法的具体描述，如颜色抖动、高斯噪声、CutMix 等增强手段的细节，但所提供的资料摘要中未包含这些信息。\"}",
+  "usage": {
+    "prompt_tokens": 1454,
+    "completion_tokens": 291,
+    "total_tokens": 1745,
+    "model": "MiniMax-M3"
+  }
+}

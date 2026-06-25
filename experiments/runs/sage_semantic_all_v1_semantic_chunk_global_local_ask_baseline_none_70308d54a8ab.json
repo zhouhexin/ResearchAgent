@@ -1,0 +1,398 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_global_local_ask_baseline_none_70308d54a8ab",
+  "dry_run": false,
+  "query": "Global-Local Path Networks 与哪些方法进行了性能比较？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Global-Local_p1_sc0",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.714959979057312,
+      "text": "Global-Local Path Networks for Monocular Depth Estimation with V ertical CutDepth Doyeon Kim1 , Woonghyun Ka2 , Pyunghwan Ahn1 , Donggyu Joo1 , Sewhan Chun2 and Junmo Kim1,2 School of Electrical Engineering, KAIST, South Korea1 Division of Future Vehicle, KAIST, South Korea2 {doyeon kim, kwh950724, p.ahn, jdg105, alskdjfhgk, junmo.kim}@kaist.ac.kr Abstract Depth estimation from a single image is an impor- tant task that can be applied to various ﬁelds in computer vision, and has grown rapidly with the development of convolutional neural networks. In this paper, we propose a novel structure and train- ing strategy for monocular depth estimation to fur- ther improve the prediction accuracy of the net- work. We deploy a hierarchical transformer en- coder to capture and convey the global context, and design a lightweight yet powerful decoder to gen- erate an estimated depth map while considering lo- cal connectivity. By constructing connected paths between multi-scale local features and the global decoding stream with our proposed selective fea- ture fusion module, the network can integrate both representations and recover ﬁne details."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p3_sc0",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.7065367698669434,
+      "text": "2019], Copy-Paste [Ghiasi et al. , 2021 ] and CutBlur [Yoo et al. , 2020 ], have been actively proposed in diverse tasks, the depth-speciﬁc data augmentation method has rarely been studied. To the best of our knowledge, CutDepth [Ishii and Yamashita, 2021] is the ﬁrst approach that attempts to aug- ment the data in depth estimation. We accelerate the perfor- mance of this depth-speciﬁc data augmentation method by emphasizing the vertical location in the image. 3 Methods 3. 1 Global-Local Path Networks Our depth estimation framework aims to predict the depth map ˆY ∈ RH×W ×1 with a given RGB imageI∈ RH×W ×3. Thus, we suggest a new architecture with global and local feature paths through the entire network to generate ˆY . The overall structure of our framework is depicted in Figure 1. Our transformer encoder [Xie et al., 2021] enables the model to learn global dependencies, and the proposed decoder suc- cessfully recovers the extracted feature into the target depth map by constructing the local path through skip connection and the feature fusion module. We detail the proposed archi- tecture in the following subsections. 3."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p1_sc3",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7047396302223206,
+      "text": "Motivated by this knowledge, we leverage the global rela- tionships explicitly by building the global path with multi- ple transformer blocks. Second, we design a highly utilized decoder with an effective fusion module to enable local fea- tures to produce a ﬁne depth map while preserving structural details. Contrary to the transformer, skip connections tend to create smaller receptive ﬁelds and help to focus on short- distance information [Luo et al., 2016]. Thus, the proposed architecture is intended to take the complementary advan- tages of both transformer and skip connections. This is en- abled by aggregating the encoded and the decoded features using an input-dependent fusion module, called selective fea- ture fusion (SFF). The SFF module aids the model to selec- tively focus on the salient regions by estimating the attention map for both features with a very low computational burden. Compared to other decoders, our decoder achieves superior performance with much lower complexity. Furthermore, we train the network with an additional task speciﬁc data augmentation technique to boost the model ca- pability."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p1_sc2",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7009157538414001,
+      "text": "This paper proposes a new architecture and training strategy to further improve the performance by focus- ing on the essential properties of monocular depth estimation. As many previous papers have claimed [Chen et al., 2019; Kim et al., 2020], understanding both global and local con- texts is crucial for successful depth estimation. There are many cues in monocular depth estimation that require under- standing the scene on a global scale, such as the location of objects or the vanishing point. In addition, local connectivity of features is important because adjacent pixels tend to have similar values owing to their coplanar surfaces. Therefore, we propose a new global-local path network to fully extract meaningful features on diverse scales and effectively deliver them throughout the network. First, we adopt a hierarchical transformer as the encoder to model long-range dependen- cies and capture multi-scale context features. In prior stud- ies, it is observed that the transformer enables the network to enlarge the size of the receptive ﬁeld [Xie et al. , 2021 ]."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc3",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6811395287513733,
+      "text": "We define N sub-intervals be- tween dmin and dmax, where each interval has a length of L = dmax−dmin N , with center bn = dmin + L(n + 1 2 ) for interval n. Using two sigmoid functions σ to model the ker- nel function K(x) = σ(x)σ(−x), the probability of a depth map D falling within interval k is P (n) = 1 HW HWX x=1 [σ( D(x) − bn + L 2 a ) − σ( D(x) − bn − L 2 a )], (12) where P is the differentiable probability function and a is a bandwidth factor. Finally, the Distday, Distadv are consist of Pday, Padv: Distday = {bn, Pday(n)}N n=1, (13) Distadv = {bn, Padv(n)}N n=1. (14) Noted that Distday is calculated among the whole day- time training set instead of one sample. The objective is to minimize the distribution distances betweenDistday and Distadv by K-L divergence: LKL dis = NX i=1 Padv(i) · log Padv(i) Pday(i) . (15) Apart from Lcd and LKL dis , we also utilize Lcv and LT as in previous stage. Thus, the total objective functionLreal is Lreal = α1Lcd + α2LKL dis + α3Lcv + α4LT (16) With the designed learning procedure, our model can gradually fit better to multiple real conditions, rather than only learn from the synthetic conditions. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p8_sc4",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6629804372787476,
+      "text": "[Huang et al., 2022] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. Neighbor2neighbor: A self-supervised framework for deep image denoising. IEEE Transactions on Image Processing , 31:4023–4038, 2022. [Jaderberg et al., 2015] Max Jaderberg, Karen Simonyan, Andrew Zisserman, et al. Spatial transformer networks. Advances in Neural Information Processing Systems , 28, 2015. [Joiner and Rosenblatt, 1971] Brian L Joiner and Joan R Rosenblatt. Some properties of the range in samples from tukey’s symmetric lambda distributions. Journal of the American Statistical Association, 66(334):394–399, 1971."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p4_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 4,
+      "score": 0.6600461006164551,
+      "text": "In our network architecture, the coarse depth estimate LL3 is estimated at 1/16 of the input scale. This depth map is then progressively upscaled and reﬁned using Algorithm 1. A forward pass of our model generates a collection of 5 depth maps LLs for scales [1/16, 1/8, 1/4, 1/2, 1]. We choose to supervise only the four last scales as in [18]. It is worth noting that the coefﬁcient maps are predicted at scales [1/16, 1/8, 1/4, 1/2], thus removing the need for full-resolution computation. 3. 3. Sparse Computations in Decoder For piecewise ﬂat depth maps, high-frequency coefﬁ- cient maps have a small number of non-zero values; these are located around depth edges. Hence, for full-resolution depth reconstruction, only some pixel locations need to pre- dict non-zero coefﬁcient map values at each scale. At any scale, we assume that these pixel locations with non-zero values can be determined from high-frequency coefﬁcient maps estimated at the previous scale deﬁned by a mask M described in GetSparseMask of Algorithm 1. The sparsity level achieved by using maskM is ψ = ∑H,W r,c=1,1Mr,c HW , (1) which allows us to remove redundant computation in the decoder layer."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p9_sc3",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 9,
+      "score": 0.6519951820373535,
+      "text": "Channel pruning for accelerating very deep neural networks. In ICCV, Oct 2017. [25] Yihui He, Xiangyu Zhang, and Jian Sun. Channel pruning for accelerating very deep neural networks. In CVPR, 2017. [26] Geoffrey Hinton, Oriol Vinyals, and Jeff Dean. Distilling the knowledge in a neural network. arXiv:1503. 02531, 2015. [27] Heiko Hirschmuller. Accurate and efﬁcient stereo processing by semi-global matching and mutual information. In CVPR, 2005. [28] Heiko Hirschmuller. Stereo processing by semiglobal match- ing and mutual information. PAMI, 2007. [29] Aleksander Holynski and Johannes Kopf. Fast depth densi- ﬁcation for occlusion-aware augmented reality. ACM Trans- actions on Graphics (TOG), 2018. [30] Andrew G Howard, Menglong Zhu, Bo Chen, Dmitry Kalenichenko, Weijun Wang, Tobias Weyand, Marco An- dreetto, and Hartwig Adam. Mobilenets: Efﬁcient con- volutional neural networks for mobile vision applications. arXiv:1704. 04861, 2017. [31] Gao Huang, Zhuang Liu, Geoff Pleiss, Laurens Van Der Maaten, and Kilian Weinberger. Convolutional networks with dense connectivity. IEEE Transactions on Pattern Anal- ysis and Machine Intelligence, 2019."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p10_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.6426050066947937,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 10 [18] Ning Zhang, Francesco Nex, George V osselman, and Norman Kerle. Lite-mono: A lightweight cnn and transformer architecture for self- supervised monocular depth estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 18537– 18546, 2023. [19] Emiel Hoogeboom, Vıctor Garcia Satorras, Cl ´ement Vignac, and Max Welling. Equivariant diffusion for molecule generation in 3d. In Inter- national Conference on Machine Learning , pages 8867–8887. PMLR, 2022. [20] Brian L Trippe, Jason Yim, Doug Tischer, Tamara Broderick, David Baker, Regina Barzilay, and Tommi Jaakkola. Diffusion probabilistic modeling of protein backbones in 3d for the motif-scaffolding problem. arXiv preprint arXiv:2206. 04119 , 2022. [21] Shoufa Chen, Peize Sun, Yibing Song, and Ping Luo. Diffusiondet: Diffusion model for object detection. arXiv preprint arXiv:2211. 09788, 2022. [22] Ting Chen, Lala Li, Saurabh Saxena, Geoffrey Hinton, and David J Fleet. A generalist framework for panoptic segmentation of images and videos. arXiv preprint arXiv:2210. 06366 , 2022. [23] Saurabh Saxena, Abhishek Kar, Mohammad Norouzi, and David J Fleet."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6420468091964722,
+      "text": "Then, the proposed Consecutive Dilated Con- volutions (CDC) module and the Local-Global Features In- teraction (LGFI) module learn rich hierarchical feature rep- resentations. The down-sampling layers in the second and the third stage also receive the concatenated features output by the previous down-sampling layer. This design is simi- lar to the residual connection proposed in ResNet [17], and is able to model better cross-stage correlation. Similarly, the output feature maps are further fed into the third and the fourth stages, and output features of dimensionH 8× W 8×C3 and H 16× W 16×C4. Consecutive Dilated Convolutions (CDC). The pro- posed CDC module utilizes dilated convolutions to extract multi-scale local features. Different from using a parallel dilated convolution module only in the last layer of the net- work [6] we insert several consecutive dilated convolutions with different dilation rates into each stage for adequate multi-scale contexts aggregation."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p2_sc1",
+      "source": "data\\Global-Local.pdf",
+      "page": 2,
+      "score": 0.6401059627532959,
+      "text": "In addition, we observe that our net- work can generalize well under cross-dataset validation and shows robust performance against image corruption. To summarize, our contributions are as follows: • We propose a novel global-local path architecture for monocular depth estimation. • We suggest an improved depth-speciﬁc data augmenta- tion method to boost the performance of the model. • Our network achieves state-of-the-art performance on the most popular dataset NYU Depth V2 and shows higher generalization ability and robustness than previ- ously developed networks. 2 Related Work Monocular depth estimation is a computer vision task that predicts corresponding depth maps with given input images. Learning-based monocular depth estimation has been stud- ied following the seminal work of [Saxena et al. , 2008 ] which used monocular cues to predict depth based on a Markov random ﬁeld. Later, with the development of CNNs, depth estimation networks have utilized the encoded fea- tures of deep CNNs that generalize well to various tasks and achieve drastic performance improvement[Eigen et al., 2014; Huynh et al., 2020; Yin et al., 2019]."
+    },
+    {
+      "id": "semantic_chunk::ACD_p5_sc0",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.6399834156036377,
+      "text": "଴ ଵ כ OREDO ଴ ଵ כ RFDO ଵ *OREDO ଵ /RFDO D GD\\\u0010FOHDU E QLJKW F 3VHXGR GHSWK G 7UDLQLQJ\u0003GHSWK H 5HJLRQ PDVN I 'HSWK\u0003$Q\\WKLQJ\u00039\u0015 5HJLRQDO\u0003'LIIHUHQFHV Figure 3: Ordinal Pair Sampling: During training, we use two strate- gies to efﬁciently sample ordinal pairs. First, we employ the teacher and student models to respectively predict the depth maps (c and d) from the normal (a) and degraded (b) input, and then compute the pixel-wise errors (e) among them. Based on (e), we sample the local (uncertain regions with large errors) and global (random sampling regions) patches from the depth maps (d) and (f) to compute the to- tal ordinal pair loss. global depth map by a ratio of 0. 01, and the ranking loss cal- culated from these sampled points is used to reﬁne the global depth information. The sampling process is illustrated in Fig- ure. 3. Thus, our ﬁnal loss becomes: L r = 1 |Zg| ∑ p0,p1∈Zg ψ(p0,p 1)+ 1 |Zl| ∑ p0,p1∈Zl ψ(p0,p 1), (12) where Zg and Zl represent the global and local ordinal sam- pling sample sets, respectively. Feature Consistency Constraint."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p12_sc4",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.6390588283538818,
+      "text": "Our network architecture Here k is the kernel size, s the stride, chns the number of output channels for each layer, res is the downscaling factor for each layer relative to the input image, and input corresponds to the input of each layer where ↑ is a 2× nearest-neighbor upsampling of the layer."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p12_sc4",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6390588283538818,
+      "text": "Our network architecture Here k is the kernel size, s the stride, chns the number of output channels for each layer, res is the downscaling factor for each layer relative to the input image, and input corresponds to the input of each layer where ↑ is a 2× nearest-neighbor upsampling of the layer."
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc4",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.6386737823486328,
+      "text": "2 [44] Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang, and Dongbin Zhao. Steps: Joint self- supervised nighttime image enhancement and depth estima- tion. In 2023 IEEE International Conference on Robotics and Automation (ICRA), pages 4916–4923, 2023. 1, 2 [45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork- gan: Seeing into the rainy night. In The IEEE European Conference on Computer Vision (ECCV), 2020. 2, 4 [46] Hanyu Zhou, Yi Chang, Wending Yan, and Luxin Yan. Un- supervised cumulative domain adaptation for foggy scene optical flow. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9569– 9578, 2023. 4, 5 [47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING, Yuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the common appearance-boundary adaptation for nighttime op- tical flow. InThe Twelfth International Conference on Learn- ing Representations, 2024. 2 [48] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video."
+    },
+    {
+      "id": "semantic_chunk::dav2_p16_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 16,
+      "score": 0.6384752988815308,
+      "text": "10 [101] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, 2023. 2, 23 [102] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. In ICCV, 2023. 9 [103] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba. Places: A 10 million image database for scene recognition. TPAMI, 2017. 18, 28 16"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p9_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 9,
+      "score": 0.6378666162490845,
+      "text": "arXiv preprint arXiv:2204. 00987, 2022. 2 [27] Zhenyu Li, Zehui Chen, Xianming Liu, and Junjun Jiang. Depthformer: Exploiting long-range correlation and local in- formation for accurate monocular depth estimation. Machine Intelligence Research, pages 1–18, 2023. 2 [28] Ce Liu, Suryansh Kumar, Shuhang Gu, Radu Timofte, and Luc Van Gool. V A-DepthNet: A variational approach to single image depth prediction. In ICLR, 2023. 2 [29] Mehdi Mirza and Simon Osindero. Conditional generative adversarial nets. arXiv preprint arXiv:1411. 1784, 2014. 3 [30] Eliya Nachmani, Robin San Roman, and Lior Wolf. Non Gaussian denoising diffusion models. arXiv preprint arXiv:2106. 07582, 2021. 5 [31] Pushmeet Kohli Nathan Silberman, Derek Hoiem and Rob Fergus. Indoor segmentation and support inference from RGBD images. In ECCV, 2012. 6, 11, 12, 23, 24, 31 [32] Jia Ning, Chen Li, Zheng Zhang, Chunyu Wang, Zigang Geng, Qi Dai, Kun He, and Han Hu. All in tokens: Unifying output space of visual tasks via soft token. In ICCV, pages 19900–19910, 2023. 2 [33] Omiros Pantazis, Gabriel Brostow, Kate Jones, and Oisin Mac Aodha. SVL-adapter: Self-supervised adapter for vision- language pretrained models."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p9_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 9,
+      "score": 0.6378666162490845,
+      "text": "arXiv preprint arXiv:2204. 00987, 2022. 2 [27] Zhenyu Li, Zehui Chen, Xianming Liu, and Junjun Jiang. Depthformer: Exploiting long-range correlation and local in- formation for accurate monocular depth estimation. Machine Intelligence Research, pages 1–18, 2023. 2 [28] Ce Liu, Suryansh Kumar, Shuhang Gu, Radu Timofte, and Luc Van Gool. V A-DepthNet: A variational approach to single image depth prediction. In ICLR, 2023. 2 [29] Mehdi Mirza and Simon Osindero. Conditional generative adversarial nets. arXiv preprint arXiv:1411. 1784, 2014. 3 [30] Eliya Nachmani, Robin San Roman, and Lior Wolf. Non Gaussian denoising diffusion models. arXiv preprint arXiv:2106. 07582, 2021. 5 [31] Pushmeet Kohli Nathan Silberman, Derek Hoiem and Rob Fergus. Indoor segmentation and support inference from RGBD images. In ECCV, 2012. 6, 11, 12, 23, 24, 31 [32] Jia Ning, Chen Li, Zheng Zhang, Chunyu Wang, Zigang Geng, Qi Dai, Kun He, and Han Hu. All in tokens: Unifying output space of visual tasks via soft token. In ICCV, pages 19900–19910, 2023. 2 [33] Omiros Pantazis, Gabriel Brostow, Kate Jones, and Oisin Mac Aodha. SVL-adapter: Self-supervised adapter for vision- language pretrained models."
+    },
+    {
+      "id": "semantic_chunk::dav2_p13_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 13,
+      "score": 0.6368414759635925,
+      "text": "[40] Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva Ramanan, Piotr Dollár, and C Lawrence Zitnick. Microsoft coco: Common objects in context. In ECCV, 2014. 18 [41] Haotian Liu, Chunyuan Li, Qingyang Wu, and Yong Jae Lee. Visual instruction tuning. In NeurIPS, 2023. 8 [42] Lingjie Liu, Nenglun Chen, Duygu Ceylan, Christian Theobalt, Wenping Wang, and Niloy J Mitra. Curvefusion: reconstructing thin structures from rgbd sequences. TOG, 2018. 2 [43] Yifan Liu, Ke Chen, Chris Liu, Zengchang Qin, Zhenbo Luo, and Jingdong Wang. Structured knowledge distillation for semantic segmentation. In CVPR, 2019. 10 [44] Ze Liu, Han Hu, Yutong Lin, Zhuliang Yao, Zhenda Xie, Yixuan Wei, Jia Ning, Yue Cao, Zheng Zhang, Li Dong, et al. Swin transformer v2: Scaling up capacity and resolution. In CVPR, 2022. 9 [45] Ze Liu, Yutong Lin, Yue Cao, Han Hu, Yixuan Wei, Zheng Zhang, Stephen Lin, and Baining Guo. Swin transformer: Hierarchical vision transformer using shifted windows. In ICCV, 2021. 18 [46] Zhuang Liu, Hanzi Mao, Chao-Yuan Wu, Christoph Feichtenhofer, Trevor Darrell, and Saining Xie. A convnet for the 2020s. In CVPR, 2022. 18 [47] Ben Mildenhall, Pratul P."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p15_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 15,
+      "score": 0.6335200071334839,
+      "text": "9. Exploring Other Efﬁciency Tracks Our paper mainly explores computation reduction in the decoder of a UNet-like architecture. However, this direction is orthogonal and complementary with all other complexity reduction lines of research. Our approach is for example complementary with the FastDepth approach, which consists in reducing the overall complexity of a depth estimation network by compressing it in many dimensions such as (1) the encoder, (2) the decoder (3) the input resolution. They argue that the deep network introduced by Laina et al. [39] suffers from high complex- ity, while it could largely be reduced. Here we present a set of experiments we conducted to explore these different aspects of complexity reduction. 9. 1. Experiment with a light-weight MobileNetv2 encoder First, we replace the costly ResNet [23] or DenseNet [32, 31] backbone encoders with the efﬁcient MobileNetv2 [56]. Indeed, in contrast with FastDepth, in the main paper, we report results using large encoder models (Resnet18/50 or Densenet161)."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.6325552463531494,
+      "text": "For each condition c, we used a ForkGAN model [45] T c to translate all day-clear training samples E of nuScenes, with c ∈ C = {night, rain}. We trained Fork- GAN on BDD100K [42] and fine-tuned it on the nuScenes training set. For RobotCar, we used T c to translate all day samples E into night ones. RobotCar contains more night samples than nuScenes, so we trained T c directly on its training set. We share publicly all generated hc i images. Prior works and baselines We compared ours with a variety of works [8, 11, 12, 38, 37, 22, 33, 1]. We applied ours on the self-supervised Monodepth2-based baseline of Section 3. 1. 1 and the fully-supervised AdaBins [1]. 4. 2. Quantitative Results Night – nuScenes In Table 1, we report results for nuScenes [3] across various settings. Night samples present strong noise levels and reflections that are detrimental for self-supervised models (Figure 2), causing the absRel er- rors of most methods to double from ideal conditions (i.e., day-clear) to night. The difficulty of learning from night inputs is evident comparing Monodepth2 [11] trained only on day-clear (d) against all conditions (a), with the latter severely underperforming."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p6_sc2",
+      "source": "data\\Global-Local.pdf",
+      "page": 6,
+      "score": 0.6323992013931274,
+      "text": "We additionally provide comparison with existing decoder architectures which integrates multi-scale features, in the bottom part of Table 3. Despite the compactness of the proposed decoder, our network outperforms other networks. Our decoder has only 0. 66M parameters while the MLP- decoder [Xie et al. , 2021 ], BTS [Lee et al. , 2019 ] and DPT [Ranftl et al., 2021] have 3. 19M, 5. 79M and 14. 15M pa- rameters, respectively, and thus, are highly heavier than ours. This indicates that we have effectively designed the restoring path for our encoder, which enables the proposed model to record ﬁne performance with very few parameters. Effectiveness of the vertical CutDepth. We perform an ab- lation study on the data augmentation method used to train the network. The results are shown in Table 5. The ﬁrst row of the table represents the baseline, which is only trained with traditional data augmentation except for CutDepth, and the second row shows the result obtained from adopting the basic CutDepth method. Then, we apply the proposed verti- cal CutDepth with different choices of hyperparameterp."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p10_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 10,
+      "score": 0.632222592830658,
+      "text": "3 [40] Chitwan Saharia, William Chan, Huiwen Chang, Chris Lee, Jonathan Ho, Tim Salimans, David Fleet, and Mohammad Norouzi. Palette: Image-to-image diffusion models. In ACM SIGGRAPH, pages 1–10, 2022. 3 [41] Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily L Denton, Kamyar Ghasemipour, Raphael Gontijo Lopes, Burcu Karagol Ayan, Tim Salimans, et al. Pho- torealistic text-to-image diffusion models with deep language understanding. NeurIPS, 35, 2022. 2, 3 [42] Tim Salimans and Jonathan Ho. Progressive distillation for fast sampling of diffusion models. arXiv preprint arXiv:2202. 00512, 2022. 5 [43] Saurabh Saxena, Charles Herrmann, Junhwa Hur, Abhishek Kar, Mohammad Norouzi, Deqing Sun, and David J. Fleet. The surprising effectiveness of diffusion models for opti- cal flow and monocular depth estimation. arXiv preprint arXiv:2306. 01923, 2023. 2, 3 [44] Saurabh Saxena, Abhishek Kar, Mohammad Norouzi, and David J Fleet. Monocular depth estimation using diffusion models. arXiv preprint arXiv:2302. 14816, 2023. 2, 3 [45] Thomas Schops, Johannes L Schonberger, Silvano Galliani, Torsten Sattler, Konrad Schindler, Marc Pollefeys, and An- dreas Geiger."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p10_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 10,
+      "score": 0.632222592830658,
+      "text": "3 [40] Chitwan Saharia, William Chan, Huiwen Chang, Chris Lee, Jonathan Ho, Tim Salimans, David Fleet, and Mohammad Norouzi. Palette: Image-to-image diffusion models. In ACM SIGGRAPH, pages 1–10, 2022. 3 [41] Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily L Denton, Kamyar Ghasemipour, Raphael Gontijo Lopes, Burcu Karagol Ayan, Tim Salimans, et al. Pho- torealistic text-to-image diffusion models with deep language understanding. NeurIPS, 35, 2022. 2, 3 [42] Tim Salimans and Jonathan Ho. Progressive distillation for fast sampling of diffusion models. arXiv preprint arXiv:2202. 00512, 2022. 5 [43] Saurabh Saxena, Charles Herrmann, Junhwa Hur, Abhishek Kar, Mohammad Norouzi, Deqing Sun, and David J. Fleet. The surprising effectiveness of diffusion models for opti- cal flow and monocular depth estimation. arXiv preprint arXiv:2306. 01923, 2023. 2, 3 [44] Saurabh Saxena, Abhishek Kar, Mohammad Norouzi, and David J Fleet. Monocular depth estimation using diffusion models. arXiv preprint arXiv:2302. 14816, 2023. 2, 3 [45] Thomas Schops, Johannes L Schonberger, Silvano Galliani, Torsten Sattler, Konrad Schindler, Marc Pollefeys, and An- dreas Geiger."
+    },
+    {
+      "id": "semantic_chunk::ACD_p1_sc4",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.6319810152053833,
+      "text": "However, due to the limitation for scene-speciﬁc representation, these meth- ods struggle to generalize to complex and diverse environ- ments, frequently encountered in real-world applications. To promote generalization, some efforts harmonize the merits of distillation learning, contrastive learning, and data augmenta- tion strategies to create more generalized models that improve model performance across varied scenes [Wang et al., 2024b; Wang et al., 2024a; Saunders et al., 2023 ]. For example, md4all [Gasperini et al., 2023 ] generates the [normal, de- graded] sample pairs with a GAN-based model and uses distillation learning to extract supervised signals from clear Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1251"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6315767765045166,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024)."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.631288468837738,
+      "text": "Therefore, we have summarized two key points that need to be care- fully considered to help the model eﬀectively learn semantic priors: (1) How to eﬀectively utilize the semantic information of the scene to guide SIDE. As shown in Fig. 1(b), all objects in the depth map have nearly identical contours with their semantic segments, and the depth values within the some semantic segments also exhibit a high degree of https://doi.org/10. 1016/j.patcog. 2025. 112279 Received 29 December 2024; Received in revised form 23 July 2025; Accepted 9 August 2025 Pattern Recognition 171 (2026) 112279 Available online 18 August 2025 0031-3203/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6312352418899536,
+      "text": "This is because the segmentation scale deﬁnes indepen- dent modeling spaces for each semantic segment, allowing the model to predict the relative depth relationships only within the corresponding segment, without the need to additionally recover them between dif- ferent semantic segments. For instance, in columns 3 and 4 of Fig. 16, while the metric depth values of wheel/pedestrian-foot pixels and adja- cent road-surface pixels are similar, the presence of segmentation scale causes them to diﬀer in the predicted semantic-aware relative depth values. The number of bin queries: As indicated in Table 13, we investi- gate the impact of varying the number of bin queries on performance. The results demonstrate that optimal performance is achieved with 128 queries. We posit that a scarcity of queries makes it challenging to cover all depth intervals within a scene, while an excess of queries increases the complexity of the model’s learning process. Additionally, for seg- mentation queries, we follow the conclusion from Mask2Former [28] and set the number of segmentation queries to 20, aligning with the number of categories present in the Cityscapes dataset. 5."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p12_sc2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.6311854124069214,
+      "text": "All weights in this new expanded ﬁlter are divided by 2 to make the output of the convolution in the same numerical range as the origi- nal, one-image ResNet. In Table 5 we describe the param- eters of each layer used in our depth decoder and pose net- work. Our pose network is larger and deeper than previous works [76, 62], and we only feed two frames at a time to the Sequence 09Sequence 10# frames ORB-Slam [44] 0. 014±0. 0080. 012±0. 011 - DDVO [62] 0. 045±0. 1080. 033±0. 074 3 Zhou* [76] 0. 050±0. 0390. 034±0. 028 5→2 Zhou [76] 0. 021±0. 0170. 020±0. 015 5 Zhou [76]† 0. 016±0. 0090. 013±0. 009 5 Mahjourian [40] 0. 013±0. 0100. 012±0. 011 3 GeoNet [71] 0. 012±0. 0070. 012±0. 009 5 EPC++ M [38] 0. 013±0. 0070. 012±0. 008 3 Ranjan [51] 0. 012±0. 0070. 012±0. 008 5 EPC++ MS [38] 0. 012±0. 0060. 012±0. 008 3 Monodepth2 M* 0. 017±0. 0080. 015±0. 010 2 Monodepth2 MS* 0. 017±0. 0080. 015±0. 010 2 Monodepth2 Mw/o pretraining*0. 018±0. 0100. 015±0. 010 2 Monodepth2 MSw/o pretraining*0. 018±0. 0090. 015±0. 010 2 Table 4. Odometry results on the KITTI [13] odometry dataset. Results show the average absolute trajectory error, and standard deviation, in meters."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p12_sc2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6311854124069214,
+      "text": "All weights in this new expanded ﬁlter are divided by 2 to make the output of the convolution in the same numerical range as the origi- nal, one-image ResNet. In Table 5 we describe the param- eters of each layer used in our depth decoder and pose net- work. Our pose network is larger and deeper than previous works [76, 62], and we only feed two frames at a time to the Sequence 09Sequence 10# frames ORB-Slam [44] 0. 014±0. 0080. 012±0. 011 - DDVO [62] 0. 045±0. 1080. 033±0. 074 3 Zhou* [76] 0. 050±0. 0390. 034±0. 028 5→2 Zhou [76] 0. 021±0. 0170. 020±0. 015 5 Zhou [76]† 0. 016±0. 0090. 013±0. 009 5 Mahjourian [40] 0. 013±0. 0100. 012±0. 011 3 GeoNet [71] 0. 012±0. 0070. 012±0. 009 5 EPC++ M [38] 0. 013±0. 0070. 012±0. 008 3 Ranjan [51] 0. 012±0. 0070. 012±0. 008 5 EPC++ MS [38] 0. 012±0. 0060. 012±0. 008 3 Monodepth2 M* 0. 017±0. 0080. 015±0. 010 2 Monodepth2 MS* 0. 017±0. 0080. 015±0. 010 2 Monodepth2 Mw/o pretraining*0. 018±0. 0100. 015±0. 010 2 Monodepth2 MSw/o pretraining*0. 018±0. 0090. 015±0. 010 2 Table 4. Odometry results on the KITTI [13] odometry dataset. Results show the average absolute trajectory error, and standard deviation, in meters."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p14_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.6307665705680847,
+      "text": "[55] Zhiqiang Yan, Kun Wang, Xiang Li, Guangwei Gao, Jun Li, and Jian Yang. Tri-perspective view decomposition for geometry aware depth completion and super-resolution. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2025. 23 [56] Zhiqiang Yan, Kun Wang, Xiang Li, Zhenyu Zhang, Jun Li, and Jian Yang. Rignet: Repetitive image guided network for depth completion. InEuropean Conference on Computer Vision, pages 214–230. Springer, 2022. 23 [57] Zhiqiang Yan, Zhengxue Wang, Kun Wang, Jun Li, and Jian Yang. Completion as enhancement: A degradation-aware selective image guided network for depth completion. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 26943–26953, 2025. 23 [58] Guorun Yang, Xiao Song, Chaoqin Huang, Zhidong Deng, Jianping Shi, and Bolei Zhou. Drivingstereo: A large-scale dataset for stereo matching in autonomous driving scenarios. InIEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2019. 7 [59] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything: Unleashing the power of large-scale unlabeled data."
+    },
+    {
+      "id": "semantic_chunk::dav2_p15_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.6301206350326538,
+      "text": "2 [89] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything: Unleashing the power of large-scale unlabeled data. In CVPR, 2024. 1, 2, 3, 5, 6, 7, 8, 9, 10, 17, 19, 21, 22, 24 [90] Lihe Yang, Zhen Zhao, Lei Qi, Yu Qiao, Yinghuan Shi, and Hengshuang Zhao. Shrinking class space for enhanced certainty in semi-supervised learning. In ICCV, 2023. 10 [91] Xiaodong Yang, Zhuang Ma, Zhiyu Ji, and Zhe Ren. Gedepth: Ground embedding for monocular depth estimation. In ICCV, 2023. 9 [92] Yao Yao, Zixin Luo, Shiwei Li, Jingyang Zhang, Yufan Ren, Lei Zhou, Tian Fang, and Long Quan. Blendedmvs: A large-scale dataset for generalized multi-view stereo networks. In CVPR, 2020. 18 [93] Chongjie Ye, Yinyu Nie, Jiahao Chang, Yuantao Chen, Yihao Zhi, and Xiaoguang Han. Gaustudio: A modular framework for 3d gaussian splatting and beyond. arXiv:2403. 19632, 2024. 2 [94] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. Enforcing geometric constraints of virtual normal for depth prediction. In ICCV, 2019. 10 15"
+    },
+    {
+      "id": "semantic_chunk::ACD_p3_sc3",
+      "source": "data\\ACD.pdf",
+      "page": 3,
+      "score": 0.6299981474876404,
+      "text": "2, which involves the data generation and robust model training. In the ﬁrst part, we utilize the LoRA adapters to ﬁne-tune the pretrained diffusion model, where the circular consistency loss and adversarial training are used to guaran- tee the naturalness and consistency of the translated image. In this way, the trained generator can produce a multi-tuple degradation dataset under different weather conditions. And then, ACDepth takes the multi-tuple degradation dataset as input, and proposes the multi-granularity knowledge distilla- tion strategy (MKD) to borrow priors from the teacher model to optimize the student network. The process is depicted as: L = L d +λ1Lr +λ2Lc, (5) whereLd denotes the distillation loss between the teacher and student models, Lr refers to the ordinal guidance distillation between the Depth Anything V2 model and our ACDepth, and L c is the feature consistency loss between the teacher encoder and the student encoder. λ1 and λ2 are the weight parameters to balance the loss components. Detailed expla- nation of losses (L d,Lr andLc) is provided below. 3."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p13_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.6297284364700317,
+      "text": "Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly, J. Uszkoreit, N. Houlsby, An image is worth 16x16 words: transformers for image recognition at scale, in: International Conference on Learning Representations, 2021. [16] W. Yuan, X. Gu, Z. Dai, S. Zhu, P. Tan, Neural window fully-connected CRFs for monocular depth estimation, in: Proceedings of the IEEE/CVF Conference on Com- puter Vision and Pattern Recognition, 2022, pp. 3916–3925. [17] Z. Liu, Y. Lin, Y. Cao, H. Hu, Y. Wei, Z. Zhang, S. Lin, B. Guo, Swin transformer: hier- archical vision transformer using shifted windows, in: Proceedings of the IEEE/CVF International Conference on Computer Vision, 2021, pp. 10012–10022. [18] S. F. Bhat, I. Alhashim, P. Wonka, LocalBins: improving depth estimation by learning local distributions, in: Computer Vision – ECCV 2022, Cham, 2022, pp. 480–496. [19] K. Xian, J. Zhang, O. Wang, L. Mai, Z. Lin, Z. Cao, Structure-guided ranking loss for single image depth prediction, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2020, pp. 608–617. [20] Z. Li, N."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.6288304328918457,
+      "text": "Y. Zou et al. Fig. 1. Explanation of our motivation. We provide an example of semantic boundary areas with a “smooth transition” (a), where our method successfully alleviates this issue. similarity. If we can explicitly model diﬀerent semantic segments, break- ing down a scene into multiple segmented planes with varying depths, then the model only needs to focus on inferring the relative depth rela- tionships within each segment. (2) How to eﬀectively aggregate im- age features within semantic segments. In the real world, there are regular structural relationships within the same semantic segment. For example, as shown in Fig. 1(b), the depth of the sky is eﬀectively inﬁnite and tends towards a uniform depth value. Meanwhile, the depth span of the road surface is relatively large, yet it varies smoothly along the vertical direction. We believe that aggregating relevant features within semantic segments can better restore their internal relative depth rela- tionships."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p5_sc2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 5,
+      "score": 0.6284230947494507,
+      "text": "an encoder-decoder network, with skip connections, enabling us to represent both deep abstract features as well as local information. We use a ResNet18 [17] as our encoder, which contains 11M pa- rameters, compared to the larger, and slower, DispNet and ResNet50 models used in existing work [15]. Simi- lar to [30, 16], we start with weights pretrained on Ima- geNet [54], and show that this improves accuracy for our compact model compared to training from scratch (Table 2). Our depth decoder is similar to [15], with sigmoids at the output and ELU nonlinearities [7] elsewhere. We convert the sigmoid outputσ to depth withD = 1/(aσ +b), where a andb are chosen to constrainD between 0. 1 and 100 units. We make use of reﬂection padding, in place of zero padding, in the decoder, returning the value of the closest border pix- els in the source image when samples land outside of the image boundaries. We found that this signiﬁcantly reduces the border artifacts found in existing approaches, e.g. [15]. For pose estimation, we follow [62] and predict the rota- tion using an axis-angle representation, and scale the rota- tion and translation outputs by 0. 01."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p5_sc2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6284230947494507,
+      "text": "an encoder-decoder network, with skip connections, enabling us to represent both deep abstract features as well as local information. We use a ResNet18 [17] as our encoder, which contains 11M pa- rameters, compared to the larger, and slower, DispNet and ResNet50 models used in existing work [15]. Simi- lar to [30, 16], we start with weights pretrained on Ima- geNet [54], and show that this improves accuracy for our compact model compared to training from scratch (Table 2). Our depth decoder is similar to [15], with sigmoids at the output and ELU nonlinearities [7] elsewhere. We convert the sigmoid outputσ to depth withD = 1/(aσ +b), where a andb are chosen to constrainD between 0. 1 and 100 units. We make use of reﬂection padding, in place of zero padding, in the decoder, returning the value of the closest border pix- els in the source image when samples land outside of the image boundaries. We found that this signiﬁcantly reduces the border artifacts found in existing approaches, e.g. [15]. For pose estimation, we follow [62] and predict the rota- tion using an axis-angle representation, and scale the rota- tion and translation outputs by 0. 01."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc3",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.628389835357666,
+      "text": "Given a two-dimensional signal x[i] the output y[i] of a 2D dilated convolution can be deﬁned as: y[i] = K∑ k=1 x[i +r·k]w[k], (1) wherew[k] is a ﬁlter with length K, and r denotes the di- lation rate used to convolve the input x[i]. In a standard non-dilated convolutionr = 1. By using a dilated convolu- tion the network can keep the size of the output feature map ﬁxed while achieving a larger receptive ﬁeld. Considering an input feature X with dimension H×W×C our CDC module outputs ˆX as follows: ˆX =X +LinearG(Linear(BN (DDWConv r(X)))), (2) where LinearG denotes a point-wise convolution opera- tion, followed by theGELU [18] activation. BN is a batch normalization layer, andDDWConv r(·) is a 3× 3 depth- wise dilated convolution with dilation rater. Local-Global Features Interaction (LGFI). Given an input feature mapX with dimensionH×W×C it is lin- early projected to the same dimensional queriesQ =XW q, keysK = XW k, and values V = XW v, where Wq,Wk,"
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p8_sc1",
+      "source": "data\\Global-Local.pdf",
+      "page": 8,
+      "score": 0.6273346543312073,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 8375–8384, 2020. [Yun et al., 2019] Sangdoo Yun, Dongyoon Han, Seong Joon Oh, Sanghyuk Chun, Junsuk Choe, and Youngjoon Yoo. Cutmix: Regularization strategy to train strong classiﬁers with localizable features. CoRR, abs/1905. 04899, 2019. [Zheng et al., 2021] Sixiao Zheng, Jiachen Lu, Hengshuang Zhao, Xiatian Zhu, Zekun Luo, Yabiao Wang, Yanwei Fu, Jianfeng Feng, Tao Xiang, Philip HS Torr, et al. Rethink- ing semantic segmentation from a sequence-to-sequence perspective with transformers. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 6881–6890, 2021."
+    },
+    {
+      "id": "semantic_chunk::ACD_p8_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.6270517110824585,
+      "text": "In CVPR, pages 2485–2494, 2020. [Guo et al., 2020 ] Chunle Guo, Chongyi Li, Jichang Guo, Chen Change Loy, Junhui Hou, Sam Kwong, and Runmin Cong. Zero-reference deep curve estimation for low-light image enhancement. In CVPR, pages 1780–1789, 2020. [H¨ane et al. , 2011] Christian H ¨ane, Christopher Zach, Jong- woo Lim, Ananth Ranganathan, and Marc Pollefeys. Stereo depth map fusion for robot navigation. In IROS, pages 1618–1625, 2011. [He et al., 2016 ] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for image recog- nition. In CVPR, pages 770–778, 2016. [Hinton, 2015] Geoffrey Hinton. Distilling the knowledge in a neural network. arXiv, 2015. [Hu et al., 2021 ] Edward J Hu, Y elong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Y uanzhi Li, Shean Wang, Lu Wang, and Weizhu Chen. Lora: Low-rank adaptation of large language models. arXiv, 2021. [Liu et al., 2015a ] Fayao Liu, Chunhua Shen, and Guosheng Lin. Deep convolutional neural ﬁelds for depth estimation from a single image. In CVPR, pages 5162–5170, 2015. [Liu et al., 2015b] Fayao Liu, Chunhua Shen, Guosheng Lin, and Ian Reid."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p9_sc1",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 9,
+      "score": 0.6269819736480713,
+      "text": "5, 7 [8] Yohann Cabon, Naila Murray, and Martin Humenberger. Vir- tual kitti 2. arXiv:2001. 10773, 2020. 7 [9] Po-Yi Chen, Alexander H Liu, Yen-Cheng Liu, and Yu- Chiang Frank Wang. Towards scene understanding: Un- supervised monocular depth estimation with semantic-aware representation. In CVPR, 2019. 2, 4 [10] Weifeng Chen, Zhao Fu, Dawei Yang, and Jia Deng. Single- image depth perception in the wild. In NeurIPS, 2016. 2 [11] Zhe Chen, Yuchen Duan, Wenhai Wang, Junjun He, Tong Lu, Jifeng Dai, and Yu Qiao. Vision transformer adapter for dense predictions. In ICLR, 2023. 7 [12] Bowen Cheng, Ishan Misra, Alexander G Schwing, Alexander Kirillov, and Rohit Girdhar. Masked-attention mask trans- former for universal image segmentation. In CVPR, 2022. 7 [13] Jaehoon Cho, Dongbo Min, Youngjung Kim, and Kwanghoon Sohn. Diml/cvl rgb-d dataset: 2m rgb-d images of natural indoor and outdoor scenes. arXiv:2110. 11590, 2021. 3, 7 [14] Marius Cordts, Mohamed Omran, Sebastian Ramos, Timo Rehfeld, Markus Enzweiler, Rodrigo Benenson, Uwe Franke, Stefan Roth, and Bernt Schiele. The cityscapes dataset for semantic urban scene understanding. In CVPR, 2016."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p11_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.626956582069397,
+      "text": "Cutmix: Regu- larization strategy to train strong classifiers with localizable features. In ICCV, 2019. 4 [84] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, 2023. 8 [85] Youcai Zhang, Xinyu Huang, Jinyu Ma, Zhaoyang Li, Zhaochuan Luo, Yanchun Xie, Yuzhuo Qin, Tong Luo, Yaqian Li, Shilong Liu, et al. Recognize anything: A strong image tagging model. arXiv:2306. 03514, 2023. 4 [86] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. In ICCV, 2023. 6 [87] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba. Places: A 10 million image database for scene recognition. TPAMI, 2017. 3 [88] Bolei Zhou, Hang Zhao, Xavier Puig, Sanja Fidler, Adela Bar- riuso, and Antonio Torralba. Scene parsing through ade20k dataset. In CVPR, 2017. 6 [89] Barret Zoph, Golnaz Ghiasi, Tsung-Yi Lin, Yin Cui, Hanx- iao Liu, Ekin Dogus Cubuk, and Quoc Le. Rethinking pre- training and self-training. In NeurIPS, 2020. 2 10381"
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p3_sc4",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.626833975315094,
+      "text": "5 V ertical CutDepth Recently, a depth-speciﬁc data augmentation method named CutDepth has been proposed [Ishii and Yamashita, 2021 ], which replaces a part of the input image with the ground- truth depth map to provide diversity to the input image and enable the network to focus on the high-frequency area. In CutDepth, the coordinates (l,u ) and size (w,h ) of the cut re- gion are randomly chosen. However, we believe that the ver- tical and horizontal directions should not be regarded equally for depth estimation based on the following discovery. A pre- vious study [Dijk and Croon, 2019] suggested that the depth estimation networks mainly use vertical position in the im- age rather than apparent size or texture to predict the depth of arbitrary obstacles. This motivates us to proposevertical Cut- Depth, which enhances the original CutDepth by preserving the vertical geometric information. In vertical CutDepth, the ground-truth depth map replaces an area on I with the same location ofY , but the crop is not applied along the vertical di- rection. Therefore, the coordinate of the replacement region"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p2_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.6262344717979431,
+      "text": "During training, a depth network and a pose net- work are designed to construct the geometric relationship between images, and a view reconstruction loss is used to supervise the training process. Based on this framework, many works are proposed to handle the challenges caused by occlusions [Godard et al. , 2019 ], dynamic objects [Li et al. , 2021; Lee et al. , 2021 ] and scale ambiguity [Xue et al. , 2020; Wagstaff and Kelly, 2021; Petrovai and Nede- vschi, 2022]. Meanwhile, some methods [Chen et al., 2019; Guizilini et al. , 2020b; Jung et al. , 2021; Ma et al. , 2022; Klingner et al., 2020] introduce and fuse semantic informa- tion into training to improve the depth estimation perfor- mance. Many methods [Zhao et al., 2022b; Lyu et al., 2021; Guizilini et al. , 2020a; Yan et al. , 2021] try to improve the depth estimation from the aspect of network architectures. Most recently, MonoViT [Zhao et al., 2022b; Spencer et al., 2023] and MonoFormer[Bae et al., 2023] combine both CNN and Transformer blocks to learn both local and global features of images, and their results on unseen scenes show the con- vincing generalization ability of their network."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p2_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 2,
+      "score": 0.625853419303894,
+      "text": "by mod- elling moving objects at training time [3, 5, 70, 19, 54] or by modelling occlusion [19, 18]. While these improve- ments achieve higher scores with equivalently trained archi- tectures, some works aim for improved depth accuracy at the expense of efﬁciency. For example, by using higher res- olution images [47], larger networks [20] or classiﬁcation instead of regression at the output layer [13]. Efﬁcient depth estimation. A relatively small number of works focus on efﬁciency speciﬁcally for depth. Poggi et al. [51] introduce PyDNet, which uses an image pyramid to enable a high receptive ﬁeld with a small number of pa- rameters. Wofk et al. [65] introduce FastDepth, which uses depthwise separable layers and network pruning to achieve efﬁcient depth estimation. An alternative angle on efﬁ- cient depth estimation is to focus on the training procedure. Several works use knowledge distillation to enable a small depth estimation network to learn some of the knowledge from a larger network e.g. [59, 44]. In contrast to these works, our contribution is to change the internal representation of depth within the network it- self."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p3_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.6258045434951782,
+      "text": "Then, a reconstructed target image is generated, and the loss is computed to optimize the model (Section 3. 4). Enhanced local features. Using shallow instead of deeper networks can effectively reduce the size of a model. As mentioned shallow CNNs have very limited receptive ﬁelds, while using dilated convolution [42] is helpful to en- large receptive ﬁelds. By stacking the proposed Consec- utive Dilated Convolutions (CDC) the network is able to ”observe” the input at a larger area, while not introducing extra training parameters. Low-computation global information. The enhanced local features are not enough to learn a global repre- sentation of the input without the help of Transform- ers to model long-range information. The MHSA mod- ule in the original Transformer [8] has a linear compu- tational complexity to the input dimension, hence it lim- its the design of lightweight models. Instead of comput- ing the attention across the spatial dimension the proposed Local-Global Features Interaction (LGFI) module adopts the cross-covariance attention [1] to compute the attention along the feature channels."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p10_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.6253842115402222,
+      "text": "This choice can not to fully demonstrate the model’s perfor- mance. Therefore, we train our method on both the raw depth annota- tions(rawDepths) and the completed reﬁned depth annotations(Depths) from NYU1449. The experimental results are shown in Table 8. Our Pattern Recognition 171 (2026) 112279 10"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p10_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.6249463558197021,
+      "text": "[52] Hengrun Zhao, Bolun Zheng, Shanxin Yuan, Hua Zhang, Chenggang Yan, Liang Li, and Gregory Slabaugh. 2022. CBREN: Convolutional Neural Networks for Constant Bit Rate Video Quality Enhancement. IEEE Transactions on Circuits and Systems for Video Technology 32, 7 (2022), 4138–4149. [53] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. 2023. Unleashing text-to-image diffusion models for visual perception. In Proceedings of the IEEE/CVF International Conference on Computer Vision . 5729– 5739. [54] B Zheng, S Yuan, C Yan, X Tian, J Zhang, Y Sun, L Liu, A Leonardis, and G Slabaugh. 2022. Learning Frequency Domain Priors for Image Demoireing. IEEE Transactions on Pattern Analysis and Machine Intelligence44, 11 (2022), 7705–7717."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p10_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 10,
+      "score": 0.6243785619735718,
+      "text": "Structured knowledge distillation for dense prediction. PAMI, 2020. [45] Zhuang Liu, Jianguo Li, Zhiqiang Shen, Gao Huang, Shoumeng Yan, and Changshui Zhang. Learning efﬁcient convolutional networks through network slimming. InICCV, 2017. [46] Chenchi Luo, Yingmao Li, Kaimo Lin, George Chen, Seok-Jun Lee, Jihwan Choi, Youngjun Francis Yoo, and Michael O. Polley. Wavelet synthesis net for disparity es- timation to synthesize dslr calibre bokeh effect on smart- phones. In CVPR, 2020. [47] Chenxu Luo, Zhenheng Yang, Peng Wang, Yang Wang, Wei Xu, Ram Nevatia, and Alan Yuille. Every pixel counts++: Joint learning of geometry and motion with 3D holistic un- derstanding. PAMI, 2019. [48] Xiaotong Luo, Jiangtao Zhang, Ming Hong, Yanyun Qu, Yuan Xie, and Cuihua Li. Deep wavelet network with do- main adaptation for single image demoireing. In CVPR Workshops, 2020. [49] Nikolaus Mayer, Eddy Ilg, Philip Hausser, Philipp Fischer, Daniel Cremers, Alexey Dosovitskiy, and Thomas Brox. A large dataset to train convolutional networks for disparity, optical ﬂow, and scene ﬂow estimation. In Proceedings of the IEEE conference on computer vision and pattern recog- nition, pages 4040–4048, 2016."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p9_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 9,
+      "score": 0.6243464946746826,
+      "text": "In ICLR, 2020. 2, 4 [21] Vitor Guizilini, Igor Vasiljevic, Dian Chen, Rares, Ambrus,, and Adrien Gaidon. Towards zero-shot scale-aware monocu- lar depth estimation. In ICCV, 2023. 2 [22] Derek Hoiem, Alexei A Efros, and Martial Hebert. Recover- ing surface layout from an image. IJCV, 2007. 2 [23] Jitesh Jain, Jiachen Li, Mang Tik Chiu, Ali Hassani, Nikita Orlov, and Humphrey Shi. Oneformer: One transformer to rule universal image segmentation. In CVPR, 2023. 7 [24] Yuanfeng Ji, Zhe Chen, Enze Xie, Lanqing Hong, Xihui Liu, Zhaoqiang Liu, Tong Lu, Zhenguo Li, and Ping Luo. Ddp: Diffusion model for dense visual prediction. In ICCV, 2023. 7 [25] Lei Ke, Mingqiao Ye, Martin Danelljan, Yifan Liu, Yu-Wing Tai, Chi-Keung Tang, and Fisher Yu. Segment anything in high quality. In NeurIPS, 2023. 4 [26] Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer White- head, Alexander C Berg, Wan-Yen Lo, et al. Segment any- thing. In ICCV, 2023. 1, 2, 3 [27] Marvin Klingner, Jan-Aike Term¨ohlen, Jonas Mikolajczyk, and Tim Fingscheidt. Self-supervised monocular depth es- timation: Solving the dynamic object problem by semantic guidance."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Global-Local_p1_sc0",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.714959979057312,
+      "text": "Global-Local Path Networks for Monocular Depth Estimation with V ertical CutDepth Doyeon Kim1 , Woonghyun Ka2 , Pyunghwan Ahn1 , Donggyu Joo1 , Sewhan Chun2 and Junmo Kim1,2 School of Electrical Engineering, KAIST, South Korea1 Division of Future Vehicle, KAIST, South Korea2 {doyeon kim, kwh950724, p.ahn, jdg105, alskdjfhgk, junmo.kim}@kaist.ac.kr Abstract Depth estimation from a single image is an impor- tant task that can be applied to various ﬁelds in computer vision, and has grown rapidly with the development of convolutional neural networks. In this paper, we propose a novel structure and train- ing strategy for monocular depth estimation to fur- ther improve the prediction accuracy of the net- work. We deploy a hierarchical transformer en- coder to capture and convey the global context, and design a lightweight yet powerful decoder to gen- erate an estimated depth map while considering lo- cal connectivity. By constructing connected paths between multi-scale local features and the global decoding stream with our proposed selective fea- ture fusion module, the network can integrate both representations and recover ﬁne details.",
+      "estimated_tokens": 266
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p1_sc3",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7047396302223206,
+      "text": "Motivated by this knowledge, we leverage the global rela- tionships explicitly by building the global path with multi- ple transformer blocks. Second, we design a highly utilized decoder with an effective fusion module to enable local fea- tures to produce a ﬁne depth map while preserving structural details. Contrary to the transformer, skip connections tend to create smaller receptive ﬁelds and help to focus on short- distance information [Luo et al., 2016]. Thus, the proposed architecture is intended to take the complementary advan- tages of both transformer and skip connections. This is en- abled by aggregating the encoded and the decoded features using an input-dependent fusion module, called selective fea- ture fusion (SFF). The SFF module aids the model to selec- tively focus on the salient regions by estimating the attention map for both features with a very low computational burden. Compared to other decoders, our decoder achieves superior performance with much lower complexity. Furthermore, we train the network with an additional task speciﬁc data augmentation technique to boost the model ca- pability.",
+      "estimated_tokens": 233
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 499,
+    "compressed_context_tokens": 499,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 499,
+  "context_tokens": 499,
+  "prompt_token_estimate": 854,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_global_local_path_sota_comparison_methods",
+  "answer": "<think>The user is asking what methods Global-Local Path Networks compared its performance against. Let me look through the provided materials carefully.\n\nThe provided excerpts are from the abstract and a section of the Global-Local Path Networks paper. Looking at the text:\n\n- The abstract mentions they propose a novel structure and training strategy, but doesn't list specific comparison methods.\n- The second excerpt discusses their approach (global path with transformer blocks, SFF module) but doesn't list specific competing methods either.\n\nThe materials don't contain information about which specific methods they compared against. The comparison methods would typically be listed in an experimental section/table, which isn't included in the provided excerpts.\n\nSo I should indicate that the information is missing.</think>\n\n{\"answer\":\"资料中未提及 Global-Local Path Networks 与哪些具体方法进行了性能比较。\",\"items\":[],\"missing_information\":\"缺少论文实验部分的内容，包括对比方法的名称及其具体性能数据。提供的资料仅包含摘要和方法概述部分，未涉及实验对比的具体方法列表。\"}",
+  "usage": {
+    "prompt_tokens": 900,
+    "completion_tokens": 202,
+    "total_tokens": 1102,
+    "model": "MiniMax-M3"
+  }
+}

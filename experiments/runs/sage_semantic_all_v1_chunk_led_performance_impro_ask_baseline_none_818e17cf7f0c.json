@@ -1,0 +1,526 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_led_performance_impro_ask_baseline_none_818e17cf7f0c",
+  "dry_run": false,
+  "query": "LED 在不同架构上取得了多大的 RMSE 改进？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::LED_p9_chunk_13",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.8034714460372925,
+      "text": "on HB, with a +32.63% RMSE. The LED→HB performance is\n∼8 m RMSE, compared to∼17 m RMSE for HB→LED. Furthermore, we show that incor-\nporating only 10% of HB data reduces performance drop (see fig. 6 (c)), limiting RMSE\nincrease to just +17.11%. It enables"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_17",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7590088844299316,
+      "text": "erformance over LB across all met-\nrics. DepthFormer (0.5°) shows -22.4% RMSE improvement. The qualitative results in fig. 7\nshow LED’s robustness under interfering light sources,e.g., car headlights, street lights.\nTo account for objects passing through t"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_12",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7498623132705688,
+      "text": "ern data andvice versa. We report results in table 4. The HB-\ntrained model fails significantly on pattern data (+182.85% RMSE), while the LED-trained\nmodel performs reasonably on HB, with a +32.63% RMSE. The LED→HB performance is\n∼8 m RMSE, compared to∼17"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.7385753989219666,
+      "text": "LED with HB (table 1), we observe a significant im-\nprovement in metrics within the region-of-interest (ROI): LED yields -11% RMSE. Using\nLED, the model provides more accurate distance estimations. However, its errors are often\nrelated to pattern occlusion"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_14",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.7297476530075073,
+      "text": "RMSE\non the entire image. We also report enhancement in relative metrics: Abs Rel (resp. -3.03%\nand -1.50%) and Sq Rel (resp. -23.27% and -9.23%). These results suggest that the HD\nheadlight pattern provides valuable information, such as object size and sc"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.7201902866363525,
+      "text": "selected randomly in the whole\ndataset. Figure S2 illustrates the RMSE of Depth Anything V2 across different numbers of\nfine-tuning images. We observe that the model is near its performance peak with just 1,000\nimages. All LED-enhanced models outperform th"
+    },
+    {
+      "id": "chunk::LED_p10_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.7118416428565979,
+      "text": "ted to capturing fine\ndetails. When fine-tuned with only 1,000\nimages, we observe -24.3% RMSE com-\npared to the LB baseline. Performances\nshown by DepthFormer and Depth Any-\nthing V2 underpin the benefits of LED in\ncomplex real-world scenarios.\n6 Limitatio"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_16",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7023447751998901,
+      "text": "st\n5.6 Real-world Scenarios\nWe show the applicability of our method in real world scenarios using our in-house dataset.\nWe report results in table 6. LED significantly boosts performance over LB across all met-\nrics. DepthFormer (0.5°) shows -22.4% RMSE im"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_chunk_11",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.701452374458313,
+      "text": "rtion [42, 48], and arti-\nfacts [49, 50]. This misalignment stems from three inter-\nrelated issues:\n*Corresponding author\nThis work was supported by the National Natural Science Foundation\nof China under Grant 62172137.\n• Inevitable Brightness Residual : T"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_chunk_11",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.701452374458313,
+      "text": "rtion [42, 48], and arti-\nfacts [49, 50]. This misalignment stems from three inter-\nrelated issues:\n*Corresponding author\nThis work was supported by the National Natural Science Foundation\nof China under Grant 62172137.\n• Inevitable Brightness Residual : T"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6994259357452393,
+      "text": "network to our distribution and produce consistent depth predictions on both\nLED and HB. LED-models demonstrate significant improvements across all metrics (-15.5%\nRMSE with 1,000 images). This underlines the effectiveness of our method in enhancing\nnight"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6950150728225708,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17\nLdepth Lgrad Lnormal Metrics\nL1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n✓ ✗ ✗ ✗ ✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.02"
+    },
+    {
+      "id": "chunk::Depth_Anything_p3_chunk_23",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 3,
+      "score": 0.6916294097900391,
+      "text": "led sources for their diverse scenes.\nThey contain more than 62M images in total. The details are\nprovided in the bottom half of Table 1.\nTechnically, given the previously obtained MDE teacher\nmodel T , we make predictions on the unlabeled set Du to\nobtain"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.691083550453186,
+      "text": "6DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nFigure 5:Qualitative results on NSDD.LED results exhibit higher precision, and more ac-\ncurate object boundaries and shapes compared to HB. Red boxes indicate enhanced regions.\nPattern RMSE↓"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_12",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6901729702949524,
+      "text": "ith 13.2%\non ABS rel and 9.7% on RMSE.\nIn addition, Table 4.2 shows that the joint application\nof BPG and ING significantly improves RMSE (7.2% in\nnuScenec-Night and 8.4% in RobotCar-Night compared to\nthe second-best), suggesting that our data distribution"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_15",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.6892310976982117,
+      "text": "SE,\nRMSE log, δ1, δ2 and δ3:\nAbs rel = 1\n|Nd|\nX\ni∈Nd\n|di − d∗\ni |\nd∗\ni\n,\nSq rel = 1\n|Nd|\nX\ni∈Nd\n∥di − d∗\ni ∥2\nd∗\ni\n,\nRMSE =\ns\n1\n|Nd|\nX\ni∈Nd\n∥di − d∗\ni ∥2,\nRMSE log =\ns\n1\n|Nd|\nX\ni∈Nd\n∥ log di − log d∗\ni ∥2,\nδj : % of di s.t. max\n\u0012 di\nd∗\ni\n, d∗\ni\ndi\n\u0013\n< 1.25"
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6878747940063477,
+      "text": "𝛿1 ↑  AbsRel↓  RMSE↓ log10 ↓\n3 ×  0.792  0.238  2.043  0.078\n✓  0.794  0.234  1.995  0.078\n6 ×  0.787  0.234  1.963  0.079\n✓  0.796  0.234  1.924  0.078\n9 ×  0.779  0.233  1.934  0.078\n✓  0.799  0.230  1.901  0.073\n12 ×  0.795  0.238  2.089  0.076\n✓  0.792"
+    },
+    {
+      "id": "chunk::SSRDepth_p9_chunk_1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 9,
+      "score": 0.6872637271881104,
+      "text": "𝛿1 ↑ 𝛿2 ↑  AbsRel↓  RMSE↓ log 10 ↓ 𝛿1 ↑ 𝛿2 ↑  AbsRel↓  RMSE↓ log 10 ↓ \n  BTS [12]  0.740  0.933  0.172  0.515  0.075  0.831  0.948  0.115  5.368  0.054  \n  AdaBins [9]  0.771  0.944  0.159  0.476  0.068 0.862  0.957  0.112  5.218  0.048  \n  LocalBins [18]"
+    },
+    {
+      "id": "chunk::LED_p21_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.6852093935012817,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT21\nTest set RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nLED (0.5°)6.859 0.102 0.041 0.153 14.162 1.511 0.894 0.971 0.989LED (0.25°)5.787 0.082 0.033 0.126 11.875 1.0839 0.929 0.983 0."
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.6840704679489136,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 9\nMask ratio Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1.25 ↑ δ <1.252 ↑ δ <1.253 ↑\n0% 0.104 0.741 4.489 0.180 0.890 0.964 0.984\n10% 0.104 0.729 4.482 0.179 0.891 0.964 0.983\n20% 0.103 0.726 4.447 0.179 0.893 0.965 0.984\n40% 0"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6839395761489868,
+      "text": "on NSDD, Depth Anything V2 [49] performs poorly, with an\nRMSE of∼19 m (see table 5), highlighting the complexity of nighttime data and the need\nfor specialized models. It performs slightly better on LED images, possibly due to its ability\nto leverage the p"
+    },
+    {
+      "id": "chunk::LED_p21_chunk_8",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.6793725490570068,
+      "text": "monstrate LED capabilities on complex real-world scenarios.\nWe illustrate additional qualitative results in fig. S5. A video of DepthFormer (LED 0.25°)\nqualitative results on our real-world dataset is available in the supplementary material.\nJ Qualitative"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.676466703414917,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nDomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n(HB→HB)6.1204 0.0903 0.0233 0.1353 13.4847 3.3579 0.9489 0.9812 0.9908(HB→LED)17.3113 0.4479 0.1955 0.6817 52.5132 20.0263 0.4699 0"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6764023303985596,
+      "text": "s offers valuable insights into LED behavior on more recent\narchitectures compared to the convolutional ones that are common in embedded devices.\nComparing the encoder-decoder LED with HB (table 1), we observe a significant im-\nprovement in metrics within"
+    },
+    {
+      "id": "chunk::s_p6_chunk_9",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.6755416393280029,
+      "text": "rames AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ AbsRel↓ SqRel↓ RMSE↓ δ1 ↑\nMonodepth2 [10] [8] 1 0.1209 0.723 3.335 86.61 0.3909 3.547 8.227 22.51\nDeFeatNet [23] [27] 1 0.2470 2.980 7.884 65.00 0.3340 4.589 8.606 58.60\nADIDS [18] [27] 1 0.2390 2.089 6.743 61.40 0.2870 2.56"
+    },
+    {
+      "id": "chunk::Depth_Anything_p6_chunk_14",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 6,
+      "score": 0.674045979976654,
+      "text": "d Higher is better ↑ Lower is better ↓\nδ1 δ2 δ3 AbsRel RMSE RMSE log\nAdaBins [3] 0.964 0.995 0.999 0.058 2.360 0.088\nDPT [46] 0.959 0.995 0.999 0.062 2.573 0.092\nP3Depth [43] 0.953 0.993 0.998 0.071 2.842 0.103\nNeWCRFs [82] 0.974 0.997 0.999 0.052 2.129 0."
+    },
+    {
+      "id": "chunk::LED_p9_chunk_8",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6740083694458008,
+      "text": "rms slightly better on LED images, possibly due to its ability\nto leverage the pattern’s geometric cues. Fine-tuning with as little as 100 images is sufficient\nfor adapting the network to our distribution and produce consistent depth predictions on both\nLE"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_17",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.6730712652206421,
+      "text": "th, and Nd denotes the total number\nof pixels with real-depth values. The definitions of Sq rel\nand RMSE suggest that they are more sensitive to prediction\noutliers compared to ABS rel.\nE Additional results\nE.1 Evaluation on nuScenes-Day and\nRobotCar-Day\nB"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6730488538742065,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT7\nModelRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n(HB) O-ROI9.2533 0.1598 0.0249 0.2047 20.4447 11.4068 0.9385 0.97140.9828(LED) O-ROI9.0070 0.1295 0.0221 0.2027 20.2348 8.7407 0.942"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6730114221572876,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 8\nID SD PGD LKD MVC Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1.25 ↑ δ <1.252 ↑ δ <1.253 ↑\n1 0.107 0.787 4.580 0.182 0.887 0.963 0.983\n2 ✓ 0.434 4.630 11.99 0.579 0.306 0.568 0.777\n3 ✓ 0.105 0.757 4.521 0.181 0.889 0.964 0.984"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_4",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6724311709403992,
+      "text": "ample\nto 640×192, where 640=1024/1.6) and resize them back.\n(ID) Method AbsRel SqRel RMSE a1 a2\nOurs\n(0) Jasmine 0.090 0.581 3.944 0.919 0.972\n(a) Basic Component\n(1) w/o SD Prior 0.516 6.019 12.06 0.258 0.501\n(2) w/o MIR+SSG 0.175 2.264 7.969 0.790 0.929"
+    },
+    {
+      "id": "chunk::Depth_Anything_p6_chunk_0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 6,
+      "score": 0.6724229454994202,
+      "text": "Method Higher is better ↑ Lower is better ↓\nδ1 δ2 δ3 AbsRel RMSE log10\nAdaBins [3] 0.903 0.984 0.997 0.103 0.364 0.044\nDPT [46] 0.904 0.988 0.998 0.110 0.357 0.045\nP3Depth [43] 0.898 0.981 0.996 0.104 0.356 0.043\nSwinV2-L [39] 0.949 0.994 0.999 0.083 0.287"
+    },
+    {
+      "id": "chunk::dav2_p9_chunk_0",
+      "source": "data\\dav2.pdf",
+      "page": 9,
+      "score": 0.6719380617141724,
+      "text": "Method Higher is better ↑ Lower is better ↓\nδ1 δ2 δ3 AbsRel RMSE log10\nAdaBins [5] 0.903 0.984 0.997 0.103 0.364 0.044\nDPT [55] 0.904 0.988 0.998 0.110 0.357 0.045\nP3Depth [51] 0.898 0.981 0.996 0.104 0.356 0.043\nSwinV2 [44] 0.949 0.994 0.999 0.083 0.287 0"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6703543066978455,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9\nPattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nEncoder-decoderLB 14.199 0.187 0.072 0.292 28.938 5.620 0.772 0.909 0.956LED 0.5°11.089 0.119 0.050 0.213 21.251 2.304 0.864 0.95"
+    },
+    {
+      "id": "chunk::LED_p2_chunk_16",
+      "source": "data\\LED.pdf",
+      "page": 2,
+      "score": 0.670122504234314,
+      "text": "ation archi-\ntecture to improve nighttime performances (RMSE: -11% on encoder-decoder, -24.06% on\nAdabins [4], -8.00% on DepthFormer [27], -15.5% on Depth Anything V2 [49])."
+    },
+    {
+      "id": "chunk::dav2_p9_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 9,
+      "score": 0.6692473888397217,
+      "text": "0.063 0.228 0.027\nOurs (ViT-L) 0.984 0.998 1.000 0.056 0.206 0.024\n(a) NYU-D dataset\nMethod Higher is better ↑ Lower is better ↓\nδ1 δ2 δ3 AbsRel RMSE RMSE log\nAdaBins [5] 0.964 0.995 0.999 0.058 2.360 0.088\nP3Depth [51] 0.953 0.993 0.998 0.071 2.842 0.103"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_chunk_8",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.6688364744186401,
+      "text": "les\nf (x) such that the mean brightness of the scaled output\nE[λf (x)] aligns with E[y] . This eliminates the interfer-\nence of brightness differences during optimization.\nTo dynamically balance these two terms, we intro-\nduce W , which represents the Bhat"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_chunk_8",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.6688364744186401,
+      "text": "les\nf (x) such that the mean brightness of the scaled output\nE[λf (x)] aligns with E[y] . This eliminates the interfer-\nence of brightness differences during optimization.\nTo dynamically balance these two terms, we intro-\nduce W , which represents the Bhat"
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_11",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.6684229373931885,
+      "text": "ces𝑁𝐹 is computed as:\n𝑁𝐹 = max\n\u0012\u0016 𝐹\n𝑠𝐹\n+ 0.5\n\u0017\n, 1\n\u0013\n. (3)\nAdditionally, the brightness scale𝑠𝑏 is sampled as𝑠𝑏∼𝑈(0.4, 1),\nand the gamma correction factor is sampled as 𝑔𝐹 ∼ 𝑈(1.8, 2.2).\nUsing the Phong illumination model [28, 40], the final flare image\nat"
+    },
+    {
+      "id": "chunk::Depth_Anything_p7_chunk_4",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 7,
+      "score": 0.6683893203735352,
+      "text": "[7] DDAD [19] ETH3D [51] DIODE [59] Mean\nAbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1\nBlendedMVS [76] 0.089 0.918 0.068 0.958 0.556 0.689 0.305 0.731 0.148 0.845 0.092 0.921 0.210 0.844\nDIML [13] 0.099 0.907 0.055 0.969 0.573 0.722"
+    },
+    {
+      "id": "chunk::Global-Local_p9_chunk_10",
+      "source": "data\\Global-Local.pdf",
+      "page": 9,
+      "score": 0.6675052046775818,
+      "text": "ted in Table 7.\nMethod δ1↑ δ2↑ δ3↑ AbsRel↓ RMSE↓ log10↓\nVNL [Yin et al., 2019] 0.54 0.84 0.93 0.24 1.06 0.11\nBTS [Lee et al., 2019] 0.53 0.84 0.94 0.24 1.10 0.12\nDORN[Fu et al., 2018] 0.55 0.81 0.92 0.24 1.13 0.12\nAdaBins[Bhat et al., 2021] 0.55 0.86 0.95"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_18",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6665392518043518,
+      "text": "rmance with just 50%. In addition,\nwe observe that incorporating just 10% of LED data into the HB training set enable the\nnetwork to learn relevant features and enhance its performances when used with pattern (see\nfig. 6 (c)). Therefore, any vehicle equipp"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_17",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6664982438087463,
+      "text": "to fig. 6 (b)). Our results show\nthat encoder-decoder model trained with less than 20% of the LED data outperforms one\ntrained on the full HB dataset, reaching near-peak performance with just 50%. In addition,\nwe observe that incorporating just 10% of LED"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p15_chunk_0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 15,
+      "score": 0.6651551723480225,
+      "text": "Method σscale Abs RelSq Rel RMSE RMSE logδ <1.25 δ <1.252 δ <1.253\nZhou [76]† 0.210 0.258 2.338 7.040 0.309 0.601 0.853 0.940\nMahjourian [40]0.189 0.221 1.663 6.220 0.265 0.665 0.892 0.962\nGeoNet [71] 0.172 0.202 1.521 5.829 0.244 0.707 0.913 0.970\nRanjan"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p15_chunk_0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 15,
+      "score": 0.6651551723480225,
+      "text": "Method σscale Abs RelSq Rel RMSE RMSE logδ <1.25 δ <1.252 δ <1.253\nZhou [76]† 0.210 0.258 2.338 7.040 0.309 0.601 0.853 0.940\nMahjourian [40]0.189 0.221 1.663 6.220 0.265 0.665 0.892 0.962\nGeoNet [71] 0.172 0.202 1.521 5.829 0.244 0.707 0.913 0.970\nRanjan"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_12",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.6616145372390747,
+      "text": "erent brightness levels, facil-\nitating us to investigate the loss curve with respect to the\nbrightness variation only.\nBased on the above experimental design, we present the\ncurve of the original L1 loss (Figure 6(a)), and the curves\nof the GT-mean L1 los"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_chunk_12",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.6616145372390747,
+      "text": "erent brightness levels, facil-\nitating us to investigate the loss curve with respect to the\nbrightness variation only.\nBased on the above experimental design, we present the\ncurve of the original L1 loss (Figure 6(a)), and the curves\nof the GT-mean L1 los"
+    },
+    {
+      "id": "chunk::LED_p20_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.6612417101860046,
+      "text": "20DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\n[11] using the available annotation in the Nighttime Synthetic Drive Dataset. Results are re-\nported in table S5. LED doesn’t improve, nor degrade performances. We even note a better\nstabil"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6611583828926086,
+      "text": "day – RobotCar night – RobotCar\nMethod source sup. tr.data absRel sqRel RMSE δ1 absRel sqRel RMSE δ1\nMonodepth2 [11] [ours] M ∗ d 0.1196 0.670 3.164 ......86.38 0.3029 1.724 5.038 45.88\nDeFeatNet [33] [37] M ∗ a: dn 0.2470 2.980 7.884 65.00 0.3340 4.589 8."
+    },
+    {
+      "id": "chunk::dav2_p18_chunk_14",
+      "source": "data\\dav2.pdf",
+      "page": 18,
+      "score": 0.6610316038131714,
+      "text": "] DIODE [76]\nAbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1\nBlendedMVS [92] 0.088 0.919 0.069 0.957 0.538 0.661 0.150 0.839 0.095 0.915\nHypersim [58] 0.086 0.928 0.054 0.972 0.550 0.711 0.123 0.884 0.088 0.937\nIRS [77] 0.100 0.900 0.055 0.973 0.435 0.73"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::LED_p9_chunk_13",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.8034714460372925,
+      "text": "on HB, with a +32.63% RMSE. The LED→HB performance is\n∼8 m RMSE, compared to∼17 m RMSE for HB→LED. Furthermore, we show that incor-\nporating only 10% of HB data reduces performance drop (see fig. 6 (c)), limiting RMSE\nincrease to just +17.11%. It enables",
+      "estimated_tokens": 82
+    },
+    {
+      "id": "chunk::LED_p9_chunk_17",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7590088844299316,
+      "text": "erformance over LB across all met-\nrics. DepthFormer (0.5°) shows -22.4% RMSE improvement. The qualitative results in fig. 7\nshow LED’s robustness under interfering light sources,e.g., car headlights, street lights.\nTo account for objects passing through t",
+      "estimated_tokens": 62
+    },
+    {
+      "id": "chunk::LED_p9_chunk_12",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7498623132705688,
+      "text": "ern data andvice versa. We report results in table 4. The HB-\ntrained model fails significantly on pattern data (+182.85% RMSE), while the LED-trained\nmodel performs reasonably on HB, with a +32.63% RMSE. The LED→HB performance is\n∼8 m RMSE, compared to∼17",
+      "estimated_tokens": 72
+    },
+    {
+      "id": "chunk::LED_p7_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.7385753989219666,
+      "text": "LED with HB (table 1), we observe a significant im-\nprovement in metrics within the region-of-interest (ROI): LED yields -11% RMSE. Using\nLED, the model provides more accurate distance estimations. However, its errors are often\nrelated to pattern occlusion",
+      "estimated_tokens": 59
+    },
+    {
+      "id": "chunk::LED_p8_chunk_14",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.7297476530075073,
+      "text": "RMSE\non the entire image. We also report enhancement in relative metrics: Abs Rel (resp. -3.03%\nand -1.50%) and Sq Rel (resp. -23.27% and -9.23%). These results suggest that the HD\nheadlight pattern provides valuable information, such as object size and sc",
+      "estimated_tokens": 69
+    },
+    {
+      "id": "chunk::LED_p17_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.7201902866363525,
+      "text": "selected randomly in the whole\ndataset. Figure S2 illustrates the RMSE of Depth Anything V2 across different numbers of\nfine-tuning images. We observe that the model is near its performance peak with just 1,000\nimages. All LED-enhanced models outperform th",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::LED_p10_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.7118416428565979,
+      "text": "ted to capturing fine\ndetails. When fine-tuned with only 1,000\nimages, we observe -24.3% RMSE com-\npared to the LB baseline. Performances\nshown by DepthFormer and Depth Any-\nthing V2 underpin the benefits of LED in\ncomplex real-world scenarios.\n6 Limitatio",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::LED_p9_chunk_16",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7023447751998901,
+      "text": "st\n5.6 Real-world Scenarios\nWe show the applicability of our method in real world scenarios using our in-house dataset.\nWe report results in table 6. LED significantly boosts performance over LB across all met-\nrics. DepthFormer (0.5°) shows -22.4% RMSE im",
+      "estimated_tokens": 65
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_chunk_11",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.701452374458313,
+      "text": "rtion [42, 48], and arti-\nfacts [49, 50]. This misalignment stems from three inter-\nrelated issues:\n*Corresponding author\nThis work was supported by the National Natural Science Foundation\nof China under Grant 62172137.\n• Inevitable Brightness Residual : T",
+      "estimated_tokens": 66
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_chunk_11",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.701452374458313,
+      "text": "rtion [42, 48], and arti-\nfacts [49, 50]. This misalignment stems from three inter-\nrelated issues:\n*Corresponding author\nThis work was supported by the National Natural Science Foundation\nof China under Grant 62172137.\n• Inevitable Brightness Residual : T",
+      "estimated_tokens": 66
+    },
+    {
+      "id": "chunk::LED_p9_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6994259357452393,
+      "text": "network to our distribution and produce consistent depth predictions on both\nLED and HB. LED-models demonstrate significant improvements across all metrics (-15.5%\nRMSE with 1,000 images). This underlines the effectiveness of our method in enhancing\nnight",
+      "estimated_tokens": 51
+    },
+    {
+      "id": "chunk::LED_p17_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6950150728225708,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17\nLdepth Lgrad Lnormal Metrics\nL1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n✓ ✗ ✗ ✗ ✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.02",
+      "estimated_tokens": 136
+    },
+    {
+      "id": "chunk::Depth_Anything_p3_chunk_23",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 3,
+      "score": 0.6916294097900391,
+      "text": "led sources for their diverse scenes.\nThey contain more than 62M images in total. The details are\nprovided in the bottom half of Table 1.\nTechnically, given the previously obtained MDE teacher\nmodel T , we make predictions on the unlabeled set Du to\nobtain",
+      "estimated_tokens": 59
+    },
+    {
+      "id": "chunk::LED_p6_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.691083550453186,
+      "text": "6DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nFigure 5:Qualitative results on NSDD.LED results exhibit higher precision, and more ac-\ncurate object boundaries and shapes compared to HB. Red boxes indicate enhanced regions.\nPattern RMSE↓",
+      "estimated_tokens": 64
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_12",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6901729702949524,
+      "text": "ith 13.2%\non ABS rel and 9.7% on RMSE.\nIn addition, Table 4.2 shows that the joint application\nof BPG and ING significantly improves RMSE (7.2% in\nnuScenec-Night and 8.4% in RobotCar-Night compared to\nthe second-best), suggesting that our data distribution",
+      "estimated_tokens": 79
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_15",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.6892310976982117,
+      "text": "SE,\nRMSE log, δ1, δ2 and δ3:\nAbs rel = 1\n|Nd|\nX\ni∈Nd\n|di − d∗\ni |\nd∗\ni\n,\nSq rel = 1\n|Nd|\nX\ni∈Nd\n∥di − d∗\ni ∥2\nd∗\ni\n,\nRMSE =\ns\n1\n|Nd|\nX\ni∈Nd\n∥di − d∗\ni ∥2,\nRMSE log =\ns\n1\n|Nd|\nX\ni∈Nd\n∥ log di − log d∗\ni ∥2,\nδj : % of di s.t. max\n\u0012 di\nd∗\ni\n, d∗\ni\ndi\n\u0013\n< 1.25",
+      "estimated_tokens": 182
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6878747940063477,
+      "text": "𝛿1 ↑  AbsRel↓  RMSE↓ log10 ↓\n3 ×  0.792  0.238  2.043  0.078\n✓  0.794  0.234  1.995  0.078\n6 ×  0.787  0.234  1.963  0.079\n✓  0.796  0.234  1.924  0.078\n9 ×  0.779  0.233  1.934  0.078\n✓  0.799  0.230  1.901  0.073\n12 ×  0.795  0.238  2.089  0.076\n✓  0.792",
+      "estimated_tokens": 185
+    },
+    {
+      "id": "chunk::LED_p9_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6839395761489868,
+      "text": "on NSDD, Depth Anything V2 [49] performs poorly, with an\nRMSE of∼19 m (see table 5), highlighting the complexity of nighttime data and the need\nfor specialized models. It performs slightly better on LED images, possibly due to its ability\nto leverage the p",
+      "estimated_tokens": 62
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1483,
+    "compressed_context_tokens": 1483,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1483,
+  "context_tokens": 1483,
+  "prompt_token_estimate": 2060,
+  "run_label": "sage_semantic_all_v1_chunk_led_performance_improvement_metrics",
+  "answer": "<think>\nThe user is asking about the RMSE improvements LED achieved on different architectures. Let me review the provided materials.\n\nFrom the materials:\n- [1], [3]: LED→HB performance is ~8 m RMSE compared to ~17 m RMSE for HB→LED, and HB-trained model fails on pattern data with +182.85% RMSE, while LED-trained model has +32.63% RMSE on HB.\n- [2], [8]: DepthFormer (0.5°) shows -22.4% RMSE improvement with LED over LB.\n- [7]: When fine-tuned with only 1,000 images, -24.3% RMSE compared to LB baseline (referring to Depth Anything V2).\n- [11]: LED-models demonstrate -15.5% RMSE with 1,000 images.\n- [4]: LED yields -11% RMSE compared to HB in ROI.\n- [5]: -3.03% and -1.50% Abs Rel, -23.27% and -9.23% Sq Rel enhancements.\n\nSo the question is specifically about RMSE improvements across different architectures:\n- DepthFormer: -22.4% RMSE improvement\n- Depth Anything V2: -24.3% RMSE improvement (with 1,000 images fine-tuning)\n- Generic LED models: -15.5% RMSE with 1,000 images\n\nLet me structure the answer.\n</think>\n{\n  \"answer\": \"LED 在不同架构上的 RMSE 改进因模型和实验设置而异，范围约为 -15.5% 至 -24.3%。\",\n  \"items\": [\n    {\n      \"name\": \"DepthFormer (0.5°)\",\n      \"description\": \"在真实场景下，LED 相较 LB 取得 -22.4% 的 RMSE 改进。\",\n      \"citations\": [2, 8]\n    },\n    {\n      \"name\": \"Depth Anything V2\",\n      \"description\": \"在 NSDD 上仅用 1,000 张图像微调时，相较 LB 基线取得 -24.3% 的 RMSE 改进。\",\n      \"citations\": [7]\n    },\n    {\n      \"name\": \"通用 LED 模型\",\n      \"description\": \"使用 1,000 张图像微调时，LED 模型在所有指标上取得显著改进，RMSE 改进 -15.5%。\",\n      \"citations\": [11]\n    },\n    {\n      \"name\": \"LED→HB 跨域泛化\",\n      \"description\": \"在 HB 数据上，LED→HB 性能约为 8 m RMSE（+32.63%），优于 HB→LED 的约 17 m RMSE（+182.85%）。\",\n      \"citations\": [1, 3]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 2053,
+    "completion_tokens": 577,
+    "total_tokens": 2630,
+    "model": "MiniMax-M3"
+  }
+}

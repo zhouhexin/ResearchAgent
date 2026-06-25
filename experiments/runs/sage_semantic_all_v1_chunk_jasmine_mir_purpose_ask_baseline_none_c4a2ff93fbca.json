@@ -1,0 +1,494 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_jasmine_mir_purpose_ask_baseline_none_c4a2ff93fbca",
+  "dry_run": false,
+  "query": "Jasmine中Mix-batch Image Reconstruction (MIR)的作用是什么？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Jasmine_p2_chunk_10",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.7918210029602051,
+      "text": "ofmix-batch image reconstruction(MIR)through a task\nswitcher, where the same SD model alternately reconstructs synthesized/real images and predicts\ndepth maps within each training batch. This strategy repurposes self-supervised reprojection loss to\ntolerat"
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.768614649772644,
+      "text": "etails, avoids external depth\ndependencies in self-supervision, and aligns perfectly with SD’s original objective of image generation.\nTherefore, we construct a surrogate task ofmix-batch image reconstruction(MIR)through a task\nswitcher, where the same SD"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_13",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7619552612304688,
+      "text": "vision (ID (10) and Fig. 3 (e)),\nwhich strongly proves the effectiveness of\nour proposed MIR. The analysis of auxil-\niary images is presented in sub-table(d).\nThe experiments in IDs (0, 13, 14) indicate\nthat, compared to real/synthesis datasets,\nthe conten"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_5",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7593364715576172,
+      "text": "usions, texture-\nless regions, illumination variance), and the predictions exhibit blurs and artifacts\nthat severely compromise SD’s latent priors. To resolve this, we construct a\nnovel surrogate task of mix-batch image reconstruction. Without any addition"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7582036256790161,
+      "text": "t a\nnovel surrogate task of mix-batch image reconstruction. Without any additional\nsupervision, it preserves the detail priors of SD models by reconstructing the images\nthemselves while preventing depth estimation from degradation. Furthermore, to\naddress"
+    },
+    {
+      "id": "chunk::Jasmine_p3_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 3,
+      "score": 0.7497392892837524,
+      "text": "𝐿𝑒𝑒\n𝐿𝐿𝑡𝑡𝑡𝑡\n𝐷𝐷𝑡𝑡𝑡𝑡\n𝐿𝐿𝑒𝑒\nMix-batch 𝐈𝐈𝑚𝑚\nDepth Prediction\n𝐿𝐿𝑡𝑡𝑡𝑡\n𝐿𝐿𝑡𝑡𝑡𝑡\n𝐈𝐈𝑚𝑚\n…\n…\nor\nor or\nFigure 2:Finetuning Protocol of Jasmine.The It and Im are each concatenated with n[33] and fed into the\nV AE encoderε. Next, the U-Net performs single-step denoising gui"
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.7468273639678955,
+      "text": "0.6 0.121 0.649 4.322 0.8760.970\nLatent+1 0.129 0.679 4.385 0.858 0.962\nIn Fig. 8, we further compare the perfor-\nmance of our Jasmine with other methods\nin multi scenes. The quantitative results\nobviously demonstrate that our method\ncan produce much finer"
+    },
+    {
+      "id": "chunk::Jasmine_p5_chunk_5",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.7457708120346069,
+      "text": "persim images, respectively.\nIn summary, MIR constructs each training batch by randomly selecting images from these two\ndatasets, and supervises the reconstructed image with the photometric loss in Eq. 5.\nAnalysis of Auxiliary ImagesThe specific synthetic"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_10",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.7445592880249023,
+      "text": "applying 80m ground truth clipping and Eigen crop preprocessing[8].\nHypersim[38]: This photorealistic synthetic dataset (461 indoor scenes) contributes approximately\n28k samples from its official training split for mix-batch image reconstruction. Each iter"
+    },
+    {
+      "id": "chunk::Jasmine_p17_chunk_5",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.7430635690689087,
+      "text": ", V AE, optimizer\n2:V AE.eval()▷V AE weights are frozen\n3:foreach batch of inputs ‘I’ in dataloaderdo\n4:▷Mix-batch Image Reconstruction (MIR)\n5:s depth ←[1,0],s recon ←[0,1]▷Task switchers\n6:z I\nt , zI\nm, zn ←V AE.encode(I[’I_t’],I[’I_m’],noise)\n7:D ssi ←V"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7328542470932007,
+      "text": "terference of reprojection loss. Extensive experiments\ndemonstrate that Jasmine achieves SoTA performance on the KITTI benchmark\nand exhibits superior zero-shot generalization across multiple datasets. Project\npage and code are available at here.\n1 Introdu"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.7327899932861328,
+      "text": "re all predicted delicately and precisely. These sharp results were\ncompletely disrupted by the reprojection loss in previous self-supervised methods.\nFurther AnalysisWe also deeply compare Jasmine with other SSDE configurations (stereo training\nand multi-"
+    },
+    {
+      "id": "chunk::Jasmine_p12_chunk_13",
+      "source": "data\\Jasmine.pdf",
+      "page": 12,
+      "score": 0.7285904884338379,
+      "text": "domain adaptation for image restoration.arXiv preprint arXiv:2406.18516, 2024. 3\n[29] Jinfeng Liu, Lingtong Kong, Bo Li, Zerong Wang, Hong Gu, and Jinwei Chen. Mono-vifi: A unified\nlearning framework for self-supervised single and multi-frame monocular dep"
+    },
+    {
+      "id": "chunk::Depth_Anything_p4_chunk_11",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.7284674644470215,
+      "text": "d the other is strong spatial dis-\ntortion, which is CutMix [ 83]. Despite the simplicity, the\ntwo modifications make our large-scale unlabeled images\nsignificantly improve the baseline of labeled images.\nWe provide more details about CutMix. It was origin"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_30",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.7258063554763794,
+      "text": "hat our target to reconstruction is the\ndenoised depth rather than the RGB image.\nTo summarize, our contributions are listed as follows:\n• We propose a novel framework, dubbed MonoDiffusion,\narXiv:2311.07198v1  [cs.CV]  13 Nov 2023"
+    },
+    {
+      "id": "chunk::Lite-Mono_p5_chunk_8",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 5,
+      "score": 0.7251249551773071,
+      "text": "estimation as\nthe task of image reconstruction. Similar to [45] the learn-\ning objective is modeled to minimize an image reconstruc-\ntion lossLr between a target imageIt and a synthesized tar-\nget image ˆIt, and an edge-aware smoothness loss Lsmooth\nconstr"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7227698564529419,
+      "text": "KUST 4CQUPT †Corresponding Author\nFigure 1:Without any high-precision depth supervision, Jasmine achieves remarkably detailed and accurate\ndepth estimation results through zero-shot generalization across diverse scenarios.\nAbstract\nIn this paper, we propos"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_11",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.7198542356491089,
+      "text": "s from its official training split for mix-batch image reconstruction. Each iteration uses\nrandom crops from the original 1024×768 to 1024×320 resolution.\nZero-shot Evaluation Datasets DrivingStereo[58]: Contains 500 images per weather condition\n(fog, clou"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_23",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7177044749259949,
+      "text": "ectively leveraging SD’s priors to enhance sharpness and generalization without high-precision\nsupervision. To achieve this objective, we introduce two novel modules: Mix-batch Image Recon-\nstruction (MIR) for mitigating reprojection artifacts and preservi"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.7173766493797302,
+      "text": "lement Details\nWe implement the proposed Jasmine using Accelerate[16] and PyTorch[35] with Stable Diffusion\nv2[39] as the backbone. Following the pipeline in Fig. 2, we disable text conditioning while\nmaintaining most hyperparameter consistency with E2E FT"
+    },
+    {
+      "id": "chunk::Jasmine_p4_chunk_21",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.7168236374855042,
+      "text": ").3)Mixing\nthese images within a training batch allows synthesized images to anchor the model to latent priors,\nwhile real-world data enforces geometric structure alignment, is a possible solution. But this strategy\nshows notable sensitivity to mix rateλ(F"
+    },
+    {
+      "id": "chunk::DepthDark_p10_chunk_16",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.715131402015686,
+      "text": "Liu, A Leonardis, and G\nSlabaugh. 2022. Learning Frequency Domain Priors for Image Demoireing. IEEE\nTransactions on Pattern Analysis and Machine Intelligence44, 11 (2022), 7705–7717."
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_9",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.7143899202346802,
+      "text": "tigate the difference be-\ntween the original loss and the GT-mean loss. Specifically,\nwe randomly selected a batch of low-light images (batchsize\n= 8) and their corresponding ground truth images. These\nimages were enhanced using RetinexFormer to produce en"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_chunk_9",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.7143899202346802,
+      "text": "tigate the difference be-\ntween the original loss and the GT-mean loss. Specifically,\nwe randomly selected a batch of low-light images (batchsize\n= 8) and their corresponding ground truth images. These\nimages were enhanced using RetinexFormer to produce en"
+    },
+    {
+      "id": "chunk::Jasmine_p17_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.7120486497879028,
+      "text": "U-Net(f z\nθ ).\n•Output:The predicted depth mapDobtained from Step 1.\nB.2 Training Pseudocode\nAlgorithm 1 outlines the complete training procedure for Jasmine, incorporating all components\nincluding MIR, SSG, and the full loss computation (Corresponds to th"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_5",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.7112466096878052,
+      "text": "r visibility to structural\nsimilarity. IEEE Transactions on Image Processing , page\n600–612, 2004. 4\n[35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang\nZhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general\nu-shaped transformer for image restoration"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_5",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.7112466096878052,
+      "text": "r visibility to structural\nsimilarity. IEEE Transactions on Image Processing , page\n600–612, 2004. 4\n[35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang\nZhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general\nu-shaped transformer for image restoration"
+    },
+    {
+      "id": "chunk::ACD_p9_chunk_19",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.7110451459884644,
+      "text": "anming Zhang, Oliver Wang,\nSimon Niklaus, Simon Chen, Yifan Liu, and Chunhua\nShen. Towards accurate reconstruction of 3d scene shape\nfrom a single monocular image. IEEE Transactions\non Pattern Analysis and Machine Intelligence , 45:6480–\n6494, 2022.\n[Y u a"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7096068859100342,
+      "text": "ift GRU\n(5) w/o SSG 0.129 0.938 4.470 0.872 0.956\n(6) w/o SST 0.098 0.715 4.350 0.909 0.969\n(c) Mix-batch Image Reconstruction\n(7) w/o MIR 0.132 0.673 4.271 0.852 0.967\n(8) Direct 0.129 0.679 4.385 0.858 0.962\n(9) Only Hy 0.106 0.614 4.181 0.901 0.970\n(10)"
+    },
+    {
+      "id": "chunk::Lite-Mono_p6_chunk_14",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 6,
+      "score": 0.7095645070075989,
+      "text": "Lite-Mono with some recent representative methods on the KITTI benchmark using the Eigen split [9].\nAll input images are resized to 640× 192 unless otherwise speciﬁed. The best and the second best results are highlighted in bold and\nunderlined, respective"
+    },
+    {
+      "id": "chunk::ACD_p3_chunk_10",
+      "source": "data\\ACD.pdf",
+      "page": 3,
+      "score": 0.708534836769104,
+      "text": "the target image to\nthe adjacent frame (It′). Combining with the intrinsic param-\neters K of camera, it allows the network to synthesize the\nreconstruction image (I t′→t)o fI t using the adjacent frame\nIt′, depicted as:\nIt′→t = It′ ⟨proj (Dt,Tt→t′,K)⟩, (1)"
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.707381546497345,
+      "text": "reserving\nthe fine-grained texture details of SD’s output while enforcing geometric consistency.\nExtensive experiments show that our proposed method, Jasmine, ❶ achieves theSoTA performance\namong all SSMDEs on the competitive KITTI dataset, ❷ showsremarkab"
+    },
+    {
+      "id": "chunk::Jasmine_p16_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 16,
+      "score": 0.7067432403564453,
+      "text": "ep Workflow\nIn this section, we temporarily omit the specifics of MIR and SSG to clarify the integration of\nself-supervision with the Stable Diffusion framework in Jasmine:\n• Input:A sequence of temporally adjacent images (like video frames), e.g., a sourc"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_4",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.705403208732605,
+      "text": "eeply compare Jasmine with other SSDE configurations (stereo training\nand multi-frame inference) and on KITTI improved GT benchmark in Sec. E.2, E.1.\n4.3 Analysis of Depth De-normalization\nFigure 6:Comparison of different de-normalization\nschemes.The blue"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_19",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.7041144371032715,
+      "text": "war\nHayat, Fahad Shahbaz Khan, Ming-Hsuan Yang, and Ling\nShao. Learning enriched features for real image restoration\nand enhancement. In Proceedings of European Conference\non Computer Vision (ECCV), 2020. 4, 11\n[45] Syed Waqas Zamir, Aditya Arora, Salman K"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_19",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.7041144371032715,
+      "text": "war\nHayat, Fahad Shahbaz Khan, Ming-Hsuan Yang, and Ling\nShao. Learning enriched features for real image restoration\nand enhancement. In Proceedings of European Conference\non Computer Vision (ECCV), 2020. 4, 11\n[45] Syed Waqas Zamir, Aditya Arora, Salman K"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7039123773574829,
+      "text": "Jasmine: Harnessing Diffusion Prior for\nSelf-Supervised Depth Estimation\nJiyuan Wang1 Chunyu Lin1† Cheng Guan1 Lang Nie4 Jing He3\nHaodong Li3 Kang Liao2 Yao Zhao1\n1BJTU 2NTU 3HKUST 4CQUPT †Corresponding Author\nFigure 1:Without any high-precision depth supe"
+    },
+    {
+      "id": "chunk::Lite-Mono_p5_chunk_14",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 5,
+      "score": 0.7037613987922668,
+      "text": "the target image. Another binary mask [15] is\nused to remove moving pixels:\nµ = min\nIs∈[−1,1]\nLp(Is,I t)> min\nIs∈[−1,1]\nLp( ˆIt,I t). (8)\nTherefore, the image reconstruction loss is deﬁned as:\nLr( ˆIt,I t) = µ·L p(Is,I t), (9)\nEdge-aware smoothness loss. T"
+    },
+    {
+      "id": "chunk::Jasmine_p4_chunk_15",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.7023820281028748,
+      "text": "tially formulate the\nsurrogate loss as:\nLs =||z I −f z\nθ (sy,z y\nτ ,z I)||2.(4)\nMix-batch Images Reconstruction with Photometric Supervision.We show that it is possible\nto preserve the SD priors by introducing a compact surrogate task. However, our experim"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_11",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.7013339996337891,
+      "text": "are concatenated with the pooled three-channel in-\nput image, and another 3×3 convolution withstride = 2 is\nadopted to down-sample the feature maps, resulting in fea-\nture maps with size H\n4 × W\n4 ×C2. Concatenating features\nwith the average-pooled input i"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.7013261914253235,
+      "text": "dge flatten) approach. Jasmine* and Jasmine are the same model but use different\nalignments (discussed in Sec. 4.3). In the data column, Syn, K, and H represent the synthetic, KITTI, and\nHypersim datasets, respectively. The number of images and depth label"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p3_chunk_4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 3,
+      "score": 0.7011955976486206,
+      "text": "ffusion process that progressively de-\ngrades images with Gaussian noise so that they can draw sam-\nples from the data distribution by applying the reverse pro-\ncess to random noise. This idea was extended to DDIMs [49],\nwhich provide a non-Markovian short"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p3_chunk_4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7011955976486206,
+      "text": "ffusion process that progressively de-\ngrades images with Gaussian noise so that they can draw sam-\nples from the data distribution by applying the reverse pro-\ncess to random noise. This idea was extended to DDIMs [49],\nwhich provide a non-Markovian short"
+    },
+    {
+      "id": "chunk::TDDC_p13_chunk_4",
+      "source": "data\\TDDC.pdf",
+      "page": 13,
+      "score": 0.6993280649185181,
+      "text": "he\ntraining problem as an image reconstruction task. By ap-\nproaching the estimated depthDt and the related poseTt,t+n,\nwe recover a target frame It from a source frame It+n with\ndifferentiable bilinear sampling [Jaderberg et al. , 2015] op-\nerator bs(., ."
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.6990436315536499,
+      "text": "y Zhou’s split[ 71] containing 39,810 training and\n4,424 validation samples after removing static frames. The evaluation uses 697 Eigen raw test\nimages with metrics from [15], applying 80m ground truth clipping and Eigen crop preprocessing[8].\nHypersim[38]"
+    },
+    {
+      "id": "chunk::dav2_p3_chunk_10",
+      "source": "data\\dav2.pdf",
+      "page": 3,
+      "score": 0.6982724666595459,
+      "text": "scale pseudo-labeled real images.\nAfter the explorations, we successfully build a more capable MDE foundation model. However, we\nfind current test sets [70] are too noisy to reflect the true strengths of MDE models. Thus, we further\nconstruct a versatile e"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_5",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.6979776620864868,
+      "text": "the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled to form a pyramid of resolutions\nand then subsequently combined by upsampling, weighted\naveraging, and renormalization. The weight for the i-th\npyramid level is computed as si"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_5",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.6979776620864868,
+      "text": "the standard multi-resolution noise, multiple Gaussian\nnoise images are sampled to form a pyramid of resolutions\nand then subsequently combined by upsampling, weighted\naveraging, and renormalization. The weight for the i-th\npyramid level is computed as si"
+    },
+    {
+      "id": "chunk::Jasmine_p3_chunk_15",
+      "source": "data\\Jasmine.pdf",
+      "page": 3,
+      "score": 0.69789719581604,
+      "text": "lf-supervision.\n3 Methods\nIn this section, we will introduce the foundational knowledge of the SSMDE and SD-based MDE\n(Sec. 3.1), the surrogate task of mix-batch image reconstruction (MIR, Sec. 3.2), the scale-shift\nadaptation with GRU (Sec. 3.3) and the S"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.6971506476402283,
+      "text": "nsactions on Pattern\nAnalysis and Machine Intelligence, 2025. 23\n[56] Zhiqiang Yan, Kun Wang, Xiang Li, Zhenyu Zhang, Jun Li, and Jian Yang. Rignet: Repetitive image\nguided network for depth completion. InEuropean Conference on Computer Vision, pages 214–2"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Jasmine_p2_chunk_10",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.7918210029602051,
+      "text": "ofmix-batch image reconstruction(MIR)through a task\nswitcher, where the same SD model alternately reconstructs synthesized/real images and predicts\ndepth maps within each training batch. This strategy repurposes self-supervised reprojection loss to\ntolerat",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.768614649772644,
+      "text": "etails, avoids external depth\ndependencies in self-supervision, and aligns perfectly with SD’s original objective of image generation.\nTherefore, we construct a surrogate task ofmix-batch image reconstruction(MIR)through a task\nswitcher, where the same SD",
+      "estimated_tokens": 53
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_13",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7619552612304688,
+      "text": "vision (ID (10) and Fig. 3 (e)),\nwhich strongly proves the effectiveness of\nour proposed MIR. The analysis of auxil-\niary images is presented in sub-table(d).\nThe experiments in IDs (0, 13, 14) indicate\nthat, compared to real/synthesis datasets,\nthe conten",
+      "estimated_tokens": 68
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_5",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7593364715576172,
+      "text": "usions, texture-\nless regions, illumination variance), and the predictions exhibit blurs and artifacts\nthat severely compromise SD’s latent priors. To resolve this, we construct a\nnovel surrogate task of mix-batch image reconstruction. Without any addition",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7582036256790161,
+      "text": "t a\nnovel surrogate task of mix-batch image reconstruction. Without any additional\nsupervision, it preserves the detail priors of SD models by reconstructing the images\nthemselves while preventing depth estimation from degradation. Furthermore, to\naddress",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::Jasmine_p3_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 3,
+      "score": 0.7497392892837524,
+      "text": "𝐿𝑒𝑒\n𝐿𝐿𝑡𝑡𝑡𝑡\n𝐷𝐷𝑡𝑡𝑡𝑡\n𝐿𝐿𝑒𝑒\nMix-batch 𝐈𝐈𝑚𝑚\nDepth Prediction\n𝐿𝐿𝑡𝑡𝑡𝑡\n𝐿𝐿𝑡𝑡𝑡𝑡\n𝐈𝐈𝑚𝑚\n…\n…\nor\nor or\nFigure 2:Finetuning Protocol of Jasmine.The It and Im are each concatenated with n[33] and fed into the\nV AE encoderε. Next, the U-Net performs single-step denoising gui",
+      "estimated_tokens": 183
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.7468273639678955,
+      "text": "0.6 0.121 0.649 4.322 0.8760.970\nLatent+1 0.129 0.679 4.385 0.858 0.962\nIn Fig. 8, we further compare the perfor-\nmance of our Jasmine with other methods\nin multi scenes. The quantitative results\nobviously demonstrate that our method\ncan produce much finer",
+      "estimated_tokens": 88
+    },
+    {
+      "id": "chunk::Jasmine_p5_chunk_5",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.7457708120346069,
+      "text": "persim images, respectively.\nIn summary, MIR constructs each training batch by randomly selecting images from these two\ndatasets, and supervises the reconstructed image with the photometric loss in Eq. 5.\nAnalysis of Auxiliary ImagesThe specific synthetic",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_10",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.7445592880249023,
+      "text": "applying 80m ground truth clipping and Eigen crop preprocessing[8].\nHypersim[38]: This photorealistic synthetic dataset (461 indoor scenes) contributes approximately\n28k samples from its official training split for mix-batch image reconstruction. Each iter",
+      "estimated_tokens": 53
+    },
+    {
+      "id": "chunk::Jasmine_p17_chunk_5",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.7430635690689087,
+      "text": ", V AE, optimizer\n2:V AE.eval()▷V AE weights are frozen\n3:foreach batch of inputs ‘I’ in dataloaderdo\n4:▷Mix-batch Image Reconstruction (MIR)\n5:s depth ←[1,0],s recon ←[0,1]▷Task switchers\n6:z I\nt , zI\nm, zn ←V AE.encode(I[’I_t’],I[’I_m’],noise)\n7:D ssi ←V",
+      "estimated_tokens": 110
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7328542470932007,
+      "text": "terference of reprojection loss. Extensive experiments\ndemonstrate that Jasmine achieves SoTA performance on the KITTI benchmark\nand exhibits superior zero-shot generalization across multiple datasets. Project\npage and code are available at here.\n1 Introdu",
+      "estimated_tokens": 51
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.7327899932861328,
+      "text": "re all predicted delicately and precisely. These sharp results were\ncompletely disrupted by the reprojection loss in previous self-supervised methods.\nFurther AnalysisWe also deeply compare Jasmine with other SSDE configurations (stereo training\nand multi-",
+      "estimated_tokens": 48
+    },
+    {
+      "id": "chunk::Jasmine_p12_chunk_13",
+      "source": "data\\Jasmine.pdf",
+      "page": 12,
+      "score": 0.7285904884338379,
+      "text": "domain adaptation for image restoration.arXiv preprint arXiv:2406.18516, 2024. 3\n[29] Jinfeng Liu, Lingtong Kong, Bo Li, Zerong Wang, Hong Gu, and Jinwei Chen. Mono-vifi: A unified\nlearning framework for self-supervised single and multi-frame monocular dep",
+      "estimated_tokens": 76
+    },
+    {
+      "id": "chunk::Depth_Anything_p4_chunk_11",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.7284674644470215,
+      "text": "d the other is strong spatial dis-\ntortion, which is CutMix [ 83]. Despite the simplicity, the\ntwo modifications make our large-scale unlabeled images\nsignificantly improve the baseline of labeled images.\nWe provide more details about CutMix. It was origin",
+      "estimated_tokens": 55
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 991,
+    "compressed_context_tokens": 991,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 991,
+  "context_tokens": 991,
+  "prompt_token_estimate": 1492,
+  "run_label": "sage_semantic_all_v1_chunk_jasmine_mir_purpose",
+  "answer": "<think>\nThe user wants me to answer a question about the role of Mix-batch Image Reconstruction (MIR) in Jasmine, based on the provided materials. Let me analyze the materials:\n\nFrom the materials:\n- [1] MIR repurposes self-supervised reprojection loss to tolerate...\n- [2] MIR avoids external depth dependencies in self-supervision, and aligns perfectly with SD's original objective of image generation\n- [3] MIR is effective based on experimental evidence\n- [4] To resolve blurs and artifacts that compromise SD's latent priors, they construct a novel surrogate task of mix-batch image reconstruction\n- [5] MIR preserves the detail priors of SD models by reconstructing the images themselves while preventing depth estimation from degradation\n- [8] MIR constructs each training batch by randomly selecting images from two datasets, and supervises the reconstructed image with photometric loss\n- [10] Shows the algorithm pseudocode for MIR with task switchers\n\nSo MIR's role:\n1. It preserves detail priors of SD models by reconstructing images\n2. Prevents depth estimation from degradation\n3. Avoids external depth dependencies\n4. Aligns with SD's original objective of image generation\n5. Repurposes self-supervised reprojection loss\n6. Constructs each batch by mixing images from real and synthetic datasets\n\nLet me formulate a concise answer.\n</think>\n{\n  \"answer\": \"Mix-batch Image Reconstruction (MIR)是Jasmine中构造的一种代理任务，其核心作用是在无需额外监督的条件下，通过让同一SD模型在每个训练batch中交替重建合成/真实图像并预测深度图，从而保留SD模型的细节先验、防止深度估计退化，并避免自监督中对外部深度信息的依赖。\",\n  \"items\": [\n    {\n      \"name\": \"保留SD模型细节先验并防止深度估计退化\",\n      \"description\": \"MIR通过重建图像本身来保留Stable Diffusion的细节先验，同时防止深度估计性能下降，解决了自监督重投影损失导致的细节丢失问题。\",\n      \"citations\": [4, 5]\n    },\n    {\n      \"name\": \"避免外部深度依赖并对齐SD原始目标\",\n      \"description\": \"MIR避免了在自监督中引入外部深度依赖，且与SD原始的图像生成目标完美对齐。\",\n      \"citations\": [2]\n    },\n    {\n      \"name\": \"复用自监督重投影损失\",\n      \"description\": \"MIR将自监督重投影损失重新利用，使其能够容忍更多样化的训练信号。\",\n      \"citations\": [1]\n    },\n    {\n      \"name\": \"通过任务切换器混合合成与真实数据\",\n      \"description\": \"MIR通过任务切换器（task switcher）在每个batch中从合成数据集与真实数据集中随机选取图像进行重建，并以光度损失进行监督。\",\n      \"citations\": [6, 8, 10]\n    },\n    {\n      \"name\": \"实验验证MIR的有效性\",\n      \"description\": \"消融实验强烈证明了所提出的MIR策略对深度估计性能提升的有效性。\",\n      \"citations\": [3]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1480,
+    "completion_tokens": 647,
+    "total_tokens": 2127,
+    "model": "MiniMax-M3"
+  }
+}

@@ -1,0 +1,494 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_lite_mono_cdc_module__ask_baseline_none_d3d6d1557436",
+  "dry_run": false,
+  "query": "CDC 模块是如何设计的？它相比普通卷积有什么优势？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_13",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.6698785424232483,
+      "text": "locks are\nset to 1, 2, and 3, respectively. (3) Similar to the default\nsetting we set 1, 2, and 5 in every three CDC blocks as a\ngroup. (4) Based on the default setting the dilation rates\nin the last two CDC blocks are set to 2, 4, 6 and 4, 8, 12,\nrespecti"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_8",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6645550727844238,
+      "text": "𝐾 \n𝑉 \nRepeat × N\nFigure 3. Structures of the proposed Consecutive Dilated Con-\nvolutions (CDC) module and Local-Global Features Interac-\ntion (LGFI) module. In each stage the CDC module with differ-\nent dilation rate is repeated for N times.\nwith size H×W×"
+    },
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_14",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.6468650102615356,
+      "text": "ation rates\nin the last two CDC blocks are set to 2, 4, 6 and 4, 8, 12,\nrespectively. Table 6 lists the accuracy under different dila-\ntion settings. Comparing (2) with (3) the accuracy beneﬁts\nfrom larger dilation rates. However, (4) using very large di-"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_17",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6357244253158569,
+      "text": "ed CDC module utilizes dilated convolutions to extract\nmulti-scale local features. Different from using a parallel\ndilated convolution module only in the last layer of the net-\nwork [6] we insert several consecutive dilated convolutions\nwith different dila"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_6",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6332959532737732,
+      "text": "that a CDC block uses the 3× 3 kernel size to output C\nchannels, and repeats for N times. The dilation rate used in each CDC block is also listed.\nRepeat × 1\n3×3 DDWConv\ndilation=r\nBatch Norm\n1×1 point-wise\nGELU\n1×1 point-wise\nCDC Module LGFI Module\nLinear"
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_26",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.632373571395874,
+      "text": "the model size remains the same the\naccuracy drops more than for not using LGFI blocks. The\nbeneﬁt of introducing the CDC module is to enhance the\nlocality by gradually extracting multi-scale features, while\nnot adding additional trainable parameters.\nThe"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.6220899820327759,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6220899820327759,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::Lite-Mono_p3_chunk_0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.6213232278823853,
+      "text": "Downsample\nCDC \nBlocks LGFI \nBlock\nStage 2\nDownsample\nCDC \nBlocks LGFI \nBlock\nStage 2\n𝐻\n4 × 𝑊\n4 × 𝐶2 \nConv \nstem\n𝐻\n2 × 𝑊\n2 × 𝐶1 \n𝐻\n8 × 𝑊\n8 × 𝐶3 \n𝐻\n16 × 𝑊\n16 × 𝐶4 \nDownsample\nCDC \nBlocks LGFI \nBlock\nDownsample\nCDC \nBlocks LGFI \nBlock\nUpsampling\nBlock\nStage"
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_1",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.6205857396125793,
+      "text": "in [Yin et al., 2019] 114 0.875 0.976 0.994 0.108 0.416 0.048\nDA V[Huynh et al., 2020] 25 0.882 0.980 0.996 0.108 0.412 -\nBTS [Lee et al., 2019] 47 0.885 0.978 0.994 0.110 0.392 0.047\nAdabins[Bhat et al., 2021] 78 0.903 0.984 0.997 0.103 0.364 0.044\nDPT* ["
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_3",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6159052848815918,
+      "text": ",128,stride= 2\nStage 2 CDC blocks [3×3,64]×3 [3 ×3,80]×3 [3 ×3,80]×3 [3 ×3,128]×3\nLGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3\n40×12 Downsampling3×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2\nStage"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.6127783060073853,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6125333309173584,
+      "text": "×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2\nStage 3 CDC blocks [3×3,128]×6 [3 ×3,128]×6 [3 ×3,128]×9 [3 ×3,224]×9\nLGFI blockdilation= 1,2,3,2,4,6 dilation= 1,2,3,2,4,6 dilation= [1,2,3]×2,2,4,6 dilation= [1,2,3]×2,2,4,6\n#Param"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_21",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.611666738986969,
+      "text": "ile achieving a larger receptive ﬁeld. Considering\nan input feature X with dimension H×W×C our CDC\nmodule outputs ˆX as follows:\nˆX =X +LinearG(Linear(BN (DDWConv r(X)))),\n(2)\nwhere LinearG denotes a point-wise convolution opera-\ntion, followed by theGELU"
+    },
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_11",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.604911744594574,
+      "text": "module on the accuracy is studied. Four different settings\nare used in this experiment. (1) The default setting of our\nmodels is to group every three CDC blocks together, and\nset the dilation rate to 1, 2, and 3, respectively. For the last\nthree blocks we"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6036520004272461,
+      "text": "3×3,32]×2 [3 ×3,48]×2 [3 ×3,48]×2 [3 ×3,64]×2\n160×48 Downsampling3×3,32,stride= 2 3 ×3,48,stride= 2 3 ×3,48,stride= 2 3 ×3,64,stride= 2\nStage 1 CDC blocks [3×3,32]×3 [3 ×3,48]×3 [3 ×3,48]×3 [3 ×3,64]×3\nLGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1"
+    },
+    {
+      "id": "chunk::Lite-Mono_p3_chunk_14",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.6002035140991211,
+      "text": "dilated convolution [42] is helpful to en-\nlarge receptive ﬁelds. By stacking the proposed Consec-\nutive Dilated Convolutions (CDC) the network is able to\n”observe” the input at a larger area, while not introducing\nextra training parameters.\nLow-computati"
+    },
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_15",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.5981211066246033,
+      "text": "accuracy beneﬁts\nfrom larger dilation rates. However, (4) using very large di-\nlation rates in the late CDC blocks does not help. Simply\npursuing larger dilation rates will result in the loss of local\ninformation, which is not good for the network to perc"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5965733528137207,
+      "text": "3 [3 ×3,48]×3 [3 ×3,64]×3\nLGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3\n80×24 Downsampling3×3,64,stride= 2 3 ×3,80,stride= 2 3 ×3,80,stride= 2 3 ×3,128,stride= 2\nStage 2 CDC blocks [3×3,64]×3 [3 ×3,80]×3 [3 ×3,80]×3 [3 ×3,128]×"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5933507084846497,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f"
+    },
+    {
+      "id": "chunk::Lite-Mono_p1_chunk_23",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.5914146900177002,
+      "text": "volutions\n(CDC) module is adopted to capture enhanced multi-scale\nlocal features. Then, a Local-Global Features Interaction\n(LGFI) module is used to calculate the MHSA and encode\narXiv:2211.13202v2  [cs.CV]  15 Mar 2023"
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_25",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.5905349850654602,
+      "text": "nvolutions. If all the dilation\nrates of convolutions in CDC blocks are set to 1, i.e., there\nare no dilated convolutions used in the network. It can be\nobserved that although the model size remains the same the\naccuracy drops more than for not using LGFI"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_7",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5900940299034119,
+      "text": "on=r\nBatch Norm\n1×1 point-wise\nGELU\n1×1 point-wise\nCDC Module LGFI Module\nLinear\n1×1 point-wise\nGELU\nLinear Linear\nLayerNorm\n   \nSoftmax\nLinear\nLayerNorm\n1×1 point-wise\n𝑄𝑇 \n𝑄 \n𝐾 \n𝑉 \nRepeat × N\nFigure 3. Structures of the proposed Consecutive Dilated Con-\nv"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_1",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5900055766105652,
+      "text": "Key Research and Devel-\nopment Program of China (U22A2047), the Key R&D Program of\nZhejiang under Grant No. (2025C03001, 2023C01044), the Funda-\nmental Research Funds for the Provincial Universities of Zhejiang\n(GK259909299001-023), the National Nature Sci"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5871837139129639,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci"
+    },
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_17",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.58439040184021,
+      "text": "extract multi-scale lo-\ncal features, i.e., smaller dilation rates are used in shallow\nlayers, and they are doubled in the last three CDC modules.\nNO. Abs Rel Sq Rel RMSE RMSE logδ1 δ2 δ3\n1 0.107 0.765 4.561 0.183 0.886 0.963 0.983\n2 0.110 0.867 4.681 0.1"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5831921696662903,
+      "text": "ce\nFoundation of China under Grant 62233005, in part by the\nNational Natural Science Foundation of China under Grant\n62203173, in part by the Program of Introducing Talents\nof Discipline to Universities through the 111 Project under\nGrant B17017 and Shangh"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.5825058221817017,
+      "text": "Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. In ECCV, pages 696–712, 2022. 3\nAppendix\nIn this supplementary material, we provide additional im-\nplementation details in Appendix A and present additional\nquantitative and qua"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.5825058221817017,
+      "text": "Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. In ECCV, pages 696–712, 2022. 3\nAppendix\nIn this supplementary material, we provide additional im-\nplementation details in Appendix A and present additional\nquantitative and qua"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_13",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5809921026229858,
+      "text": "feature size, which is inspired by ESP-\nNetv2 [3]. Then, the proposed Consecutive Dilated Con-\nvolutions (CDC) module and the Local-Global Features In-\nteraction (LGFI) module learn rich hierarchical feature rep-\nresentations. The down-sampling layers in"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_16",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5791231393814087,
+      "text": "e maps are further fed into the third and the\nfourth stages, and output features of dimensionH\n8× W\n8×C3\nand H\n16× W\n16×C4.\nConsecutive Dilated Convolutions (CDC). The pro-\nposed CDC module utilizes dilated convolutions to extract\nmulti-scale local feature"
+    },
+    {
+      "id": "chunk::Lite-Mono_p3_chunk_1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.5791174173355103,
+      "text": "C \nBlocks LGFI \nBlock\nDownsample\nCDC \nBlocks LGFI \nBlock\nUpsampling\nBlock\nStage 1\nStage 4\nUpsampling\nBlock\nUpsampling\nBlock\nDownsample\nCDC \nBlocks LGFI \nBlock\nDownsample\nCDC \nBlocks LGFI \nBlock\nStage 3\nDownsample\nCDC \nBlocks LGFI \nBlock\nStage 3\nConcat\nConc"
+    },
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_10",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.5787098407745361,
+      "text": "in Mono-Lite is to promote feature propagation and\ncross-stage information fusion.\n4.7. Ablation study on dilation rates\nThe inﬂuence of the dilation rate in the proposed CDC\nmodule on the accuracy is studied. Four different settings\nare used in this expe"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.577911376953125,
+      "text": "Figure 3. Qualitative results on six unseen datasets.\nLl Lu S Lf eat KI NY SI DD ET DI\n✓ 0.085 0.053 0.492 0.245 0.134 0.070\n✓ ✓ 0.085 0.054 0.481 0.242 0.138 0.073\n✓ ✓ ✓ 0.081 0.048 0.469 0.235 0.134 0.068\n✓ ✓ ✓ ✓ 0.076 0.043 0.458 0.230 0.127 0.066\nTable"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_21",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.5741477012634277,
+      "text": "ent. This work is supported by the National\nNatural Science Foundation of China (No. 62201484), HKU\nStartup Fund, and HKU Seed Fund for Basic Research.\n10378"
+    },
+    {
+      "id": "chunk::s_p10_chunk_17",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.5737205743789673,
+      "text": "ecog-\nnition (CVPR), 2019. 2, 6, 7\n[38] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding\nconditional control to text-to-image diffusion models. In\nIEEE International Conference on Computer Vision (ICCV),\n2023. 2\n[39] Ning Zhang, Francesco Nex, George V"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_6",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5721471309661865,
+      "text": "et. Trailing 0 added to the values from [V ankadari\net al., 2023 ] and [Tosi et al., 2025 ]. Notation from Table 1.\n:\u0012\u0003'/\u000e)&&\n2ULJLQ\u0003,PDJH :\u0012\u0003'/\n:\u0012\u0003'/\u000e)&&\u000e2*'\nFigure 5: Visualization of ablation study on the distillation learning,\nfeature consistency const"
+    },
+    {
+      "id": "chunk::ACD_p5_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.5709215998649597,
+      "text": "଴\nଵ\nכ\nOREDO\n଴\nଵ\nכ\nRFDO\nଵ\n*OREDO\nଵ\n/RFDO\n\u000bD\f GD\\\u0010FOHDU\n\u000bE\f QLJKW\n\u000bF\f 3VHXGR GHSWK\n\u000bG\f 7UDLQLQJ\u0003GHSWK\n\u000bH\f 5HJLRQ PDVN\n\u000bI\f 'HSWK\u0003$Q\\WKLQJ\u00039\u0015\n5HJLRQDO\u0003'LIIHUHQFHV\nFigure 3: Ordinal Pair Sampling: During training, we use two strate-\ngies to efﬁciently sample or"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_4",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5705572962760925,
+      "text": "DDS[24] R 𝑑 &𝑛 640 × 320 60 0.322 4.401 10.584 0.397 0.527 0.786 0.892\nMonoFormer[1] K 768 × 256 60 0.307 3.591 10.162 0.413 0.521 0.762 0.872\nTDDC[40] K 768 × 256 60 0.259 3.147 8.547 0.344 0.641 0.850 0.928\nDepth Anything[41] UD & LD - 60 0.302 3.051 9.2"
+    },
+    {
+      "id": "chunk::Lite-Mono_p3_chunk_2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.5689696073532104,
+      "text": "locks LGFI \nBlock\nStage 3\nDownsample\nCDC \nBlocks LGFI \nBlock\nStage 3\nConcat\nConcat\n𝐻\n4 × 𝑊\n4 × 1 \n𝐻\n2 × 𝑊\n2 × 1 \n𝐻 × 𝑊 × 1 \nPrediction \nHead\nPrediction \nHead\nPrediction \nHead\n× 𝑵𝟏 \n× 𝑵𝟐 \n× 𝑵𝟑 \nDepthNet\n𝐼𝑡 \nConcat\nUpsampling Block\n3×3 Conv\nUpsample\n3×3 Conv"
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.5687791705131531,
+      "text": ". . . . . . . . . . . . . . . . . . . 16\nB.2 Training Pseudocode . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17\nC Supervision Details 17\nC.1 SGD Loss for Dynamic Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18\nC.2"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_26",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5684682130813599,
+      "text": "esults reported in their paper. Additionally,\nwe attempt to reproduce TDDC’s approach and provide the general\n(G) version results for each DA method to facilitate further com-\nparison. Our final experiments indicate that the G-version results\nare largely c"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_20",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.5672990083694458,
+      "text": "nchanged. While md4all-DD (Section 3.1.3) also\napplies to the supervised case, using AD is more reasonable\nsince reliable ground truth data from ei is available.\n4. Experiments and Results\n4.1. Experimental Setup\nDatasets and metrics We used two public dri"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_25",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5660698413848877,
+      "text": "RNW, ADDS, and ITDFA\n[50]. The evaluation settings are based on the protocol of TDDC\n[40]. Since the official code for TDDC is not publicly available, we\nuse the experimental results reported in their paper. Additionally,\nwe attempt to reproduce TDDC’s app"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_5",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5646045804023743,
+      "text": "dilation= 1,2,3,2,4,6 dilation= [1,2,3]×2,2,4,6 dilation= [1,2,3]×2,2,4,6\n#Params. (M) 2.0 2.3 2.9 8.1\nTable 1. Four variants of the proposed depth encoder. [3× 3, C]× N means that a CDC block uses the 3× 3 kernel size to output C\nchannels, and repeats for"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_9",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5637268424034119,
+      "text": "852 0.938\nADDS[24] N 𝑑 &𝑛 640 × 320 40 0.265 3.651 8.700 0.309 0.640 0.870 0.945\nRNW[36] N 𝑑 &𝑛 640 × 320 40 0.237 2.958 8.187 0.298 0.683 0.885 0.948\nMonoFormer[1] K 768 × 256 40 0.289 2.893 7.468 0.302 0.543 0.873 0.964\nTDDC[40] K 768 × 256 40 0.210 1.51"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_9",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.5623241066932678,
+      "text": "IEEE/CVF Conference\non Computer Vision and Pattern Recognition (CVPR), 2020.\n1\n[38] Haoning Wu, Zicheng Zhang, Weixia Zhang, Chaofeng\nChen, Liang Liao, Chunyi Li, Yixuan Gao, Annan Wang,\nErli Zhang, Wenxiu Sun, Qiong Yan, Xiongkuo Min, Guang-\ntao Zhai, an"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_9",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.5623241066932678,
+      "text": "IEEE/CVF Conference\non Computer Vision and Pattern Recognition (CVPR), 2020.\n1\n[38] Haoning Wu, Zicheng Zhang, Weixia Zhang, Chaofeng\nChen, Liang Liao, Chunyi Li, Yixuan Gao, Annan Wang,\nErli Zhang, Wenxiu Sun, Qiong Yan, Xiongkuo Min, Guang-\ntao Zhai, an"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.5607513189315796,
+      "text": "81\nGeoNet [71] M 0.132 0.994 5.240 0.193 0.833 0.953 0.985\nDDVO [62] M 0.126 0.866 4.932 0.185 0.851 0.958 0.986\nRanjan [51] M 0.123 0.881 4.834 0.181 0.860 0.959 0.985\nEPC++ [38] M 0.120 0.789 4.755 0.177 0.856 0.961 0.987\nMonodepth2w/o pretrainingM 0.112"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.5607513189315796,
+      "text": "81\nGeoNet [71] M 0.132 0.994 5.240 0.193 0.833 0.953 0.985\nDDVO [62] M 0.126 0.866 4.932 0.185 0.851 0.958 0.986\nRanjan [51] M 0.123 0.881 4.834 0.181 0.860 0.959 0.985\nEPC++ [38] M 0.120 0.789 4.755 0.177 0.856 0.961 0.987\nMonodepth2w/o pretrainingM 0.112"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_13",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.6698785424232483,
+      "text": "locks are\nset to 1, 2, and 3, respectively. (3) Similar to the default\nsetting we set 1, 2, and 5 in every three CDC blocks as a\ngroup. (4) Based on the default setting the dilation rates\nin the last two CDC blocks are set to 2, 4, 6 and 4, 8, 12,\nrespecti",
+      "estimated_tokens": 88
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_8",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6645550727844238,
+      "text": "𝐾 \n𝑉 \nRepeat × N\nFigure 3. Structures of the proposed Consecutive Dilated Con-\nvolutions (CDC) module and Local-Global Features Interac-\ntion (LGFI) module. In each stage the CDC module with differ-\nent dilation rate is repeated for N times.\nwith size H×W×",
+      "estimated_tokens": 71
+    },
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_14",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.6468650102615356,
+      "text": "ation rates\nin the last two CDC blocks are set to 2, 4, 6 and 4, 8, 12,\nrespectively. Table 6 lists the accuracy under different dila-\ntion settings. Comparing (2) with (3) the accuracy beneﬁts\nfrom larger dilation rates. However, (4) using very large di-",
+      "estimated_tokens": 78
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_17",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6357244253158569,
+      "text": "ed CDC module utilizes dilated convolutions to extract\nmulti-scale local features. Different from using a parallel\ndilated convolution module only in the last layer of the net-\nwork [6] we insert several consecutive dilated convolutions\nwith different dila",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_6",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6332959532737732,
+      "text": "that a CDC block uses the 3× 3 kernel size to output C\nchannels, and repeats for N times. The dilation rate used in each CDC block is also listed.\nRepeat × 1\n3×3 DDWConv\ndilation=r\nBatch Norm\n1×1 point-wise\nGELU\n1×1 point-wise\nCDC Module LGFI Module\nLinear",
+      "estimated_tokens": 79
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_26",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.632373571395874,
+      "text": "the model size remains the same the\naccuracy drops more than for not using LGFI blocks. The\nbeneﬁt of introducing the CDC module is to enhance the\nlocality by gradually extracting multi-scale features, while\nnot adding additional trainable parameters.\nThe",
+      "estimated_tokens": 54
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.6220899820327759,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008",
+      "estimated_tokens": 163
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6220899820327759,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008",
+      "estimated_tokens": 163
+    },
+    {
+      "id": "chunk::Lite-Mono_p3_chunk_0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.6213232278823853,
+      "text": "Downsample\nCDC \nBlocks LGFI \nBlock\nStage 2\nDownsample\nCDC \nBlocks LGFI \nBlock\nStage 2\n𝐻\n4 × 𝑊\n4 × 𝐶2 \nConv \nstem\n𝐻\n2 × 𝑊\n2 × 𝐶1 \n𝐻\n8 × 𝑊\n8 × 𝐶3 \n𝐻\n16 × 𝑊\n16 × 𝐶4 \nDownsample\nCDC \nBlocks LGFI \nBlock\nDownsample\nCDC \nBlocks LGFI \nBlock\nUpsampling\nBlock\nStage",
+      "estimated_tokens": 130
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_1",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.6205857396125793,
+      "text": "in [Yin et al., 2019] 114 0.875 0.976 0.994 0.108 0.416 0.048\nDA V[Huynh et al., 2020] 25 0.882 0.980 0.996 0.108 0.412 -\nBTS [Lee et al., 2019] 47 0.885 0.978 0.994 0.110 0.392 0.047\nAdabins[Bhat et al., 2021] 78 0.903 0.984 0.997 0.103 0.364 0.044\nDPT* [",
+      "estimated_tokens": 155
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_3",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6159052848815918,
+      "text": ",128,stride= 2\nStage 2 CDC blocks [3×3,64]×3 [3 ×3,80]×3 [3 ×3,80]×3 [3 ×3,128]×3\nLGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3\n40×12 Downsampling3×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2\nStage",
+      "estimated_tokens": 136
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.6127783060073853,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K",
+      "estimated_tokens": 66
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6125333309173584,
+      "text": "×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2\nStage 3 CDC blocks [3×3,128]×6 [3 ×3,128]×6 [3 ×3,128]×9 [3 ×3,224]×9\nLGFI blockdilation= 1,2,3,2,4,6 dilation= 1,2,3,2,4,6 dilation= [1,2,3]×2,2,4,6 dilation= [1,2,3]×2,2,4,6\n#Param",
+      "estimated_tokens": 154
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_21",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.611666738986969,
+      "text": "ile achieving a larger receptive ﬁeld. Considering\nan input feature X with dimension H×W×C our CDC\nmodule outputs ˆX as follows:\nˆX =X +LinearG(Linear(BN (DDWConv r(X)))),\n(2)\nwhere LinearG denotes a point-wise convolution opera-\ntion, followed by theGELU",
+      "estimated_tokens": 75
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1464,
+    "compressed_context_tokens": 1464,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1464,
+  "context_tokens": 1464,
+  "prompt_token_estimate": 1990,
+  "run_label": "sage_semantic_all_v1_chunk_lite_mono_cdc_module_design",
+  "answer": "<think>\nThe user is asking about the CDC (Consecutive Dilated Convolutions) module design and its advantages over regular convolutions. Let me analyze the provided materials.\n\nFrom the materials:\n\n[1] Mentions dilation rates settings: 1, 2, and 3; 1, 2, and 5; and 2, 4, 6 and 4, 8, 12 in the last two CDC blocks.\n\n[2] Describes the CDC module structure: \"Consecutive Dilated Convolutions (CDC) module and Local-Global Features Interaction (LGFI) module. In each stage the CDC module with different dilation rate is repeated for N times.\"\n\n[3] Discusses accuracy under different dilation settings, comparing (2) with (3) the accuracy benefits from larger dilation rates.\n\n[4] \"The proposed CDC module utilizes dilated convolutions to extract multi-scale local features. Different from using a parallel dilated convolution module only in the last layer of the network [6], we insert several consecutive dilated convolutions with different dilation...\"\n\n[5] \"A CDC block uses the 3×3 kernel size to output C channels, and repeats for N times. The dilation rate used in each CDC block is also listed. Repeat ×1, 3×3 DDWConv dilation=r, Batch Norm, 1×1 point-wise, GELU, 1×1 point-wise\"\n\n[6] \"The benefit of introducing the CDC module is to enhance the locality by gradually extracting multi-scale features, while not adding additional trainable parameters.\"\n\n[9] Shows the overall network structure with CDC Blocks.\n\n[11] Shows specific CDC block configurations: [3×3,64]×3, [3×3,80]×3, etc.\n\n[13] More specific configurations with dilation rates like 1,2,3,2,4,6.\n\n[14] Mathematical formula for CDC module: X̂ = X + LinearG(Linear(BN(DDWConv_r(X)))), where LinearG is point-wise convolution with GELU, and it has a residual connection.\n\nSo the CDC module design:\n1. Uses 3×3 depth-wise dilated convolutions (DDWConv) with different dilation rates\n2. Followed by Batch Norm\n3. Then 1×1 point-wise convolution\n4. Then GELU activation\n5. Then another 1×1 point-wise convolution\n6. Has a residual connection\n7. Repeated N times in each stage\n8. Different dilation rates are used to extract multi-scale features\n\nAdvantages over regular convolutions:\n1. Extracts multi-scale local features through dilated convolutions\n2. Enhances locality by gradually extracting multi-scale features\n3. Does not add additional trainable parameters\n4. Achieves larger receptive field\n5. Different from parallel dilated convolutions only in the last layer - uses consecutive dilated convolutions throughout\n\nLet me format the answer in JSON as requested.\n</think>\n{\n  \"answer\": \"CDC（Consecutive Dilated Convolutions）模块由 3×3 深度可分离膨胀卷积（DDWConv）+ BatchNorm + 1×1 点卷积 + GELU + 1×1 点卷积组成，并带残差连接；在网络各阶段以不同膨胀率（dilation rate）连续重复 N 次。相比普通卷积，CDC 利用连续膨胀卷积逐步提取多尺度局部特征，在不增加额外可训练参数的情况下扩大感受野，并增强局部特征表达能力。\",\n  \"items\": [\n    {\n      \"name\": \"CDC 模块结构组成\",\n      \"description\": \"每个 CDC 块采用 3×3 深度可分离膨胀卷积（DDWConv，dilation=r）→ BatchNorm → 1×1 点卷积 → GELU → 1×1 点卷积，并带有残差连接（X̂ = X + LinearG(Linear(BN(DDWConv_r(X))))），在每个 stage 中以不同膨胀率重复 N 次。\",\n      \"citations\": [5, 14, 11, 13]\n    },\n    {\n      \"name\": \"多尺度特征提取方式\",\n      \"description\": \"通过在多个 CDC 块中使用不同的膨胀率（如 1,2,3、1,2,5 或 1,2,3,2,4,6 等）连续进行膨胀卷积，逐步提取多尺度局部特征，而不是仅在网络最后一层使用并行的膨胀卷积。\",\n      \"citations\": [1, 2, 4, 11, 13]\n    },\n    {\n      \"name\": \"相比普通卷积的优势一：扩大感受野且不增加参数\",\n      \"description\": \"使用膨胀卷积在保持参数不变的同时获得更大的感受野，并随膨胀率增大带来精度提升（实验 (2) 与 (3) 对比表明更大的膨胀率对精度有益）。\",\n      \"citations\":",
+  "usage": {
+    "prompt_tokens": 2027,
+    "completion_tokens": 1024,
+    "total_tokens": 3051,
+    "model": "MiniMax-M3"
+  }
+}

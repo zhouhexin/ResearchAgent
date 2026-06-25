@@ -1,0 +1,390 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_monodepth2_a_ask_baseline_none_e4f6557007e0",
+  "dry_run": false,
+  "query": "Monodepth2的auto-masking用于忽略哪些训练像素？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p13_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.7670371532440186,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Encoder Pretrained Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline R18 ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Monodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ R18 ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 w/o SSIM ✓ ✓ ✓ R18 ✓ 0. 118 0. 853 4. 824 0. 198 0. 868 0. 956 0. 980 Monodepth2 with [76]’s mask ✓ ✓ R18 ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2(full) ✓ ✓ ✓ R18 ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt R18 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2 w/o pt or auto-masking ✓ ✓ R18 0. 138 1. 197 5. 369 0. 215 0. 842 0. 945 0. 975 Monodepth2 w/o pt or min reproj ✓ ✓ R18 0. 133 1. 021 5. 219 0. 214 0. 841 0. 945 0. 976 Monodepth2 w/o pt or full-res m.s. ✓ ✓ R18 0. 131 1. 030 5. 206 0. 210 0. 846 0. 948 0. 978 Monodepth2w/o pt ✓ ✓ ✓ R18 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Monodepth2ResNet18 w/o pt ✓ ✓ ✓ R18 0. 132 1. 044 5. 142 0. 210 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p13_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.7670371532440186,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Encoder Pretrained Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline R18 ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Monodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ R18 ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 w/o SSIM ✓ ✓ ✓ R18 ✓ 0. 118 0. 853 4. 824 0. 198 0. 868 0. 956 0. 980 Monodepth2 with [76]’s mask ✓ ✓ R18 ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2(full) ✓ ✓ ✓ R18 ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt R18 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2 w/o pt or auto-masking ✓ ✓ R18 0. 138 1. 197 5. 369 0. 215 0. 842 0. 945 0. 975 Monodepth2 w/o pt or min reproj ✓ ✓ R18 0. 133 1. 021 5. 219 0. 214 0. 841 0. 945 0. 976 Monodepth2 w/o pt or full-res m.s. ✓ ✓ R18 0. 131 1. 030 5. 206 0. 210 0. 846 0. 948 0. 978 Monodepth2w/o pt ✓ ✓ ✓ R18 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Monodepth2ResNet18 w/o pt ✓ ✓ ✓ R18 0. 132 1. 044 5. 142 0. 210 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.7434391379356384,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Pretrained Full Eigen split Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Baseline + min reproj. ✓ ✓ 0. 122 1. 081 5. 116 0. 199 0. 866 0. 957 0. 980 Baseline + automasking ✓ 0. 124 0. 936 5. 010 0. 206 0. 858 0. 952 0. 977 Baseline + full-res m.s. ✓ ✓ 0. 124 1. 170 5. 249 0. 203 0. 865 0. 953 0. 978 Monodepth2 w/o min reprojection ✓ ✓ ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 with [76]’s mask ✓ ✓ ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 Monodepth2(full) ✓ ✓ ✓ ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2w/o pt ✓ ✓ ✓ 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Baseline (full Eigen dataset) ✓ ✓ 0. 146 1. 876 5. 666 0. 230 0. 848 0. 945 0. 972 Monodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.7434391379356384,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Pretrained Full Eigen split Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Baseline + min reproj. ✓ ✓ 0. 122 1. 081 5. 116 0. 199 0. 866 0. 957 0. 980 Baseline + automasking ✓ 0. 124 0. 936 5. 010 0. 206 0. 858 0. 952 0. 977 Baseline + full-res m.s. ✓ ✓ 0. 124 1. 170 5. 249 0. 203 0. 865 0. 953 0. 978 Monodepth2 w/o min reprojection ✓ ✓ ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 with [76]’s mask ✓ ✓ ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 Monodepth2(full) ✓ ✓ ✓ ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2w/o pt ✓ ✓ ✓ 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Baseline (full Eigen dataset) ✓ ✓ 0. 146 1. 876 5. 666 0. 230 0. 848 0. 945 0. 972 Monodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p4_sc3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 4,
+      "score": 0.7295001149177551,
+      "text": "Auto-Masking Stationary Pixels Self-supervised monocular training often operates under the assumptions of a moving camera and a static scene. When these assumptions break down, for example when the cam- era is stationary or there is object motion in the scene, per- formance can suffer greatly. This problem can manifest it- self as ‘holes’ of inﬁnite depth in the predicted test time depth maps, for objects that are typically observed to be moving during training [38] (Fig. 2). This motivates our second contribution: a simple auto-masking method that ﬁl- ters out pixels which do not change appearance from one frame to the next in the sequence. This has the effect of letting the network ignore objects which move at the same velocity as the camera, and even to ignore whole frames in monocular videos when the camera stops moving. Like other works [76, 61, 38], we also apply a per-pixel maskµ to the loss, selectively weighting pixels. However in contrast to prior work, our mask is binary, soµ∈{ 0, 1}, and is computed automatically on the forward pass of the network, instead of being learned or estimated from object motion."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p4_sc3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7295001149177551,
+      "text": "Auto-Masking Stationary Pixels Self-supervised monocular training often operates under the assumptions of a moving camera and a static scene. When these assumptions break down, for example when the cam- era is stationary or there is object motion in the scene, per- formance can suffer greatly. This problem can manifest it- self as ‘holes’ of inﬁnite depth in the predicted test time depth maps, for objects that are typically observed to be moving during training [38] (Fig. 2). This motivates our second contribution: a simple auto-masking method that ﬁl- ters out pixels which do not change appearance from one frame to the next in the sequence. This has the effect of letting the network ignore objects which move at the same velocity as the camera, and even to ignore whole frames in monocular videos when the camera stops moving. Like other works [76, 61, 38], we also apply a per-pixel maskµ to the loss, selectively weighting pixels. However in contrast to prior work, our mask is binary, soµ∈{ 0, 1}, and is computed automatically on the forward pass of the network, instead of being learned or estimated from object motion."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6871772408485413,
+      "text": "In the masked attention mechanism, regions with a mask value of 0 are excluded from the computations, thereby conﬁning the focus to the features that require attention and achieving eﬃcient aggregation of the target features. Following MMA, we utilize MSA for self-interaction within 𝑄𝑖𝑛, and then update 𝑄𝑖𝑛 through an FFN with residual connections. Finally, 𝑄𝑜𝑢𝑡 outputted after going through the complete masked transformer layer is deﬁned as: 𝑄𝑜𝑢𝑡 = 𝐹 𝐹 𝑁(𝑀𝑆𝐴 (𝑀𝑀𝐴 (𝑄𝑖𝑛, 𝐹𝑙))). (3) Segmentation mask generator. To aggregate image features within semantic segments, we utilize the SMG to generate binary segmenta- tion masks 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻 4 × 𝑊 4 prior to each masked transformer layer. The structure of the SMG module is illustrated in the lower left corner of Fig. 3. Given 𝑄𝑆 ∈ ℝ𝑀×𝐶 , we obtain the segmentation embeddings 𝐸𝑆 ∈ ℝ𝑀×𝐶 through a MLP. Subsequently, by performing matrix multi- plication with 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 , we obtain the segmentation probability Pattern Recognition 171 (2026) 112279 3"
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.6751185059547424,
+      "text": "116 0. 918 4. 872 0. 193 0. 874 0. 959 0. 981 Table 2. Ablation. Results for different variants of our model (Monodepth2) with monocular training on KITTI 2015 [13] using the Eigen split. (a) The baseline model, with none of our contributions, performs poorly. The addition of our minimum reprojection, auto-masking and full-res multi-scale components, signiﬁcantly improves performance.(b) Even without ImageNet pretrained weights, our much simpler model brings large improvements above the baseline – see also Table 1. (c) If we train with the full Eigen dataset (instead of the subset introduced for monocular training by [76]) our improvement over the baseline increases. Input Zhou et al. [76] DDVO [62] Monodepth2 (M) Ground truth Figure 6. Qualitative Make3D results. All methods were trained on KITTI using monocular supervision. Further, in Table 2(a), we replace our auto-masking loss with a re-implementation of the predictive mask from [76]. We ﬁnd that this ablated model is worse than using no mask- ing at all, while our auto-masking improves results in all cases. We see an example of how auto-masking works in practice in Fig. 5."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.6751185059547424,
+      "text": "116 0. 918 4. 872 0. 193 0. 874 0. 959 0. 981 Table 2. Ablation. Results for different variants of our model (Monodepth2) with monocular training on KITTI 2015 [13] using the Eigen split. (a) The baseline model, with none of our contributions, performs poorly. The addition of our minimum reprojection, auto-masking and full-res multi-scale components, signiﬁcantly improves performance.(b) Even without ImageNet pretrained weights, our much simpler model brings large improvements above the baseline – see also Table 1. (c) If we train with the full Eigen dataset (instead of the subset introduced for monocular training by [76]) our improvement over the baseline increases. Input Zhou et al. [76] DDVO [62] Monodepth2 (M) Ground truth Figure 6. Qualitative Make3D results. All methods were trained on KITTI using monocular supervision. Further, in Table 2(a), we replace our auto-masking loss with a re-implementation of the predictive mask from [76]. We ﬁnd that this ablated model is worse than using no mask- ing at all, while our auto-masking improves results in all cases. We see an example of how auto-masking works in practice in Fig. 5."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p9_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.670957088470459,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 9 Mask ratio Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 0% 0. 104 0. 741 4. 489 0. 180 0. 890 0. 964 0. 984 10% 0. 104 0. 729 4. 482 0. 179 0. 891 0. 964 0. 983 20% 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 40% 0. 103 0. 741 4. 463 0. 179 0. 892 0. 965 0. 984 60% 0. 103 0. 718 4. 462 0. 179 0. 891 0. 965 0. 984 80% 0. 107 0. 772 4. 587 0. 182 0. 885 0. 963 0. 983 TABLE VI ABLATION STUDY ON DIFFERENT MASK RATIOS IN THE MASKED VISUAL CONDITION MECHANISM , WHICH IS ONLY UTILIZED DURING THE TRAINING PHASE . Input MonoDiffusion(w/o MVC) MonoDiffusion (ours) Fig. 8. Qualitative comparison between MonoDiffusion with and without masked visual condition (MVC) mechanism. objects and then gradually refines the depth values and rectifies the inter- and intra-object distance relationships. Masked visual condition. In Fig. 8, we display a qualitative depth comparison between MonoDiffusion with and without masked visual condition (MVC) mechanism. As can be seen, the MVC mechanism can indeed enhance the denoising ability of model, e.g., better tree silhouettes."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6660705804824829,
+      "text": "To address this issue, we design a Segmenta- tion Mask Generator (SMG), which leverages both segmentation queries 𝑄𝑆 ∈ ℝ𝑀×𝐶 and per-pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 to generate se- mantic segmentation masks 𝑀𝑠 ∈ ℝ(𝑀+𝑁)× 𝐻 4 × 𝑊 4 that guide 𝑄𝐵 in aggre- gating image features within semantic segments. Masked transformer layer. In the SQGA module, we employ 𝐿 masked transformer layers at each scale. The masked transformer layer consists of Multi-Head Masked Attention (MMA), Multi-Head Self- Attention (MSA), and a Feed Forward Network (FFN), as shown in the lower right corner of Fig. 3. We utilize masked attention: 𝑀𝑀𝐴 (𝑄𝑖𝑛, 𝐹𝑙) = 𝑠𝑜𝑓 𝑡𝑚𝑎𝑥(𝑙 + 𝑄𝑙𝐾 ⊤ 𝑙 )𝑉𝑙 + 𝑄𝑖𝑛, (1) where 𝑙 is the index of the scale, 𝑄𝑖𝑛 is the output 𝑄 from the previous layer, and 𝑄𝑙, 𝐾𝑙, and 𝑉𝑙 are the linear projections of the query from 𝑄𝑖𝑛, and the key and value from 𝐹𝑙, respectively, with the linear projections denoted as Proj in the ﬁgure. The attention mask 𝑙 at feature location (𝑥, 𝑦) is deﬁned as: 𝑙(𝑥, 𝑦) = {0, if 𝑀𝑠(𝑥, 𝑦) = 1 −∞, if 𝑀𝑠(𝑥, 𝑦) = 0 , (2) where 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻 4 × 𝑊 4 is the binarized attention mask predicted by the SMG module."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p4_sc1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 4,
+      "score": 0.6606380939483643,
+      "text": "Thereafter, a reprojection error erepro and a geometry error egeo are defined as erepro = eps→t − pt 2 , (12) egeo = eD s→t (p) − Dt (p) Dt (p) , (13) The determination of valid pixels for multi-view check filter is achieved by {p} = {p |erepro < aerepro, egeo < begeo } , (14) where erepro and egeo are the average over all pixels and a and b are set to 4 based on [25]. Masked visual condition. Inspired by the success of cou- pling diffusion model with masked image modeling [26], [27], we develop a masked visual condition mechanism to further enhance the denoising ability of MonoDiffusion. For multi- scale feature tokens propagated by the encoder, we generate random masks to remove part of the tokens from these feature tokens. To prevent the information leakage, these masks are shared otherwise masked information may be easily borrowed from feature tokens of different resolutions. More specifically, we generate a mask with the highest resolution, and leverage nearest neighbor interpolation to acquire a pyramid of masks. The masked feature tokens are aggregated into masked visual conditions through learnable layers composed of 3 × 3 convo- lutions and upsampling layers."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p10_sc1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.6592308282852173,
+      "text": "Monocular depth estimation using diffusion models. arXiv preprint arXiv:2302. 14816, 2023. [24] Yiqun Duan, Xianda Guo, and Zheng Zhu. Diffusiondepth: Diffusion denoising approach for monocular depth estimation. arXiv preprint arXiv:2303. 05021, 2023. [25] Zhong Liu, Ran Li, Shuwei Shao, Xingming Wu, and Weihai Chen. Self- supervised monocular depth estimation with self-reference distillation and disparity offset refinement. IEEE Transactions on Circuits and Systems for Video Technology, 2023. [26] Shanghua Gao, Pan Zhou, Ming-Ming Cheng, and Shuicheng Yan. Masked diffusion transformer is a strong image synthesizer. arXiv preprint arXiv:2303. 14389, 2023. [27] Chen Wei, Karttikeya Mangalam, Po-Yao Huang, Yanghao Li, Haoqi Fan, Hu Xu, Huiyu Wang, Cihang Xie, Alan Yuille, and Christoph Feichtenhofer. Diffusion models as masked autoencoders. arXiv preprint arXiv:2304. 03283, 2023. [28] Andreas Geiger, Philip Lenz, and Raquel Urtasun. Are we ready for autonomous driving? the kitti vision benchmark suite. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition , pages 3354–3361, 2012. [29] Ashutosh Saxena, Min Sun, and Andrew Y Ng."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p10_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.6570442318916321,
+      "text": "InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 15211–15222. [48] Yi Zhang, Hongwei Qin, Xiaogang Wang, and Hongsheng Li. 2021. Rethinking noise synthesis and modeling in raw denoising. In Proceedings of the IEEE/CVF International Conference on Computer Vision . 4593–4601. [49] Zhedong Zhang, Liang Li, Gaoxiang Cong, Haibing Yin, Yuhan Gao, Chenggang Yan, Anton van den Hengel, and Yuankai Qi. 2024. From speaker to dubber: movie dubbing with prosody and duration consistency learning. In Proceedings of the 32nd ACM International Conference on Multimedia . 7523–7532. [50] Chaoqiang Zhao, Yang Tang, and Qiyu Sun. 2022. Unsupervised monocular depth estimation in highly complex environments. IEEE Transactions on Emerging Topics in Computational Intelligence 6, 5 (2022), 1237–1246. [51] Chaoqiang Zhao, Youmin Zhang, Matteo Poggi, Fabio Tosi, Xianda Guo, Zheng Zhu, Guan Huang, Yang Tang, and Stefano Mattoccia. 2022. Monovit: Self- supervised monocular depth estimation with a vision transformer. In 2022 inter- national conference on 3D vision (3DV) . IEEE, 668–678."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6543155908584595,
+      "text": "[16] Edward J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, and Weizhu Chen. 2021. Lora: Low-rank adaptation of large language models. arXiv preprint arXiv:2106. 09685 (2021). [17] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. 2021. Neigh- bor2neighbor: Self-supervised denoising from single noisy images. InProceedings of the IEEE/CVF conference on computer vision and pattern recognition . 14781– 14790. [18] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. 2022. Neigh- bor2Neighbor: A self-supervised framework for deep image denoising. IEEE Transactions on Image Processing 31 (2022), 4023–4038. [19] Bingxin Ke, Anton Obukhov, Shengyu Huang, Nando Metzger, Rodrigo Caye Daudt, and Konrad Schindler. 2024. Repurposing diffusion-based image genera- tors for monocular depth estimation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 9492–9502. [20] Bo Li, Chunhua Shen, Yuchao Dai, Anton Van Den Hengel, and Mingyi He. 2015. Depth and surface normal estimation from monocular images using regression on deep features and hierarchical crfs."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p11_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.6512153744697571,
+      "text": "15, we vi- sualize the mask activation areas. Unlike BinsFormer [10], which adap- tively adjusts the activation areas based on the depth distribution of diﬀerent images, we conﬁne the areas within objects of the same seman- tic category and aggregate information from corresponding regions for each bin query through the masked transformer layer, thereby achieving better structural recovery and relative depth estimation within semantic segments. SQGA module: As shown in Table 9, to verify the eﬀectiveness of our SQGA module, we conduct ablation experiments. In our framework, each scale of features applies 3 masked transformer layers across three scales. We compare the results of 3, 6, 9, and 12-layer models. Regard- less of whether the SMG module is used, the 9-layer model achieves the best prediction performance. In addition, model performance does not always improve with the increasing number of layers. The 12-layer model’s prediction performance is even worse than that of the 3-layer model."
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc1",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.6483093500137329,
+      "text": "1, 2, 4 [30] Kun Wang, Zhenyu Zhang, Zhiqiang Yan, Xiang Li, Baobei Xu, Jun Li, and Jian Yang. Regularizing nighttime weird- ness: Efficient self-supervised monocular depth estimation in the dark. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 16055–16064, 2021. 1, 2, 6, 7 [31] Ruoyu Wang, Zehao Yu, and Shenghua Gao. Planedepth: Self-supervised depth estimation via orthogonal planes. In 2023 IEEE/CVF Conference on Computer Vision and Pat- tern Recognition (CVPR), pages 21425–21434, 2023. 1 [32] Youhong Wang, Yunji Liang, Hao Xu, Shaohui Jiao, and Hongkai Yu. Sqldepth: Generalizable self-supervised fine- structured monocular depth estimation, 2023. 1 [33] Jamie Watson, Oisin Mac Aodha, Victor Prisacariu, Gabriel Brostow, and Michael Firman. The temporal opportunist: Self-supervised multi-frame monocular depth. In Proceed- ings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pages 1164–1174, 2021. 1, 2, 3, 6, 7 [34] Sungmin Woo, Wonjoon Lee, Woo Jin Kim, Dogyoon Lee, and Sangyoun Lee. Prodepth: Boosting self-supervised multi-frame monocular depth with probabilistic fusion. arXiv preprint arXiv:2407. 09303, 2024."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p10_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 10,
+      "score": 0.6459242701530457,
+      "text": "PMLR, 2023. 2, 3, 6, 7, 8 [38] Kun Wang, Zhenyu Zhang, Zhiqiang Yan, Xiang Li, Baobei Xu, Jun Li, and Jian Yang. Regularizing Nighttime Weird- ness: Efficient self-supervised monocular depth estimation in the dark. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 16055–16064, 2021. 2, 3, 6, 7 [39] Zhou Wang, Alan C Bovik, Hamid R Sheikh, and Eero P Si- moncelli. Image quality assessment: From error visibility to structural similarity. IEEE Transactions on Image Process- ing, 13(4):600–612, 2004. 4 [40] Mengchen Xiong, Xiao Xu, Dong Yang, and Eckehard Stein- bach. Robust depth estimation in foggy environments com- bining RGB images and mmWave radar. In International Symposium on Multimedia, pages 34–41. IEEE, 2022. 2, 3 [41] Jiaxing Yan, Hong Zhao, Penghui Bu, and YuSheng Jin. Channel-wise attention-based network for self-supervised monocular depth estimation. In International Conference on 3D vision (3DV), pages 464–473. IEEE, 2021. 1 [42] Fisher Yu, Haofeng Chen, Xin Wang, Wenqi Xian, Yingying Chen, Fangchen Liu, Vashisht Madhavan, and Trevor Dar- rell. BDD100K: A diverse driving dataset for heterogeneous multitask learning."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p8_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 8,
+      "score": 0.6455724239349365,
+      "text": "Additionally, we replaced the semantic seg- mentation loss (𝐶𝐸 ) with:𝜆1𝐶𝐿𝑆 + 𝜆2𝑀𝐴𝑆𝐾 + 𝜆3𝐷𝐼𝐶𝐸 (𝜆1 = 2, 𝜆 2 = 5, 𝜆 3 = 5),where 𝐶𝐿𝑆 , 𝑀𝐴𝑆𝐾 and 𝐷𝐼𝐶𝐸 represent cross-entropy loss, binary cross-entropy loss, and dice loss, respectively. For more details on the segmentation loss, please refer to Mask2Former [28]. The comparison results are shown in Table 6. The panoptic seg- mentation method achieved the best performance in 5 out of 7 met- rics. The experimental results demonstrate that the panoptic segmenta- tion method can further reﬁne the boundary regions between diﬀerent Pattern Recognition 171 (2026) 112279 8"
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc4",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.6455566883087158,
+      "text": "2 [44] Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang, and Dongbin Zhao. Steps: Joint self- supervised nighttime image enhancement and depth estima- tion. In 2023 IEEE International Conference on Robotics and Automation (ICRA), pages 4916–4923, 2023. 1, 2 [45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork- gan: Seeing into the rainy night. In The IEEE European Conference on Computer Vision (ECCV), 2020. 2, 4 [46] Hanyu Zhou, Yi Chang, Wending Yan, and Luxin Yan. Un- supervised cumulative domain adaptation for foggy scene optical flow. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9569– 9578, 2023. 4, 5 [47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING, Yuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the common appearance-boundary adaptation for nighttime op- tical flow. InThe Twelfth International Conference on Learn- ing Representations, 2024. 2 [48] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p3_sc1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.6437850594520569,
+      "text": "Then, we elabo- rate on the proposed MonoDiffusion, namely, depth estimation as denoising, pseudo ground-truth diffusion and masked visual condition. Finally, we demonstrate the overall architecture and loss. An overview of the whole framework is shown in Fig. 2. A. Preliminaries Diffusion models , for example, [38], [41], [45], belong to the category of latent variable models and widely employed in generative tasks. In practice, they are trained to denoise images blurred with Gaussian noise and reverse the diffusion process q (xτ |x0 ), which involves the iterative addition of noise to a desired image distribution x0 and allows acquiring the latent noisy sample xτ . Mathematically, q (xτ |x0 ) := N \u0000 xτ √ατ x0, (1 − ατ )I \u0001 , (1) with ατ := Yτ n=0 ατ = Yτ n=0 (1 − βn), (2) and xτ = √ατ x0 + √ 1 − ατ ϵ, ϵ ∼ N(0, 1) , (3) where τ consists of T steps, βn stands for the noise variance schedule as DDPM [38] and N stands for the Gaussian noise. For the denoising process, a noise predictor ϵθ (xτ , τ) learns to reverse the diffusion process and recover x0."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p1_sc4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6434674263000488,
+      "text": "Since the depth ground-truth is not available in the training phase, we introduce a pseudo ground-truth diffusion process to assist the diffusion in MonoDiffusion. Specifically, the pseudo ground- truth diffusion gradually appends noise to the depth generated by a pre-trained teacher model, which we refer to as the pseudo ground-truth. As a by-product, the teacher model allows us to impose a knowledge distillation loss on the denoised depth to improve the results. In order to alleviate the negative impact of depth error in pseudo ground-truth, we apply a multi-view check filter [25] to filter out erroneous depth. Furthermore, we develop a masked visual condition mechanism to enhance the denoising ability of MonoDiffusion, inspired by the success of combining diffusion model with masked image modeling [26], [27]. The difference is that our target to reconstruction is the denoised depth rather than the RGB image. To summarize, our contributions are listed as follows: • We propose a novel framework, dubbed MonoDiffusion, arXiv:2311. 07198v1 [cs. CV] 13 Nov 2023"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p14_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.6432920098304749,
+      "text": "23 [64] Zhenlong Yuan, Dapeng Zhang, Zehao Li, Chengxuan Qian, Jianing Chen, Yinda Chen, Kehua Chen, Tianlu Mao, Zhaoxin Li, Hao Jiang, and Zhaoqi Wang. Dvp-mvs++: Synergize depth-normal-edge and harmonized visibility prior for multi-view stereo, 2025. 23 [65] Zongsheng Yue, Kang Liao, and Chen Change Loy. Arbitrary-steps image super-resolution via diffusion inversion.arXiv preprint arXiv:2412. 09013, 2024. 3 [66] Ziyao Zeng, Jingcheng Ni, Daniel Wang, Patrick Rim, Younjoon Chung, Fengyu Yang, Byung-Woo Hong, and Alex Wong. Priordiffusion: Leverage language prior in diffusion models for monocular depth estimation, 2024. 3 [67] Ning Zhang, Francesco Nex, George V osselman, and Norman Kerle. Lite-mono: A lightweight cnn and transformer architecture for self-supervised monocular depth estimation. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 18537–18546, 2023. 8 [68] Chaoqiang Zhao, Youmin Zhang, Matteo Poggi, Fabio Tosi, Xianda Guo, Zheng Zhu, Guan Huang, Yang Tang, and Stefano Mattoccia. Monovit: Self-supervised monocular depth estimation with a vision transformer. In2022 international conference on 3D vision (3DV), pages 668–678."
+    },
+    {
+      "id": "semantic_chunk::ACD_p9_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.6426698565483093,
+      "text": "[Wang et al., 2024b ] Jiyuan Wang, Chunyu Lin, Lang Nie, Kang Liao, Shuwei Shao, and Y ao Zhao. Digging into contrastive learning for robust depth estimation with dif- fusion models. In ACM MM, pages 4129–4137, 2024. [Xian et al., 2020 ] Ke Xian, Jianming Zhang, Oliver Wang, Long Mai, Zhe Lin, and Zhiguo Cao. Structure-guided ranking loss for single image depth prediction. In CVPR, pages 611–620, 2020. [Xue et al., 2020 ] Feng Xue, Guirong Zhuo, Ziyuan Huang, Wufei Fu, Zhuoyue Wu, and Marcelo H Ang. Toward hier- archical self-supervised monocular absolute depth estima- tion for autonomous driving applications. In IROS, pages 2330–2337, 2020. [Y anget al., 2024a ] Haolin Y ang, Chaoqiang Zhao, Lu Sheng, and Y ang Tang. Self-supervised monocu- lar depth estimation in the dark: Towards data distribution compensation. In IJCAI, pages 1561–1569, 2024. [Y anget al., 2024b] Lihe Y ang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything v2. In NeurIPS, 2024. [Yin et al., 2022 ] Wei Yin, Jianming Zhang, Oliver Wang, Simon Niklaus, Simon Chen, Yifan Liu, and Chunhua Shen."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6425877809524536,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6425877809524536,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p1_sc2",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6419716477394104,
+      "text": "When training on monocular videos, an additional pose network is necessary to estimate the camera motion. Nevertheless, self- supervised MDE that relies solely on monocular videos are preferred because of the difficulty in collecting stereo data, for This work was supported by the National Natural Science Foundation of China under grant 61620106012. Shuwei Shao, Zhongcai Pei, Weihai Chen and Dingchi Sun are with the School of Automation Science and Electrical Engineering, Beihang University, Beijing, China. (email: swshao@buaa.edu.cn, peizc@buaa.edu.cn, whchen@buaa.edu.cn, sdc@nuaa.edu.cn) Peter C. Y . Chen is with the Department of Mechanical Engineering, National University of Singapore, Singapore. (e-mail: mpechenp@nus.edu.sg) Zhengguo Li is with the SRO department, Institute for Infocomm Research, 1 Fusionopolis Way, Singapore. (e-mail: ezgli@i2r.a-star.edu.sg) *(corresponding author: Weihai Chen.) Fig. 1. Illustration of the denoising process guided by visual conditions. example, intricate configurations and data processing."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p13_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.6418240070343018,
+      "text": "845 0. 948 0. 977 Monodepth2ResNet18 ✓ ✓ ✓ R18 ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2ResNet 50 w/o pt ✓ ✓ ✓ R50 0. 131 1. 023 5. 064 0. 206 0. 849 0. 951 0. 979 Monodepth2ResNet 50 ✓ ✓ ✓ R50 ✓ 0. 110 0. 831 4. 642 0. 187 0. 883 0. 962 0. 982 Table 6. Ablation. Results for different variants of our model (Monodepth2) with monocular training (except where speciﬁed) on KITTI 2015 [13]. Figure 9. Qualitative ablation study. We can see that our model with all components added result in the smallest amount of depth artifacts. ‘Baseline (M)’ is our model without our full-resolution multi-scale appearance loss, minimum reprojection loss, or auto-masking loss. pose network in contrast to previous works which use three [76, 62] or more for their depth estimation experiments. In Section H we validate the beneﬁt of bringing additional pa- rameters to the pose network. C. Additional Ablation Experiments In Table 6 we show a full ablation study on our algo- rithm, turning on and off different components of the sys- tem. We conﬁrm the ﬁnding of the main paper, that all our components together gives the highest quality model, and that pretraining helps."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p13_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.6418240070343018,
+      "text": "845 0. 948 0. 977 Monodepth2ResNet18 ✓ ✓ ✓ R18 ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2ResNet 50 w/o pt ✓ ✓ ✓ R50 0. 131 1. 023 5. 064 0. 206 0. 849 0. 951 0. 979 Monodepth2ResNet 50 ✓ ✓ ✓ R50 ✓ 0. 110 0. 831 4. 642 0. 187 0. 883 0. 962 0. 982 Table 6. Ablation. Results for different variants of our model (Monodepth2) with monocular training (except where speciﬁed) on KITTI 2015 [13]. Figure 9. Qualitative ablation study. We can see that our model with all components added result in the smallest amount of depth artifacts. ‘Baseline (M)’ is our model without our full-resolution multi-scale appearance loss, minimum reprojection loss, or auto-masking loss. pose network in contrast to previous works which use three [76, 62] or more for their depth estimation experiments. In Section H we validate the beneﬁt of bringing additional pa- rameters to the pose network. C. Additional Ablation Experiments In Table 6 we show a full ablation study on our algo- rithm, turning on and off different components of the sys- tem. We conﬁrm the ﬁnding of the main paper, that all our components together gives the highest quality model, and that pretraining helps."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6417784690856934,
+      "text": "The expression for 𝑆𝑃 𝑆𝐴 is as follows: 𝑆𝑃 𝑆𝐴 = 1 𝑈 𝑉 𝑈∑ 𝑝𝑖 𝑉∑ 𝑗 |||𝛾𝐷 𝑆 (𝑝𝑖, 𝑗) − 𝜇(𝐷∗ 𝑆 (𝑝𝑖, 𝑗))|||, (14) where 𝐷𝑆 (𝑝𝑖, 𝑗) and 𝐷∗ 𝑆 (𝑝𝑖, 𝑗) represent the predicted and ground truth (GT) segmentation scale at pixel 𝑗 within the patch 𝑝𝑖, respectively. 𝜇(⋅) denotes the median of the depths, 𝑈 is the number of semantic seg- mentation patches, and 𝑉 represents the number of valid pixels in each patch. However, predicting the median of the metric depth for each se- mantic segment can cause the ﬁnal prediction to be generally smaller than the ground truth. To address this issue, we set a scaling factor 𝛾 to ensure the predicted segmentation scale values larger than the median depth of each semantic segment. In our experiments, 𝛾 is set to 0. 5. We also adopt the multi-scale supervision strategy from BinsFormer [10], applying the SPS and ARD modules at each feature scale to provide auxiliary supervision. Finally, the total loss is deﬁned as: 𝑡𝑜𝑡𝑎𝑙 = 3∑ 𝑙 ( 𝑤𝑙 𝐿∑ 𝑛 ( 𝛼𝑙,𝑛 𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛 𝐶𝐸 + 𝛿𝑙,𝑛 𝑆𝑃 𝑆𝐴 )) , (15) where 𝐿 represents the number of stacked masked transformer layers at each feature scale. 𝑤𝑙 is the scale weight, which is set to 1 23−𝑙 ."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6390796899795532,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024)."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p8_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6383367776870728,
+      "text": "Acknowledgment This work was supported in part by the National Key Re- search and Development Program of China under Grant 2021YFB1714300, in part by the National Natural Science Foundation of China under Grant 62233005, in part by the National Natural Science Foundation of China under Grant 62203173, in part by the Program of Introducing Talents of Discipline to Universities through the 111 Project under Grant B17017 and Shanghai AI Lab. References [Agarwal and Arora, 2023] Ashutosh Agarwal and Chetan Arora. Attention attention everywhere: Monocular depth prediction with skip attention. In WACV, pages 5861– 5870, 2023. [Azuma et al., 2001] Ronald Azuma, Yohan Baillot, Rein- hold Behringer, Steven Feiner, Simon Julier, and Blair MacIntyre. Recent advances in augmented reality. IEEE Computer Graphics and Applications , 21(6):34–47, 2001. [Bae et al., 2023] Jinwoo Bae, Sungho Moon, and Sunghoon Im. Deep digging into the generalization of self- supervised monocular depth estimation. In AAAI, 2023. [Bhat et al., 2021] Shariq Farooq Bhat, Ibraheem Alhashim, and Peter Wonka. Adabins: Depth estimation using adap- tive bins. In CVPR, pages 4009–4018, 2021."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p3_sc4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.6382114291191101,
+      "text": "Unfortunately, the lack of depth ground-truth for self-supervised MDE makes it hard to perform. To address the issue, we introduce a pseudo ground-truth diffusion process. More specifically, we pre-train a teacher model based on Lite-Mono [18], a well-behaved self- supervised monocular depth estimator. Then, the diffusion is performed on the depth generated by our teacher model, which we referred to as the pseudo ground-truth Dpseudo (p), q (Dτ |Dpseudo ) := N \u0000 Dτ √ατ Dpseudo, (1 − ατ )I \u0001 . (9) The teacher model will be discarded once the training is com- pleted. Compared with diffusion on the denoised output [23], [24], the pseudo ground-truth process is able to avoid the noisy denoised output at the early training stage from deteriorating the entire training process. As a by-product, the teacher model"
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc2",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.6378968954086304,
+      "text": "1, 2, 5 [35] Yihang Wu, Xiao Cao, Kaixin Li, Zitan Chen, Haonan Wang, Lei Meng, and Zhiyong Huang. Towards better text-to- image generation alignment via attention modulation. ArXiv, abs/2404. 13899, 2024. 2 [36] Haofei Xu, Jing Zhang, Jianfei Cai, Hamid Rezatofighi, Fisher Yu, Dacheng Tao, and Andreas Geiger. Unifying flow, stereo and depth estimation. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023. 3 [37] Guorun Yang, Xiao Song, Chaoqin Huang, Zhidong Deng, Jianping Shi, and Bolei Zhou. Drivingstereo: A large-scale dataset for stereo matching in autonomous driving scenarios. In IEEE Conference on Computer Vision and Pattern Recog- nition (CVPR), 2019. 2, 6, 7 [38] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In IEEE International Conference on Computer Vision (ICCV), 2023. 2 [39] Ning Zhang, Francesco Nex, George V osselman, and Nor- man Kerle. Lite-mono: A lightweight cnn and transformer architecture for self-supervised monocular depth estima- tion. In Proceedings of the IEEE/CVF Conference on Com- puter Vision and Pattern Recognition (CVPR), pages 18537– 18546, 2023."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.6368563175201416,
+      "text": "996 [18] Monodepth2 Resnet18 \u0013 MS 192 × 640 0. 084 0. 494 3. 739 0. 132 0. 918 0. 983 0. 995 WaveletMonodepth Resnet18 \u0013 MS 192 × 640 0. 085 0. 497 3. 804 0. 134 0. 912 0. 982 0. 995 [63] Depth Hints \u0013 MS +SSGM 192 × 640 0. 087 0. 526 3. 776 0. 133 0. 915 0. 982 0. 995 WaveletMonodepth Resnet18 \u0013 MS +SSGM 192 × 640 0. 086 0. 497 3. 699 0. 131 0. 914 0. 983 0. 996 [18] Monodepth2 Resnet18 \u0013 S 320 × 1024 0. 082 0. 497 3. 637 0. 132 0. 924 0. 982 0. 994 WaveletMonodepth Resnet18 \u0013 S 320 × 1024 0. 080 0. 443 3. 544 0. 130 0. 919 0. 983 0. 995 WaveletMonodepth Resnet50 \u0013 S 320 × 1024 0. 076 0. 413 3. 434 0. 126 0. 926 0. 984 0. 995 [63] Depth Hints \u0013 SSGM 320 × 1024 0. 077 0. 404 3. 345 0. 119 0. 930 0. 988 0. 997 WaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0. 078 0. 397 3. 316 0. 121 0. 928 0. 987 0. 997 Depth Hints Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 363 3. 198 0. 114 0. 936 0. 989 0. 997 WaveletMonodepth Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 357 3. 170 0. 114 0. 936 0. 989 0. 997 Table 9: Quantitative results on the improved KITTI benchmark. We compare our method to our baselines on the KITTI [15] improved dataset introduced by [61], using the Eigen split."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6365909576416016,
+      "text": "Contents lists available at ScienceDirect Pattern Recognition journal homepage: www.elsevier.com/locate/pr SSRDepth: Combining semantic segmentation and relative depth for monocular metric depth estimation Yuhang Zou, Xiaoming Chen, Zhangyan Zhao ∗, Chenghua Zhang, Haipeng Liu School of Transportation and Logistics Engineering, Wuhan University of Technology, Wuhan, 430063, Hubei, China a r t i c l e i n f o Keywords: Monocular depth estimation Semantic segment Relative depth Masked transformer a b s t r a c t Monocular depth estimation is a pivotal task in computer vision, aimed to predict a dense depth map from a single image. Existing methods can achieve satisfactory performance through carefully designed network architectures. However, they often ignore the semantic information of scene structures, leading to poor performance in the se- mantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular depth estimation method that leverages semantic segmentation to improve metric depth prediction."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p7_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 7,
+      "score": 0.6365336179733276,
+      "text": "Transferring our MDE encoder to ADE20K for semantic segmentation. We use Mask2Former as our segmentation model. since the labeled images are already sufficient. However, with strong perturbations (S) applied to unlabeled images during re-training, the student model is challenged to seek additional visual knowledge and learn more robust repre- sentations. Consequently, the large-scale unlabeled images enhance the model generalization ability significantly. Moreover, with our used semantic constraint Lf eat, the power of unlabeled images can be further amplified for the depth estimation task. More importantly, as emphasized in Section 4. 4, this auxiliary constraint also enables our trained encoder to serve as a key component in a multi-task visual system for both middle-level and high-level perception. Comparison with MiDaS trained encoder in downstream tasks. Our Depth Anything model has exhibited stronger zero-shot capability than MiDaS [5, 45]. Here, we further 10377"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p4_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.6363383531570435,
+      "text": "Afterward, gaussian noise is gradually added at levels τ∈[1, T] into zy to obtain the noisy sample, with zy τ = √ατ zy + √1− ατ ϵ, then the model learns to iteratively reverse it by removing the predicted noise: ˆϵ=f ϵ θ (zy τ−1 |zy τ ,z I),(3) and finally decodes the depth prediction with D=D(z y 0). Here ϵ∼ N(0, I), fϵ θ is the ϵ-prediction U-Net, αt := Qt s=1(1−β s), D is the V AE decoder and{β1, β2, . , βT } is the noise schedule with Tsteps. Equation 1 demonstrates that the self-supervised approach needs the depth predictionDfor image warping. However, obtaining zy 0 requires iterative computation of Eq. 3, which becomes computation- ally infeasible considering the enormous size of SD models. Fortunately, Lotus and E2E FT[33, 21] demonstrate that we can obtain comparable results with single-step denoising and directly predict depth, D=D \u0000 f z θ \u0000 zy τ ,z I\u0001\u0001 , τ=T , which makes it possible to train SD with self-supervision. The step-by-step workflow is detailed in Sec B. 3. 2 Surrogate Task: Image Reconstruction Self-supervision Compromise SD Prior. The photometric reconstruction losses (Eq."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p5_sc3",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6346410512924194,
+      "text": "1 and 1, respectively. Similar to [15], we employ two source frames in Lph and the one with the minimum Lph is chosen to handle occlusion. Moreover, an auto-masking mechanism [15] is used to deal with dynamic objects. IV. E XPERIMENT We conduct extensive experiments on two standard datasets, which includes KITTI [28] and Make3D [29]. In the following part, we first describe the relevant datasets, evaluation metrics and implementation details. Then, we present quantitative and qualitative comparisons to the state-of-the-art competitors. Fi- nally, we conduct zero-shot generalization and ablation studies to perform a thorough analysis of MonoDiffusion. A. Datasets and Evaluation Metrics The KITTI dataset is composed of 61 stereo road scenes with the image resolution around 1241 × 376 pixels. The data collection involves multiple sensors such as cameras, 3D Lidar, GPU/IMU, among others. We adopt the Eigen split [4], which comprises 39180 monocular triplets for training, 4424 images for validation, and 697 images for testing. As in [15], we adopt the same intrinsic for all images by averaging the intrinsic of each image."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p8_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6345915198326111,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 8 ID SD PGD LKD MVC Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 1 0. 107 0. 787 4. 580 0. 182 0. 887 0. 963 0. 983 2 ✓ 0. 434 4. 630 11. 99 0. 579 0. 306 0. 568 0. 777 3 ✓ 0. 105 0. 757 4. 521 0. 181 0. 889 0. 964 0. 984 4 ✓ ✓ 0. 104 0. 741 4. 489 0. 180 0. 890 0. 964 0. 984 5 ✓ ✓ ✓ 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 TABLE IV ABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD: PSEUDO GROUND -TRUTH DIFFUSION ; MVC: MASKED VISUAL CONDITION MECHANISM . Inference step Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 2 1. 812 75. 600 30. 791 6. 160 0. 070 0. 141 0. 213 5 1. 503 58. 013 27. 140 5. 464 0. 125 0. 241 0. 340 10 0. 226 3. 730 9. 571 0. 754 0. 703 0. 878 0. 938 15 0. 822 28. 099 19. 232 2. 972 0. 357 0. 548 0. 653 20 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 25 0. 431 10. 382 12. 709 1. 206 0. 503 0. 723 0. 827 TABLE V ABLATION STUDY ON DIFFERENT INFERENCE STEPS . Fig. 7. Visualization of the denoising process involving 20 inference steps in total. E."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p9_sc1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.6341624855995178,
+      "text": "Additionally, the depth at distant distances can be better recovered, for instance, the sky. In the absence of MVC mechanism, the depth of sky is similar to the depth of distant trees, but in fact their depth should be highly different. The reason behind this may be that using the masked visual conditions to reconstruct the denoised depth enables the noise predictor to better exploit contextual information. As presented in Table VI, we further explore the impact of different mask ratios in the MVC mechanism. We find that 20 % is the best choice, and the model is capable of achieving feasible results even with a mask training ratio of 80%. V. C ONCLUSION In this work, we develop a novel self-supervised monocular depth estimation framework by reformulating it as an iterative denoising process. Besides, we introduce the pseudo ground- truth diffusion process to assist the diffusion and the masked visual condition mechanism to strengthen the denoising ability of model. Extensive experiments on the KITTI and Make3D datasets indicate the efficacy of the proposed MonoDiffusion. We hope our novel initiative will encourage more sophisticated diffusion-based depth estimation achievements."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p1_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6335057616233826,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 1 MonoDiffusion: Self-Supervised Monocular Depth Estimation Using Diffusion Model Shuwei Shao, Zhongcai Pei, Weihai Chen ∗, Dingchi Sun, Peter C. Y . Chen and Zhengguo Li, Fellow, IEEE Abstract—Over the past few years, self-supervised monocular depth estimation that does not depend on ground-truth during the training phase has received widespread attention. Most efforts focus on designing different types of network architectures and loss functions or handling edge cases, e.g., occlusion and dynamic objects. In this work, we introduce a novel self-supervised depth estimation framework, dubbed MonoDiffusion, by formulating it as an iterative denoising process. Because the depth ground-truth is unavailable in the training phase, we develop a pseudo ground- truth diffusion process to assist the diffusion in MonoDiffusion. The pseudo ground-truth diffusion gradually adds noise to the depth map generated by a pre-trained teacher model. Moreover, the teacher model allows applying a distillation loss to guide the denoised depth. Further, we develop a masked visual condition mechanism to enhance the denoising ability of model."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p8_sc2",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6323992609977722,
+      "text": "To allow the diffusion, we utilize the self-diffusion [24] and the proposed pseudo ground-truth diffusion, respectively and find that the self-diffusion does not even make the model converge in the self-supervised setting (ID 2). By contrast, the pseudo ground-truth diffusion enables the model to achieve good performance (ID 3). We further appending the knowledge distillation loss in the training phase and achieves consistent improvements on almost all metrics (ID 4). Finally, we inte- grate the masked visual condition mechanism and acquire the best results (ID 5). Denoising inference. We further explore the properties of different inference steps during the denoising process. It can be seen from Table V that when the number of steps increases, the performance gradually improves. However, the improvement is not always continuous. For example, the performance of step 10 is better than that of step 15. Besides, when continuing to increase the number of steps from the standard denoising step 20, the performance degrades. In Fig. 7, we show an intuitive illustration of how the depth is iteratively refined from a random depth distribution."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p4_sc2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 4,
+      "score": 0.6323291659355164,
+      "text": "Such problematic pixels come from two main categories: out-of-view pixels due to egomotion at image boundaries, and occluded pixels. The effect of out-of-view pixels can be reduced by masking such pixels in the reprojection loss [40, 61], but this does not handle disocclusion, where aver- age reprojection can result in blurred depth discontinuities. We propose an improvement that deals with both issues Figure 5. Auto-masking. We show auto-masks computed after one epoch, where black pixels are removed from the loss (i.e.µ = 0). The mask prevents objects moving at similar speeds to the camera (top) and whole frames where the camera is static (bottom) from contaminating the loss. The mask is computed from the input frames and network predictions using Eqn. 5. at once. At each pixel, instead of averaging the photometric error over all source images, we simply use the minimum. Our ﬁnal per-pixel photometric loss is therefore Lp = min t′ pe(It,I t′→t). (4) See Fig. 4 for an example of this loss in practice. Using our minimum reprojection loss signiﬁcantly reduces artifacts at image borders, improves the sharpness of occlusion bound- aries, and leads to better accuracy (see Table 2)."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p4_sc2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.6323291659355164,
+      "text": "Such problematic pixels come from two main categories: out-of-view pixels due to egomotion at image boundaries, and occluded pixels. The effect of out-of-view pixels can be reduced by masking such pixels in the reprojection loss [40, 61], but this does not handle disocclusion, where aver- age reprojection can result in blurred depth discontinuities. We propose an improvement that deals with both issues Figure 5. Auto-masking. We show auto-masks computed after one epoch, where black pixels are removed from the loss (i.e.µ = 0). The mask prevents objects moving at similar speeds to the camera (top) and whole frames where the camera is static (bottom) from contaminating the loss. The mask is computed from the input frames and network predictions using Eqn. 5. at once. At each pixel, instead of averaging the photometric error over all source images, we simply use the minimum. Our ﬁnal per-pixel photometric loss is therefore Lp = min t′ pe(It,I t′→t). (4) See Fig. 4 for an example of this loss in practice. Using our minimum reprojection loss signiﬁcantly reduces artifacts at image borders, improves the sharpness of occlusion bound- aries, and leads to better accuracy (see Table 2)."
+    },
+    {
+      "id": "semantic_chunk::ACD_p9_sc4",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.632326602935791,
+      "text": "In CVPR, pages 1851– 1858, 2017. [Zhu et al., 2017 ] Jun-Y an Zhu, Taesung Park, Phillip Isola, and Alexei A Efros. Unpaired image-to-image transla- tion using cycle-consistent adversarial networks. In CVPR, pages 2223–2232, 2017. [Zhu et al., 2023 ] Ruijie Zhu, Ziyang Song, Chuxin Wang, Jianfeng He, and Tianzhu Zhang. Ec-depth: Exploring the consistency of self-supervised monocular depth estimation under challenging scenes. arXiv, 2023. Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1259"
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p9_sc0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 9,
+      "score": 0.6317275762557983,
+      "text": "References [1] Alaaeldin Ali, Hugo Touvron, Mathilde Caron, Piotr Bo- janowski, Matthijs Douze, Armand Joulin, Ivan Laptev, Na- talia Neverova, Gabriel Synnaeve, Jakob Verbeek, et al. Xcit: Cross-covariance image transformers. NeurIPS, 2021. 2, 3, 5 [2] Jimmy Lei Ba, Jamie Ryan Kiros, and Geoffrey E Hin- ton. Layer normalization. arXiv preprint arXiv:1607. 06450, 2016. 5 [3] Jinwoo Bae, Sungho Moon, and Sunghoon Im. Mono- former: Towards generalization of self-supervised monoc- ular depth estimation with transformers. arXiv preprint arXiv:2205. 11083, 2022. 1, 2, 4, 5, 6, 7 [4] Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey Zagoruyko. End-to- end object detection with transformers. In ECCV. Springer, 2020. 2 [5] Vincent Casser, Soeren Pirk, Reza Mahjourian, and Anelia Angelova. Unsupervised monocular depth and ego-motion learning with structure and semantics. In CVPRW, 2019. 1, 2 [6] Liang-Chieh Chen, George Papandreou, Florian Schroff, and Hartwig Adam. Rethinking atrous convolution for seman- tic image segmentation. arXiv preprint arXiv:1706. 05587 , 2017."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p1_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 1,
+      "score": 0.631696879863739,
+      "text": "The photometric consistency assumption is used to build up the main constraint (i.e., the photomet- ric loss) of self-supervision. Results in [Godard et al., 2019; MonoFormer Ours G: Ours RNW ADDS Figure 1. 1: Nighttime monocular estimation results of differ- ent self-supervised frameworks. Compared with existing domain adaptation-based methods RNW[Wang et al., 2021] and ADDS [Liu et al., 2021] and recent large model MonoFormer [Bae et al., 2023], our result shows superior performance. Zhao et al., 2022b; Guizilini et al., 2020a; Lyu et al., 2021] show the effectiveness of classic self-supervised training on day scenes. While for nighttime scenes, the complex lighting con- ditions lead to significant photometric inconsistency within night-image sequences. And it causes divergence of training. To alleviate this problem, domain adaptation-based methods and photometric loss repair-based methods are proposed re- cently. The domain adaptation-based methods [Liu et al. , 2021; Wang et al. , 2021; Zhao et al. , 2022a; Vankadari et al., 2020] apply extra adversarial loss or domain transfer net- work to make the depth model learn to decouple structure information and interfering elements."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p10_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.6314132809638977,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. [43] Xiaodong Yang, Zhuang Ma, Zhiyu Ji, and Zhe Ren. 2023. Gedepth: Ground embedding for monocular depth estimation. In Proceedings of the IEEE/CVF Inter- national Conference on Computer Vision . 12719–12727. [44] Hantao Yao, Rui Zhang, and Changsheng Xu. 2023. Visual-language prompt tun- ing with knowledge-guided context optimization. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition . 6757–6767. [45] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. 2019. Enforcing geometric constraints of virtual normal for depth prediction. In Proceedings of the IEEE/CVF international conference on computer vision . 5684–5693. [46] Jiaqi Yu, Yongwei Nie, Chengjiang Long, Wenjun Xu, Qing Zhang, and Guiqing Li. 2021. Monte Carlo denoising via auxiliary feature guided self-attention. ACM Trans. Graph. 40, 6 (2021), 273–1. [47] Renrui Zhang, Xiangfei Hu, Bohao Li, Siyuan Huang, Hanqiu Deng, Yu Qiao, Peng Gao, and Hongsheng Li. 2023. Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p13_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.6310909986495972,
+      "text": "3 [47] Jonas Uhrig, Nick Schneider, Lukas Schneider, Uwe Franke, Thomas Brox, and Andreas Geiger. Sparsity invariant cnns. In2017 international conference on 3D vision (3DV), pages 11–20. IEEE, 2017. 21 [48] Jiyuan Wang, Chunyu Lin, Lang Nie, Shujun Huang, Yao Zhao, Xing Pan, and Rui Ai. Weatherdepth: Curriculum contrastive learning for self-supervised depth estimation under adverse weather conditions. In 2024 IEEE International Conference on Robotics and Automation (ICRA), pages 4976–4982. IEEE, 2024. 8, 9 [49] Jiyuan Wang, Chunyu Lin, Lang Nie, Kang Liao, Shuwei Shao, and Yao Zhao. Digging into contrastive learning for robust depth estimation with diffusion models. InProceedings of the 32nd ACM International Conference on Multimedia, pages 4129–4137, 2024. 3, 20 [50] Ruoyu Wang, Zehao Yu, and Shenghua Gao. Planedepth: Self-supervised depth estimation via orthogonal planes. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 21425–21434, 2023. 2, 16 [51] Zhengxue Wang, Zhiqiang Yan, Jinshan Pan, Guangwei Gao, Kai Zhang, and Jian Yang. Dornet: A degradation oriented and regularized network for blind depth super-resolution."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p4_sc3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 4,
+      "score": 0.7295001149177551,
+      "text": "Auto-Masking Stationary Pixels Self-supervised monocular training often operates under the assumptions of a moving camera and a static scene. When these assumptions break down, for example when the cam- era is stationary or there is object motion in the scene, per- formance can suffer greatly. This problem can manifest it- self as ‘holes’ of inﬁnite depth in the predicted test time depth maps, for objects that are typically observed to be moving during training [38] (Fig. 2). This motivates our second contribution: a simple auto-masking method that ﬁl- ters out pixels which do not change appearance from one frame to the next in the sequence. This has the effect of letting the network ignore objects which move at the same velocity as the camera, and even to ignore whole frames in monocular videos when the camera stops moving. Like other works [76, 61, 38], we also apply a per-pixel maskµ to the loss, selectively weighting pixels. However in contrast to prior work, our mask is binary, soµ∈{ 0, 1}, and is computed automatically on the forward pass of the network, instead of being learned or estimated from object motion.",
+      "estimated_tokens": 249
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 249,
+    "compressed_context_tokens": 249,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 249,
+  "context_tokens": 249,
+  "prompt_token_estimate": 601,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_monodepth2_auto_masking_function",
+  "answer": "<think>The question asks about what training pixels Monodepth2's auto-masking is used to ignore. Based on the provided material, the auto-masking method filters out pixels which do not change appearance from one frame to the next in the sequence. This has the effect of letting the network ignore objects which move at the same velocity as the camera, and even to ignore whole frames in monocular videos when the camera stops moving.</think>\n\n{\n  \"answer\": \"Monodepth2的auto-masking用于忽略在前后帧中外观不发生变化的像素（即与相机同速运动的物体，以及相机静止时的整帧像素）。\",\n  \"items\": [\n    {\n      \"name\": \"被忽略的像素\",\n      \"description\": \"在序列中从一帧到下一帧外观不发生变化的像素，包括与相机同速运动的物体，以及相机停止运动时的整个帧。\",\n      \"citations\": [1]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 659,
+    "completion_tokens": 201,
+    "total_tokens": 860,
+    "model": "MiniMax-M3"
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_led_pattern_deformati_ask_baseline_none_82d851ae04a7",
+  "dry_run": false,
+  "query": "LED 论文提到图案变形提供了哪些深度线索？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Depth_Anything_p3_chunk_23",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 3,
+      "score": 0.7296728491783142,
+      "text": "led sources for their diverse scenes.\nThey contain more than 62M images in total. The details are\nprovided in the bottom half of Table 1.\nTechnically, given the previously obtained MDE teacher\nmodel T , we make predictions on the unlabeled set Du to\nobtain"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.7228268384933472,
+      "text": "s offers valuable insights into LED behavior on more recent\narchitectures compared to the convolutional ones that are common in embedded devices.\nComparing the encoder-decoder LED with HB (table 1), we observe a significant im-\nprovement in metrics within"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7138919234275818,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9\nPattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nEncoder-decoderLB 14.199 0.187 0.072 0.292 28.938 5.620 0.772 0.909 0.956LED 0.5°11.089 0.119 0.050 0.213 21.251 2.304 0.864 0.95"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.7043460607528687,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT7\nModelRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n(HB) O-ROI9.2533 0.1598 0.0249 0.2047 20.4447 11.4068 0.9385 0.97140.9828(LED) O-ROI9.0070 0.1295 0.0221 0.2027 20.2348 8.7407 0.942"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_14",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.7021387219429016,
+      "text": "ements yield by LED, demonstrating that using the HD informative pat-\ntern even with a straightforward architecture is promising for challenging nighttime scenes.\nWith LED, Adabins demonstrates a substantial improvement compared to the HB model:\n-24.06% RM"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p29_chunk_1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 29,
+      "score": 0.6967524886131287,
+      "text": "ta\nDIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\n29"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p29_chunk_1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 29,
+      "score": 0.6967524886131287,
+      "text": "ta\nDIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\n29"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6953679323196411,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nDomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n(HB→HB)6.1204 0.0903 0.0233 0.1353 13.4847 3.3579 0.9489 0.9812 0.9908(HB→LED)17.3113 0.4479 0.1955 0.6817 52.5132 20.0263 0.4699 0"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.695163369178772,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17\nLdepth Lgrad Lnormal Metrics\nL1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n✓ ✗ ✗ ✗ ✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.02"
+    },
+    {
+      "id": "chunk::LED_p21_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.6880941390991211,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT21\nTest set RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nLED (0.5°)6.859 0.102 0.041 0.153 14.162 1.511 0.894 0.971 0.989LED (0.25°)5.787 0.082 0.033 0.126 11.875 1.0839 0.929 0.983 0."
+    },
+    {
+      "id": "chunk::LED_p8_chunk_17",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6851928234100342,
+      "text": "to fig. 6 (b)). Our results show\nthat encoder-decoder model trained with less than 20% of the LED data outperforms one\ntrained on the full HB dataset, reaching near-peak performance with just 50%. In addition,\nwe observe that incorporating just 10% of LED"
+    },
+    {
+      "id": "chunk::LED_p18_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 18,
+      "score": 0.6843358278274536,
+      "text": "18DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nImage inputRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nReference5.42590.19960.0188 0.1253 12.490016.12240.9603 0.98460.9927\nROI-Only5.69310.11450.0199 0.1428 14.21314.45410.9585 0."
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p30_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 30,
+      "score": 0.6839893460273743,
+      "text": "DIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnid"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p30_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 30,
+      "score": 0.6839893460273743,
+      "text": "DIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnid"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.682974100112915,
+      "text": "s performance peak with just 1,000\nimages. All LED-enhanced models outperform the LB, also this architecture benefits from\nfiner resolution in the pattern, demonstrating its best performances with LED 0.125°."
+    },
+    {
+      "id": "chunk::LED_p21_chunk_8",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.680525541305542,
+      "text": "monstrate LED capabilities on complex real-world scenarios.\nWe illustrate additional qualitative results in fig. S5. A video of DepthFormer (LED 0.25°)\nqualitative results on our real-world dataset is available in the supplementary material.\nJ Qualitative"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_13",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6792749166488647,
+      "text": "on HB, with a +32.63% RMSE. The LED→HB performance is\n∼8 m RMSE, compared to∼17 m RMSE for HB→LED. Furthermore, we show that incor-\nporating only 10% of HB data reduces performance drop (see fig. 6 (c)), limiting RMSE\nincrease to just +17.11%. It enables"
+    },
+    {
+      "id": "chunk::LED_p16_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 16,
+      "score": 0.675366222858429,
+      "text": "16DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nFigure S1: Detailed encoder-decoder architecture.\ndetailed architecture is shown in fig. S1. Despite the simplicity of this architecture, we show\nthat LED enables the network to achieve per"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_8",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6752241253852844,
+      "text": "luate our method on the encoder-decoder and two SOTA ar-\nchitectures commonly used in daytime scenarios, Adabins [4] and DepthFormer [27]. Their\nuse of transformer architectures offers valuable insights into LED behavior on more recent\narchitectures compar"
+    },
+    {
+      "id": "chunk::LED_p10_chunk_5",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.6738632917404175,
+      "text": "varying projector-camera distances (real: 70 cm, NSDD: 150 cm), showing LED\nrobustness on similar car models. Future work will assess its usage with larger variations.\nLED patterns may cause glare for other road users. Leveraging [41] to mask them could\nm"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_19",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6736752986907959,
+      "text": "formances when used with pattern (see\nfig. 6 (c)). Therefore, any vehicle equipped with HD headlights can apply LED by adding\nonly a few pattern images in their training set, thereby reducing the cost of specialized data."
+    },
+    {
+      "id": "chunk::LED_p1_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.6678754091262817,
+      "text": "tion\nheadlights available in modern vehicles. LED leads to significant performance boosts\nacross multiple depth-estimation architectures (encoder-decoder, Adabins, DepthFormer,\nDepth Anything V2) both on synthetic and real datasets. Furthermore, increased"
+    },
+    {
+      "id": "chunk::LED_p20_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.6654567122459412,
+      "text": "20DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\n[11] using the available annotation in the Nighttime Synthetic Drive Dataset. Results are re-\nported in table S5. LED doesn’t improve, nor degrade performances. We even note a better\nstabil"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6652361750602722,
+      "text": "ls trained on high beam (HB), while the variants use our HD\npattern (LED). Quantitative and qualitative results are presented in table 1 and fig. 5.\nQuantitative Results.We evaluate our method on the encoder-decoder and two SOTA ar-\nchitectures commonly us"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_17",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6647089719772339,
+      "text": "erformance over LB across all met-\nrics. DepthFormer (0.5°) shows -22.4% RMSE improvement. The qualitative results in fig. 7\nshow LED’s robustness under interfering light sources,e.g., car headlights, street lights.\nTo account for objects passing through t"
+    },
+    {
+      "id": "chunk::LED_p1_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.6642329692840576,
+      "text": "arXiv:2409.08031v3  [cs.CV]  18 Nov 2025\nDE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT1\nLED: Light Enhanced Depth Estimation at\nNight\nSimon de Moreau1,2\nhttps://simon.demoreau.fr/\nY asser Almehio2\nyasser.almehio@valeo.com\nAndrei Bursuc3"
+    },
+    {
+      "id": "chunk::LED_p10_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.664078950881958,
+      "text": "ted to capturing fine\ndetails. When fine-tuned with only 1,000\nimages, we observe -24.3% RMSE com-\npared to the LB baseline. Performances\nshown by DepthFormer and Depth Any-\nthing V2 underpin the benefits of LED in\ncomplex real-world scenarios.\n6 Limitatio"
+    },
+    {
+      "id": "chunk::LED_p19_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.6636881828308105,
+      "text": "cs from this experiment are available in table S4, the checkerboard pat-\ntern demonstrates significantly superior performances.\nG LED Impact On Other Tasks\nWe introduce the LED lighting pattern for improving performance on geometric tasks. We\nstudy its imp"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6633056402206421,
+      "text": "selected randomly in the whole\ndataset. Figure S2 illustrates the RMSE of Depth Anything V2 across different numbers of\nfine-tuning images. We observe that the model is near its performance peak with just 1,000\nimages. All LED-enhanced models outperform th"
+    },
+    {
+      "id": "chunk::DepthDark_p5_chunk_14",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.6626006364822388,
+      "text": "illumination guidance. Specif-\nically, we first concatenate the low-light image and illumination\nguidance image along the channel dimension to form a new aug-\nmented low-light image, denoted as the low-light auxiliary image\n𝐼𝐹𝑁\n𝐴 . Subsequently, we design"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_27",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6622363328933716,
+      "text": "erence on Computer Vision (ICCV) Workshops ,\n2021. 1\n[50] Shangchen Zhou, Chongyi Li, and Chen Change Loy. Led-\nnet: Joint low-light enhancement and deblurring in the dark.\nIn Proceedings of European Conference on Computer Vision\n(ECCV), 2022. 1\n10"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_27",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.6622363328933716,
+      "text": "erence on Computer Vision (ICCV) Workshops ,\n2021. 1\n[50] Shangchen Zhou, Chongyi Li, and Chen Change Loy. Led-\nnet: Joint low-light enhancement and deblurring in the dark.\nIn Proceedings of European Conference on Computer Vision\n(ECCV), 2022. 1\n10"
+    },
+    {
+      "id": "chunk::LED_p15_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 15,
+      "score": 0.6603331565856934,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT15\nSupplementary Material\nLED: Light Enhanced Depth Estimation at\nNight\nSimon de Moreau1,2\nhttps://simon.demoreau.fr/\nY asser Almehio2\nyasser.almehio@valeo.com\nAndrei Bursuc3\nhttps://abursuc.g"
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_7",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.6562807559967041,
+      "text": "tly\napplying light source imaging𝐿𝑆 tends to fail in generating promi-\nnent brightness peaks.\nTo address this issue, we apply a simple random darkening oper-\nation to the input image, where the brightness scaling factor𝑠𝑏 is\nsampled from a uniform distribu"
+    },
+    {
+      "id": "chunk::LED_p21_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.656169593334198,
+      "text": "ved by our method by\ncomparing results with and without pattern. They are obtained by taking the encoder-\ndecoder, trained on high beam (HB), and with our HD pattern (LED). Red boxes emphasize\non enhanced regions. Some are zoomed in for improved visibility"
+    },
+    {
+      "id": "chunk::DepthDark_p5_chunk_7",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.655723512172699,
+      "text": "𝑔 =𝑚𝑒𝑎𝑛𝑐\n\u0000𝐿𝐿𝐷𝐺(𝐼)\u0001, (7)\nThe operation𝑚𝑒𝑎𝑛𝑐 computes the mean value of each pixel\nalong the channel dimension. As shown in Fig. 1.1, the low-light\nimage𝐼𝐹𝑁 is synthesized from the daytime image𝐼 using LLDG,\nwhile𝐼𝐹𝑁𝑔 is generated from𝐼𝐹𝑁 using illumination"
+    },
+    {
+      "id": "chunk::LED_p1_chunk_6",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.6552439332008362,
+      "text": "Enhanced\nDepth (LED), a novel, cost-effective approach that significantly improves depth esti-\nmation in low-light environments by harnessing a pattern projected by high definition\nheadlights available in modern vehicles. LED leads to significant performan"
+    },
+    {
+      "id": "chunk::Global-Local_p10_chunk_9",
+      "source": "data\\Global-Local.pdf",
+      "page": 10,
+      "score": 0.6548324823379517,
+      "text": "1 0.248\nDigital\nBrightness\nBTS 0.842 0.965 0.990 0.124 0.084 0.457 0.166\nAdabins 0.862 0.972 0.994 0.117 0.073 0.427 0.152\nOurs 0.899 0.984 0.997 0.104 0.055 0.369 0.133\nContrast\nBTS 0.697 0.864 0.932 0.181 0.198 0.689 0.263\nAdabins 0.654 0.836 0.917 0.198"
+    },
+    {
+      "id": "chunk::DepthDark_p5_chunk_8",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.6541760563850403,
+      "text": "the daytime image𝐼 using LLDG,\nwhile𝐼𝐹𝑁𝑔 is generated from𝐼𝐹𝑁 using illumination guidance. This\nprocess effectively simplifies the illumination guidance procedure\nby converting the low-light image into a grayscale representation\nusing a simple but efficien"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_18",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6537917852401733,
+      "text": "ts challenging. In fig. 6 (a), we show the performance of the encoder-decoder over\ndistances. LED maintains performance for close object and exhibits greater enhancement at\nlonger ranges, thus addressing depth estimation of distant objects at night."
+    },
+    {
+      "id": "chunk::LED_p2_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 2,
+      "score": 0.6531946063041687,
+      "text": "2DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nFigure 1:Light Enhanced Depth (LED)is a novel method that harnesses high-definition\nheadlights’ pattern projected onto the scene to enhance nighttime depth estimation from RGB\nimages. We rel"
+    },
+    {
+      "id": "chunk::LED_p19_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.6529702544212341,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT19\nFigure S4:Example of illuminations pattern tested: high-beam (top-left), checkerboard\n(top-right), horizontal lines (bottom-left) and vertical lines (bottom-right).\nPatternRMSE↓Abs Rel↓Log1"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_chunk_11",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.6501113772392273,
+      "text": "rtion [42, 48], and arti-\nfacts [49, 50]. This misalignment stems from three inter-\nrelated issues:\n*Corresponding author\nThis work was supported by the National Natural Science Foundation\nof China under Grant 62172137.\n• Inevitable Brightness Residual : T"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_chunk_11",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.6501113772392273,
+      "text": "rtion [42, 48], and arti-\nfacts [49, 50]. This misalignment stems from three inter-\nrelated issues:\n*Corresponding author\nThis work was supported by the National Natural Science Foundation\nof China under Grant 62172137.\n• Inevitable Brightness Residual : T"
+    },
+    {
+      "id": "chunk::LED_p3_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.6499394774436951,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT3\n•Data-efficiency: LED-trained models outperform the others with only 20% of training\ndata.\n•Real prototype: LED demonstrates great performances improvements on our in-house\ndataset, collecte"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6495327353477478,
+      "text": "6DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nFigure 5:Qualitative results on NSDD.LED results exhibit higher precision, and more ac-\ncurate object boundaries and shapes compared to HB. Red boxes indicate enhanced regions.\nPattern RMSE↓"
+    },
+    {
+      "id": "chunk::LED_p3_chunk_14",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.6489092707633972,
+      "text": "o high ambient lighting and the low power of projectors [9, 21, 31]. We avoid\nthis thanks to our nighttime environment and the utilization of high-powered HD headlights.\nHD Lighting.A series of works [12, 41] highlight HD lighting potential applications an"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6484705209732056,
+      "text": "re the performance of the LED checkerboard\nagainst other common structured light patterns\n(horizontal and vertical lines). Table 3 shows\nthat the checkerboard pattern outperforms the\nothers across most metrics. While horizontal\nlines show slight improvemen"
+    },
+    {
+      "id": "chunk::TDDC_p4_chunk_17",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.6480739116668701,
+      "text": "ource within the gamma range of gf ∼ U(1.8, 2.2). The\nsampled image on current stage, I L\nt , will be\nI L\nt =\n \n(sdIt)gf +\nNFX\ni=1\nss (LS, sF , pi)gf\n!1/gf\n. (4)\nNF is the total number of light sources, and ss(., ., .) repre-\nsents scaling and shifting the"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_23",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6474318504333496,
+      "text": "nd Pattern\nRecognition(CVPR), pages 586–595, 2018. 1, 4\n[47] Yonghua Zhang, Jiawan Zhang, and Xiaojie Guo. Kindling\nthe darkness: A practical low-light image enhancer. In Pro-\nceedings of the 27th ACM International Conference on Mul-\ntimedia (ACM MM), 2019"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Depth_Anything_p3_chunk_23",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 3,
+      "score": 0.7296728491783142,
+      "text": "led sources for their diverse scenes.\nThey contain more than 62M images in total. The details are\nprovided in the bottom half of Table 1.\nTechnically, given the previously obtained MDE teacher\nmodel T , we make predictions on the unlabeled set Du to\nobtain",
+      "estimated_tokens": 59
+    },
+    {
+      "id": "chunk::LED_p7_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.7228268384933472,
+      "text": "s offers valuable insights into LED behavior on more recent\narchitectures compared to the convolutional ones that are common in embedded devices.\nComparing the encoder-decoder LED with HB (table 1), we observe a significant im-\nprovement in metrics within",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::LED_p9_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7138919234275818,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9\nPattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nEncoder-decoderLB 14.199 0.187 0.072 0.292 28.938 5.620 0.772 0.909 0.956LED 0.5°11.089 0.119 0.050 0.213 21.251 2.304 0.864 0.95",
+      "estimated_tokens": 132
+    },
+    {
+      "id": "chunk::LED_p7_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.7043460607528687,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT7\nModelRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n(HB) O-ROI9.2533 0.1598 0.0249 0.2047 20.4447 11.4068 0.9385 0.97140.9828(LED) O-ROI9.0070 0.1295 0.0221 0.2027 20.2348 8.7407 0.942",
+      "estimated_tokens": 141
+    },
+    {
+      "id": "chunk::LED_p7_chunk_14",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.7021387219429016,
+      "text": "ements yield by LED, demonstrating that using the HD informative pat-\ntern even with a straightforward architecture is promising for challenging nighttime scenes.\nWith LED, Adabins demonstrates a substantial improvement compared to the HB model:\n-24.06% RM",
+      "estimated_tokens": 48
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p29_chunk_1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 29,
+      "score": 0.6967524886131287,
+      "text": "ta\nDIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\n29",
+      "estimated_tokens": 35
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p29_chunk_1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 29,
+      "score": 0.6967524886131287,
+      "text": "ta\nDIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\n29",
+      "estimated_tokens": 35
+    },
+    {
+      "id": "chunk::LED_p8_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6953679323196411,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nDomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n(HB→HB)6.1204 0.0903 0.0233 0.1353 13.4847 3.3579 0.9489 0.9812 0.9908(HB→LED)17.3113 0.4479 0.1955 0.6817 52.5132 20.0263 0.4699 0",
+      "estimated_tokens": 145
+    },
+    {
+      "id": "chunk::LED_p17_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.695163369178772,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17\nLdepth Lgrad Lnormal Metrics\nL1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n✓ ✗ ✗ ✗ ✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.02",
+      "estimated_tokens": 136
+    },
+    {
+      "id": "chunk::LED_p21_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.6880941390991211,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT21\nTest set RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nLED (0.5°)6.859 0.102 0.041 0.153 14.162 1.511 0.894 0.971 0.989LED (0.25°)5.787 0.082 0.033 0.126 11.875 1.0839 0.929 0.983 0.",
+      "estimated_tokens": 140
+    },
+    {
+      "id": "chunk::LED_p8_chunk_17",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6851928234100342,
+      "text": "to fig. 6 (b)). Our results show\nthat encoder-decoder model trained with less than 20% of the LED data outperforms one\ntrained on the full HB dataset, reaching near-peak performance with just 50%. In addition,\nwe observe that incorporating just 10% of LED",
+      "estimated_tokens": 63
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 986,
+    "compressed_context_tokens": 986,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 986,
+  "context_tokens": 986,
+  "prompt_token_estimate": 1477,
+  "run_label": "sage_semantic_all_v1_chunk_led_pattern_deformation_cues",
+  "answer": "<think>\nThe question asks: \"LED 论文提到图案变形提供了哪些深度线索？\" (What depth cues does the LED paper mention that pattern deformation provides?)\n\nLet me look through the provided materials carefully.\n\n[1] is from Depth_Anything.pdf - talks about MDE teacher model and unlabeled set.\n[2] is from LED.pdf - compares encoder-decoder LED with HB, mentions improvement in metrics.\n[3] is from LED.pdf - shows a table with pattern metrics.\n[4] is from LED.pdf - shows another table with model metrics.\n[5] is from LED.pdf - mentions LED improvements, HD informative pattern.\n[6] is from Repurposing paper - shows DIODE examples.\n[7] is from Repurposing paper - shows DIODE examples.\n[8] is from LED.pdf - domain adaptation results.\n[9] is from LED.pdf - shows loss functions and metrics.\n[10] is from LED.pdf - shows test set results for different LED angles.\n[11] is from LED.pdf - mentions training with LED data outperforms HB.\n\nNone of these materials explicitly discuss \"图案变形提供了哪些深度线索\" (what depth cues pattern deformation provides). The materials discuss LED (Light Enhanced Depth) and various metrics, but don't mention specific depth cues from pattern deformation.\n\nI should indicate that the information is missing from the provided materials.\n</think>\n{\"answer\":\"所提供的资料中未包含关于 LED 论文中图案变形（pattern deformation）所提供的深度线索的具体描述，缺少相关信息。\",\"items\":[],\"missing_information\":\"资料中仅包含 LED 方法的实验表格、域适应结果、损失函数消融及训练数据比例等结果性内容，未涉及图案变形所提供的具体深度线索（如遮挡、纹理梯度、透视收缩等）的论述段落。\"}",
+  "usage": {
+    "prompt_tokens": 1523,
+    "completion_tokens": 362,
+    "total_tokens": 1885,
+    "model": "MiniMax-M3"
+  }
+}

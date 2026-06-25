@@ -1,0 +1,390 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_jasmine_ssg__ask_baseline_none_d7556a9c1a42",
+  "dry_run": false,
+  "query": "Scale-Shift GRU (SSG)模块在Jasmine中解决了什么问题？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.7515197396278381,
+      "text": "4(a), compared to traditional GRU, SSG introduces a core component Scale-Shift Transformer (SST), and modifies the iterative prediction formula: F rom Dk+1 =D δ +D k T o Dk+1 =D δ +s c ·D k +s h,(10) where Dδ =DepthHead(h k+1), k denotes the iteration step and h denotes the hidden state (prelimi- naries of GRU in Sec D). Specifically, the SST employs learnable scale/shift queries (QSC /QSH ) that interact with SD’s hidden states (keys/values) via cross-attention. The output vector is subsequently split and processed by MLPs to produce sc and sh. For the hidden state update, to enhance spatial awareness, the current input xk is defined as the concatenation of image features zI and the current depth Dk. The hidden state hk evolves via a standard GRU iteration to produce the refined hidden stateh k+1 and subsequently updateD k toD k+1. To balance computational efficiency and GRU’s iterative benefits, we employ two GRU iterations: starting from the initial depth D0 (DSSI ) to sequentially produce D1 and D2 (DSI ). As shown in Fig. 4(b), the distribution of D0 tends to align with the standard SSI depth distribution, while D1 and D2 progressively converge towards the SI depth."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.7420541048049927,
+      "text": "K Scale Shift Transformer V KV Sep-Conv GRU 𝜎: Sigmoid Conv⊕: Pixel addition⊗: Concatenation⊙: Pixel multiplyDiffusion ℰ 𝐡\" 𝐡\"#$𝐷\"#$⊕𝑠%+𝑠&×Q MLP 𝒙\" (b)(a) TransformerMLP𝑠& 𝑠% 𝐳𝑰 𝐷\" iteration𝑘 Figure 4:(a): Model Structure of SSG. It corresponds to the gray rectangle shown in Fig. 2, standing for an iteration within two consecutive ones. The pipeline of SSG is comprehensively described in Sec. 3. 3 (DepthHead is omit in (a) for clear).(b): Depth distribution alignment visualization. We statistically analyze each stage of Jasmine’s SSG module on the KITTI test set. The standard SI and SSI depths are obtained by applying Eq. 9 and dividing the maximum value to the depth GT, respectively. be recovered by the least squares alignment in evaluation. Consequently, SD-based MDE predicts Scale-Shift-Invariant DepthD SSI . This inherent distribution gap between SSI and SI depth creates barriers for SD integration, and the SSG is specifically designed to fix it. The Design of SSG. Transforming the depth distribution from SSI depth to SI depth requires profound scene understanding, and the scale (sc) and shift (sh) factors are tightly coupled. Therefore, as shown in Fig."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p15_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.6953383684158325,
+      "text": "Appendix In this appendix, we provide more implementation details, experiments, analysis, and discussions for a comprehensive evaluation and understanding of Jasmine. Detailed contents are listed as follows: Contents A Proof of Scale-Invariant Depth 15 B Detailed Training Workflow and Pseudocode 16 B. 1 Step-by-Step Workflow . 16 B. 2 Training Pseudocode . 17 C Supervision Details 17 C. 1 SGD Loss for Dynamic Object . 18 C. 2 Edge Loss for Sharp Prediction . 18 C. 3 Sky Loss for Anti-artifact . 18 C. 4 Eliminating the Bottleneck of Teacher Loss . 19 D Preliminaries of GRU 20 E Addition Experiments Results 21 E. 1 Evaluation on KITTI Improved Benchmark . 21 E. 2 Comparison with Other Self-Supervised Settings . 21 E. 3 Qualitative Comparisons . 21 E. 4 Mix-batch Ratio Ablation Details . 21 F Analysis of SD Prior Degradation via Self-Supervision 22 G Evaluation Metrics 22 H Error Bar Analysis 22 I Limitation and Future Work 23 A Proof of Scale-Invariant Depth For SSI depth, we assume that the estimated depth ˆD and the ground truth depth D have the following relationship: ˆD=s cD+s h Meanwhile, the depth from another viewpoint can be denoted as g1(D′)."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p9_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6784543991088867,
+      "text": "However, when computing overall accuracy, a′ or a are typically outside the threshold for a1 and thus do not affect it, while the originally accurate predictions for other points become less accurate due to the shift introduced by LSQ alignment. Similarly, first-order metrics also degrade due to these shifts. This explains why Jasmine* achieves better RMSE and SqRel but worsea 1 and AbsRel compared to Jasmine. For the last observation, in in-domain scenarios (Table 1), Jasmine outperforms Jasmine* because the shift-free estimation learned by Jasmine is disrupted by LSQ alignment, introducing a suboptimal shift and degrading performance. In out-of-domain scenarios (Table 2), Jasmine* performs better, as the depth distributions of different datasets may differ significantly, and using least-squares to estimate the best fit is clearly a better choice. 9"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6780619621276855,
+      "text": "194 0. 787 0. 1236. 618 0. 852 0. 133 5. 651 0. 849 0. 098 5. 702 0. 902 Generalization ResultsCompared to in-domain evaluation, Jasmine exhibits even more remark- able results in zero-shot generalization. Due to the large number of comparison datasets and the unavailability of some models’ open-source code, we only compare with Monodepth2 (the most classic model), MonoViT (renowned for its robustness), MonoViFi (the latest model), and Weath- erDepth (trained with additional weather-augmented data, totaling 278k samples), all of which are self-supervised models. In fact, MonoViT already surpasses the zero-shot capability for nearly all models in the SSMDE, making it a sufficiently strong baseline[ 42]. Additionally, SD-based methods have excelled in generalization, allowing us to conduct a fair zero-shot comparison here. As shown in Table 2, Jasmine demonstrated state-of-the-art performance on the datasets of Cityscape Figure 5:Qualitative resultson KITTI, DrivingStereo, and CityScape datasets. We compare Jasmine with the most generalizable and best-performing SSMDE methods in both in-domain and zero-shot scenarios. 8"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6751706600189209,
+      "text": "This clearly demonstrates that SSG iteratively aligns SSI depth to SI depth by refining the scale-shift parameters. GRU is preferred over other architectures due to its reset gate mechanism. During training, the reset gatercan prevent the back- propagation of anomalous gradients to the former step by selectively resetting parts of the hidden state. Therefore, this mechanism enables the fine-grained DSSI to filter out erroneous supervision signals from reprojection losses and exhibit richer details than DSI (shown in Fig. 2). To preserve these fine-grained details in the final prediction, we further constrain the edge alignment between DSSI andD SI with an edge extraction module, detailed in Sec. C. 3. 4 Steady SD Finetune with Self-Supervision As thefirstframework to finetune SD with self-supervision, we encountered a novel challenge: training instability, which is mainly due to the SD’s enormous size, joint training across modules, and indirect self-supervisory mechanisms. To enhance the convergence reliability and reproducibility, we explored a straightforward approach by introducing a pre-trained self-supervised teacher model (e.g., MonoViT) to estimate Dtc as pseudo labels."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p22_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 22,
+      "score": 0.662778913974762,
+      "text": "G Evaluation Metrics Similar to [15], we employ the following evaluation metrics in our experiments, AbsRel: 1 |Mvl| P d∈Mvl |d−d gt|/d gt; SqRel: 1 |Mvl| P d∈Mvl ∥d−d gt∥2 /dgt; RMSE: q 1 |Mvl| P d∈Mvl ∥d−d gt∥2; RMSElog: q 1 |Mvl| P d∈Mvl ∥log(d)−log(d gt)∥2; at: percentage of d such that max( d dgt , dgt d )<1. 25 t ; where dgt and d denote the GT and estimated pixel depth,M vl is the valid mask set to1e−3< d gt <80. H Error Bar Analysis Figure 9:Error Bar Analysis on KITTI Eigen test split. We conduct this analysis through multiple training runs and observe the performance oscillations after 25k steps. As highlighted in Sec 3. 4, directly training Jasmine can be unstable due to the SD’s enormous size, joint training across mod- ules, and indirect self-supervisory mecha- nisms. To further ensure stability, we also implement a module-wise freezing training strategy, which involves 3 key phases: In the beginning, we enable gradient updates for all network components. Subsequently, we freeze the SSG and Posenet modules to decouple depth-pose optimization while maintaining fixed parameters."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p2_sc4",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.6625570058822632,
+      "text": "• We proposed Scale-Shift GRU (SSG) to dynamically align depth scales while filtering noisy gradients to solve SSI versus SI distribution mismatch problems in self-supervised depth estimation. 2 Relative Work Self-supervised Depth EstimationDue to the high costs of GT-depth collection from LiDARs and other sensors, self-supervised depth estimation (SSDE) has gained significant research attention. SSDE can be broadly categorized into stereo-based(learning depth from synchronized image pairs)[50, 14, 12, 3, 2] and monocular-based methods (using sequential video frames)[31, 72, 70, 32, 37, 68, 20, 34, 19, 29]. Additionally, when focusing on inference capability, existing methods can further diverge 2"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p1_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.6601452231407166,
+      "text": "Without any additional supervision, it preserves the detail priors of SD models by reconstructing the images themselves while preventing depth estimation from degradation. Furthermore, to address the inherent misalignment between SD’s scale and shift invariant estimation and self-supervised scale-invariant depth estimation, we build the Scale-Shift GRU. It not only bridges this distribution gap but also isolates the fine-grained texture of SD output against the interference of reprojection loss. Extensive experiments demonstrate that Jasmine achieves SoTA performance on the KITTI benchmark and exhibits superior zero-shot generalization across multiple datasets. Project page and code are available at here. 1 Introduction Estimating depth from monocular images is a fundamental problem in computer vision, which plays an essential role in various downstream applications such as 3D/4D reconstruction[53], autonomous driving[10], etc. Compared with supervised methods[25, 33, 21], self-supervised monocular depth estimation (SSMDE) mines 3D information solely from video sequences, significantly reducing reliance on expensive ground-truth depth annotations."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.6482136845588684,
+      "text": "996 [18] Monodepth2 Resnet18 \u0013 MS 192 × 640 0. 084 0. 494 3. 739 0. 132 0. 918 0. 983 0. 995 WaveletMonodepth Resnet18 \u0013 MS 192 × 640 0. 085 0. 497 3. 804 0. 134 0. 912 0. 982 0. 995 [63] Depth Hints \u0013 MS +SSGM 192 × 640 0. 087 0. 526 3. 776 0. 133 0. 915 0. 982 0. 995 WaveletMonodepth Resnet18 \u0013 MS +SSGM 192 × 640 0. 086 0. 497 3. 699 0. 131 0. 914 0. 983 0. 996 [18] Monodepth2 Resnet18 \u0013 S 320 × 1024 0. 082 0. 497 3. 637 0. 132 0. 924 0. 982 0. 994 WaveletMonodepth Resnet18 \u0013 S 320 × 1024 0. 080 0. 443 3. 544 0. 130 0. 919 0. 983 0. 995 WaveletMonodepth Resnet50 \u0013 S 320 × 1024 0. 076 0. 413 3. 434 0. 126 0. 926 0. 984 0. 995 [63] Depth Hints \u0013 SSGM 320 × 1024 0. 077 0. 404 3. 345 0. 119 0. 930 0. 988 0. 997 WaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0. 078 0. 397 3. 316 0. 121 0. 928 0. 987 0. 997 Depth Hints Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 363 3. 198 0. 114 0. 936 0. 989 0. 997 WaveletMonodepth Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 357 3. 170 0. 114 0. 936 0. 989 0. 997 Table 9: Quantitative results on the improved KITTI benchmark. We compare our method to our baselines on the KITTI [15] improved dataset introduced by [61], using the Eigen split."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p7_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.6479129791259766,
+      "text": "demonstrate that this pseudo-label training proves particularly crucial for steady training in complex, multi-module self-supervised systems. The implementation details are in Sec. C. Finally, the total training loss of the Jasmine model is: L=L s +L ph +L tc +L a ·η a,(12) where Ls refers to Eq. 5, Lph refers to Eq. 2, Ltc refers to Eq. 11, and La is some auxiliary adjustment losses (e.g.,gds loss[ 34] LGDS, edge loss Le, etc.) with a tiny weight. They will be detailed in supplementary material Sec. C. 4 Experiment 4. 1 Implement Details We implement the proposed Jasmine using Accelerate[16] and PyTorch[35] with Stable Diffusion v2[39] as the backbone. Following the pipeline in Fig. 2, we disable text conditioning while maintaining most hyperparameter consistency with E2E FT[33]. The loss weights specified in Sec. 3 are empirically configured as: ηa = 8e−3, ηt1 = 0. 6, ηt2 = 0. 9, ηp1 = 0. 85, ηp2 = 0. 15, ηstep = max(1,30·(step now/stepmax)). Training uses the AdamW optimizer[ 30] with a base learning rate of 3e−5 . All experiments are conducted on 8 NVIDIA A800 GPUs with a total batch size of 32, training for a total of 25k training steps, requiring around 1 day."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6407673358917236,
+      "text": "candidate hidden state computation, respectively. The Conv notation suggests that convolutional layers are used for these transformations, as is common when applying GRUs to feature maps in computer vision tasks. In our paper, the refined hidden state hk+1 predicts depth adjustment Dδ to update Dk, yielding Dk+1 for subsequent iterations, as utilized in our Scale-Shift GRU (SSG) module (see Sec. 3. 3). E Addition Experiments Results E. 1 Evaluation on KITTI Improved Benchmark The standard self-supervised evaluation on the KITTI dataset is typically conducted using the raw LiDAR GT. However, due to the noisy nature of LiDAR data and known preprocessing issues 1, we also provide the eigen improved benchmark result. Following the practice adopted in Mono- ViFi [29], as shown in Table 5, this evaluation further confirms Jasmine’s SoTA performance, where it consistently outperforms other leading methods. Table 5:Quantitative results on the KITTI dataset using the improved GT [ 47]. The performance of SD-based methods is not fully reported in their original papers. Method AbsRel↓SqRel↓ RMSE↓RMSElog↓a1↑ a2↑ a3↑ Marigold [25] 0. 099 - - - 0. 916 0. 987 - E2E-FT [33] 0. 096 - - - 0. 921 0."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6379380226135254,
+      "text": "969 (c) Mix-batch Image Reconstruction (7) w/o MIR 0. 132 0. 673 4. 271 0. 852 0. 967 (8) Direct 0. 129 0. 679 4. 385 0. 858 0. 962 (9) Only Hy 0. 106 0. 614 4. 181 0. 901 0. 970 (10) Latent space 0. 095 0. 606 4. 138 0. 909 0. 970 (d) Auxiliary Image Analysis (12) KITTI 0. 095 0. 616 4. 040 0. 912 0. 972 (13) KITTI+ETH3D0. 090 0. 586 3. 937 0. 916 0. 972 (14) KITTI+vK 0. 094 0. 606 4. 068 0. 911 0. 972 (15) KITTI+Hy/4 0. 091 0. 596 3. 943 0. 917 0. 972 (16) KITTI+Hy/1. 60. 090 0. 591 3. 971 0. 918 0. 972 In sub-table(b), we further melted down our proposed SSG. ID (6) reveals that the naive GRU can initially solve the distribu- tion misalignment by estimating the Dδ (Eq. 4). However, the scale difference be- tween SSI and SI depth makes it difficult to restore through linear addition. Therefore, after introducing SST, the overall model performance is further enhanced by 10%, ultimately achieving SoTA performance. A comprehensive analysis of MIR was con- ducted in sub-table(c)and we can draw similar conclusions to Sec. 3. 2. Jasmine significantly outperforms the alternatives, such as KITTI/synthetic-only reconstruc- tion (IDs (8,9) and Fig."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p2_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.6375444531440735,
+      "text": "Another challenge is the output range of SD’s V AE[27] that is inherently bounded within a fixed range,i.e., [-1, 1]. Existing methods typically normalize GT depth maps to this range in the training procedure. During inference, these supervised approaches perform least-squares alignment to recover absolute scale and shift, yieldingscale- and shift-invariant(SSI)depth predictions. However, self- supervised frameworks rely on coupled depth-pose optimization, which theoretically requires shift invariance to be strictly zero for stable convergence, ultimately producingscale-invariant(SI)depth predictions. To bridge this inherent distribution gap, we propose a gated recurrent unit (GRU)-based novel transform module termedScale-Shift GRU(SSG). It not only iteratively aligns SSI depth to SI depth by refining scale-shift parameters but also acts as a gradient filter, which suppresses anomalous gradients caused by artifact-contaminated in self-supervised training, thereby preserving the fine-grained texture details of SD’s output while enforcing geometric consistency."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6319495439529419,
+      "text": "5 Inference Latency As shown in the table below (MACs and Runtime are measured on a image with 1024×320 resolution on RTX 4090.), while Jasmine is more computationally expensive than prior self-supervised methods, it follows the trend of models like Marigold in trading cost for superior performance. Notably, our SSG module adds negligible latency, with Jasmine’s runtime being comparable to Lotus. Method Marigold Lotus E2E-Mono Monodepth2 MonoViT MonoViFi Jasmine MACs 133T 2. 65T 2. 65T 21. 43G 25. 63G 28. 79G 2. 83T Runtime 9. 88s 157ms 152ms 33ms 29ms 25ms 172ms 5 Conclusion We propose Jasmine, the first SD-based self-supervised framework for monocular depth estimation, effectively leveraging SD’s priors to enhance sharpness and generalization without high-precision supervision. To achieve this objective, we introduce two novel modules: Mix-batch Image Recon- struction (MIR) for mitigating reprojection artifacts and preserving Stable Diffusion’s latent priors, alongside Scale-Shift GRU (SSG) to align scale-invariant depth predictions while suppressing noisy gradients."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.6310580968856812,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Pretrained Full Eigen split Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Baseline + min reproj. ✓ ✓ 0. 122 1. 081 5. 116 0. 199 0. 866 0. 957 0. 980 Baseline + automasking ✓ 0. 124 0. 936 5. 010 0. 206 0. 858 0. 952 0. 977 Baseline + full-res m.s. ✓ ✓ 0. 124 1. 170 5. 249 0. 203 0. 865 0. 953 0. 978 Monodepth2 w/o min reprojection ✓ ✓ ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 with [76]’s mask ✓ ✓ ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 Monodepth2(full) ✓ ✓ ✓ ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2w/o pt ✓ ✓ ✓ 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Baseline (full Eigen dataset) ✓ ✓ 0. 146 1. 876 5. 666 0. 230 0. 848 0. 945 0. 972 Monodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.6310580968856812,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Pretrained Full Eigen split Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Baseline + min reproj. ✓ ✓ 0. 122 1. 081 5. 116 0. 199 0. 866 0. 957 0. 980 Baseline + automasking ✓ 0. 124 0. 936 5. 010 0. 206 0. 858 0. 952 0. 977 Baseline + full-res m.s. ✓ ✓ 0. 124 1. 170 5. 249 0. 203 0. 865 0. 953 0. 978 Monodepth2 w/o min reprojection ✓ ✓ ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 with [76]’s mask ✓ ✓ ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 Monodepth2(full) ✓ ✓ ✓ ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2w/o pt ✓ ✓ ✓ 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Baseline (full Eigen dataset) ✓ ✓ 0. 146 1. 876 5. 666 0. 230 0. 848 0. 945 0. 972 Monodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p16_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 16,
+      "score": 0.6263582706451416,
+      "text": "Cit. Method PP Data H × W Abs Rel Sq Rel RMSE RMSE log δ<1. 25 δ<1. 252 δ<1. 253 [63] Depth Hints \u0013 SSGM 192 × 640 0. 106 0. 780 4. 695 0. 193 0. 875 0. 958 0. 980 WaveletMonodepth MobileNetv2 \u0013 SSGM 192 × 640 0. 109 0. 851 4. 754 0. 194 0. 870 0. 957 0. 980 WaveletMonodepth Resnet18 \u0013 SSGM 192 × 640 0. 107 0. 829 4. 693 0. 193 0. 873 0. 957 0. 980 WaveletMonodepth Resnet50 \u0013 SSGM 192 × 640 0. 105 0. 813 4. 625 0. 191 0. 879 0. 959 0. 981 [63] Depth Hints \u0013 SSGM 320 × 1024 0. 099 0. 723 4. 445 0. 187 0. 886 0. 961 0. 982 WaveletMonodepth MobileNetv2 \u0013 SSGM 320 × 1024 0. 104 0. 772 4. 545 0. 188 0. 880 0. 960 0. 982 WaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0. 102 0. 739 4. 452 0. 188 0. 883 0. 960 0. 981 Depth Hints Resnet50 \u0013 SSGM 320 × 1024 0. 096 0. 710 4. 393 0. 185 0. 890 0. 962 0. 981 WaveletMonodepth Resnet50 \u0013 SSGM 320 × 1024 0. 097 0. 718 4. 387 0. 184 0. 891 0. 962 0. 982 Table 10: Quantitative results on the KITTI dataset using MobileNetv2 encoder. We evaluate results of our method using a lighter encoder on KITTI [15], using the Eigen split."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6238386631011963,
+      "text": "The expression for 𝑆𝑃 𝑆𝐴 is as follows: 𝑆𝑃 𝑆𝐴 = 1 𝑈 𝑉 𝑈∑ 𝑝𝑖 𝑉∑ 𝑗 |||𝛾𝐷 𝑆 (𝑝𝑖, 𝑗) − 𝜇(𝐷∗ 𝑆 (𝑝𝑖, 𝑗))|||, (14) where 𝐷𝑆 (𝑝𝑖, 𝑗) and 𝐷∗ 𝑆 (𝑝𝑖, 𝑗) represent the predicted and ground truth (GT) segmentation scale at pixel 𝑗 within the patch 𝑝𝑖, respectively. 𝜇(⋅) denotes the median of the depths, 𝑈 is the number of semantic seg- mentation patches, and 𝑉 represents the number of valid pixels in each patch. However, predicting the median of the metric depth for each se- mantic segment can cause the ﬁnal prediction to be generally smaller than the ground truth. To address this issue, we set a scaling factor 𝛾 to ensure the predicted segmentation scale values larger than the median depth of each semantic segment. In our experiments, 𝛾 is set to 0. 5. We also adopt the multi-scale supervision strategy from BinsFormer [10], applying the SPS and ARD modules at each feature scale to provide auxiliary supervision. Finally, the total loss is deﬁned as: 𝑡𝑜𝑡𝑎𝑙 = 3∑ 𝑙 ( 𝑤𝑙 𝐿∑ 𝑛 ( 𝛼𝑙,𝑛 𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛 𝐶𝐸 + 𝛿𝑙,𝑛 𝑆𝑃 𝑆𝐴 )) , (15) where 𝐿 represents the number of stacked masked transformer layers at each feature scale. 𝑤𝑙 is the scale weight, which is set to 1 23−𝑙 ."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p18_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 18,
+      "score": 0.6226743459701538,
+      "text": "Considering the bottom pixels of dynamic regions like the car tire, they impose a high weighting on |∂y ˆdt| with Mgr(i, j) =γ, thereby enforcing its depth consists with its neighboring ground pixels below. So the final loss is: LGDS =|∂ x ˆD|e−|∂xI| +|∂ y ˆD|Mgre−|∂yI|.(17) C. 2 Edge Loss for Sharp Prediction We further introduce an edge loss to enhance the prediction’s details. Since the surrogate and primary tasks are decoupled after the U-Net’s final layer, and the Scale-Shift Invariant (SSI) depth is shielded from photometric loss interference through SSG-based isolation, the SSI depth retains significantly richer structural details. To transfer these details to the final result, we introduce a simple edge loss. Specifically, we design a GradNet, GradNet(x) = (|conv2d(x, wx)|,|conv2d(x, wy)|), where wx = [[−1,0,1],[−2,0,2],[−1,0,1]] and wy = [[−1,−2,−1],[0,0,0],[1,2,1]] are the convolutional kernels for computing gradients in the x and y directions."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p5_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.6208000779151917,
+      "text": "1 with: ζ ′D′ =K(RK −1ζD+T),(6) where ζ, ζ′ denote homogeneous coordinates and D, D′ represent depths in It and It′, respectively. Afterward, the coordinate ζ ′[u,v] in It′ maps to [u,v] in It′→t and we can grid sample every pixel to getI t′→t. However, this mapping is not unique. We can scale both sides of the equation withs c: ζ ′scD′ =K(RK −1ζs cD+s cT),(7) where bothTand scT represent valid relative poses. But if we further introduce a shift sh, we can derive the formula (detailed derivations at Sec. A) to obtain: K −1ζ ′g1(D′) =RK −1ζs h +g 2(T),(8) where g1(·) and g2(·) are affine transformations (SSI depth is affine depth). The above equation means that the affine depth of any scene (g1(D′)) can appear as a plane from a certain perspective. This plane has the depth sh and the extrinsic transformation of this perspective and the original one is [R|T], which is undoubtedly impossible (more explanations in Sec. A). Thus, the shift sh does not exist under the geometric constraints, and SSMDE predicts Scale-Invariant DepthD SI . Additionally, we analyze the training process of SD-based MDE. The processed GT depthymentioned in Sec. 3."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.6196126937866211,
+      "text": "1 allows the GT- mean loss to continuously improve model performance. In addition, the experiment shows that the choice of σ value is open. As σ measures the spread of the random variable eE[·] deviating from the observed average image brightness E[·] in our modeling, we recommend using a small value, such as σ = 0. 1 for real world application. 4. 5. Further analysis on the GT-mean loss In this experiment, we further investigate the difference be- tween the original loss and the GT-mean loss. Specifically, we randomly selected a batch of low-light images (batchsize = 8) and their corresponding ground truth images. These images were enhanced using RetinexFormer to produce en- hanced outputs f (x). To simulate the varying brightness, we introduced a unified scaling factorη ranging from 0 to 3, simulating the progression of the enhanced images η · f (x) from dark to bright. This experiment setting simulates how the loss value varies under different brightness levels, facil- itating us to investigate the loss curve with respect to the brightness variation only."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.6196126341819763,
+      "text": "1 allows the GT- mean loss to continuously improve model performance. In addition, the experiment shows that the choice of σ value is open. As σ measures the spread of the random variable eE[·] deviating from the observed average image brightness E[·] in our modeling, we recommend using a small value, such as σ = 0. 1 for real world application. 4. 5. Further analysis on the GT-mean loss In this experiment, we further investigate the difference be- tween the original loss and the GT-mean loss. Specifically, we randomly selected a batch of low-light images (batchsize = 8) and their corresponding ground truth images. These images were enhanced using RetinexFormer to produce en- hanced outputs f (x). To simulate the varying brightness, we introduced a unified scaling factorη ranging from 0 to 3, simulating the progression of the enhanced images η · f (x) from dark to bright. This experiment setting simulates how the loss value varies under different brightness levels, facil- itating us to investigate the loss curve with respect to the brightness variation only."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6191736459732056,
+      "text": "Table 1:Quantitative results on the KITTI dataset. For the error-based metrics , the lower value is better; and for the accuracy-based metrics , the higher value is better. The best and second-best results are marked in boldand underline. Jaeho et al* is a combined model that applies both Jaeho’s[34] (handle dynamic objects) and TriDepth’s[5] (solve edge flatten) approach. Jasmine* and Jasmine are the same model but use different alignments (discussed in Sec. 4. 3). In the data column, Syn, K, and H represent the synthetic, KITTI, and Hypersim datasets, respectively. The number of images and depth labels usage are in brackets. All experiments are conducted at 1024×320 resolution (Performance of Marigold/E2E FT/Lotus is robust to this resolution). Method Venue Notes Data AbsRelSqRel RMSERMSElog a1 a2 a3 Marigold[25] CVPR2024ZeroShotSyn(74K+74K)0. 120 0. 672 4. 033 0. 184 0. 874 0. 968 0. 985E2E FT[33] W ACV2025ZeroShotSyn(74K+74K)0. 112 0. 649 4. 099 0. 180 0. 890 0. 969 0. 985Lotus[21] ICLR2025ZeroShotSyn(59K+59K)0. 110 0. 611 3. 807 0. 175 0. 892 0. 970 0. 986Jasmine* - Mono KH(68K+0) 0. 102 0. 540 3. 728 0. 162 0. 907 0. 973 0. 987 Monodepth2[15]ICCV2019 Mono K(40K+0) 0. 115 0."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.6183780431747437,
+      "text": "977 WaveletMonodepthResnet18 \u0013 S 320×1024 0. 105 0. 797 4. 732 0. 203 0. 869 0. 952 0. 977 [63] Depth Hints \u0013 SSGM 320×1024 0. 099 0. 723 4. 445 0. 187 0. 886 0. 961 0. 982 WaveletMonodepthResnet18 \u0013 SSGM 320×1024 0. 102 0. 739 4. 452 0. 188 0. 883 0. 960 0. 981 Depth Hints Resnet50 \u0013 SSGM 320×1024 0. 096 0. 710 4. 393 0. 185 0. 890 0. 962 0. 981 WaveletMonodepthResnet50 \u0013 SSGM 320×1024 0. 097 0. 718 4. 387 0. 184 0. 891 0. 962 0. 982 WaveletMonodepthResnet50 (η = 0. 05) \u0013 SSGM 320×1024 0. 100 0. 726 4. 444 0. 186 0. 888 0. 962 0. 982 Table 3: Quantitative results on KITTI. We compare our method to our baselines on KITTI [15], using the Eigen split. TheData column indicates the training data modality: S is for self-supervised training on stereo images, MS is for models trained with both monocular (forward and backward frames) and stereo data and SSGM refers to the extra stereo ground truth which was used in [63]. Method H × W Abs Rel RMSE log10 δ<1. 25 δ<1. 252 δ<1. 253 ϵacc ϵcomp DenseNet baseline 480 × 640 0. 1277 0. 5479 0. 0539 0. 8430 0. 9681 0. 9917 1. 7170 7. 0638 WaveletMonodepth (last scale sup.) 480 × 640 0. 1280 0. 5589 0. 0546 0. 8436 0. 9658 0. 9908 1. 7678 7."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p15_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 15,
+      "score": 0.615882158279419,
+      "text": "Method σscale Abs RelSq Rel RMSE RMSE logδ <1. 25 δ <1. 252 δ <1. 253 Zhou [76]† 0. 210 0. 258 2. 338 7. 040 0. 309 0. 601 0. 853 0. 940 Mahjourian [40]0. 189 0. 221 1. 663 6. 220 0. 265 0. 665 0. 892 0. 962 GeoNet [71] 0. 172 0. 202 1. 521 5. 829 0. 244 0. 707 0. 913 0. 970 Ranjan [51] 0. 162 0. 188 1. 298 5. 467 0. 232 0. 724 0. 927 0. 974 EPC++ [38] 0. 123 0. 153 0. 998 5. 080 0. 204 0. 805 0. 945 0. 982 DDVO [62] 0. 108 0. 147 1. 014 5. 183 0. 204 0. 808 0. 946 0. 983 Monodepth2 0. 093 0. 109 0. 623 4. 136 0. 154 0. 873 0. 977 0. 994 Table 8. Single scale monocular evaluation. Comparison to exist- ing monocular supervised methods on KITTI 2015 [13] using the Eigen split with improved ground truth from [59] using a single scale for each method. † indicates newer results from the on- line implementation. Method TrainSILogsqErrorRelabsErrorReliRMSE DORN [10] D 11. 77 2. 23 8. 78 12. 98 DABC [34] D 14. 49 4. 08 12. 72 15. 53 APMoE [29] D 14. 74 3. 88 11. 74 15. 63 CSWS [32] D 14. 85 3. 48 11. 84 16. 38 DHGRL [74] D 15. 47 4. 04 12. 52 15. 72 Monodepth [15] S 22. 02 20. 58 17. 79 21. 84 Monodepth2 M 15. 57 4. 52 12. 98 16. 70 Monodepth2 MS 15. 07 4. 16 11. 64 15."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p15_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 15,
+      "score": 0.615882158279419,
+      "text": "Method σscale Abs RelSq Rel RMSE RMSE logδ <1. 25 δ <1. 252 δ <1. 253 Zhou [76]† 0. 210 0. 258 2. 338 7. 040 0. 309 0. 601 0. 853 0. 940 Mahjourian [40]0. 189 0. 221 1. 663 6. 220 0. 265 0. 665 0. 892 0. 962 GeoNet [71] 0. 172 0. 202 1. 521 5. 829 0. 244 0. 707 0. 913 0. 970 Ranjan [51] 0. 162 0. 188 1. 298 5. 467 0. 232 0. 724 0. 927 0. 974 EPC++ [38] 0. 123 0. 153 0. 998 5. 080 0. 204 0. 805 0. 945 0. 982 DDVO [62] 0. 108 0. 147 1. 014 5. 183 0. 204 0. 808 0. 946 0. 983 Monodepth2 0. 093 0. 109 0. 623 4. 136 0. 154 0. 873 0. 977 0. 994 Table 8. Single scale monocular evaluation. Comparison to exist- ing monocular supervised methods on KITTI 2015 [13] using the Eigen split with improved ground truth from [59] using a single scale for each method. † indicates newer results from the on- line implementation. Method TrainSILogsqErrorRelabsErrorReliRMSE DORN [10] D 11. 77 2. 23 8. 78 12. 98 DABC [34] D 14. 49 4. 08 12. 72 15. 53 APMoE [29] D 14. 74 3. 88 11. 74 15. 63 CSWS [32] D 14. 85 3. 48 11. 84 16. 38 DHGRL [74] D 15. 47 4. 04 12. 52 15. 72 Monodepth [15] S 22. 02 20. 58 17. 79 21. 84 Monodepth2 M 15. 57 4. 52 12. 98 16. 70 Monodepth2 MS 15. 07 4. 16 11. 64 15."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc4",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6152973771095276,
+      "text": "Extensive experiments demonstrate that Jasmine achieves SoTA performance on KITTI and superior zero-shot generalization across datasets. Our approach establishes a new paradigm for unsupervised depth estimation, paving the way for future advancements in self-supervised learning. 10"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.6141761541366577,
+      "text": "880 57. 262 3. 111 2. 3233. 380 60. 507 3. 673 2. 6992. 730 37. 513 3. 471 2. 1543. 420 53. 77 3. 438 2. 458Retinexformer with GT-mean loss (ours) 3. 210 57. 247 3. 805 2. 7733. 820 56. 633 3. 195 2. 4123. 840 57. 374 3. 273 2. 4233. 370 60. 682 3. 706 2. 7192. 770 37. 654 3. 517 2. 1663. 400(-)53. 918(+)3. 499(+)2. 498(+) SNR 6. 070 47. 025 3. 379 2. 5264. 270 48. 685 2. 531 1. 9436. 060 49. 216 2. 836 2. 1026. 470 46. 441 3. 445 2. 55111. 520 23. 186 3. 067 1. 9556. 880 42. 911 3. 052 2. 215SNR with GT-mean loss (ours) 6. 120 47. 430 3. 521 2. 5714. 260 48. 780 2. 571 1. 9576. 110 49. 008 2. 946 2. 1526. 460 46. 602 3. 580 2. 60511. 550 23. 853 3. 137 1. 9976. 900(+)43. 135(+)3. 151(+)2. 256(+) Uformer 3. 080 58. 084 2. 971 2. 1443. 720 56. 177 3. 177 2. 4033. 660 57. 698 2. 646 1. 9673. 400 61. 310 2. 938 2. 1312. 700 36. 235 2. 904 1. 8393. 310 53. 901 2. 927 2. 097Uformer with GT-mean loss (ours) 3. 120 58. 981 3. 067 2. 1803. 690 56. 641 3. 229 2. 4263. 640 58. 200 2. 712 1. 9733. 380 61. 704 2. 956 2. 1132. 700 36. 695 3. 001 1. 8483. 300(-)54. 444(+)2. 993(+)2. 108(+) LLformer 3. 260 56. 642 3. 832 2. 7883. 750 53. 335 2. 667 1. 9934. 010 55. 671 3. 040 2. 3433. 320 59."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.6141761541366577,
+      "text": "880 57. 262 3. 111 2. 3233. 380 60. 507 3. 673 2. 6992. 730 37. 513 3. 471 2. 1543. 420 53. 77 3. 438 2. 458Retinexformer with GT-mean loss (ours) 3. 210 57. 247 3. 805 2. 7733. 820 56. 633 3. 195 2. 4123. 840 57. 374 3. 273 2. 4233. 370 60. 682 3. 706 2. 7192. 770 37. 654 3. 517 2. 1663. 400(-)53. 918(+)3. 499(+)2. 498(+) SNR 6. 070 47. 025 3. 379 2. 5264. 270 48. 685 2. 531 1. 9436. 060 49. 216 2. 836 2. 1026. 470 46. 441 3. 445 2. 55111. 520 23. 186 3. 067 1. 9556. 880 42. 911 3. 052 2. 215SNR with GT-mean loss (ours) 6. 120 47. 430 3. 521 2. 5714. 260 48. 780 2. 571 1. 9576. 110 49. 008 2. 946 2. 1526. 460 46. 602 3. 580 2. 60511. 550 23. 853 3. 137 1. 9976. 900(+)43. 135(+)3. 151(+)2. 256(+) Uformer 3. 080 58. 084 2. 971 2. 1443. 720 56. 177 3. 177 2. 4033. 660 57. 698 2. 646 1. 9673. 400 61. 310 2. 938 2. 1312. 700 36. 235 2. 904 1. 8393. 310 53. 901 2. 927 2. 097Uformer with GT-mean loss (ours) 3. 120 58. 981 3. 067 2. 1803. 690 56. 641 3. 229 2. 4263. 640 58. 200 2. 712 1. 9733. 380 61. 704 2. 956 2. 1132. 700 36. 695 3. 001 1. 8483. 300(-)54. 444(+)2. 993(+)2. 108(+) LLformer 3. 260 56. 642 3. 832 2. 7883. 750 53. 335 2. 667 1. 9934. 010 55. 671 3. 040 2. 3433. 320 59."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p8_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6137654781341553,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 8 ID SD PGD LKD MVC Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 1 0. 107 0. 787 4. 580 0. 182 0. 887 0. 963 0. 983 2 ✓ 0. 434 4. 630 11. 99 0. 579 0. 306 0. 568 0. 777 3 ✓ 0. 105 0. 757 4. 521 0. 181 0. 889 0. 964 0. 984 4 ✓ ✓ 0. 104 0. 741 4. 489 0. 180 0. 890 0. 964 0. 984 5 ✓ ✓ ✓ 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 TABLE IV ABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD: PSEUDO GROUND -TRUTH DIFFUSION ; MVC: MASKED VISUAL CONDITION MECHANISM . Inference step Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 2 1. 812 75. 600 30. 791 6. 160 0. 070 0. 141 0. 213 5 1. 503 58. 013 27. 140 5. 464 0. 125 0. 241 0. 340 10 0. 226 3. 730 9. 571 0. 754 0. 703 0. 878 0. 938 15 0. 822 28. 099 19. 232 2. 972 0. 357 0. 548 0. 653 20 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 25 0. 431 10. 382 12. 709 1. 206 0. 503 0. 723 0. 827 TABLE V ABLATION STUDY ON DIFFERENT INFERENCE STEPS . Fig. 7. Visualization of the denoising process involving 20 inference steps in total. E."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6129944324493408,
+      "text": "Despite these inherent disadvantages, as shown in Table 4, our method still outperforms the state- of-the-art approaches in both multi-frame and stereo-supervision domains across most metrics. This remarkable achievement, especially considering our more challenging problem setting, further demonstrates the substantial strength and generalizability of our approach. E. 3 Qualitative Comparisons Table 6:Ablation Studieson the mix-batch ratio. Ph refers to supervision using Eq. 5, while Latent refers to supervision using Eq. 4 . The notation +λ denotes the proportion of the KITTI dataset used (e.g., +0. 3 indicates a KITTI:Hypersim ratio of 3:7 in the MIR training data.) (ID) Method AbsRel SqRel RMSE a1 a2 Ph+0 0. 089 0. 5733. 973 0. 918 0. 972 Ph+0. 3 0. 090 0. 581 3. 944 0. 9190. 972 Ph+0. 6 0. 092 0. 5933. 933 0. 9150. 973 Ph+1 0. 093 0. 590 3. 970 0. 9150. 973 Latent+0 0. 106 0. 614 4. 181 0. 901 0. 970 Latent+0. 3 0. 095 0. 6064. 138 0. 909 0. 970 Latent+0. 6 0. 121 0. 649 4. 322 0. 8760. 970 Latent+1 0. 129 0. 679 4. 385 0. 858 0. 962 In Fig. 8, we further compare the perfor- mance of our Jasmine with other methods in multi scenes."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.6119222044944763,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.6119222044944763,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p17_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.6114603281021118,
+      "text": "– A photometric reprojection loss, Lph, is calculated by comparing the synthesized image ˆIt with the original target imageI t. – This loss, Lph, is the core self-supervised signal. If the predicted depth D is incorrect, the reprojected image ˆIt will not match the originalI t, resulting in a high loss. •Step 5: End-to-End Backpropagation: – The gradient from Lph is backpropagated through the entire computational graph. This means the gradient flows back to update the weights of both thePoseNetand, most importantly, the SD U-Net(f z θ ). •Output:The predicted depth mapDobtained from Step 1. B. 2 Training Pseudocode Algorithm 1 outlines the complete training procedure for Jasmine, incorporating all components including MIR, SSG, and the full loss computation (Corresponds to the pipeline in Fig. 2)."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p9_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6111983060836792,
+      "text": "The performance gap between Jasmine and Jasmine* in Tables 1 and 2 high- lights the impact of de-normalization strategies—median alignment for self- supervised methods and LSQ alignment for zero-shot settings. As the first work bridging these two domains, we provide an in-depth analysis of how these choices affect evaluation. Depth de-normalization refers to the pro- cess of transforming the model’s predicted depth values back to the GT distribution for metric evaluation. The typical de- normalization strategies include: ❶No operation: Models predict metric depth [23]:D eval =D pred. ❷ Median Alignment: Models predict SI Depth [ 15], which can be recovered by scaling the ratio of the median of the GT depth to the median of the predicted depth: Deval =D pred · median(DGT )/median(Dpred). ❸ Least-Squares (LSQ) Alignment: Models predict SSI Depth [ 25], which can be recovered by affine transformation (scaled and shifted) to best fit the GT depth. The evaluated depth is given by: Deval =s ∗Dpred +t ∗. where the optimal scale s∗ and shift t∗ are determined by minimizing the sum of squared differences:(s ∗, t∗) = arg min s,t P i((s·D pred,i +t)−D GT,i )2."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p7_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.6103590726852417,
+      "text": "MIR Analysis Datasets ETH3D[41]: We resize this high-resolution (6048 ×4032) dataset to 4K resolution, then randomly cropped to 1024×320 per iteration (898 total samples). Virtual KITTI[4] is a synthetic street scene dataset. We processed this dataset identically to real KITTI data. 4. 2. 2 Performance Comparison For all the evaluations, only Jasmine*, Marigold, E2E FT, and Lotus adopt the least squares alignment. The other self-supervised methods use median alignment. The definitions and differences of these alignments are detailed discussed in Sec. 4. 3. The meaning of each metric is detailed in Sec. G. KITTI resultTo fully demonstrate the advantages of our approach, we compare Jasmine against the most efficient SSMDE models and SoTA SD-based methods. As shown in Table 1,Jasmine achieves the best performanceacross all metrics on the KITTI benchmark. Notably, our method makes significant progress on the a1 metric, reflecting an overall improvement in depth estimation accuracy. This systematic advancement stems from the rich prior knowledge of SD. As shown in Fig."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p17_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.6100152730941772,
+      "text": "Algorithm 1Jasmine Training Algorithm 1:Initialize:SD U-Net, PoseNet, SSG, V AE, optimizer 2:V AE.eval()▷V AE weights are frozen 3:foreach batch of inputs ‘I’ in dataloaderdo 4:▷Mix-batch Image Reconstruction (MIR) 5:s depth ←[1,0],s recon ←[0,1]▷Task switchers 6:z I t , zI m, zn ←V AE.encode(I[’I_t’],I[’I_m’],noise) 7:D ssi ←V AE.decode(SD_UNet([zI t , zn], t= 999, s=sdepth)) 8:I rec ←V AE.decode(SD_UNet([zI m, zn], t= 999, s=srecon)) 9:▷Scale-Shift GRU (SSG) 10:D list ←SSG(D ssi, zI t )▷ D list contains[D ssi, D1, Dsi] 11:pose←PoseNet(I[’I_t’],I[’I_t”])▷Pose Estimation for Self-Supervision 12:loss←compute_loss(I, D list, pose, Irec)▷Loss Computation and Optimization 13:optimizer.zero_grad() 14:loss.backward() 15:optimizer.step() 16:end for 17:functionCOMPUTE_LOSS(inputs,D list, pose,I rec) 18:D si, Dssi ←D list[−1], Dlist[0] 19:reproj_img←reproject(inputs[’I_t”], D si, pose) 20:L ph ←photometric_loss(reproj_img,inputs[’I_t’])▷Core self-supervised signal 21:L s ←photometric_loss(I rec,inputs[’I_m’])▷Surrogate task signal 22:L tc ←teacher_loss(D list,inputs[’D_tc’])▷As per Eq. 11 23:L a ←compute_auxiliary_loss(inputs, Dsi, Dssi) 24:loss←L ph +L s +L tc +L a ·0."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.6097644567489624,
+      "text": "Completely remov- ing the original loss term severely impairs the model’s per- formance. Does GT-Mean Loss achieve simultaneous improvement in perception and fidelity? GT-Mean Loss achieves opti- mal LPIPS, PSNR, and mean brightness discrepancy. Its dynamic weighting mechanism W adaptively adjusts the original loss term and brightness alignment term, avoiding the limitations of a single objective. Unlike the phase fluc- tuations of hybrid strategies or the collapse associated with full brightness alignment, GT-Mean Loss maintains contin- uous positive optimization of both perception and fidelity throughout training, leading to a transition from conflict to mutual enhancement. 4. 3. 3. Qualitative Analysis. In Figure 4B, we recorded the absolute difference |y − f (x)| as residual heatmaps at 50K, 100K, and 150K it- erations. The GT-Mean Loss demonstrates significantly smaller residuals in both texture and noise regions com- pared to the baseline, suggesting its superior capability in detail refinement. In Figure 4C, the final results generated using GT-Mean Loss exhibit excellent alignment with the ground truth (GT) in terms of color fidelity and structural clarity."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.6097644567489624,
+      "text": "Completely remov- ing the original loss term severely impairs the model’s per- formance. Does GT-Mean Loss achieve simultaneous improvement in perception and fidelity? GT-Mean Loss achieves opti- mal LPIPS, PSNR, and mean brightness discrepancy. Its dynamic weighting mechanism W adaptively adjusts the original loss term and brightness alignment term, avoiding the limitations of a single objective. Unlike the phase fluc- tuations of hybrid strategies or the collapse associated with full brightness alignment, GT-Mean Loss maintains contin- uous positive optimization of both perception and fidelity throughout training, leading to a transition from conflict to mutual enhancement. 4. 3. 3. Qualitative Analysis. In Figure 4B, we recorded the absolute difference |y − f (x)| as residual heatmaps at 50K, 100K, and 150K it- erations. The GT-Mean Loss demonstrates significantly smaller residuals in both texture and noise regions com- pared to the baseline, suggesting its superior capability in detail refinement. In Figure 4C, the final results generated using GT-Mean Loss exhibit excellent alignment with the ground truth (GT) in terms of color fidelity and structural clarity."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.608522891998291,
+      "text": "056(-0. 001)3. 197(↑) 2. 130(↑) Restormer 26. 288 0. 944 0. 045 30. 57 0. 955 0. 039 3. 350 2. 187Restormer with GT-mean loss(ours) 26. 630(+0. 342)0. 946(+0. 002)0. 041(-0. 004)31. 001(+0. 431)0. 957(+0. 002)0. 036(-0. 003)3. 404(↑) 2. 218(↑) LLFormer 24. 195 0. 918 0. 07 27. 862 0. 930 0. 064 3. 176 2. 137LLFormer with GT-mean loss(ours) 25. 152( +0. 957)0. 932(+0. 014)0. 058(-0. 012)29. 266(+1. 404)0. 945(+0. 015)0. 051(-0. 013)3. 283(↑) 2. 177(↑) SNR-Aware 24. 173 0. 924 0. 064 27. 756 0. 937 0. 058 3. 275 2. 209SNR-Aware with GT-mean loss(ours) 24. 301(+0. 128)0. 933(+0. 009)0. 057(-0. 007) 28. 525(+0. 769)0. 945(+0. 008)0. 050(-0. 008)3. 326(↑) 2. 207(↓) meaningful evaluations. For unpaired datasets, we evaluated the model per- formance using QALIGN’s IQA and IAA modules, NIQE [24], and MUSIQ [14]. Implementation Details. To retrain the baselines equipped with GT-mean loss functions, we followed the their official settings, which can be found in Appendix. 4. 2. Quantitative Results Paired Datasets."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.608522891998291,
+      "text": "056(-0. 001)3. 197(↑) 2. 130(↑) Restormer 26. 288 0. 944 0. 045 30. 57 0. 955 0. 039 3. 350 2. 187Restormer with GT-mean loss(ours) 26. 630(+0. 342)0. 946(+0. 002)0. 041(-0. 004)31. 001(+0. 431)0. 957(+0. 002)0. 036(-0. 003)3. 404(↑) 2. 218(↑) LLFormer 24. 195 0. 918 0. 07 27. 862 0. 930 0. 064 3. 176 2. 137LLFormer with GT-mean loss(ours) 25. 152( +0. 957)0. 932(+0. 014)0. 058(-0. 012)29. 266(+1. 404)0. 945(+0. 015)0. 051(-0. 013)3. 283(↑) 2. 177(↑) SNR-Aware 24. 173 0. 924 0. 064 27. 756 0. 937 0. 058 3. 275 2. 209SNR-Aware with GT-mean loss(ours) 24. 301(+0. 128)0. 933(+0. 009)0. 057(-0. 007) 28. 525(+0. 769)0. 945(+0. 008)0. 050(-0. 008)3. 326(↑) 2. 207(↓) meaningful evaluations. For unpaired datasets, we evaluated the model per- formance using QALIGN’s IQA and IAA modules, NIQE [24], and MUSIQ [14]. Implementation Details. To retrain the baselines equipped with GT-mean loss functions, we followed the their official settings, which can be found in Appendix. 4. 2. Quantitative Results Paired Datasets."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.6077648401260376,
+      "text": "Based on the above experimental design, we present the curve of the original L1 loss (Figure 6(a)), and the curves of the GT-mean L1 loss under different σ values (Figure 6(b)). The difference between them is that the use of the GT-mean loss clearly produces basins around η = 1. In an- other word, the GT-mean loss produces small-gradient re- gion with regard to brightness around η = 1, of which the range is controlled by σ. From an optimization perspec- tive, since the gradients with respect to brightness become smaller, the optimization along the direction of brightness adjustment is in turn slowed down. Based on this charac- teristic, in real-world model training, the GT-mean L1 loss enables LLIE models to focus on other important degener- ation factors, when p(eE[y]) and q(eE[f (x)])] become closer. In contrast, the original L1 loss is less capable of decou- pling the optimization with respect to brightness and other visual quality factors. Additionally, Figure 6(c) presents the weight curves that correspond to Figure 6(b), demonstrating how the GT-mean L1 loss behaves with regard to weight variation."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.6077648401260376,
+      "text": "Based on the above experimental design, we present the curve of the original L1 loss (Figure 6(a)), and the curves of the GT-mean L1 loss under different σ values (Figure 6(b)). The difference between them is that the use of the GT-mean loss clearly produces basins around η = 1. In an- other word, the GT-mean loss produces small-gradient re- gion with regard to brightness around η = 1, of which the range is controlled by σ. From an optimization perspec- tive, since the gradients with respect to brightness become smaller, the optimization along the direction of brightness adjustment is in turn slowed down. Based on this charac- teristic, in real-world model training, the GT-mean L1 loss enables LLIE models to focus on other important degener- ation factors, when p(eE[y]) and q(eE[f (x)])] become closer. In contrast, the original L1 loss is less capable of decou- pling the optimization with respect to brightness and other visual quality factors. Additionally, Figure 6(c) presents the weight curves that correspond to Figure 6(b), demonstrating how the GT-mean L1 loss behaves with regard to weight variation."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p4_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.6069952845573425,
+      "text": "When activated by sx, we have D=D \u0000 f z θ \u0000 sx,z y τ ,z I\u0001\u0001 . In contrast, we have I=D \u0000 f z θ \u0000 sy,z y τ ,z I\u0001\u0001 . Notably, the switcher s is a processed one-hot vector and it is combined with the time embeddings fed into the f z θ . This allows the U-Net to condition its internal operations on the currently selected task. Therefore, we follow the SD paradigm and initially formulate the surrogate loss as: Ls =||z I −f z θ (sy,z y τ ,z I)||2.(4) Mix-batch Images Reconstruction with Photometric Supervision. We show that it is possible to preserve the SD priors by introducing a compact surrogate task. However, our experiments reveal that naively applying Eq. 4 for SSMDE optimization yields suboptimal results (Fig. 3(c)). Through empirical investigation, we identify three critical insights:1)Inferior reconstructed images (e.g., KITTI) introduce block artifacts (Fig. 3(c)). We attribute this to the latent space operating at 1 8 resolution: When inputs align with the pre-trained ε and D, smooth supervision is achieved. Conversely, each latent pixel supervision manifests as 8×8 block artifacts in prediction."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p6_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 6,
+      "score": 0.6061193943023682,
+      "text": "using GT-Mean Loss with Retinexformer increases training time by just 1%. Therefore, this loss function can be seamlessly integrated into existing supervised LLIE meth- ods, achieving nearly zero-cost performance improvements. Input RetinexFormer Ours Input Uformer Ours Input MIRNet Ours Input SNR-aware Ours Input Restormer Ours Input LLformer Ours Figure 3. Visual comparison of results on the five unpaired datasets: original image (left), results from baselines (middle), and results from their improved versions based on our loss (right). Unpaired Datasets. Table 3 presents the performance of the models on five unpaired datasets. Compared with the baseline performance, using GT-mean loss demonstrates superior or comparable results in most cases in terms of the non-reference evaluation metrics. These results indicate that the GT-Mean loss possesses strong generalization capa- bilities: even when tested on unseen images, performance improvements are still observed, proving that its success on supervised datasets is not due to overfitting. As shown in Figure 3, the examples based on the GT-Mean loss demon- strate improvements over the baseline results."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p6_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 6,
+      "score": 0.6061192750930786,
+      "text": "using GT-Mean Loss with Retinexformer increases training time by just 1%. Therefore, this loss function can be seamlessly integrated into existing supervised LLIE meth- ods, achieving nearly zero-cost performance improvements. Input RetinexFormer Ours Input Uformer Ours Input MIRNet Ours Input SNR-aware Ours Input Restormer Ours Input LLformer Ours Figure 3. Visual comparison of results on the five unpaired datasets: original image (left), results from baselines (middle), and results from their improved versions based on our loss (right). Unpaired Datasets. Table 3 presents the performance of the models on five unpaired datasets. Compared with the baseline performance, using GT-mean loss demonstrates superior or comparable results in most cases in terms of the non-reference evaluation metrics. These results indicate that the GT-Mean loss possesses strong generalization capa- bilities: even when tested on unseen images, performance improvements are still observed, proving that its success on supervised datasets is not due to overfitting. As shown in Figure 3, the examples based on the GT-Mean loss demon- strate improvements over the baseline results."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.6055530309677124,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement Jingxi Liao, Shijie Hao*, Richang Hong, Meng Wang, Hefei University of Technology, Hefei, China {jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.com Abstract Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting con- ditions. In supervised LLIE research, there exists a signifi- cant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth coun- terpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss func- tion directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT- mean form with minimal additional computational costs."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.6055530309677124,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement Jingxi Liao, Shijie Hao*, Richang Hong, Meng Wang, Hefei University of Technology, Hefei, China {jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.com Abstract Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting con- ditions. In supervised LLIE research, there exists a signifi- cant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth coun- terpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss func- tion directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT- mean form with minimal additional computational costs."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6052589416503906,
+      "text": "Y. Zou et al. Fig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module (SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module (ARD) that we propose. Additionally, we propose the segmentation proposal scale alignment loss (𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance. 3. The proposed method In this section, we ﬁrst introduce the overall architecture of SSRDepth (Section 3. 1). Then, we present the key components of SSRDepth: the Segmentation Query Guided Aggregation module (Section 3. 2), the Segmentation Proposal Scale module (Section 3. 3), and the Adaptive Relative Depth module (Section 3. 4). 3. 1. Framework overview As shown in Fig. 2, given an input image 𝐼 ∈ ℝ3×𝐻×𝑊 , we ﬁrst extract image features through the Image Encoder and then decode them into multi-scale features {𝐹𝑙}3 𝑙=1 and per-pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 employing the Pixel Decoder, where 𝐶 is the number of channels, and 𝐻 × 𝑊 is the resolution."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.7515197396278381,
+      "text": "4(a), compared to traditional GRU, SSG introduces a core component Scale-Shift Transformer (SST), and modifies the iterative prediction formula: F rom Dk+1 =D δ +D k T o Dk+1 =D δ +s c ·D k +s h,(10) where Dδ =DepthHead(h k+1), k denotes the iteration step and h denotes the hidden state (prelimi- naries of GRU in Sec D). Specifically, the SST employs learnable scale/shift queries (QSC /QSH ) that interact with SD’s hidden states (keys/values) via cross-attention. The output vector is subsequently split and processed by MLPs to produce sc and sh. For the hidden state update, to enhance spatial awareness, the current input xk is defined as the concatenation of image features zI and the current depth Dk. The hidden state hk evolves via a standard GRU iteration to produce the refined hidden stateh k+1 and subsequently updateD k toD k+1. To balance computational efficiency and GRU’s iterative benefits, we employ two GRU iterations: starting from the initial depth D0 (DSSI ) to sequentially produce D1 and D2 (DSI ). As shown in Fig. 4(b), the distribution of D0 tends to align with the standard SSI depth distribution, while D1 and D2 progressively converge towards the SI depth.",
+      "estimated_tokens": 295
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 295,
+    "compressed_context_tokens": 295,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 295,
+  "context_tokens": 295,
+  "prompt_token_estimate": 643,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_jasmine_ssg_purpose",
+  "answer": "<think>The user wants me to answer based on the provided material about Scale-Shift GRU (SSG) in Jasmine. Let me analyze the content.\n\nFrom the material, I can see that SSG:\n1. Modifies traditional GRU's iterative prediction formula\n2. Introduces Scale-Shift Transformer (SST) as a core component\n3. Uses learnable scale/shift queries (QSC/QSH) that interact with SD's hidden states via cross-attention\n4. Enhances spatial awareness by concatenating image features and current depth as input\n5. Employs two GRU iterations to balance computational efficiency and GRU's iterative benefits\n6. Helps the distribution progressively converge from SSI depth to SI depth\n\nThe material doesn't explicitly state what problem SSG solves in a single sentence, but I can infer from the context that it modifies the iterative prediction to help the depth distribution progressively converge towards the SI (Scale-Invariant) depth distribution, enhancing spatial awareness in the depth prediction process.\n\nLet me construct the answer based on what's in the material. The key improvements over traditional GRU are:\n- Modified prediction formula with scale and shift\n- SST component for spatial awareness\n- Progressive convergence from SSI to SI depth\n\nI should not fabricate beyond what's in the material. The material shows the modification and convergence behavior, which implies SSG addresses the gap between SSI and SI depth distributions while enhancing spatial awareness.</think>\n\n{\"answer\":\"SSG在Jasmine中改进了传统GRU的迭代预测公式，通过引入Scale-Shift Transformer（SST）和可学习的scale/shift queries，使深度分布从初始的SSI分布逐步收敛到SI分布，同时增强空间感知能力。\",\"items\":[{\"name\":\"SSG模块解决的问题\",\"description\":\"SSG通过修改迭代预测公式（加入可学习的sc和sh），利用SST中的cross-attention机制增强空间感知，并通过两次GRU迭代使深度分布从SSI逐步收敛到SI分布。\",\"citations\":[1]}],\"missing_information\":\"\"}",
+  "usage": {
+    "prompt_tokens": 699,
+    "completion_tokens": 401,
+    "total_tokens": 1100,
+    "model": "MiniMax-M3"
+  }
+}

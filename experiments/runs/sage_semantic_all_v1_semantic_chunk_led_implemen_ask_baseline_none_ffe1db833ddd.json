@@ -1,0 +1,430 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_led_implemen_ask_baseline_none_ffe1db833ddd",
+  "dry_run": false,
+  "query": "LED 方法在实验中验证了哪些深度估计架构？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::LED_p15_sc1",
+      "source": "data\\LED.pdf",
+      "page": 15,
+      "score": 0.6664229035377502,
+      "text": "Regarding regulation, HD headlight technology is novel and the European regulation has authorized just recently the projection of specific HD pattern onto the road. Thus, laws are moving in this direction and evolving with the technology. B Encoder-Decoder Details B. 1 Encoder-Decoder Architecture LED uses a single pattern implicitly learned by the model, making it architecture-agnostic. This characteristic is demonstrated in the main paper (see section section 5. 1) by applying LED to multiple state-of-the-art architectures [4, 27, 49]. To prove our concept and conduct experiments, we opt for an encoder-decoder architecture with skip connections [37]. The © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms."
+    },
+    {
+      "id": "semantic_chunk::LED_p7_sc3",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6449639797210693,
+      "text": "LED maintains performance for close object and exhibits greater enhancement at longer ranges, thus addressing depth estimation of distant objects at night."
+    },
+    {
+      "id": "semantic_chunk::LED_p19_sc1",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.6445221900939941,
+      "text": "F Examples of Other Patterns To find a suitable pattern for our application, we generate half-sized datasets featuring com- monly used structured light patterns: checkerboard, horizontal, and vertical lines (see fig. S4). Comprehensive metrics from this experiment are available in table S4, the checkerboard pat- tern demonstrates significantly superior performances. G LED Impact On Other Tasks We introduce the LED lighting pattern for improving performance on geometric tasks. We study its impact on the performance of other tasks that might be running in the same time on the vehicle, taking the example of semantic segmentation. To this end, we train Mask2Former"
+    },
+    {
+      "id": "semantic_chunk::LED_p21_sc0",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.6381268501281738,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT21 Test set RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ LED (0. 5°)6. 859 0. 102 0. 041 0. 153 14. 162 1. 511 0. 894 0. 971 0. 989LED (0. 25°)5. 787 0. 082 0. 033 0. 126 11. 875 1. 0839 0. 929 0. 983 0. 994LED (0. 125°)5. 730 0. 077 0. 030 0. 116 10. 913 1. 149 0. 958 0. 989 0. 995 Table S6:DepthFormer results on real datasetwhen trained on 33% of each checkerboard resolutions (0. 5°, 0. 25°, 0. 125°). Figure S6:Zoomed in qualitative results on NSDDshowcasing LED improved depth pre- diction compared to high-beam (HB). I Real World Scenarios To collect our real-world dataset, we made a prototype on a real car. We used an IDS U3- 36L0XC camera and an Ouster OS1-128 LiDAR (Rev 7). Regarding the HD headlight, we opt for the Digital Micromirror Device technology, which offer the greatest resolution (<0. 015°) with a horizontal FOV of 14° and vertical FOV of 7°. All the hardware was mounted on the roof of the car. This novel setup allowed us to test LED under another projector-camera configuration."
+    },
+    {
+      "id": "semantic_chunk::LED_p6_sc0",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6334850788116455,
+      "text": "6DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT Figure 5:Qualitative results on NSDD. LED results exhibit higher precision, and more ac- curate object boundaries and shapes compared to HB. Red boxes indicate enhanced regions. Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderHB 6. 12040. 09030. 0233 0. 1353 13. 48473. 35790. 9489 0. 9812 0. 9908LED5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927 AdabinsHB 7. 3520 0. 1360 0. 0320 0. 1230 10. 1880 4. 2770 0. 8790 0. 9440 0. 9740LED5. 5830 0. 0690 0. 0240 0. 0920 7. 7290 2. 5090 0. 9210 0. 9680 0. 9840 DepthF ormerHB 5. 85280. 06870. 0281 0. 1205 11. 38410. 83280. 9432 0. 9802 0. 9913LED5. 38450. 12150. 0276 0. 1111 10. 41463. 40150. 9497 0. 9838 0. 9950 Table 1:Comparison of depth estimation performances on NSDD:HB models are trained on high beam data and LED on HD light pattern. LED models outperform HB models across all metrics, exceptions are for Abs Rel and Sq Rel. Metrics are computed in the ROI. tion, are due to these imperfections."
+    },
+    {
+      "id": "semantic_chunk::LED_p20_sc0",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.6271361708641052,
+      "text": "20DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT [11] using the available annotation in the Nighttime Synthetic Drive Dataset. Results are re- ported in table S5. LED doesn’t improve, nor degrade performances. We even note a better stability with less variance over runs. Therefore, the similar performance on both domains suggests that LED enhances geometric tasks with limited impact on semantic ones. Pattern mIoU↑ Mask2F ormer LB 51. 45±4,00 LED 51. 49±0,76 Table S5:Mask2Former [11] Semantic segmentation results on NSDD. H Using Multiple Checkerboard Resolutions Any HD headlight can project LED’s checkerboard, although with a resolution adjustment. To evaluate its impact on model performances, we propose to train a model with 3 checker- board resolutions (0. 5°, 0. 25° and 0. 125°) evenly split, and evaluate on each one. Table S6 demonstrates that the model is able to perform well on all resolutions although with a minor performance degradation compared to single resolution training. This shows our model’s ability to generalize over multiple resolutions, thus, various HD headlights or car models. Figure S5:Qualitative results on real-world scenarios."
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6257411241531372,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17 Ldepth Lgrad Lnormal Metrics L1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ ✓ ✗ ✗ ✗ ✗ 5. 9790. 1910. 020 0. 13213. 032 14. 3520. 957 0. 982 0. 991 ✗ ✓ ✗ ✗ ✗ 5. 852 0. 187 0. 021 0. 13213. 12212. 9840. 9570. 9830. 992 ✗ ✓ ✓ ✗ ✗ 5. 760 0. 201 0. 020 0. 137 13. 616 16. 174 0. 9580. 9830. 992 ✗ ✓ ✗ ✓ ✗ 5. 386 0. 2020. 0210. 12412. 373 15. 901 0. 9580. 985 0. 993 ✗ ✓ ✗ ✗ ✓ 5. 3090. 206 0. 022 0. 149 14. 862 16. 048 0. 954 0. 981 0. 990 ✗ ✓ ✗ ✓ ✓ 5. 8090. 186 0. 0180. 125 12. 21014. 6830. 961 0. 985 0. 993 ✗ ✓ ✓ ✗ ✓ 5. 4220. 2000. 0180. 125 12. 50316. 1200. 961 0. 985 0. 993 Table S1:Loss study. Performance comparison using several combination of losses:1st best, 2nd best,3rd best. Figure S2:Few-shot learning performances of Depth Anything V2 on our real dataset. All LED patterns demonstrate superior performances over LB. The model is near its maximal performances with only 1,000 training images. L=L depth +λ 1Lgrad +λ 2Lnormal .(4) B. 3 Loss Study To determine the impact of each individual loss, we conduct an ablation study (see table S1)."
+    },
+    {
+      "id": "semantic_chunk::LED_p19_sc0",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.6237858533859253,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT19 Figure S4:Example of illuminations pattern tested: high-beam (top-left), checkerboard (top-right), horizontal lines (bottom-left) and vertical lines (bottom-right). PatternRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ LED 5. 51790. 19770. 0196 0. 1233 12. 279815. 68670. 9593 0. 9849 0. 9931 HB 6. 0937 0. 0867 0. 0216 0. 1298 12. 8895 3. 1352 0. 9521 0. 9824 0. 9917 VL 7. 3598 0. 1723 0. 0264 0. 1600 15. 7743 6. 5203 0. 9393 0. 9751 0. 9876 HL 6. 66790. 06810. 0254 0. 1445 14. 30771. 23190. 9370 0. 9776 0. 9903 Table S4:Comparison of encoder-decoder performances using various patterns: LED use the checkerboard, HB stands for high-beam, VL and HL are vertical and horizontal lines respectively. degrading others. Since most valuable cues in our method come from the pattern, these findings suggest that a resolution of 320×320 px offers a favorable trade-off for pattern visibility and scene interpretation within our setup (as shown in fig. S3)."
+    },
+    {
+      "id": "semantic_chunk::LED_p7_sc1",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.623309850692749,
+      "text": "1 HD Pattern Impact We assess LED impact on depth estimation by comparing results with and without pattern. As reference, we take models trained on high beam (HB), while the variants use our HD pattern (LED). Quantitative and qualitative results are presented in table 1 and fig. 5. Quantitative Results. We evaluate our method on the encoder-decoder and two SOTA ar- chitectures commonly used in daytime scenarios, Adabins [4] and DepthFormer [27]. Their use of transformer architectures offers valuable insights into LED behavior on more recent architectures compared to the convolutional ones that are common in embedded devices. Comparing the encoder-decoder LED with HB (table 1), we observe a significant im- provement in metrics within the region-of-interest (ROI): LED yields -11% RMSE. Using LED, the model provides more accurate distance estimations. However, its errors are often related to pattern occlusions, which affect both near and far objects, resulting in a degradation of relative metrics (Abs Rel, Sq Rel). All metrics assessing global precision are improved."
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6219533085823059,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9 Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderLB 14. 199 0. 187 0. 072 0. 292 28. 938 5. 620 0. 772 0. 909 0. 956LED 0. 5°11. 089 0. 119 0. 050 0. 213 21. 251 2. 304 0. 864 0. 950 0. 977LED 0. 25°8. 6950. 1090. 040 0. 190 18. 635 2. 1280. 899 0. 9630. 984LED 0. 125°10. 1540. 096 0. 040 0. 19018. 862 2. 1320. 907 0. 969 0. 984 DepthF ormerLB 8. 777 0. 138 0. 050 0. 186 17. 170 3. 365 0. 864 0. 957 0. 983LED 0. 5°6. 810 0. 101 0. 041 0. 152 14. 380 1. 376 0. 890 0. 969 0. 989LED 0. 25°5. 6210. 0820. 0300. 126 11. 7351. 1630. 923 0. 978 0. 992LED 0. 125°5. 7270. 076 0. 030 0. 116 10. 7541. 2610. 940 0. 987 0. 995 DepthAnythingV2 - 1000 training imagesLB 7. 637 0. 104 0. 044 0. 160 14. 617 1. 401 0. 891 0. 972 0. 990LED 0. 5°7. 017 0. 109 0. 047 0. 161 14. 044 1. 260 0. 877 0. 9697 0. 989LED 0. 25°6. 304 0. 102 0. 044 0. 146 12. 300 1. 079 0. 885 0. 9730. 993LED 0. 125°5. 785 0. 082 0. 037 0. 126 10. 673 0. 840 0. 921 0. 9810. 992 Table 6:Performance comparison on real-world data using various pattern resolutions."
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc2",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6168162226676941,
+      "text": "The HB- trained model fails significantly on pattern data (+182. 85% RMSE), while the LED-trained model performs reasonably on HB, with a +32. 63% RMSE. The LED→HB performance is ∼8 m RMSE, compared to∼17 m RMSE for HB→LED. Furthermore, we show that incor- porating only 10% of HB data reduces performance drop (see fig. 6 (c)), limiting RMSE increase to just +17. 11%. It enables a single network to perform well across both domains. This adaptability broadens the method’s applications, allowing selective use of the pattern for higher precision, its absence to avoid glare, or focused pattern projection on specific regions, such as objects of interest 5. 6 Real-world Scenarios We show the applicability of our method in real world scenarios using our in-house dataset. We report results in table 6. LED significantly boosts performance over LB across all met- rics. DepthFormer (0. 5°) shows -22. 4% RMSE improvement. The qualitative results in fig. 7 show LED’s robustness under interfering light sources,e.g., car headlights, street lights. To account for objects passing through the pattern illumination, we investigate the impact of smaller checkerboard cells. Using a size of 0."
+    },
+    {
+      "id": "semantic_chunk::LED_p6_sc2",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6165108680725098,
+      "text": "5 Experiments We evaluate our method through extensive experiments on the Nighttime Synthetic Drive Dataset. We validate the contribution of our light pattern in boosting performance, both in- side and outside illuminated area. We apply our method to the encoder-decoder and other SOTA approaches: Adabins [4], DepthFormer [27] and Depth Anything V2 [49], showing its agnosticity. Finally, we evaluate LED robustness beyond its training domain and its capa- bilities on real-world scenarios. Metrics used align with prior works [4, 27, 28, 40, 47, 51]."
+    },
+    {
+      "id": "semantic_chunk::LED_p15_sc0",
+      "source": "data\\LED.pdf",
+      "page": 15,
+      "score": 0.6121917963027954,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT15 Supplementary Material LED: Light Enhanced Depth Estimation at Night Simon de Moreau1,2 https://simon.demoreau.fr/ Y asser Almehio2 yasser.almehio@valeo.com Andrei Bursuc3 https://abursuc.github.io/ Hafid El-Idrissi2 hafid.el-idrissi@valeo.com Bogdan Stanciulescu1 bogdan.stanciulescu@minesparis.psl.eu Fabien Moutarde1 https://people.minesparis.psl.eu/fabien.moutarde/ 1 Mines Paris - PSL University Paris, France 2 Valeo Paris, France 3 Valeo AI Paris, France A Safety and Regulation While using readily available hardware, LED is a research project not meant to be deployed on cars right away. Future works should assess potential safety issues. To maximize their safety, autonomous vehicles needs multiple perception mechanisms that ensure redundancy, compensating for blind spots of other sensors on the car, e.g., LiDAR in rain conditions. One can imagine that this light pattern could be turned off in crowded areas, or when detecting an incoming car after it was initially detected at a longer distance, ensuring safety."
+    },
+    {
+      "id": "semantic_chunk::LED_p7_sc0",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6118885278701782,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT7 ModelRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ (HB) O-ROI9. 2533 0. 1598 0. 0249 0. 2047 20. 4447 11. 4068 0. 9385 0. 97140. 9828(LED) O-ROI9. 0070 0. 1295 0. 0221 0. 2027 20. 2348 8. 7407 0. 9427 0. 9723 0. 9828 (HB) Full8. 9702 0. 1521 0. 0247 0. 1988 19. 8572 10. 5225 0. 9396 0. 9725 0. 9836(LED) Full8. 6963 0. 1371 0. 0217 0. 1965 19. 6137 9. 5517 0. 9446 0. 9737 0. 9839 Table 2:Encoder-decoder performance beyond ROI on NSDD:O-ROI stands for Outside ROI, where the evaluation mask is the inverse of the ROI. For Full, metrics are computed on the entire image. (LED) models trained on HD pattern outperform (HB) ones in all metrics. Figure 6:Performance comparison of LED and HB in various settings and metrics on NSDD.(a) Performance over distance; (b) Performance over training set size; (c) Robustness across domains: The amount of training data is fixed and composed of a given ratio of LED and HB data. Overall, LED achieves better long-range results while being more data- efficient. It also demonstrates improved performance across domains. 5."
+    },
+    {
+      "id": "semantic_chunk::LED_p10_sc0",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.610985517501831,
+      "text": "10DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT Figure 7:Real-world qualitative results. DepthFormer LED produces accurate depth on complex scenes, even in presence of inter- fering lights,e.g., car headlights, streetlights. In contrast, Depth Anything V2 achieves its best performance with a 0. 125° resolu- tion, as it is better suited to capturing fine details. When fine-tuned with only 1,000 images, we observe -24. 3% RMSE com- pared to the LB baseline. Performances shown by DepthFormer and Depth Any- thing V2 underpin the benefits of LED in complex real-world scenarios. 6 Limitations and Future Works The method’s reliance on a single reference pattern ensures agnosticism but limits its flex- ibility. Designing specialized architectures that treat the pattern as an input could enable dynamic pattern optimization and improve generalization. We tested varying projector-camera distances (real: 70 cm, NSDD: 150 cm), showing LED robustness on similar car models. Future work will assess its usage with larger variations. LED patterns may cause glare for other road users. Leveraging [41] to mask them could mitigate this."
+    },
+    {
+      "id": "semantic_chunk::LED_p18_sc0",
+      "source": "data\\LED.pdf",
+      "page": 18,
+      "score": 0.6083009243011475,
+      "text": "18DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT Image inputRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Reference5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 98460. 9927 ROI-Only5. 69310. 11450. 0199 0. 1428 14. 21314. 45410. 9585 0. 98410. 9932 Table S2:Encoder-decoder performances on NSDDbetween ROI-only training and refer- ence from section section 5. 1. ResolutionRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ 200 px 5. 94130. 10730. 0206 0. 1270 12. 62273. 97360. 9545 0. 9228 0. 9921 320 px 5. 42590. 1996 0. 01880. 1253 12. 490016. 1224 0. 96030. 9846 0. 9927 640 px 5. 7050 0. 21090. 01850. 1420 14. 1092 17. 40850. 96680. 9837 0. 9893 Table S3:Encoder-decoder performances on NSDDat various resolutions. D ROI Details D. 1 ROI Definition To assess the impact of the LED pattern, we define a Region of Interest (ROI) representing the illuminated area in most images and calculate our metrics within this region. We center- crop the image to 640×640 px and then resize it to 320×320 px."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc1",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6042345762252808,
+      "text": "058 0. 026 0. 107 10. 038 0. 607 0. 953 0. 985 0. 995LED 4. 328 0. 044 0. 020 0. 089 8. 374 0. 430 0. 962 0. 991 0. 997 Table 5:Depth Anything V2 performances on NSDD. The model fails when used as zero- shot, but it correctly estimates depth with few-shot learning. LED always outperforms HB. PatternRMSE↓Abs Rel↓SILog↓ LED 5. 4970. 20912. 635 HB 6. 443 0. 095 13. 723 HL 6. 6680. 06814. 308 VL 7. 360 0. 172 15. 774 Table 3:Performances of the encoder- decoder using various patterns on NSDD. VL and HL refers to vertical and horizontal lines. Results are obtained from 50% of NSDD training data. Pattern Study. We generated additional data with various illumination patterns to com- pare the performance of the LED checkerboard against other common structured light patterns (horizontal and vertical lines). Table 3 shows that the checkerboard pattern outperforms the others across most metrics. While horizontal lines show slight improvement in relative met- rics, they cause a significant decline in others. 5. 2 Improving Global Scene Understanding We investigate the impact of LED on depth estimation beyond the ROI, highlighting its contribution to a more holistic scene understanding."
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc0",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.6023706197738647,
+      "text": "arXiv:2409. 08031v3 [cs. CV] 18 Nov 2025 DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT1 LED: Light Enhanced Depth Estimation at Night Simon de Moreau1,2 https://simon.demoreau.fr/ Y asser Almehio2 yasser.almehio@valeo.com Andrei Bursuc3 https://abursuc.github.io/ Hafid El-Idrissi2 hafid.el-idrissi@valeo.com Bogdan Stanciulescu1 bogdan.stanciulescu@minesparis.psl.eu Fabien Moutarde1 https://people.minesparis.psl.eu/fabien.moutarde/ 1 Mines Paris - PSL University Paris, France 2 Valeo Paris, France 3 Valeo AI Paris, France Abstract Nighttime camera-based depth estimation is a highly challenging task, especially for autonomous driving applications, where accurate depth perception is essential for ensuring safe navigation. Models trained on daytime data often fail in the absence of precise but costly LiDAR. Even vision foundation models trained on large amounts of data are unreliable in low-light conditions. In this work, we aim to improve the relia- bility of perception systems at night time."
+    },
+    {
+      "id": "semantic_chunk::LED_p20_sc1",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.6014766097068787,
+      "text": "LED-trained models are more accurate and object edges are better defined."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.5990068316459656,
+      "text": "Application of Phong Model. Finally, with the 3D structure, material information, and the color of the light source IF , the reflection image I R i will be C1(u) = max (0, N (u) ∗ Li (u))/ri (u)2 , C2(u) = max (0, Ri (u) ∗ Vi (u))gr /ri (u)2 , I R i = sF IF (KdC1 + KsC2). (24) Following [Phong, 1975 ], we set the exponential gr to 8. Here, sF is the scale factor of light source image LS. D. 3 Training detail Following [Godard et al., 2019; Zhao et al., 2022b], we use AdamW [Loshchilov and Hutter, 2017] as the optimizer, and the batch size is set to 12. We setlr of the Transformer-based encoder to 5e−5 and double it for the rest trainable part. An exponential decay learning rate scheduler is also used with 0. 9 as exponential. The total training step is set to 40,000. We use the same augmentation for the image splits as applied in [Liu et al., 2021; Wang et al., 2021; Godard et al., 2019; Zhao et al., 2022b]. For BPG, we set F min = smin F = 0. 5 , empirically. Be- sides, we use smax F = 2, Fmax = 2 as the default setting. As to ING, we set K min = 0. 1 following ELD [Wei et al., 2020]. We use K max = 1with P + T Las the default setting."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5975159406661987,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5975159406661987,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.5923149585723877,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.5923149585723877,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::LED_p4_sc0",
+      "source": "data\\LED.pdf",
+      "page": 4,
+      "score": 0.5897606015205383,
+      "text": "4DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT 3 Method We improve depth estimation from monocular camera at nighttime by leveraging a pattern projected in front of the vehicle with HD headlights. 3. 1 HD Pattern and Headlights Networks designed for active stereovision exploit the disparity between the projected pattern and the camera’s view to estimate distances within the scene. With LED, a model identifies pattern’s areas that deviate from the implicitly learned reference pattern. Figure 2:Pattern deformation in the scene: Left: For explanatory purpose, we project the pattern on a depth image. It demonstrates trapezoidal deformations on horizontal sur- faces and undistorted squares on vertical sur- faces. Complex deformations on the car re- veal insights into its geometry. Right: Pattern projected on a wall at 10 m (darker) and 100 m (lighter). Square sizes increases with distance. Unlike traditional active stereovision, which relies on infrared lasers to project points, we harness an HD headlight. Simi- lar to a projector, this headlight can dynam- ically project any image or shape onto the scene. To prevent pattern overlap, we use only the left headlight."
+    },
+    {
+      "id": "semantic_chunk::LED_p5_sc2",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.5885761976242065,
+      "text": "Figure 4:Simulation of HD pattern:Top- left: control matrix of the HD headlight. Bottom-left: photometry considering aberra- tions created by the headlight lens. Right: Re- sulting image using the photometry. The area outlined in red is the region of interest. The dataset consists of 5 different maps (3 train / 1 val / 1 test), with 4,999 frames generated for both pattern and HB illumi- nated images in each. These maps represent major cities. Both parts of the dataset share the same randomization code, making the domains comparable. To closely replicate reality, we account for the optical imperfections of headlights using real measured photometry data (see fig. 4). Aberrations observed in the pattern, particularly along the edges of the projec-"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5878180265426636,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5878180265426636,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.5855486392974854,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. directly simulating light source images, we construct a light source library based on the Flare7K dataset [8]. Flare7K is currently the only large-scale dataset containing 7,000 light source samples. A light source can be randomly sampled from this dataset and resized to match the dimensions of the input image, ensuring compatibility. Additionally, we apply simple image augmentation operations, such as resizing and cropping, to diversify the light source patterns, with the enhanced light source denoted as𝐿𝑆. The sampled light sources are randomly positioned in the 3D scene to simulate realistic depth relationships. A depth constraint is applied to limit the effective range of the light source, ensuring that distant light sources do not produce excessive flare artifacts. The 3D position of the light source is given by: 𝑃𝑖 =𝑧𝑖·𝐾−1 𝐼  𝑢𝑖 𝑣𝑖 1  , (1) where𝑧𝑖 represents the depth of the light source, and its upper limit is 20m,𝐾𝐼 is the intrinsic camera matrix, and(𝑢𝑖,𝑣𝑖) are the 2D coordinates of the light source."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc3",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.5855172872543335,
+      "text": "Therefore, any vehicle equipped with HD headlights can apply LED by adding only a few pattern images in their training set, thereby reducing the cost of specialized data."
+    },
+    {
+      "id": "semantic_chunk::LED_p3_sc2",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.5842545032501221,
+      "text": "Recent methods [2, 15, 25, 36] use deep learning mod- els designed to take patterns and images as input. While active stereovision offers valuable scale information, it has demonstrated significant performance degradation when deployed outdoors, due to high ambient lighting and the low power of projectors [9, 21, 31]. We avoid this thanks to our nighttime environment and the utilization of high-powered HD headlights. HD Lighting. A series of works [12, 41] highlight HD lighting potential applications and particularly its ability to design anti-glare systems while optimizing illumination for en- hanced driver visibility, even in adverse conditions such as rain or snow. More recently, [46] propose reducing overall scene illumination to decrease power consumption while main- taining object detection capabilities. [43, 44, 45] also have proposed hardware-in-the-loop simulation for HD headlights. We introduce a novel application of HD headlights to improve understanding of overall scene geometry and enhance depth estimation. We achieve this by projecting a pattern onto the nighttime scene, providing guidance for the model."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.5837427377700806,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT DomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ (HB→HB)6. 1204 0. 0903 0. 0233 0. 1353 13. 4847 3. 3579 0. 9489 0. 9812 0. 9908(HB→LED)17. 3113 0. 4479 0. 1955 0. 6817 52. 5132 20. 0263 0. 4699 0. 6652 0. 7658 (LED→LED)5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927(LED→HB)8. 05370. 15110. 0338 0. 2026 20. 11208. 19990. 9158 0. 9626 0. 9796 Table 4:Encoder-decoder performance across domains of NSDD. We denote (training domain→testing domain). The model trained on (HB) fails entirely when tested on (LED). Yet, (LED)-trained models are able to estimate depth when tested on the (HB) domain. Pattern# Images RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ HB Zero-shot19. 058 0. 430 0. 243 0. 587 27. 004 8. 134 0. 086 0. 186 0. 785LED 18. 023 0. 420 0. 232 0. 563 25. 500 7. 779 0. 096 0. 214 0. 867 HB 100 6. 499 0. 075 0. 033 0. 133 12. 894 0. 992 0. 9290. 977 0. 991LED 6. 198 0. 073 0. 032 0. 131 12. 182 0. 898 0. 933 0. 9770. 991 HB 500 5. 447 0. 0580. 0250. 112 10. 629 0. 688 0. 950 0. 9850. 995LED 5. 225 0. 057 0. 025 0. 108 10. 038 0. 648 0. 953 0. 986 0. 995 HB 1000 5. 124 0."
+    },
+    {
+      "id": "semantic_chunk::LED_p10_sc1",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.5824906229972839,
+      "text": "Future work should assess both safety concerns and the impact on performance. 7 Conclusion We introduce LED, a method for enhancing nighttime depth estimation by leveraging high- definition light patterns projected by modern vehicle headlights. Through extensive exper- iments, we demonstrate significant improvements in depth perception, both within and be- yond illuminated areas. Our method’s versatility is highlighted by its successful integration with two state-of-the-art architectures, Adabins and DepthFormer, as well as the foundation model Depth Anything V2. Moreover, LED shows promising real-world performance. We also release the Nighttime Synthetic Drive Dataset, comprising 49,995 fully annotated im- ages. We hope it will serve as a valuable resource for the research community, supporting exploration of various nighttime perception tasks. Acknowledgment We would like to thank Amandine Brunetto for her help and insights. We also thank Naimeric Villafruela from the Fablab of Mines Paris for his assistance in creating the real-world pro- totype. In addition, we extend our warm thanks to the Exwayz team for the excellent collab- oration on the real-world ground truth processing."
+    },
+    {
+      "id": "semantic_chunk::LED_p2_sc0",
+      "source": "data\\LED.pdf",
+      "page": 2,
+      "score": 0.5794322490692139,
+      "text": "2DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT Figure 1:Light Enhanced Depth (LED)is a novel method that harnesses high-definition headlights’ pattern projected onto the scene to enhance nighttime depth estimation from RGB images. We release a synthetic nighttime dataset with high beam and pattern-illuminated im- ages, along with comprehensive ground truth annotations, to advance research in nighttime perception. of perception, profoundly impacting overall scene perception and comprehension, especially at night [39]. While LiDAR sensors offer high accuracy, their widespread adoption is im- peded by their substantial cost. Additionally, in humid weather, LiDAR effectiveness can be significantly degraded due to beam reflection and increased noise levels [6, 7]. Cameras are powerful, cost-effective sensors that capture rich information about the en- vironment and are deployed in most modern vehicles. Camera-based perception solutions display high reliability and accuracy [1, 4, 5, 18, 19, 20, 27], but mostly on clear daylight conditions: they struggle under distribution shift and low-light conditions."
+    },
+    {
+      "id": "semantic_chunk::LED_p21_sc1",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.5783447027206421,
+      "text": "Ground truth annotation was made using LiDAR data, ag- gregated and densified following DOC-Depth method [13] and thanks to Exwayz software [14]. Due to the high resolution of the headlight we were able to collect data with smaller cell size than in simulation, giving more insight into pattern resolution impact. The performance of our model on this dataset demonstrate LED capabilities on complex real-world scenarios. We illustrate additional qualitative results in fig. S5. A video of DepthFormer (LED 0. 25°) qualitative results on our real-world dataset is available in the supplementary material. J Qualitative Results on Synthetic Dataset We illustrate in fig. S6 the improvements of depth estimation achieved by our method by comparing results with and without pattern. They are obtained by taking the encoder- decoder, trained on high beam (HB), and with our HD pattern (LED). Red boxes emphasize on enhanced regions. Some are zoomed in for improved visibility. LED results (right) ex- hibit higher precision, leading to more accurate object boundaries and shapes compared to HB (middle)."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p5_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.5782068967819214,
+      "text": "Specifically, we introduce illumi- nation guidance term𝐼𝐹𝑁𝑔 in the LLPEFT strategy, which is defined as follows: 𝐼𝐹𝑁 𝑔 =𝑚𝑒𝑎𝑛𝑐 \u0000𝐿𝐿𝐷𝐺(𝐼)\u0001, (7) The operation𝑚𝑒𝑎𝑛𝑐 computes the mean value of each pixel along the channel dimension. As shown in Fig. 1. 1, the low-light image𝐼𝐹𝑁 is synthesized from the daytime image𝐼 using LLDG, while𝐼𝐹𝑁𝑔 is generated from𝐼𝐹𝑁 using illumination guidance. This process effectively simplifies the illumination guidance procedure by converting the low-light image into a grayscale representation using a simple but efficient approach. This transformation helps to reduce noise, enhance the brightness distribution, and simplify the information structure. Although this approach results in the loss of color information, it does not significantly affect the final outcome, as the color information is already preserved in the low-light image 𝐼𝐹𝑁 . Ultimately, by introducing this illumination guidance, the model can focus on learning robust feature representations, thereby miti- gating noise amplification, color distortion, and artifacts caused by long exposure and high ISO settings. 3. 2. 2 Multiscale Feature Fusion."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p5_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.5780719518661499,
+      "text": "To effectively transform the input low-light image𝐼𝐹𝑁 and its illumination guidance image𝐼𝐹𝑁𝑔 from the image space to the feature space, we propose an augmented fea- ture fusion method that incorporates illumination guidance. Specif- ically, we first concatenate the low-light image and illumination guidance image along the channel dimension to form a new aug- mented low-light image, denoted as the low-light auxiliary image 𝐼𝐹𝑁 𝐴 . Subsequently, we design and employ a Multiscale Feature Fu- sion. This method captures multiscale contextual information and dynamically adjusts feature weights, ensuring that the extracted features comprehensively represent the multi-level information embedded in the low-light image and its illumination guidance. The detailed process is as follows: Firstly, let the low-light image𝐼𝐹𝑁 ∈ R𝐻×𝑊×𝐶1 and the illumi- nation guidance𝐼𝐹𝑁𝑔 ∈ R𝐻×𝑊×𝐶2. We concatenate them along the channel dimension to produce the low-light auxiliary image𝐼𝐹𝑁 𝐴 , as defined by: 𝐼𝐹𝑁 𝐴 =𝐶𝑜𝑛𝑐𝑎𝑡(𝐼𝐹𝑁,𝐼𝐹𝑁 𝑔 ), (8) where𝐼𝐹𝑁 𝐴 ∈ R𝐻×𝑊×(𝐶1+𝐶2)."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.5777065753936768,
+      "text": "Delieve-net: Deblurring low-light images with light streaks and local events. In Proceedings of the IEEE/CVF Interna- tional Conference on Computer Vision (ICCV) Workshops , 2021. 1 [50] Shangchen Zhou, Chongyi Li, and Chen Change Loy. Led- net: Joint low-light enhancement and deblurring in the dark. In Proceedings of European Conference on Computer Vision (ECCV), 2022. 1 10"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.5777065753936768,
+      "text": "Delieve-net: Deblurring low-light images with light streaks and local events. In Proceedings of the IEEE/CVF Interna- tional Conference on Computer Vision (ICCV) Workshops , 2021. 1 [50] Shangchen Zhou, Chongyi Li, and Chen Change Loy. Led- net: Joint low-light enhancement and deblurring in the dark. In Proceedings of European Conference on Computer Vision (ECCV), 2022. 1 10"
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc1",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.5733175277709961,
+      "text": "LED models outperform LB on all metrics, showing LED suitability on real-world scenarios. 5. 4 Few-shot Learning Foundation models show strong zero-shot performance across various cameras and content types. However, when tested on NSDD, Depth Anything V2 [49] performs poorly, with an RMSE of∼19 m (see table 5), highlighting the complexity of nighttime data and the need for specialized models. It performs slightly better on LED images, possibly due to its ability to leverage the pattern’s geometric cues. Fine-tuning with as little as 100 images is sufficient for adapting the network to our distribution and produce consistent depth predictions on both LED and HB. LED-models demonstrate significant improvements across all metrics (-15. 5% RMSE with 1,000 images). This underlines the effectiveness of our method in enhancing nighttime depth estimation even on foundation models. Results on our real-world dataset are provided in the supplementary material. 5. 5 Robustness Across Domains We assess model robustness when operating beyond the original training domain by testing a HB-trained model on pattern data andvice versa. We report results in table 4."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.5728837251663208,
+      "text": "Light Intensity Adaptation: Since daytime images typically ex- hibit sufficient illumination and high overall brightness, directly applying light source imaging𝐿𝑆 tends to fail in generating promi- nent brightness peaks. To address this issue, we apply a simple random darkening oper- ation to the input image, where the brightness scaling factor𝑠𝑏 is sampled from a uniform distribution. To enrich the diversity of light sources while avoiding excessively glaring effects, the peak bright- ness intensity𝐹 is defined as the product of the number of light sources𝑁𝐹 and the scaling factor 𝑠𝐹 , both𝑠𝐹 and𝐹 are sampled from a log-uniform distribution: 𝑠𝐹∼ exp \u0010 𝑈(log𝑠𝑚𝑖𝑛 𝐹 , log𝑠𝑚𝑎𝑥 𝐹 ) \u0011 , 𝐹∼ exp \u0010 𝑈(log𝐹𝑚𝑖𝑛, log𝐹𝑚𝑎𝑥) \u0011 . (2) where𝑠𝐹 is the scale factor and𝐹𝑚𝑖𝑛,𝐹𝑚𝑎𝑥 represents the intensity range. The total number of light sources𝑁𝐹 is computed as: 𝑁𝐹 = max \u0012\u0016 𝐹 𝑠𝐹 + 0. 5 \u0017 , 1 \u0013 . (3) Additionally, the brightness scale𝑠𝑏 is sampled as𝑠𝑏∼𝑈(0. 4, 1), and the gamma correction factor is sampled as 𝑔𝐹 ∼ 𝑈(1. 8, 2. 2)."
+    },
+    {
+      "id": "semantic_chunk::LED_p13_sc0",
+      "source": "data\\LED.pdf",
+      "page": 13,
+      "score": 0.5710122585296631,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT13 [33] NVIDIA. Nvidia drive sim.https://www.nvidia.com/en-us/ self-driving-cars/simulation/, 2024. Accessed: 2024-01-18. [34] Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, Alban Des- maison, Andreas Kopf, Edward Yang, Zachary DeVito, Martin Raison, Alykhan Te- jani, Sasank Chilamkurthy, Benoit Steiner, Lu Fang, Junjie Bai, and Soumith Chintala. Pytorch: An imperative style, high-performance deep learning library. InNeurIPS, 2019. [35] Matteo Poggi, Filippo Aleotti, Fabio Tosi, and Stefano Mattoccia. Towards real-time unsupervised monocular depth estimation on cpu. InIROS, 2018. [36] Gernot Riegler, Yiyi Liao, Simon Donne, Vladlen Koltun, and Andreas Geiger. Con- necting the Dots: Learning Representations for Active Monocular Depth Estimation. InCVPR, 2019. [37] Olaf Ronneberger, Philipp Fischer, and Thomas Brox. U-net: Convolutional networks for biomedical image segmentation. InMICCAI, 2015. [38] Chang Shu, Kun Yu, Zhixiang Duan, and Kuiyuan Yang. Feature-metric loss for self- supervised learning of depth and egomotion."
+    },
+    {
+      "id": "semantic_chunk::LED_p13_sc2",
+      "source": "data\\LED.pdf",
+      "page": 13,
+      "score": 0.5705678462982178,
+      "text": "Energy-Efficient Illumination by Matrix Headlamps for Nighttime Automated Object Detection. IJECER, 2022. [47] Kun Wang, Zhenyu Zhang, Zhiqiang Yan, Xiang Li, Baobei Xu, Jun Li, and Jian Yang. Regularizing nighttime weirdness: Efficient self-supervised monocular depth estima- tion in the dark. InCVPR, 2021."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc2",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.5700226426124573,
+      "text": "Results are presented in table 2. Examining depth estimation both outside the ROI and across the entire image, we observe a consistent performance improvement: -2. 66% RMSE outside the ROI and -3. 05% RMSE on the entire image. We also report enhancement in relative metrics: Abs Rel (resp. -3. 03% and -1. 50%) and Sq Rel (resp. -23. 27% and -9. 23%). These results suggest that the HD headlight pattern provides valuable information, such as object size and scale, leading to enhanced overall scene understanding and more accurate depth estimation. 5. 3 Annotation-efficient Learning Collecting annotated nighttime data is challenging and costly. We explore whether pattern extra guidance can reduce the need for training data (refer to fig. 6 (b)). Our results show that encoder-decoder model trained with less than 20% of the LED data outperforms one trained on the full HB dataset, reaching near-peak performance with just 50%. In addition, we observe that incorporating just 10% of LED data into the HB training set enable the network to learn relevant features and enhance its performances when used with pattern (see fig. 6 (c))."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.5691077709197998,
+      "text": "We further discuss the effect of F max, Kmax as well as the composition of ING in our main paper. Since the processing of Re-rendering requires the corre- sponding depth map as input, decay usage of BPG and ING is applied, and the starting step is set to 20,000. To maintain performance on daytime images, BPG and ING processing rates are set to 0. 5, and these two probabilities are indepen- dent of each other. D. 4 Augmentation on light source images For the sampled light source image, a random rotation U (0, 2π) and a random flip is applied. Then, a random weight follows U (1, 3) is used to scale the brightness. U (0. 8, 1. 2) is used for the scale of contrast and saturation. A Gaussian blur is also used with a sigma limit range of[0. 1, 3] to enhance the low-passing glow effect. D. 5 Pre-crop of nuScenes and Oxford RobotCar Pre-cropping is used in RNW [Wang et al. , 2021 ] and ADDS [Liu et al. , 2021 ] to balance the image aspect ratio and cut out the imaging of car hoods. We follow the same approach as proposed in these papers. For nuScenes, the im- ages are first center-cropped from 1600 ×900 to 1536 ×768 before testing or the training of DA or DT types methods."
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc4",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.568517804145813,
+      "text": "2 [44] Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang, and Dongbin Zhao. Steps: Joint self- supervised nighttime image enhancement and depth estima- tion. In 2023 IEEE International Conference on Robotics and Automation (ICRA), pages 4916–4923, 2023. 1, 2 [45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork- gan: Seeing into the rainy night. In The IEEE European Conference on Computer Vision (ECCV), 2020. 2, 4 [46] Hanyu Zhou, Yi Chang, Wending Yan, and Luxin Yan. Un- supervised cumulative domain adaptation for foggy scene optical flow. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9569– 9578, 2023. 4, 5 [47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING, Yuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the common appearance-boundary adaptation for nighttime op- tical flow. InThe Twelfth International Conference on Learn- ing Representations, 2024. 2 [48] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video."
+    },
+    {
+      "id": "semantic_chunk::LED_p7_sc2",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.5681341886520386,
+      "text": "Compared to the SOTA approaches [4, 27], LED-trained encoder-decoder either outper- forms or matches the performance of their HB models. Given that the encoder-decoder is less tailored for depth estimation than more intricate SOTA designs, this result underscores the substantial improvements yield by LED, demonstrating that using the HD informative pat- tern even with a straightforward architecture is promising for challenging nighttime scenes. With LED, Adabins demonstrates a substantial improvement compared to the HB model: -24. 06% RMSE and -6. 70% Abs Rel. Conversely, DepthFormer showcases -8. 00% in RMSE but +5. 28% in Abs Rel. Note that the most significant enhancement is observed in Adabins, which have the worst results by night on HB. Improvements seen across diverse architectures confirm LED agnosticity to architectures. It implies potential effectiveness with future methods. Performance Over Distance. Limited nighttime visibility makes depth estimation of dis- tant objects challenging. In fig. 6 (a), we show the performance of the encoder-decoder over distances."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.5679242610931396,
+      "text": "Using the Phong illumination model [28, 40], the final flare image at the current stage,𝐼𝐹 , is calculated by the following equation: 𝐼𝐹 =(𝑠𝑏·𝐼)𝑔𝐹+ 𝑁𝐹∑︁ 𝑖=1 (𝑠𝑠(𝐿𝑆,𝑠𝐹,𝑃𝑖))𝑔𝐹 , (4) where𝐼 is the daytime image and𝑠𝑠(.) represents scaling and shifting the sampled𝐿𝑆 by the scale rate𝑠𝐹 and the 2D coordinate 𝑃𝑖. Ultimately, FSM generates more realistic nighttime flare images by incorporating existing synthetic flare images, applying random darkening operations, and adopting an adaptive light source inten- sity strategy. This approach effectively mitigates the photometric inconsistency issues in nighttime images and significantly enhances the diversity and quality of the training dataset. 𝐼 𝐼𝐹 𝐼𝐹𝑁 Figure 3. 1: Paired visual examples for different scenes, 𝐼 rep- resents the image under normal lighting conditions, 𝐼𝐹 rep- resents the visualization result of adding FSM to the normal lighting image, and 𝐼𝐹𝑁 represents the visualization result of adding both FSM and NSM to the normal lighting image. 3. 1. 2 Noise Simulation Module. In the previous section, we derived the calculation process of 𝐼𝐹 ."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.5673038363456726,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Method ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑ Test on nuScenes-Night Depth Anything V2 0. 272 2. 5518. 576 0. 304 0. 518 0. 843 0. 971 + Only LLDG 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914 + Only LLPEFT 0. 255 3. 050 7. 686 0. 302 0. 619 0. 836 0. 934 DepthDark 0. 210 1. 910 7. 764 0. 260 0. 630 0. 914 0. 976 Test on RobotCar-Night Depth Anything V2 0. 235 2. 474 6. 239 0. 268 0. 697 0. 868 0. 946 + Only LLDG 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972 + Only LLPEFT 0. 177 1. 584 6. 727 0. 245 0. 700 0. 895 0. 973 DepthDark 0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 2: Efficacy of Proposed Modules: Ablation studies on nuScenes-Night and RobotCar-Night demonstrate that each module enhances DepthDark’s performance, with combined use significantly improving robustness."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p5_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.5671136379241943,
+      "text": "How- ever, raw images or the exact inverse ISP are not available in most daytime datasets. The simplest ISP includes white bal- ance, binning, denoising, color collection and gamma com- pression [Chen et al., 2018; Brooks et al., 2019]. Fortunately, except for denoising and gamma compression, rest operations can be viewed as approximately linear processes. We con- sider the gamma compression in ING as it’s strongly nonlin- ear. Following ELD, we set gn = 1/2. 2. To simulate the low photon count C in the dark, a light scale factor sn is proposed follows U (100, 300) [Wei et al., 2020]. Then, the simulated raw image will be RLR t = sbit(I LR t )1/gn sn , (13) where sbit denotes quantization factor equals to 2bit − 1. ING Intensity K According to Eq. 9, Eq. 11 and Eq. 12, system gain K has a positive relationship with the noise intensity. Therefore, we appoint K as ING Intensity. Similar in BPG, we make ING Intensity following the log uniform: log K ∼ U(log K min, log K max). (14) Finally, with the simulated raw image RLR t , the sampled shot noise Np and read noise Nread, the output of ING will be I LRN t = \u0012 snRLR t + KN p + Nread sbit \u0013gn . (15) Fig. 3."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::LED_p15_sc1",
+      "source": "data\\LED.pdf",
+      "page": 15,
+      "score": 0.6664229035377502,
+      "text": "Regarding regulation, HD headlight technology is novel and the European regulation has authorized just recently the projection of specific HD pattern onto the road. Thus, laws are moving in this direction and evolving with the technology. B Encoder-Decoder Details B. 1 Encoder-Decoder Architecture LED uses a single pattern implicitly learned by the model, making it architecture-agnostic. This characteristic is demonstrated in the main paper (see section section 5. 1) by applying LED to multiple state-of-the-art architectures [4, 27, 49]. To prove our concept and conduct experiments, we opt for an encoder-decoder architecture with skip connections [37]. The © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms.",
+      "estimated_tokens": 158
+    },
+    {
+      "id": "semantic_chunk::LED_p7_sc3",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6449639797210693,
+      "text": "LED maintains performance for close object and exhibits greater enhancement at longer ranges, thus addressing depth estimation of distant objects at night.",
+      "estimated_tokens": 24
+    },
+    {
+      "id": "semantic_chunk::LED_p19_sc1",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.6445221900939941,
+      "text": "F Examples of Other Patterns To find a suitable pattern for our application, we generate half-sized datasets featuring com- monly used structured light patterns: checkerboard, horizontal, and vertical lines (see fig. S4). Comprehensive metrics from this experiment are available in table S4, the checkerboard pat- tern demonstrates significantly superior performances. G LED Impact On Other Tasks We introduce the LED lighting pattern for improving performance on geometric tasks. We study its impact on the performance of other tasks that might be running in the same time on the vehicle, taking the example of semantic segmentation. To this end, we train Mask2Former",
+      "estimated_tokens": 124
+    },
+    {
+      "id": "semantic_chunk::LED_p6_sc2",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6165108680725098,
+      "text": "5 Experiments We evaluate our method through extensive experiments on the Nighttime Synthetic Drive Dataset. We validate the contribution of our light pattern in boosting performance, both in- side and outside illuminated area. We apply our method to the encoder-decoder and other SOTA approaches: Adabins [4], DepthFormer [27] and Depth Anything V2 [49], showing its agnosticity. Finally, we evaluate LED robustness beyond its training domain and its capa- bilities on real-world scenarios. Metrics used align with prior works [4, 27, 28, 40, 47, 51].",
+      "estimated_tokens": 126
+    },
+    {
+      "id": "semantic_chunk::LED_p20_sc1",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.6014766097068787,
+      "text": "LED-trained models are more accurate and object edges are better defined.",
+      "estimated_tokens": 13
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc3",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.5855172872543335,
+      "text": "Therefore, any vehicle equipped with HD headlights can apply LED by adding only a few pattern images in their training set, thereby reducing the cost of specialized data.",
+      "estimated_tokens": 31
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 476,
+    "compressed_context_tokens": 476,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 476,
+  "context_tokens": 476,
+  "prompt_token_estimate": 870,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_led_implemented_architectures",
+  "answer": "<think>The question asks which depth estimation architectures were validated in the LED method's experiments.\n\nFrom source [4]: \"We apply our method to the encoder-decoder and other SOTA approaches: Adabins [4], DepthFormer [27] and Depth Anything V2 [49]\"\n\nFrom source [1]: \"LED is architecture-agnostic... by applying LED to multiple state-of-the-art architectures [4, 27, 49]\"\n\nSo the architectures validated are:\n1. Encoder-decoder (with skip connections)\n2. Adabins\n3. DepthFormer\n4. Depth Anything V2</think>\n\n{\n  \"answer\": \"LED 方法在实验中验证了四种深度估计架构：encoder-decoder（带跳跃连接）、Adabins、DepthFormer 和 Depth Anything V2。\",\n  \"items\": [\n    {\"name\": \"Encoder-decoder（带跳跃连接）\", \"description\": \"作者选用该架构进行概念验证和实验\", \"citations\": [1, 4]},\n    {\"name\": \"Adabins\", \"description\": \"作为 SOTA 方法之一被验证 LED 的架构无关性\", \"citations\": [4]},\n    {\"name\": \"DepthFormer\", \"description\": \"作为 SOTA 方法之一被验证 LED 的架构无关性\", \"citations\": [4]},\n    {\"name\": \"Depth Anything V2\", \"description\": \"作为 SOTA 方法之一被验证 LED 的架构无关性\", \"citations\": [4]}\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 927,
+    "completion_tokens": 314,
+    "total_tokens": 1241,
+    "model": "MiniMax-M3"
+  }
+}

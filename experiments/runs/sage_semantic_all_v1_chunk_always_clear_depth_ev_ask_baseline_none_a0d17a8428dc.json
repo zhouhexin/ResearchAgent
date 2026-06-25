@@ -1,0 +1,430 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_always_clear_depth_ev_ask_baseline_none_a0d17a8428dc",
+  "dry_run": false,
+  "query": "Always Clear Depth 在哪些数据集上进行了实验评估？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Jasmine_p19_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 19,
+      "score": 0.6807361245155334,
+      "text": "tain the depthD tc through:\n1\nDtc\n=clip\n\u0012 1\nDmax\n+\n\u0012 1\nDmin\n− 1\nDmax\n\u0013\n·dp,0,3\n\u0013\n,\nwhere Dmin and Dmax are set to 0.1 and 100, respectivley. We find that the depth range at range\n[0,3] can already describe all information within the maximum depth.\n19"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_30",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.6752923727035522,
+      "text": "y dense and complete, meaning that every\npixel has a valid ground truth depth value, allowing us to\nfeed such data into the V AE, which can not handle data\nwith invalid pixels. Second, synthetic depth is the cleanest\n4"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_30",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.6752923727035522,
+      "text": "y dense and complete, meaning that every\npixel has a valid ground truth depth value, allowing us to\nfeed such data into the V AE, which can not handle data\nwith invalid pixels. Second, synthetic depth is the cleanest\n4"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6638112664222717,
+      "text": "cf\nDepth Anything \nV2\n௖\nௗ\n௥\nOne batch\nStable Diffusion \nTurbo v2.1\nDecoder\nEncoder Decoder\nTD\nSD\nVD\nie\nim\nSD\n0p\n1p\n\u001f\n0p 1p\u001f\nVD\n\u000b\f\n\u000b\f\n01\n2log 1 0\n00\npp\neL\n\u0010\u0010­ \u000ez° ®\n °¯\n\u000b\n \f\n\u000b\n \f\n1\npp\n0\n\u000b\n\u000b\n \f\n01\n0\n01\n01\n11\n11 1\n0\npp\npp\notherwise\nW\nW\n\n\n\n\n­\u000et \u000e\n°° \u0010 \u001f® \u000e°\n°¯"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.660698652267456,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.660698652267456,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_26",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6564668416976929,
+      "text": "hown in Fig. 1(b), all objects in the depth map have \nnearly identical contours with their semantic segments, and the depth \nvalues within the some semantic segments also exhibit a high degree of\nhttps://doi.org/10.1016/j.patcog.2025.112279\nReceived 29 Dec"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6559369564056396,
+      "text": "ents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith signiﬁcant discrepancies between D\nT and DS for re-\nﬁnement:\n¯D = |DT −DS|, (8)\nwhere ¯D reﬂects the difference between the output of the\nteacher model and the student model. We"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.6555858850479126,
+      "text": "pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything v2.arXiv preprint arXiv:2406.09414, 2024. 3\n[61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tian"
+    },
+    {
+      "id": "chunk::Jasmine_p4_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.6544495820999146,
+      "text": "it by removing the\npredicted noise:\nˆϵ=f ϵ\nθ (zy\nτ−1 |zy\nτ ,z I),(3)\nand finally decodes the depth prediction with D=D(z y\n0). Here ϵ∼ N(0, I), fϵ\nθ is the ϵ-prediction\nU-Net, αt := Qt\ns=1(1−β s), D is the V AE decoder and{β1, β2, . . . , βT } is the noise"
+    },
+    {
+      "id": "chunk::Jasmine_p4_chunk_4",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.6538418531417847,
+      "text": "odels. Fortunately, Lotus and E2E FT[33, 21]\ndemonstrate that we can obtain comparable results with single-step denoising and directly predict\ndepth, D=D\n\u0000\nf z\nθ\n\u0000\nzy\nτ ,z I\u0001\u0001\n, τ=T , which makes it possible to train SD with self-supervision. The\nstep-by-s"
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_1",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.6519424915313721,
+      "text": "† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1. Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [35]. Middle two:\nSA-1B [26] (a hold-out unseen set). Right two: p"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_21",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.6499469876289368,
+      "text": "make ﬁve\nframes for evaluation.\nDepth Decoder\nlayer k s chns res input activation\nupconv5 3 1 256 32 econv5 ELU [7]\niconv5 3 1 256 16 ↑upconv5, econv4ELU\nupconv4 3 1 128 16 iconv5 ELU\niconv4 3 1 128 8 ↑upconv4, econv3ELU\ndisp4 3 1 1 1 iconv4 Sigmoid\nupcon"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_21",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6499469876289368,
+      "text": "make ﬁve\nframes for evaluation.\nDepth Decoder\nlayer k s chns res input activation\nupconv5 3 1 256 32 econv5 ELU [7]\niconv5 3 1 256 16 ↑upconv5, econv4ELU\nupconv4 3 1 128 16 iconv5 ELU\niconv4 3 1 128 8 ↑upconv4, econv3ELU\ndisp4 3 1 1 1 iconv4 Sigmoid\nupcon"
+    },
+    {
+      "id": "chunk::ACD_p3_chunk_14",
+      "source": "data\\ACD.pdf",
+      "page": 3,
+      "score": 0.6492647528648376,
+      "text": "s also used to constrain the continuity\nof the depth:\nL\ne (D)= |∂xD′|e∂xI +|∂yD′|e∂yI, (4)\nwhereD′refers to the normalized inverse depth of D. ∂x and\n∂y represent the horizontal and vertical gradients. Similar\nto [Gasperini et al., 2023 ], the above theore"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_11",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.647809624671936,
+      "text": "s to encourage temporal depth consistency.\n[62] use a depth normalization layer to overcome the pref-\nerence for smaller depth values that arises from the com-\nmonly used depth smoothness term from [15]. [5] make use\nof pre-computed instance segmentation m"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_11",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.647809624671936,
+      "text": "s to encourage temporal depth consistency.\n[62] use a depth normalization layer to overcome the pref-\nerence for smaller depth values that arises from the com-\nmonly used depth smoothness term from [15]. [5] make use\nof pre-computed instance segmentation m"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_chunk_19",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.646963357925415,
+      "text": "ts [63]. We note that we achieve our best\nresults when using Depth Hints and high-resolution input\nimages. This is not surprising, as supervision from SGM\nshould give better scores, but more importantly using high\nresolution inputs and outputs allows for m"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_22",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.6444578170776367,
+      "text": "tion. For the ground\ntruth depth maps d, we implement a linear normalization\nsuch that the depth primarily falls in the value range [−1, 1],\nto match the designed input value range of the V AE. Such\nnormalization serves two purposes. First, it is the conve"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_22",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.6444578170776367,
+      "text": "tion. For the ground\ntruth depth maps d, we implement a linear normalization\nsuch that the depth primarily falls in the value range [−1, 1],\nto match the designed input value range of the V AE. Such\nnormalization serves two purposes. First, it is the conve"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_22",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.6430075764656067,
+      "text": "methods\ntypically address this ambiguity by enforcing smoothness\nin the depth maps, and by computing photo-consistency on\npatches when solving for per-pixel depth via global opti-\nmization e.g. [11].\nSimilar to [12, 15, 76], we also formulate our problem"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_22",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.6430075764656067,
+      "text": "methods\ntypically address this ambiguity by enforcing smoothness\nin the depth maps, and by computing photo-consistency on\npatches when solving for per-pixel depth via global opti-\nmization e.g. [11].\nSimilar to [12, 15, 76], we also formulate our problem"
+    },
+    {
+      "id": "chunk::LED_p2_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 2,
+      "score": 0.6414147615432739,
+      "text": "ds [5, 19, 20, 35, 38, 47, 50, 51, 52]\nsince obtaining ground truth depth information is expensive. While dedicated approaches for\nspecific conditions have emerged in recent years [28, 40, 42, 47, 51], they still only partially\nmitigate these issues. To th"
+    },
+    {
+      "id": "chunk::Depth_Anything_p7_chunk_24",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 7,
+      "score": 0.639741063117981,
+      "text": "S trained encoder in downstream\ntasks. Our Depth Anything model has exhibited stronger\nzero-shot capability than MiDaS [5, 45]. Here, we further\n10377"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_19",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6397003531455994,
+      "text": "challenging optimization target when learning\nunlabeled images, and 2) preserving rich semantic priors\nfrom pre-trained models. As a result, our Depth Anything\nmodel exhibits excellent zero-shot depth estimation ability,\nand also serves as a promising ini"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p30_chunk_2",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 30,
+      "score": 0.639147937297821,
+      "text": "rent datasets. Predictions are aligned to\nground truth. For every sample, the color coding is consistent across all depth maps.\n30"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p30_chunk_2",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 30,
+      "score": 0.639147937297821,
+      "text": "rent datasets. Predictions are aligned to\nground truth. For every sample, the color coding is consistent across all depth maps.\n30"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p3_chunk_23",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.6382033824920654,
+      "text": "finement of random depth distri-\nbution Dτ into a depth estimate,\npθ (Dτ −1 |Dτ , c ) := N\n\u0000\nDτ −1; µθ (Dτ , τ,c) , σ2\nτ I\n\u0001\n, (8)\nwhere c stands for the conditions. To speed up the inference\nprocess, we employ an improved inference process from [41],\nwher"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p11_chunk_0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 11,
+      "score": 0.6378154158592224,
+      "text": "[74] Zhenyu Zhang, Chunyan Xu, Jian Yang, Ying Tai, and Liang\nChen. Deep hierarchical guidance and regularization learn-\ning for end-to-end depth estimation. Pattern Recognition,\n2018.\n[75] Hang Zhao, Orazio Gallo, Iuri Frosio, and Jan Kautz. Loss\nfunction"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p11_chunk_0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.6378154158592224,
+      "text": "[74] Zhenyu Zhang, Chunyan Xu, Jian Yang, Ying Tai, and Liang\nChen. Deep hierarchical guidance and regularization learn-\ning for end-to-end depth estimation. Pattern Recognition,\n2018.\n[75] Hang Zhao, Orazio Gallo, Iuri Frosio, and Jan Kautz. Loss\nfunction"
+    },
+    {
+      "id": "chunk::dav2_p4_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 4,
+      "score": 0.636535108089447,
+      "text": "ndaries or within thin holes, resulting in over-smoothed depth predictions,\nas seen in the middle of Figure 4c. Hence, these noisy labels are so unreliable that the learned models\nmake similar mistakes (Figure 3d). For example, MiDaS and Depth Anything V1"
+    },
+    {
+      "id": "chunk::dav2_p21_chunk_5",
+      "source": "data\\dav2.pdf",
+      "page": 21,
+      "score": 0.6364927887916565,
+      "text": "Qualitative comparison between Depth Anything V1 and V2\nPlease refer to Figure 13. Our Depth Anything V2 produces much more fine-grained depth predictions\nthan V1 [89]. Ours are also highly robust to transparent objects.\n21"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_16",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6363771557807922,
+      "text": "ur Depth Anything, aiming to provide better\ncontrol signals for image synthesis and video editing. Please\nrefer to our project page for more qualitative results on video\nediting [34] with our Depth Anything.\n5. Conclusion\nIn this work, we present Depth Any"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_chunk_13",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.6358686089515686,
+      "text": "s based on training the model by providing\nalways valid training signals as if it was sunny or cloudy,\neven when samples with adverse conditions are given. We\napply this general principle to both supervised and self-\nsupervised depth estimation via a set o"
+    },
+    {
+      "id": "chunk::SSRDepth_p8_chunk_10",
+      "source": "data\\SSRDepth.pdf",
+      "page": 8,
+      "score": 0.6357783675193787,
+      "text": "depth prediction. Our method achieves the best predictive perfor-\nmance, ranking ﬁrst in all seven metrics. Compared to the second-ranked \nBinsFormer, we reduce the RMSE by 4.8 % and increase the 𝛿1 by 1.0 %, \nrespectively. Additionally, by employing Swin"
+    },
+    {
+      "id": "chunk::Jasmine_p22_chunk_4",
+      "source": "data\\Jasmine.pdf",
+      "page": 22,
+      "score": 0.6356570720672607,
+      "text": "hese points\nIt′→t, we obtain the depth supervision (Eq. 2). However, if the corresponding point in It is occluded\nin It′, the optimization process is forced to select the \"least bad\" alternative, resulting in an incorrect\nmatch and, consequently, erroneous"
+    },
+    {
+      "id": "chunk::Jasmine_p22_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 22,
+      "score": 0.6342865824699402,
+      "text": "(10m).\nThis error causes the expected depth edge on the right side of point p to disappear (right side’s depth\nare all 10m, reason same to p), resulting in a blurred boundary in the depth map. When such depth\nmap is used as a supervisory signal to guide th"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_14",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.634279727935791,
+      "text": "the authors. We use the\nsame error metrics from the standard evaluation, and clip\nthe predicted depths to 80 meters to match the Eigen evalu-\nation. We evaluate on the full image and do not crop, unlike\nwith the Eigen evaluation. We can see that our method"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_14",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.634279727935791,
+      "text": "the authors. We use the\nsame error metrics from the standard evaluation, and clip\nthe predicted depths to 80 meters to match the Eigen evalu-\nation. We evaluate on the full image and do not crop, unlike\nwith the Eigen evaluation. We can see that our method"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_10",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6340197324752808,
+      "text": "deal settings E, regardless of the difficulty of the input. As\nshown in Figure 3, we achieve this via knowledge distilla-\ntion from a depth network B (baseline) trained at an earlier\nstage on E to a new depth model DD for both easy and ad-\nverse scenarios"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.6336064338684082,
+      "text": "It\nIt-1\n It+1\nGood matchOccluded pixel\npe(        ,       ) =               \npe(        ,       ) =               \n ✓\nBaseline:  avg(        ,       ) =               \nOurs:       min(        ,       ) =               \n❌\nerror\nerror\nDepth decoder\nBaseline"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.6336064338684082,
+      "text": "It\nIt-1\n It+1\nGood matchOccluded pixel\npe(        ,       ) =               \npe(        ,       ) =               \n ✓\nBaseline:  avg(        ,       ) =               \nOurs:       min(        ,       ) =               \n❌\nerror\nerror\nDepth decoder\nBaseline"
+    },
+    {
+      "id": "chunk::SSRDepth_p6_chunk_27",
+      "source": "data\\SSRDepth.pdf",
+      "page": 6,
+      "score": 0.6323611736297607,
+      "text": "so visualize some of the prediction results \nand compare them with AdaBins and NewCRFs. It can be observed that \nour predicted depth maps are more accurate with clearer contours. For \ninstance, in the second and ﬁfth rows, our method distinctly separates"
+    },
+    {
+      "id": "chunk::dav2_p6_chunk_12",
+      "source": "data\\dav2.pdf",
+      "page": 6,
+      "score": 0.6323108673095703,
+      "text": "ording to all the above analysis, our final pipeline to train Depth Anything V2 is clear (Figure 7).\nIt consists of three steps:\n• train a reliable teacher model based on DINOv2-G purely on high-quality synthetic images.\n• produce precise pseudo depth on l"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.6321836113929749,
+      "text": "min(        ,       ) =               \n❌\nerror\nerror\nDepth decoder\nBaseline Ours\n \nLooking up pixels using the correct depth\nDe\npth \nenc\nod\ner\nDe\npth \ndec\nod\ner\nc\no\nl\no\nr\nd\ne\np\nt\nh\n \n  \n⊗\nSSIM\n \n⊗\nSSIM\nUpsample\nBaseline Ours\nDepth \ndecoder\n \nBaseline O"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.6321836113929749,
+      "text": "min(        ,       ) =               \n❌\nerror\nerror\nDepth decoder\nBaseline Ours\n \nLooking up pixels using the correct depth\nDe\npth \nenc\nod\ner\nDe\npth \ndec\nod\ner\nc\no\nl\no\nr\nd\ne\np\nt\nh\n \n  \n⊗\nSSIM\n \n⊗\nSSIM\nUpsample\nBaseline Ours\nDepth \ndecoder\n \nBaseline O"
+    },
+    {
+      "id": "chunk::ACD_p1_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.6311577558517456,
+      "text": "Always Clear Depth: Robust Monocular Depth Estimation Under Adverse\nWeather\nKui Jiang1 , Jing Cao1 , Zhaocheng Yu1 , Junjun Jiang1∗ and Jingchun Zhou2\n1Harbin Institute of Technology\n2Dalian Maritime University\njiangkui@hit.edu.com, {caojing,yuzhaocheng}@s"
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_20",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.6305417418479919,
+      "text": "del’s perfor-\nmance. Therefore, we train our method on both the raw depth annota-\ntions(rawDepths) and the completed reﬁned depth annotations(Depths) \nfrom NYU1449. The experimental results are shown in Table 8. Our \nPattern Recognition 171 (2026) 112279"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_chunk_15",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.630518913269043,
+      "text": "nd hard conditions. The main contribu-\ntions of this paper can be summarized as follows:\n• We show how estimating depth in adverse conditions\n(e.g., night and rain) is problematic for both self- and\nfully-supervised approaches, requiring new solutions.\n• W"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_10",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6304716467857361,
+      "text": "curate depth\nprediction while maintaining acceptable inference speed. D\nT\nand DS represent the inverse depth of the teacher model and\nstudent model, respectively, and Dv represents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith si"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Jasmine_p19_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 19,
+      "score": 0.6807361245155334,
+      "text": "tain the depthD tc through:\n1\nDtc\n=clip\n\u0012 1\nDmax\n+\n\u0012 1\nDmin\n− 1\nDmax\n\u0013\n·dp,0,3\n\u0013\n,\nwhere Dmin and Dmax are set to 0.1 and 100, respectivley. We find that the depth range at range\n[0,3] can already describe all information within the maximum depth.\n19",
+      "estimated_tokens": 95
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_30",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.6752923727035522,
+      "text": "y dense and complete, meaning that every\npixel has a valid ground truth depth value, allowing us to\nfeed such data into the V AE, which can not handle data\nwith invalid pixels. Second, synthetic depth is the cleanest\n4",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_30",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.6752923727035522,
+      "text": "y dense and complete, meaning that every\npixel has a valid ground truth depth value, allowing us to\nfeed such data into the V AE, which can not handle data\nwith invalid pixels. Second, synthetic depth is the cleanest\n4",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6638112664222717,
+      "text": "cf\nDepth Anything \nV2\n௖\nௗ\n௥\nOne batch\nStable Diffusion \nTurbo v2.1\nDecoder\nEncoder Decoder\nTD\nSD\nVD\nie\nim\nSD\n0p\n1p\n\u001f\n0p 1p\u001f\nVD\n\u000b\f\n\u000b\f\n01\n2log 1 0\n00\npp\neL\n\u0010\u0010­ \u000ez° ®\n °¯\n\u000b\n \f\n\u000b\n \f\n1\npp\n0\n\u000b\n\u000b\n \f\n01\n0\n01\n01\n11\n11 1\n0\npp\npp\notherwise\nW\nW\n\n\n\n\n­\u000et \u000e\n°° \u0010 \u001f® \u000e°\n°¯",
+      "estimated_tokens": 163
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.660698652267456,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa",
+      "estimated_tokens": 69
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.660698652267456,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa",
+      "estimated_tokens": 69
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 496,
+    "compressed_context_tokens": 496,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 496,
+  "context_tokens": 496,
+  "prompt_token_estimate": 938,
+  "run_label": "sage_semantic_all_v1_chunk_always_clear_depth_eval_datasets",
+  "answer": "<think>The user is asking about which datasets \"Always Clear Depth\" (ACD) was evaluated on. Let me look at the provided materials.\n\nLooking at the sources:\n- [1] is from Jasmine.pdf, discusses depth normalization\n- [2] and [3] are about Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation\n- [4] is from ACD.pdf, shows the architecture diagram but no dataset names\n- [5] and [6] are from Monocular Depth Estimation.pdf, mention intrinsics K and bilinear sampling\n\nNone of the provided materials explicitly mention which datasets ACD (Always Clear Depth) was evaluated on. The ACD.pdf only shows an architecture diagram but doesn't list datasets in the provided excerpt.\n\nI should indicate that the information is missing.</think>\n\n{\n  \"answer\": \"给定资料中未包含 Always Clear Depth（ACD）所使用数据集的相关信息。\",\n  \"items\": [],\n  \"missing_information\": \"缺少关于 ACD 实验评估所用数据集（如 NYU Depth V2、KITTI、ETH3D 等）的描述；现有资料仅包含 ACD 的架构示意图，未列出具体数据集名称。\"\n}",
+  "usage": {
+    "prompt_tokens": 1001,
+    "completion_tokens": 237,
+    "total_tokens": 1238,
+    "model": "MiniMax-M3"
+  }
+}

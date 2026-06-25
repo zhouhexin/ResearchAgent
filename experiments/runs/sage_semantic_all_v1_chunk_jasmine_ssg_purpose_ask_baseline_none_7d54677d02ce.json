@@ -1,0 +1,470 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_jasmine_ssg_purpose_ask_baseline_none_7d54677d02ce",
+  "dry_run": false,
+  "query": "Scale-Shift GRU (SSG)模块在Jasmine中解决了什么问题？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Jasmine_p6_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.7901902198791504,
+      "text": "s\nprofound scene understanding, and the scale (sc) and shift (sh) factors are tightly coupled. Therefore,\nas shown in Fig. 4(a), compared to traditional GRU, SSG introduces a core component Scale-Shift\nTransformer (SST), and modifies the iterative predicti"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.7681648135185242,
+      "text": "𝐷!K\nScale Shift Transformer\nV\nKV\nSep-Conv GRU\n\t𝜎: Sigmoid Conv⊕:\tPixel addition⊗: Concatenation⊙: Pixel multiplyDiffusion\tℰ\n𝐡\" 𝐡\"#$𝐷\"#$⊕𝑠%+𝑠&×Q\nMLP\n𝒙\"\n(b)(a)\nTransformerMLP𝑠&\n𝑠%\n𝐳𝑰\n 𝐷\"\niteration𝑘\nFigure 4:(a): Model Structure of SSG. It corresponds to the"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_8",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7425123453140259,
+      "text": "scale-invariant depth estimation, we build the Scale-Shift GRU.\nIt not only bridges this distribution gap but also isolates the fine-grained texture\nof SD output against the interference of reprojection loss. Extensive experiments\ndemonstrate that Jasmine"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_5",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7312783002853394,
+      "text": "ior 0.516 6.019 12.06 0.258 0.501\n(2) w/o MIR+SSG 0.175 2.264 7.969 0.790 0.929\n(3) w/o SSG 0.129 0.938 4.470 0.872 0.956\n(4) w/o MIR 0.132 0.673 4.271 0.852 0.967\n(b) Scale-Shift GRU\n(5) w/o SSG 0.129 0.938 4.470 0.872 0.956\n(6) w/o SST 0.098 0.715 4.350"
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_16",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.7260280847549438,
+      "text": "erent distribution gap, we propose a gated recurrent unit (GRU)-based\nnovel transform module termedScale-Shift GRU(SSG). It not only iteratively aligns SSI depth\nto SI depth by refining scale-shift parameters but also acts as a gradient filter, which suppr"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7196073532104492,
+      "text": "0.591 3.971 0.918 0.972\nIn sub-table(b), we further melted down\nour proposed SSG. ID (6) reveals that the\nnaive GRU can initially solve the distribu-\ntion misalignment by estimating the Dδ\n(Eq. 4). However, the scale difference be-\ntween SSI and SI depth"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_13",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.7109672427177429,
+      "text": "depth distribution, while D1\nand D2 progressively converge towards the SI depth. This clearly demonstrates that SSG iteratively\naligns SSI depth to SI depth by refining the scale-shift parameters. GRU is preferred over other\narchitectures due to its reset"
+    },
+    {
+      "id": "chunk::Jasmine_p3_chunk_16",
+      "source": "data\\Jasmine.pdf",
+      "page": 3,
+      "score": 0.7107216119766235,
+      "text": "uction (MIR, Sec. 3.2), the scale-shift\nadaptation with GRU (Sec. 3.3) and the SD finetune protocol specified for self-supervision (SSG,\nSec. 3.4). An overview of the whole framework is shown in Fig. 2 and its training pseudocode is\nshown in Algorithm 1.\n3"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.7056145668029785,
+      "text": "some auxiliary adjustment\nlosses (e.g.,gds loss[ 34] LGDS, edge loss Le, etc.) with a tiny weight. They will be detailed in\nsupplementary material Sec. C.\n4 Experiment\n4.1 Implement Details\nWe implement the proposed Jasmine using Accelerate[16] and PyTorc"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6999977827072144,
+      "text": "ift GRU\n(5) w/o SSG 0.129 0.938 4.470 0.872 0.956\n(6) w/o SST 0.098 0.715 4.350 0.909 0.969\n(c) Mix-batch Image Reconstruction\n(7) w/o MIR 0.132 0.673 4.271 0.852 0.967\n(8) Direct 0.129 0.679 4.385 0.858 0.962\n(9) Only Hy 0.106 0.614 4.181 0.901 0.970\n(10)"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_22",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6973413825035095,
+      "text": "in in-domain scenarios (Table 1), Jasmine outperforms Jasmine* because the\nshift-free estimation learned by Jasmine is disrupted by LSQ alignment, introducing a suboptimal\nshift and degrading performance. In out-of-domain scenarios (Table 2), Jasmine* perf"
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6969528794288635,
+      "text": "0.6 0.121 0.649 4.322 0.8760.970\nLatent+1 0.129 0.679 4.385 0.858 0.962\nIn Fig. 8, we further compare the perfor-\nmance of our Jasmine with other methods\nin multi scenes. The quantitative results\nobviously demonstrate that our method\ncan produce much finer"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_21",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6960088610649109,
+      "text": "rder metrics also degrade due to these shifts. This explains why\nJasmine* achieves better RMSE and SqRel but worsea 1 and AbsRel compared to Jasmine.\nFor the last observation, in in-domain scenarios (Table 1), Jasmine outperforms Jasmine* because the\nshift"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6930687427520752,
+      "text": "ine of SSG is comprehensively described in Sec. 3.3 (DepthHead\nis omit in (a) for clear).(b): Depth distribution alignment visualization. We statistically analyze each stage of\nJasmine’s SSG module on the KITTI test set. The standard SI and SSI depths are"
+    },
+    {
+      "id": "chunk::Jasmine_p5_chunk_12",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.6914964914321899,
+      "text": "timation\nsharpness.\n3.3 Scale-Shift GRU\nThe misalignment of SSI-SI depth.We first analyze the training procedure of SSMDE. Denoting\nthe relative camera posesT t→t′ as[R|T], we can further expand theprojprocess in Eq. 1 with:\nζ ′D′ =K(RK −1ζD+T),(6)\nwhere ζ"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6906670331954956,
+      "text": "Jasmine’s SSG module on the KITTI test set. The standard SI and SSI depths are obtained by applying Eq. 9 and\ndividing the maximum value to the depth GT, respectively.\nbe recovered by the least squares alignment in evaluation. Consequently, SD-based MDE p"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_20",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6832073926925659,
+      "text": "ore computationally expensive than prior self-supervised methods,\nit follows the trend of models like Marigold in trading cost for superior performance. Notably, our\nSSG module adds negligible latency, with Jasmine’s runtime being comparable to Lotus.\nMeth"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_4",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6821459531784058,
+      "text": "eeply compare Jasmine with other SSDE configurations (stereo training\nand multi-frame inference) and on KITTI improved GT benchmark in Sec. E.2, E.1.\n4.3 Analysis of Depth De-normalization\nFigure 6:Comparison of different de-normalization\nschemes.The blue"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6821323037147522,
+      "text": "ore component Scale-Shift\nTransformer (SST), and modifies the iterative prediction formula:\nF rom Dk+1 =D δ +D k T o Dk+1 =D δ +s c ·D k +s h,(10)\nwhere Dδ =DepthHead(h k+1), k denotes the iteration step and h denotes the hidden state (prelimi-\nnaries of G"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_17",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.679496169090271,
+      "text": "he advantages of our approach, we compare Jasmine against\nthe most efficient SSMDE models and SoTA SD-based methods. As shown in Table 1,Jasmine\nachieves the best performanceacross all metrics on the KITTI benchmark. Notably, our method\nmakes significant p"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_24",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6790593862533569,
+      "text": "scape\nFigure 5:Qualitative resultson KITTI, DrivingStereo, and CityScape datasets. We compare Jasmine with the\nmost generalizable and best-performing SSMDE methods in both in-domain and zero-shot scenarios.\n8"
+    },
+    {
+      "id": "chunk::Jasmine_p5_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.675991415977478,
+      "text": "and the original one is\n[R|T], which is undoubtedly impossible (more explanations in Sec. A). Thus, the shift sh does not\nexist under the geometric constraints, and SSMDE predicts Scale-Invariant DepthD SI .\nAdditionally, we analyze the training process of"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6755647659301758,
+      "text": "dge flatten) approach. Jasmine* and Jasmine are the same model but use different\nalignments (discussed in Sec. 4.3). In the data column, Syn, K, and H represent the synthetic, KITTI, and\nHypersim datasets, respectively. The number of images and depth label"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.6739270687103271,
+      "text": "terference of reprojection loss. Extensive experiments\ndemonstrate that Jasmine achieves SoTA performance on the KITTI benchmark\nand exhibits superior zero-shot generalization across multiple datasets. Project\npage and code are available at here.\n1 Introdu"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6700527667999268,
+      "text": "re all predicted delicately and precisely. These sharp results were\ncompletely disrupted by the reprojection loss in previous self-supervised methods.\nFurther AnalysisWe also deeply compare Jasmine with other SSDE configurations (stereo training\nand multi-"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.6687240600585938,
+      "text": "lement Details\nWe implement the proposed Jasmine using Accelerate[16] and PyTorch[35] with Stable Diffusion\nv2[39] as the backbone. Following the pipeline in Fig. 2, we disable text conditioning while\nmaintaining most hyperparameter consistency with E2E FT"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_11",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6682050228118896,
+      "text": "rall model\nperformance is further enhanced by 10%,\nultimately achieving SoTA performance. A\ncomprehensive analysis of MIR was con-\nducted in sub-table(c)and we can draw\nsimilar conclusions to Sec. 3.2. Jasmine\nsignificantly outperforms the alternatives,\nsu"
+    },
+    {
+      "id": "chunk::Jasmine_p17_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.665528416633606,
+      "text": "U-Net(f z\nθ ).\n•Output:The predicted depth mapDobtained from Step 1.\nB.2 Training Pseudocode\nAlgorithm 1 outlines the complete training procedure for Jasmine, incorporating all components\nincluding MIR, SSG, and the full loss computation (Corresponds to th"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6652839183807373,
+      "text": "best and second-best results are marked in\nboldand underline. Jaeho et al* is a combined model that applies both Jaeho’s[34] (handle dynamic objects)\nand TriDepth’s[5] (solve edge flatten) approach. Jasmine* and Jasmine are the same model but use different"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_8",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6634198427200317,
+      "text": "denotes the iteration step and h denotes the hidden state (prelimi-\nnaries of GRU in Sec D). Specifically, the SST employs learnable scale/shift queries (QSC /QSH ) that\ninteract with SD’s hidden states (keys/values) via cross-attention. The output vector"
+    },
+    {
+      "id": "chunk::Jasmine_p17_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.6630988717079163,
+      "text": "99, s=srecon))\n9:▷Scale-Shift GRU (SSG)\n10:D list ←SSG(D ssi, zI\nt )▷ D list contains[D ssi, D1, Dsi]\n11:pose←PoseNet(I[’I_t’],I[’I_t”])▷Pose Estimation for Self-Supervision\n12:loss←compute_loss(I, D list, pose, Irec)▷Loss Computation and Optimization\n13:o"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_chunk_19",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.6615954041481018,
+      "text": "ss(ours) 26.630(+0.342)0.946(+0.002)0.041(-0.004)31.001(+0.431)0.957(+0.002)0.036(-0.003)3.404(↑) 2.218(↑)\nLLFormer 24.195 0.918 0.07 27.862 0.930 0.064 3.176 2.137LLFormer with GT-mean loss(ours) 25.152( +0.957)0.932(+0.014)0.058(-0.012)29.266(+1.404)0.94"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_chunk_19",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.6615954041481018,
+      "text": "ss(ours) 26.630(+0.342)0.946(+0.002)0.041(-0.004)31.001(+0.431)0.957(+0.002)0.036(-0.003)3.404(↑) 2.218(↑)\nLLFormer 24.195 0.918 0.07 27.862 0.930 0.064 3.176 2.137LLFormer with GT-mean loss(ours) 25.152( +0.957)0.932(+0.014)0.058(-0.012)29.266(+1.404)0.94"
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.6614773869514465,
+      "text": "Appendix\nIn this appendix, we provide more implementation details, experiments, analysis, and discussions for\na comprehensive evaluation and understanding of Jasmine. Detailed contents are listed as follows:\nContents\nA Proof of Scale-Invariant Depth 15\nB D"
+    },
+    {
+      "id": "chunk::Jasmine_p16_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 16,
+      "score": 0.6609392762184143,
+      "text": "ep Workflow\nIn this section, we temporarily omit the specifics of MIR and SSG to clarify the integration of\nself-supervision with the Stable Diffusion framework in Jasmine:\n• Input:A sequence of temporally adjacent images (like video frames), e.g., a sourc"
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6603267788887024,
+      "text": "-\nJasmine* 0.064 0.294 2.982 0.097 0.957 0.994 0.998\nMonoViT [68] 0.068 0.314 3.125 0.105 0.948 0.992 0.998\nMonoViFi [29]0.071 0.338 3.539 0.113 0.937 0.990 0.998\nJasmine 0.061 0.255 2.765 0.092 0.963 0.995 0.999\nE.2 Comparison with Other Self-Supervised S"
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_24",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.6584219932556152,
+      "text": "nt-space corruption caused by reprojection artifacts.\n• We proposed Scale-Shift GRU (SSG) to dynamically align depth scales while filtering noisy\ngradients to solve SSI versus SI distribution mismatch problems in self-supervised depth estimation.\n2 Relativ"
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.6562435030937195,
+      "text": "reserving\nthe fine-grained texture details of SD’s output while enforcing geometric consistency.\nExtensive experiments show that our proposed method, Jasmine, ❶ achieves theSoTA performance\namong all SSMDEs on the competitive KITTI dataset, ❷ showsremarkab"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_5",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6550984382629395,
+      "text": "th creates barriers for SD integration, and the\nSSG is specifically designed to fix it.\nThe Design of SSG.Transforming the depth distribution from SSI depth to SI depth requires\nprofound scene understanding, and the scale (sc) and shift (sh) factors are ti"
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6550531983375549,
+      "text": "in our Scale-Shift GRU (SSG)\nmodule (see Sec. 3.3).\nE Addition Experiments Results\nE.1 Evaluation on KITTI Improved Benchmark\nThe standard self-supervised evaluation on the KITTI dataset is typically conducted using the raw\nLiDAR GT. However, due to the n"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_19",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6514795422554016,
+      "text": "1 0.849 0.098 5.702 0.902\nGeneralization ResultsCompared to in-domain evaluation, Jasmine exhibits even more remark-\nable results in zero-shot generalization. Due to the large number of comparison datasets and the\nunavailability of some models’ open-source"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_23",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.650679886341095,
+      "text": "elled in generalization, allowing us to conduct a fair zero-shot comparison here. As\nshown in Table 2, Jasmine demonstrated state-of-the-art performance on the datasets of Cityscape\nFigure 5:Qualitative resultson KITTI, DrivingStereo, and CityScape dataset"
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6502807140350342,
+      "text": "ature maps in\ncomputer vision tasks. In our paper, the refined hidden state hk+1 predicts depth adjustment Dδ\nto update Dk, yielding Dk+1 for subsequent iterations, as utilized in our Scale-Shift GRU (SSG)\nmodule (see Sec. 3.3).\nE Addition Experiments Resu"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.6500338315963745,
+      "text": ") ∗ Li (u))/ri (u)2 ,\nC2(u) = max (0, Ri (u) ∗ Vi (u))gr\n/ri (u)2 ,\nI R\ni = sF IF (KdC1 + KsC2).\n(24)\nFollowing [Phong, 1975 ], we set the exponential gr to 8.\nHere, sF is the scale factor of light source image LS.\nD.3 Training detail\nFollowing [Godard et"
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_17",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.6493661403656006,
+      "text": "refining scale-shift parameters but also acts as a gradient filter, which suppresses\nanomalous gradients caused by artifact-contaminated in self-supervised training, thereby preserving\nthe fine-grained texture details of SD’s output while enforcing geomet"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_11",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6493034362792969,
+      "text": "Squares (LSQ) Alignment: Models predict SSI Depth [ 25], which can be recovered by\naffine transformation (scaled and shifted) to best fit the GT depth. The evaluated depth is given by:\nDeval =s ∗Dpred +t ∗. where the optimal scale s∗ and shift t∗ are deter"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.6476055979728699,
+      "text": "ves while preventing depth estimation from degradation. Furthermore, to\naddress the inherent misalignment between SD’s scale and shift invariant estimation\nand self-supervised scale-invariant depth estimation, we build the Scale-Shift GRU.\nIt not only brid"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_20",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6449166536331177,
+      "text": "r a1 and thus do not affect it, while the\noriginally accurate predictions for other points become less accurate due to the shift introduced by\nLSQ alignment. Similarly, first-order metrics also degrade due to these shifts. This explains why\nJasmine* achiev"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_23",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6439461708068848,
+      "text": "t and degrading performance. In out-of-domain scenarios (Table 2), Jasmine* performs better,\nas the depth distributions of different datasets may differ significantly, and using least-squares to\nestimate the best fit is clearly a better choice.\n9"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6435459852218628,
+      "text": "9\nWeatherDepth[48]0.166 6.986 0.796 0.166 8.8440.748 0.1376.5150.837 0.167 7.566 0.793 0.132 7.679 0.859\nJasmine 0.136 5.340 0.850 0.160 7.194 0.787 0.1236.618 0.852 0.133 5.651 0.849 0.098 5.702 0.902\nGeneralization ResultsCompared to in-domain evaluation"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Jasmine_p6_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.7901902198791504,
+      "text": "s\nprofound scene understanding, and the scale (sc) and shift (sh) factors are tightly coupled. Therefore,\nas shown in Fig. 4(a), compared to traditional GRU, SSG introduces a core component Scale-Shift\nTransformer (SST), and modifies the iterative predicti",
+      "estimated_tokens": 61
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.7681648135185242,
+      "text": "𝐷!K\nScale Shift Transformer\nV\nKV\nSep-Conv GRU\n\t𝜎: Sigmoid Conv⊕:\tPixel addition⊗: Concatenation⊙: Pixel multiplyDiffusion\tℰ\n𝐡\" 𝐡\"#$𝐷\"#$⊕𝑠%+𝑠&×Q\nMLP\n𝒙\"\n(b)(a)\nTransformerMLP𝑠&\n𝑠%\n𝐳𝑰\n 𝐷\"\niteration𝑘\nFigure 4:(a): Model Structure of SSG. It corresponds to the",
+      "estimated_tokens": 137
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_8",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7425123453140259,
+      "text": "scale-invariant depth estimation, we build the Scale-Shift GRU.\nIt not only bridges this distribution gap but also isolates the fine-grained texture\nof SD output against the interference of reprojection loss. Extensive experiments\ndemonstrate that Jasmine",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_5",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7312783002853394,
+      "text": "ior 0.516 6.019 12.06 0.258 0.501\n(2) w/o MIR+SSG 0.175 2.264 7.969 0.790 0.929\n(3) w/o SSG 0.129 0.938 4.470 0.872 0.956\n(4) w/o MIR 0.132 0.673 4.271 0.852 0.967\n(b) Scale-Shift GRU\n(5) w/o SSG 0.129 0.938 4.470 0.872 0.956\n(6) w/o SST 0.098 0.715 4.350",
+      "estimated_tokens": 163
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_16",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.7260280847549438,
+      "text": "erent distribution gap, we propose a gated recurrent unit (GRU)-based\nnovel transform module termedScale-Shift GRU(SSG). It not only iteratively aligns SSI depth\nto SI depth by refining scale-shift parameters but also acts as a gradient filter, which suppr",
+      "estimated_tokens": 60
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7196073532104492,
+      "text": "0.591 3.971 0.918 0.972\nIn sub-table(b), we further melted down\nour proposed SSG. ID (6) reveals that the\nnaive GRU can initially solve the distribu-\ntion misalignment by estimating the Dδ\n(Eq. 4). However, the scale difference be-\ntween SSI and SI depth",
+      "estimated_tokens": 79
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_13",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.7109672427177429,
+      "text": "depth distribution, while D1\nand D2 progressively converge towards the SI depth. This clearly demonstrates that SSG iteratively\naligns SSI depth to SI depth by refining the scale-shift parameters. GRU is preferred over other\narchitectures due to its reset",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::Jasmine_p3_chunk_16",
+      "source": "data\\Jasmine.pdf",
+      "page": 3,
+      "score": 0.7107216119766235,
+      "text": "uction (MIR, Sec. 3.2), the scale-shift\nadaptation with GRU (Sec. 3.3) and the SD finetune protocol specified for self-supervision (SSG,\nSec. 3.4). An overview of the whole framework is shown in Fig. 2 and its training pseudocode is\nshown in Algorithm 1.\n3",
+      "estimated_tokens": 80
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.7056145668029785,
+      "text": "some auxiliary adjustment\nlosses (e.g.,gds loss[ 34] LGDS, edge loss Le, etc.) with a tiny weight. They will be detailed in\nsupplementary material Sec. C.\n4 Experiment\n4.1 Implement Details\nWe implement the proposed Jasmine using Accelerate[16] and PyTorc",
+      "estimated_tokens": 68
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6999977827072144,
+      "text": "ift GRU\n(5) w/o SSG 0.129 0.938 4.470 0.872 0.956\n(6) w/o SST 0.098 0.715 4.350 0.909 0.969\n(c) Mix-batch Image Reconstruction\n(7) w/o MIR 0.132 0.673 4.271 0.852 0.967\n(8) Direct 0.129 0.679 4.385 0.858 0.962\n(9) Only Hy 0.106 0.614 4.181 0.901 0.970\n(10)",
+      "estimated_tokens": 149
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_22",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6973413825035095,
+      "text": "in in-domain scenarios (Table 1), Jasmine outperforms Jasmine* because the\nshift-free estimation learned by Jasmine is disrupted by LSQ alignment, introducing a suboptimal\nshift and degrading performance. In out-of-domain scenarios (Table 2), Jasmine* perf",
+      "estimated_tokens": 56
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 960,
+    "compressed_context_tokens": 960,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 960,
+  "context_tokens": 960,
+  "prompt_token_estimate": 1428,
+  "run_label": "sage_semantic_all_v1_chunk_jasmine_ssg_purpose",
+  "answer": "<think>\nThe user wants me to answer a question about the Scale-Shift GRU (SSG) module in Jasmine, based only on the provided materials. Let me analyze the materials:\n\nFrom the materials:\n- [3]: \"scale-invariant depth estimation, we build the Scale-Shift GRU. It not only bridges this distribution gap but also isolates the fine-grained texture of SD output against the interference of reprojection loss.\"\n- [5]: \"erent distribution gap, we propose a gated recurrent unit (GRU)-based novel transform module termed Scale-Shift GRU (SSG). It not only iteratively aligns SSI depth to SI depth by refining scale-shift parameters but also acts as a gradient filter, which suppr...\"\n- [7]: \"depth distribution, while D1 and D2 progressively converge towards the SI depth. This clearly demonstrates that SSG iteratively aligns SSI depth to SI depth by refining the scale-shift parameters.\"\n- [1]: \"scale (sc) and shift (sh) factors are tightly coupled. Therefore, as shown in Fig. 4(a), compared to traditional GRU, SSG introduces a core component Scale-Shift Transformer (SST)\"\n\nSo SSG addresses:\n1. The distribution gap between SSI (scale-shift-invariant) depth and SI (scale-invariant) depth\n2. It iteratively aligns SSI depth to SI depth by refining scale-shift parameters\n3. It acts as a gradient filter that suppresses interference from reprojection loss\n4. It also handles the coupling of scale and shift factors\n\nLet me formulate a clear answer.\n</think>\n{\n  \"answer\": \"Scale-Shift GRU (SSG) 模块旨在弥合 SSI（scale-shift-invariant）深度与 SI（scale-invariant）深度之间的分布差异（distribution gap），通过迭代地精炼 scale-shift 参数将 SSI 深度对齐到 SI 深度，同时充当梯度滤波器，抑制 reprojection loss 对 SD 输出精细纹理的干扰。\",\n  \"items\": [\n    {\n      \"name\": \"弥合 SSI 与 SI 深度之间的分布差异\",\n      \"description\": \"SSG 是一个基于 GRU 的新型变换模块，通过迭代精炼 scale-shift 参数，将 SSI 深度逐步对齐到 SI 深度。\",\n      \"citations\": [5, 7]\n    },\n    {\n      \"name\": \"隔离 reprojection loss 对精细纹理的干扰\",\n      \"description\": \"SSG 同时作为梯度滤波器，抑制 reprojection loss 对 SD（Stable Diffusion）输出精细纹理的干扰。\",\n      \"citations\": [3, 5]\n    },\n    {\n      \"name\": \"解耦紧耦合的 scale 与 shift 因子\",\n      \"description\": \"由于 scale (sc) 和 shift (sh) 因子紧耦合，传统 GRU 难以处理；SSG 引入核心组件 Scale-Shift Transformer (SST) 来解决该耦合问题。\",\n      \"citations\": [1]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1436,
+    "completion_tokens": 594,
+    "total_tokens": 2030,
+    "model": "MiniMax-M3"
+  }
+}

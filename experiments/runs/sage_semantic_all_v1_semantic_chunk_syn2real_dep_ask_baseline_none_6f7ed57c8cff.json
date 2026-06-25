@@ -1,0 +1,422 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_syn2real_dep_ask_baseline_none_6f7ed57c8cff",
+  "dry_run": false,
+  "query": "Synthetic Adaptation 阶段如何生成训练数据并转移白天知识？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::s_p4_sc1",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6819047927856445,
+      "text": "Following [8, 22, 25, 28], we first adapt the pre-trained daytime models ΦD−day, ΦP −day (denoted as Φday in Fig. 2) to synthetic adverse model ΦD−syn, ΦP −syn. To realize that, a generative adversarial network (GAN) [45, 49] or a diffusion model [21] defined as Φaug is utilized as augmentations to translate the daytime images into multiple adverse conditions as ICi−syn = Φaug(Iday), Ci ∈ C, (5) where C represents the set of conditions. Then the adapta- tion can be conducted on the paired data Iday, ICi−syn in a distillation or teacher-student manner, where the outputs of ΦD−day, ΦP −day can be defined as Dday, Tday and those from ΦD−syn, ΦP −syn are Dsyn, Tsyn. The distillation ob- jective is the absolute relative depth loss: Ld = 1 HW HWX | Dday − Dsyn Dsyn |. (6) However, learning from only depth pseudo labels is still challenging to learn about the adverse patterns [29, 46], which motivates us to also discover an auxiliary space to inhibit the problems. Surprisingly, we find that the cost vol- ume can be an auxiliary space to transfer the knowledge."
+    },
+    {
+      "id": "semantic_chunk::s_p8_sc2",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.6728833913803101,
+      "text": "These examples demonstrate our model’s adaptability to diverse real-world conditions. 4. 6. Analysis on Consistency Reweighting Examples of consistency maps discussed in Sec. 3. 3 are shown in Fig. 5, where brighter areas indicate higher con- sistency. The first two columns correspond to night condi- tions, showing that dark, distant regions exhibit low con- sistency between Dday and Dsyn, while near regions have much stronger consistency. The last two columns represent rain conditions, where the blurry areas show low consis- tency. This allows us to select the more reliable regions. More visualization results can be seen in supplementary. 5. Ablations To verify the effectiveness of each stage and the designed modules, we conduct ablations on learning from the cost volume ( Lcv), real adaptation without designed strategies (RA), consistency reweighting (CR), and structure prior constraint (LKL dis ). Additionally, we compare learning from the cost volume with direct learning from daytime features (Lf eat). The baseline is trained solely with depth loss in the synthetic adaptation (SA). Due to space limitations, we provide results for night and rain conditions in Tab. 4."
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc2",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6553221940994263,
+      "text": "To address the synthetic-real gaps, we propose a novel real adaptation (RA) stage. One challenge is to find valid supervision signals from earlier trained models, and we design a consistency-reweighting strategy by incorporating different models to find a consistency map that can empha- size the valid parts of pseudo-labels and provide effective signals for learning in real-world conditions. Since pseudo- labels from the frozen model still suffer from the synthetic- real gap, we introduce an effective prior based on daytime depth predictions, by calculating explicit depth distribution from the daytime model and setting it to be a reference in di- verse conditions. This structural prior provides explicit con- straint when facing real adverse data, learning real-world information further effectively. With the proposed synthetic-to-real adaptation pipeline, our model can provide much more robust depth predictions in diverse conditions through different real-world datasets [5, 19, 37]."
+    },
+    {
+      "id": "semantic_chunk::s_p3_sc0",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.6484887599945068,
+      "text": "Figure 2. Illustration of our proposed pipeline. (a) Synthetic adaptation utilizes an augmentation model to generate paired data for training, and we also conduct learning in an auxiliary motion space. (b) Real adaptation leverages the daytime model and synthetic model to provide valid pseudo-labels with consistency reweighting, and the daytime depth distribution from plenty of daytime predictions are seen as structure prior to constrain the model facing real adverse data. (c) Inference stage can work in multi-frame and single-frame settings. ate realistic adverse data and employing a teacher-student framework. However, they overlook the importance of learning a common representation and do not consider about bridging the synthetic-real gap. In contrast, we pro- pose an auxiliary space to enhance robust representation learning and introduce a novel real adaptation stage. 3. Proposed Method We propose to estimate depth map from single frame or con- secutive frames under various conditions, including the nor- mal (e.g., daytime) and adverse scenarios (e.g., rain, night- time, etc.). We demonstrate our pipeline in Fig."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.6481735706329346,
+      "text": "Table 3. Comparison on the Unpaired Datasets. Red(Green) denotes the improvement(reduction) of performance. Note that all the models were trained on the LOLv2-synthetic dataset. Method DICM MEF LIME NPE VV A VGNIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑Restormer 3. 220 58. 525 3. 885 2. 8003. 660 56. 528 3. 215 2. 4153. 660 58. 461 3. 267 2. 4663. 470 61. 031 3. 781 2. 7353. 290 37. 919 3. 710 2. 2643. 460 54. 493 3. 572 2. 536Restormer with GT-mean loss (ours) 3. 180 58. 604 3. 913 2. 8213. 630 56. 522 3. 208 2. 4313. 630 58. 124 3. 380 2. 5213. 450 60. 971 3. 820 2. 7693. 300 38. 290 3. 712 2. 2553. 440(-)54. 502(+)3. 607(+)2. 559(+) MIRNET 3. 820 52. 467 3. 111 2. 3373. 670 47. 399 2. 742 2. 0564. 230 54. 837 2. 860 2. 0883. 470 58. 641 3. 285 2. 3743. 640 54. 566 2. 955 2. 1623. 770 53. 582 2. 991 2. 203MIRNET with GT-mean loss(ours)3. 200 53. 188 3. 295 2. 3753. 600 47. 611 2. 817 2. 0674. 330 55. 776 2. 747 2. 0583. 500 58. 718 3. 366 2. 4283. 710 54. 891 3. 120 2. 2153. 670(-)54. 037(+)3. 069(+)2. 229(+) Retinexformer 3. 230 57. 398 3. 800 2. 7403. 860 56. 170 3. 137 2. 3733."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.6481735706329346,
+      "text": "Table 3. Comparison on the Unpaired Datasets. Red(Green) denotes the improvement(reduction) of performance. Note that all the models were trained on the LOLv2-synthetic dataset. Method DICM MEF LIME NPE VV A VGNIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑Restormer 3. 220 58. 525 3. 885 2. 8003. 660 56. 528 3. 215 2. 4153. 660 58. 461 3. 267 2. 4663. 470 61. 031 3. 781 2. 7353. 290 37. 919 3. 710 2. 2643. 460 54. 493 3. 572 2. 536Restormer with GT-mean loss (ours) 3. 180 58. 604 3. 913 2. 8213. 630 56. 522 3. 208 2. 4313. 630 58. 124 3. 380 2. 5213. 450 60. 971 3. 820 2. 7693. 300 38. 290 3. 712 2. 2553. 440(-)54. 502(+)3. 607(+)2. 559(+) MIRNET 3. 820 52. 467 3. 111 2. 3373. 670 47. 399 2. 742 2. 0564. 230 54. 837 2. 860 2. 0883. 470 58. 641 3. 285 2. 3743. 640 54. 566 2. 955 2. 1623. 770 53. 582 2. 991 2. 203MIRNET with GT-mean loss(ours)3. 200 53. 188 3. 295 2. 3753. 600 47. 611 2. 817 2. 0674. 330 55. 776 2. 747 2. 0583. 500 58. 718 3. 366 2. 4283. 710 54. 891 3. 120 2. 2153. 670(-)54. 037(+)3. 069(+)2. 229(+) Retinexformer 3. 230 57. 398 3. 800 2. 7403. 860 56. 170 3. 137 2. 3733."
+    },
+    {
+      "id": "semantic_chunk::s_p4_sc2",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6437763571739197,
+      "text": "In theory, the process of constructing cost volume is natu- rally filtering out the abundant information, which retains explicit motion and structure information and reflects the pixel-level correlation through temporal frames. This gives us chances to distill explicit and filtered motion and struc- ture knowledge from daytime to adverse conditions. The cost volumes fromΦD−day and ΦD−syn are defined as cvday, cvsyn. Thus, the objective of cost volume learning is added into training: Lcv = 1 chw chwX |cvday − cvsyn|. (7) To construct the correct cost volume, we also supervise the Tsyn by Tday with an L2 loss LT . The synthetic adapta- tion is illustrated in Fig. 2 (a), where the total objectiveLsyn is designed with different scale factors: Lsyn = α1Ld + α2Lcv + α3LT . (8) We also notice that the cost volume constructed by fea- ture dot product can lead to more robust learning compared with feature difference. Thus Eq. 1 will be changed into cv = ΦD−day(It) · W (ΦD−day(It−1), T, d, K). 3. 3. Real Adaptation with Consistency Reweighting and Structure Prior Although synthetic adaptation helps to bridge the gap be- tween daytime and synthetic adverse conditions, there are"
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc1",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6370370388031006,
+      "text": "These motivate us to explore an auxiliary space for improved representation learning and an effective strategy to learn in real-world conditions. In this work, we propose the first synthetic-to-real frame- work to achieve depth estimation under diverse conditions. Different from previous methods focused solely on syn- thetic data, ours learns from the synthetic to real-world data. Since only pseudo-depth label is insufficient for the model to learn due to the heterogeneous features [29, 47], we dig into motion constraint and explicit structure prior for efficient learning of real-world knowledge. Examples of our method compared with previous ones are shown in Fig. 1. Starting from having a strong self-supervised day- time model, we identify the cost volume [6, 33, 34] as an ef- fective auxiliary space for robust representation, as it natu- rally filters redundant information while preserving motion and structural features. Thus, in the synthetic adaptation (SA) which learns on the synthetic data, we construct cost volumes from high-level features to transfer filtered daytime motion-spatial knowledge to adverse conditions, apart from learning only with pseudo-depth labels."
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc5",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6344870328903198,
+      "text": "Recent methods [8, 22, 25, 28, 29] target multiple con- ditions, using data augmentation and generation techniques such as GANs and diffusion models [21, 38, 45, 49] to cre-"
+    },
+    {
+      "id": "semantic_chunk::s_p3_sc1",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.6303586959838867,
+      "text": "2, which consists of a) Synthetic Adaptation (SA); b) Real Adap- tation (RA). In SA, we train a network on synthetic data where: 1) daytime images are fed into a pre-trained day- time model to produce the pseudo depth label; 2) clean im- ages are passed by an augmentation process to synthesise adverse images which are used to train a network to esti- mate depth maps, supervised by pseudo labels. We discuss the technique details in Sec. 3. 1 and Sec. 3. 2. To further learn the ability to handle real-world adverse images, we design a novel synthetic-to-real process by importing the motion structure priors, pseudo label reweighting strategy as discussed in Sec. 3. 3. Due to limited space, we omit the symbol for the pose network in Fig. 2. 3. 1. Preliminaries Robust depth estimation is closely connected with self- supervised depth estimation since it can provide a good day- time model for the adaptation. For the good performance as well as the motion-structure information in daytime, we choose Manydepth [33] as our daytime baseline and imple- ment on nuScenes and Robotcar datasets [5, 19] with all daytime data."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc0",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6294849514961243,
+      "text": "still inevitable gaps between synthetic and real adverse con- ditions [8, 22, 46]. Here, we analyze the performance of models ΦD−syn and ΦP −syn on synthetic and real data un- der the same condition (e.g., night), as shown in Fig. 3 (a) and (b). In (a), performance significantly declines from syn- thetic to real adverse data, with drops of 70% in AbsRel, 28% in RM SE, and 17% in δ1. In (b), the synthetic night- time image and its predicted depth map show different pat- terns compared to the real nighttime, such as successful de- tection of near and far distances in synthetic images, and failure to detect distant planes in real images. This moti- vates us to address the synthetic-real domain gap. Formally, our goal is to train a depth modelΦD−real and a pose model ΦP −real capable of predicting Dreal across various real conditions without any labels. To achieve this, we leverage the abilities of ΦD−day and ΦD−syn by care- fully designing a Real Adaptation stage in Fig. 3 (b). Consistency Reweighting Strategy A straightforward su- pervision signal for Dreal is Dsyn, generated by ΦD−syn on real data, which can serve as a pseudo label forΦD−real."
+    },
+    {
+      "id": "semantic_chunk::s_p1_sc1",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.6280163526535034,
+      "text": "In the synthetic adaptation, we transfer motion-structure knowledge inside cost volumes for better robust representation, using a frozen daytime model to train a depth estimator in synthetic adverse conditions. In the in- novative real adaptation, which targets to fix synthetic-real gaps, models trained earlier identify the weather-insensitive regions with a designed consistency-reweighting strategy to emphasize valid pseudo-labels. We introduce a new regu- larization by gathering explicit depth distribution to con- strain the model facing real-world data. Experiments show that our method outperforms the state-of-the-art across di- verse conditions in multi-frame and single-frame evalua- tions. We achieve improvements of 7. 5% and 4. 3% in Ab- sRel and RMSE on average for nuScenes and Robotcar datasets (daytime, nighttime, rain). In zero-shot evaluation of DrivingStereo (rain, fog), our method generalizes better than previous ones. The code is at Syn2Real-Depth. 1. Introduction Depth estimation from monocular cameras is a fundamental task in computer vision, essential for applications such as autonomous driving, robotics, and closely connected with segmentation [40]."
+    },
+    {
+      "id": "semantic_chunk::dav2_p4_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 4,
+      "score": 0.6188721656799316,
+      "text": "In this section, we identify two limitations of synthetic images that hinder them from being easily used in reality. Limitation 1. There exists distribution shift between synthetic and real images. Although current graphics engines strive for photorealistic effects, their style and color distributions still evidently differ from real images. Synthetic images are too “clean” in color and “ordered” in layout, while real images contain more randomness. For instance, when comparing the images in Figure 4a and 4b, we can immediately distinguish the synthetic ones. Such distribution shift makes models struggle to transfer from synthetic to real images, even if the two data sources share similar layouts [57, 9]. Limitation 2. Synthetic images have restricted scene coverage . They are iteratively sampled from graphics engines with pre-defined fixed scene types, e.g., “living room” and “street scene”. Consequently, despite the astonishing precision of Hypersim [58] or Virtual KITTI [9] (Figure 4b), we cannot expect models trained on them to generalize well in real-world scenes like “crowded people”."
+    },
+    {
+      "id": "semantic_chunk::ACD_p3_sc4",
+      "source": "data\\ACD.pdf",
+      "page": 3,
+      "score": 0.6146593689918518,
+      "text": "3 Data Generation Given a normal input (e i), which is captured under good lighting and visibility conditions, the previous studies em- ploy GAN-based or diffusion-based models to generate the degraded images (h c i ). c represents various weather scenes, such as rain, night, and fog. However, besides requiring a large number of real multi-tuple pairs for training, the trans- lated images generated by these technologies [Gasperini et al., 2023; Tosi et al., 2025 ] exhibit obvious differences and unnaturalness from the real samples, leading to poor general- ization of depth estimation models across different scenes. Inspired by recent image translation technologies [Parmar et al., 2024 ], we explore the content generation capability of stable diffusion, while employing adversarial learning and cy- cle consistency loss to train LoRA [Hu et al., 2021 ] adapters to promote the naturalness and consistency of translated im- ages. Speciﬁcally, we take e i as input, along with the corre- sponding text prompt Pc to learn the speciﬁc LoRA adapters for each scene transformation, which can complete the con- version from the source domain to the target domain."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6134598851203918,
+      "text": "/C10/C7/C8/C6/C9/C8/C4 /C3/C6/C5/C2/C1/C6/C0 /C10/C7/C8/C6/C9/C8/C4 /C16/C9/C5/C2/C1/C6/C0 /C24/C8/C7/C9/C1/C7/C0/C1/C4 /C32/C2/C25/C28/C6 /C38/C37/C35/C38/C34/C36 /C10/C7/C8/C6/C9/C8/C4 /C3/C25/C44/C43/C28/C25/C2/C9/C48 /C41/C40/C32/C6/C8 /C3/C6/C9/C2/C25/C28/C6 Figure 3. Overview of the Marigold inference scheme. Given an input image x, we encode it with the original Stable Diffusion V AE into the latent code z(x), and concatenate with the depth latent z(d) t before giving it to the modified fine-tuned U-Net on every denoising iteration. After executing the schedule of T steps, the resulting depth latent z(d) 0 is decoded into an image, whose 3 channels are averaged to get the final estimation ˆd. See Sec. 3. 4 for details. possible form of depth, which is guaranteed by the rendering pipeline. If our assumption about the possibility of fine- tuning a generalizable depth estimation from a text-to-image LDM is correct, then synthetic depth gives the cleanest set of examples and reduces noise in gradient updates during the short fine-tuning protocol."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6134598851203918,
+      "text": "/C10/C7/C8/C6/C9/C8/C4 /C3/C6/C5/C2/C1/C6/C0 /C10/C7/C8/C6/C9/C8/C4 /C16/C9/C5/C2/C1/C6/C0 /C24/C8/C7/C9/C1/C7/C0/C1/C4 /C32/C2/C25/C28/C6 /C38/C37/C35/C38/C34/C36 /C10/C7/C8/C6/C9/C8/C4 /C3/C25/C44/C43/C28/C25/C2/C9/C48 /C41/C40/C32/C6/C8 /C3/C6/C9/C2/C25/C28/C6 Figure 3. Overview of the Marigold inference scheme. Given an input image x, we encode it with the original Stable Diffusion V AE into the latent code z(x), and concatenate with the depth latent z(d) t before giving it to the modified fine-tuned U-Net on every denoising iteration. After executing the schedule of T steps, the resulting depth latent z(d) 0 is decoded into an image, whose 3 channels are averaged to get the final estimation ˆd. See Sec. 3. 4 for details. possible form of depth, which is guaranteed by the rendering pipeline. If our assumption about the possibility of fine- tuning a generalizable depth estimation from a text-to-image LDM is correct, then synthetic depth gives the cleanest set of examples and reduces noise in gradient updates during the short fine-tuning protocol."
+    },
+    {
+      "id": "semantic_chunk::ACD_p2_sc5",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.6115496158599854,
+      "text": "However, the data qual- ity and completeness of constraints in these methods signiﬁ- cantly affect the generalization from normal scenarios to real adverse weather. Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1252"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p6_sc6",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.6114423274993896,
+      "text": "1, we also provide the G results of domain adaptation-based methods. Their decrease in accuracy"
+    },
+    {
+      "id": "semantic_chunk::ACD_p3_sc3",
+      "source": "data\\ACD.pdf",
+      "page": 3,
+      "score": 0.6106038093566895,
+      "text": "2, which involves the data generation and robust model training. In the ﬁrst part, we utilize the LoRA adapters to ﬁne-tune the pretrained diffusion model, where the circular consistency loss and adversarial training are used to guaran- tee the naturalness and consistency of the translated image. In this way, the trained generator can produce a multi-tuple degradation dataset under different weather conditions. And then, ACDepth takes the multi-tuple degradation dataset as input, and proposes the multi-granularity knowledge distilla- tion strategy (MKD) to borrow priors from the teacher model to optimize the student network. The process is depicted as: L = L d +λ1Lr +λ2Lc, (5) whereLd denotes the distillation loss between the teacher and student models, Lr refers to the ordinal guidance distillation between the Depth Anything V2 model and our ACDepth, and L c is the feature consistency loss between the teacher encoder and the student encoder. λ1 and λ2 are the weight parameters to balance the loss components. Detailed expla- nation of losses (L d,Lr andLc) is provided below. 3."
+    },
+    {
+      "id": "semantic_chunk::s_p7_sc3",
+      "source": "data\\s.pdf",
+      "page": 7,
+      "score": 0.6101028919219971,
+      "text": "Ours surpasses the state-of-the- art by 3. 0%, 10. 0%, 2. 8% on AbsRel, SqRel, and RMSE, demonstrating stronger generalization ability over models trained on only synthetic data. Notably, our model signifi- cantly outperforms the fairly-designed baseline [33]+[8] in both rain and fog conditions."
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc0",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6061571836471558,
+      "text": "mains, often failing to generalize to multiple conditions. Recently, several approaches [8, 22, 25, 28, 29] have emerged to develop a single model that performs well across diverse conditions. These methods either explore data aug- mentation and generation techniques [21, 35, 38, 45, 49] to create paired data and employ teacher-student training, or apply photometric loss directly to adverse conditions, alongside a generative adversarial network (GAN) to dis- criminate the style of predicted depth. While these ap- proaches have advanced the community, they still face chal- lenges in learning robustness facing real-world degradation. On one hand, solely learning from depth pseudo-labels is in- sufficient for robust common representation due to the het- erogeneous nature of different conditions [29, 47]. On the other hand, applying GANs or photometric loss to real ad- verse data either imposes implicit constraints with sampling randomness or violates the brightness consistency assump- tion [8, 22]. Furthermore, relying only on synthetic data risks overfitting to the synthetic domain, which still faces the out-of-distribution issue."
+    },
+    {
+      "id": "semantic_chunk::s_p8_sc0",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.6060263514518738,
+      "text": "Modules nuScenes-night nuScenes-rain SA Lf eat Lcv RA CR LKL dis AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ ✓ 0. 1865 2. 255 8. 245 72. 58 0. 1310 1. 717 6. 840 82. 61 ✓ ✓ 0. 1911 2. 495 8. 456 72. 41 0. 1335 1. 756 7. 056 82. 04 ✓ ✓ 0. 1809 2. 019 7. 988 72. 61 0. 1290 1. 657 6. 794 82. 76 ✓ ✓ ✓ 0. 1781 1. 892 7. 896 72. 45 0. 1288 1. 610 6. 856 82. 36 ✓ ✓ ✓ ✓ 0. 1743 1. 809 7. 716 73. 10 0. 1256 1. 576 6. 743 82. 82 ✓ ✓ ✓ ✓ ✓ 0. 1713 1. 779 7. 689 73. 16 0. 1266 1. 532 6. 654 82. 86 Table 4. Ablations on each module and stage mentioned in the pipeline. The checkmark represents utility of the corresponding module. SA refers to the synthetic adaptation with only depth supervision, and RA is training on real data with only pseudo label in real adaptation. Figure 5. Visualization of consistency maps. 4. 5. Qualitative Experimental Results Our qualitative results across various adverse conditions are shown in Fig. 4. Due to space constraints, we display results from nuScenes and DrivingStereo; additional examples are provided in the supplementary materials. Since [25] is not open source, we compare with the latest methods [8, 22]."
+    },
+    {
+      "id": "semantic_chunk::dav2_p5_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 5,
+      "score": 0.6058057546615601,
+      "text": "BEiT-Large DINOv2-Small DINOv2-Base DINOv2-Large DINOv2-Giant SynCLR-LargeSAM-Large Figure 5: Qualitative comparison of different vision encoders on synthetic-to-real transfer. Only DINOv2-G produces a satisfying prediction. For quantitative comparisons, please refer to Section B. 6. + unlabeled real images + unlabeled real images Figure 6: Failure cases of the most capable DINOv2-G model when purely trained on synthetic images. Left: the sky should be ultra far. Right: the depth of the head is not consistent with the body. Therefore, synthetic-to-real transfer is non-trivial in MDE. To validate this claim, we conduct a pilot study to learning MDE models solely on synthetic images with four popular pre-trained encoders, including BEiT [4], SAM [33], SynCLR [75], and DINOv2 [50]. As illustrated in Figure 5, only DINOv2-G achieves satisfying results. All other model serials, as well as smaller DINOv2 models, suffer from severe generalization issues. This pilot study seems to give a straightforward solution to employing synthetic data in MDE, i.e., building on the largest DINOv2 encoder, and relying on its inherent generalization ability."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.6050320267677307,
+      "text": "Based on the above experimental design, we present the curve of the original L1 loss (Figure 6(a)), and the curves of the GT-mean L1 loss under different σ values (Figure 6(b)). The difference between them is that the use of the GT-mean loss clearly produces basins around η = 1. In an- other word, the GT-mean loss produces small-gradient re- gion with regard to brightness around η = 1, of which the range is controlled by σ. From an optimization perspec- tive, since the gradients with respect to brightness become smaller, the optimization along the direction of brightness adjustment is in turn slowed down. Based on this charac- teristic, in real-world model training, the GT-mean L1 loss enables LLIE models to focus on other important degener- ation factors, when p(eE[y]) and q(eE[f (x)])] become closer. In contrast, the original L1 loss is less capable of decou- pling the optimization with respect to brightness and other visual quality factors. Additionally, Figure 6(c) presents the weight curves that correspond to Figure 6(b), demonstrating how the GT-mean L1 loss behaves with regard to weight variation."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.6050320267677307,
+      "text": "Based on the above experimental design, we present the curve of the original L1 loss (Figure 6(a)), and the curves of the GT-mean L1 loss under different σ values (Figure 6(b)). The difference between them is that the use of the GT-mean loss clearly produces basins around η = 1. In an- other word, the GT-mean loss produces small-gradient re- gion with regard to brightness around η = 1, of which the range is controlled by σ. From an optimization perspec- tive, since the gradients with respect to brightness become smaller, the optimization along the direction of brightness adjustment is in turn slowed down. Based on this charac- teristic, in real-world model training, the GT-mean L1 loss enables LLIE models to focus on other important degener- ation factors, when p(eE[y]) and q(eE[f (x)])] become closer. In contrast, the original L1 loss is less capable of decou- pling the optimization with respect to brightness and other visual quality factors. Additionally, Figure 6(c) presents the weight curves that correspond to Figure 6(b), demonstrating how the GT-mean L1 loss behaves with regard to weight variation."
+    },
+    {
+      "id": "semantic_chunk::dav2_p6_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 6,
+      "score": 0.6046921610832214,
+      "text": "purely synthetic images highly precise distribution shift limited diversity unlabeled real images pseudo labels highly diverse & precise fine-grained details real-world distribution largest teacher pseudo-labeled real images largest teacher student model ☺ ☺ ☺ ☺ ☹ ☹ Figure 7: Depth Anything V2. We first train the most capable teacher on precise synthetic images. Then, to mitigate the distribution shift and limited diversity of synthetic data, we annotate unlabeled real images with the teacher. Finally, we train student models on high-quality pseudo-labeled images. Enhance the scene coverage. The diversity of synthetic images is limited, without including enough real-world scenes. Nevertheless, we can easily cover numerous distinct scenes by incorporating large-scale unlabeled images from public datasets. Moreover, synthetic images are indeed very redundant due to being repetitively sampled from pre-defined videos. In comparison, unlabeled real images are clearly distinguished and very informative."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.6042956113815308,
+      "text": "Inspired by human visual adaptation, we propose the GT- Mean Loss, which dynamically balances two optimization objectives to enable end-to-end training: • Original Loss Term. Maintain the model’s baseline ca- pabilities by directly optimizing L(f (x), y). • Brightness-Aligned Loss Term. This term is defined as L(λf (x), y), where λ = E[y]/E[f (x)] linearly scales f (x) such that the mean brightness of the scaled output E[λf (x)] aligns with E[y] . This eliminates the interfer- ence of brightness differences during optimization. To dynamically balance these two terms, we intro- duce W , which represents the Bhattacharyya distance be- tween the brightness distributions of f (x) and y. Unlike multi-stage frameworks, GT-Mean Loss enables brightness- decoupled optimization without requiring architectural modifications or manually tuned thresholds. Although perceptual losses can to some extent ignore the impact of brightness mismatch, almost all perceptual losses abandon corrections. In contrast, our GT-mean loss directly addresses the influence of brightness mismatch on pixel- level loss. The results in our experimental section validate this point in Section 4. 2."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.6042956113815308,
+      "text": "Inspired by human visual adaptation, we propose the GT- Mean Loss, which dynamically balances two optimization objectives to enable end-to-end training: • Original Loss Term. Maintain the model’s baseline ca- pabilities by directly optimizing L(f (x), y). • Brightness-Aligned Loss Term. This term is defined as L(λf (x), y), where λ = E[y]/E[f (x)] linearly scales f (x) such that the mean brightness of the scaled output E[λf (x)] aligns with E[y] . This eliminates the interfer- ence of brightness differences during optimization. To dynamically balance these two terms, we intro- duce W , which represents the Bhattacharyya distance be- tween the brightness distributions of f (x) and y. Unlike multi-stage frameworks, GT-Mean Loss enables brightness- decoupled optimization without requiring architectural modifications or manually tuned thresholds. Although perceptual losses can to some extent ignore the impact of brightness mismatch, almost all perceptual losses abandon corrections. In contrast, our GT-mean loss directly addresses the influence of brightness mismatch on pixel- level loss. The results in our experimental section validate this point in Section 4. 2."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc4",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6036393642425537,
+      "text": "Implementation Details The experiments on all models of different stages are con- ducted on the same ResNet architecture [13], so do the base- lines. The training for the Φday and the Φsyn are con- ducted for 20 epochs, while Φreal is initialized by Φsyn"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p12_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 12,
+      "score": 0.600403904914856,
+      "text": "We train with two synthetic datasets, Hypersim [37] and Virtual KITTI [7], and validate with the training split of NYUv2 [31] and a sub- sampled Eigen training split [14] of the KITTI dataset [17]. As shown in Tab. S3, training with a mixture of these two synthetic datasets yields better results on both indoor and outdoor real datasets, than training with a single synthetic dataset. Interestingly, based on the higher-quality indoor dataset, Hypersim [37], adding a small portion (5%) of Vir- tual KITTI [7], a street-view dataset, can already increase the performance on the outdoor dataset. We find a sweet spot at around 10% where the performance is improved on both indoor and outdoor scenes. When the ratio of Virtual KITTI keeps increasing, the overall performance is impaired. This is likely caused by the varying scene diversity and rendering quality of these two datasets. Table S3. Ablation study of the training dataset mixing strategy. Our method trained with only Hypersim delivers strong results. Outdoor performance is further enhanced with a small portion of Virtual KITTI. The zero-shot transfer is attained at 10% ratio."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p12_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.600403904914856,
+      "text": "We train with two synthetic datasets, Hypersim [37] and Virtual KITTI [7], and validate with the training split of NYUv2 [31] and a sub- sampled Eigen training split [14] of the KITTI dataset [17]. As shown in Tab. S3, training with a mixture of these two synthetic datasets yields better results on both indoor and outdoor real datasets, than training with a single synthetic dataset. Interestingly, based on the higher-quality indoor dataset, Hypersim [37], adding a small portion (5%) of Vir- tual KITTI [7], a street-view dataset, can already increase the performance on the outdoor dataset. We find a sweet spot at around 10% where the performance is improved on both indoor and outdoor scenes. When the ratio of Virtual KITTI keeps increasing, the overall performance is impaired. This is likely caused by the varying scene diversity and rendering quality of these two datasets. Table S3. Ablation study of the training dataset mixing strategy. Our method trained with only Hypersim delivers strong results. Outdoor performance is further enhanced with a small portion of Virtual KITTI. The zero-shot transfer is attained at 10% ratio."
+    },
+    {
+      "id": "semantic_chunk::dav2_p5_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 5,
+      "score": 0.5996754169464111,
+      "text": "However, this naive solution faces two problems. First, DINOv2-G frequently encounters failure cases when the patterns of real test images are rarely presented in synthetic training images. In Figure 6, we can clearly observe incorrect depth predictions for the sky (cloud) and the human head. Such failures can be expected as our synthetic training sets do not include diverse sky patterns or humans. Moreover, most applications cannot accommodate the resource-intensive DINOv2-G model (1. 3B) in terms of storage and inference efficiency. Actually, the smallest model in Depth Anything V1 is used most widely due to its real-time speed. To alleviate the generalization issue, some works [7, 89, 28] use a combined training set of real and synthetic images. Unfortunately, as shown in Section B. 9, the coarse depth map of real images is destructive to fine-grained prediction. Another potential solution is to collect more synthetic images, which is unsustainable as creating graphic engines mimicking every real-world scenario is intractable. Therefore, a reliable solution is demanding in building MDE models with synthetic data."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p16_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 16,
+      "score": 0.5992974042892456,
+      "text": "•Step 3: Self-Supervised Signal Generation (Image Reprojection): – Using the predicted depth map D and the predicted pose Tt→t′, we perform a warping operation to reproject the pixels from the source image It′ onto the target image’s coordinate system. This creates a synthesized target image, ˆIt. •Step 4: Loss Calculation and Optimization: 16"
+    },
+    {
+      "id": "semantic_chunk::ACD_p2_sc0",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.5991398096084595,
+      "text": ",PDJH PG\u0017DOO\u0010QLJKW PG\u0017DOO\u0010UDLQ D E 2XUV\u0010QLJKW 2XUV\u0010UDLQ ,PDJH PG\u0017DOO\u0010'' 2XUV Figure 1: (a) Comparison of training data in challenging scenes: Compared to the data generation method used in md4all [Gasperini et al., 2023 ], the samples generated by our approach are more realistic, providing a better simulation of challenging real-world conditions. (b) Estimation results in challenging scenes: Our method consistently produces more accurate results than the exist- ing md4all [Gasperini et al., 2023 ] method, particularly in handling complex issues such as ground water reﬂections and nighttime ob- ject recognition. depth maps to train the student model. However, the degraded characteristics in the translated image are unrealistic and un- natural (shown in Figure. 1(a)), which signiﬁcantly affects the generalization from normal scenarios to real adverse weather. In addition, existing methods are often vulnerable to distur- bances in complex scenes due to slack constraints between the teacher and student models, leading to incomplete knowl- edge transfer. Consequently, as shown in Figure."
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc4",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.5980722904205322,
+      "text": "2 [44] Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang, and Dongbin Zhao. Steps: Joint self- supervised nighttime image enhancement and depth estima- tion. In 2023 IEEE International Conference on Robotics and Automation (ICRA), pages 4916–4923, 2023. 1, 2 [45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork- gan: Seeing into the rainy night. In The IEEE European Conference on Computer Vision (ECCV), 2020. 2, 4 [46] Hanyu Zhou, Yi Chang, Wending Yan, and Luxin Yan. Un- supervised cumulative domain adaptation for foggy scene optical flow. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9569– 9578, 2023. 4, 5 [47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING, Yuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the common appearance-boundary adaptation for nighttime op- tical flow. InThe Twelfth International Conference on Learn- ing Representations, 2024. 2 [48] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video."
+    },
+    {
+      "id": "semantic_chunk::ACD_p1_sc4",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.5973110198974609,
+      "text": "However, due to the limitation for scene-speciﬁc representation, these meth- ods struggle to generalize to complex and diverse environ- ments, frequently encountered in real-world applications. To promote generalization, some efforts harmonize the merits of distillation learning, contrastive learning, and data augmenta- tion strategies to create more generalized models that improve model performance across varied scenes [Wang et al., 2024b; Wang et al., 2024a; Saunders et al., 2023 ]. For example, md4all [Gasperini et al., 2023 ] generates the [normal, de- graded] sample pairs with a GAN-based model and uses distillation learning to extract supervised signals from clear Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1251"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.5971575379371643,
+      "text": "Application of Phong Model. Finally, with the 3D structure, material information, and the color of the light source IF , the reflection image I R i will be C1(u) = max (0, N (u) ∗ Li (u))/ri (u)2 , C2(u) = max (0, Ri (u) ∗ Vi (u))gr /ri (u)2 , I R i = sF IF (KdC1 + KsC2). (24) Following [Phong, 1975 ], we set the exponential gr to 8. Here, sF is the scale factor of light source image LS. D. 3 Training detail Following [Godard et al., 2019; Zhao et al., 2022b], we use AdamW [Loshchilov and Hutter, 2017] as the optimizer, and the batch size is set to 12. We setlr of the Transformer-based encoder to 5e−5 and double it for the rest trainable part. An exponential decay learning rate scheduler is also used with 0. 9 as exponential. The total training step is set to 40,000. We use the same augmentation for the image splits as applied in [Liu et al., 2021; Wang et al., 2021; Godard et al., 2019; Zhao et al., 2022b]. For BPG, we set F min = smin F = 0. 5 , empirically. Be- sides, we use smax F = 2, Fmax = 2 as the default setting. As to ING, we set K min = 0. 1 following ELD [Wei et al., 2020]. We use K max = 1with P + T Las the default setting."
+    },
+    {
+      "id": "semantic_chunk::s_p4_sc0",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.596998929977417,
+      "text": "Figure 3. Analysis on our design. (a) Illustration of the gaps between the synthetic and real data on performance. (b) Green boxes emphasize the different pattern between synthetic and real data, which affects the model’s estimation especially for far planes. (c)-(d) The distribution difference between the daytime predicted depth and estimated depth in adverse conditions. In the training, it also requires a single-frame model as a reference to provide the consistent map M and guidance to the inconsistent parts. The total objective function is L = (1 − M )Lp + Lconsist + Lsmooth, (4) where Lp and Lsmooth are the typical losses for self- supervised depth [9, 10, 48]. Lconsist is a constraint from the single-frame model. Training on monocular videos pro- vides a strong model to work in normal conditions but suf- fer from degradation cases, and that’s why adapting to both normal and adverse conditions is important. 3. 2. Synthetic Adaptation with Motion and CV Since we do not have real daytime-adverse paired data, di- rectly adapting a daytime model to multiple adverse con- ditions is difficult."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.5967552661895752,
+      "text": "(a) LOLv1 (b) LOLv2 real (c) LOLv2 synthetic Figure 2. Performance across various supervised LLIE models trained by their original loss functions and our GT-mean loss functions. The performance is consistently improved when the GT-mean loss functions are adopted. Notably, this improvement is easily attainable, as the use of GT-mean loss functions is flexible and brings minimal additional computational costs during training. The issue under brightness mismatch has largely been ig- nored in existing supervised LLIE research, despite some indirect solutions that do not primarily address this prob- lem. For example, [23, 36, 39, 43] designed multiple sub-networks to decouple brightness from other factors and optimized them separately. Nevertheless, the divide- and-conquer roadmap inevitably complicates the model de- sign, as well as introducing significant computational over- head. Others use perceptual losses [12] to bypass pixel-level alignment, sacrificing reconstruction fidelity. A unified, ef- ficient solution remains elusive."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.5967551469802856,
+      "text": "(a) LOLv1 (b) LOLv2 real (c) LOLv2 synthetic Figure 2. Performance across various supervised LLIE models trained by their original loss functions and our GT-mean loss functions. The performance is consistently improved when the GT-mean loss functions are adopted. Notably, this improvement is easily attainable, as the use of GT-mean loss functions is flexible and brings minimal additional computational costs during training. The issue under brightness mismatch has largely been ig- nored in existing supervised LLIE research, despite some indirect solutions that do not primarily address this prob- lem. For example, [23, 36, 39, 43] designed multiple sub-networks to decouple brightness from other factors and optimized them separately. Nevertheless, the divide- and-conquer roadmap inevitably complicates the model de- sign, as well as introducing significant computational over- head. Others use perceptual losses [12] to bypass pixel-level alignment, sacrificing reconstruction fidelity. A unified, ef- ficient solution remains elusive."
+    },
+    {
+      "id": "semantic_chunk::ACD_p3_sc5",
+      "source": "data\\ACD.pdf",
+      "page": 3,
+      "score": 0.5958863496780396,
+      "text": "The aforementioned process is depicted as: h c i = Fc(SDT(ei,Pc)), (6) where SDT(·) refers to the Stable Diffusion Turbo model, and Fc(·) is the translator that transforms the normal sample into the corresponding adverse scene with the condition c and text prompt Pc. Detailed experiments related to data genera- tion can be found in the appendix. 3. 4 Robust Model Training To achieve full transfer and alignment of capabilities between the teacher model and student model, we propose the multi- granularity knowledge distillation strategy (MKD) to achieve the robust model training of the student model, detailed as follows. Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1253"
+    },
+    {
+      "id": "semantic_chunk::dav2_p4_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 4,
+      "score": 0.5953164100646973,
+      "text": "Inspired by several recent SD-based studies [31, 20, 25], that exclusively utilize synthetic images with complete depth information for training, we extensively check the label quality of synthetic images and note their potential to mitigate the drawbacks discussed above. Advantages of synthetic images. Their depth labels are highly precise in two folds. 1) All fine details (e.g., boundaries, thin holes, small objects, etc.) are correctly labeled. As demonstrated in Figure 4b, even all thin mesh structures and leaves are annotated with true depth. 2) We can obtain the actual depth of challenging transparent objects and reflective surfaces, e.g., the vase on the table in Figure 4b. In a word, the depth of synthetic images is truly “GT”. In the right side of Figure 4c, we show the fine-grained prediction of a MDE model trained on synthetic images. Moreover, we can quickly enlarge synthetic training images by collecting from graphics engines [58, 63, 53], which would not cause any privacy or ethical concerns, as compared to real images. 3 Challenges in Using Synthetic Data If synthetic data are so advantageous, why are real data still dominating MDE?"
+    },
+    {
+      "id": "semantic_chunk::s_p8_sc3",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.5950189232826233,
+      "text": "Given the abundant information within features and the heterogeneous visual cues across conditions, simply us- ing Lf eatleads to significantly worse performance than the baseline. In contrast, since the cost volume inherently filters extraneous information and retains motion-structure features, utilizing Lcv enhances the model’s performance in adverse scenarios. Moreover, applying RA alone with- out additional strategies does not guarantee improved per- formance on real data, as not all supervisions are valid. However, by incorporating Lcd to emphasize valid regions and LKL dis for structural prior constraint, the model’s perfor- mance gradually improves in real-world adverse conditions. The ablation study confirms the effectiveness of the indi- vidual components within the pipeline and highlights the importance of synthetic-to-real adaptation. 6. Conclusion In this work, we propose a synthetic-to-real learning pipeline for self-supervised robust depth estimation, includ- ing synthetic adaptation and real adaptation stages where the cost volume is constructed to transfer motion-structure feature from daytime to adverse conditions."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc5",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.5932109951972961,
+      "text": "Com- pared to the model’s forward and backward propagation, the original loss computation is minimal. The second term in the GT-Mean Loss is essentially a brightness-adjusted version of the original loss, sharing the same computational complexity. Thus, the GT-Mean Loss incurs only twice the computational overhead of the original loss. For example, 5"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc5",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.5932109951972961,
+      "text": "Com- pared to the model’s forward and backward propagation, the original loss computation is minimal. The second term in the GT-Mean Loss is essentially a brightness-adjusted version of the original loss, sharing the same computational complexity. Thus, the GT-Mean Loss incurs only twice the computational overhead of the original loss. For example, 5"
+    },
+    {
+      "id": "semantic_chunk::dav2_p20_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 20,
+      "score": 0.5921739339828491,
+      "text": "712 DINOv2-L [50] 0. 081 0. 937 0. 048 0. 976 0. 516 0. 731 0. 133 0. 864 0. 071 0. 949 DINOv2-L Reg [16] 0. 078 0. 942 0. 049 0. 975 0. 522 0. 734 0. 138 0. 856 0. 068 0. 952 DINOv2-G [50] 0. 075 0. 947 0. 044 0. 979 0. 530 0. 767 0. 131 0. 865 0. 066 0. 954 DINOv2-G Reg [16] 0. 084 0. 926 0. 061 0. 964 0. 753 0. 729 0. 141 0. 852 0. 086 0. 931 Table 13: Comparison among various pre-trained encoders when purely trained on synthetic images. B. 7 Benefit of gradient matching loss to fine-grained predictions MiDaS [56] proposes a gradient matching loss Lgm to enhance the depth sharpness. Unfortunately, we find this loss term fails to bring evident improvement when the model is trained on labeled real datasets. We speculate that, the sparse and coarse groundtruth label in real datasets cannot provide fine-grained supervision, even with this explicit regularization. To check this, we further apply and ablate this loss term on synthetic training datasets, whose labels are complete and highly precise. We gradually increase the loss weight of Lgm and observe the corresponding depth sharpness. As shown in Figure 10, when the weight is increased from the default 0. 5 to 4."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.5916956067085266,
+      "text": "In summary, the GT-mean loss is highlighted in the fol- lowing aspects: • Simplicity: The construction of the GT-mean loss is both theoretically and practically straightforward. Its underly- ing mechanism is easy to understand, and its implemen- tation is uncomplicated. • Flexibility: The GT-mean loss is highly flexible. For in- stance, the L1 loss can be directly extended into the L1 GT-mean version. This character makes adopting the GT- mean loss a universal choice for supervised LLIE models to upgrade their loss functions. • Low Cost : Using the GT-mean loss introduces mini- mal overhead during training (approximately doubling the original loss computation). It is negligible compared to the overall model optimization process. • Effectiveness: Extensive experiments have demonstrated that the GT-mean loss consistently improves model per- formance across a wide range of supervised LLIE meth- ods (as shown in Figure 2). 2. Related works Loss function is essential in LLIE tasks, as it directs model training. We categorize the loss functions in LLIE into two groups based on their purposes. Fidelity Losses."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.5916956067085266,
+      "text": "In summary, the GT-mean loss is highlighted in the fol- lowing aspects: • Simplicity: The construction of the GT-mean loss is both theoretically and practically straightforward. Its underly- ing mechanism is easy to understand, and its implemen- tation is uncomplicated. • Flexibility: The GT-mean loss is highly flexible. For in- stance, the L1 loss can be directly extended into the L1 GT-mean version. This character makes adopting the GT- mean loss a universal choice for supervised LLIE models to upgrade their loss functions. • Low Cost : Using the GT-mean loss introduces mini- mal overhead during training (approximately doubling the original loss computation). It is negligible compared to the overall model optimization process. • Effectiveness: Extensive experiments have demonstrated that the GT-mean loss consistently improves model per- formance across a wide range of supervised LLIE meth- ods (as shown in Figure 2). 2. Related works Loss function is essential in LLIE tasks, as it directs model training. We categorize the loss functions in LLIE into two groups based on their purposes. Fidelity Losses."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5912781953811646,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5912781953811646,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::s_p4_sc1",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6819047927856445,
+      "text": "Following [8, 22, 25, 28], we first adapt the pre-trained daytime models ΦD−day, ΦP −day (denoted as Φday in Fig. 2) to synthetic adverse model ΦD−syn, ΦP −syn. To realize that, a generative adversarial network (GAN) [45, 49] or a diffusion model [21] defined as Φaug is utilized as augmentations to translate the daytime images into multiple adverse conditions as ICi−syn = Φaug(Iday), Ci ∈ C, (5) where C represents the set of conditions. Then the adapta- tion can be conducted on the paired data Iday, ICi−syn in a distillation or teacher-student manner, where the outputs of ΦD−day, ΦP −day can be defined as Dday, Tday and those from ΦD−syn, ΦP −syn are Dsyn, Tsyn. The distillation ob- jective is the absolute relative depth loss: Ld = 1 HW HWX | Dday − Dsyn Dsyn |. (6) However, learning from only depth pseudo labels is still challenging to learn about the adverse patterns [29, 46], which motivates us to also discover an auxiliary space to inhibit the problems. Surprisingly, we find that the cost vol- ume can be an auxiliary space to transfer the knowledge.",
+      "estimated_tokens": 303
+    },
+    {
+      "id": "semantic_chunk::s_p8_sc2",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.6728833913803101,
+      "text": "These examples demonstrate our model’s adaptability to diverse real-world conditions. 4. 6. Analysis on Consistency Reweighting Examples of consistency maps discussed in Sec. 3. 3 are shown in Fig. 5, where brighter areas indicate higher con- sistency. The first two columns correspond to night condi- tions, showing that dark, distant regions exhibit low con- sistency between Dday and Dsyn, while near regions have much stronger consistency. The last two columns represent rain conditions, where the blurry areas show low consis- tency. This allows us to select the more reliable regions. More visualization results can be seen in supplementary. 5. Ablations To verify the effectiveness of each stage and the designed modules, we conduct ablations on learning from the cost volume ( Lcv), real adaptation without designed strategies (RA), consistency reweighting (CR), and structure prior constraint (LKL dis ). Additionally, we compare learning from the cost volume with direct learning from daytime features (Lf eat). The baseline is trained solely with depth loss in the synthetic adaptation (SA). Due to space limitations, we provide results for night and rain conditions in Tab. 4.",
+      "estimated_tokens": 245
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc2",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6553221940994263,
+      "text": "To address the synthetic-real gaps, we propose a novel real adaptation (RA) stage. One challenge is to find valid supervision signals from earlier trained models, and we design a consistency-reweighting strategy by incorporating different models to find a consistency map that can empha- size the valid parts of pseudo-labels and provide effective signals for learning in real-world conditions. Since pseudo- labels from the frozen model still suffer from the synthetic- real gap, we introduce an effective prior based on daytime depth predictions, by calculating explicit depth distribution from the daytime model and setting it to be a reference in di- verse conditions. This structural prior provides explicit con- straint when facing real adverse data, learning real-world information further effectively. With the proposed synthetic-to-real adaptation pipeline, our model can provide much more robust depth predictions in diverse conditions through different real-world datasets [5, 19, 37].",
+      "estimated_tokens": 180
+    },
+    {
+      "id": "semantic_chunk::s_p3_sc0",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.6484887599945068,
+      "text": "Figure 2. Illustration of our proposed pipeline. (a) Synthetic adaptation utilizes an augmentation model to generate paired data for training, and we also conduct learning in an auxiliary motion space. (b) Real adaptation leverages the daytime model and synthetic model to provide valid pseudo-labels with consistency reweighting, and the daytime depth distribution from plenty of daytime predictions are seen as structure prior to constrain the model facing real adverse data. (c) Inference stage can work in multi-frame and single-frame settings. ate realistic adverse data and employing a teacher-student framework. However, they overlook the importance of learning a common representation and do not consider about bridging the synthetic-real gap. In contrast, we pro- pose an auxiliary space to enhance robust representation learning and introduce a novel real adaptation stage. 3. Proposed Method We propose to estimate depth map from single frame or con- secutive frames under various conditions, including the nor- mal (e.g., daytime) and adverse scenarios (e.g., rain, night- time, etc.). We demonstrate our pipeline in Fig.",
+      "estimated_tokens": 218
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc5",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6344870328903198,
+      "text": "Recent methods [8, 22, 25, 28, 29] target multiple con- ditions, using data augmentation and generation techniques such as GANs and diffusion models [21, 38, 45, 49] to cre-",
+      "estimated_tokens": 53
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 999,
+    "compressed_context_tokens": 999,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 999,
+  "context_tokens": 999,
+  "prompt_token_estimate": 1382,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_syn2real_depth_synthetic_adaptation_data_flow",
+  "answer": "<think>\nThe question asks about how the Synthetic Adaptation stage generates training data and transfers daytime knowledge.\n\nFrom the materials:\n- [1] describes the synthetic adaptation: uses GAN or diffusion model Φaug to translate daytime images into adverse conditions, creating paired data, then uses teacher-student distillation with depth loss.\n- [4] describes the pipeline overview.\n- [5] mentions recent methods using data augmentation and generation.\n\nLet me synthesize this into a clear answer.\n</think>\n{\n  \"answer\": \"Synthetic Adaptation 阶段首先利用生成对抗网络（GAN）或扩散模型 Φaug 将白天图像翻译为多种恶劣条件下的合成图像，构成配对训练数据；然后通过教师-学生蒸馏框架，利用白天预训练模型的深度预测作为伪标签，以绝对相对深度损失 Ld 将白天知识转移给学生模型（合成适应模型）。\",\n  \"items\": [\n    {\n      \"name\": \"生成配对训练数据\",\n      \"description\": \"使用 GAN 或扩散模型 Φaug 将白天图像 Iday 翻译为多种恶劣条件下的合成图像 ICi−syn = Φaug(Iday)，形成配对数据用于训练。\",\n      \"citations\": [1, 5]\n    },\n    {\n      \"name\": \"通过蒸馏转移白天知识\",\n      \"description\": \"以白天预训练模型 ΦD−day、ΦP−day 为教师网络，其深度输出 Dday 作为伪标签，通过教师-学生蒸馏方式和绝对相对深度损失 Ld = (1/HW)Σ|Dday−Dsyn/Dsyn| 将白天知识转移到合成适应模型 ΦD−syn、ΦP−syn。\",\n      \"citations\": [1]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1412,
+    "completion_tokens": 346,
+    "total_tokens": 1758,
+    "model": "MiniMax-M3"
+  }
+}

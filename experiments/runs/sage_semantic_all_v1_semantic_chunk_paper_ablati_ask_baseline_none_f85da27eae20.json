@@ -1,0 +1,422 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_paper_ablati_ask_baseline_none_f85da27eae20",
+  "dry_run": false,
+  "query": "论文的 BPG/ING 消融实验说明了什么？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::TDDC_p15_sc3",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.6714385747909546,
+      "text": "4 More visualization for ablation analyses In Fig E. 1, the BPG helps the regions where highlight spots frequently occur, such as the cars and the road, as shown in the cyan dashed boxes. The ING simulates the potential imaging noises in the dark area, thus present better depth pre- diction at the background, such as the sky. The full model receives the merits of BPG and ING, and thus has the best prediction performance at the mentioned areas. More quanti- tative study is in Sec. 4. 4 in the main paper. Input Baseline BPG ING Full Figure E. 1: Ablation test. Left: test on nuScenes-Night. Right: test on RobotCar-Night. Baseline, BPG, ING, and Full mean us- ing nothing, Brightness Peak Generator, Image Noise Generator and BPG+ING for data compensation, respectively."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5997968316078186,
+      "text": "In our supplementary material, we provide additional tests on nuScenes-Day and Robotcar-Day, give a complete qual- itative comparison on nuScenes-Night/nuScenes-Day and RobotCar-Night/RobotCar-Day, and offer additional visual results on other nighttime datasets to further prove the effec- tiveness of our method. 4. 3 Ablation Test on Pre-processing Contribution of Each Part Table 4. 2 shows the contributions of each pre-processing part. The comparison of different self-supervised training ap- proaches is left to the supplementary material to further prove the effectiveness of our training framework. In nuScenes-Night, compared with the baseline, BPG im- proves ABS rel by 19. 3% and RMSE by 14. 0%, and ING im- proves ABS rel by 18. 0% and RMSE by 9. 1%. Besides, the joint application of BPG and ING achieves the best scores with 20. 8% improvement on ABS rel, 20. 1% on RMSE and 35. 3% on δ1. For RobotCar-Night, the joint application of BPG and ING still achieves a significant boost with 13. 2% on ABS rel and 9. 7% on RMSE. In addition, Table 4. 2 shows that the joint application of BPG and ING significantly improves RMSE (7. 2% in nuScenec-Night and 8."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.579218864440918,
+      "text": "We further discuss the effect of F max, Kmax as well as the composition of ING in our main paper. Since the processing of Re-rendering requires the corre- sponding depth map as input, decay usage of BPG and ING is applied, and the starting step is set to 20,000. To maintain performance on daytime images, BPG and ING processing rates are set to 0. 5, and these two probabilities are indepen- dent of each other. D. 4 Augmentation on light source images For the sampled light source image, a random rotation U (0, 2π) and a random flip is applied. Then, a random weight follows U (1, 3) is used to scale the brightness. U (0. 8, 1. 2) is used for the scale of contrast and saturation. A Gaussian blur is also used with a sigma limit range of[0. 1, 3] to enhance the low-passing glow effect. D. 5 Pre-crop of nuScenes and Oxford RobotCar Pre-cropping is used in RNW [Wang et al. , 2021 ] and ADDS [Liu et al. , 2021 ] to balance the image aspect ratio and cut out the imaging of car hoods. We follow the same approach as proposed in these papers. For nuScenes, the im- ages are first center-cropped from 1600 ×900 to 1536 ×768 before testing or the training of DA or DT types methods."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p3_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.5754026174545288,
+      "text": "\u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 , \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 Pose decoder ICN decoder Day - Image Splits Sample ING ( sec. 3. 4 ) BPG ( sec. 3. 3 ) \u0000 \u0000 3D position appointing Random darken Intensity \u0000 sampling Re - rendering Dark raw image simulation Intensity \u0000 sampling Noise simulation with calibration \u0000′ \u0000 \u0000 \u0000 \u0000 \u0000 \u0000\u0000 \u0000 \u0000 \u0000\u0000\u0000 \u0000 \u0000 \u0000\u0000 \u0000 \u0000 \u0000\u0000\u0000 Light Source Bank Prepare& Sample ING DepthNet DepthNet Detached Transformer Base CNN Base \u0000 \u0000 \u0000\u0000 BPG \u0000 \u0000 \u0000 \u0000 Photometric Loss Smooth Loss \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 , \u0000 \u0000 \u0000 , \u0000 \u0000 , \u0000 \u0000 \u0000 \u0000 \u0000 \u0000 Figure 2. 1: Overview of our data distribution compensation training framework . The proposed BPG and ING form our compensation stage, whose simple processes are also visualized in the top right. Note that BPG and ING will not participate in the backward propagation. Their input and output are detached. The Transformer-CNN hybrid DepthNet, CNN-based PoseNet and CNN-based Illuminating Change Net (ICN) constitute the trainable part of our framework. The two DepthNets share the same weights during training and the left one are frozen during the whole training."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p10_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.5676937103271484,
+      "text": "[52] Hengrun Zhao, Bolun Zheng, Shanxin Yuan, Hua Zhang, Chenggang Yan, Liang Li, and Gregory Slabaugh. 2022. CBREN: Convolutional Neural Networks for Constant Bit Rate Video Quality Enhancement. IEEE Transactions on Circuits and Systems for Video Technology 32, 7 (2022), 4138–4149. [53] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. 2023. Unleashing text-to-image diffusion models for visual perception. In Proceedings of the IEEE/CVF International Conference on Computer Vision . 5729– 5739. [54] B Zheng, S Yuan, C Yan, X Tian, J Zhang, Y Sun, L Liu, A Leonardis, and G Slabaugh. 2022. Learning Frequency Domain Priors for Image Demoireing. IEEE Transactions on Pattern Analysis and Machine Intelligence44, 11 (2022), 7705–7717."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p5_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.5651533007621765,
+      "text": "How- ever, raw images or the exact inverse ISP are not available in most daytime datasets. The simplest ISP includes white bal- ance, binning, denoising, color collection and gamma com- pression [Chen et al., 2018; Brooks et al., 2019]. Fortunately, except for denoising and gamma compression, rest operations can be viewed as approximately linear processes. We con- sider the gamma compression in ING as it’s strongly nonlin- ear. Following ELD, we set gn = 1/2. 2. To simulate the low photon count C in the dark, a light scale factor sn is proposed follows U (100, 300) [Wei et al., 2020]. Then, the simulated raw image will be RLR t = sbit(I LR t )1/gn sn , (13) where sbit denotes quantization factor equals to 2bit − 1. ING Intensity K According to Eq. 9, Eq. 11 and Eq. 12, system gain K has a positive relationship with the noise intensity. Therefore, we appoint K as ING Intensity. Similar in BPG, we make ING Intensity following the log uniform: log K ∼ U(log K min, log K max). (14) Finally, with the simulated raw image RLR t , the sampled shot noise Np and read noise Nread, the output of ING will be I LRN t = \u0012 snRLR t + KN p + Nread sbit \u0013gn . (15) Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p8_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.5622014999389648,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 8 ID SD PGD LKD MVC Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 1 0. 107 0. 787 4. 580 0. 182 0. 887 0. 963 0. 983 2 ✓ 0. 434 4. 630 11. 99 0. 579 0. 306 0. 568 0. 777 3 ✓ 0. 105 0. 757 4. 521 0. 181 0. 889 0. 964 0. 984 4 ✓ ✓ 0. 104 0. 741 4. 489 0. 180 0. 890 0. 964 0. 984 5 ✓ ✓ ✓ 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 TABLE IV ABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD: PSEUDO GROUND -TRUTH DIFFUSION ; MVC: MASKED VISUAL CONDITION MECHANISM . Inference step Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 2 1. 812 75. 600 30. 791 6. 160 0. 070 0. 141 0. 213 5 1. 503 58. 013 27. 140 5. 464 0. 125 0. 241 0. 340 10 0. 226 3. 730 9. 571 0. 754 0. 703 0. 878 0. 938 15 0. 822 28. 099 19. 232 2. 972 0. 357 0. 548 0. 653 20 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 25 0. 431 10. 382 12. 709 1. 206 0. 503 0. 723 0. 827 TABLE V ABLATION STUDY ON DIFFERENT INFERENCE STEPS . Fig. 7. Visualization of the denoising process involving 20 inference steps in total. E."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.5614692568778992,
+      "text": "Application of Phong Model. Finally, with the 3D structure, material information, and the color of the light source IF , the reflection image I R i will be C1(u) = max (0, N (u) ∗ Li (u))/ri (u)2 , C2(u) = max (0, Ri (u) ∗ Vi (u))gr /ri (u)2 , I R i = sF IF (KdC1 + KsC2). (24) Following [Phong, 1975 ], we set the exponential gr to 8. Here, sF is the scale factor of light source image LS. D. 3 Training detail Following [Godard et al., 2019; Zhao et al., 2022b], we use AdamW [Loshchilov and Hutter, 2017] as the optimizer, and the batch size is set to 12. We setlr of the Transformer-based encoder to 5e−5 and double it for the rest trainable part. An exponential decay learning rate scheduler is also used with 0. 9 as exponential. The total training step is set to 40,000. We use the same augmentation for the image splits as applied in [Liu et al., 2021; Wang et al., 2021; Godard et al., 2019; Zhao et al., 2022b]. For BPG, we set F min = smin F = 0. 5 , empirically. Be- sides, we use smax F = 2, Fmax = 2 as the default setting. As to ING, we set K min = 0. 1 following ELD [Wei et al., 2020]. We use K max = 1with P + T Las the default setting."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p4_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.5576857924461365,
+      "text": "When applied, BPG randomly samples a single image from the light source bank. Then, the image will be scaled to the standard size which is determined by the long side of It (A square whose sides are equal to the long side of It ). Simple image augmentation is further applied to expand the num- ber of light source images. The scaled and augmented light source image is used as the standard light source image LS. 3D Position of Light Source The sampled light source is assumed to be randomly dis- tributed in the scene. We do not model the location because it is costly to include precise segmentation information in our training which requires large trained models. Firstly, a 2D coordinatepi is randomly appointed as the lo- cation of the light source. We limit the depth of it,zi, with the predicted scale depth map (discussed latter in this section). A up range with higher priority was manually set to 25m as far- ther light sources produce almost invisible reflection images. Then, the appointed 3D position will be: Pi = ziK −1 I ˙pi."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p31_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 31,
+      "score": 0.5552076101303101,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p31_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 31,
+      "score": 0.5552076101303101,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5517416596412659,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5517416596412659,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p23_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 23,
+      "score": 0.5509016513824463,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p23_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 23,
+      "score": 0.5509016513824463,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p4_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.5506564378738403,
+      "text": "(2) Random Darken The above light source imaging LS cannot produce signifi- cant peaks of brightness on the image because the daytime image is usually well-lit with high brightness. To efficiently improve the role of LS on the photometric distribution, a simple random darkening operation is applied. The illumi- nation scale rate is set to follow uniform distribution, i.e. sd ∼ U(0. 4, 1). BPG Intensity F We use the product of the light sources number NF and a resize scale rate sF as the BPG IntensityF . To enrich outputs while avoiding numerous aggressive results, a log uniform distribution is applied to select NF and F : log sF ∼ U(log smin F , log smax F ), log F ∼ U(log F min, log F max), NF = max(⌊ F sF + 1 2 ⌋, 1). (3) Following Flare7K [Dai et al., 2022], BPG adds the light source within the gamma range of gf ∼ U(1. 8, 2. 2). The sampled image on current stage, I L t , will be I L t = (sdIt)gf + NFX i=1 ss (LS, sF , pi)gf ! 1/gf . (4) NF is the total number of light sources, and ss(., ., .) repre- sents scaling and shifting the sampledLS by the scale rate sF and the 2D coordinate pi. Figure 3. 1: Example visualizations of Re-rendering. Top: Reflec- tion images."
+    },
+    {
+      "id": "semantic_chunk::dav2_p16_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 16,
+      "score": 0.549463152885437,
+      "text": "10 [101] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, 2023. 2, 23 [102] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. In ICCV, 2023. 9 [103] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba. Places: A 10 million image database for scene recognition. TPAMI, 2017. 18, 28 16"
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p6_sc0",
+      "source": "data\\Global-Local.pdf",
+      "page": 6,
+      "score": 0.5441314578056335,
+      "text": "Corruption Type Method δ1↑ δ2↑ δ3↑ AbsRel↓ SqRel↓ RMSE↓ RMSElog↓ Clean BTS 0. 885 0. 978 0. 994 0. 110 0. 066 0. 392 0. 142 Adabins 0. 903 0. 984 0. 997 0. 103 0. 057 0. 364 0. 130 Ours 0. 915 0. 988 0. 997 0. 098 0. 049 0. 344 0. 124 Gaussian Noise BTS 0. 223 0. 384 0. 543 0. 435 0. 824 1. 589 0. 743 Adabins 0. 347 0. 553 0. 708 0. 343 0. 578 1. 299 0. 544 Ours 0. 775 0. 940 0. 983 0. 161 0. 126 0. 541 0. 198 Motion Blur BTS 0. 677 0. 850 0. 922 0. 189 0. 207 0. 701 0. 279 Adabins 0. 697 0. 859 0. 927 0. 180 0. 182 0. 643 0. 262 Ours 0. 807 0. 946 0. 981 0. 139 0. 103 0. 494 0. 183 Contrast BTS 0. 697 0. 864 0. 932 0. 181 0. 198 0. 689 0. 263 Adabins 0. 654 0. 836 0. 917 0. 198 0. 234 0. 752 0. 283 Ours 0. 860 0. 971 0. 992 0. 117 0. 074 0. 427 0. 152 Snow BTS 0. 410 0. 649 0. 803 0. 298 0. 423 1. 114 0. 458 Adabins 0. 410 0. 656 0. 817 0. 292 0. 410 1. 094 0. 440 Ours 0. 723 0. 926 0. 981 0. 170 0. 138 0. 598 0. 217 Table 4: Robustness experiment results on corrupted images of NYU Depth V2 datasets. The results of BTS and Adabins are obtained from distributed pre-trained weights. Method δ1 ↑ δ2 ↑ δ3 ↑ AbsRel↓ RMSE↓ log10↓ Baseline 0. 908 0. 987 0. 997 0. 101 0. 351 0."
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc5",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.543908953666687,
+      "text": "Recent methods [8, 22, 25, 28, 29] target multiple con- ditions, using data augmentation and generation techniques such as GANs and diffusion models [21, 38, 45, 49] to cre-"
+    },
+    {
+      "id": "semantic_chunk::dav2_p32_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 32,
+      "score": 0.5433583855628967,
+      "text": "Answer: [NA] Justification: This paper does not involves theoretical result. Guidelines: • The answer NA means that the paper does not include theoretical results. • All the theorems, formulas, and proofs in the paper should be numbered and cross- referenced. • All assumptions should be clearly stated or referenced in the statement of any theorems. • The proofs can either appear in the main paper or the supplemental material, but if they appear in the supplemental material, the authors are encouraged to provide a short proof sketch to provide intuition. • Inversely, any informal proof provided in the core of the paper should be complemented by formal proofs provided in appendix or supplemental material. • Theorems and Lemmas that the proof relies upon should be properly referenced. 4. Experimental Result Reproducibility Question: Does the paper fully disclose all the information needed to reproduce the main ex- perimental results of the paper to the extent that it affects the main claims and/or conclusions of the paper (regardless of whether the code and data are provided or not)?"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p24_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 24,
+      "score": 0.5425822734832764,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 24"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p24_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 24,
+      "score": 0.5425822734832764,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 24"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.5417488813400269,
+      "text": "Figure 1 illustrates a typical contradictory scenario. (b)GT (a) LPIPS↓: 0. 7480 L1 Loss: 0. 0504 IQA↑: 1. 4824 IAA↑: 1. 0605 LPIPS↓: 0. 0396 L1 Loss: 0. 0881 IQA↑: 3. 3300 IAA↑: 1. 7929 Figure 1. (a) exhibits severe degradation (noise and blur), with overall brightness consistent with the GT, while (b) has mostly clear details and textures, with overall brightness at 0. 9 times that of the GT. We use LPIPS( ↓) [46] , QALIGN’s [38] IQA( ↑) and IAA(↑) modules to represent the image quality of (a) and (b). This example reveals an unexpected behavior of the L1 loss (a typical pixel-level loss): the L1 loss assigns a lower loss value to the low- quality image (a) and a higher loss value to the high-quality image (b). 1 arXiv:2507. 20148v1 [cs. CV] 27 Jul 2025"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.5417488813400269,
+      "text": "Figure 1 illustrates a typical contradictory scenario. (b)GT (a) LPIPS↓: 0. 7480 L1 Loss: 0. 0504 IQA↑: 1. 4824 IAA↑: 1. 0605 LPIPS↓: 0. 0396 L1 Loss: 0. 0881 IQA↑: 3. 3300 IAA↑: 1. 7929 Figure 1. (a) exhibits severe degradation (noise and blur), with overall brightness consistent with the GT, while (b) has mostly clear details and textures, with overall brightness at 0. 9 times that of the GT. We use LPIPS( ↓) [46] , QALIGN’s [38] IQA( ↑) and IAA(↑) modules to represent the image quality of (a) and (b). This example reveals an unexpected behavior of the L1 loss (a typical pixel-level loss): the L1 loss assigns a lower loss value to the low- quality image (a) and a higher loss value to the high-quality image (b). 1 arXiv:2507. 20148v1 [cs. CV] 27 Jul 2025"
+    },
+    {
+      "id": "semantic_chunk::dav2_p35_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 35,
+      "score": 0.5414563417434692,
+      "text": "• The authors should state which version of the asset is used and, if possible, include a URL. • The name of the license (e.g., CC-BY 4. 0) should be included for each asset. • For scraped data from a particular source (e.g., website), the copyright and terms of service of that source should be provided. 35"
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p10_sc0",
+      "source": "data\\Global-Local.pdf",
+      "page": 10,
+      "score": 0.5404131412506104,
+      "text": "7 Appendix: Robustness of the Model In Table 8, we report a full table of the results on the corrupted NYU Depth V2 dataset. (Section 4. 5 of the main paper) Corruption Type Method δ1↑ δ2↑ δ3↑ AbsRel↓ SqRel↓ RMSE↓ RMSElog↓ Clean BTS 0. 885 0. 978 0. 994 0. 110 0. 066 0. 392 0. 142 Adabins 0. 903 0. 984 0. 997 0. 103 0. 057 0. 364 0. 130 Ours 0. 915 0. 988 0. 997 0. 098 0. 049 0. 344 0. 124 Noise Gaussian Noise BTS 0. 223 0. 384 0. 543 0. 435 0. 824 1. 589 0. 743 Adabins 0. 347 0. 553 0. 708 0. 343 0. 578 1. 299 0. 544 Ours 0. 775 0. 940 0. 983 0. 161 0. 126 0. 541 0. 198 Shot BTS 0. 280 0. 448 0. 600 0. 399 0. 736 1. 482 0. 669 Adabins 0. 436 0. 653 0. 791 0. 293 0. 460 1. 141 0. 454 Ours 0. 791 0. 949 0. 986 0. 152 0. 114 0. 523 0. 189 Impulse BTS 0. 116 0. 249 0. 420 0. 504 1. 006 1. 818 0. 875 Adabins 0. 377 0. 589 0. 736 0. 327 0. 541 1. 246 0. 518 Ours 0. 760 0. 938 0. 984 0. 167 0. 131 0. 556 0. 204 Speckle BTS 0. 456 0. 633 0. 756 0. 302 0. 500 1. 159 0. 492 Adabins 0. 639 0. 834 0. 918 0. 200 0. 244 0. 805 0. 294 Ours 0. 830 0. 965 0. 991 0. 136 0. 091 0. 467 0. 168 Blur Motion BTS 0. 677 0. 850 0. 922 0. 189 0. 207 0. 701 0. 279 Adabins 0. 697 0. 859 0. 927 0. 180 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.5366897583007812,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.5366897583007812,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p32_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 32,
+      "score": 0.5366339683532715,
+      "text": "ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 32"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p32_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 32,
+      "score": 0.5366339683532715,
+      "text": "ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 32"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p27_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 27,
+      "score": 0.5353289246559143,
+      "text": "ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 27"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p27_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 27,
+      "score": 0.5353289246559143,
+      "text": "ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 27"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.5351213216781616,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.5351213216781616,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p28_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 28,
+      "score": 0.5350049734115601,
+      "text": "ScanNet [10] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 28"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p28_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 28,
+      "score": 0.5350049734115601,
+      "text": "ScanNet [10] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 28"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5347069501876831,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5347069501876831,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p4_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.534593939781189,
+      "text": "Y. Zou et al. Fig. 3. SQGA module and its constituent components. The bottom left and bottom right corners show the SMG module and the masked transformer layer in the SQGA module, respectively. Fig. 4. Visualization of attention activation areas. After being guided by the semantic segmentation masks, 𝑄𝐵 focuses only on the corresponding semantic segments, achieving an eﬃcient execution of the structure recovery strategy within each semantic segment. map 𝑃𝑆 ∈ ℝ𝑀× 𝐻 4 × 𝑊 4 : 𝑃𝑆 = 𝐸𝑆 × 𝐹 ⊤ 𝑝 . (4) Next, we apply convolution and concatenation to expand the number of channels to 𝑀 + 𝑁, and ﬁnally binarize 𝑃𝑆 to obtain 𝑀𝑆 : 𝑀𝑆 (𝑥, 𝑦) = {1, 𝑃 𝑆 (𝑥, 𝑦) > 0. 5 0, 𝑃 𝑆 (𝑥, 𝑦) ≤ 0. 5 , (5) where 𝑃𝑆 (𝑥, 𝑦) represents the probability value at the corresponding pixel location, and 0. 5 is the binarization threshold. 3. 3. Segmentation proposal scale module We adaptively predict a metric scale for each semantic segment in the image, replacing original semantic labels with these scales to obtain the segmentation scale 𝐷𝑆 ∈ ℝ1× 𝐻 4 × 𝑊 4 ."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p4_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.5335066914558411,
+      "text": "3. 3 Photometric distribution modeling In this part, we model the nonuniform photometric distribu- tion at night by adding additional light sources. The wave optics/diffraction effect of light source imaging and reflec- tions are considered in the sampling. Since it makes peaks of brightness in the original image plane, we call it Brightness Peak Generator (BPG). Light Source Sample Due to the diffraction/wave optics effects[Lipson et al., 2010; Goodman, 2005 ], when a point light is viewed through an aperture that is not an ideal circle or a lens that is stained or scratched, the imaging results of the light source will be a combination of glare, streak, and shimmer, instead of a dot [Dai et al. , 2022; Kakimoto et al. , 2004 ]. In computer graphics, some methods [Kakimoto et al. , 2004; Luidolt et al., 2020] approximate this optical phenomenon by using the 2D Fourier transform, but the output is uncontrol- lable and the cost is expensive. Therefore, instead of simulat- ing the light source image directly, we construct a light source bank based on Flare7K [Dai et al., 2022] dataset, which is the only light source dataset with 7000 samples."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p2_sc6",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.5333631634712219,
+      "text": "Prompt-tuning techniques [2, 26, 44, 47, 52] have shown that by designing appropriate prompts, VFMs can be effec- tively tailored to specific scenarios. Feature adaptation approaches [2, 10, 13, 16, 53, 54] further enhance the applicability of VFMs across different tasks. VPD [ 53] has demonstrated the potential of extracting features from pre-trained text-to-image models for"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5331864356994629,
+      "text": "N-N & R-N DA: RNW DA: ADDS G: Ours Figure 4. 1: Qualitative results on nuScenes-Night (First four columns) and RobotCar-Night (Last four columns). We leave more visual comparisons to the supplementary material. Compare to DA types methods, our training applies no images from the nuScenes or Oxford RobotCar datasets. 0 1 2 3 4 0. 260. 270. 280. 290. 300. 310. 320. 33 BPG wo. R-R BPG w. R-RA BS rel (a) ABS rel 0 1 2 3 4 9. 09. 39. 69. 910. 210. 510. 8RMSE (b) RMSE 0 1 2 3 4 0. 440. 460. 480. 500. 520. 540. 560. 580. 60 (c) δ1 Figure 4. 2: Ablation on BPG. F max = 0 indicates the baseline. The result of BPG with or without Re-rendering is shown. (Best viewed with zoom.) (a) ABS rel 0 . 010 . 11 1 01 009. 29. 49. 69. 810. 010. 210. 410. 610. 8RMSE 0 (b) RMSE 0 . 010 . 11 1 01 000. 450. 480. 510. 540. 570. 60 0 (c) δ1 Figure 4. 3: Ablation on ING. K max = 0 represents the baseline. Result of N , P, T L, P + N and P + T Lis shown. presents that these methods generalize poorly to unseen night scenes, while our approach does not suffer from such a draw- back, and note that no specific nighttime dataset is used as the target dataset during our training."
+    },
+    {
+      "id": "semantic_chunk::dav2_p23_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 23,
+      "score": 0.53293377161026,
+      "text": "We use the keywords generated by GPT-4 to download images of corresponding scenarios on Flickr. C. 4 Visualization In Figure 19, we visualize some samples in our proposed DA-2K benchmark. They cover diverse representative scenarios and are of precise sparse annotations. D Limitations Currently, we use 62M unlabeled images for training. The computational burden is very heavy. Thus, in the future, we will study how to leverage such large-scale visual data more efficiently. Moreover, the current synthetic training sets are not diverse enough. We will attempt to collect synthetic images from more sources to train a more capable teacher model for better pseudo labeling. 23"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p26_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 26,
+      "score": 0.5326852202415466,
+      "text": "KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 26"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p26_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 26,
+      "score": 0.5326852202415466,
+      "text": "KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 26"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.5321075916290283,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement Jingxi Liao, Shijie Hao*, Richang Hong, Meng Wang, Hefei University of Technology, Hefei, China {jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.com Abstract Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting con- ditions. In supervised LLIE research, there exists a signifi- cant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth coun- terpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss func- tion directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT- mean form with minimal additional computational costs."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.5321075916290283,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement Jingxi Liao, Shijie Hao*, Richang Hong, Meng Wang, Hefei University of Technology, Hefei, China {jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.com Abstract Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting con- ditions. In supervised LLIE research, there exists a signifi- cant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth coun- terpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss func- tion directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT- mean form with minimal additional computational costs."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p7_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 7,
+      "score": 0.5320101976394653,
+      "text": "Y. Zou et al. Table 1 Quantitative comparison on the NYU-Depth V2 dataset. The best results are indicated in bold, and the second-best results are underlined. Method Venue Backbone 𝛿1 ↑ 𝛿2 ↑ 𝛿3 ↑ RMSE↓ AbsRel↓ log10↓ BTS [12] arXiv 2019 DenseNet-161 0. 871 0. 977 0. 995 0. 407 0. 113 0. 049 AdaBins [9] CVPR 2019 EﬃcientNet-B5 0. 903 0. 984 0. 997 0. 364 0. 103 0. 044 LocalBins [18] ECCV 2022 ResNet-101 0. 898 0. 987 0. 998 0. 357 – 0. 042 P3Depth [13] CVPR 2022 Swin-Large 0. 907 0. 981 0. 996 0. 356 0. 104 0. 043 NeWCRFs [16] CVPR 2022 Swin-Large 0. 927 0. 989 0. 998 0. 334 0. 095 0. 039 PixelFormer [39] WCAV 2023 Swin-Large 0. 929 0. 991 0. 998 0. 322 0. 090 0. 039 BinsFormer [10] TIP 2024 Swin-Large 0. 925 0. 991 0. 997 0. 330 0. 094 0. 040 iDisc [40] CVPR 2023 Swin-Large 0. 936 0. 992 0. 998 0. 313 0. 086 0. 037 ZoeDepth [41] arXiv 2023 Swin-Large 0. 937 0. 992 0. 998 0. 310 0. 086 0. 037 WorDepth [42] CVPR 2024 Swin-Large 0. 932 0. 992 0. 998 0. 317 0. 088 0. 038 Ours – Swin-Tiny 0. 893 0. 981 0. 995 0. 377 0. 107 0. 045 Swin-Large 0. 933 0. 991 0. 998 0. 316 0. 086 0. 037 Convnext-Large 0. 938 0. 991 0. 998 0. 308 0. 084 0. 036 Fig. 8."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.5302960276603699,
+      "text": "Y. Zou et al. Table 8 Ablation study on diﬀerent depth annotations on the NYU1449 dataset. Depth annotation type Metric depth accuracy Boundary accuracy 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ F1↑ R↑ B-AbsRel↓ rawDepths 0. 815 0. 147 0. 502 0. 061 0. 0191 0. 0139 0. 1970 Depths 0. 812 0. 147 0. 500 0. 060 0. 0192 0. 0142 0. 1932 Fig. 16. Visualization of the model’s intermediate prediction results. Table 9 Ablation study on the number of masked transformer layers in the SQGA module. Masked transformer layer SMG 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ 3 × 0. 792 0. 238 2. 043 0. 078 ✓ 0. 794 0. 234 1. 995 0. 078 6 × 0. 787 0. 234 1. 963 0. 079 ✓ 0. 796 0. 234 1. 924 0. 078 9 × 0. 779 0. 233 1. 934 0. 078 ✓ 0. 799 0. 230 1. 901 0. 073 12 × 0. 795 0. 238 2. 089 0. 076 ✓ 0. 792 0. 236 2. 011 0. 079 Table 10 Ablation study on the eﬀectiveness of segmentation scale. Setting 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ no scale 0. 790 0. 280 2. 026 0. 078 single metric scale 0. 789 0. 237 1. 971 0. 079 segmentation scale 0. 799 0. 230 1. 901 0. 073 Table 11 Ablation study on semantic segmentation and scale alignment constraints."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.5297871828079224,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT DomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ (HB→HB)6. 1204 0. 0903 0. 0233 0. 1353 13. 4847 3. 3579 0. 9489 0. 9812 0. 9908(HB→LED)17. 3113 0. 4479 0. 1955 0. 6817 52. 5132 20. 0263 0. 4699 0. 6652 0. 7658 (LED→LED)5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927(LED→HB)8. 05370. 15110. 0338 0. 2026 20. 11208. 19990. 9158 0. 9626 0. 9796 Table 4:Encoder-decoder performance across domains of NSDD. We denote (training domain→testing domain). The model trained on (HB) fails entirely when tested on (LED). Yet, (LED)-trained models are able to estimate depth when tested on the (HB) domain. Pattern# Images RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ HB Zero-shot19. 058 0. 430 0. 243 0. 587 27. 004 8. 134 0. 086 0. 186 0. 785LED 18. 023 0. 420 0. 232 0. 563 25. 500 7. 779 0. 096 0. 214 0. 867 HB 100 6. 499 0. 075 0. 033 0. 133 12. 894 0. 992 0. 9290. 977 0. 991LED 6. 198 0. 073 0. 032 0. 131 12. 182 0. 898 0. 933 0. 9770. 991 HB 500 5. 447 0. 0580. 0250. 112 10. 629 0. 688 0. 950 0. 9850. 995LED 5. 225 0. 057 0. 025 0. 108 10. 038 0. 648 0. 953 0. 986 0. 995 HB 1000 5. 124 0."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::TDDC_p15_sc3",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.6714385747909546,
+      "text": "4 More visualization for ablation analyses In Fig E. 1, the BPG helps the regions where highlight spots frequently occur, such as the cars and the road, as shown in the cyan dashed boxes. The ING simulates the potential imaging noises in the dark area, thus present better depth pre- diction at the background, such as the sky. The full model receives the merits of BPG and ING, and thus has the best prediction performance at the mentioned areas. More quanti- tative study is in Sec. 4. 4 in the main paper. Input Baseline BPG ING Full Figure E. 1: Ablation test. Left: test on nuScenes-Night. Right: test on RobotCar-Night. Baseline, BPG, ING, and Full mean us- ing nothing, Brightness Peak Generator, Image Noise Generator and BPG+ING for data compensation, respectively.",
+      "estimated_tokens": 193
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5997968316078186,
+      "text": "In our supplementary material, we provide additional tests on nuScenes-Day and Robotcar-Day, give a complete qual- itative comparison on nuScenes-Night/nuScenes-Day and RobotCar-Night/RobotCar-Day, and offer additional visual results on other nighttime datasets to further prove the effec- tiveness of our method. 4. 3 Ablation Test on Pre-processing Contribution of Each Part Table 4. 2 shows the contributions of each pre-processing part. The comparison of different self-supervised training ap- proaches is left to the supplementary material to further prove the effectiveness of our training framework. In nuScenes-Night, compared with the baseline, BPG im- proves ABS rel by 19. 3% and RMSE by 14. 0%, and ING im- proves ABS rel by 18. 0% and RMSE by 9. 1%. Besides, the joint application of BPG and ING achieves the best scores with 20. 8% improvement on ABS rel, 20. 1% on RMSE and 35. 3% on δ1. For RobotCar-Night, the joint application of BPG and ING still achieves a significant boost with 13. 2% on ABS rel and 9. 7% on RMSE. In addition, Table 4. 2 shows that the joint application of BPG and ING significantly improves RMSE (7. 2% in nuScenec-Night and 8.",
+      "estimated_tokens": 319
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.579218864440918,
+      "text": "We further discuss the effect of F max, Kmax as well as the composition of ING in our main paper. Since the processing of Re-rendering requires the corre- sponding depth map as input, decay usage of BPG and ING is applied, and the starting step is set to 20,000. To maintain performance on daytime images, BPG and ING processing rates are set to 0. 5, and these two probabilities are indepen- dent of each other. D. 4 Augmentation on light source images For the sampled light source image, a random rotation U (0, 2π) and a random flip is applied. Then, a random weight follows U (1, 3) is used to scale the brightness. U (0. 8, 1. 2) is used for the scale of contrast and saturation. A Gaussian blur is also used with a sigma limit range of[0. 1, 3] to enhance the low-passing glow effect. D. 5 Pre-crop of nuScenes and Oxford RobotCar Pre-cropping is used in RNW [Wang et al. , 2021 ] and ADDS [Liu et al. , 2021 ] to balance the image aspect ratio and cut out the imaging of car hoods. We follow the same approach as proposed in these papers. For nuScenes, the im- ages are first center-cropped from 1600 ×900 to 1536 ×768 before testing or the training of DA or DT types methods.",
+      "estimated_tokens": 323
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p31_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 31,
+      "score": 0.5552076101303101,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31",
+      "estimated_tokens": 84
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc5",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.543908953666687,
+      "text": "Recent methods [8, 22, 25, 28, 29] target multiple con- ditions, using data augmentation and generation techniques such as GANs and diffusion models [21, 38, 45, 49] to cre-",
+      "estimated_tokens": 53
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 972,
+    "compressed_context_tokens": 972,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 972,
+  "context_tokens": 972,
+  "prompt_token_estimate": 1380,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_paper_ablation_results",
+  "answer": "<think>\nThe user wants me to answer a question about the BPG/ING ablation experiment based on the provided materials. Let me analyze the materials:\n\nFrom [1]: BPG helps regions with frequent highlight spots (cars, road). ING simulates imaging noises in dark areas, improving depth prediction at background (sky). Full model combines both for best performance.\n\nFrom [2]: Quantitative results - BPG improves ABS rel by 19.3% and RMSE by 14.0% on nuScenes-Night. ING improves ABS rel by 18.0% and RMSE by 9.1%. Joint application achieves best scores with 20.8% improvement on ABS rel, 20.1% on RMSE, 35.3% on δ1. For RobotCar-Night, joint application achieves 13.2% on ABS rel and 9.7% on RMSE.\n\nNow I need to format the answer as a JSON object with the required structure.\n</think>\n{\n  \"answer\": \"BPG/ING 消融实验表明，BPG 和 ING 各自对夜间深度估计有互补的贡献：BPG 改善高光区域（如车和路面），ING 改善暗区域（如天空）的深度预测，二者联合使用在 nuScenes-Night 和 RobotCar-Night 上均取得最佳性能。\",\n  \"items\": [\n    {\n      \"name\": \"BPG 的作用\",\n      \"description\": \"BPG 模拟高频出现的高光区域（如车辆、路面），在 nuScenes-Night 上使 ABS rel 提升 19.3%、RMSE 提升 14.0%。\",\n      \"citations\": [1, 2]\n    },\n    {\n      \"name\": \"ING 的作用\",\n      \"description\": \"ING 模拟暗区域的成像噪声，改善背景（如天空）深度预测，在 nuScenes-Night 上使 ABS rel 提升 18.0%、RMSE 提升 9.1%。\",\n      \"citations\": [1, 2]\n    },\n    {\n      \"name\": \"BPG+ING 联合效果\",\n      \"description\": \"BPG 与 ING 联合使用效果最佳，在 nuScenes-Night 上 ABS rel 提升 20.8%、RMSE 提升 20.1%、δ1 提升 35.3%；在 RobotCar-Night 上 ABS rel 提升 13.2%、RMSE 提升 9.7%。\",\n      \"citations\": [2]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1407,
+    "completion_tokens": 520,
+    "total_tokens": 1927,
+    "model": "MiniMax-M3"
+  }
+}

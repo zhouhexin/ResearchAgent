@@ -1,0 +1,398 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_md4all_train_ask_baseline_none_c4e7de2251af",
+  "dry_run": false,
+  "query": "md4all-AD 如何生成训练样本并用它们训练自监督模型？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6926247477531433,
+      "text": "Day(-clear) While we do not include any modification addressing standard conditions, we still see improvements over the baselines across both datasets and supervision types (Tables 1 and 2). This is due to the training mix of easy and translated samples acting as a strong data augmen- tation and regularization technique. Since the same weights are optimized on all conditions, they learn to extract robust features which are beneficial also with good visibility. In- stead, RNW [38] is meant for operating only at night. All conditions Remarkably, across all tested conditions, md4all significantly improves over Monodepth2 and Ad- aBins on which we applied it, without the need for spe- cialized branches (Tables 1 and 2). There is no trade-off introduced when training our unique md4all model for mul- tiple conditions, as the scores and errors remain equivalent or even improve compared to training only in ideal settings. This proves the effectiveness and generality of our simple ideas. The Appendix includes preliminary results withsnow and fog on the challenging DENSE dataset [2]. AD and DD Our md4all delivers improvements both as DD and AD (Tables 1 and 2)."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6919506788253784,
+      "text": "md4all md4all md4all md4all depth model md4all md4all md4all md4all md4all md4all md4all md4all translation model adverse - translated image day - input image day - input sequence day - pose model md4all md4all day - input imageday - reconstructed input depth prediction odometry informationcamera pose estimation photometric loss weak velocity loss x % (1 − x) % x % md4all-AD: Always Daytime, No Bad Weather md4all md4all md4all md4all any - input image depth predictiondepth model weights being trained frozen weights day night rain training fog snow one of inference alternative paths (random)rain md4all md4all (same as in md4all-DD) T Figure 4. Our self-supervised md4all-AD framework. With x = 0, it is equivalent to the day - depth model in Figure 3 and the baseline. The depth model is trained with a mix of easy and translated samples, while the training signal is always from the easy ones. As shown at the top of Figure 3, since we do not apply any architectural modification, at inference time, we pre- dict depth with the same model through the same model parameters, regardless of the input condition."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6474993228912354,
+      "text": "While dedi- cated models or branches may lead to better performance, switching between them is not always trivial, e.g., at dusk or with light rain. Therefore, we opted for a single monocular model, which does not penalize inference time compared to the same model trained only on E. 3. 1. 3 md4all-DD: Day Distillation We take md4all-AD (Section 3. 1. 2) to the next level by sim- plifying the training scheme with md4all-DD. The core idea of md4all-DD is the same as for md4all-AD: we aim to learn depth only from E, pretending that the conditions C detri- mental for the losses never occur. Our md4all-DD framework mimics model estimates in ideal settings E, regardless of the difficulty of the input. As shown in Figure 3, we achieve this via knowledge distilla- tion from a depth network B (baseline) trained at an earlier stage on E to a new depth model DD for both easy and ad- verse scenarios (i.e., E and H). The latter is fed mi, i.e., the same mix of ei and hc i as in md4all-AD (Section 3. 1. 2), while the former is given only ei."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.6402961015701294,
+      "text": "md4all md4all md4all md4all md4all md4all md4all md4all day - depth model translation model day - input image adverse - translated image depth model depth prediction day - depth prediction md4all md4all any - input image depth prediction depth model day distillation loss x % (1 − x) % x % weights being trained frozen weights day night rain training fog snow one of inference md4all-DD: Day Distillation alternative paths (random) rain md4all md4all B T Figure 3. Our md4all-DD framework. The frozen day - depth model estimates on easy samples and provides guidance to another model fed with a mix of easy and translated inputs. Inference is done with a simple single model for both fully- and self-supervised md4all. between the target It and source frames Is∈{t−1,t+1}, with which we warp the source into a reconstructed target view. As in [11, 12], a loss is computed on the appearance shift between It and the reconstruction [46], alongside the struc- tural similarity [39]. Following [11], we account for partial occlusions via the minimum reprojection error Lp, and we ignore static pixels. Another loss Ls promotes smoothness and preserves edges [10]."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6356023550033569,
+      "text": "input image ground truth AdaBins md4all (sup.) [ours] Monodepth2 md4all (self-sup.) [ours] fully-supervised self-supervised Figure 5. Comparison on nuScenes [3] between fully-sup. AdaBins [1] w/o and w/ ours, and self-sup. Monodepth2 [11] w/o and w/ ours. bustness by making it harder to recover information for the depth task, as the translations act as data augmentation and regularization. The table confirms the robustness of md4all, performing similarly regardless of which GAN is used, even when degrading 10% of the inputs via random erasing. 4. 3. Qualitative Results Qualitative comparisons in Figures 5 and 6 confirm the quantitative findings, with our md4all delivering improved estimates in both adverse and standard conditions. On nuScenes [3] (Figure 5), unlike the baselines, both our mod- els correctly identified the truck in the first rainy sample. As shown in Figure 2, rain leads to artifacts in the LiDAR ground truth, which cause the standard fully-supervised Ad- aBins [1] to learn them and estimate the road wrongly."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6306056380271912,
+      "text": "While the two are applica- ble under both supervisions, available and reliable ground truth alongside the day-clear data makes AD more suitable for supervised setups. DD works better than AD in self- supervised settings thanks to the simplified training scheme and the guidance of our strong baseline. Robustness against translations In Table 3, we as- sess the impact of the quality of image translation on our method. While the selected ForkGAN [45] translates bet- ter than CycleGAN [47], it does not give perfect outputs either (Appendix). Since we use the translations to learn ro- bust features, their imperfections even help our model’s ro- Method avg/all day night [ours] w/ CycleGAN [47] 0. 1244 0. 1159 0. 1328 [ours] w/ ForkGAN [45] 0. 1174 0. 1128 0. 1219 [ours] w/ degraded ForkGAN 0. 1213 0. 1159 0. 1266 Table 3. Robustness of md4all-DD against translations from dif- ferent GANs. Evaluation of absRel on the RobotCar [23] test set. 8183"
+    },
+    {
+      "id": "semantic_chunk::ACD_p2_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.6264782547950745,
+      "text": "1(b), md4all suffers from nonnegligible performance decline when there are signiﬁcant domain differences between scenes, making it far from generalizing to various degraded scenarios. Overall, two critical issues are imperative to train a gener- alizable and reliable depth estimation model: (1) the lack of a high-quality multi-tuple dataset covering diverse degradation types; (2) slack constraints between the teacher and student model, resulting in incomplete knowledge transfer. To mitigate the problem of data scarcity, the author in [Tosi et al., 2025 ] utilize depth maps and text descriptions as control conditions to generate [normal, degraded] sample pairs with T2I-Adapter [Mou et al., 2024 ]. This provides an alternative solution with diffusion models for multi-tuple dataset generation [Zhu et al., 2017; Parmar et al., 2024; Sauer et al., 2025 ]. However, the translated image shows ob- vious inconsistencies and less authenticity of scene contents, which is unacceptable for training generalizable depth esti- mation models."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.6218048334121704,
+      "text": "Lp and Ls are calculated at all decoder scales, upsampled to the input size [11]. So far, this is equivalent to Monodepth2 [11]. Then, we add the weak velocity supervision Lv to achieve scale- awareness [12] and allow consistent predictions, beneficial when distilling knowledge between different models. Architecture Unlike previous works having specialized branches [22, 43], we leave the architecture unchanged (e.g., [11]). Instead, we act on the training process. Our approach is general and not bound to a specific architecture. 3. 1. 2 md4all-AD: Always Daytime, No Bad Weather Our md4all-AD configuration is shown in Figure 4. The core idea is learning from easy samples, even when given challenging ones (e.g., night) as if it was always daytime with good visibility (i.e., sunny or cloudy). This allows us- ing the same established losses described in Section 3. 1. 1, which would otherwise fail with difficult inputs. Day-to-adverse translation To achieve the above, we need easy samples corresponding to the challenging ones."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_sc2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6049305200576782,
+      "text": "Despite the robustness against translations (Table 3), GANs [45] could be prob- lematic. Better translations would help eliminate the do- main gap, as seen with RobotCar (Table 2). GANs require many adverse images for training. Hard-to-distinguish data distributions (e.g., light snow vs. overcast) may create prob- lems. md4all is applicable to stereo-based models too, but only given consistent translations for the stereo images. Fu- ture work may focus on eliminating the dependency on the GAN. Furthermore, md4all does not address the issue of dynamic objects, so flow [14] or weak radar supervision [8] may be beneficial, albeit adding complexity. The core ideas of this work can be extended to other tasks. The Appendix includes a variety of extra results, e.g., experiments with snow and fog, and sample translations. 5. Conclusion We presented the simple and effective md4all, enabling a single monocular model to estimate depth robustly in both standard and challenging conditions (e.g., night, rain). We showed md4all delivering significant improvements under both fully- or self-supervised settings, overcoming the detri- mental factors that make adverse conditions problematic. 8184"
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6039688587188721,
+      "text": "Our supervised md4all exhibits no such artifacts as it was not trained with the problematic rainy samples but rather on our translated ones, which have reliable ground truth. Instead, self-supervised methods have issues at night. While Mon- odepth2 [11] could identify critical elements of the scenes (e.g., car and sign), its difficulties in extracting informa- tion in the dark are evident. Monodepth2 had fewer issues input image WSGD md4all [ours] Figure 6. Comparison on RobotCar [23] samples between ours self-supervised and WSGD [37]. Ouputs of WSGD are from [37]. with brighter night samples, as shown in the Appendix. Our self-supervised md4all delivered sharp estimates, identify- ing even the two trees on the left side of the bottom in- put, which are particularly hard to see. For RobotCar [23] (Figure 6), we compared on the same samples displayed by WSGD in their paper [37]. As in Table 2, our md4all de- livered better and sharper estimates in both conditions, cor- rectly estimating the people’s distance. Limitations md4all improves in all tested conditions, but DD may propagate errors from the baseline. Thus, a stronger baseline would help."
+    },
+    {
+      "id": "semantic_chunk::ACD_p2_sc0",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.5909226536750793,
+      "text": ",PDJH PG\u0017DOO\u0010QLJKW PG\u0017DOO\u0010UDLQ D E 2XUV\u0010QLJKW 2XUV\u0010UDLQ ,PDJH PG\u0017DOO\u0010'' 2XUV Figure 1: (a) Comparison of training data in challenging scenes: Compared to the data generation method used in md4all [Gasperini et al., 2023 ], the samples generated by our approach are more realistic, providing a better simulation of challenging real-world conditions. (b) Estimation results in challenging scenes: Our method consistently produces more accurate results than the exist- ing md4all [Gasperini et al., 2023 ] method, particularly in handling complex issues such as ground water reﬂections and nighttime ob- ject recognition. depth maps to train the student model. However, the degraded characteristics in the translated image are unrealistic and un- natural (shown in Figure. 1(a)), which signiﬁcantly affects the generalization from normal scenarios to real adverse weather. In addition, existing methods are often vulnerable to distur- bances in complex scenes due to slack constraints between the teacher and student models, leading to incomplete knowl- edge transfer. Consequently, as shown in Figure."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.5851225256919861,
+      "text": "It is to be considered that LiDAR artifacts may have an impact on the rain val- ues, such that perfect estimates would not score perfectly because the ground truth is wrong (Figure 2). So, while we can assess the improvements of md4all at handling the blur caused by raindrops, we cannot correctly quantify its impact on eliminating the artifacts. Therefore, these com- parisons are more meaningful when considered alongside qualitative outputs (Figure 5). Our supervised md4all per- formed better than AdaBins both quantitatively and quali- tatively, eliminating the dependency on the sensor artifacts. Additionally, thanks to the strong regularization introduced by the translated samples, our model generalizes signifi- cantly better than the standard AdaBins, leading to vast im- provements across the board, also at night. Training on the sparse LiDAR signal of nuScenes [3] (Figures 2 and 5) can lead to overfitting. Ours is a beneficial data augmentation technique, adding diversity to the training, as the model is shown |C| + 1variations of each day-clear input."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p4_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.5693824291229248,
+      "text": "The structure of the ARD module is shown in Fig. 7. We ﬁrst predict a set of discrete bins 𝐵 = {𝑏1, 𝑏2, … , 𝑏𝑖, … , 𝑏𝑁 }. Pattern Recognition 171 (2026) 112279 4"
+    },
+    {
+      "id": "semantic_chunk::ACD_p1_sc4",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.5672577619552612,
+      "text": "However, due to the limitation for scene-speciﬁc representation, these meth- ods struggle to generalize to complex and diverse environ- ments, frequently encountered in real-world applications. To promote generalization, some efforts harmonize the merits of distillation learning, contrastive learning, and data augmenta- tion strategies to create more generalized models that improve model performance across varied scenes [Wang et al., 2024b; Wang et al., 2024a; Saunders et al., 2023 ]. For example, md4all [Gasperini et al., 2023 ] generates the [normal, de- graded] sample pairs with a GAN-based model and uses distillation learning to extract supervised signals from clear Proceedings of the Thirty-Fourth International Joint Conference on Artiﬁcial Intelligence (IJCAI-25) 1251"
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.5622155070304871,
+      "text": "Our md4all outperforms them all across the board, with substantially better estimates at night than theirs dur- ing the day: the previous best WSGD [37]’s day absRel error is 45% higher than ours at night. This is thanks to the simplicity of our approach, which does not rely on complex architectures, but makes existing models robust in adverse conditions by changing their input and training signals. Rain – nuScenes Rain is less problematic than darkness due to the lack of cues in the latter. Results are shown in Table 1, with all methods performing better with rain than at night. Our self-supervised monocular md4all-DD signif- icantly improved over Monodepth2 and the baseline, per- forming close to the radar-based R4Dyn [8]. Fully-supervised Table 1 reports also results in super- vised settings. LiDAR data is reliable in the dark, so night scenes are less of an issue. Instead, rain inputs are partic- ularly interesting for supervised works due to the reflection issues shown in Figures 1 and 2. For supervised settings, we applied our method on AdaBins [1]."
+    },
+    {
+      "id": "semantic_chunk::ACD_p6_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5582493543624878,
+      "text": "07 0. 1414 7. 228 80. 98 DMMDE v1 [Tosi et al., 2025 ] Ms dT‡(nr) 0. 1370 6. 318 85. 05 0. 1880 8. 432 69. 94 0. 1470 7. 345 79. 59 DMMDE v2 [Tosi et al., 2025 ] Ms dT‡(nr) 0. 1400 6. 573 83. 51 0. 1970 8. 826 69. 65 0. 1430 7. 317 80. 28 DMMDE v3 [Tosi et al., 2025 ] Ms dT‡(nr) 0. 1280 6. 449 84. 03 0. 1910 8. 433 71. 14 0. 1390 7. 129 81. 36 ACDepth (Ours) Mv dT(nr) 0. 1340 6. 284 85. 07 0. 1873 8. 125 71. 14 0. 1377 6. 970 81. 32 Table 1: Evaluation of self-supervised methods on nuScenes [Caesar et al., 2020 ] validation set. v1,v2,v3: depth maps from md4all-DD, DPT, Depth Anything in [Tosi et al., 2025 ]. Supervisions (sup.): M: via monocular videos, *: test-time median-scaling via LiDAR, v: weak velocity, s: test-time scaling via LSE criterion [Ranftl et al., 2020]. Training data (tr.data): d: day-clear, n: night, r: rain, a: all. T†: Translated via GAN, T‡: Translated via Diffusion. Visual support: 1st and 2nd. Figure. 4(a) presents qualitative results. md4all-DD is partic- ularly sensitive to water reﬂections in rainy scenes. For exam- ple, in the ﬁrst and second rows of Figure."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p9_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 9,
+      "score": 0.5566074848175049,
+      "text": "Y. Zou et al. Fig. 10. Qualitative comparison on the Cityscapes dataset. Table 4 Zero-shot quantitative results on two unseen datasets. Method SUN RGB-D Virtual KITTI 2 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ BTS [12] 0. 740 0. 933 0. 172 0. 515 0. 075 0. 831 0. 948 0. 115 5. 368 0. 054 AdaBins [9] 0. 771 0. 944 0. 159 0. 476 0. 068 0. 862 0. 957 0. 112 5. 218 0. 048 LocalBins [18] 0. 777 0. 949 0. 156 0. 470 0. 067 0. 810 0. 940 0. 127 5. 981 0. 061 NeWCRFs [16] 0. 798 0. 967 0. 151 0. 424 0. 064 0. 829 0. 951 0. 117 5. 691 0. 056 BinsFormer [10] 0. 805 0. 963 0. 143 0. 421 0. 061 – – – – – ZoeDepth [41] 0. 856 0. 979 0. 123 0. 356 0. 053 0. 850 0. 965 0. 105 5. 095 0. 050 Ours 0. 822 0. 969 0. 135 0. 395 0. 057 0. 890 0. 964 0. 098 4. 878 0. 043 Fig. 11. Qualitative zero-shot results on the SUN RGB-D dataset. Pattern Recognition 171 (2026) 112279 9"
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_sc4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.5547636151313782,
+      "text": "PackNet [12] improved at night and rain, albeit doing worse in standard settings, possibly due to its large model and the relatively small dataset. Pack- Net’s velocity supervision also helped over Monodepth2 (md2) with our baseline. Thanks to the extra radar signal, R4Dyn [8] delivered significant improvements, although at night, only adding radar in input was beneficial over md2. md2 trained only on day-clear data outperformed RNW’s complex pipeline [38]. We retrained RNW on the official split (the authors reported an absRel of 0. 3150 at night on their split [38]). Remarkably, despite being based on the same model as md2, atnight, our simple techniques reduced absRel by 32% and relatively increased δ1 by 37% (DD). Our md4all also outperformed the radar-based R4Dyn at night. This is thanks to the ability of our method to extract robust features from monocular data even in the dark. 8182"
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.5516607761383057,
+      "text": "180 0. 808 0. 966 0. 989 WSGD[Vankadariet al., 2023] R d&n 640× 320 40 0. 123 0. 694 3. 957 0. 163 0. 835 0. 978 0. 995 DA ITDFA[Zhaoet al., 2022a] R d&n 640× 320 40 0. 156 0. 786 3. 971 0. 192 0. 778 0. 965 0. 992 ADDS[Liu et al., 2021]† R d&n 640× 320 40 0. 109 0. 584 3. 578 0. 153 0. 631 0. 908 0. 962 ADDS[Liu et al., 2021] R d&n 640× 320 40 0. 120 0. 778 4. 113 0. 172 0. 856 0. 967 0. 987 RNW[Wanget al., 2021] R d&n 640× 320 40 0. 156 0. 701 3. 838 0. 202 0. 768 0. 958 0. 991 G ITDFA[Zhaoet al., 2022a] N d&n 640× 320 40 0. 230 2. 018 6. 336 0. 281 0. 653 0. 875 0. 956 ADDS[Liu et al., 2021] N d&n 640× 320 40 0. 180 1. 441 5. 680 0. 232 0. 727 0. 930 0. 981 RNW[Wanget al., 2021] N d&n 640× 320 40 0. 271 3. 939 9. 204 0. 314 0. 661 0. 830 0. 927 MonoFormer[Baeet al., 2023] K 768 × 256 40 0. 138 0. 665 3. 730 0. 181 0. 824 0. 971 0. 993 MonoViT[Zhaoet al., 2022b] K 768 × 256 40 0. 102 0. 500 3. 364 0. 147 0. 905 0. 977 0. 992 Ours K 768 × 256 40 0. 109 0. 477 3. 261 0. 151 0. 891 0. 978 0. 993 Table E. 1: Effective test on nuScenes-Day [Wang et al., 2021; Caesar et al., 2020] and Robotcar-Day [Liu et al., 2021; Maddern et al., 2017]."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5505080819129944,
+      "text": "In our supplementary material, we provide additional tests on nuScenes-Day and Robotcar-Day, give a complete qual- itative comparison on nuScenes-Night/nuScenes-Day and RobotCar-Night/RobotCar-Day, and offer additional visual results on other nighttime datasets to further prove the effec- tiveness of our method. 4. 3 Ablation Test on Pre-processing Contribution of Each Part Table 4. 2 shows the contributions of each pre-processing part. The comparison of different self-supervised training ap- proaches is left to the supplementary material to further prove the effectiveness of our training framework. In nuScenes-Night, compared with the baseline, BPG im- proves ABS rel by 19. 3% and RMSE by 14. 0%, and ING im- proves ABS rel by 18. 0% and RMSE by 9. 1%. Besides, the joint application of BPG and ING achieves the best scores with 20. 8% improvement on ABS rel, 20. 1% on RMSE and 35. 3% on δ1. For RobotCar-Night, the joint application of BPG and ING still achieves a significant boost with 13. 2% on ABS rel and 9. 7% on RMSE. In addition, Table 4. 2 shows that the joint application of BPG and ING significantly improves RMSE (7. 2% in nuScenec-Night and 8."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.5499534606933594,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT DomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ (HB→HB)6. 1204 0. 0903 0. 0233 0. 1353 13. 4847 3. 3579 0. 9489 0. 9812 0. 9908(HB→LED)17. 3113 0. 4479 0. 1955 0. 6817 52. 5132 20. 0263 0. 4699 0. 6652 0. 7658 (LED→LED)5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927(LED→HB)8. 05370. 15110. 0338 0. 2026 20. 11208. 19990. 9158 0. 9626 0. 9796 Table 4:Encoder-decoder performance across domains of NSDD. We denote (training domain→testing domain). The model trained on (HB) fails entirely when tested on (LED). Yet, (LED)-trained models are able to estimate depth when tested on the (HB) domain. Pattern# Images RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ HB Zero-shot19. 058 0. 430 0. 243 0. 587 27. 004 8. 134 0. 086 0. 186 0. 785LED 18. 023 0. 420 0. 232 0. 563 25. 500 7. 779 0. 096 0. 214 0. 867 HB 100 6. 499 0. 075 0. 033 0. 133 12. 894 0. 992 0. 9290. 977 0. 991LED 6. 198 0. 073 0. 032 0. 131 12. 182 0. 898 0. 933 0. 9770. 991 HB 500 5. 447 0. 0580. 0250. 112 10. 629 0. 688 0. 950 0. 9850. 995LED 5. 225 0. 057 0. 025 0. 108 10. 038 0. 648 0. 953 0. 986 0. 995 HB 1000 5. 124 0."
+    },
+    {
+      "id": "semantic_chunk::ACD_p6_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5488290190696716,
+      "text": "4(a), the obvious errors of depth estimation are observed in the regions of water surface reﬂections. In addition for nighttime scenes, md4all- DD is hard to predict the real depth of regions hidden in the darkness. In contrast, our ACDepth method can produce rea- sonable and reliable predictions of depth information in night scenes, such as trees and cars under low-light conditions. Comparison on the RobotCar . To further verify the effec- tiveness, we compare our ACDepth with existing state-of-the- art approaches on the RobotCar benchmark. As expected in Table 2, our method achieves the best performance in almost all metrics. Compared to md4all-DD, our approach reduces RMSE by 8. 80% on the standard benchmark and 11. 99% on the challenging benchmark, highlighting the superiority of our approach. To demonstrate the effectiveness of our method, Figure. 4(b) provides the visual comparisons, show- ing that our ACDepth can produce more precise depth maps over those of md4all-DD on both day and night scenes."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.5467896461486816,
+      "text": "Robust Monocular Depth Estimation under Challenging Conditions Stefano Gasperini∗,1,2 Nils Morbitzer∗,1 HyunJun Jung1 Nassir Navab1 Federico Tombari1,3 1 Technical University of Munich 2 VisualAIs 3 Google Abstract While state-of-the-art monocular depth estimation ap- proaches achieve impressive results in ideal settings, they are highly unreliable under challenging illumination and weather conditions, such as at nighttime or in the presence of rain. In this paper, we uncover these safety-critical is- sues and tackle them with md4all: a simple and effective solution that works reliably under both adverse and ideal conditions, as well as for different types of learning super- vision. We achieve this by exploiting the efficacy of existing methods under perfect settings. Therefore, we provide valid training signals independently of what is in the input. First, we generate a set of complex samples corresponding to the normal training ones. Then, we train the model by guiding its self- or full-supervision by feeding the generated sam- ples and computing the standard losses on the correspond- ing original images."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p10_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.5466718673706055,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 10 [18] Ning Zhang, Francesco Nex, George V osselman, and Norman Kerle. Lite-mono: A lightweight cnn and transformer architecture for self- supervised monocular depth estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 18537– 18546, 2023. [19] Emiel Hoogeboom, Vıctor Garcia Satorras, Cl ´ement Vignac, and Max Welling. Equivariant diffusion for molecule generation in 3d. In Inter- national Conference on Machine Learning , pages 8867–8887. PMLR, 2022. [20] Brian L Trippe, Jason Yim, Doug Tischer, Tamara Broderick, David Baker, Regina Barzilay, and Tommi Jaakkola. Diffusion probabilistic modeling of protein backbones in 3d for the motif-scaffolding problem. arXiv preprint arXiv:2206. 04119 , 2022. [21] Shoufa Chen, Peize Sun, Yibing Song, and Ping Luo. Diffusiondet: Diffusion model for object detection. arXiv preprint arXiv:2211. 09788, 2022. [22] Ting Chen, Lala Li, Saurabh Saxena, Geoffrey Hinton, and David J Fleet. A generalist framework for panoptic segmentation of images and videos. arXiv preprint arXiv:2210. 06366 , 2022. [23] Saurabh Saxena, Abhishek Kar, Mohammad Norouzi, and David J Fleet."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5465865135192871,
+      "text": "N-N & R-N DA: RNW DA: ADDS G: Ours Figure 4. 1: Qualitative results on nuScenes-Night (First four columns) and RobotCar-Night (Last four columns). We leave more visual comparisons to the supplementary material. Compare to DA types methods, our training applies no images from the nuScenes or Oxford RobotCar datasets. 0 1 2 3 4 0. 260. 270. 280. 290. 300. 310. 320. 33 BPG wo. R-R BPG w. R-RA BS rel (a) ABS rel 0 1 2 3 4 9. 09. 39. 69. 910. 210. 510. 8RMSE (b) RMSE 0 1 2 3 4 0. 440. 460. 480. 500. 520. 540. 560. 580. 60 (c) δ1 Figure 4. 2: Ablation on BPG. F max = 0 indicates the baseline. The result of BPG with or without Re-rendering is shown. (Best viewed with zoom.) (a) ABS rel 0 . 010 . 11 1 01 009. 29. 49. 69. 810. 010. 210. 410. 610. 8RMSE 0 (b) RMSE 0 . 010 . 11 1 01 000. 450. 480. 510. 540. 570. 60 0 (c) δ1 Figure 4. 3: Ablation on ING. K max = 0 represents the baseline. Result of N , P, T L, P + N and P + T Lis shown. presents that these methods generalize poorly to unseen night scenes, while our approach does not suffer from such a draw- back, and note that no specific nighttime dataset is used as the target dataset during our training."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.5445669889450073,
+      "text": "Method Train Abs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Eigen [9] D 0. 203 1. 548 6. 307 0. 282 0. 702 0. 890 0. 890Liu [36] D 0. 201 1. 584 6. 471 0. 273 0. 680 0. 898 0. 967Klodt [28] D*M 0. 166 1. 490 5. 998 - 0. 778 0. 919 0. 966AdaDepth [45] D* 0. 167 1. 257 5. 578 0. 237 0. 771 0. 922 0. 971Kuznietsov [30] DS 0. 113 0. 741 4. 621 0. 189 0. 862 0. 960 0. 986DVSO [68] D*S 0. 097 0. 734 4. 442 0. 187 0. 888 0. 958 0. 980SVSM FT [39] DS 0. 094 0. 626 4. 252 0. 177 0. 891 0. 965 0. 984Guo [16] DS 0. 096 0. 641 4. 095 0. 168 0. 892 0. 967 0. 986DORN [10] D 0. 072 0. 307 2. 727 0. 120 0. 932 0. 984 0. 994 Zhou [76]† M 0. 183 1. 595 6. 709 0. 270 0. 734 0. 902 0. 959Yang [70] M 0. 182 1. 481 6. 501 0. 267 0. 725 0. 906 0. 963Mahjourian [40] M 0. 163 1. 240 6. 220 0. 250 0. 762 0. 916 0. 968GeoNet [71]† M 0. 149 1. 060 5. 567 0. 226 0. 796 0. 935 0. 975DDVO [62] M 0. 151 1. 257 5. 583 0. 228 0. 810 0. 936 0. 974DF-Net [78] M 0. 150 1. 124 5. 507 0. 223 0. 806 0. 933 0. 973LEGO [69] M 0. 162 1. 352 6. 276 0. 252 - - -Ranjan [51] M 0. 148 1. 149 5. 464 0. 226 0. 815 0. 935 0. 973EPC++ [38] M 0. 141 1. 029 5. 350 0. 216 0. 816 0. 941 0. 976Struct2depth ‘(M)’ [5] M 0. 141 1."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.5445669889450073,
+      "text": "Method Train Abs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Eigen [9] D 0. 203 1. 548 6. 307 0. 282 0. 702 0. 890 0. 890Liu [36] D 0. 201 1. 584 6. 471 0. 273 0. 680 0. 898 0. 967Klodt [28] D*M 0. 166 1. 490 5. 998 - 0. 778 0. 919 0. 966AdaDepth [45] D* 0. 167 1. 257 5. 578 0. 237 0. 771 0. 922 0. 971Kuznietsov [30] DS 0. 113 0. 741 4. 621 0. 189 0. 862 0. 960 0. 986DVSO [68] D*S 0. 097 0. 734 4. 442 0. 187 0. 888 0. 958 0. 980SVSM FT [39] DS 0. 094 0. 626 4. 252 0. 177 0. 891 0. 965 0. 984Guo [16] DS 0. 096 0. 641 4. 095 0. 168 0. 892 0. 967 0. 986DORN [10] D 0. 072 0. 307 2. 727 0. 120 0. 932 0. 984 0. 994 Zhou [76]† M 0. 183 1. 595 6. 709 0. 270 0. 734 0. 902 0. 959Yang [70] M 0. 182 1. 481 6. 501 0. 267 0. 725 0. 906 0. 963Mahjourian [40] M 0. 163 1. 240 6. 220 0. 250 0. 762 0. 916 0. 968GeoNet [71]† M 0. 149 1. 060 5. 567 0. 226 0. 796 0. 935 0. 975DDVO [62] M 0. 151 1. 257 5. 583 0. 228 0. 810 0. 936 0. 974DF-Net [78] M 0. 150 1. 124 5. 507 0. 223 0. 806 0. 933 0. 973LEGO [69] M 0. 162 1. 352 6. 276 0. 252 - - -Ranjan [51] M 0. 148 1. 149 5. 464 0. 226 0. 815 0. 935 0. 973EPC++ [38] M 0. 141 1. 029 5. 350 0. 216 0. 816 0. 941 0. 976Struct2depth ‘(M)’ [5] M 0. 141 1."
+    },
+    {
+      "id": "semantic_chunk::s_p2_sc5",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.5419872999191284,
+      "text": "Recent methods [8, 22, 25, 28, 29] target multiple con- ditions, using data augmentation and generation techniques such as GANs and diffusion models [21, 38, 45, 49] to cre-"
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.5412700176239014,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17 Ldepth Lgrad Lnormal Metrics L1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ ✓ ✗ ✗ ✗ ✗ 5. 9790. 1910. 020 0. 13213. 032 14. 3520. 957 0. 982 0. 991 ✗ ✓ ✗ ✗ ✗ 5. 852 0. 187 0. 021 0. 13213. 12212. 9840. 9570. 9830. 992 ✗ ✓ ✓ ✗ ✗ 5. 760 0. 201 0. 020 0. 137 13. 616 16. 174 0. 9580. 9830. 992 ✗ ✓ ✗ ✓ ✗ 5. 386 0. 2020. 0210. 12412. 373 15. 901 0. 9580. 985 0. 993 ✗ ✓ ✗ ✗ ✓ 5. 3090. 206 0. 022 0. 149 14. 862 16. 048 0. 954 0. 981 0. 990 ✗ ✓ ✗ ✓ ✓ 5. 8090. 186 0. 0180. 125 12. 21014. 6830. 961 0. 985 0. 993 ✗ ✓ ✓ ✗ ✓ 5. 4220. 2000. 0180. 125 12. 50316. 1200. 961 0. 985 0. 993 Table S1:Loss study. Performance comparison using several combination of losses:1st best, 2nd best,3rd best. Figure S2:Few-shot learning performances of Depth Anything V2 on our real dataset. All LED patterns demonstrate superior performances over LB. The model is near its maximal performances with only 1,000 training images. L=L depth +λ 1Lgrad +λ 2Lnormal .(4) B. 3 Loss Study To determine the impact of each individual loss, we conduct an ablation study (see table S1)."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.541179358959198,
+      "text": "2, this study conducts systematic ablation experiments to evaluate the performance gains introduced by the LLDG and LLPEFT modules. The experimental results demonstrate Method ParameterABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑Test on nuScenes-NightDepth Anything V2 97. 470M 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914+ AMFG 99. 229M 0. 243 2. 351 5. 416 0. 267 0. 674 0. 862 0. 945+ LoRA 99. 830M 0. 233 2. 112 5. 220 0. 259 0. 6850. 8650. 947+ LLPEFT 97. 479M0. 210 1. 910 7. 764 0. 260 0. 6300. 914 0. 976Test on RobotCar-NightDepth Anything V2 97. 470M 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972+ AMFG 99. 229M 0. 168 1. 481 6. 470 0. 234 0. 717 0. 908 0. 976+ LoRA 99. 830M 0. 173 1. 260 4. 527 0. 217 0. 7380. 9190. 981+ LLPEFT 97. 479M0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 3: We conduct comprehensive ablation studies on PEFT methods for Depth Anything V2 across both nuScenes- Night and RobotCar-Night datasets, with quantitative analy- sis of parameter counts for each fine-tuned variant."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.5410594940185547,
+      "text": "Table 3. Comparison on the Unpaired Datasets. Red(Green) denotes the improvement(reduction) of performance. Note that all the models were trained on the LOLv2-synthetic dataset. Method DICM MEF LIME NPE VV A VGNIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑Restormer 3. 220 58. 525 3. 885 2. 8003. 660 56. 528 3. 215 2. 4153. 660 58. 461 3. 267 2. 4663. 470 61. 031 3. 781 2. 7353. 290 37. 919 3. 710 2. 2643. 460 54. 493 3. 572 2. 536Restormer with GT-mean loss (ours) 3. 180 58. 604 3. 913 2. 8213. 630 56. 522 3. 208 2. 4313. 630 58. 124 3. 380 2. 5213. 450 60. 971 3. 820 2. 7693. 300 38. 290 3. 712 2. 2553. 440(-)54. 502(+)3. 607(+)2. 559(+) MIRNET 3. 820 52. 467 3. 111 2. 3373. 670 47. 399 2. 742 2. 0564. 230 54. 837 2. 860 2. 0883. 470 58. 641 3. 285 2. 3743. 640 54. 566 2. 955 2. 1623. 770 53. 582 2. 991 2. 203MIRNET with GT-mean loss(ours)3. 200 53. 188 3. 295 2. 3753. 600 47. 611 2. 817 2. 0674. 330 55. 776 2. 747 2. 0583. 500 58. 718 3. 366 2. 4283. 710 54. 891 3. 120 2. 2153. 670(-)54. 037(+)3. 069(+)2. 229(+) Retinexformer 3. 230 57. 398 3. 800 2. 7403. 860 56. 170 3. 137 2. 3733."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.5410594940185547,
+      "text": "Table 3. Comparison on the Unpaired Datasets. Red(Green) denotes the improvement(reduction) of performance. Note that all the models were trained on the LOLv2-synthetic dataset. Method DICM MEF LIME NPE VV A VGNIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑Restormer 3. 220 58. 525 3. 885 2. 8003. 660 56. 528 3. 215 2. 4153. 660 58. 461 3. 267 2. 4663. 470 61. 031 3. 781 2. 7353. 290 37. 919 3. 710 2. 2643. 460 54. 493 3. 572 2. 536Restormer with GT-mean loss (ours) 3. 180 58. 604 3. 913 2. 8213. 630 56. 522 3. 208 2. 4313. 630 58. 124 3. 380 2. 5213. 450 60. 971 3. 820 2. 7693. 300 38. 290 3. 712 2. 2553. 440(-)54. 502(+)3. 607(+)2. 559(+) MIRNET 3. 820 52. 467 3. 111 2. 3373. 670 47. 399 2. 742 2. 0564. 230 54. 837 2. 860 2. 0883. 470 58. 641 3. 285 2. 3743. 640 54. 566 2. 955 2. 1623. 770 53. 582 2. 991 2. 203MIRNET with GT-mean loss(ours)3. 200 53. 188 3. 295 2. 3753. 600 47. 611 2. 817 2. 0674. 330 55. 776 2. 747 2. 0583. 500 58. 718 3. 366 2. 4283. 710 54. 891 3. 120 2. 2153. 670(-)54. 037(+)3. 069(+)2. 229(+) Retinexformer 3. 230 57. 398 3. 800 2. 7403. 860 56. 170 3. 137 2. 3733."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p8_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.5408639907836914,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 8 ID SD PGD LKD MVC Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 1 0. 107 0. 787 4. 580 0. 182 0. 887 0. 963 0. 983 2 ✓ 0. 434 4. 630 11. 99 0. 579 0. 306 0. 568 0. 777 3 ✓ 0. 105 0. 757 4. 521 0. 181 0. 889 0. 964 0. 984 4 ✓ ✓ 0. 104 0. 741 4. 489 0. 180 0. 890 0. 964 0. 984 5 ✓ ✓ ✓ 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 TABLE IV ABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD: PSEUDO GROUND -TRUTH DIFFUSION ; MVC: MASKED VISUAL CONDITION MECHANISM . Inference step Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 2 1. 812 75. 600 30. 791 6. 160 0. 070 0. 141 0. 213 5 1. 503 58. 013 27. 140 5. 464 0. 125 0. 241 0. 340 10 0. 226 3. 730 9. 571 0. 754 0. 703 0. 878 0. 938 15 0. 822 28. 099 19. 232 2. 972 0. 357 0. 548 0. 653 20 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 25 0. 431 10. 382 12. 709 1. 206 0. 503 0. 723 0. 827 TABLE V ABLATION STUDY ON DIFFERENT INFERENCE STEPS . Fig. 7. Visualization of the denoising process involving 20 inference steps in total. E."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p31_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 31,
+      "score": 0.5385622978210449,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p31_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 31,
+      "score": 0.5385622978210449,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 31"
+    },
+    {
+      "id": "semantic_chunk::dav2_p3_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 3,
+      "score": 0.537419319152832,
+      "text": "The most critical modification is replacing all labeled real images with precise synthetic images. Q2 [Section 3]: Why do most prior works still stick to real images, if as A1 mentioned, synthetic images are already clearly superior to real images? A2: Synthetic images have their drawbacks, which are not trivial to address in previous paradigms. Q3 [Section 4]: How to avoid the drawbacks of synthetic images and also amplify its advantages? A3: Scale up the teacher model that is solely trained on synthetic images, and then teach (smaller) student models via the bridge of large-scale pseudo-labeled real images. After the explorations, we successfully build a more capable MDE foundation model. However, we find current test sets [70] are too noisy to reflect the true strengths of MDE models. Thus, we further construct a versatile evaluation benchmark with precise annotations and diverse scenes (Section 6). 2 Revisiting the Labeled Data Design of Depth Anything V1 Building on the pioneering work of MiDaS [56, 7] in zero-shot MDE, recent studies tend to construct larger-scale training datasets in an effort to enhance estimation performance."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p5_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.5365536212921143,
+      "text": "Specifically, we introduce illumi- nation guidance term𝐼𝐹𝑁𝑔 in the LLPEFT strategy, which is defined as follows: 𝐼𝐹𝑁 𝑔 =𝑚𝑒𝑎𝑛𝑐 \u0000𝐿𝐿𝐷𝐺(𝐼)\u0001, (7) The operation𝑚𝑒𝑎𝑛𝑐 computes the mean value of each pixel along the channel dimension. As shown in Fig. 1. 1, the low-light image𝐼𝐹𝑁 is synthesized from the daytime image𝐼 using LLDG, while𝐼𝐹𝑁𝑔 is generated from𝐼𝐹𝑁 using illumination guidance. This process effectively simplifies the illumination guidance procedure by converting the low-light image into a grayscale representation using a simple but efficient approach. This transformation helps to reduce noise, enhance the brightness distribution, and simplify the information structure. Although this approach results in the loss of color information, it does not significantly affect the final outcome, as the color information is already preserved in the low-light image 𝐼𝐹𝑁 . Ultimately, by introducing this illumination guidance, the model can focus on learning robust feature representations, thereby miti- gating noise amplification, color distortion, and artifacts caused by long exposure and high ISO settings. 3. 2. 2 Multiscale Feature Fusion."
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.5364289283752441,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9 Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderLB 14. 199 0. 187 0. 072 0. 292 28. 938 5. 620 0. 772 0. 909 0. 956LED 0. 5°11. 089 0. 119 0. 050 0. 213 21. 251 2. 304 0. 864 0. 950 0. 977LED 0. 25°8. 6950. 1090. 040 0. 190 18. 635 2. 1280. 899 0. 9630. 984LED 0. 125°10. 1540. 096 0. 040 0. 19018. 862 2. 1320. 907 0. 969 0. 984 DepthF ormerLB 8. 777 0. 138 0. 050 0. 186 17. 170 3. 365 0. 864 0. 957 0. 983LED 0. 5°6. 810 0. 101 0. 041 0. 152 14. 380 1. 376 0. 890 0. 969 0. 989LED 0. 25°5. 6210. 0820. 0300. 126 11. 7351. 1630. 923 0. 978 0. 992LED 0. 125°5. 7270. 076 0. 030 0. 116 10. 7541. 2610. 940 0. 987 0. 995 DepthAnythingV2 - 1000 training imagesLB 7. 637 0. 104 0. 044 0. 160 14. 617 1. 401 0. 891 0. 972 0. 990LED 0. 5°7. 017 0. 109 0. 047 0. 161 14. 044 1. 260 0. 877 0. 9697 0. 989LED 0. 25°6. 304 0. 102 0. 044 0. 146 12. 300 1. 079 0. 885 0. 9730. 993LED 0. 125°5. 785 0. 082 0. 037 0. 126 10. 673 0. 840 0. 921 0. 9810. 992 Table 6:Performance comparison on real-world data using various pattern resolutions."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p10_sc0",
+      "source": "data\\Global-Local.pdf",
+      "page": 10,
+      "score": 0.5360886454582214,
+      "text": "7 Appendix: Robustness of the Model In Table 8, we report a full table of the results on the corrupted NYU Depth V2 dataset. (Section 4. 5 of the main paper) Corruption Type Method δ1↑ δ2↑ δ3↑ AbsRel↓ SqRel↓ RMSE↓ RMSElog↓ Clean BTS 0. 885 0. 978 0. 994 0. 110 0. 066 0. 392 0. 142 Adabins 0. 903 0. 984 0. 997 0. 103 0. 057 0. 364 0. 130 Ours 0. 915 0. 988 0. 997 0. 098 0. 049 0. 344 0. 124 Noise Gaussian Noise BTS 0. 223 0. 384 0. 543 0. 435 0. 824 1. 589 0. 743 Adabins 0. 347 0. 553 0. 708 0. 343 0. 578 1. 299 0. 544 Ours 0. 775 0. 940 0. 983 0. 161 0. 126 0. 541 0. 198 Shot BTS 0. 280 0. 448 0. 600 0. 399 0. 736 1. 482 0. 669 Adabins 0. 436 0. 653 0. 791 0. 293 0. 460 1. 141 0. 454 Ours 0. 791 0. 949 0. 986 0. 152 0. 114 0. 523 0. 189 Impulse BTS 0. 116 0. 249 0. 420 0. 504 1. 006 1. 818 0. 875 Adabins 0. 377 0. 589 0. 736 0. 327 0. 541 1. 246 0. 518 Ours 0. 760 0. 938 0. 984 0. 167 0. 131 0. 556 0. 204 Speckle BTS 0. 456 0. 633 0. 756 0. 302 0. 500 1. 159 0. 492 Adabins 0. 639 0. 834 0. 918 0. 200 0. 244 0. 805 0. 294 Ours 0. 830 0. 965 0. 991 0. 136 0. 091 0. 467 0. 168 Blur Motion BTS 0. 677 0. 850 0. 922 0. 189 0. 207 0. 701 0. 279 Adabins 0. 697 0. 859 0. 927 0. 180 0."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p23_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 23,
+      "score": 0.535946249961853,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p23_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 23,
+      "score": 0.535946249961853,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 23"
+    },
+    {
+      "id": "semantic_chunk::ACD_p6_sc0",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5334827303886414,
+      "text": ",PDJH\u0003 \u0003*7 PG\u0017DOO\u0010'' 2XUV ,PDJH\u0003 \u0003*7 PG\u0017DOO\u0010'' 2XUV D QX6FHQHV E 2[IRUG\u00035RERW&DU 0RQRGHSWK\u0015 0RQRGHSWK\u0015 Figure 4: Qualitative results on nuScenes [Caesar et al., 2020 ] and RobotCar [Maddern et al., 2017 ]. We compare the ACDepth approach with md4all-DD and MonoDepth2, all of which use the same backbone. To better illustrate the results, the real point cloud is projected onto the original image, and no ground truth (GT) is required during training. day-clear – nuScenes night – nuScenes day-rain – nuScenes Method sup. tr.data absRel RMSE δ1 absRel RMSE δ1 absRel RMSE δ1 Monodepth2 [Godard et al., 2019 ] M∗ a: dnr 0. 1477 6. 771 85. 25 2. 3332 32. 940 10. 54 0. 4114 9. 442 60. 58 Monodepth2 [Godard et al., 2019 ] M∗ d 0. 1374 6. 692 85. 00 0. 2828 9. 729 51. 83 0. 1727 7. 743 77. 57 PackNet-SfM [Guizilini et al., 2020 ] Mv d 0. 1567 7. 230 82. 64 0. 2617 11. 063 56. 64 0. 1645 8. 288 77. 07 RNW [Wang et al., 2021 ] M∗ dn 0. 2872 9. 185 56. 21 0. 3333 10. 098 43. 72 0. 2952 9. 341 57. 21 md4all-AD [Gasperini et al., 2023 ] Mv dT†(nr) 0. 1523 6. 853 83. 11 0. 2187 9. 003 68. 84 0. 1601 7. 832 78. 97 md4all-DD [Gasperini et al., 2023 ] Mv dT†(nr) 0. 1366 6. 452 84. 61 0. 1921 8. 507 71."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.5333809852600098,
+      "text": "882 4. 701 0. 190 0. 879 0. 961 0. 982HR-Depth[31] AAAI2021 Mono K(40K+0) 0. 106 0. 755 4. 472 0. 181 0. 892 0. 966 0. 984R-MSFM6[72]ICCV2021 Mono K(40K+0) 0. 108 0. 748 4. 470 0. 185 0. 889 0. 963 0. 982DevNet[70] ECCV2022Mono K(40K+0) 0. 100 0. 699 4. 412 0. 174 0. 893 0. 966 0. 985DepthSegNet[32]ECCV2022Mono K(40K+0) 0. 099 0. 624 4. 165 0. 171 0. 902 0. 969 0. 985SD-SSMDE[37]CVPR2022 Mono K(40K+0) 0. 098 0. 674 4. 187 0. 170 0. 902 0. 968 0. 985MonoViT[68] 3DV 2022 Mono K(40K+0) 0. 096 0. 714 4. 292 0. 172 0. 908 0. 968 0. 984LiteMono[67] CVPR2023 Mono K(40K+0) 0. 102 0. 746 4. 444 0. 179 0. 896 0. 965 0. 983DaCCN[20] ICCV2023 Mono K(40K+0) 0. 094 0. 624 4. 145 0. 169 0. 909 0. 970 0. 985Jaeho et al*.[5, 34]CVPR2024 Mono K(40K+0) 0. 091 0. 604 4. 066 0. 164 0. 913 0. 9700. 986RPrDepth[19] ECCV2024Mono K(40K+0) 0. 091 0. 612 4. 098 0. 162 0. 910 0. 971 0. 986Mono-ViFI[29]ECCV2024Mono K(40K+0) 0. 093 0. 589 4. 072 0. 168 0. 909 0. 969 0. 985Jasmine - Mono KH(68K+0) 0. 090 0. 581 3. 944 0. 161 0. 919 0. 972 0. 986 Table 2:Quantitative zero-shot results on the CityScape and DrivingStereo dataset and its variants (Rainy, Cloudy, Foggy)."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p24_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 24,
+      "score": 0.532395601272583,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 24"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p24_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 24,
+      "score": 0.532395601272583,
+      "text": "NYUv2 [31] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata KITTI [17] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 24"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p32_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 32,
+      "score": 0.5312435626983643,
+      "text": "ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 32"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p32_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 32,
+      "score": 0.5312435626983643,
+      "text": "ETH3D [45] Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata Input RGB Image DiverseDepth MiDaS LeReS Ground Truth Marigold (ours) DPT Omnidata 32"
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p11_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.5304518938064575,
+      "text": "Cutmix: Regu- larization strategy to train strong classifiers with localizable features. In ICCV, 2019. 4 [84] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, 2023. 8 [85] Youcai Zhang, Xinyu Huang, Jinyu Ma, Zhaoyang Li, Zhaochuan Luo, Yanchun Xie, Yuzhuo Qin, Tong Luo, Yaqian Li, Shilong Liu, et al. Recognize anything: A strong image tagging model. arXiv:2306. 03514, 2023. 4 [86] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. In ICCV, 2023. 6 [87] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba. Places: A 10 million image database for scene recognition. TPAMI, 2017. 3 [88] Bolei Zhou, Hang Zhao, Xavier Puig, Sanja Fidler, Adela Bar- riuso, and Antonio Torralba. Scene parsing through ade20k dataset. In CVPR, 2017. 6 [89] Barret Zoph, Golnaz Ghiasi, Tsung-Yi Lin, Yin Cui, Hanx- iao Liu, Ekin Dogus Cubuk, and Quoc Le. Rethinking pre- training and self-training. In NeurIPS, 2020. 2 10381"
+    },
+    {
+      "id": "semantic_chunk::dav2_p23_sc2",
+      "source": "data\\dav2.pdf",
+      "page": 23,
+      "score": 0.5296019911766052,
+      "text": "We use the keywords generated by GPT-4 to download images of corresponding scenarios on Flickr. C. 4 Visualization In Figure 19, we visualize some samples in our proposed DA-2K benchmark. They cover diverse representative scenarios and are of precise sparse annotations. D Limitations Currently, we use 62M unlabeled images for training. The computational burden is very heavy. Thus, in the future, we will study how to leverage such large-scale visual data more efficiently. Moreover, the current synthetic training sets are not diverse enough. We will attempt to collect synthetic images from more sources to train a more capable teacher model for better pseudo labeling. 23"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5294830799102783,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6926247477531433,
+      "text": "Day(-clear) While we do not include any modification addressing standard conditions, we still see improvements over the baselines across both datasets and supervision types (Tables 1 and 2). This is due to the training mix of easy and translated samples acting as a strong data augmen- tation and regularization technique. Since the same weights are optimized on all conditions, they learn to extract robust features which are beneficial also with good visibility. In- stead, RNW [38] is meant for operating only at night. All conditions Remarkably, across all tested conditions, md4all significantly improves over Monodepth2 and Ad- aBins on which we applied it, without the need for spe- cialized branches (Tables 1 and 2). There is no trade-off introduced when training our unique md4all model for mul- tiple conditions, as the scores and errors remain equivalent or even improve compared to training only in ideal settings. This proves the effectiveness and generality of our simple ideas. The Appendix includes preliminary results withsnow and fog on the challenging DENSE dataset [2]. AD and DD Our md4all delivers improvements both as DD and AD (Tables 1 and 2).",
+      "estimated_tokens": 243
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6356023550033569,
+      "text": "input image ground truth AdaBins md4all (sup.) [ours] Monodepth2 md4all (self-sup.) [ours] fully-supervised self-supervised Figure 5. Comparison on nuScenes [3] between fully-sup. AdaBins [1] w/o and w/ ours, and self-sup. Monodepth2 [11] w/o and w/ ours. bustness by making it harder to recover information for the depth task, as the translations act as data augmentation and regularization. The table confirms the robustness of md4all, performing similarly regardless of which GAN is used, even when degrading 10% of the inputs via random erasing. 4. 3. Qualitative Results Qualitative comparisons in Figures 5 and 6 confirm the quantitative findings, with our md4all delivering improved estimates in both adverse and standard conditions. On nuScenes [3] (Figure 5), unlike the baselines, both our mod- els correctly identified the truck in the first rainy sample. As shown in Figure 2, rain leads to artifacts in the LiDAR ground truth, which cause the standard fully-supervised Ad- aBins [1] to learn them and estimate the road wrongly.",
+      "estimated_tokens": 254
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 497,
+    "compressed_context_tokens": 497,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 497,
+  "context_tokens": 497,
+  "prompt_token_estimate": 881,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_md4all_training_sample_generation_and_ad",
+  "answer": "<think>\nThe question asks how md4all-AD generates training samples and uses them to train a self-supervised model.\n\nLet me look at the provided sources carefully.\n\nSource [1] mentions:\n- \"training mix of easy and translated samples acting as a strong data augmentation and regularization technique\"\n- md4all delivers improvements both as DD and AD\n- \"translations act as data augmentation and regularization\"\n\nSource [2] mentions:\n- \"the translations act as data augmentation and regularization\"\n- \"performing similarly regardless of which GAN is used, even when degrading 10% of the inputs via random erasing\"\n\nHowever, the provided sources do not give detailed information about how md4all-AD specifically generates training samples. The sources mention \"translated samples\" and that translations are used as data augmentation, but don't provide the specific methodology of how these samples are generated for the AD (Adversarial Defense?) variant, nor how exactly they're used to train the self-supervised model.\n\nThe sources mention:\n- A GAN is used\n- Translations act as data augmentation and regularization\n- Random erasing degrades 10% of inputs\n\nBut the specific process of how md4all-AD generates training samples and trains the self-supervised model is not fully described in the provided excerpts. The information is quite limited.\n\nI should indicate that the provided sources don't contain enough detailed information to fully answer this question about the specific methodology of md4all-AD.\n</think>\n{\"answer\":\"资料仅简略提及 md4all 使用 'translated samples' 作为数据增强与正则化，并涉及 GAN 与随机擦除，但未详细说明 md4all-AD 如何具体生成训练样本以及如何用这些样本训练自监督模型的具体流程。\", \"items\":[{\"name\":\"md4all-AD 训练样本生成与训练方式的已知信息\",\"description\":\"资料中仅提到 md4all 利用翻译后的样本(translated samples)作为数据增强与正则化，并使用 GAN（在随机擦除 10% 输入的情况下）进行训练，但未给出 md4all-AD 生成样本和训练自监督模型的具体步骤。\",\"citations\":[1,2]}],\"missing_information\":\"缺少 md4all-AD 生成训练样本的具体方法（如图像到图像翻译的具体流程、所用 GAN 的输入/输出形式）以及这些样本如何用于自监督模型训练的详细步骤描述。\"}",
+  "usage": {
+    "prompt_tokens": 931,
+    "completion_tokens": 469,
+    "total_tokens": 1400,
+    "model": "MiniMax-M3"
+  }
+}

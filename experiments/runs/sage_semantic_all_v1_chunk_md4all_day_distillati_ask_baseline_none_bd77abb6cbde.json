@@ -1,0 +1,526 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_md4all_day_distillati_ask_baseline_none_bd77abb6cbde",
+  "dry_run": false,
+  "query": "md4all-DD（Day Distillation）的训练目标和作用是什么？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_8",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.8294013738632202,
+      "text": "md4all-DD: Day Distillation\nWe take md4all-AD (Section 3.1.2) to the next level by sim-\nplifying the training scheme with md4all-DD. The core idea\nof md4all-DD is the same as for md4all-AD: we aim to learn\ndepth only from E, pretending that the conditions"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_chunk_2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.7588790655136108,
+      "text": "og\nsnow\none of\ninference\nmd4all-DD: Day Distillation\nalternative paths (random)\nrain\nmd4all\nmd4all\nB\nT\nFigure 3. Our md4all-DD framework. The frozen day - depth model estimates on easy samples and provides guidance to another model\nfed with a mix of easy a"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_chunk_1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.7461167573928833,
+      "text": "h prediction\nmd4all\nmd4all\nany - input image depth prediction\ndepth model\nday distillation loss\nx %\n(1 − x) %\nx %\nweights being trained\nfrozen weights\nday\nnight\nrain\ntraining\nfog\nsnow\none of\ninference\nmd4all-DD: Day Distillation\nalternative paths (random)"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_6",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.743437647819519,
+      "text": "s, tested\nhere. Our md4all outperforms them all across the board,\nwith substantially better estimates at night than theirs dur-\ning the day: the previous best WSGD [37]’s day absRel\nerror is 45% higher than ours at night. This is thanks to the\nsimplicity o"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.7313406467437744,
+      "text": "md4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nday - depth model\ntranslation model\nday - input image\nadverse - translated image\ndepth model\ndepth prediction\nday - depth prediction\nmd4all\nmd4all\nany - input image depth prediction\ndepth model\nday di"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_20",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7243070602416992,
+      "text": "nchanged. While md4all-DD (Section 3.1.3) also\napplies to the supervised case, using AD is more reasonable\nsince reliable ground truth data from ei is available.\n4. Experiments and Results\n4.1. Experimental Setup\nDatasets and metrics We used two public dri"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_24",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.718198835849762,
+      "text": "ncludes preliminary results withsnow\nand fog on the challenging DENSE dataset [2].\nAD and DD Our md4all delivers improvements both as\nDD and AD (Tables 1 and 2). While the two are applica-\nble under both supervisions, available and reliable ground\ntruth al"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_29",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.7161970138549805,
+      "text": "pite being based on the\nsame model as md2, atnight, our simple techniques reduced\nabsRel by 32% and relatively increased δ1 by 37% (DD).\nOur md4all also outperformed the radar-based R4Dyn at\nnight. This is thanks to the ability of our method to extract\nrob"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7161452770233154,
+      "text": "md4all\nmd4all\nmd4all\nmd4all\ndepth model\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\ntranslation model\nadverse - translated image\nday - input image\nday - input sequence\nday - pose model\nmd4all\nmd4all\nday - input imageday - reconstructed input\nde"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_21",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7140316963195801,
+      "text": "[38] is meant for operating only at night.\nAll conditions Remarkably, across all tested conditions,\nmd4all significantly improves over Monodepth2 and Ad-\naBins on which we applied it, without the need for spe-\ncialized branches (Tables 1 and 2). There is n"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.7115430235862732,
+      "text": "0.2419 10.922 58.17 0.1572 .......7.453 79.49\n[ours] md4all-AD Mv dT(nr) 0.1523 6.853 83.11 0.2187 9.003 68.84 0.1601 7.832 78.97\n[ours] md4all-DD Mv dT(nr) 0.1366 6.452 84.61 0.1921 8.507 71.07 0.1414 7.228 80.98\nAdaBins [1] GT a: dnr 0.1384 5.582 81.31 0"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_3",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.7111793756484985,
+      "text": "0\nmd4all-DD [Gasperini et al., 2023] Mv dT†(n) 0.1128 0.648 3.206 87.13 0.1219 0.784 3.604 84.86\nDMMDE v1 [Tosi et al., 2025] Mv dT‡(n) 0.1190 0.676 3.239 87.20 0.1390 0.739 3.700 82.46\nDMMDE v2 [Tosi et al., 2025] Mv dT‡(n) 0.1230 0.724 3.333 86.62 0.1330"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_chunk_9",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.709943950176239,
+      "text": "]). Instead, we act on the training process. Our\napproach is general and not bound to a specific architecture.\n3.1.2 md4all-AD: Always Daytime, No Bad Weather\nOur md4all-AD configuration is shown in Figure 4. The\ncore idea is learning from easy samples, ev"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7082399129867554,
+      "text": "x % (1 − x) %\nx %\nmd4all-AD: Always Daytime, No Bad Weather\nmd4all\nmd4all\nmd4all\nmd4all\nany - input image depth predictiondepth model\nweights being trained\nfrozen weights day\nnight\nrain\ntraining\nfog\nsnow\none of\ninference\nalternative paths (random)rain\nmd4a"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_14",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6983870267868042,
+      "text": "eliminating the artifacts. Therefore, these com-\nparisons are more meaningful when considered alongside\nqualitative outputs (Figure 5). Our supervised md4all per-\nformed better than AdaBins both quantitatively and quali-\ntatively, eliminating the dependen"
+    },
+    {
+      "id": "chunk::s_p4_chunk_9",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6956262588500977,
+      "text": "ed on the paired data Iday, ICi−syn in a\ndistillation or teacher-student manner, where the outputs of\nΦD−day, ΦP −day can be defined as Dday, Tday and those\nfrom ΦD−syn, ΦP −syn are Dsyn, Tsyn. The distillation ob-\njective is the absolute relative depth lo"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6943963766098022,
+      "text": "ight\nrain\ntraining\nfog\nsnow\none of\ninference\nalternative paths (random)rain\nmd4all\nmd4all\n(same as in md4all-DD)\nT\nFigure 4. Our self-supervised md4all-AD framework. With x = 0, it is equivalent to the day - depth model in Figure 3 and the baseline.\nThe de"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_9",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6909095048904419,
+      "text": "for md4all-AD: we aim to learn\ndepth only from E, pretending that the conditions C detri-\nmental for the losses never occur.\nOur md4all-DD framework mimics model estimates in\nideal settings E, regardless of the difficulty of the input. As\nshown in Figure 3"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_6",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6883012652397156,
+      "text": "md4all exhibits no such artifacts as it was not\ntrained with the problematic rainy samples but rather on our\ntranslated ones, which have reliable ground truth. Instead,\nself-supervised methods have issues at night. While Mon-\nodepth2 [11] could identify c"
+    },
+    {
+      "id": "chunk::ACD_p2_chunk_6",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.6826069355010986,
+      "text": "dge transfer. Consequently, as shown in Figure. 1(b), md4all\nsuffers from nonnegligible performance decline when there\nare signiﬁcant domain differences between scenes, making it\nfar from generalizing to various degraded scenarios.\nOverall, two critical is"
+    },
+    {
+      "id": "chunk::s_p6_chunk_2",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.6815102100372314,
+      "text": "3 9.185 56.21 0.3333 4.066 10.098 43.72 0.2952 3.796 9.341 57.21\nmd4all-AD [8] 1 0.1523 2.141 6.853 83.11 0.2187 2.991 9.003 68.84 0.1601 2.259 7.832 78.97\nrobust-depth [22] 1 0.1436 1.862 6.802 82.95 0.2101 2.691 8.673 69.58 0.1458 1.891 7.371 80.21\nmd4al"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.6789247989654541,
+      "text": ",PDJH\u0003\t\u0003*7 PG\u0017DOO\u0010'' 2XUV\n ,PDJH\u0003\t\u0003*7 PG\u0017DOO\u0010'' 2XUV\n\u000bD\f QX6FHQHV \u000bE\f 2[IRUG\u00035RERW&DU\n0RQRGHSWK\u0015 0RQRGHSWK\u0015\nFigure 4: Qualitative results on nuScenes [Caesar et al., 2020 ] and RobotCar [Maddern et al., 2017 ]. We compare the ACDepth approach\nwith md4all-D"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_5",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.6751713752746582,
+      "text": "0.1921 8.507 71.07 0.1414 7.228 80.98\nAdaBins [1] GT a: dnr 0.1384 5.582 81.31 0.2296 7.344 63.95 0.1726 6.267 76.01\n[ours] md4all-AD GT dnT(r) 0.1206 4.806 88.03 0.1821 6.372 75.33 0.1562 5.903 82.82\nTable 1. Evaluation of self- and GT-supervised methods"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6750473976135254,
+      "text": "input image ground truth\n AdaBins md4all (sup.) [ours]\n Monodepth2 md4all (self-sup.) [ours]\nfully-supervised self-supervised\nFigure 5. Comparison on nuScenes [3] between fully-sup. AdaBins [1] w/o and w/ ours, and self-sup. Monodepth2 [11] w/o and w/ ours"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_6",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.6738500595092773,
+      "text": "601 7.832 78.97\nmd4all-DD [Gasperini et al., 2023 ] Mv dT†(nr) 0.1366 6.452 84.61 0.1921 8.507 71.07 0.1414 7.228 80.98\nDMMDE v1 [Tosi et al., 2025 ] Ms dT‡(nr) 0.1370 6.318 85.05 0.1880 8.432 69.94 0.1470 7.345 79.59\nDMMDE v2 [Tosi et al., 2025 ] Ms dT‡(n"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_15",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.6707273721694946,
+      "text": "ther verify the effec-\ntiveness, we compare our ACDepth with existing state-of-the-\nart approaches on the RobotCar benchmark. As expected in\nTable 2, our method achieves the best performance in almost\nall metrics. Compared to md4all-DD, our approach reduce"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.669305682182312,
+      "text": "..0.2194 10.542 ......62.28 0.1337 7.131 83.91\nRNW [38] M ∗ dn 0.2872 9.185 56.21 0.3333 10.098 43.72 0.2952 9.341 57.21\n[ours] baseline Mv d ........0.1333 .......6.459 85.88 0.2419 10.922 58.17 0.1572 .......7.453 79.49\n[ours] md4all-AD Mv dT(nr) 0.1523"
+    },
+    {
+      "id": "chunk::ACD_p5_chunk_29",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.6690990924835205,
+      "text": "h\nestimation method md4all-DD. DMMDE [Tosi et al., 2025 ]\nuses different depth models as prior information to guide im-\nage translation, and achieves improvements over md4all-DD.\nHowever, due to the scale-and-shift-invariant loss, the scaling\nrelation of d"
+    },
+    {
+      "id": "chunk::s_p5_chunk_23",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6685640811920166,
+      "text": "4)\nNoted that Distday is calculated among the whole day-\ntime training set instead of one sample. The objective is\nto minimize the distribution distances betweenDistday and\nDistadv by K-L divergence:\nLKL\ndis =\nNX\ni=1\nPadv(i) · log Padv(i)\nPday(i) . (15)\nAp"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_7",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6638072729110718,
+      "text": ", e.g., at dusk or\nwith light rain. Therefore, we opted for a single monocular\nmodel, which does not penalize inference time compared to\nthe same model trained only on E.\n3.1.3 md4all-DD: Day Distillation\nWe take md4all-AD (Section 3.1.2) to the next level"
+    },
+    {
+      "id": "chunk::ACD_p2_chunk_20",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.6625446677207947,
+      "text": "uid-\nance distillation mechanism (OGD) to heartens the net-\nwork to focus on uncertain regions through differential\nranking.\n• Extensive experiments demonstrate the effectiveness of\nACDepth, surpassing md4all-DD by 2.50% for night\nscene and 2.61% for rainy"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_15",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6588538289070129,
+      "text": "-\nture work may focus on eliminating the dependency on the\nGAN. Furthermore, md4all does not address the issue of\ndynamic objects, so flow [14] or weak radar supervision [8]\nmay be beneficial, albeit adding complexity. The core ideas\nof this work can be ex"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_11",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6568562984466553,
+      "text": "arlier\nstage on E to a new depth model DD for both easy and ad-\nverse scenarios (i.e., E and H). The latter is fed mi, i.e.,\nthe same mix of ei and hc\ni as in md4all-AD (Section 3.1.2),\nwhile the former is given only ei. DD is optimized solely\nthrough the"
+    },
+    {
+      "id": "chunk::ACD_p1_chunk_26",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.655348539352417,
+      "text": "d scenes [Wang et al., 2024b;\nWang et al., 2024a; Saunders et al., 2023 ]. For example,\nmd4all [Gasperini et al., 2023 ] generates the [normal, de-\ngraded] sample pairs with a GAN-based model and uses\ndistillation learning to extract supervised signals fro"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_28",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.6537929773330688,
+      "text": "r data outperformed RNW’s\ncomplex pipeline [38]. We retrained RNW on the official\nsplit (the authors reported an absRel of 0.3150 at night on\ntheir split [38]). Remarkably, despite being based on the\nsame model as md2, atnight, our simple techniques reduce"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.6537297964096069,
+      "text": "n: night, r: rain, a: all. T†: Translated\nvia GAN, T‡: Translated via Diffusion. Visual support: 1st and 2nd.\nFigure. 4(a) presents qualitative results. md4all-DD is partic-\nularly sensitive to water reﬂections in rainy scenes. For exam-\nple, in the ﬁrst a"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_chunk_2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.6527495384216309,
+      "text": "nder challenging illumination and\nweather conditions, such as at nighttime or in the presence\nof rain. In this paper, we uncover these safety-critical is-\nsues and tackle them with md4all: a simple and effective\nsolution that works reliably under both adve"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_5",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.6518635749816895,
+      "text": "NW [Wang et al., 2021 ] M∗ dn 0.2872 9.185 56.21 0.3333 10.098 43.72 0.2952 9.341 57.21\nmd4all-AD [Gasperini et al., 2023 ] Mv dT†(nr) 0.1523 6.853 83.11 0.2187 9.003 68.84 0.1601 7.832 78.97\nmd4all-DD [Gasperini et al., 2023 ] Mv dT†(nr) 0.1366 6.452 84.6"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_18",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6501641273498535,
+      "text": "and challenging conditions (e.g., night, rain). We\nshowed md4all delivering significant improvements under\nboth fully- or self-supervised settings, overcoming the detri-\nmental factors that make adverse conditions problematic.\n8184"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6499948501586914,
+      "text": "nce\nday - pose model\nmd4all\nmd4all\nday - input imageday - reconstructed input\ndepth prediction\nodometry informationcamera pose estimation\nphotometric \nloss\nweak \nvelocity loss\nx % (1 − x) %\nx %\nmd4all-AD: Always Daytime, No Bad Weather\nmd4all\nmd4all\nmd4all"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_16",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.64958655834198,
+      "text": "st performance in almost\nall metrics. Compared to md4all-DD, our approach reduces\nRMSE by 8.80% on the standard benchmark and 11.99%\non the challenging benchmark, highlighting the superiority\nof our approach. To demonstrate the effectiveness of our\nmethod,"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_4",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6492407321929932,
+      "text": "DDS[24] R 𝑑 &𝑛 640 × 320 60 0.322 4.401 10.584 0.397 0.527 0.786 0.892\nMonoFormer[1] K 768 × 256 60 0.307 3.591 10.162 0.413 0.521 0.762 0.872\nTDDC[40] K 768 × 256 60 0.259 3.147 8.547 0.344 0.641 0.850 0.928\nDepth Anything[41] UD & LD - 60 0.302 3.051 9.2"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_29",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6457743048667908,
+      "text": "[ours] w/ ForkGAN [45] 0.1174 0.1128 0.1219\n[ours] w/ degraded ForkGAN 0.1213 0.1159 0.1266\nTable 3. Robustness of md4all-DD against translations from dif-\nferent GANs. Evaluation of absRel on the RobotCar [23] test set.\n8183"
+    },
+    {
+      "id": "chunk::s_p6_chunk_11",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.6436134576797485,
+      "text": "0.1760 1.603 6.036 75.00 0.1740 1.637 6.302 75.40\nrobust-depth [22] [self] 1 0.1225 0.776 3.302 85.84 0.1333 0.895 3.756 85.11\nmd4all [8] [8] 1 0.1128 0.648 3.206 87.13 0.1219 0.784 3.604 84.86\nDM-MDE [25] [25] 1 0.1190 0.728 3.287 87.17 0.1290 0.751 3.66"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_22",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6424834728240967,
+      "text": "ied it, without the need for spe-\ncialized branches (Tables 1 and 2). There is no trade-off\nintroduced when training our unique md4all model for mul-\ntiple conditions, as the scores and errors remain equivalent\nor even improve compared to training only in"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_7",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.641136109828949,
+      "text": "zation of ablation study on the distillation learning,\nfeature consistency constraint and ordinal guidance distillation.\nDL OGD FCC day-clear night day-rain\nabsRel RMSE absRel RMSE absRel RMSE\nN\n0.1333 6.459 0.2419 10.922 0.1572 7.453\n✓ 0.1335 6.408 0.1883"
+    },
+    {
+      "id": "chunk::ACD_p2_chunk_5",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.6396700739860535,
+      "text": "ition, existing methods are often vulnerable to distur-\nbances in complex scenes due to slack constraints between\nthe teacher and student models, leading to incomplete knowl-\nedge transfer. Consequently, as shown in Figure. 1(b), md4all\nsuffers from nonneg"
+    },
+    {
+      "id": "chunk::s_p6_chunk_3",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.6393622159957886,
+      "text": "0.1436 1.862 6.802 82.95 0.2101 2.691 8.673 69.58 0.1458 1.891 7.371 80.21\nmd4all-DD [8] 1 0.1366 1.752 6.452 84.61 0.1921 2.386 8.507 71.07 0.1414 1.829 7.228 80.98\nDM-MDE [25] 1 0.1280 - 6.449 84.03 0.1910 - 8.433 71.14 0.1390 - 7.129 81.36\nOurs-Single 1"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_chunk_11",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.6385941505432129,
+      "text": "in Table 2, our md4all de-\nlivered better and sharper estimates in both conditions, cor-\nrectly estimating the people’s distance.\nLimitations md4all improves in all tested conditions,\nbut DD may propagate errors from the baseline. Thus,\na stronger baseline"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_2",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.6379207372665405,
+      "text": "49.00\nRNW [Wang et al., 2021] M∗ a: dn 0.2970 2.608 7.996 43.10 0.1850 1.710 6.549 73.30\nWSGD [V ankadariet al., 2023] M∗ a: dn 0.1760 1.603 6.036 75.00 0.1740 1.637 6.302 75.40\nmd4all-DD [Gasperini et al., 2023] Mv dT†(n) 0.1128 0.648 3.206 87.13 0.1219 0"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_8",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.8294013738632202,
+      "text": "md4all-DD: Day Distillation\nWe take md4all-AD (Section 3.1.2) to the next level by sim-\nplifying the training scheme with md4all-DD. The core idea\nof md4all-DD is the same as for md4all-AD: we aim to learn\ndepth only from E, pretending that the conditions",
+      "estimated_tokens": 77
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_chunk_2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.7588790655136108,
+      "text": "og\nsnow\none of\ninference\nmd4all-DD: Day Distillation\nalternative paths (random)\nrain\nmd4all\nmd4all\nB\nT\nFigure 3. Our md4all-DD framework. The frozen day - depth model estimates on easy samples and provides guidance to another model\nfed with a mix of easy a",
+      "estimated_tokens": 73
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_chunk_1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.7461167573928833,
+      "text": "h prediction\nmd4all\nmd4all\nany - input image depth prediction\ndepth model\nday distillation loss\nx %\n(1 − x) %\nx %\nweights being trained\nfrozen weights\nday\nnight\nrain\ntraining\nfog\nsnow\none of\ninference\nmd4all-DD: Day Distillation\nalternative paths (random)",
+      "estimated_tokens": 77
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_6",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.743437647819519,
+      "text": "s, tested\nhere. Our md4all outperforms them all across the board,\nwith substantially better estimates at night than theirs dur-\ning the day: the previous best WSGD [37]’s day absRel\nerror is 45% higher than ours at night. This is thanks to the\nsimplicity o",
+      "estimated_tokens": 68
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.7313406467437744,
+      "text": "md4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nday - depth model\ntranslation model\nday - input image\nadverse - translated image\ndepth model\ndepth prediction\nday - depth prediction\nmd4all\nmd4all\nany - input image depth prediction\ndepth model\nday di",
+      "estimated_tokens": 82
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_20",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7243070602416992,
+      "text": "nchanged. While md4all-DD (Section 3.1.3) also\napplies to the supervised case, using AD is more reasonable\nsince reliable ground truth data from ei is available.\n4. Experiments and Results\n4.1. Experimental Setup\nDatasets and metrics We used two public dri",
+      "estimated_tokens": 65
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_24",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.718198835849762,
+      "text": "ncludes preliminary results withsnow\nand fog on the challenging DENSE dataset [2].\nAD and DD Our md4all delivers improvements both as\nDD and AD (Tables 1 and 2). While the two are applica-\nble under both supervisions, available and reliable ground\ntruth al",
+      "estimated_tokens": 61
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_29",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.7161970138549805,
+      "text": "pite being based on the\nsame model as md2, atnight, our simple techniques reduced\nabsRel by 32% and relatively increased δ1 by 37% (DD).\nOur md4all also outperformed the radar-based R4Dyn at\nnight. This is thanks to the ability of our method to extract\nrob",
+      "estimated_tokens": 69
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7161452770233154,
+      "text": "md4all\nmd4all\nmd4all\nmd4all\ndepth model\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\nmd4all\ntranslation model\nadverse - translated image\nday - input image\nday - input sequence\nday - pose model\nmd4all\nmd4all\nday - input imageday - reconstructed input\nde",
+      "estimated_tokens": 94
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_21",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7140316963195801,
+      "text": "[38] is meant for operating only at night.\nAll conditions Remarkably, across all tested conditions,\nmd4all significantly improves over Monodepth2 and Ad-\naBins on which we applied it, without the need for spe-\ncialized branches (Tables 1 and 2). There is n",
+      "estimated_tokens": 62
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.7115430235862732,
+      "text": "0.2419 10.922 58.17 0.1572 .......7.453 79.49\n[ours] md4all-AD Mv dT(nr) 0.1523 6.853 83.11 0.2187 9.003 68.84 0.1601 7.832 78.97\n[ours] md4all-DD Mv dT(nr) 0.1366 6.452 84.61 0.1921 8.507 71.07 0.1414 7.228 80.98\nAdaBins [1] GT a: dnr 0.1384 5.582 81.31 0",
+      "estimated_tokens": 159
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_3",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.7111793756484985,
+      "text": "0\nmd4all-DD [Gasperini et al., 2023] Mv dT†(n) 0.1128 0.648 3.206 87.13 0.1219 0.784 3.604 84.86\nDMMDE v1 [Tosi et al., 2025] Mv dT‡(n) 0.1190 0.676 3.239 87.20 0.1390 0.739 3.700 82.46\nDMMDE v2 [Tosi et al., 2025] Mv dT‡(n) 0.1230 0.724 3.333 86.62 0.1330",
+      "estimated_tokens": 165
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_chunk_9",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.709943950176239,
+      "text": "]). Instead, we act on the training process. Our\napproach is general and not bound to a specific architecture.\n3.1.2 md4all-AD: Always Daytime, No Bad Weather\nOur md4all-AD configuration is shown in Figure 4. The\ncore idea is learning from easy samples, ev",
+      "estimated_tokens": 68
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7082399129867554,
+      "text": "x % (1 − x) %\nx %\nmd4all-AD: Always Daytime, No Bad Weather\nmd4all\nmd4all\nmd4all\nmd4all\nany - input image depth predictiondepth model\nweights being trained\nfrozen weights day\nnight\nrain\ntraining\nfog\nsnow\none of\ninference\nalternative paths (random)rain\nmd4a",
+      "estimated_tokens": 85
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_14",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.6983870267868042,
+      "text": "eliminating the artifacts. Therefore, these com-\nparisons are more meaningful when considered alongside\nqualitative outputs (Figure 5). Our supervised md4all per-\nformed better than AdaBins both quantitatively and quali-\ntatively, eliminating the dependen",
+      "estimated_tokens": 53
+    },
+    {
+      "id": "chunk::s_p4_chunk_9",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6956262588500977,
+      "text": "ed on the paired data Iday, ICi−syn in a\ndistillation or teacher-student manner, where the outputs of\nΦD−day, ΦP −day can be defined as Dday, Tday and those\nfrom ΦD−syn, ΦP −syn are Dsyn, Tsyn. The distillation ob-\njective is the absolute relative depth lo",
+      "estimated_tokens": 82
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6943963766098022,
+      "text": "ight\nrain\ntraining\nfog\nsnow\none of\ninference\nalternative paths (random)rain\nmd4all\nmd4all\n(same as in md4all-DD)\nT\nFigure 4. Our self-supervised md4all-AD framework. With x = 0, it is equivalent to the day - depth model in Figure 3 and the baseline.\nThe de",
+      "estimated_tokens": 83
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_9",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6909095048904419,
+      "text": "for md4all-AD: we aim to learn\ndepth only from E, pretending that the conditions C detri-\nmental for the losses never occur.\nOur md4all-DD framework mimics model estimates in\nideal settings E, regardless of the difficulty of the input. As\nshown in Figure 3",
+      "estimated_tokens": 63
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1486,
+    "compressed_context_tokens": 1486,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1486,
+  "context_tokens": 1486,
+  "prompt_token_estimate": 2195,
+  "run_label": "sage_semantic_all_v1_chunk_md4all_day_distillation_dd",
+  "answer": "<think>\nThe user is asking about the training objective and function of md4all-DD (Day Distillation) based on the provided materials.\n\nLet me analyze the materials:\n\n[1] \"We take md4all-AD (Section 3.1.2) to the next level by simplifying the training scheme with md4all-DD. The core idea of md4all-DD is the same as for md4all-AD: we aim to learn depth only from E, pretending that the conditions...\"\n\n[2] Shows the md4all-DD framework with frozen day-depth model providing guidance to another model\n\n[3] \"day distillation loss\" - shows the framework with day depth model providing guidance\n\n[4] About improvements at night\n\n[5] Shows the framework with day-input image, translation model, adverse-translated image\n\n[6] \"While md4all-DD (Section 3.1.3) also applies to the supervised case, using AD is more reasonable since reliable ground truth data from ei is available.\"\n\n[7] \"AD and DD Our md4all delivers improvements both as DD and AD (Tables 1 and 2).\"\n\n[8] \"at night, our simple techniques reduced absRel by 32% and relatively increased δ1 by 37% (DD)\"\n\n[18] \"Our md4all-DD framework mimics model estimates in ideal settings E, regardless of the difficulty of the input.\"\n\nSo the training objective and function:\n- Training objective: Learn depth only from easy samples (E - ideal/easy conditions like daytime), pretending that the difficult conditions (night, rain, fog, snow) never occur; mimic a frozen day-depth model's predictions (day distillation loss)\n- Function: The frozen day-depth model provides guidance to another model fed with mixed easy and hard samples, so the trained model can perform well across various adverse conditions\n\nLet me formulate the answer in the required JSON format.\n</think>\n{\n  \"answer\": \"md4all-DD的训练目标是通过模仿（蒸馏）一个在理想/简单条件（如白天）下训练的冻结深度模型的输出，只从简单样本中学习深度，使模型无视输入难度（夜间、雨、雾、雪等），统一在理想设置E下进行预测。\",\n  \"items\": [\n    {\n      \"name\": \"训练目标\",\n      \"description\": \"核心思想与 md4all-AD 相同：仅从简单样本E中学习深度，假装不利条件C从不发生；通过冻结的 day-depth 模型的输出（day distillation loss）作为指导，使被训练模型模仿理想条件下的估计。\",\n      \"citations\": [1, 3, 18]\n    },\n    {\n      \"name\": \"训练方式\",\n      \"description\": \"冻结的 day-depth 模型对简单样本进行估计，为另一个接收简易与困难混合输入的模型提供指导（teacher-student 蒸馏方式），不依赖额外专门分支。\",\n      \"citations\": [2, 3, 5]\n    },\n    {\n      \"name\": \"作用与效果\",\n      \"description\": \"简化训练方案，使单一模型在所有条件下均能获得稳健深度估计；在夜间等不利条件下显著降低误差（如 absRel 降低 32%），并可同时适用于有监督与自监督场景。\",\n      \"citations\": [6, 7, 8, 10]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 2200,
+    "completion_tokens": 692,
+    "total_tokens": 2892,
+    "model": "MiniMax-M3"
+  }
+}

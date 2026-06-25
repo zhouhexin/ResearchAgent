@@ -1,0 +1,574 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_syn2real_depth_struct_ask_baseline_none_0b7313f9f4f1",
+  "dry_run": false,
+  "query": "Syn2Real-Depth 的 structure prior constraint 是如何构建和使用的？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::s_p2_chunk_17",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7917423248291016,
+      "text": "verse conditions. This structural prior provides explicit con-\nstraint when facing real adverse data, learning real-world\ninformation further effectively.\nWith the proposed synthetic-to-real adaptation pipeline,\nour model can provide much more robust depth"
+    },
+    {
+      "id": "chunk::s_p2_chunk_16",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7841448783874512,
+      "text": ", we introduce an effective prior based on daytime\ndepth predictions, by calculating explicit depth distribution\nfrom the daytime model and setting it to be a reference in di-\nverse conditions. This structural prior provides explicit con-\nstraint when faci"
+    },
+    {
+      "id": "chunk::dav2_p15_chunk_18",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.7697223424911499,
+      "text": "024. 2\n[94] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. Enforcing geometric constraints of\nvirtual normal for depth prediction. In ICCV, 2019. 10\n15"
+    },
+    {
+      "id": "chunk::DepthDark_p10_chunk_3",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.7597333192825317,
+      "text": "Chunhua Shen, and Youliang Yan. 2019. Enforcing geometric\nconstraints of virtual normal for depth prediction. In Proceedings of the IEEE/CVF\ninternational conference on computer vision . 5684–5693.\n[46] Jiaqi Yu, Yongwei Nie, Chengjiang Long, Wenjun Xu, Q"
+    },
+    {
+      "id": "chunk::s_p1_chunk_0",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7550508975982666,
+      "text": "Synthetic-to-Real Self-supervised Robust Depth Estimation\nvia Learning with Motion and Structure Priors\nWeilong Yan1 Ming Li3 Haipeng Li4 Shuwei Shao5 Robby T. Tan1,2\n1National University of Singapore 2ASUS Intelligent Cloud Services\n3Guangdong Laboratory"
+    },
+    {
+      "id": "chunk::s_p8_chunk_26",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.7537089586257935,
+      "text": "ns. We introduce a\nconsistency reweighting strategy and a structure prior con-\nstraint to boost learning from synthetic to real domains. Ex-\nperiments across diverse settings and datasets show that our\nmodel provides more accurate and robust depth than pre"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_5",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7520740032196045,
+      "text": "ays from the easy ones.\nAs shown at the top of Figure 3, since we do not apply\nany architectural modification, at inference time, we pre-\ndict depth with the same model through the same model\nparameters, regardless of the input condition. While dedi-\ncated"
+    },
+    {
+      "id": "chunk::s_p2_chunk_9",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7512989044189453,
+      "text": "model to learn due to the heterogeneous features [29, 47],\nwe dig into motion constraint and explicit structure prior\nfor efficient learning of real-world knowledge. Examples\nof our method compared with previous ones are shown in\nFig.1. Starting from havi"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p3_chunk_23",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.7511604428291321,
+      "text": "finement of random depth distri-\nbution Dτ into a depth estimate,\npθ (Dτ −1 |Dτ , c ) := N\n\u0000\nDτ −1; µθ (Dτ , τ,c) , σ2\nτ I\n\u0001\n, (8)\nwhere c stands for the conditions. To speed up the inference\nprocess, we employ an improved inference process from [41],\nwher"
+    },
+    {
+      "id": "chunk::Global-Local_p8_chunk_4",
+      "source": "data\\Global-Local.pdf",
+      "page": 8,
+      "score": 0.7478469610214233,
+      "text": "v:2105.15203, 2021.\n[Yin et al., 2019] Wei Yin, Yifan Liu, Chunhua Shen, and\nYouliang Yan. Enforcing geometric constraints of vir-\ntual normal for depth prediction. In Proceedings of the\nIEEE International Conference on Computer Vision, pages\n5684–5693, 20"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_15",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.7468165159225464,
+      "text": "ion.arXiv preprint arXiv:2412.09013, 2024. 3\n[66] Ziyao Zeng, Jingcheng Ni, Daniel Wang, Patrick Rim, Younjoon Chung, Fengyu Yang, Byung-Woo\nHong, and Alex Wong. Priordiffusion: Leverage language prior in diffusion models for monocular depth\nestimation, 20"
+    },
+    {
+      "id": "chunk::SSRDepth_p14_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 14,
+      "score": 0.7448078393936157,
+      "text": "Y. Zou et al.\n[42] Z. Zeng, D. Wang, F. Yang, H. Park, S. Soatto, D. Lao, A. Wong, WorDepth: variational \nlanguage prior for monocular depth estimation, in: Proceedings of the IEEE/CVF \nConference on Computer Vision and Pattern Recognition, 2024, pp. 9708–"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_23",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7415345907211304,
+      "text": "maps, \nas shown in Fig. 1(a). Therefore, the introduction of semantic priors is \nessential.\nHowever, existing methods [11] focus on implicitly constructing \nscene structural relationships utilizing semantic information, but with-\nout explicit constraints,"
+    },
+    {
+      "id": "chunk::Jasmine_p20_chunk_10",
+      "source": "data\\Jasmine.pdf",
+      "page": 20,
+      "score": 0.740333080291748,
+      "text": "r, as shown in Fig. 7 (a-2), using the semantic triplet\nloss from [34] not only disrupts the depth distribution but also introduces spurious edges, rendering it\nincompatible with SD’s latent priors. Furthermore, the results in paper Table 1 are compared wi"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_16",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.7401501536369324,
+      "text": "ays a sig-\nnificant role in enabling affine-invariance. We discuss our\nnormalization approach in Sec. 3.3. We verified that without\nany modification of the V AE or the latent space structure,\nthe depth map can be reconstructed from the encoded latent\ncode"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_16",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7401501536369324,
+      "text": "ays a sig-\nnificant role in enabling affine-invariance. We discuss our\nnormalization approach in Sec. 3.3. We verified that without\nany modification of the V AE or the latent space structure,\nthe depth map can be reconstructed from the encoded latent\ncode"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_22",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7386835813522339,
+      "text": "ten neglect the semantic informa-\ntion of real-world scene structures, leading to “smooth transition” char-\nacteristics in the semantic boundaries areas of the predicted depth maps, \nas shown in Fig. 1(a). Therefore, the introduction of semantic priors is"
+    },
+    {
+      "id": "chunk::s_p5_chunk_11",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.7380761504173279,
+      "text": "tent-depth loss Lcd:\nLcd = 1\nHW\nHWX\nWcst| Dreal − Dsyn\nDreal\n|. (11)\nStructure Prior Constraint Although pseudo-label learn-\ning is reweighted, it still cannot perfectly supervise real ad-\nverse predictions, motivating us to seek more explicit pri-\nors fro"
+    },
+    {
+      "id": "chunk::s_p1_chunk_5",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7368439435958862,
+      "text": "ts. In this paper, we present the first synthetic-\nto-real robust depth estimation framework, incorporating\nmotion and structure priors to capture real-world knowl-\nedge effectively. In the synthetic adaptation, we transfer\nmotion-structure knowledge insid"
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_12",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.7363836765289307,
+      "text": "fidelity from depth accuracy, and finally preserving SD priors successfully.\nAnother challenge is the output range of SD’s V AE[27] that is inherently bounded within a fixed\nrange,i.e., [-1, 1]. Existing methods typically normalize GT depth maps to this ra"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_18",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7346663475036621,
+      "text": "nvariant depth predictions {ˆd1, . . . ,ˆdN },\nwe jointly estimate the corresponding scale ˆsi and shift ˆti,\nrelative to some canonical scale and range, in an iterative\nmanner. The proposed objective minimizes the distances be-\ntween each pair of scaled a"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_18",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7346663475036621,
+      "text": "nvariant depth predictions {ˆd1, . . . ,ˆdN },\nwe jointly estimate the corresponding scale ˆsi and shift ˆti,\nrelative to some canonical scale and range, in an iterative\nmanner. The proposed objective minimizes the distances be-\ntween each pair of scaled a"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_20",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.7301080226898193,
+      "text": "pages 1851–1858, 2017.\n[6] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. Enforcing geo-\nmetric constraints of virtual normal for depth prediction. In Proceedings\nof the IEEE International Conference on Computer Vision , pages 5684–\n5693, 2019.\n[7] Ru"
+    },
+    {
+      "id": "chunk::Depth_Anything_p4_chunk_2",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.7300111651420593,
+      "text": "led images. We especially highlight the value of large-scale\nunlabeled images. The S denotes adding strong perturbations (Section 3.2). To equip our depth estimation model with rich semantic priors,\nwe enforce an auxiliary constraint between the online stu"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_21",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.7298858165740967,
+      "text": "structure as faithfully as possible, we duplicate the\nweight tensor of the input layer and divide its values by two.\n3.3. Fine-Tuning Protocol\nAffine-invariant depth normalization. For the ground\ntruth depth maps d, we implement a linear normalization\nsuc"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_21",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7298858165740967,
+      "text": "structure as faithfully as possible, we duplicate the\nweight tensor of the input layer and divide its values by two.\n3.3. Fine-Tuning Protocol\nAffine-invariant depth normalization. For the ground\ntruth depth maps d, we implement a linear normalization\nsuc"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p2_chunk_22",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 2,
+      "score": 0.7273924946784973,
+      "text": "ision transformers [1, 27, 54], a\npiecewise planarity prior [ 34], first-order variational con-\nstraints [ 28] and variational autoencoders [ 32]. Some\nauthors treat depth estimation as a combined regression-\nclassification task, using various binning stra"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p2_chunk_22",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 2,
+      "score": 0.7273924350738525,
+      "text": "ision transformers [1, 27, 54], a\npiecewise planarity prior [ 34], first-order variational con-\nstraints [ 28] and variational autoencoders [ 32]. Some\nauthors treat depth estimation as a combined regression-\nclassification task, using various binning stra"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_13",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.727103590965271,
+      "text": "g Yuan, Dapeng Zhang, Zehao Li, Chengxuan Qian, Jianing Chen, Yinda Chen, Kehua Chen,\nTianlu Mao, Zhaoxin Li, Hao Jiang, and Zhaoqi Wang. Dvp-mvs++: Synergize depth-normal-edge and\nharmonized visibility prior for multi-view stereo, 2025. 23\n[65] Zongsheng"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.7266014814376831,
+      "text": "InProceedings of the AAAI Conference on\nArtificial Intelligence, volume 39, pages 9753–9762, 2025. 23\n[62] Zhenlong Yuan, Jinguo Luo, Fei Shen, Zhaoxin Li, Cong Liu, Tianlu Mao, and Zhaoqi Wang. DVP-MVS:\nSynergize depth-edge and visibility prior for multi"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_22",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.7259480357170105,
+      "text": "tion. For the ground\ntruth depth maps d, we implement a linear normalization\nsuch that the depth primarily falls in the value range [−1, 1],\nto match the designed input value range of the V AE. Such\nnormalization serves two purposes. First, it is the conve"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_22",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7259480357170105,
+      "text": "tion. For the ground\ntruth depth maps d, we implement a linear normalization\nsuch that the depth primarily falls in the value range [−1, 1],\nto match the designed input value range of the V AE. Such\nnormalization serves two purposes. First, it is the conve"
+    },
+    {
+      "id": "chunk::Depth_Anything_p4_chunk_24",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.725027322769165,
+      "text": "h model, especially when our depth model has es-\ntablished very competitive results.\nTherefore, we aim to seek more informative semantic sig-\nnals to serve as auxiliary supervision for our depth estimation\ntask. We are greatly astonished by the strong perf"
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.7230358123779297,
+      "text": "severely restrict the model’s capacity to recover fine-grained details and may cause pathological\noverfitting to specific datasets.\nRecent studies[25] demonstrated that SD possesses powerful visual priors to elevate depth prediction\nsharpness and generaliz"
+    },
+    {
+      "id": "chunk::LED_p16_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 16,
+      "score": 0.7227588891983032,
+      "text": "on in depth maps.\nThe depth normals are estimated at each pixel usingna\ni ≡[−∇ x(ai),−∇ y(ai),1] ⊺. The co-\nsine similarity loss, expressed in eq. (3), is then employed to compare estimated and ground\ntruth normals.⟨., .⟩denotes vector inner product operat"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.7221779823303223,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7221779823303223,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::s_p4_chunk_3",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.7216155529022217,
+      "text": "bjective function is\nL = (1 − M )Lp + Lconsist + Lsmooth, (4)\nwhere Lp and Lsmooth are the typical losses for self-\nsupervised depth [9, 10, 48]. Lconsist is a constraint from\nthe single-frame model. Training on monocular videos pro-\nvides a strong model t"
+    },
+    {
+      "id": "chunk::Jasmine_p13_chunk_8",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.7210454344749451,
+      "text": "th: Robust\nout-of-distribution depth estimation under corruptions. InAdvances in Neural Information Processing\nSystems, volume 36, 2024. 8\n[43] Shuwei Shao, Zhongcai Pei, Weihai Chen, Peter CY Chen, and Zhengguo Li. Nddepth: Normal-distance\nassisted monocu"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p4_chunk_1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 4,
+      "score": 0.7201807498931885,
+      "text": "odel to a student model, which is beneficial\nto improve the results [11]. To mitigate the adverse impact of\ndepth error in the pseudo ground-truth, we apply a multi-view\ncheck filter [25] to filter out erroneous depth. The knowledge\ndistillation loss is th"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p10_chunk_25",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 10,
+      "score": 0.7198031544685364,
+      "text": "th knowledge-guided context opti-\nmization. In CVPR, pages 6757–6767, 2023. 3\n[56] Wei Yin, Xinlong Wang, Chunhua Shen, Yifan Liu, Zhi Tian,\nSongcen Xu, Changming Sun, and Dou Renyin. Diversedepth:\nAffine-invariant depth prediction using diverse data. arXi"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p10_chunk_25",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 10,
+      "score": 0.719802975654602,
+      "text": "th knowledge-guided context opti-\nmization. In CVPR, pages 6757–6767, 2023. 3\n[56] Wei Yin, Xinlong Wang, Chunhua Shen, Yifan Liu, Zhi Tian,\nSongcen Xu, Changming Sun, and Dou Renyin. Diversedepth:\nAffine-invariant depth prediction using diverse data. arXi"
+    },
+    {
+      "id": "chunk::Depth_Anything_p11_chunk_12",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.7197905778884888,
+      "text": ": A large-\nscale dataset for generalized multi-view stereo networks. In\nCVPR, 2020. 3, 7\n[77] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. En-\nforcing geometric constraints of virtual normal for depth pre-\ndiction. In ICCV, 2019. 2\n[78] Wei Yin, Chi"
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_9",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.718788206577301,
+      "text": "nducted to vali-\ndate and show the effectiveness of the proposed ap-\nproach. Finally, our model shows better generaliza-\ntion ability and robustness than other comparative\nmodels. The code will be available soon.\n1 Introduction\nDepth estimation is a challe"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_18",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.7180672883987427,
+      "text": "se depth maps\nover those of md4all-DD on both day and night scenes. We\nspeculate that these considerable improvement of this study\nstems from the more reliable data generation and compre-\nhensive prior constraints, which contribute more to the robust\nmodel"
+    },
+    {
+      "id": "chunk::Depth_Anything_p4_chunk_25",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.7179070711135864,
+      "text": "sion for our depth estimation\ntask. We are greatly astonished by the strong performance\nof DINOv2 models [42] in semantic-related tasks, e.g., im-\nage retrieval and semantic segmentation, even with frozen\nweights without any fine-tuning. Motivated by these"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_8",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.7177258729934692,
+      "text": "into the latent space, for a given depth map d, the corre-\nsponding latent code is given by the encoderE: z(d) = E(d).\nGiven a depth latent code, a depth map can be recovered\nwith the decoder D: ˆd = D(z(d)). The conditioning im-\nage x is also naturally t"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_8",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7177258729934692,
+      "text": "into the latent space, for a given depth map d, the corre-\nsponding latent code is given by the encoderE: z(d) = E(d).\nGiven a depth latent code, a depth map can be recovered\nwith the decoder D: ˆd = D(z(d)). The conditioning im-\nage x is also naturally t"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7176073789596558,
+      "text": "d, there are \nregular structural relationships within the same semantic segment. For \nexample, as shown in Fig. 1(b), the depth of the sky is eﬀectively inﬁnite \nand tends towards a uniform depth value. Meanwhile, the depth span \nof the road surface is rel"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p2_chunk_10",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 2,
+      "score": 0.7174311876296997,
+      "text": "st-\norder variational constraint to regularize depth map. However,\nthese methods rely heavily on the quality and quantity of depth\nground-truth while the proposed MonoDiffusion does not have\nsuch a requirement.\nSelf-supervised depth estimation does not req"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::s_p2_chunk_17",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7917423248291016,
+      "text": "verse conditions. This structural prior provides explicit con-\nstraint when facing real adverse data, learning real-world\ninformation further effectively.\nWith the proposed synthetic-to-real adaptation pipeline,\nour model can provide much more robust depth",
+      "estimated_tokens": 42
+    },
+    {
+      "id": "chunk::s_p2_chunk_16",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7841448783874512,
+      "text": ", we introduce an effective prior based on daytime\ndepth predictions, by calculating explicit depth distribution\nfrom the daytime model and setting it to be a reference in di-\nverse conditions. This structural prior provides explicit con-\nstraint when faci",
+      "estimated_tokens": 47
+    },
+    {
+      "id": "chunk::dav2_p15_chunk_18",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.7697223424911499,
+      "text": "024. 2\n[94] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. Enforcing geometric constraints of\nvirtual normal for depth prediction. In ICCV, 2019. 10\n15",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::DepthDark_p10_chunk_3",
+      "source": "data\\DepthDark.pdf",
+      "page": 10,
+      "score": 0.7597333192825317,
+      "text": "Chunhua Shen, and Youliang Yan. 2019. Enforcing geometric\nconstraints of virtual normal for depth prediction. In Proceedings of the IEEE/CVF\ninternational conference on computer vision . 5684–5693.\n[46] Jiaqi Yu, Yongwei Nie, Chengjiang Long, Wenjun Xu, Q",
+      "estimated_tokens": 69
+    },
+    {
+      "id": "chunk::s_p1_chunk_0",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7550508975982666,
+      "text": "Synthetic-to-Real Self-supervised Robust Depth Estimation\nvia Learning with Motion and Structure Priors\nWeilong Yan1 Ming Li3 Haipeng Li4 Shuwei Shao5 Robby T. Tan1,2\n1National University of Singapore 2ASUS Intelligent Cloud Services\n3Guangdong Laboratory",
+      "estimated_tokens": 69
+    },
+    {
+      "id": "chunk::s_p8_chunk_26",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.7537089586257935,
+      "text": "ns. We introduce a\nconsistency reweighting strategy and a structure prior con-\nstraint to boost learning from synthetic to real domains. Ex-\nperiments across diverse settings and datasets show that our\nmodel provides more accurate and robust depth than pre",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_5",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7520740032196045,
+      "text": "ays from the easy ones.\nAs shown at the top of Figure 3, since we do not apply\nany architectural modification, at inference time, we pre-\ndict depth with the same model through the same model\nparameters, regardless of the input condition. While dedi-\ncated",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::s_p2_chunk_9",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7512989044189453,
+      "text": "model to learn due to the heterogeneous features [29, 47],\nwe dig into motion constraint and explicit structure prior\nfor efficient learning of real-world knowledge. Examples\nof our method compared with previous ones are shown in\nFig.1. Starting from havi",
+      "estimated_tokens": 53
+    },
+    {
+      "id": "chunk::MonoDiffusion_p3_chunk_23",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.7511604428291321,
+      "text": "finement of random depth distri-\nbution Dτ into a depth estimate,\npθ (Dτ −1 |Dτ , c ) := N\n\u0000\nDτ −1; µθ (Dτ , τ,c) , σ2\nτ I\n\u0001\n, (8)\nwhere c stands for the conditions. To speed up the inference\nprocess, we employ an improved inference process from [41],\nwher",
+      "estimated_tokens": 89
+    },
+    {
+      "id": "chunk::Global-Local_p8_chunk_4",
+      "source": "data\\Global-Local.pdf",
+      "page": 8,
+      "score": 0.7478469610214233,
+      "text": "v:2105.15203, 2021.\n[Yin et al., 2019] Wei Yin, Yifan Liu, Chunhua Shen, and\nYouliang Yan. Enforcing geometric constraints of vir-\ntual normal for depth prediction. In Proceedings of the\nIEEE International Conference on Computer Vision, pages\n5684–5693, 20",
+      "estimated_tokens": 76
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_15",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.7468165159225464,
+      "text": "ion.arXiv preprint arXiv:2412.09013, 2024. 3\n[66] Ziyao Zeng, Jingcheng Ni, Daniel Wang, Patrick Rim, Younjoon Chung, Fengyu Yang, Byung-Woo\nHong, and Alex Wong. Priordiffusion: Leverage language prior in diffusion models for monocular depth\nestimation, 20",
+      "estimated_tokens": 85
+    },
+    {
+      "id": "chunk::SSRDepth_p14_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 14,
+      "score": 0.7448078393936157,
+      "text": "Y. Zou et al.\n[42] Z. Zeng, D. Wang, F. Yang, H. Park, S. Soatto, D. Lao, A. Wong, WorDepth: variational \nlanguage prior for monocular depth estimation, in: Proceedings of the IEEE/CVF \nConference on Computer Vision and Pattern Recognition, 2024, pp. 9708–",
+      "estimated_tokens": 82
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_23",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7415345907211304,
+      "text": "maps, \nas shown in Fig. 1(a). Therefore, the introduction of semantic priors is \nessential.\nHowever, existing methods [11] focus on implicitly constructing \nscene structural relationships utilizing semantic information, but with-\nout explicit constraints,",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::Jasmine_p20_chunk_10",
+      "source": "data\\Jasmine.pdf",
+      "page": 20,
+      "score": 0.740333080291748,
+      "text": "r, as shown in Fig. 7 (a-2), using the semantic triplet\nloss from [34] not only disrupts the depth distribution but also introduces spurious edges, rendering it\nincompatible with SD’s latent priors. Furthermore, the results in paper Table 1 are compared wi",
+      "estimated_tokens": 62
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_16",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.7401501536369324,
+      "text": "ays a sig-\nnificant role in enabling affine-invariance. We discuss our\nnormalization approach in Sec. 3.3. We verified that without\nany modification of the V AE or the latent space structure,\nthe depth map can be reconstructed from the encoded latent\ncode",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_16",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7401501536369324,
+      "text": "ays a sig-\nnificant role in enabling affine-invariance. We discuss our\nnormalization approach in Sec. 3.3. We verified that without\nany modification of the V AE or the latent space structure,\nthe depth map can be reconstructed from the encoded latent\ncode",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_22",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7386835813522339,
+      "text": "ten neglect the semantic informa-\ntion of real-world scene structures, leading to “smooth transition” char-\nacteristics in the semantic boundaries areas of the predicted depth maps, \nas shown in Fig. 1(a). Therefore, the introduction of semantic priors is",
+      "estimated_tokens": 54
+    },
+    {
+      "id": "chunk::s_p5_chunk_11",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.7380761504173279,
+      "text": "tent-depth loss Lcd:\nLcd = 1\nHW\nHWX\nWcst| Dreal − Dsyn\nDreal\n|. (11)\nStructure Prior Constraint Although pseudo-label learn-\ning is reweighted, it still cannot perfectly supervise real ad-\nverse predictions, motivating us to seek more explicit pri-\nors fro",
+      "estimated_tokens": 68
+    },
+    {
+      "id": "chunk::s_p1_chunk_5",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7368439435958862,
+      "text": "ts. In this paper, we present the first synthetic-\nto-real robust depth estimation framework, incorporating\nmotion and structure priors to capture real-world knowl-\nedge effectively. In the synthetic adaptation, we transfer\nmotion-structure knowledge insid",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_12",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.7363836765289307,
+      "text": "fidelity from depth accuracy, and finally preserving SD priors successfully.\nAnother challenge is the output range of SD’s V AE[27] that is inherently bounded within a fixed\nrange,i.e., [-1, 1]. Existing methods typically normalize GT depth maps to this ra",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_18",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.7346663475036621,
+      "text": "nvariant depth predictions {ˆd1, . . . ,ˆdN },\nwe jointly estimate the corresponding scale ˆsi and shift ˆti,\nrelative to some canonical scale and range, in an iterative\nmanner. The proposed objective minimizes the distances be-\ntween each pair of scaled a",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_18",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.7346663475036621,
+      "text": "nvariant depth predictions {ˆd1, . . . ,ˆdN },\nwe jointly estimate the corresponding scale ˆsi and shift ˆti,\nrelative to some canonical scale and range, in an iterative\nmanner. The proposed objective minimizes the distances be-\ntween each pair of scaled a",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_20",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.7301080226898193,
+      "text": "pages 1851–1858, 2017.\n[6] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. Enforcing geo-\nmetric constraints of virtual normal for depth prediction. In Proceedings\nof the IEEE International Conference on Computer Vision , pages 5684–\n5693, 2019.\n[7] Ru",
+      "estimated_tokens": 75
+    },
+    {
+      "id": "chunk::Depth_Anything_p4_chunk_2",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.7300111651420593,
+      "text": "led images. We especially highlight the value of large-scale\nunlabeled images. The S denotes adding strong perturbations (Section 3.2). To equip our depth estimation model with rich semantic priors,\nwe enforce an auxiliary constraint between the online stu",
+      "estimated_tokens": 53
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1487,
+    "compressed_context_tokens": 1487,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1487,
+  "context_tokens": 1487,
+  "prompt_token_estimate": 2171,
+  "run_label": "sage_semantic_all_v1_chunk_syn2real_depth_structure_prior_constraint",
+  "answer": "<think>The question asks about how Syn2Real-Depth's structure prior constraint is constructed and used. Let me look through the materials to find relevant information.\n\nFrom source [5], we know Syn2Real-Depth is \"Synthetic-to-Real Self-supervised Robust Depth Estimation via Learning with Motion and Structure Priors\" by Weilong Yan et al.\n\nFrom source [2]: \"we introduce an effective prior based on daytime depth predictions, by calculating explicit depth distribution from the daytime model and setting it to be a reference in diverse conditions.\"\n\nFrom source [1]: \"This structural prior provides explicit constraint when facing real adverse data, learning real-world information further effectively.\"\n\nFrom source [18]: \"Structure Prior Constraint Although pseudo-label learning is reweighted, it still cannot perfectly supervise real adverse predictions, motivating us to seek more explicit priors fro...\"\n\nFrom source [19]: \"we present the first synthetic-to-real robust depth estimation framework, incorporating motion and structure priors to capture real-world knowledge effectively.\"\n\nFrom source [8]: \"we dig into motion constraint and explicit structure prior for efficient learning of real-world knowledge.\"\n\nFrom source [6]: \"We introduce a consistency reweighting strategy and a structure prior constraint to boost learning from synthetic to real domains.\"\n\nSo the construction involves:\n- Using daytime depth predictions to calculate explicit depth distribution\n- Using this as a reference/prior for diverse conditions\n\nThe usage:\n- Provides explicit constraint when facing real adverse data\n- Helps learn real-world information effectively\n- Boosts learning from synthetic to real domains\n- Supervises real adverse predictions where pseudo-label learning falls short\n\nLet me construct the JSON response.</think>\n\n{\n  \"answer\": \"Syn2Real-Depth 的 structure prior constraint 通过利用 daytime 深度预测计算显式的深度分布，并将其作为多样条件下的参考，从而在合成到真实的自适应过程中提供显式的结构先验约束。\",\n  \"items\": [\n    {\n      \"name\": \"构建方式\",\n      \"description\": \"基于 daytime 模型的深度预测，计算显式的深度分布（depth distribution），并将其设定为多样条件（diverse conditions）下的参考（reference）。\",\n      \"citations\": [2]\n    },\n    {\n      \"name\": \"使用目的\",\n      \"description\": \"在面对真实场景的对抗（adverse）数据时，提供显式约束（explicit constraint），更有效地学习真实世界信息。\",\n      \"citations\": [1, 18]\n    },\n    {\n      \"name\": \"在框架中的作用\",\n      \"description\": \"与 motion constraint 共同作为运动与结构先验，配合 consistency reweighting 策略，弥补伪标签学习（pseudo-label learning）无法完美监督真实对抗预测的不足，促进从合成到真实域的有效迁移。\",\n      \"citations\": [6, 8, 18, 19]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 2186,
+    "completion_tokens": 587,
+    "total_tokens": 2773,
+    "model": "MiniMax-M3"
+  }
+}

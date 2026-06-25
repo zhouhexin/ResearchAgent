@@ -1,0 +1,470 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_paper_day_night_diffe_ask_baseline_none_ff7dca06e9c5",
+  "dry_run": false,
+  "query": "论文将哪些日夜差异定位为需要补偿的关键分布差异？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::LED_p17_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6461637020111084,
+      "text": "✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.021 0.13213.12212.9840.9570.9830.992\n✗ ✓ ✓ ✗ ✗ 5.760 0.201 0.020 0.137 13.616 16.174 0.9580.9830.992\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.309"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.5985776782035828,
+      "text": "/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C17/C19/C16/C15/C14/C19/C2/C9/C20\n/C13/C12/C11/C6/C8\n/C37/C7/C36/C32/C35/C30\n/C11/C2/C19/C14/C6\n/C42/C41/C39/C42/C38/C40\n/C17/C6/C9/C2/C19/C14"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.5985776782035828,
+      "text": "/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C17/C19/C16/C15/C14/C19/C2/C9/C20\n/C13/C12/C11/C6/C8\n/C37/C7/C36/C32/C35/C30\n/C11/C2/C19/C14/C6\n/C42/C41/C39/C42/C38/C40\n/C17/C6/C9/C2/C19/C14"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.5953194499015808,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.5953194499015808,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.5894168615341187,
+      "text": "/C10/C7/C8/C6/C9/C8/C4\n/C3/C6/C5/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C4\n/C16/C9/C5/C2/C1/C6/C0\n/C24/C8/C7/C9/C1/C7/C0/C1/C4\n/C32/C2/C25/C28/C6\n /C38/C37/C35/C38/C34/C36\n/C10/C7/C8/C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C2"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.5894168615341187,
+      "text": "/C10/C7/C8/C6/C9/C8/C4\n/C3/C6/C5/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C4\n/C16/C9/C5/C2/C1/C6/C0\n/C24/C8/C7/C9/C1/C7/C0/C1/C4\n/C32/C2/C25/C28/C6\n /C38/C37/C35/C38/C34/C36\n/C10/C7/C8/C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C2"
+    },
+    {
+      "id": "chunk::s_p5_chunk_23",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.5690822601318359,
+      "text": "4)\nNoted that Distday is calculated among the whole day-\ntime training set instead of one sample. The objective is\nto minimize the distribution distances betweenDistday and\nDistadv by K-L divergence:\nLKL\ndis =\nNX\ni=1\nPadv(i) · log Padv(i)\nPday(i) . (15)\nAp"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.561524510383606,
+      "text": "92\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.3090.206 0.022 0.149 14.862 16.048 0.954 0.981 0.990\n✗ ✓ ✗ ✓ ✓ 5.8090.186 0.0180.125 12.21014.6830.961 0.985 0.993\n✗ ✓ ✓ ✗ ✓ 5.4220.2000.0180.125 12.50316.1200.961 0.985 0.993\nTab"
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_1",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.5518823862075806,
+      "text": "in [Yin et al., 2019] 114 0.875 0.976 0.994 0.108 0.416 0.048\nDA V[Huynh et al., 2020] 25 0.882 0.980 0.996 0.108 0.412 -\nBTS [Lee et al., 2019] 47 0.885 0.978 0.994 0.110 0.392 0.047\nAdabins[Bhat et al., 2021] 78 0.903 0.984 0.997 0.103 0.364 0.044\nDPT* ["
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_6",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.5507854223251343,
+      "text": "s, tested\nhere. Our md4all outperforms them all across the board,\nwith substantially better estimates at night than theirs dur-\ning the day: the previous best WSGD [37]’s day absRel\nerror is 45% higher than ours at night. This is thanks to the\nsimplicity o"
+    },
+    {
+      "id": "chunk::s_p4_chunk_9",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.550004243850708,
+      "text": "ed on the paired data Iday, ICi−syn in a\ndistillation or teacher-student manner, where the outputs of\nΦD−day, ΦP −day can be defined as Dday, Tday and those\nfrom ΦD−syn, ΦP −syn are Dsyn, Tsyn. The distillation ob-\njective is the absolute relative depth lo"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_1",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5472483038902283,
+      "text": "tional Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund from Guangdong Laboratory of Artiﬁcial Intel-\nligence and Digital Economy (SZ) (GML-KF-24-09).\nReferences\n[Arampatzakis et al., 2023 ] V asileios Arampatzakis, George\nPavlidis,"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.5439466834068298,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::s_p10_chunk_13",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.5428521633148193,
+      "text": "c fusion.\narXiv preprint arXiv:2407.09303, 2024. 1, 2, 5\n[35] Yihang Wu, Xiao Cao, Kaixin Li, Zitan Chen, Haonan Wang,\nLei Meng, and Zhiyong Huang. Towards better text-to-\nimage generation alignment via attention modulation.ArXiv,\nabs/2404.13899, 2024. 2\n["
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5427525043487549,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci"
+    },
+    {
+      "id": "chunk::ACD_p5_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.5413823127746582,
+      "text": "଴\nଵ\nכ\nOREDO\n଴\nଵ\nכ\nRFDO\nଵ\n*OREDO\nଵ\n/RFDO\n\u000bD\f GD\\\u0010FOHDU\n\u000bE\f QLJKW\n\u000bF\f 3VHXGR GHSWK\n\u000bG\f 7UDLQLQJ\u0003GHSWK\n\u000bH\f 5HJLRQ PDVN\n\u000bI\f 'HSWK\u0003$Q\\WKLQJ\u00039\u0015\n5HJLRQDO\u0003'LIIHUHQFHV\nFigure 3: Ordinal Pair Sampling: During training, we use two strate-\ngies to efﬁciently sample or"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_7",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5412064790725708,
+      "text": "WSGD[35] R 𝑑 &𝑛 640 × 320 40 0.202 1.835 5.985 0.231 0.737 0.934 0.977\nDA\nITDFA[50] R 𝑑 &𝑛 640 × 320 40 0.266 3.010 8.293 0.287 0.567 0.888 0.962\nADDS[24] R 𝑑 &𝑛 640 × 320 40 0.209 2.179 6.808 0.254 0.704 0.918 0.965\nRNW[36] R 𝑑 &𝑛 640 × 320 40 0.197 1.78"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5392820239067078,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5387135148048401,
+      "text": "n: night, r: rain, a: all. T†: Translated\nvia GAN, T‡: Translated via Diffusion. Visual support: 1st and 2nd.\nFigure. 4(a) presents qualitative results. md4all-DD is partic-\nularly sensitive to water reﬂections in rainy scenes. For exam-\nple, in the ﬁrst a"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_5",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.5380778908729553,
+      "text": "0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.981\nEPC++ [38] MS 0.123 0.754 4.453 0.172 0.863 0.964 0.989\nMonodepth2w/o pretrainingMS 0.107 0.720 4.345 0.161 0.890 0.971 0.989\nMonodepth2 MS 0.080 0.466 3.681 0.127 0.926 0.9"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_5",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.5380778908729553,
+      "text": "0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.981\nEPC++ [38] MS 0.123 0.754 4.453 0.172 0.863 0.964 0.989\nMonodepth2w/o pretrainingMS 0.107 0.720 4.345 0.161 0.890 0.971 0.989\nMonodepth2 MS 0.080 0.466 3.681 0.127 0.926 0.9"
+    },
+    {
+      "id": "chunk::s_p8_chunk_14",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.5371566414833069,
+      "text": "indicate higher con-\nsistency. The first two columns correspond to night condi-\ntions, showing that dark, distant regions exhibit low con-\nsistency between Dday and Dsyn, while near regions have\nmuch stronger consistency. The last two columns represent\nrai"
+    },
+    {
+      "id": "chunk::LED_p18_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 18,
+      "score": 0.5363746881484985,
+      "text": "e from section section 5.1.\nResolutionRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n200 px 5.94130.10730.0206 0.1270 12.62273.97360.9545 0.9228 0.9921\n320 px 5.42590.1996 0.01880.1253 12.490016.1224 0.96030.9846 0.9927\n640 px 5.7050 0.21090.01850.14"
+    },
+    {
+      "id": "chunk::s_p5_chunk_18",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.5359010696411133,
+      "text": "d adverse conditions are defined\nas Distday and Distadv, obtained from the predicted depth\nvalues across defined depth bins. However, direct calcula-\ntion of these distributions makes the histogram indifferen-\ntiable. Following [1, 2], we use differentiabl"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_7",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.5345539450645447,
+      "text": "er to the Gaussian used in the original DDPM\nformulation, we propose to anneal the weight of levels i >0\nbased on the diffusion schedule. Specifically, we assign thei-\nth level at timestep t the weight (st/T )i, where T is the total\nnumber of diffusion ste"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_7",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.5345539450645447,
+      "text": "er to the Gaussian used in the original DDPM\nformulation, we propose to anneal the weight of levels i >0\nbased on the diffusion schedule. Specifically, we assign thei-\nth level at timestep t the weight (st/T )i, where T is the total\nnumber of diffusion ste"
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_12",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.534168541431427,
+      "text": "ided that copies are not made or distributed\nfor profit or commercial advantage and that copies bear this notice and the full citation\non the first page. Copyrights for third-party components of this work must be honored.\nFor all other uses, contact the ow"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_2",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5339892506599426,
+      "text": "49.00\nRNW [Wang et al., 2021] M∗ a: dn 0.2970 2.608 7.996 43.10 0.1850 1.710 6.549 73.30\nWSGD [V ankadariet al., 2023] M∗ a: dn 0.1760 1.603 6.036 75.00 0.1740 1.637 6.302 75.40\nmd4all-DD [Gasperini et al., 2023] Mv dT†(n) 0.1128 0.648 3.206 87.13 0.1219 0"
+    },
+    {
+      "id": "chunk::s_p7_chunk_4",
+      "source": "data\\s.pdf",
+      "page": 7,
+      "score": 0.533929169178009,
+      "text": "data.\nWe follow the split of WSGD [27], where there are 17790\nimages in daytime and 19612 in nighttime. The test set in-\ncludes 1411 single images, in which 702 are daytime and\n709 are nighttime. Our model is evaluated in single-frame\nsetting on the datas"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_34",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.5338166952133179,
+      "text": "ur method gives a more accurate pre-\ndiction in these regions compared to ADDS and RNW, which\nshows the robustness of our method.\nIn addition, the comparisons between the top and bottom\nhalves of Fig. 4.1 and Table 4.1 suggest that the performance\nof DA: A"
+    },
+    {
+      "id": "chunk::s_p4_chunk_8",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.5326464772224426,
+      "text": "ranslate the daytime\nimages into multiple adverse conditions as\nICi−syn = Φaug(Iday), Ci ∈ C, (5)\nwhere C represents the set of conditions. Then the adapta-\ntion can be conducted on the paired data Iday, ICi−syn in a\ndistillation or teacher-student manner,"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_chunk_20",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5321044921875,
+      "text": "8103, 2023. 2\n[19] J. Liu, D. Xu, W. Yang, et al. Benchmarking low-light im-\nage enhancement and beyond. Proceedings of International\nJournal of Computer Vision (IJCV) , 129:1153–1184, 2021.\n1, 2\n[20] Yucheng Lu and Seung-Won Jung. Progressive joint low-\nl"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_chunk_20",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5321044325828552,
+      "text": "8103, 2023. 2\n[19] J. Liu, D. Xu, W. Yang, et al. Benchmarking low-light im-\nage enhancement and beyond. Proceedings of International\nJournal of Computer Vision (IJCV) , 129:1153–1184, 2021.\n1, 2\n[20] Yucheng Lu and Seung-Won Jung. Progressive joint low-\nl"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_34",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.5318586826324463,
+      "text": "stable self-supervision of day images, we make a com-\npensation on the day-image distribution with day-night dif-\nferences:\nPn = Pd + Pshif t,\nI LRN\nt ∼ Pd + ˜Pshif t, (1)\nwhere Pd and Pn represent the day-image and night-image\ndistributions, Pshif tdonate"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p6_chunk_6",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.5312511920928955,
+      "text": "[5] M 0.141 1.026 5.291 0.215 0.816 0.945 0.979Monodepth2w/o pretraining M 0.132 1.044 5.142 0.210 0.845 0.948 0.977Monodepth2 M 0.115 0.903 4.863 0.193 0.877 0.959 0.981\nMonodepth2(1024×320) M 0.115 0.882 4.701 0.190 0.879 0.961 0.982\nGarg [12]† S 0.152"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p6_chunk_6",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.5312511920928955,
+      "text": "[5] M 0.141 1.026 5.291 0.215 0.816 0.945 0.979Monodepth2w/o pretraining M 0.132 1.044 5.142 0.210 0.845 0.948 0.977Monodepth2 M 0.115 0.903 4.863 0.193 0.877 0.959 0.981\nMonodepth2(1024×320) M 0.115 0.882 4.701 0.190 0.879 0.961 0.982\nGarg [12]† S 0.152"
+    },
+    {
+      "id": "chunk::s_p3_chunk_14",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.5303754806518555,
+      "text": "nput of the mod-\nels are consecutive frame pairsIt−1, It, and the cost volume\ncv is constructed via It−1, It and the encoder of ΦD−day:\ncv = ΦD−day(It) − W (ΦD−day(It−1), T, d, K), (1)\nT = ΦP −day(It, It−1), (2)\nwhere W (·) is the warping operation [36], T"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p10_chunk_8",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 10,
+      "score": 0.5301052331924438,
+      "text": "ing scene understanding. In Proceedings of the\nIEEE/CVF International Conference on Computer Vision ,\npages 10765–10775, 2021. 6\n[30] Peilun Shi, Jiachuan Peng, Jianing Qiu, Xinwei Ju, Frank\nPo Wen Lo, and Benny Lo. EVEN: An event-based frame-\nwork for mon"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_22",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.5297703742980957,
+      "text": "onv5 ELU\niconv4 3 1 128 8 ↑upconv4, econv3ELU\ndisp4 3 1 1 1 iconv4 Sigmoid\nupconv3 3 1 64 8 iconv4 ELU\niconv3 3 1 64 4 ↑upconv3, econv2ELU\ndisp3 3 1 1 1 iconv3 Sigmoid\nupconv2 3 1 32 4 iconv3 ELU\niconv2 3 1 32 2 ↑upconv2, econv1ELU\ndisp2 3 1 1 1 iconv2 Sig"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_22",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.5297703742980957,
+      "text": "onv5 ELU\niconv4 3 1 128 8 ↑upconv4, econv3ELU\ndisp4 3 1 1 1 iconv4 Sigmoid\nupconv3 3 1 64 8 iconv4 ELU\niconv3 3 1 64 4 ↑upconv3, econv2ELU\ndisp3 3 1 1 1 iconv3 Sigmoid\nupconv2 3 1 32 4 iconv3 ELU\niconv2 3 1 32 2 ↑upconv2, econv1ELU\ndisp2 3 1 1 1 iconv2 Sig"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.5293967723846436,
+      "text": "Figure 3. Qualitative results on six unseen datasets.\nLl Lu S Lf eat KI NY SI DD ET DI\n✓ 0.085 0.053 0.492 0.245 0.134 0.070\n✓ ✓ 0.085 0.054 0.481 0.242 0.138 0.073\n✓ ✓ ✓ 0.081 0.048 0.469 0.235 0.134 0.068\n✓ ✓ ✓ ✓ 0.076 0.043 0.458 0.230 0.127 0.066\nTable"
+    },
+    {
+      "id": "chunk::s_p4_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.5291146636009216,
+      "text": "odel to multiple adverse con-\nditions is difficult. Following [8, 22, 25, 28], we first\nadapt the pre-trained daytime models ΦD−day, ΦP −day\n(denoted as Φday in Fig.2) to synthetic adverse model\nΦD−syn, ΦP −syn. To realize that, a generative adversarial\nne"
+    },
+    {
+      "id": "chunk::dav2_p33_chunk_0",
+      "source": "data\\dav2.pdf",
+      "page": 33,
+      "score": 0.5290813446044922,
+      "text": "Question: Does the paper provide open access to the data and code, with sufficient instruc-\ntions to faithfully reproduce the main experimental results, as described in supplemental\nmaterial?\nAnswer: [Yes]\nJustification: We will release of code and data.\nG"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.528984785079956,
+      "text": "..0.2194 10.542 ......62.28 0.1337 7.131 83.91\nRNW [38] M ∗ dn 0.2872 9.185 56.21 0.3333 10.098 43.72 0.2952 9.341 57.21\n[ours] baseline Mv d ........0.1333 .......6.459 85.88 0.2419 10.922 58.17 0.1572 .......7.453 79.49\n[ours] md4all-AD Mv dT(nr) 0.1523"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_18",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.5283184051513672,
+      "text": "hown |C| + 1variations of each day-clear input.\nDay(-clear) While we do not include any modification\naddressing standard conditions, we still see improvements\nover the baselines across both datasets and supervision\ntypes (Tables 1 and 2). This is due to th"
+    },
+    {
+      "id": "chunk::TDDC_p11_chunk_8",
+      "source": "data\\TDDC.pdf",
+      "page": 11,
+      "score": 0.5280912518501282,
+      "text": "δ1↑ δ2↑ δ3↑ TimeFull disturb 0.601 10.06 15.76 0.247 0.447 0.610 ×1.0Pose disturb 0.276 3.606 9.098 0.625 0.840 0.928×1.0Self-teaching0.259 3.139 8.615 0.6410.8470.930 ×1.7Our training0.259 3.147 8.547 0.641 0.850 0.928 ×1.0\nTable A.1: Result of different"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_26",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5280035734176636,
+      "text": "esults reported in their paper. Additionally,\nwe attempt to reproduce TDDC’s approach and provide the general\n(G) version results for each DA method to facilitate further com-\nparison. Our final experiments indicate that the G-version results\nare largely c"
+    },
+    {
+      "id": "chunk::s_p2_chunk_10",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.5278348326683044,
+      "text": "of our method compared with previous ones are shown in\nFig.1. Starting from having a strong self-supervised day-\ntime model, we identify the cost volume [6, 33, 34] as an ef-\nfective auxiliary space for robust representation, as it natu-\nrally filters redu"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p6_chunk_13",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.527775764465332,
+      "text": "2015 [13] using\nthe Eigen split. Best results in each\ncategory are in bold; second best are\nunderlined.\nAll results here are presented with-\nout post-processing [15]; see supple-\nmentary Section F for improved post-\nprocessed results. While our contribu-"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::LED_p17_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6461637020111084,
+      "text": "✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.021 0.13213.12212.9840.9570.9830.992\n✗ ✓ ✓ ✗ ✗ 5.760 0.201 0.020 0.137 13.616 16.174 0.9580.9830.992\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.309",
+      "estimated_tokens": 172
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.5985776782035828,
+      "text": "/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C17/C19/C16/C15/C14/C19/C2/C9/C20\n/C13/C12/C11/C6/C8\n/C37/C7/C36/C32/C35/C30\n/C11/C2/C19/C14/C6\n/C42/C41/C39/C42/C38/C40\n/C17/C6/C9/C2/C19/C14",
+      "estimated_tokens": 154
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.5985776782035828,
+      "text": "/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C17/C19/C16/C15/C14/C19/C2/C9/C20\n/C13/C12/C11/C6/C8\n/C37/C7/C36/C32/C35/C30\n/C11/C2/C19/C14/C6\n/C42/C41/C39/C42/C38/C40\n/C17/C6/C9/C2/C19/C14",
+      "estimated_tokens": 154
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.5953194499015808,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008",
+      "estimated_tokens": 163
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.5953194499015808,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008",
+      "estimated_tokens": 163
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.5894168615341187,
+      "text": "/C10/C7/C8/C6/C9/C8/C4\n/C3/C6/C5/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C4\n/C16/C9/C5/C2/C1/C6/C0\n/C24/C8/C7/C9/C1/C7/C0/C1/C4\n/C32/C2/C25/C28/C6\n /C38/C37/C35/C38/C34/C36\n/C10/C7/C8/C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C2",
+      "estimated_tokens": 159
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.5894168615341187,
+      "text": "/C10/C7/C8/C6/C9/C8/C4\n/C3/C6/C5/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C4\n/C16/C9/C5/C2/C1/C6/C0\n/C24/C8/C7/C9/C1/C7/C0/C1/C4\n/C32/C2/C25/C28/C6\n /C38/C37/C35/C38/C34/C36\n/C10/C7/C8/C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C2",
+      "estimated_tokens": 159
+    },
+    {
+      "id": "chunk::s_p5_chunk_23",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.5690822601318359,
+      "text": "4)\nNoted that Distday is calculated among the whole day-\ntime training set instead of one sample. The objective is\nto minimize the distribution distances betweenDistday and\nDistadv by K-L divergence:\nLKL\ndis =\nNX\ni=1\nPadv(i) · log Padv(i)\nPday(i) . (15)\nAp",
+      "estimated_tokens": 73
+    },
+    {
+      "id": "chunk::LED_p17_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.561524510383606,
+      "text": "92\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.3090.206 0.022 0.149 14.862 16.048 0.954 0.981 0.990\n✗ ✓ ✗ ✓ ✓ 5.8090.186 0.0180.125 12.21014.6830.961 0.985 0.993\n✗ ✓ ✓ ✗ ✓ 5.4220.2000.0180.125 12.50316.1200.961 0.985 0.993\nTab",
+      "estimated_tokens": 167
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_6",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.5507854223251343,
+      "text": "s, tested\nhere. Our md4all outperforms them all across the board,\nwith substantially better estimates at night than theirs dur-\ning the day: the previous best WSGD [37]’s day absRel\nerror is 45% higher than ours at night. This is thanks to the\nsimplicity o",
+      "estimated_tokens": 68
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.5439466834068298,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K",
+      "estimated_tokens": 66
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1498,
+    "compressed_context_tokens": 1498,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1498,
+  "context_tokens": 1498,
+  "prompt_token_estimate": 2049,
+  "run_label": "sage_semantic_all_v1_chunk_paper_day_night_differences",
+  "answer": "<think>\nThe question asks: \"论文将哪些日夜差异定位为需要补偿的关键分布差异？\" (What day-night differences does the paper identify as key distribution differences that need to be compensated?)\n\nLooking at the provided materials, I need to find information about day-night distribution differences that need to be compensated.\n\nLet me look through the sources:\n\n[1] data\\LED.pdf - Contains some numerical data with checkmarks/crosses, not directly about day-night differences\n[2] data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf - Just code references\n[3] Same as [2]\n[4] data\\Monocular_Depth_Estimation.pdf - Table of depth estimation methods\n[5] Same as [4]\n[6] Same as [2] variant\n[7] Same as [6]\n[8] data\\s.pdf - This is the key one! It mentions:\n  - \"Distday is calculated among the whole daytime training set instead of one sample\"\n  - \"The objective is to minimize the distribution distances between Distday and Distadv by K-L divergence\"\n  - Formula for LKL_dis using Padv and Pday\n[9] data\\LED.pdf - More numerical data\n[10] data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf - Mentions md4all outperforming others at night vs day\n[11] data\\Jasmine.pdf - Acknowledgment\n\nFrom source [8], I can see the paper discusses distribution distances between daytime (Distday) and adverse conditions (Distadv), using K-L divergence to minimize the gap. But the specific day-night distribution differences that need to be compensated are not clearly enumerated.\n\nSource [10] mentions: \"Our md4all outperforms them all across the board, with substantially better estimates at night than theirs during the day: the previous best WSGD [37]'s day absRel error is 45% higher than ours at night.\"\n\nThe materials don't explicitly list which specific day-night distribution differences are identified as key ones needing compensation. The information is quite fragmentary.\n\nLet me look again more carefully:\n\nSource [8] talks about:\n- Distday: distribution among whole daytime training set\n- Distadv: distribution under adverse conditions\n- LKL_dis: K-L divergence between Padv and Pday\n- The goal is to minimize distribution distances\n\nThis suggests the paper is about bridging the gap between daytime and adverse (night) conditions through K-L divergence minimization. But the specific differences are not clearly listed.\n\nSource [10] gives some performance numbers but doesn't enumerate specific distribution differences.\n\nGiven the limited information in the provided materials, I should note that specific day-night distribution differences are not clearly enumerated in the provided materials. The materials only mention:\n1. Distribution distance between daytime and adverse conditions (K-L divergence)\n2. Performance differences (absRel error being 45% higher at night)\n\nI think the answer should indicate that the specific distribution differences are not clearly listed in the provided materials, though there's mention of K-L divergence between Distday and Distadv.\n\nWait, let me re-read source [8] more carefully:\n\"Noted that Distday is calculated among the whole daytime training set instead of one sample. The objective is to minimize the distribution distances between Distday and Distadv by K-L divergence:\nLKL_dis = Σ Padv(i) · log(Padv(i)/Pday(i))\"\n\nThis indicates the paper focuses on the distribution distance between daytime and adverse conditions (which could include night). The specific aspects of distribution that differ (e.g., color, lighting, texture) are not mentioned in the provided excerpt.\n\nThe materials are insufficient to provide a detailed list of which specific day-night differences are identified as key distribution differences needing compensation. I'll need to indicate this in missing_information.\n</think>\n{\n  \"answer\": \"资料未明确列举需要补偿的具体日夜分布差异，仅提及通过 K-L 散度最小化 Distday（白天整体分布）与 Distadv（不利条件/夜间分布）之间的距离，未给出具体差异维度的详细说明。\",\n  \"items\": [\n    {\n      \"name\": \"K-L 散度层面的整体分布差异\",\n      \"description\": \"论文将白天整体训练集分布 Distday 与不利条件（含夜间）分布 Distadv 之间的距离作为需要补偿的关键差异，通过 K-L 散度 LKL_dis = Σ Padv(i)·log(Padv(i)/Pday(i)) 进行最小化。\",\n      \"citations\": [8]\n    },\n    {\n      \"name\": \"夜间深度估计性能显著退化\",\n      \"description\": \"资料提到 md4all 在夜间表现优于之前最好的 WSGD，后者在夜间的 absRel 误差比白天高 45%，但未具体说明造成该退化的分布差异维度。\",\n      \"citations\": [10]\n    }\n  ],\n  \"missing_information\": \"所提供资料未明确列出具体的日夜分布差异维度（如光照、颜色、纹理、噪声",
+  "usage": {
+    "prompt_tokens": 2092,
+    "completion_tokens": 1024,
+    "total_tokens": 3116,
+    "model": "MiniMax-M3"
+  }
+}

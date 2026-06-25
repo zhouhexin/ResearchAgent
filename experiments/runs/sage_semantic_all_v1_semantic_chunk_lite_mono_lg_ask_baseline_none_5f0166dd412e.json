@@ -1,0 +1,406 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_lite_mono_lg_ask_baseline_none_5f0166dd412e",
+  "dry_run": false,
+  "query": "LGFI 模块是如何实现全局信息编码的？它采用了什么注意力机制？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Lite-Mono_p7_sc4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6094251871109009,
+      "text": "It can be observed that although the model size remains the same the accuracy drops more than for not using LGFI blocks. The beneﬁt of introducing the CDC module is to enhance the locality by gradually extracting multi-scale features, while not adding additional trainable parameters. The beneﬁt of pooled concatenations. Accuracy also decreases when three pooled concatenations are removed."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.6045225858688354,
+      "text": "2, this study conducts systematic ablation experiments to evaluate the performance gains introduced by the LLDG and LLPEFT modules. The experimental results demonstrate Method ParameterABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑Test on nuScenes-NightDepth Anything V2 97. 470M 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914+ AMFG 99. 229M 0. 243 2. 351 5. 416 0. 267 0. 674 0. 862 0. 945+ LoRA 99. 830M 0. 233 2. 112 5. 220 0. 259 0. 6850. 8650. 947+ LLPEFT 97. 479M0. 210 1. 910 7. 764 0. 260 0. 6300. 914 0. 976Test on RobotCar-NightDepth Anything V2 97. 470M 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972+ AMFG 99. 229M 0. 168 1. 481 6. 470 0. 234 0. 717 0. 908 0. 976+ LoRA 99. 830M 0. 173 1. 260 4. 527 0. 217 0. 7380. 9190. 981+ LLPEFT 97. 479M0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 3: We conduct comprehensive ablation studies on PEFT methods for Depth Anything V2 across both nuScenes- Night and RobotCar-Night datasets, with quantitative analy- sis of parameter counts for each fine-tuned variant."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p8_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6029127836227417,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 8 ID SD PGD LKD MVC Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 1 0. 107 0. 787 4. 580 0. 182 0. 887 0. 963 0. 983 2 ✓ 0. 434 4. 630 11. 99 0. 579 0. 306 0. 568 0. 777 3 ✓ 0. 105 0. 757 4. 521 0. 181 0. 889 0. 964 0. 984 4 ✓ ✓ 0. 104 0. 741 4. 489 0. 180 0. 890 0. 964 0. 984 5 ✓ ✓ ✓ 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 TABLE IV ABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD: PSEUDO GROUND -TRUTH DIFFUSION ; MVC: MASKED VISUAL CONDITION MECHANISM . Inference step Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 2 1. 812 75. 600 30. 791 6. 160 0. 070 0. 141 0. 213 5 1. 503 58. 013 27. 140 5. 464 0. 125 0. 241 0. 340 10 0. 226 3. 730 9. 571 0. 754 0. 703 0. 878 0. 938 15 0. 822 28. 099 19. 232 2. 972 0. 357 0. 548 0. 653 20 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 25 0. 431 10. 382 12. 709 1. 206 0. 503 0. 723 0. 827 TABLE V ABLATION STUDY ON DIFFERENT INFERENCE STEPS . Fig. 7. Visualization of the denoising process involving 20 inference steps in total. E."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.6016591191291809,
+      "text": "180 0. 808 0. 966 0. 989 WSGD[Vankadariet al., 2023] R d&n 640× 320 40 0. 123 0. 694 3. 957 0. 163 0. 835 0. 978 0. 995 DA ITDFA[Zhaoet al., 2022a] R d&n 640× 320 40 0. 156 0. 786 3. 971 0. 192 0. 778 0. 965 0. 992 ADDS[Liu et al., 2021]† R d&n 640× 320 40 0. 109 0. 584 3. 578 0. 153 0. 631 0. 908 0. 962 ADDS[Liu et al., 2021] R d&n 640× 320 40 0. 120 0. 778 4. 113 0. 172 0. 856 0. 967 0. 987 RNW[Wanget al., 2021] R d&n 640× 320 40 0. 156 0. 701 3. 838 0. 202 0. 768 0. 958 0. 991 G ITDFA[Zhaoet al., 2022a] N d&n 640× 320 40 0. 230 2. 018 6. 336 0. 281 0. 653 0. 875 0. 956 ADDS[Liu et al., 2021] N d&n 640× 320 40 0. 180 1. 441 5. 680 0. 232 0. 727 0. 930 0. 981 RNW[Wanget al., 2021] N d&n 640× 320 40 0. 271 3. 939 9. 204 0. 314 0. 661 0. 830 0. 927 MonoFormer[Baeet al., 2023] K 768 × 256 40 0. 138 0. 665 3. 730 0. 181 0. 824 0. 971 0. 993 MonoViT[Zhaoet al., 2022b] K 768 × 256 40 0. 102 0. 500 3. 364 0. 147 0. 905 0. 977 0. 992 Ours K 768 × 256 40 0. 109 0. 477 3. 261 0. 151 0. 891 0. 978 0. 993 Table E. 1: Effective test on nuScenes-Day [Wang et al., 2021; Caesar et al., 2020] and Robotcar-Day [Liu et al., 2021; Maddern et al., 2017]."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.599509596824646,
+      "text": "Output Size Layers Lite-Mono-tiny Lite-Mono-small Lite-Mono Lite-Mono-8M 640×192 Input 320×96 Conv Stem 3×3,32,stride= 2 3 ×3,48,stride= 2 3 ×3,48,stride= 2 3 ×3,64,stride= 2 [3×3,32]×2 [3 ×3,48]×2 [3 ×3,48]×2 [3 ×3,64]×2 160×48 Downsampling3×3,32,stride= 2 3 ×3,48,stride= 2 3 ×3,48,stride= 2 3 ×3,64,stride= 2 Stage 1 CDC blocks [3×3,32]×3 [3 ×3,48]×3 [3 ×3,48]×3 [3 ×3,64]×3 LGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 80×24 Downsampling3×3,64,stride= 2 3 ×3,80,stride= 2 3 ×3,80,stride= 2 3 ×3,128,stride= 2 Stage 2 CDC blocks [3×3,64]×3 [3 ×3,80]×3 [3 ×3,80]×3 [3 ×3,128]×3 LGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 40×12 Downsampling3×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2 Stage 3 CDC blocks [3×3,128]×6 [3 ×3,128]×6 [3 ×3,128]×9 [3 ×3,224]×9 LGFI blockdilation= 1,2,3,2,4,6 dilation= 1,2,3,2,4,6 dilation= [1,2,3]×2,2,4,6 dilation= [1,2,3]×2,2,4,6 #Params. (M) 2. 0 2. 3 2. 9 8. 1 Table 1. Four variants of the proposed depth encoder. [3× 3, C]× N means that a CDC block uses the 3× 3 kernel size to output C channels, and repeats for N times."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5980662703514099,
+      "text": "In our supplementary material, we provide additional tests on nuScenes-Day and Robotcar-Day, give a complete qual- itative comparison on nuScenes-Night/nuScenes-Day and RobotCar-Night/RobotCar-Day, and offer additional visual results on other nighttime datasets to further prove the effec- tiveness of our method. 4. 3 Ablation Test on Pre-processing Contribution of Each Part Table 4. 2 shows the contributions of each pre-processing part. The comparison of different self-supervised training ap- proaches is left to the supplementary material to further prove the effectiveness of our training framework. In nuScenes-Night, compared with the baseline, BPG im- proves ABS rel by 19. 3% and RMSE by 14. 0%, and ING im- proves ABS rel by 18. 0% and RMSE by 9. 1%. Besides, the joint application of BPG and ING achieves the best scores with 20. 8% improvement on ABS rel, 20. 1% on RMSE and 35. 3% on δ1. For RobotCar-Night, the joint application of BPG and ING still achieves a significant boost with 13. 2% on ABS rel and 9. 7% on RMSE. In addition, Table 4. 2 shows that the joint application of BPG and ING significantly improves RMSE (7. 2% in nuScenec-Night and 8."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p7_sc3",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.5967705845832825,
+      "text": "Notice that Lite- Mono-tiny outperforms Monodepth2 both in speed and ac- curacy (Table 2). Although R-MSFM [46] is a lightweight model it is slow. The latest MonoViT-tiny [43] runs the slowest due to its parallel blocks and multiple layers of self-attention. Our models also infer quickly on the Jetson Xavier, which allows them to be used on edge devices. 4. 6. Ablation study on model architectures To further demonstrate the effectiveness of the proposed model the ablation study is conducted to evaluate the impor- tance of different designs in the architecture. We remove or adjust some modules in the network, and report their results on KITTI, as shown in Table 5. The beneﬁt of LGFI blocks. When all the LGFI blocks in stage 2, 3, and 4 are removed, the model size decreases by 0. 4M, but the accuracy also drops. The proposed LGFI is crucial to make Mono-Lite encode long-range global con- texts, thus making up for the drawback that CNNs can only extract local features. The beneﬁt of dilated convolutions. If all the dilation rates of convolutions in CDC blocks are set to 1, i.e., there are no dilated convolutions used in the network."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.5892335772514343,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Method ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑ Test on nuScenes-Night Depth Anything V2 0. 272 2. 5518. 576 0. 304 0. 518 0. 843 0. 971 + Only LLDG 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914 + Only LLPEFT 0. 255 3. 050 7. 686 0. 302 0. 619 0. 836 0. 934 DepthDark 0. 210 1. 910 7. 764 0. 260 0. 630 0. 914 0. 976 Test on RobotCar-Night Depth Anything V2 0. 235 2. 474 6. 239 0. 268 0. 697 0. 868 0. 946 + Only LLDG 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972 + Only LLPEFT 0. 177 1. 584 6. 727 0. 245 0. 700 0. 895 0. 973 DepthDark 0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 2: Efficacy of Proposed Modules: Ablation studies on nuScenes-Night and RobotCar-Night demonstrate that each module enhances DepthDark’s performance, with combined use significantly improving robustness."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.5880604386329651,
+      "text": "Table 3. Comparison on the Unpaired Datasets. Red(Green) denotes the improvement(reduction) of performance. Note that all the models were trained on the LOLv2-synthetic dataset. Method DICM MEF LIME NPE VV A VGNIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑Restormer 3. 220 58. 525 3. 885 2. 8003. 660 56. 528 3. 215 2. 4153. 660 58. 461 3. 267 2. 4663. 470 61. 031 3. 781 2. 7353. 290 37. 919 3. 710 2. 2643. 460 54. 493 3. 572 2. 536Restormer with GT-mean loss (ours) 3. 180 58. 604 3. 913 2. 8213. 630 56. 522 3. 208 2. 4313. 630 58. 124 3. 380 2. 5213. 450 60. 971 3. 820 2. 7693. 300 38. 290 3. 712 2. 2553. 440(-)54. 502(+)3. 607(+)2. 559(+) MIRNET 3. 820 52. 467 3. 111 2. 3373. 670 47. 399 2. 742 2. 0564. 230 54. 837 2. 860 2. 0883. 470 58. 641 3. 285 2. 3743. 640 54. 566 2. 955 2. 1623. 770 53. 582 2. 991 2. 203MIRNET with GT-mean loss(ours)3. 200 53. 188 3. 295 2. 3753. 600 47. 611 2. 817 2. 0674. 330 55. 776 2. 747 2. 0583. 500 58. 718 3. 366 2. 4283. 710 54. 891 3. 120 2. 2153. 670(-)54. 037(+)3. 069(+)2. 229(+) Retinexformer 3. 230 57. 398 3. 800 2. 7403. 860 56. 170 3. 137 2. 3733."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.5880604386329651,
+      "text": "Table 3. Comparison on the Unpaired Datasets. Red(Green) denotes the improvement(reduction) of performance. Note that all the models were trained on the LOLv2-synthetic dataset. Method DICM MEF LIME NPE VV A VGNIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑Restormer 3. 220 58. 525 3. 885 2. 8003. 660 56. 528 3. 215 2. 4153. 660 58. 461 3. 267 2. 4663. 470 61. 031 3. 781 2. 7353. 290 37. 919 3. 710 2. 2643. 460 54. 493 3. 572 2. 536Restormer with GT-mean loss (ours) 3. 180 58. 604 3. 913 2. 8213. 630 56. 522 3. 208 2. 4313. 630 58. 124 3. 380 2. 5213. 450 60. 971 3. 820 2. 7693. 300 38. 290 3. 712 2. 2553. 440(-)54. 502(+)3. 607(+)2. 559(+) MIRNET 3. 820 52. 467 3. 111 2. 3373. 670 47. 399 2. 742 2. 0564. 230 54. 837 2. 860 2. 0883. 470 58. 641 3. 285 2. 3743. 640 54. 566 2. 955 2. 1623. 770 53. 582 2. 991 2. 203MIRNET with GT-mean loss(ours)3. 200 53. 188 3. 295 2. 3753. 600 47. 611 2. 817 2. 0674. 330 55. 776 2. 747 2. 0583. 500 58. 718 3. 366 2. 4283. 710 54. 891 3. 120 2. 2153. 670(-)54. 037(+)3. 069(+)2. 229(+) Retinexformer 3. 230 57. 398 3. 800 2. 7403. 860 56. 170 3. 137 2. 3733."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.585416853427887,
+      "text": "The dilation rate used in each CDC block is also listed. Repeat × 1 3×3 DDWConv dilation=r Batch Norm 1×1 point-wise GELU 1×1 point-wise CDC Module LGFI Module Linear 1×1 point-wise GELU Linear Linear LayerNorm Softmax Linear LayerNorm 1×1 point-wise 𝑄𝑇 𝑄 𝐾 𝑉 Repeat × N Figure 3. Structures of the proposed Consecutive Dilated Con- volutions (CDC) module and Local-Global Features Interac- tion (LGFI) module. In each stage the CDC module with differ- ent dilation rate is repeated for N times. with size H×W× 3 is ﬁrst fed into a convolution stem, where the image is down-sampled by a 3× 3 convolu- tion. Following two additional 3× 3 convolutions with stride = 1 for local feature extraction, the feature maps of size H 2 × W 2 ×C1 are obtained. In the second stage the features are concatenated with the pooled three-channel in- put image, and another 3×3 convolution withstride = 2 is adopted to down-sample the feature maps, resulting in fea- ture maps with size H 4 × W 4 ×C2. Concatenating features with the average-pooled input image in a down-sampling layer can reduce the spatial information loss caused by the reduction of feature size, which is inspired by ESP- Netv2 [3]."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5841662287712097,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Type Method Train on Train Res. Max depth ABS rel ↓ Sq rel ↓ RMSE ↓ RMSE log ↓ 𝛿 1 ↑ 𝛿 2 ↑ 𝛿 3 ↑ Test on nuScenes-Night DT MonoViT[51] N 𝑑 &𝑛 640 × 320 60 1. 726 93. 031 30. 321 2. 183 0. 143 0. 291 0. 437 WSGD[35] N 𝑑 &𝑛 640 × 320 60 0. 663 9. 573 15. 200 0. 755 0. 199 0. 388 0. 567 DA ITDFA[50] N 𝑑 &𝑛 640 × 320 60 0. 337 4. 511 10. 118 0. 403 0. 515 0. 767 0. 890 RNW[36] N 𝑑 &𝑛 640 × 320 60 0. 341 5. 516 11. 152 0. 406 0. 531 0. 789 0. 902 ADDS[24] N 𝑑 &𝑛 640 × 320 60 0. 299 4. 790 10. 372 0. 371 0. 620 0. 814 0. 907 G ITDFA[50] R 𝑑 &𝑛 640 × 320 60 0. 362 3. 760 10. 252 0. 441 0. 418 0. 702 0. 867 RNW[36] R 𝑑 &𝑛 640 × 320 60 0. 376 4. 732 11. 193 0. 506 0. 451 0. 712 0. 835 ADDS[24] R 𝑑 &𝑛 640 × 320 60 0. 322 4. 401 10. 584 0. 397 0. 527 0. 786 0. 892 MonoFormer[1] K 768 × 256 60 0. 307 3. 591 10. 162 0. 413 0. 521 0. 762 0. 872 TDDC[40] K 768 × 256 60 0. 259 3. 147 8. 547 0. 344 0. 641 0. 850 0. 928 Depth Anything[41] UD & LD - 60 0. 302 3. 051 9. 233 0. 321 0. 487 0. 784 0. 972 Depth Anything V2[42] RD & SD - 60 0. 272 2. 551 8. 576 0. 304 0. 518 0. 843 0. 971 Ours DepthDark H, VK - 60 0. 210 1. 910 7. 764 0."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.5793004631996155,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.5793004631996155,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.5780315399169922,
+      "text": "056(-0. 001)3. 197(↑) 2. 130(↑) Restormer 26. 288 0. 944 0. 045 30. 57 0. 955 0. 039 3. 350 2. 187Restormer with GT-mean loss(ours) 26. 630(+0. 342)0. 946(+0. 002)0. 041(-0. 004)31. 001(+0. 431)0. 957(+0. 002)0. 036(-0. 003)3. 404(↑) 2. 218(↑) LLFormer 24. 195 0. 918 0. 07 27. 862 0. 930 0. 064 3. 176 2. 137LLFormer with GT-mean loss(ours) 25. 152( +0. 957)0. 932(+0. 014)0. 058(-0. 012)29. 266(+1. 404)0. 945(+0. 015)0. 051(-0. 013)3. 283(↑) 2. 177(↑) SNR-Aware 24. 173 0. 924 0. 064 27. 756 0. 937 0. 058 3. 275 2. 209SNR-Aware with GT-mean loss(ours) 24. 301(+0. 128)0. 933(+0. 009)0. 057(-0. 007) 28. 525(+0. 769)0. 945(+0. 008)0. 050(-0. 008)3. 326(↑) 2. 207(↓) meaningful evaluations. For unpaired datasets, we evaluated the model per- formance using QALIGN’s IQA and IAA modules, NIQE [24], and MUSIQ [14]. Implementation Details. To retrain the baselines equipped with GT-mean loss functions, we followed the their official settings, which can be found in Appendix. 4. 2. Quantitative Results Paired Datasets."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.5780315399169922,
+      "text": "056(-0. 001)3. 197(↑) 2. 130(↑) Restormer 26. 288 0. 944 0. 045 30. 57 0. 955 0. 039 3. 350 2. 187Restormer with GT-mean loss(ours) 26. 630(+0. 342)0. 946(+0. 002)0. 041(-0. 004)31. 001(+0. 431)0. 957(+0. 002)0. 036(-0. 003)3. 404(↑) 2. 218(↑) LLFormer 24. 195 0. 918 0. 07 27. 862 0. 930 0. 064 3. 176 2. 137LLFormer with GT-mean loss(ours) 25. 152( +0. 957)0. 932(+0. 014)0. 058(-0. 012)29. 266(+1. 404)0. 945(+0. 015)0. 051(-0. 013)3. 283(↑) 2. 177(↑) SNR-Aware 24. 173 0. 924 0. 064 27. 756 0. 937 0. 058 3. 275 2. 209SNR-Aware with GT-mean loss(ours) 24. 301(+0. 128)0. 933(+0. 009)0. 057(-0. 007) 28. 525(+0. 769)0. 945(+0. 008)0. 050(-0. 008)3. 326(↑) 2. 207(↓) meaningful evaluations. For unpaired datasets, we evaluated the model per- formance using QALIGN’s IQA and IAA modules, NIQE [24], and MUSIQ [14]. Implementation Details. To retrain the baselines equipped with GT-mean loss functions, we followed the their official settings, which can be found in Appendix. 4. 2. Quantitative Results Paired Datasets."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.5766755938529968,
+      "text": "In summary, the GT-mean loss is highlighted in the fol- lowing aspects: • Simplicity: The construction of the GT-mean loss is both theoretically and practically straightforward. Its underly- ing mechanism is easy to understand, and its implemen- tation is uncomplicated. • Flexibility: The GT-mean loss is highly flexible. For in- stance, the L1 loss can be directly extended into the L1 GT-mean version. This character makes adopting the GT- mean loss a universal choice for supervised LLIE models to upgrade their loss functions. • Low Cost : Using the GT-mean loss introduces mini- mal overhead during training (approximately doubling the original loss computation). It is negligible compared to the overall model optimization process. • Effectiveness: Extensive experiments have demonstrated that the GT-mean loss consistently improves model per- formance across a wide range of supervised LLIE meth- ods (as shown in Figure 2). 2. Related works Loss function is essential in LLIE tasks, as it directs model training. We categorize the loss functions in LLIE into two groups based on their purposes. Fidelity Losses."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.5766755938529968,
+      "text": "In summary, the GT-mean loss is highlighted in the fol- lowing aspects: • Simplicity: The construction of the GT-mean loss is both theoretically and practically straightforward. Its underly- ing mechanism is easy to understand, and its implemen- tation is uncomplicated. • Flexibility: The GT-mean loss is highly flexible. For in- stance, the L1 loss can be directly extended into the L1 GT-mean version. This character makes adopting the GT- mean loss a universal choice for supervised LLIE models to upgrade their loss functions. • Low Cost : Using the GT-mean loss introduces mini- mal overhead during training (approximately doubling the original loss computation). It is negligible compared to the overall model optimization process. • Effectiveness: Extensive experiments have demonstrated that the GT-mean loss consistently improves model per- formance across a wide range of supervised LLIE meth- ods (as shown in Figure 2). 2. Related works Loss function is essential in LLIE tasks, as it directs model training. We categorize the loss functions in LLIE into two groups based on their purposes. Fidelity Losses."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.5718750357627869,
+      "text": "Based on the above experimental design, we present the curve of the original L1 loss (Figure 6(a)), and the curves of the GT-mean L1 loss under different σ values (Figure 6(b)). The difference between them is that the use of the GT-mean loss clearly produces basins around η = 1. In an- other word, the GT-mean loss produces small-gradient re- gion with regard to brightness around η = 1, of which the range is controlled by σ. From an optimization perspec- tive, since the gradients with respect to brightness become smaller, the optimization along the direction of brightness adjustment is in turn slowed down. Based on this charac- teristic, in real-world model training, the GT-mean L1 loss enables LLIE models to focus on other important degener- ation factors, when p(eE[y]) and q(eE[f (x)])] become closer. In contrast, the original L1 loss is less capable of decou- pling the optimization with respect to brightness and other visual quality factors. Additionally, Figure 6(c) presents the weight curves that correspond to Figure 6(b), demonstrating how the GT-mean L1 loss behaves with regard to weight variation."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.5718750357627869,
+      "text": "Based on the above experimental design, we present the curve of the original L1 loss (Figure 6(a)), and the curves of the GT-mean L1 loss under different σ values (Figure 6(b)). The difference between them is that the use of the GT-mean loss clearly produces basins around η = 1. In an- other word, the GT-mean loss produces small-gradient re- gion with regard to brightness around η = 1, of which the range is controlled by σ. From an optimization perspec- tive, since the gradients with respect to brightness become smaller, the optimization along the direction of brightness adjustment is in turn slowed down. Based on this charac- teristic, in real-world model training, the GT-mean L1 loss enables LLIE models to focus on other important degener- ation factors, when p(eE[y]) and q(eE[f (x)])] become closer. In contrast, the original L1 loss is less capable of decou- pling the optimization with respect to brightness and other visual quality factors. Additionally, Figure 6(c) presents the weight curves that correspond to Figure 6(b), demonstrating how the GT-mean L1 loss behaves with regard to weight variation."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.5715687274932861,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement Jingxi Liao, Shijie Hao*, Richang Hong, Meng Wang, Hefei University of Technology, Hefei, China {jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.com Abstract Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting con- ditions. In supervised LLIE research, there exists a signifi- cant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth coun- terpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss func- tion directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT- mean form with minimal additional computational costs."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.5715687274932861,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement Jingxi Liao, Shijie Hao*, Richang Hong, Meng Wang, Hefei University of Technology, Hefei, China {jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.com Abstract Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting con- ditions. In supervised LLIE research, there exists a signifi- cant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth coun- terpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss func- tion directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT- mean form with minimal additional computational costs."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.5697826147079468,
+      "text": "To pursue comprehensive visual quality enhancement, LLIE models tend to incorporate multiple loss functions. While this strategy can lead to improved results, it also in- creases the burden of model design and hyperparameter tun- ing. More importantly, as the existing loss functions over- look the brightness mismatch factor, the fundamental chal- lenges brought by this factor remain unaddressed. 3. METHOD In Section 3. 1 present the formulation of the GT-mean loss. In Section 3. 2 detail the crucial component W of this loss function. Section 3. 3 summarizes the features of the pro- posed loss. 3. 1. GT-mean loss In general, the GT-mean loss LGT (f (x), y) can be re- garded as an extension of the existing loss L(f (x), y) used for LLIE. To deal with the issues arising from brightness mismatch, the key to constructing LGT (f (x), y) is match- ing the average brightness of f (x) and y. Furthermore, LGT (f (x), y) is designed to retain the form and effec- tiveness of the original loss L(f (x), y)."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.5697826147079468,
+      "text": "To pursue comprehensive visual quality enhancement, LLIE models tend to incorporate multiple loss functions. While this strategy can lead to improved results, it also in- creases the burden of model design and hyperparameter tun- ing. More importantly, as the existing loss functions over- look the brightness mismatch factor, the fundamental chal- lenges brought by this factor remain unaddressed. 3. METHOD In Section 3. 1 present the formulation of the GT-mean loss. In Section 3. 2 detail the crucial component W of this loss function. Section 3. 3 summarizes the features of the pro- posed loss. 3. 1. GT-mean loss In general, the GT-mean loss LGT (f (x), y) can be re- garded as an extension of the existing loss L(f (x), y) used for LLIE. To deal with the issues arising from brightness mismatch, the key to constructing LGT (f (x), y) is match- ing the average brightness of f (x) and y. Furthermore, LGT (f (x), y) is designed to retain the form and effec- tiveness of the original loss L(f (x), y)."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5667451620101929,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5667451620101929,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.5644066333770752,
+      "text": "To validate the combined effect of the GT-Mean loss and perceptual loss, the baselines include SNR-aware [41] and CID-Net [42], both of which incorpo- rate perceptual loss. All baselines and their original loss functions are listed in Table 1: Table 1. Baselines and Their Loss Functions Method Loss Function Restormer [45]L1lossRetinexFormer [4]L1lossLLFormer [32] SmoothL1loss [8]MIRNet [44] Charbonnier loss [1]Uformer [35] Charbonnier loss [1]SNR-Aware [41] Charbonnier loss [1], perceptual loss [12]CID-Net [42]L1loss, edge loss [27], perceptual loss [12] Datasets. We conducted experiments on both paired and unpaired datasets to evaluate our loss. For paired datasets, we used LOLv1 [36], LOLv2-real [43], and LOLv2-syn [43]. Specifically, the LOLv1 dataset includes 485 train- ing images and 15 testing images. The LOLv2-real dataset includes 689 training images and 100 testing images. The LOLv2-synthetic dataset includes 900 training images and 100 testing images. For unpaired datasets, we chose DICM [15], VV [29], NPE [31], MEF [21], and LIME [9] as the test sets. Evaluation Metrics."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p4_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 4,
+      "score": 0.5644066333770752,
+      "text": "To validate the combined effect of the GT-Mean loss and perceptual loss, the baselines include SNR-aware [41] and CID-Net [42], both of which incorpo- rate perceptual loss. All baselines and their original loss functions are listed in Table 1: Table 1. Baselines and Their Loss Functions Method Loss Function Restormer [45]L1lossRetinexFormer [4]L1lossLLFormer [32] SmoothL1loss [8]MIRNet [44] Charbonnier loss [1]Uformer [35] Charbonnier loss [1]SNR-Aware [41] Charbonnier loss [1], perceptual loss [12]CID-Net [42]L1loss, edge loss [27], perceptual loss [12] Datasets. We conducted experiments on both paired and unpaired datasets to evaluate our loss. For paired datasets, we used LOLv1 [36], LOLv2-real [43], and LOLv2-syn [43]. Specifically, the LOLv1 dataset includes 485 train- ing images and 15 testing images. The LOLv2-real dataset includes 689 training images and 100 testing images. The LOLv2-synthetic dataset includes 900 training images and 100 testing images. For unpaired datasets, we chose DICM [15], VV [29], NPE [31], MEF [21], and LIME [9] as the test sets. Evaluation Metrics."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p16_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 16,
+      "score": 0.5616450309753418,
+      "text": "Cit. Method PP Data H × W Abs Rel Sq Rel RMSE RMSE log δ<1. 25 δ<1. 252 δ<1. 253 [63] Depth Hints \u0013 SSGM 192 × 640 0. 106 0. 780 4. 695 0. 193 0. 875 0. 958 0. 980 WaveletMonodepth MobileNetv2 \u0013 SSGM 192 × 640 0. 109 0. 851 4. 754 0. 194 0. 870 0. 957 0. 980 WaveletMonodepth Resnet18 \u0013 SSGM 192 × 640 0. 107 0. 829 4. 693 0. 193 0. 873 0. 957 0. 980 WaveletMonodepth Resnet50 \u0013 SSGM 192 × 640 0. 105 0. 813 4. 625 0. 191 0. 879 0. 959 0. 981 [63] Depth Hints \u0013 SSGM 320 × 1024 0. 099 0. 723 4. 445 0. 187 0. 886 0. 961 0. 982 WaveletMonodepth MobileNetv2 \u0013 SSGM 320 × 1024 0. 104 0. 772 4. 545 0. 188 0. 880 0. 960 0. 982 WaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0. 102 0. 739 4. 452 0. 188 0. 883 0. 960 0. 981 Depth Hints Resnet50 \u0013 SSGM 320 × 1024 0. 096 0. 710 4. 393 0. 185 0. 890 0. 962 0. 981 WaveletMonodepth Resnet50 \u0013 SSGM 320 × 1024 0. 097 0. 718 4. 387 0. 184 0. 891 0. 962 0. 982 Table 10: Quantitative results on the KITTI dataset using MobileNetv2 encoder. We evaluate results of our method using a lighter encoder on KITTI [15], using the Eigen split."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.5605908036231995,
+      "text": "(a) L1 loss curve (b) GT-mean L1 loss curves (c) Curves of the weight W Figure 6. Loss curves and weight curves for analyzing the effectiveness of the GT-mean loss. loss under different σ values. We selected 10 different σ values, running each setting three times for consistency. Notably, σ = 0 represents a special case where the GT- mean L1 loss degrades to the original L1 loss. For every 1,000 (1K) iterations in the 150K iterations, we calculated mean and variance of PSNR, shown in Figure 5 for demon- strating the trend during training. In the early stages (as can be seen in Figure 5 (a)), the curve tendencies under different σ settings are similar. Considering the curve with σ = 0is the original L1 loss, we can verify that the GT-mean loss at the early stage behaves like the originalL1 loss. In contrast, as shown in the zoomed-in views of the last 30K iterations (Figure 5 (b)), we observe that all settings become stable, and the settings with non-zero σ consistently perform bet- ter than σ = 0. This observation shows that the GT-mean loss diverges significantly from the original L1 loss in the late training stage. The second term in Eq."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.5605908036231995,
+      "text": "(a) L1 loss curve (b) GT-mean L1 loss curves (c) Curves of the weight W Figure 6. Loss curves and weight curves for analyzing the effectiveness of the GT-mean loss. loss under different σ values. We selected 10 different σ values, running each setting three times for consistency. Notably, σ = 0 represents a special case where the GT- mean L1 loss degrades to the original L1 loss. For every 1,000 (1K) iterations in the 150K iterations, we calculated mean and variance of PSNR, shown in Figure 5 for demon- strating the trend during training. In the early stages (as can be seen in Figure 5 (a)), the curve tendencies under different σ settings are similar. Considering the curve with σ = 0is the original L1 loss, we can verify that the GT-mean loss at the early stage behaves like the originalL1 loss. In contrast, as shown in the zoomed-in views of the last 30K iterations (Figure 5 (b)), we observe that all settings become stable, and the settings with non-zero σ consistently perform bet- ter than σ = 0. This observation shows that the GT-mean loss diverges significantly from the original L1 loss in the late training stage. The second term in Eq."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.5601372718811035,
+      "text": "824 3. 657 2. 7163. 160 60. 885 3. 557 2. 2493. 500 57. 271 3. 351 2. 418LLformer with GT-mean loss(ours)3. 050 57. 038 3. 910 2. 8373. 650 53. 842 2. 706 2. 0174. 070 55. 830 3. 118 2. 4163. 330 60. 044 3. 707 2. 7312. 990 60. 858 3. 563 2. 2313. 410(-)57. 522(+)3. 401(+)2. 446(+) Brightness discrepancy Iterations(K) PNSR Iterations(K) 50K 100K 150K with GT-mean loss baseline with GT-mean loss GT input C baseline B LPIPS Iterations(K) A Figure 4. Impact of GT-Mean Loss integration on training dynamics and enhancement quality. (A) Evolution of LPIPS (perceptual quality), PSNR (pixel fidelity), and brightness discrepancy ( |E[y] − E[f (x)]|) across four training strategies. (B) Absolute residual heatmaps (|y − f (x)|) at critical training stages. (C) Final output comparison showing improvements in color fidelity and detail preservation. Can brightness alignment alone achieve performance improvement? We found that the full brightness align- ment strategy causes a monotonic increase in LPIPS from 0. 191 to 0. 473, and PSNR decreases from 18. 6 dB to 7. 9 dB. These results demonstrate that the original loss term is crucial to the model’s training process."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.5601372718811035,
+      "text": "824 3. 657 2. 7163. 160 60. 885 3. 557 2. 2493. 500 57. 271 3. 351 2. 418LLformer with GT-mean loss(ours)3. 050 57. 038 3. 910 2. 8373. 650 53. 842 2. 706 2. 0174. 070 55. 830 3. 118 2. 4163. 330 60. 044 3. 707 2. 7312. 990 60. 858 3. 563 2. 2313. 410(-)57. 522(+)3. 401(+)2. 446(+) Brightness discrepancy Iterations(K) PNSR Iterations(K) 50K 100K 150K with GT-mean loss baseline with GT-mean loss GT input C baseline B LPIPS Iterations(K) A Figure 4. Impact of GT-Mean Loss integration on training dynamics and enhancement quality. (A) Evolution of LPIPS (perceptual quality), PSNR (pixel fidelity), and brightness discrepancy ( |E[y] − E[f (x)]|) across four training strategies. (B) Absolute residual heatmaps (|y − f (x)|) at critical training stages. (C) Final output comparison showing improvements in color fidelity and detail preservation. Can brightness alignment alone achieve performance improvement? We found that the full brightness align- ment strategy causes a monotonic increase in LPIPS from 0. 191 to 0. 473, and PSNR decreases from 18. 6 dB to 7. 9 dB. These results demonstrate that the original loss term is crucial to the model’s training process."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.5583620667457581,
+      "text": "(a) LOLv1 (b) LOLv2 real (c) LOLv2 synthetic Figure 2. Performance across various supervised LLIE models trained by their original loss functions and our GT-mean loss functions. The performance is consistently improved when the GT-mean loss functions are adopted. Notably, this improvement is easily attainable, as the use of GT-mean loss functions is flexible and brings minimal additional computational costs during training. The issue under brightness mismatch has largely been ig- nored in existing supervised LLIE research, despite some indirect solutions that do not primarily address this prob- lem. For example, [23, 36, 39, 43] designed multiple sub-networks to decouple brightness from other factors and optimized them separately. Nevertheless, the divide- and-conquer roadmap inevitably complicates the model de- sign, as well as introducing significant computational over- head. Others use perceptual losses [12] to bypass pixel-level alignment, sacrificing reconstruction fidelity. A unified, ef- ficient solution remains elusive."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.5583620667457581,
+      "text": "(a) LOLv1 (b) LOLv2 real (c) LOLv2 synthetic Figure 2. Performance across various supervised LLIE models trained by their original loss functions and our GT-mean loss functions. The performance is consistently improved when the GT-mean loss functions are adopted. Notably, this improvement is easily attainable, as the use of GT-mean loss functions is flexible and brings minimal additional computational costs during training. The issue under brightness mismatch has largely been ig- nored in existing supervised LLIE research, despite some indirect solutions that do not primarily address this prob- lem. For example, [23, 36, 39, 43] designed multiple sub-networks to decouple brightness from other factors and optimized them separately. Nevertheless, the divide- and-conquer roadmap inevitably complicates the model de- sign, as well as introducing significant computational over- head. Others use perceptual losses [12] to bypass pixel-level alignment, sacrificing reconstruction fidelity. A unified, ef- ficient solution remains elusive."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.5583467483520508,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.5583467483520508,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p14_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.5582526326179504,
+      "text": "Application of Phong Model. Finally, with the 3D structure, material information, and the color of the light source IF , the reflection image I R i will be C1(u) = max (0, N (u) ∗ Li (u))/ri (u)2 , C2(u) = max (0, Ri (u) ∗ Vi (u))gr /ri (u)2 , I R i = sF IF (KdC1 + KsC2). (24) Following [Phong, 1975 ], we set the exponential gr to 8. Here, sF is the scale factor of light source image LS. D. 3 Training detail Following [Godard et al., 2019; Zhao et al., 2022b], we use AdamW [Loshchilov and Hutter, 2017] as the optimizer, and the batch size is set to 12. We setlr of the Transformer-based encoder to 5e−5 and double it for the rest trainable part. An exponential decay learning rate scheduler is also used with 0. 9 as exponential. The total training step is set to 40,000. We use the same augmentation for the image splits as applied in [Liu et al., 2021; Wang et al., 2021; Godard et al., 2019; Zhao et al., 2022b]. For BPG, we set F min = smin F = 0. 5 , empirically. Be- sides, we use smax F = 2, Fmax = 2 as the default setting. As to ING, we set K min = 0. 1 following ELD [Wei et al., 2020]. We use K max = 1with P + T Las the default setting."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.5572518110275269,
+      "text": "In supervised LLIE, the enhanced image f (x) should closely resemble the ground truth image y. Consequently, we assume that the shape of p(eE[y]) and q(eE[f (x)]) are similar. Based on this assumption, we equate σ2 α and σ2 β, setting them both to σ2. In our experiments, we empirically set σ as 0. 1 for all the comparisons. In Section 4. 4, we delve deeper into the influence of σ on the performance of LLIE. 3. 3. Discussion of the GT-mean loss The primary strength of the GT-mean loss lies in its ability to dynamically balance the model’s focus during training. In the early stages, when the difference between p(eE[y]) and q(eE[f (x)]) is significant, the weight W is expected to approach 1, causing the first term L(f (x), y) to dominate the overall loss function. This behavior ensures that the GT- mean loss closely resembles the original loss L(f (x), y), thereby preserving the baseline model’s capabilities. As training progresses and p(eE[y]) and q(eE[f (x)]) be- come closer, W decreases to a smaller value. This shift in weight emphasizes the second term L \u0010 E[y] E[f (x)] f (x), y \u0011 , ensuring that f (x) and y are compared under the condi- tion of average brightness alignment."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p4_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 4,
+      "score": 0.5572518110275269,
+      "text": "In supervised LLIE, the enhanced image f (x) should closely resemble the ground truth image y. Consequently, we assume that the shape of p(eE[y]) and q(eE[f (x)]) are similar. Based on this assumption, we equate σ2 α and σ2 β, setting them both to σ2. In our experiments, we empirically set σ as 0. 1 for all the comparisons. In Section 4. 4, we delve deeper into the influence of σ on the performance of LLIE. 3. 3. Discussion of the GT-mean loss The primary strength of the GT-mean loss lies in its ability to dynamically balance the model’s focus during training. In the early stages, when the difference between p(eE[y]) and q(eE[f (x)]) is significant, the weight W is expected to approach 1, causing the first term L(f (x), y) to dominate the overall loss function. This behavior ensures that the GT- mean loss closely resembles the original loss L(f (x), y), thereby preserving the baseline model’s capabilities. As training progresses and p(eE[y]) and q(eE[f (x)]) be- come closer, W decreases to a smaller value. This shift in weight emphasizes the second term L \u0010 E[y] E[f (x)] f (x), y \u0011 , ensuring that f (x) and y are compared under the condi- tion of average brightness alignment."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.5570820569992065,
+      "text": "987Restormer with GT-mean loss(ours) 20. 717(+0. 482)0. 845(+0. 004)0. 149(-0. 013)28. 440(+0. 281)0. 884(+0. 004)0. 135(-0. 012)3. 554(↑) 2. 020(↑) LLFormer 21. 308 0. 803 0. 248 27. 052 0. 828 0. 236 2. 882 1. 827LLFormer with GT-mean loss(ours) 22. 291(+0. 983)0. 844( +0. 041)0. 166(-0. 082)28. 334(+1. 282)0. 870( +0. 042)0. 156(-0. 080)3. 104(↑) 1. 880(↑) SNR-Aware 21. 103 0. 839 0. 169 26. 971 0. 866 0. 161 3. 354 1. 879SNR-Aware with GT-mean loss(ours) 21. 350(+0. 247)0. 844(+0. 005)0. 164(-0. 005)27. 740(+0. 770)0. 875(+0. 010)0. 154(-0. 007)3. 468(↑) 1. 889(↑) LOLv2-synthetic Uformer 24. 693 0. 932 0. 060 27. 438 0. 941 0. 055 3. 148 2. 114Uformer with GT-mean loss(ours) 25. 319(+0. 626)0. 940( +0. 007)0. 049(-0. 011)28. 683(+1. 245)0. 948(+0. 007)0. 045(-0. 010)3. 191(↑) 2. 144(↑) MIRNet 22. 059 0. 894 0. 122 25. 274 0. 908 0. 114 2. 956 2. 145MIRNet with GT-mean loss(ours) 22. 576(+0. 517)0. 906(+0. 011)0. 104(-0. 018)26. 215(+0. 941)0. 918(+0. 010)0. 094(-0. 020)3. 064(↑) 2. 187(↑) RetinexFormer 25. 281 0. 928 0. 064 28. 827 0. 939 0. 057 3. 102 2. 099RetinexFormer with GT-mean loss(ours)25. 583(+0. 299)0. 933(+0. 005)0. 063(-0. 001)29. 261(+0. 434)0. 944(+0. 005)0."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.5570820569992065,
+      "text": "987Restormer with GT-mean loss(ours) 20. 717(+0. 482)0. 845(+0. 004)0. 149(-0. 013)28. 440(+0. 281)0. 884(+0. 004)0. 135(-0. 012)3. 554(↑) 2. 020(↑) LLFormer 21. 308 0. 803 0. 248 27. 052 0. 828 0. 236 2. 882 1. 827LLFormer with GT-mean loss(ours) 22. 291(+0. 983)0. 844( +0. 041)0. 166(-0. 082)28. 334(+1. 282)0. 870( +0. 042)0. 156(-0. 080)3. 104(↑) 1. 880(↑) SNR-Aware 21. 103 0. 839 0. 169 26. 971 0. 866 0. 161 3. 354 1. 879SNR-Aware with GT-mean loss(ours) 21. 350(+0. 247)0. 844(+0. 005)0. 164(-0. 005)27. 740(+0. 770)0. 875(+0. 010)0. 154(-0. 007)3. 468(↑) 1. 889(↑) LOLv2-synthetic Uformer 24. 693 0. 932 0. 060 27. 438 0. 941 0. 055 3. 148 2. 114Uformer with GT-mean loss(ours) 25. 319(+0. 626)0. 940( +0. 007)0. 049(-0. 011)28. 683(+1. 245)0. 948(+0. 007)0. 045(-0. 010)3. 191(↑) 2. 144(↑) MIRNet 22. 059 0. 894 0. 122 25. 274 0. 908 0. 114 2. 956 2. 145MIRNet with GT-mean loss(ours) 22. 576(+0. 517)0. 906(+0. 011)0. 104(-0. 018)26. 215(+0. 941)0. 918(+0. 010)0. 094(-0. 020)3. 064(↑) 2. 187(↑) RetinexFormer 25. 281 0. 928 0. 064 28. 827 0. 939 0. 057 3. 102 2. 099RetinexFormer with GT-mean loss(ours)25. 583(+0. 299)0. 933(+0. 005)0. 063(-0. 001)29. 261(+0. 434)0. 944(+0. 005)0."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5568548440933228,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5568548440933228,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5564975738525391,
+      "text": "Then, the proposed Consecutive Dilated Con- volutions (CDC) module and the Local-Global Features In- teraction (LGFI) module learn rich hierarchical feature rep- resentations. The down-sampling layers in the second and the third stage also receive the concatenated features output by the previous down-sampling layer. This design is simi- lar to the residual connection proposed in ResNet [17], and is able to model better cross-stage correlation. Similarly, the output feature maps are further fed into the third and the fourth stages, and output features of dimensionH 8× W 8×C3 and H 16× W 16×C4. Consecutive Dilated Convolutions (CDC). The pro- posed CDC module utilizes dilated convolutions to extract multi-scale local features. Different from using a parallel dilated convolution module only in the last layer of the net- work [6] we insert several consecutive dilated convolutions with different dilation rates into each stage for adequate multi-scale contexts aggregation."
+    },
+    {
+      "id": "semantic_chunk::dav2_p20_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 20,
+      "score": 0.5564029216766357,
+      "text": "712 DINOv2-L [50] 0. 081 0. 937 0. 048 0. 976 0. 516 0. 731 0. 133 0. 864 0. 071 0. 949 DINOv2-L Reg [16] 0. 078 0. 942 0. 049 0. 975 0. 522 0. 734 0. 138 0. 856 0. 068 0. 952 DINOv2-G [50] 0. 075 0. 947 0. 044 0. 979 0. 530 0. 767 0. 131 0. 865 0. 066 0. 954 DINOv2-G Reg [16] 0. 084 0. 926 0. 061 0. 964 0. 753 0. 729 0. 141 0. 852 0. 086 0. 931 Table 13: Comparison among various pre-trained encoders when purely trained on synthetic images. B. 7 Benefit of gradient matching loss to fine-grained predictions MiDaS [56] proposes a gradient matching loss Lgm to enhance the depth sharpness. Unfortunately, we find this loss term fails to bring evident improvement when the model is trained on labeled real datasets. We speculate that, the sparse and coarse groundtruth label in real datasets cannot provide fine-grained supervision, even with this explicit regularization. To check this, we further apply and ablate this loss term on synthetic training datasets, whose labels are complete and highly precise. We gradually increase the loss weight of Lgm and observe the corresponding depth sharpness. As shown in Figure 10, when the weight is increased from the default 0. 5 to 4."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.555809497833252,
+      "text": "880 57. 262 3. 111 2. 3233. 380 60. 507 3. 673 2. 6992. 730 37. 513 3. 471 2. 1543. 420 53. 77 3. 438 2. 458Retinexformer with GT-mean loss (ours) 3. 210 57. 247 3. 805 2. 7733. 820 56. 633 3. 195 2. 4123. 840 57. 374 3. 273 2. 4233. 370 60. 682 3. 706 2. 7192. 770 37. 654 3. 517 2. 1663. 400(-)53. 918(+)3. 499(+)2. 498(+) SNR 6. 070 47. 025 3. 379 2. 5264. 270 48. 685 2. 531 1. 9436. 060 49. 216 2. 836 2. 1026. 470 46. 441 3. 445 2. 55111. 520 23. 186 3. 067 1. 9556. 880 42. 911 3. 052 2. 215SNR with GT-mean loss (ours) 6. 120 47. 430 3. 521 2. 5714. 260 48. 780 2. 571 1. 9576. 110 49. 008 2. 946 2. 1526. 460 46. 602 3. 580 2. 60511. 550 23. 853 3. 137 1. 9976. 900(+)43. 135(+)3. 151(+)2. 256(+) Uformer 3. 080 58. 084 2. 971 2. 1443. 720 56. 177 3. 177 2. 4033. 660 57. 698 2. 646 1. 9673. 400 61. 310 2. 938 2. 1312. 700 36. 235 2. 904 1. 8393. 310 53. 901 2. 927 2. 097Uformer with GT-mean loss (ours) 3. 120 58. 981 3. 067 2. 1803. 690 56. 641 3. 229 2. 4263. 640 58. 200 2. 712 1. 9733. 380 61. 704 2. 956 2. 1132. 700 36. 695 3. 001 1. 8483. 300(-)54. 444(+)2. 993(+)2. 108(+) LLformer 3. 260 56. 642 3. 832 2. 7883. 750 53. 335 2. 667 1. 9934. 010 55. 671 3. 040 2. 3433. 320 59."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.555809497833252,
+      "text": "880 57. 262 3. 111 2. 3233. 380 60. 507 3. 673 2. 6992. 730 37. 513 3. 471 2. 1543. 420 53. 77 3. 438 2. 458Retinexformer with GT-mean loss (ours) 3. 210 57. 247 3. 805 2. 7733. 820 56. 633 3. 195 2. 4123. 840 57. 374 3. 273 2. 4233. 370 60. 682 3. 706 2. 7192. 770 37. 654 3. 517 2. 1663. 400(-)53. 918(+)3. 499(+)2. 498(+) SNR 6. 070 47. 025 3. 379 2. 5264. 270 48. 685 2. 531 1. 9436. 060 49. 216 2. 836 2. 1026. 470 46. 441 3. 445 2. 55111. 520 23. 186 3. 067 1. 9556. 880 42. 911 3. 052 2. 215SNR with GT-mean loss (ours) 6. 120 47. 430 3. 521 2. 5714. 260 48. 780 2. 571 1. 9576. 110 49. 008 2. 946 2. 1526. 460 46. 602 3. 580 2. 60511. 550 23. 853 3. 137 1. 9976. 900(+)43. 135(+)3. 151(+)2. 256(+) Uformer 3. 080 58. 084 2. 971 2. 1443. 720 56. 177 3. 177 2. 4033. 660 57. 698 2. 646 1. 9673. 400 61. 310 2. 938 2. 1312. 700 36. 235 2. 904 1. 8393. 310 53. 901 2. 927 2. 097Uformer with GT-mean loss (ours) 3. 120 58. 981 3. 067 2. 1803. 690 56. 641 3. 229 2. 4263. 640 58. 200 2. 712 1. 9733. 380 61. 704 2. 956 2. 1132. 700 36. 695 3. 001 1. 8483. 300(-)54. 444(+)2. 993(+)2. 108(+) LLformer 3. 260 56. 642 3. 832 2. 7883. 750 53. 335 2. 667 1. 9934. 010 55. 671 3. 040 2. 3433. 320 59."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.5557235479354858,
+      "text": "Type Method Train on Train Res. Max depth ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ δ1 ↑ δ2 ↑ δ3 ↑ Test on nuScenes-Day DT MonoViT[Zhaoet al., 2022b] N d&n 640× 320 60 0. 201 4. 346 7. 316 0. 261 0. 792 0. 931 0. 966 WSGD[Vankadariet al., 2023] N d&n 640× 320 60 0. 405 4. 500 11. 281 0. 521 0. 355 0. 618 0. 793 DA ITDFA[Zhaoet al., 2022a] N d&n 640× 320 60 0. 352 7. 941 12. 706 0. 395 0. 583 0. 812 0. 906 RNW[Wanget al., 2021] N d&n 640× 320 60 0. 268 3. 722 8. 897 0. 333 0. 621 0. 855 0. 938 ADDS[Liu et al., 2021] N d&n 640× 320 60 0. 183 2. 525 7. 728 0. 259 0. 783 0. 926 0. 967 G ITDFA[Zhaoet al., 2022a] R d&n 640× 320 60 0. 279 2. 502 7. 938 0. 346 0. 526 0. 819 0. 934 RNW[Wanget al., 2021] R d&n 640× 320 60 0. 286 2. 991 8. 819 0. 383 0. 544 0. 799 0. 910 ADDS[Liu et al., 2021] R d&n 640× 320 60 0. 250 3. 863 9. 257 0. 319 0. 678 0. 870 0. 943 MonoFormer[Baeet al., 2023] K 768 × 256 60 0. 204 2. 219 7. 332 0. 286 0. 697 0. 901 0. 963 MonoViT[Zhaoet al., 2022b] K 768 × 256 60 0. 181 1. 918 7. 070 0. 274 0. 743 0. 911 0. 964 Ours K 768 × 256 60 0. 183 1. 888 7. 019 0. 276 0. 736 0. 908 0. 964 Test on RobotCar-Day DT MonoViT[Zhaoet al., 2022b] R d&n 640× 320 40 0. 140 1. 010 4. 713 0."
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.5554894208908081,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17 Ldepth Lgrad Lnormal Metrics L1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ ✓ ✗ ✗ ✗ ✗ 5. 9790. 1910. 020 0. 13213. 032 14. 3520. 957 0. 982 0. 991 ✗ ✓ ✗ ✗ ✗ 5. 852 0. 187 0. 021 0. 13213. 12212. 9840. 9570. 9830. 992 ✗ ✓ ✓ ✗ ✗ 5. 760 0. 201 0. 020 0. 137 13. 616 16. 174 0. 9580. 9830. 992 ✗ ✓ ✗ ✓ ✗ 5. 386 0. 2020. 0210. 12412. 373 15. 901 0. 9580. 985 0. 993 ✗ ✓ ✗ ✗ ✓ 5. 3090. 206 0. 022 0. 149 14. 862 16. 048 0. 954 0. 981 0. 990 ✗ ✓ ✗ ✓ ✓ 5. 8090. 186 0. 0180. 125 12. 21014. 6830. 961 0. 985 0. 993 ✗ ✓ ✓ ✗ ✓ 5. 4220. 2000. 0180. 125 12. 50316. 1200. 961 0. 985 0. 993 Table S1:Loss study. Performance comparison using several combination of losses:1st best, 2nd best,3rd best. Figure S2:Few-shot learning performances of Depth Anything V2 on our real dataset. All LED patterns demonstrate superior performances over LB. The model is near its maximal performances with only 1,000 training images. L=L depth +λ 1Lgrad +λ 2Lnormal .(4) B. 3 Loss Study To determine the impact of each individual loss, we conduct an ablation study (see table S1)."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Lite-Mono_p7_sc4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6094251871109009,
+      "text": "It can be observed that although the model size remains the same the accuracy drops more than for not using LGFI blocks. The beneﬁt of introducing the CDC module is to enhance the locality by gradually extracting multi-scale features, while not adding additional trainable parameters. The beneﬁt of pooled concatenations. Accuracy also decreases when three pooled concatenations are removed.",
+      "estimated_tokens": 74
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.6045225858688354,
+      "text": "2, this study conducts systematic ablation experiments to evaluate the performance gains introduced by the LLDG and LLPEFT modules. The experimental results demonstrate Method ParameterABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑Test on nuScenes-NightDepth Anything V2 97. 470M 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914+ AMFG 99. 229M 0. 243 2. 351 5. 416 0. 267 0. 674 0. 862 0. 945+ LoRA 99. 830M 0. 233 2. 112 5. 220 0. 259 0. 6850. 8650. 947+ LLPEFT 97. 479M0. 210 1. 910 7. 764 0. 260 0. 6300. 914 0. 976Test on RobotCar-NightDepth Anything V2 97. 470M 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972+ AMFG 99. 229M 0. 168 1. 481 6. 470 0. 234 0. 717 0. 908 0. 976+ LoRA 99. 830M 0. 173 1. 260 4. 527 0. 217 0. 7380. 9190. 981+ LLPEFT 97. 479M0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 3: We conduct comprehensive ablation studies on PEFT methods for Depth Anything V2 across both nuScenes- Night and RobotCar-Night datasets, with quantitative analy- sis of parameter counts for each fine-tuned variant.",
+      "estimated_tokens": 473
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5980662703514099,
+      "text": "In our supplementary material, we provide additional tests on nuScenes-Day and Robotcar-Day, give a complete qual- itative comparison on nuScenes-Night/nuScenes-Day and RobotCar-Night/RobotCar-Day, and offer additional visual results on other nighttime datasets to further prove the effec- tiveness of our method. 4. 3 Ablation Test on Pre-processing Contribution of Each Part Table 4. 2 shows the contributions of each pre-processing part. The comparison of different self-supervised training ap- proaches is left to the supplementary material to further prove the effectiveness of our training framework. In nuScenes-Night, compared with the baseline, BPG im- proves ABS rel by 19. 3% and RMSE by 14. 0%, and ING im- proves ABS rel by 18. 0% and RMSE by 9. 1%. Besides, the joint application of BPG and ING achieves the best scores with 20. 8% improvement on ABS rel, 20. 1% on RMSE and 35. 3% on δ1. For RobotCar-Night, the joint application of BPG and ING still achieves a significant boost with 13. 2% on ABS rel and 9. 7% on RMSE. In addition, Table 4. 2 shows that the joint application of BPG and ING significantly improves RMSE (7. 2% in nuScenec-Night and 8.",
+      "estimated_tokens": 319
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 866,
+    "compressed_context_tokens": 866,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 866,
+  "context_tokens": 866,
+  "prompt_token_estimate": 1245,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_lite_mono_lgfi_module_design",
+  "answer": "<think>\nThe user is asking about how the LGFI module achieves global information encoding and what attention mechanism it uses. Let me check the provided materials.\n\nLooking at the materials:\n- [1] mentions LGFI blocks in the context of Lite-Mono, but only talks about ablation results (removing LGFI blocks causes accuracy drops), not how LGFI works internally.\n- [2] is about LLDG and LLPEFT modules in DepthDark.\n- [3] is about pre-processing contributions with BPG and ING.\n\nNone of the materials actually describe the internal mechanism of the LGFI module - how it encodes global information or what attention mechanism it uses. The materials only mention that removing LGFI blocks causes performance drops.\n\nSo the answer should indicate that the information is not available in the provided materials.\n</think>\n{\n  \"answer\": \"给定资料未描述 LGFI 模块的内部实现机制，无法说明其如何实现全局信息编码以及采用了什么注意力机制。\",\n  \"items\": [],\n  \"missing_information\": \"资料 [1] 仅提到移除 LGFI 块会导致精度下降，但未说明 LGFI 的全局信息编码方式或所使用的注意力机制（如自注意力、交叉注意力等）。需要 LGFI 模块的架构设计或方法描述部分的内容。\"\n}",
+  "usage": {
+    "prompt_tokens": 1285,
+    "completion_tokens": 256,
+    "total_tokens": 1541,
+    "model": "MiniMax-M3"
+  }
+}

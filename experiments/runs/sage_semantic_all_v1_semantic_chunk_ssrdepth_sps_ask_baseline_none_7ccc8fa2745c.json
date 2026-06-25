@@ -1,0 +1,406 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_ssrdepth_sps_ask_baseline_none_7ccc8fa2745c",
+  "dry_run": false,
+  "query": "SSRDepth 的 SPS 模块如何预测 segmentation scale，并使用哪些约束？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7852652668952942,
+      "text": "Y. Zou et al. Fig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module (SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module (ARD) that we propose. Additionally, we propose the segmentation proposal scale alignment loss (𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance. 3. The proposed method In this section, we ﬁrst introduce the overall architecture of SSRDepth (Section 3. 1). Then, we present the key components of SSRDepth: the Segmentation Query Guided Aggregation module (Section 3. 2), the Segmentation Proposal Scale module (Section 3. 3), and the Adaptive Relative Depth module (Section 3. 4). 3. 1. Framework overview As shown in Fig. 2, given an input image 𝐼 ∈ ℝ3×𝐻×𝑊 , we ﬁrst extract image features through the Image Encoder and then decode them into multi-scale features {𝐹𝑙}3 𝑙=1 and per-pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 employing the Pixel Decoder, where 𝐶 is the number of channels, and 𝐻 × 𝑊 is the resolution."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.7126556038856506,
+      "text": "The expression for 𝑆𝑃 𝑆𝐴 is as follows: 𝑆𝑃 𝑆𝐴 = 1 𝑈 𝑉 𝑈∑ 𝑝𝑖 𝑉∑ 𝑗 |||𝛾𝐷 𝑆 (𝑝𝑖, 𝑗) − 𝜇(𝐷∗ 𝑆 (𝑝𝑖, 𝑗))|||, (14) where 𝐷𝑆 (𝑝𝑖, 𝑗) and 𝐷∗ 𝑆 (𝑝𝑖, 𝑗) represent the predicted and ground truth (GT) segmentation scale at pixel 𝑗 within the patch 𝑝𝑖, respectively. 𝜇(⋅) denotes the median of the depths, 𝑈 is the number of semantic seg- mentation patches, and 𝑉 represents the number of valid pixels in each patch. However, predicting the median of the metric depth for each se- mantic segment can cause the ﬁnal prediction to be generally smaller than the ground truth. To address this issue, we set a scaling factor 𝛾 to ensure the predicted segmentation scale values larger than the median depth of each semantic segment. In our experiments, 𝛾 is set to 0. 5. We also adopt the multi-scale supervision strategy from BinsFormer [10], applying the SPS and ARD modules at each feature scale to provide auxiliary supervision. Finally, the total loss is deﬁned as: 𝑡𝑜𝑡𝑎𝑙 = 3∑ 𝑙 ( 𝑤𝑙 𝐿∑ 𝑛 ( 𝛼𝑙,𝑛 𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛 𝐶𝐸 + 𝛿𝑙,𝑛 𝑆𝑃 𝑆𝐴 )) , (15) where 𝐿 represents the number of stacked masked transformer layers at each feature scale. 𝑤𝑙 is the scale weight, which is set to 1 23−𝑙 ."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6830646395683289,
+      "text": "Contents lists available at ScienceDirect Pattern Recognition journal homepage: www.elsevier.com/locate/pr SSRDepth: Combining semantic segmentation and relative depth for monocular metric depth estimation Yuhang Zou, Xiaoming Chen, Zhangyan Zhao ∗, Chenghua Zhang, Haipeng Liu School of Transportation and Logistics Engineering, Wuhan University of Technology, Wuhan, 430063, Hubei, China a r t i c l e i n f o Keywords: Monocular depth estimation Semantic segment Relative depth Masked transformer a b s t r a c t Monocular depth estimation is a pivotal task in computer vision, aimed to predict a dense depth map from a single image. Existing methods can achieve satisfactory performance through carefully designed network architectures. However, they often ignore the semantic information of scene structures, leading to poor performance in the se- mantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular depth estimation method that leverages semantic segmentation to improve metric depth prediction."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.6770307421684265,
+      "text": "Based on this, we propose SSRDepth, a uniﬁed framework for SIDE that decomposes the task into segmentation scale predic- tion and semantic-aware relative depth estimation, while lever- aging semantic segmentation for feature guidance. This framework includes a Segmentation Proposal Scale module (SPS), an Adaptive Relative Depth (ARD) module, and a Segmentation Query Guided Aggre- gation module (SQGA). The SQGA module uses a new feature interaction method to aggregate features within semantic segments, guided by se- mantic masks from a Segmentation Mask Generator (SMG) at each scale. The SPS module employs segmentation queries we designed to predict segmentation scale, uses semantic constraints to predict pixel proba- bilities for semantic segments, applies scale alignment to obtain depth coeﬃcients, and weights these coeﬃcients by probabilities to produce segmentation scale. The ARD module employs bin queries we designed to predict semantic-aware relative depth, calculates the probability of pixels belonging to each bin, weights bin centers within normalized depth space to obtain relative depth."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6768872737884521,
+      "text": "SC and DC stand for the semantic segmentation (𝐶𝐸 ) and scale alignment (𝑆𝑃 𝑆𝐴 ) constraints, respectively. Segmentation scale SC DC 𝛿1 ↑ AbsRel↓ RMSE↓ SqRel↓ × × × 0. 790 0. 280 2. 026 1. 761 ✓ × × 0. 794 0. 283 2. 144 1. 420 ✓ ✓ × 0. 797 0. 226 1. 921 1. 336 ✓ ✓ ✓ 0. 799 0. 230 1. 901 1. 332 Table 12 Ablation study on the setting of the scaling factor 𝛾 in the scale alignment constraint. Scaling factor 𝛾 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ 1 0. 743 0. 250 2. 339 0. 088 0. 75 0. 776 0. 233 2. 125 0. 080 0. 5 0. 799 0. 230 1. 901 0. 073 0. 25 0. 793 0. 231 1. 906 0. 075 Table 13 Ablation study on the number of bin queries. Number of bin queries 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ 8 0. 781 0. 231 2. 129 0. 078 32 0. 779 0. 240 2. 034 0. 076 100 0. 786 0. 233 1. 984 0. 078 128 0. 799 0. 230 1. 901 0. 073 256 0. 790 0. 231 2. 011 0. 075 the semantic-aware relative depth is discontinuous at adjacent seman- tic boundaries."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p4_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.6740450859069824,
+      "text": "𝐷𝑆 combines the advantages of se- mantic segmentation, ensuring clear semantic boundaries while predict- ing a more accurate metric scale for each semantic segment. To achieve the above method, we propose the SPS module and use semantic seg- mentation and scale alignment as auxiliary supervision to predict the appropriate segmentation scale 𝐷𝑆 . As shown in Fig. 5, after the three- dimensional projection, each semantic segment of 𝐷𝑆 is projected to a plane, and these planes are placed in the correct positions based on the predicted metric scale values. Semantic segmentation prediction. As shown in Fig. 6, given a set of segmentation queries 𝑄𝑆 ∈ ℝ𝑀×𝐶 , we predict the depth coeﬃcients 𝑂 = {𝑜1, 𝑜2, … , 𝑜𝑟, … , 𝑜𝑀 } and segmentation embeddings 𝐸𝑆 ∈ ℝ𝑀×𝐶 through two independent MLPs. We then multiply 𝐸𝑆 with the per- pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 to obtain the segmentation prob- ability map 𝑃𝑆 ∈ ℝ𝑀× 𝐻 4 × 𝑊 4 . Employing a convolutional module (CM) with ReLU, we align the number of channels with the number of se- mantic classes. Finally, the semantic segmentation map 𝑆 ∈ ℝ1× 𝐻 4 × 𝑊 4 is obtained by applying the argmax function: 𝑆 = arg max(𝐶𝑀 (𝑃𝑆 ))."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6653696894645691,
+      "text": "4(a), compared to traditional GRU, SSG introduces a core component Scale-Shift Transformer (SST), and modifies the iterative prediction formula: F rom Dk+1 =D δ +D k T o Dk+1 =D δ +s c ·D k +s h,(10) where Dδ =DepthHead(h k+1), k denotes the iteration step and h denotes the hidden state (prelimi- naries of GRU in Sec D). Specifically, the SST employs learnable scale/shift queries (QSC /QSH ) that interact with SD’s hidden states (keys/values) via cross-attention. The output vector is subsequently split and processed by MLPs to produce sc and sh. For the hidden state update, to enhance spatial awareness, the current input xk is defined as the concatenation of image features zI and the current depth Dk. The hidden state hk evolves via a standard GRU iteration to produce the refined hidden stateh k+1 and subsequently updateD k toD k+1. To balance computational efficiency and GRU’s iterative benefits, we employ two GRU iterations: starting from the initial depth D0 (DSSI ) to sequentially produce D1 and D2 (DSI ). As shown in Fig. 4(b), the distribution of D0 tends to align with the standard SSI depth distribution, while D1 and D2 progressively converge towards the SI depth."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p11_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.6590808629989624,
+      "text": "Segmentation scale prediction: As shown in Table 10, to validate the eﬀectiveness of segmentation scale, we conducted ablation experi- ments by replacing segmentation scale with a single metric scale. The results indicate that segmentation scale has a clear advantage. We be- lieve that segmentation scales can provide more accurate metric scales for each semantic segment, whereas a single metric scale struggles to accommodate the depth range of multiple semantic segments. Semantic segmentation and scale alignment constraints: As shown in Table 11, to verify the eﬀectiveness of semantic segmentation and scale alignment constraints on the predicted segmentation scale, we conduct ablation experiments. Notably, we do not set up a version with only scale alignment constraints, as this constraint requires the segmen- tation scale to have semantic information in order to be meaningful. The results indicate that performance improves signiﬁcantly after in- corporating semantic segmentation constraints. Further applying scale alignment constraints results in the best model performance."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.653435468673706,
+      "text": "996 [18] Monodepth2 Resnet18 \u0013 MS 192 × 640 0. 084 0. 494 3. 739 0. 132 0. 918 0. 983 0. 995 WaveletMonodepth Resnet18 \u0013 MS 192 × 640 0. 085 0. 497 3. 804 0. 134 0. 912 0. 982 0. 995 [63] Depth Hints \u0013 MS +SSGM 192 × 640 0. 087 0. 526 3. 776 0. 133 0. 915 0. 982 0. 995 WaveletMonodepth Resnet18 \u0013 MS +SSGM 192 × 640 0. 086 0. 497 3. 699 0. 131 0. 914 0. 983 0. 996 [18] Monodepth2 Resnet18 \u0013 S 320 × 1024 0. 082 0. 497 3. 637 0. 132 0. 924 0. 982 0. 994 WaveletMonodepth Resnet18 \u0013 S 320 × 1024 0. 080 0. 443 3. 544 0. 130 0. 919 0. 983 0. 995 WaveletMonodepth Resnet50 \u0013 S 320 × 1024 0. 076 0. 413 3. 434 0. 126 0. 926 0. 984 0. 995 [63] Depth Hints \u0013 SSGM 320 × 1024 0. 077 0. 404 3. 345 0. 119 0. 930 0. 988 0. 997 WaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0. 078 0. 397 3. 316 0. 121 0. 928 0. 987 0. 997 Depth Hints Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 363 3. 198 0. 114 0. 936 0. 989 0. 997 WaveletMonodepth Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 357 3. 170 0. 114 0. 936 0. 989 0. 997 Table 9: Quantitative results on the improved KITTI benchmark. We compare our method to our baselines on the KITTI [15] improved dataset introduced by [61], using the Eigen split."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6533870697021484,
+      "text": "K Scale Shift Transformer V KV Sep-Conv GRU 𝜎: Sigmoid Conv⊕: Pixel addition⊗: Concatenation⊙: Pixel multiplyDiffusion ℰ 𝐡\" 𝐡\"#$𝐷\"#$⊕𝑠%+𝑠&×Q MLP 𝒙\" (b)(a) TransformerMLP𝑠& 𝑠% 𝐳𝑰 𝐷\" iteration𝑘 Figure 4:(a): Model Structure of SSG. It corresponds to the gray rectangle shown in Fig. 2, standing for an iteration within two consecutive ones. The pipeline of SSG is comprehensively described in Sec. 3. 3 (DepthHead is omit in (a) for clear).(b): Depth distribution alignment visualization. We statistically analyze each stage of Jasmine’s SSG module on the KITTI test set. The standard SI and SSI depths are obtained by applying Eq. 9 and dividing the maximum value to the depth GT, respectively. be recovered by the least squares alignment in evaluation. Consequently, SD-based MDE predicts Scale-Shift-Invariant DepthD SSI . This inherent distribution gap between SSI and SI depth creates barriers for SD integration, and the SSG is specifically designed to fix it. The Design of SSG. Transforming the depth distribution from SSI depth to SI depth requires profound scene understanding, and the scale (sc) and shift (sh) factors are tightly coupled. Therefore, as shown in Fig."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p11_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.653170108795166,
+      "text": "Addition- ally, when we allow the model to adaptively predict segmentation scale without any constraints, a signiﬁcant decrease in performance is ob- served. We believe this is due to the model’s inability to spontaneously identify an appropriate scene segmentation method, leading to biased prediction of depth coeﬃcients. Therefore, it is essential to jointly con- strain semantic segmentation and depth coeﬃcients to enhance predic- tion accuracy. In addition, we conducted ablation experiments on the scaling factor 𝛾 of the scale alignment constraint, setting 𝛾 to 1, 0. 75, 0. 5 and 0. 25 respectively. The results are shown in Table 12. It is reasonable to use a scaling factor 𝛾 to magnify the estimated segmentation scale values. The prediction results deteriorate signiﬁcantly when 𝛾 = 1. The prediction performance recovers somewhat when 𝛾 = 0. 75, and the best prediction performance is achieved when 𝛾 = 0. 5. Intermediate prediction results: As shown in Fig. 16, we further visualize the intermediate prediction results. It can be observed that the segmentation scale retains the scene structure of semantic segmentation while exhibiting detailed segmented depth information."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6507518291473389,
+      "text": "Subsequently, we initialize a set of learnable queries 𝑄 ∈ ℝ(𝑀+𝑁)×𝐶 and feed them into the SQGA module to interact with the multi-scale features 𝐹𝑙. During the interaction, in- spired by the masked attention mechanism [28], we design the Segmen- tation Mask Generator (SMG) to generate segmentation attention masks 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻 4 × 𝑊 4 that guide the updates of the queries 𝑄. To decom- pose metric depth into segmentation scale and semantic-aware relative depth, we also decompose 𝑄 into segmentation queries 𝑄𝑆 ∈ ℝ𝑀×𝐶 and bin queries 𝑄𝐵 ∈ ℝ𝑁×𝐶 , where 𝑀 and 𝑁 are the numbers of 𝑄𝑆 and 𝑄𝐵, respectively. 𝑄𝑆 and 𝐹𝑝 are fed into the SPS module to generate the semantic segmentation map 𝑆 ∈ ℝ1× 𝐻 4 × 𝑊 4 and the segmentation scale map 𝐷𝑆 ∈ ℝ1× 𝐻 4 × 𝑊 4 , while 𝑄𝐵 and 𝐹𝑝 are fed into the ARD module to generate the semantic-aware relative depth map 𝑅 ∈ ℝ1× 𝐻 4 × 𝑊 4 . Finally, the metric depth map 𝐷𝑚 ∈ ℝ1× 𝐻 4 × 𝑊 4 is obtained by multiplying 𝑅 with the corresponding elements of 𝐷𝑆 . Additionally, the semantic segmenta- tion map 𝑆 is employed only for auxiliary supervision of the SPS module during training and is not needed in the inference process. 3. 2."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p10_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.6494386196136475,
+      "text": "Y. Zou et al. Fig. 12. Qualitative zero-shot results on the Virtual KITTI 2 dataset. Fig. 13. Adjustment of the semantic segmentation part in the SPS Module. (a) represents the original semantic segmentation part in the SPS module, where cross- entropy loss (𝐶𝐸 ) is directly computed on 𝑆. (b) represents the adjusted panoptic segmentation part, where 𝐸𝑆 computes the classiﬁcation loss (𝐶𝐿𝑆 ), and 𝑃𝑆 computes the mask loss (𝑀𝐴𝑆𝐾 + 𝐷𝐼𝐶𝐸 ). Table 5 Quantitative comparison of boundaries and structures on the Virtual KITTI 2 dataset. Method Boundary accuracy Structural accuracy F1↑ R↑ B-AbsRel↓ SSIM↑ AbsRel↓ AdaBins [9] 0. 0264 0. 0174 0. 3627 0. 820 0. 112 NeWCRFs [16] 0. 0262 0. 0173 0. 3652 0. 828 0. 117 ZoeDepth [41] 0. 0269 0. 0187 0. 3375 0. 873 0. 105 Ours 0. 0273 0. 0194 0. 3363 0. 867 0. 098 instances within the same semantic class, thereby enhancing the model’s performance. 4. 6. Ablation study In this section, we employ Swin-T as the default backbone and per- form experiments on Cityscapes and NYU1449 to demonstrate the ef- fectiveness of each component in our method. Additionally, we provide more detailed visualizations and experimental results for discussion."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6426879167556763,
+      "text": "Y. Zou et al. Fig. 5. Visualization of segmentation scale. Fig. 6. Segmentation proposal scale module. Since typical classiﬁcation losses neglect the ordinal information be- tween discrete labels, we convert the predicted bins B into bin center depths 𝐶 = {𝑐1, 𝑐2, … , 𝑐𝑖, … , 𝑐𝑁 } to preserve the depth ordering. Given a set of 𝑄𝐵 ∈ ℝ𝑁×𝐶 , two independent MLPs are used to predict the bins B and the bin embeddings 𝐸𝐵 ∈ ℝ𝑁×𝐶 . Then, the bin center depths value 𝑐𝑖 are computed utilizing the bin width values 𝑏𝑖: 𝑐𝑖 = 𝜖 + 1 2 𝑏𝑖 + 𝑖−1∑ 𝑗=1 𝑏𝑗 , (8) where 𝜖 = 0. 001, this small positive value ensures that each 𝑐𝑖 is greater than 0. Semantic-aware relative depth prediction. To obtain the semantic-aware relative depth map 𝑅 ∈ ℝ1× 𝐻 4 × 𝑊 4 , we multiply the per- pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 with the bin embeddings 𝐸𝐵 ∈ ℝ𝑁×𝐶 to get the probability distribution 𝑃𝐵 ∈ ℝ𝑁× 𝐻 4 × 𝑊 4 for each pixel across the 𝐶."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p8_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 8,
+      "score": 0.6426838040351868,
+      "text": "Additionally, we replaced the semantic seg- mentation loss (𝐶𝐸 ) with:𝜆1𝐶𝐿𝑆 + 𝜆2𝑀𝐴𝑆𝐾 + 𝜆3𝐷𝐼𝐶𝐸 (𝜆1 = 2, 𝜆 2 = 5, 𝜆 3 = 5),where 𝐶𝐿𝑆 , 𝑀𝐴𝑆𝐾 and 𝐷𝐼𝐶𝐸 represent cross-entropy loss, binary cross-entropy loss, and dice loss, respectively. For more details on the segmentation loss, please refer to Mask2Former [28]. The comparison results are shown in Table 6. The panoptic seg- mentation method achieved the best performance in 5 out of 7 met- rics. The experimental results demonstrate that the panoptic segmenta- tion method can further reﬁne the boundary regions between diﬀerent Pattern Recognition 171 (2026) 112279 8"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p4_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.6404697895050049,
+      "text": "Y. Zou et al. Fig. 3. SQGA module and its constituent components. The bottom left and bottom right corners show the SMG module and the masked transformer layer in the SQGA module, respectively. Fig. 4. Visualization of attention activation areas. After being guided by the semantic segmentation masks, 𝑄𝐵 focuses only on the corresponding semantic segments, achieving an eﬃcient execution of the structure recovery strategy within each semantic segment. map 𝑃𝑆 ∈ ℝ𝑀× 𝐻 4 × 𝑊 4 : 𝑃𝑆 = 𝐸𝑆 × 𝐹 ⊤ 𝑝 . (4) Next, we apply convolution and concatenation to expand the number of channels to 𝑀 + 𝑁, and ﬁnally binarize 𝑃𝑆 to obtain 𝑀𝑆 : 𝑀𝑆 (𝑥, 𝑦) = {1, 𝑃 𝑆 (𝑥, 𝑦) > 0. 5 0, 𝑃 𝑆 (𝑥, 𝑦) ≤ 0. 5 , (5) where 𝑃𝑆 (𝑥, 𝑦) represents the probability value at the corresponding pixel location, and 0. 5 is the binarization threshold. 3. 3. Segmentation proposal scale module We adaptively predict a metric scale for each semantic segment in the image, replacing original semantic labels with these scales to obtain the segmentation scale 𝐷𝑆 ∈ ℝ1× 𝐻 4 × 𝑊 4 ."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p11_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.6395068168640137,
+      "text": "Y. Zou et al. Table 6 Comparison results of semantic segmentation and panoptic segmentation-assisted prediction on the Cityscapes dataset. Segmentation type Backbone 𝛿1 ↑ 𝛿2 ↑ 𝛿3 ↑ RMSE↓ RMSEL↓ AbsRel↓ SqRel↓ semantic Swin-Tiny 0. 799 0. 932 0. 968 1. 901 0. 352 0. 230 1. 332 Swin-Large 0. 839 0. 940 0. 973 1. 767 0. 340 0. 206 1. 266 Convnext-Large 0. 835 0. 948 0. 973 1. 743 0. 340 0. 204 1. 403 panoptic Swin-Tiny 0. 806 0932 0. 965 1822 0. 376 0. 230 1. 465 Swin-Large 0. 834 0. 951 0. 975 1. 755 0. 320 0. 225 1. 399 Convnext-Large 0. 838 0. 949 0. 974 1. 696 0. 340 0. 204 1. 482 Fig. 15. Visualization of semantic segmentation mask activation areas. Table 7 Ablation study on diﬀerent model components on the Cityscapes dataset. Model ARD SPS SMG 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ a × × × 0. 732 0. 303 2. 122 0. 090 b ✓ × × 0. 790 0. 280 2. 026 0. 078 c ✓ ✓ × 0. 779 0. 233 1. 934 0. 078 d ✓ × ✓ 0. 774 0. 254 1. 935 0. 075 e ✓ ✓ ✓ 0. 799 0. 230 1. 901 0. 073 method is able to provide sharp depth boundaries on imperfect real datasets, as the predicted performance obtained from training on both depth annotations are extremely similar. Mask generation of the SMG module: As shown in Fig."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.637942910194397,
+      "text": "977 WaveletMonodepthResnet18 \u0013 S 320×1024 0. 105 0. 797 4. 732 0. 203 0. 869 0. 952 0. 977 [63] Depth Hints \u0013 SSGM 320×1024 0. 099 0. 723 4. 445 0. 187 0. 886 0. 961 0. 982 WaveletMonodepthResnet18 \u0013 SSGM 320×1024 0. 102 0. 739 4. 452 0. 188 0. 883 0. 960 0. 981 Depth Hints Resnet50 \u0013 SSGM 320×1024 0. 096 0. 710 4. 393 0. 185 0. 890 0. 962 0. 981 WaveletMonodepthResnet50 \u0013 SSGM 320×1024 0. 097 0. 718 4. 387 0. 184 0. 891 0. 962 0. 982 WaveletMonodepthResnet50 (η = 0. 05) \u0013 SSGM 320×1024 0. 100 0. 726 4. 444 0. 186 0. 888 0. 962 0. 982 Table 3: Quantitative results on KITTI. We compare our method to our baselines on KITTI [15], using the Eigen split. TheData column indicates the training data modality: S is for self-supervised training on stereo images, MS is for models trained with both monocular (forward and backward frames) and stereo data and SSGM refers to the extra stereo ground truth which was used in [63]. Method H × W Abs Rel RMSE log10 δ<1. 25 δ<1. 252 δ<1. 253 ϵacc ϵcomp DenseNet baseline 480 × 640 0. 1277 0. 5479 0. 0539 0. 8430 0. 9681 0. 9917 1. 7170 7. 0638 WaveletMonodepth (last scale sup.) 480 × 640 0. 1280 0. 5589 0. 0546 0. 8436 0. 9658 0. 9908 1. 7678 7."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6334586143493652,
+      "text": "This clearly demonstrates that SSG iteratively aligns SSI depth to SI depth by refining the scale-shift parameters. GRU is preferred over other architectures due to its reset gate mechanism. During training, the reset gatercan prevent the back- propagation of anomalous gradients to the former step by selectively resetting parts of the hidden state. Therefore, this mechanism enables the fine-grained DSSI to filter out erroneous supervision signals from reprojection losses and exhibit richer details than DSI (shown in Fig. 2). To preserve these fine-grained details in the final prediction, we further constrain the edge alignment between DSSI andD SI with an edge extraction module, detailed in Sec. C. 3. 4 Steady SD Finetune with Self-Supervision As thefirstframework to finetune SD with self-supervision, we encountered a novel challenge: training instability, which is mainly due to the SD’s enormous size, joint training across modules, and indirect self-supervisory mechanisms. To enhance the convergence reliability and reproducibility, we explored a straightforward approach by introducing a pre-trained self-supervised teacher model (e.g., MonoViT) to estimate Dtc as pseudo labels."
+    },
+    {
+      "id": "semantic_chunk::ACD_p4_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6330479979515076,
+      "text": "Similar to the existing technol- ogy [Gasperini et al., 2023 ], the commonly used multi-scale feature distillation loss between the teacher model (F T(·)) and student model (F S(·)) is employed to facilitate the per- ception of the student model to the adverse weather. For the given normal inputei and the produced degraded sample (hc i ), the distillation loss function is deﬁned as: Ld = 1 S S∑ s=1 1 Ns Ns∑ j=1 ⏐⏐ ⏐F T (ei)js −FS (mi)js ⏐ ⏐ ⏐ FS (mi)js , (7) where S denotes the number of different scales and mi rep- resents a sample randomly selected from the mixed training set. Ordinal Guidance Distillation. 1) Uncertain Region Def- inition: We use the output from Depth Anything V2 model as the supervisory signal because it ensures accurate depth prediction while maintaining acceptable inference speed. D T and DS represent the inverse depth of the teacher model and student model, respectively, and Dv represents the output depth of Depth Anything V2. We ﬁrst identify the regions with signiﬁcant discrepancies between D T and DS for re- ﬁnement: ¯D = |DT −DS|, (8) where ¯D reﬂects the difference between the output of the teacher model and the student model."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6329956650733948,
+      "text": "Y. Zou et al. Table 8 Ablation study on diﬀerent depth annotations on the NYU1449 dataset. Depth annotation type Metric depth accuracy Boundary accuracy 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ F1↑ R↑ B-AbsRel↓ rawDepths 0. 815 0. 147 0. 502 0. 061 0. 0191 0. 0139 0. 1970 Depths 0. 812 0. 147 0. 500 0. 060 0. 0192 0. 0142 0. 1932 Fig. 16. Visualization of the model’s intermediate prediction results. Table 9 Ablation study on the number of masked transformer layers in the SQGA module. Masked transformer layer SMG 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ 3 × 0. 792 0. 238 2. 043 0. 078 ✓ 0. 794 0. 234 1. 995 0. 078 6 × 0. 787 0. 234 1. 963 0. 079 ✓ 0. 796 0. 234 1. 924 0. 078 9 × 0. 779 0. 233 1. 934 0. 078 ✓ 0. 799 0. 230 1. 901 0. 073 12 × 0. 795 0. 238 2. 089 0. 076 ✓ 0. 792 0. 236 2. 011 0. 079 Table 10 Ablation study on the eﬀectiveness of segmentation scale. Setting 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ no scale 0. 790 0. 280 2. 026 0. 078 single metric scale 0. 789 0. 237 1. 971 0. 079 segmentation scale 0. 799 0. 230 1. 901 0. 073 Table 11 Ablation study on semantic segmentation and scale alignment constraints."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6280654668807983,
+      "text": "To address this issue, we design a Segmenta- tion Mask Generator (SMG), which leverages both segmentation queries 𝑄𝑆 ∈ ℝ𝑀×𝐶 and per-pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 to generate se- mantic segmentation masks 𝑀𝑠 ∈ ℝ(𝑀+𝑁)× 𝐻 4 × 𝑊 4 that guide 𝑄𝐵 in aggre- gating image features within semantic segments. Masked transformer layer. In the SQGA module, we employ 𝐿 masked transformer layers at each scale. The masked transformer layer consists of Multi-Head Masked Attention (MMA), Multi-Head Self- Attention (MSA), and a Feed Forward Network (FFN), as shown in the lower right corner of Fig. 3. We utilize masked attention: 𝑀𝑀𝐴 (𝑄𝑖𝑛, 𝐹𝑙) = 𝑠𝑜𝑓 𝑡𝑚𝑎𝑥(𝑙 + 𝑄𝑙𝐾 ⊤ 𝑙 )𝑉𝑙 + 𝑄𝑖𝑛, (1) where 𝑙 is the index of the scale, 𝑄𝑖𝑛 is the output 𝑄 from the previous layer, and 𝑄𝑙, 𝐾𝑙, and 𝑉𝑙 are the linear projections of the query from 𝑄𝑖𝑛, and the key and value from 𝐹𝑙, respectively, with the linear projections denoted as Proj in the ﬁgure. The attention mask 𝑙 at feature location (𝑥, 𝑦) is deﬁned as: 𝑙(𝑥, 𝑦) = {0, if 𝑀𝑠(𝑥, 𝑦) = 1 −∞, if 𝑀𝑠(𝑥, 𝑦) = 0 , (2) where 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻 4 × 𝑊 4 is the binarized attention mask predicted by the SMG module."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6279979944229126,
+      "text": "We employ scale- invariant loss [4] and cross-entropy loss respectively to provide depth and semantic segmentation constraints, with the expressions of 𝑆𝐼𝑙𝑜𝑔 and 𝐶𝐸 are as follows: 𝑆𝐼𝑙𝑜𝑔 = √√√√√ 1 𝑉 ∑ 𝑖 𝑑2 𝑖 − 𝜆 𝑉 2 ( ∑ 𝑖 𝑑𝑖 )2 , (12) 𝐶𝐸 = − 1 𝑉 𝑉∑ 𝑖 𝑆∗(𝑖) log 𝑆(𝑖), (13) in the formula, 𝑑𝑖 = log 𝐷𝑚(𝑖) − log 𝐷∗ 𝑚(𝑖), where 𝐷𝑚(𝑖) and 𝐷∗ 𝑚(𝑖) denote the predicted metric depth and ground truth (GT) metric depths at pixel 𝑖, respectively, while 𝑆(𝑖) and 𝑆∗(𝑖) represent the predicted semantic annotation and ground truth (GT) semantic annotations at pixel 𝑖. 𝑉 denotes the number of pixels in the image that provide valid ground truth depth values. In our experiments, we conventionally set 𝜆 to 0. 15. Segmentation proposal scale alignment loss. To improve the per- formance of depth estimation, we propose a segmentation proposal scale alignment loss (𝑆𝑃 𝑆𝐴 ). Inspired by [29], in order to make the pixel scales within each semantic segment converge to similar values, we crop the ground truth (GT) and predicted depths into 𝑈 patches according to the predicted semantic segmentation annotation, and then apply the me- dian absolute deviation for each patch."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p18_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 18,
+      "score": 0.6256955862045288,
+      "text": "the other papers’ losses has been comprehensively proved in their papers, and we did not conduct additional ablation studies for them. For the loss specific in this paper, we present some visualized ablation results in Fig. 7. C. 1 SGD Loss for Dynamic Object We first introduce the most commonly used smoothness loss Lsm in self-supervised depth estimation, which encourages locally smooth depth maps while preserving edges in the image. Its specific expression is as follows: Lsm =|∂ x ˆD|e−|∂xI| +|∂ y ˆD|e−|∂yI|,(16) where ˆDis the depth normalized by the mean ofD. Building on this, we adopt the GDS loss (only the first stage) from[34] to handle dynamic objects. This approach is based on the smoothness loss and introduces a ground-contact-prior mask Mgr, defined as: Mgr(i, j) =γ·M t(i, j) + (1−Mt(i, j)) where Mt is the dynamic object segmentation obtained from a semantic segmentation network (1 represents dynamic and 0 for static), and γ is the weighting parameter for Mgr, empirically set to 100."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p4_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.6252013444900513,
+      "text": "(6) Segmentation scale prediction. First, we apply a softmax on the segmentation probability map 𝑃𝑆 to normalize the probability values between 0 and 1. Then, we perform a weighted calculation with the depth coeﬃcients value 𝑜𝑟 as follows: 𝐷𝑆 (𝑥, 𝑦) = 𝑀∑ 𝑟=1 𝑠𝑜𝑓 𝑡𝑚𝑎𝑥(𝑠𝑟(𝑥, 𝑦))𝑜𝑟, (7) where 𝑠𝑟(𝑥, 𝑦) represents the probability value at pixel location (𝑥, 𝑦) for the corresponding channel in the 𝑃𝑆 , and 𝐷𝑠(𝑥, 𝑦) denotes the segmen- tation scale value at the corresponding pixel location. 3. 4. Adaptive relative depth module To obtain the ﬁnal metric depth, it is not only necessary to predict the segmentation scale but also to establish relative depth among pix- els within each segment. To achieve this, we propose the ARD module, which adaptively predicts semantic-aware relative depth and combines it with the segmentation scale to obtain the metric depth. The prediction of semantic-aware relative depth employs the hybrid regression method [10]. Speciﬁcally, the scene depth range is ﬁrst discretized into 𝑁 bins (each bin representing a depth class). Then, the pixels within these bins are classiﬁed by calculating the similarity between image features and the bins. Bin center prediction."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.6241288185119629,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Pretrained Full Eigen split Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Baseline + min reproj. ✓ ✓ 0. 122 1. 081 5. 116 0. 199 0. 866 0. 957 0. 980 Baseline + automasking ✓ 0. 124 0. 936 5. 010 0. 206 0. 858 0. 952 0. 977 Baseline + full-res m.s. ✓ ✓ 0. 124 1. 170 5. 249 0. 203 0. 865 0. 953 0. 978 Monodepth2 w/o min reprojection ✓ ✓ ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 with [76]’s mask ✓ ✓ ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 Monodepth2(full) ✓ ✓ ✓ ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2w/o pt ✓ ✓ ✓ 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Baseline (full Eigen dataset) ✓ ✓ 0. 146 1. 876 5. 666 0. 230 0. 848 0. 945 0. 972 Monodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.6241288185119629,
+      "text": "Auto- masking Min. reproj. Full-res multi-scale Pretrained Full Eigen split Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 (a) Baseline ✓ 0. 140 1. 610 5. 512 0. 223 0. 852 0. 946 0. 973 Baseline + min reproj. ✓ ✓ 0. 122 1. 081 5. 116 0. 199 0. 866 0. 957 0. 980 Baseline + automasking ✓ 0. 124 0. 936 5. 010 0. 206 0. 858 0. 952 0. 977 Baseline + full-res m.s. ✓ ✓ 0. 124 1. 170 5. 249 0. 203 0. 865 0. 953 0. 978 Monodepth2 w/o min reprojection ✓ ✓ ✓ 0. 117 0. 878 4. 846 0. 196 0. 870 0. 957 0. 980 Monodepth2 w/o auto-masking ✓ ✓ ✓ 0. 120 1. 097 5. 074 0. 197 0. 872 0. 956 0. 979 Monodepth2 w/o full-res m.s. ✓ ✓ ✓ 0. 117 0. 866 4. 864 0. 196 0. 871 0. 957 0. 981 Monodepth2 with [76]’s mask ✓ ✓ ✓ 0. 123 1. 177 5. 210 0. 200 0. 869 0. 955 0. 978 Monodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0. 128 1. 087 5. 171 0. 204 0. 855 0. 953 0. 978 Monodepth2(full) ✓ ✓ ✓ ✓ 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 (b) Baseline w/o pt 0. 150 1. 585 5. 671 0. 234 0. 827 0. 938 0. 971 Monodepth2w/o pt ✓ ✓ ✓ 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977 (c) Baseline (full Eigen dataset) ✓ ✓ 0. 146 1. 876 5. 666 0. 230 0. 848 0. 945 0. 972 Monodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p15_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 15,
+      "score": 0.6220654249191284,
+      "text": "While channel pruning can, in practice, greatly reduce both complexity and memory footprint, it requires heavy hyper- parameter search that we therefore choose to leave for fu- ture work. 9. 4. Input resolution Finally, one important factor that makes FastDepth ef- ﬁcient is that it is trained with 224× 224 inputs, against C H W (a) C H W (b) Figure 9: Channel pruning (a) vs our sparse computation (b). Our sparse computation enabled by wavelets is complimentary with the channel pruning strategy to reduce the amount of computation, as both computation reduction methods operate in orthogonal dimen- sions. our 640× 480 input. While our method is best designed for higher-resolution regime where sparsity of wavelets is stronger, we still show that our method achieves decent re- sults even at low-resolution, and report our scores in Ta- ble 12."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6214932203292847,
+      "text": "Speciﬁcally, we decompose metric depth into segmentation scale and semantic-aware relative depth, which are predicted separately through Segmentation Proposal Scale (SPS) module and an Adaptive Relative Depth (ARD) module. The SPS module predicts the segmentation scale under the constraints of semantic segmentation and scale align- ment, endowing the model with semantic awareness and maintaining sharp semantic boundaries. Meanwhile, the ARD module adaptively predicts semantic-aware relative depth within a normalized depth space through a hybrid regression approach. Furthermore, to eﬀectively capture structural details in semantic segments, we propose the Segmentation Query Guided Aggregation (SQGA) module, which utilizes a novel feature interaction approach to enhance the aggregation of multi-scale features, guided by masks produced through a Segmentation Mask Generator (SMG). Extensive experiments show that our method achieves competitive results on the indoor, outdoor, and unseen datasets. 1."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p8_sc1",
+      "source": "data\\Global-Local.pdf",
+      "page": 8,
+      "score": 0.6209872961044312,
+      "text": "In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 8375–8384, 2020. [Yun et al., 2019] Sangdoo Yun, Dongyoon Han, Seong Joon Oh, Sanghyuk Chun, Junsuk Choe, and Youngjoon Yoo. Cutmix: Regularization strategy to train strong classiﬁers with localizable features. CoRR, abs/1905. 04899, 2019. [Zheng et al., 2021] Sixiao Zheng, Jiachen Lu, Hengshuang Zhao, Xiatian Zhu, Zekun Luo, Yabiao Wang, Yanwei Fu, Jianfeng Feng, Tao Xiang, Philip HS Torr, et al. Rethink- ing semantic segmentation from a sequence-to-sequence perspective with transformers. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 6881–6890, 2021."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p8_sc4",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6205215454101562,
+      "text": "[Huang et al., 2022] Tao Huang, Songjiang Li, Xu Jia, Huchuan Lu, and Jianzhuang Liu. Neighbor2neighbor: A self-supervised framework for deep image denoising. IEEE Transactions on Image Processing , 31:4023–4038, 2022. [Jaderberg et al., 2015] Max Jaderberg, Karen Simonyan, Andrew Zisserman, et al. Spatial transformer networks. Advances in Neural Information Processing Systems , 28, 2015. [Joiner and Rosenblatt, 1971] Brian L Joiner and Joan R Rosenblatt. Some properties of the range in samples from tukey’s symmetric lambda distributions. Journal of the American Statistical Association, 66(334):394–399, 1971."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p5_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 5,
+      "score": 0.6204463243484497,
+      "text": "Algorithm 1: Computing depth with wavelets Result: Depth map at input scale Input : Pyramid of feature maps [F4, F3, F2, F1]; Current scales = 3; LL3← DensePredict (F4); Thresholdη ; Sparse computation maskM = Initialize with 1; for (s = 3; s> = 0; s =s− 1 ){ ← LHs, HLs, HHs← SparsePredict (Fs+1; M); LLs−1← IDWT(LLs, [LHs, HLs, HHs]); ηs←η· (max(LLs−1)− min(LLs−1)); M← GetSparseMask (LHs, HLs, HHs,ηs); } procedure SparsePredict(F , M) Input : Feature mapF , Sparse maskM for ( allp s.t. M [p] == 1 ){ H[p] = SparseConv3x3(F[p]); } return H; procedure DensePredict(F) Input : Feature map F InitializeM with ones; return SparsePredict(F , M); procedure GetSparseMask(H,η) Input : High frequency coefﬁcient mapsH M = max(|LH|,|HL|,|HH|)>η ; M = upsample×2(M ) ; returnM; computation is about 3× lower in FLOPs compared to stan- dard convolutions at all pixel locations for an image of size 320× 1024. 3. 4. Self-supervised Training Our self-supervised losses are as described in [18], which we brieﬂy describe here for completeness. See sup- plemental material for further details."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.6190087795257568,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.6190087795257568,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6188526153564453,
+      "text": "In the masked attention mechanism, regions with a mask value of 0 are excluded from the computations, thereby conﬁning the focus to the features that require attention and achieving eﬃcient aggregation of the target features. Following MMA, we utilize MSA for self-interaction within 𝑄𝑖𝑛, and then update 𝑄𝑖𝑛 through an FFN with residual connections. Finally, 𝑄𝑜𝑢𝑡 outputted after going through the complete masked transformer layer is deﬁned as: 𝑄𝑜𝑢𝑡 = 𝐹 𝐹 𝑁(𝑀𝑆𝐴 (𝑀𝑀𝐴 (𝑄𝑖𝑛, 𝐹𝑙))). (3) Segmentation mask generator. To aggregate image features within semantic segments, we utilize the SMG to generate binary segmenta- tion masks 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻 4 × 𝑊 4 prior to each masked transformer layer. The structure of the SMG module is illustrated in the lower left corner of Fig. 3. Given 𝑄𝑆 ∈ ℝ𝑀×𝐶 , we obtain the segmentation embeddings 𝐸𝑆 ∈ ℝ𝑀×𝐶 through a MLP. Subsequently, by performing matrix multi- plication with 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 , we obtain the segmentation probability Pattern Recognition 171 (2026) 112279 3"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.618105947971344,
+      "text": "Finally, the semantic-aware rel- ative depth is multiplied by the segmentation scale to obtain the metric depth. In summary, our main contributions are as follows: • We propose a novel monocular depth estimation framework- SSRDepth, which decomposes metric depth into segmentation scale and semantic-aware relative depth. Ultimately, the multiplication of these two components yields accurate metric depth. • Our proposed SQGA module employs a new feature interaction pat- tern, combined with the binary masks of semantic segments gener- ated by our designed SMG, ensuring the eﬀectiveness of multi-scale semantic feature aggregation and the recovery of structural regular- ities within semantic segments. • Our proposed SPS module predicts segmentation scale with ex- plicit constraints, allowing the model to preserve sharp semantic boundaries. The ARD module predicts semantic-aware relative depth within a normalized depth space using a hybrid regression approach, providing the necessary foundation for the prediction of metric depth."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc3",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6169359683990479,
+      "text": "We define N sub-intervals be- tween dmin and dmax, where each interval has a length of L = dmax−dmin N , with center bn = dmin + L(n + 1 2 ) for interval n. Using two sigmoid functions σ to model the ker- nel function K(x) = σ(x)σ(−x), the probability of a depth map D falling within interval k is P (n) = 1 HW HWX x=1 [σ( D(x) − bn + L 2 a ) − σ( D(x) − bn − L 2 a )], (12) where P is the differentiable probability function and a is a bandwidth factor. Finally, the Distday, Distadv are consist of Pday, Padv: Distday = {bn, Pday(n)}N n=1, (13) Distadv = {bn, Padv(n)}N n=1. (14) Noted that Distday is calculated among the whole day- time training set instead of one sample. The objective is to minimize the distribution distances betweenDistday and Distadv by K-L divergence: LKL dis = NX i=1 Padv(i) · log Padv(i) Pday(i) . (15) Apart from Lcd and LKL dis , we also utilize Lcv and LT as in previous stage. Thus, the total objective functionLreal is Lreal = α1Lcd + α2LKL dis + α3Lcv + α4LT (16) With the designed learning procedure, our model can gradually fit better to multiple real conditions, rather than only learn from the synthetic conditions. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p8_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6164820194244385,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 8 ID SD PGD LKD MVC Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 1 0. 107 0. 787 4. 580 0. 182 0. 887 0. 963 0. 983 2 ✓ 0. 434 4. 630 11. 99 0. 579 0. 306 0. 568 0. 777 3 ✓ 0. 105 0. 757 4. 521 0. 181 0. 889 0. 964 0. 984 4 ✓ ✓ 0. 104 0. 741 4. 489 0. 180 0. 890 0. 964 0. 984 5 ✓ ✓ ✓ 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 TABLE IV ABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD: PSEUDO GROUND -TRUTH DIFFUSION ; MVC: MASKED VISUAL CONDITION MECHANISM . Inference step Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 2 1. 812 75. 600 30. 791 6. 160 0. 070 0. 141 0. 213 5 1. 503 58. 013 27. 140 5. 464 0. 125 0. 241 0. 340 10 0. 226 3. 730 9. 571 0. 754 0. 703 0. 878 0. 938 15 0. 822 28. 099 19. 232 2. 972 0. 357 0. 548 0. 653 20 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 25 0. 431 10. 382 12. 709 1. 206 0. 503 0. 723 0. 827 TABLE V ABLATION STUDY ON DIFFERENT INFERENCE STEPS . Fig. 7. Visualization of the denoising process involving 20 inference steps in total. E."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6162207126617432,
+      "text": "Conclusion In this paper, we propose SSRDepth, a monocular depth estimation framework leverages semantic segmentation to improve metric depth prediction. The framework decomposes the metric depth estimation task into two parts: segmentation scale prediction through the Segmenta- tion Proposal Scale (SPS) module and semantic-aware relative depth estimation through the Adaptive Relative Depth (ARD) module. Addi- tionally, the framework includes the Segmentation Query Guided Ag- gregation (SQGA) module, which is designed to recover the structural information of local semantic segments. Our method excels not only in Pattern Recognition 171 (2026) 112279 12"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p5_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.6158687472343445,
+      "text": "(e) Latent (d) Hypersim(c) Direct (c)Segment (b) Origin (h)E2E-FT (f) Ours .p .q . p(Occlude) . q(Correct) (a) Principle .p’(Wrong) AbsRel A1 0. 0 0. 3 0. 6 1. 0 0. 0 0. 3 0. 6 1. 0 0. 86 0. 92 0. 09 1. 0 0. 0 0. 3 0. 6 1. 0 0. 86 0. 92 0. 09 0. 13 (g) Results 𝝀𝝀 Target View Source View Shift 10 pixels Shift 510 pixels .r . r(Correct)Shift 5 pixels Tree depth=10m 10m 20m Figure 3:The attempts to preserve the SD prior. The meanings of (a)-(f) are detailed in Sec. 3. 2. Notably, while (e) demonstrates superior visual quality, it erroneously interprets surface textures (e.g., house windows) as depth edges. (g) shows the performance variations under different λ settings for photometric supervision (Eq. 5) and latent supervision (Eq. 4). The complete metrics and their definitions are provided in Sec. E. 4. whereϕdenotes random choice;I K andI H are KITTI and Hypersim images, respectively. In summary, MIR constructs each training batch by randomly selecting images from these two datasets, and supervises the reconstructed image with the photometric loss in Eq. 5. Analysis of Auxiliary ImagesThe specific synthetic data usage may raise concerns about appli- cability boundaries."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p17_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.6148051023483276,
+      "text": "008 25:returnloss 26:end function 27:functionCOMPUTE_AUXILIARY_LOSS(inputs,D si, Dssi) 28:L GDS ←gds_loss(inputs[’I_t’],inputs[’seg’], Dsi) 29:L SKY ←sky_loss(D ssi,inputs[’sky_mask’]) 30:L e ←edge_loss(D si, Dssi) 31:returnL GDS +L SKY +L e 32:end function C Supervision Details Self-supervised depth estimation has been researched for a decade, and hundreds of works have proposed numerous progressive ideas. Therefore, to achieve SoTA performance, it is inevitable that we will reuse some loss constraints from previous works to optimize our results. In the following text, except for theedge loss, the other losses are mostly referenced from prior papers and are not the core contributions of this paper. Thus, we have not included them in the main paper. The effectiveness of 17"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p2_sc4",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.6140633225440979,
+      "text": "• We proposed Scale-Shift GRU (SSG) to dynamically align depth scales while filtering noisy gradients to solve SSI versus SI distribution mismatch problems in self-supervised depth estimation. 2 Relative Work Self-supervised Depth EstimationDue to the high costs of GT-depth collection from LiDARs and other sensors, self-supervised depth estimation (SSDE) has gained significant research attention. SSDE can be broadly categorized into stereo-based(learning depth from synchronized image pairs)[50, 14, 12, 3, 2] and monocular-based methods (using sequential video frames)[31, 72, 70, 32, 37, 68, 20, 34, 19, 29]. Additionally, when focusing on inference capability, existing methods can further diverge 2"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6135649681091309,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6135649681091309,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p18_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 18,
+      "score": 0.6113393902778625,
+      "text": "Considering the bottom pixels of dynamic regions like the car tire, they impose a high weighting on |∂y ˆdt| with Mgr(i, j) =γ, thereby enforcing its depth consists with its neighboring ground pixels below. So the final loss is: LGDS =|∂ x ˆD|e−|∂xI| +|∂ y ˆD|Mgre−|∂yI|.(17) C. 2 Edge Loss for Sharp Prediction We further introduce an edge loss to enhance the prediction’s details. Since the surrogate and primary tasks are decoupled after the U-Net’s final layer, and the Scale-Shift Invariant (SSI) depth is shielded from photometric loss interference through SSG-based isolation, the SSI depth retains significantly richer structural details. To transfer these details to the final result, we introduce a simple edge loss. Specifically, we design a GradNet, GradNet(x) = (|conv2d(x, wx)|,|conv2d(x, wy)|), where wx = [[−1,0,1],[−2,0,2],[−1,0,1]] and wy = [[−1,−2,−1],[0,0,0],[1,2,1]] are the convolutional kernels for computing gradients in the x and y directions."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p16_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 16,
+      "score": 0.6111383438110352,
+      "text": "Data column (data source used for training): S is for self-supervised training on stereo images, MS is for models trained with both M (forward and backward frames) and S data andSSGM refers to the extra stereo ground truth which was used in [63]. Method Encoder Depthwise H×W Abs Rel RMSE log10 δ1 δ2 δ3 ϵacc ϵcomp Dense baseline DenseNet161 - 480×640 0. 1277 0. 5479 0. 0539 0. 8430 0. 9681 0. 9917 1. 7170 7. 0638 Ours DenseNet161 - 480×640 0. 1258 0. 5515 0. 0542 0. 8451 0. 9681 0. 9917 1. 8070 7. 1073 Ours DenseNet161 \u0013 480×640 0. 1275 0. 5771 0. 0557 0. 8364 0. 9635 0. 9897 2. 0133 7. 1903 Dense baseline MobileNetv2 - 480×640 0. 1772 0. 6638 0. 0731 0. 7419 0. 9341 0. 9835 1. 8911 7. 7960 Ours MobileNetv2 - 480×640 0. 1727 0. 6776 0. 0732 0. 7380 0. 9362 0. 9844 1. 9732 7. 9004 Ours MobileNetv2 \u0013 480×640 0. 1734 0. 6700 0. 0731 0. 7391 0. 9347 0. 9844 2. 3036 8. 0538 Table 11: Quantitative results on NYUv2 [58] using depth-wise convolutions and light-weight encoder We show that our method is compatible with other efﬁciency seeking approaches such as depth-wise separable convolutions and lower complexity encoders."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p20_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 20,
+      "score": 0.6109491586685181,
+      "text": "13 in paper: Ltc = (LB (norm(D tc), DSSI) +LB (Dtc, D1)·η t1 +LB (filter(D tc), DSI )·η t2)/η step, (22) is fully detailed in this part. The teacher loss not only stabilizes our model but also avoids limiting its performance potential. The segmentation modelmentioned above is Mask2Former[ 6] throughout. To avoid the miscon- ception that the details stem from the segmentation network’s output, we further expand Fig. 3 (in paper) with segment-based methods. In fact, to preserve these details, a naive approach is to employ semantic segmentation constraints[34]. However, as shown in Fig. 7 (a-2), using the semantic triplet loss from [34] not only disrupts the depth distribution but also introduces spurious edges, rendering it incompatible with SD’s latent priors. Furthermore, the results in paper Table 1 are compared with a segmentation-based model Jaeon et al*, and our method achieves superior performance. D Preliminaries of GRU The Gated Recurrent Unit (GRU) is a type of recurrent neural network (RNN) that uses gating mechanisms to control the flow of information between the previous hidden state and the current input, making it effective for sequence modeling tasks."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6108292937278748,
+      "text": "Segmentation query guided aggregation module The proposed Segmentation Query Guided Aggregation (SQGA) module is shown in the upper half of Fig. 3. Given the multi-scale fea- tures {𝐹𝑙}3 𝑙=1, we sequentially feed them into the masked transformer layers to interact with the queries 𝑄 ∈ ℝ(𝑀+𝑁)×𝐶 and continuously up- date 𝑄. In the work of Mask2Former [28], it has been demonstrated that using 𝐹𝑙 as key and value, and 𝑄 as query, and interacting through the masked attention mechanism is an eﬃcient method for information aggregation. However, when we apply this method to depth estimation, the results do not meet expectations. Therefore, we visualize the atten- tion activation areas corresponding to the bin queries 𝑄𝐵 ∈ ℝ𝑁×𝐶 . As shown in the upper half of Fig. 4, it can be observed that diﬀerent bin queries 𝑄𝐵 only aggregate features within their respective depth inter- vals and are almost irrelevant to diﬀerent semantic segment features, leading to a very ineﬃcient construction of depth relationships within each semantic segment."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p12_sc4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 12,
+      "score": 0.6105195879936218,
+      "text": "4, which predicts 224× 224 depth maps given a 224× 224 input image, we keep all four levels of wavelet decomposition. Supervised losses For our NYU results in the main paper, we supervise depth using an L1 loss and SSIM: LD(y,y∗) = λ1ℓ1(y,y∗) (9)"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.608973503112793,
+      "text": "This is because the segmentation scale deﬁnes indepen- dent modeling spaces for each semantic segment, allowing the model to predict the relative depth relationships only within the corresponding segment, without the need to additionally recover them between dif- ferent semantic segments. For instance, in columns 3 and 4 of Fig. 16, while the metric depth values of wheel/pedestrian-foot pixels and adja- cent road-surface pixels are similar, the presence of segmentation scale causes them to diﬀer in the predicted semantic-aware relative depth values. The number of bin queries: As indicated in Table 13, we investi- gate the impact of varying the number of bin queries on performance. The results demonstrate that optimal performance is achieved with 128 queries. We posit that a scarcity of queries makes it challenging to cover all depth intervals within a scene, while an excess of queries increases the complexity of the model’s learning process. Additionally, for seg- mentation queries, we follow the conclusion from Mask2Former [28] and set the number of segmentation queries to 20, aligning with the number of categories present in the Cityscapes dataset. 5."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7852652668952942,
+      "text": "Y. Zou et al. Fig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module (SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module (ARD) that we propose. Additionally, we propose the segmentation proposal scale alignment loss (𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance. 3. The proposed method In this section, we ﬁrst introduce the overall architecture of SSRDepth (Section 3. 1). Then, we present the key components of SSRDepth: the Segmentation Query Guided Aggregation module (Section 3. 2), the Segmentation Proposal Scale module (Section 3. 3), and the Adaptive Relative Depth module (Section 3. 4). 3. 1. Framework overview As shown in Fig. 2, given an input image 𝐼 ∈ ℝ3×𝐻×𝑊 , we ﬁrst extract image features through the Image Encoder and then decode them into multi-scale features {𝐹𝑙}3 𝑙=1 and per-pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 employing the Pixel Decoder, where 𝐶 is the number of channels, and 𝐻 × 𝑊 is the resolution.",
+      "estimated_tokens": 314
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.7126556038856506,
+      "text": "The expression for 𝑆𝑃 𝑆𝐴 is as follows: 𝑆𝑃 𝑆𝐴 = 1 𝑈 𝑉 𝑈∑ 𝑝𝑖 𝑉∑ 𝑗 |||𝛾𝐷 𝑆 (𝑝𝑖, 𝑗) − 𝜇(𝐷∗ 𝑆 (𝑝𝑖, 𝑗))|||, (14) where 𝐷𝑆 (𝑝𝑖, 𝑗) and 𝐷∗ 𝑆 (𝑝𝑖, 𝑗) represent the predicted and ground truth (GT) segmentation scale at pixel 𝑗 within the patch 𝑝𝑖, respectively. 𝜇(⋅) denotes the median of the depths, 𝑈 is the number of semantic seg- mentation patches, and 𝑉 represents the number of valid pixels in each patch. However, predicting the median of the metric depth for each se- mantic segment can cause the ﬁnal prediction to be generally smaller than the ground truth. To address this issue, we set a scaling factor 𝛾 to ensure the predicted segmentation scale values larger than the median depth of each semantic segment. In our experiments, 𝛾 is set to 0. 5. We also adopt the multi-scale supervision strategy from BinsFormer [10], applying the SPS and ARD modules at each feature scale to provide auxiliary supervision. Finally, the total loss is deﬁned as: 𝑡𝑜𝑡𝑎𝑙 = 3∑ 𝑙 ( 𝑤𝑙 𝐿∑ 𝑛 ( 𝛼𝑙,𝑛 𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛 𝐶𝐸 + 𝛿𝑙,𝑛 𝑆𝑃 𝑆𝐴 )) , (15) where 𝐿 represents the number of stacked masked transformer layers at each feature scale. 𝑤𝑙 is the scale weight, which is set to 1 23−𝑙 .",
+      "estimated_tokens": 515
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6162207126617432,
+      "text": "Conclusion In this paper, we propose SSRDepth, a monocular depth estimation framework leverages semantic segmentation to improve metric depth prediction. The framework decomposes the metric depth estimation task into two parts: segmentation scale prediction through the Segmenta- tion Proposal Scale (SPS) module and semantic-aware relative depth estimation through the Adaptive Relative Depth (ARD) module. Addi- tionally, the framework includes the Segmentation Query Guided Ag- gregation (SQGA) module, which is designed to recover the structural information of local semantic segments. Our method excels not only in Pattern Recognition 171 (2026) 112279 12",
+      "estimated_tokens": 129
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 958,
+    "compressed_context_tokens": 958,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 958,
+  "context_tokens": 958,
+  "prompt_token_estimate": 1332,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_ssrdepth_sps_module_mechanism",
+  "answer": "<think>The user is asking about how the SPS (Segmentation Proposal Scale) module in SSRDepth predicts segmentation scale and what constraints are used.\n\nLet me analyze the provided sources:\n\nFrom source [1]: Introduces SSRDepth's architecture including SPS module, SQGA module, and ARD module.\n\nFrom source [2]: Provides details about the SPS loss (ℒ_SPSA):\n- Equation (14): ℒ_SPSA = (1/UV) ∑_p_i ∑_j ||γ D_S(p_i,j) - μ(D*_S(p_i,j))||\n- D_S(p_i,j) is the predicted segmentation scale at pixel j within patch p_i\n- D*_S(p_i,j) is the ground truth segmentation scale at pixel j within patch p_i\n- μ(·) denotes the median of the depths\n- U is the number of semantic segmentation patches\n- V represents the number of valid pixels in each patch\n- They set a scaling factor γ = 0.5 to ensure predicted segmentation scale values are larger than the median depth of each semantic segment\n- Multi-scale supervision strategy is adopted\n\nFrom source [3]: Mentions that SSRDepth decomposes metric depth estimation into segmentation scale prediction through SPS module and semantic-aware relative depth estimation through ARD module.\n\nSo the answer should cover:\n1. How SPS predicts segmentation scale (it predicts the median of metric depth for each semantic segment, with a scaling factor γ=0.5)\n2. The constraints used: the SPS alignment loss (ℒ_SPSA) which is the L1 norm between γ times predicted scale and the median of ground truth scale, and multi-scale supervision</think>\n\n{\"answer\":\"SPS 模块通过预测每个语义分割块的度量深度中值（再乘以缩放因子 γ=0.5）来得到 segmentation scale，并使用 segmentation proposal scale alignment loss（ℒ_SPSA）在多个特征尺度上施加约束。\", \"items\":[{\"name\":\"Segmentation scale 的预测方式\",\"description\":\"SPS 为每个语义分割块预测其度量深度的中值作为 segmentation scale，并通过缩放因子 γ=0.5 保证预测值大于对应语义块的真实深度中值。\",\"citations\":[2]},{\"name\":\"对齐损失约束（ℒ_SPSA）\",\"description\":\"使用 L1 范数最小化 γ·预测 segmentation scale 与 GT segmentation scale 中值之间的差异，公式见 Eq.(14)。\",\"citations\":[2]},{\"name\":\"多尺度监督约束\",\"description\":\"借鉴 BinsFormer，在每个特征尺度上对 SPS 和 ARD 模块施加辅助监督，总损失为 Eq.(15)。\",\"citations\":[2]}],\"missing_information\":\"\"}",
+  "usage": {
+    "prompt_tokens": 1312,
+    "completion_tokens": 549,
+    "total_tokens": 1861,
+    "model": "MiniMax-M3"
+  }
+}

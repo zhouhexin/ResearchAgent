@@ -1,0 +1,574 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_global_local_path_con_ask_baseline_none_8290a2d9b340",
+  "dry_run": false,
+  "query": "Global-Local Path Networks 论文的主要贡献是什么？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Global-Local_p1_chunk_16",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7932625412940979,
+      "text": "because adjacent pixels tend to have\nsimilar values owing to their coplanar surfaces. Therefore,\nwe propose a new global-local path network to fully extract\nmeaningful features on diverse scales and effectively deliver\nthem throughout the network. First,"
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_19",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7631429433822632,
+      "text": "vated by this knowledge, we leverage the global rela-\ntionships explicitly by building the global path with multi-\nple transformer blocks. Second, we design a highly utilized\ndecoder with an effective fusion module to enable local fea-\ntures to produce a ﬁ"
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_5",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7360116243362427,
+      "text": "th map while considering lo-\ncal connectivity. By constructing connected paths\nbetween multi-scale local features and the global\ndecoding stream with our proposed selective fea-\nture fusion module, the network can integrate both\nrepresentations and recover"
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_0",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7227298021316528,
+      "text": "Global-Local Path Networks for Monocular Depth Estimation\nwith V ertical CutDepth\nDoyeon Kim1 , Woonghyun Ka2 , Pyunghwan Ahn1 , Donggyu Joo1 ,\nSewhan Chun2 and Junmo Kim1,2\nSchool of Electrical Engineering, KAIST, South Korea1\nDivision of Future Vehicle,"
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_4",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7199177742004395,
+      "text": "net-\nwork. We deploy a hierarchical transformer en-\ncoder to capture and convey the global context, and\ndesign a lightweight yet powerful decoder to gen-\nerate an estimated depth map while considering lo-\ncal connectivity. By constructing connected paths\nb"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p2_chunk_18",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 2,
+      "score": 0.7158968448638916,
+      "text": "rn some of the knowledge\nfrom a larger network e.g. [59, 44].\nIn contrast to these works, our contribution is to change\nthe internal representation of depth within the network it-\nself. We note that our contributions could be used in con-\njunction with the"
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_17",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7149674892425537,
+      "text": "s on diverse scales and effectively deliver\nthem throughout the network. First, we adopt a hierarchical\ntransformer as the encoder to model long-range dependen-\ncies and capture multi-scale context features. In prior stud-\nies, it is observed that the tran"
+    },
+    {
+      "id": "chunk::Global-Local_p2_chunk_8",
+      "source": "data\\Global-Local.pdf",
+      "page": 2,
+      "score": 0.6892849802970886,
+      "text": "ovel global-local path architecture for\nmonocular depth estimation.\n• We suggest an improved depth-speciﬁc data augmenta-\ntion method to boost the performance of the model.\n• Our network achieves state-of-the-art performance on\nthe most popular dataset NYU"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p4_chunk_6",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 4,
+      "score": 0.6859934329986572,
+      "text": "ale and reﬁne this es-\ntimate by predicting high-frequency coefﬁcient maps.\nIn our network architecture, the coarse depth estimate\nLL3 is estimated at 1/16 of the input scale. This depth map is\nthen progressively upscaled and reﬁned using Algorithm 1.\nA fo"
+    },
+    {
+      "id": "chunk::Global-Local_p7_chunk_3",
+      "source": "data\\Global-Local.pdf",
+      "page": 7,
+      "score": 0.6838151812553406,
+      "text": "ts demonstrate the ef-\nfectiveness and generalization ability of our network.\nReferences\n[Bhat et al., 2021] Shariq Farooq Bhat, Ibraheem Alhashim,\nand Peter Wonka. Adabins: Depth estimation using adap-\ntive bins. In Proceedings of the IEEE/CVF Conference"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_1",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.6821938157081604,
+      "text": "tional Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund from Guangdong Laboratory of Artiﬁcial Intel-\nligence and Digital Economy (SZ) (GML-KF-24-09).\nReferences\n[Arampatzakis et al., 2023 ] V asileios Arampatzakis, George\nPavlidis,"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_5",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6768938302993774,
+      "text": "ies, and the proposed decoder suc-\ncessfully recovers the extracted feature into the target depth\nmap by constructing the local path through skip connection\nand the feature fusion module. We detail the proposed archi-\ntecture in the following subsections."
+    },
+    {
+      "id": "chunk::Lite-Mono_p1_chunk_5",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.6767607927322388,
+      "text": "rac-\ntion (LGFI) module are proposed. The former is used to\nextract rich multi-scale local features, and the latter takes\nadvantage of the self-attention mechanism to encode long-\nrange global information into the features. Experiments\ndemonstrate that Lit"
+    },
+    {
+      "id": "chunk::Lite-Mono_p1_chunk_18",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.6754649877548218,
+      "text": "the convolution operation in CNNs has a local\nreceptive ﬁeld, which cannot capture long-range global in-\nformation. To achieve better results a CNN-based model\ncan use a deeper backbone or a more complicated archi-\ntecture [15, 28, 44], which also results"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_3",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.6752477288246155,
+      "text": "Transactions on Pattern Analysis and Machine Intelli-\ngence, 46:2396–2414, 2023.\n[Bhat et al., 2023 ] Shariq Farooq Bhat, Reiner Birkl, Diana\nWofk, Peter Wonka, and Matthias M ¨uller. Zoedepth:\nZero-shot transfer by combining relative and metric depth.\narX"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_4",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6729397773742676,
+      "text": "network to generate ˆY . The\noverall structure of our framework is depicted in Figure 1.\nOur transformer encoder [Xie et al., 2021] enables the model\nto learn global dependencies, and the proposed decoder suc-\ncessfully recovers the extracted feature into"
+    },
+    {
+      "id": "chunk::SSRDepth_p13_chunk_30",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.6713557243347168,
+      "text": "rence on Computer Vision, 2021, pp. 10012–10022. \n[18] S.F. Bhat, I. Alhashim, P. Wonka, LocalBins: improving depth estimation by learning \nlocal distributions, in: Computer Vision – ECCV 2022, Cham, 2022, pp. 480–496. \n[19] K. Xian, J. Zhang, O. Wang, L."
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6709898710250854,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.6688175201416016,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_2",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6679124236106873,
+      "text": "perfor-\nmance of this depth-speciﬁc data augmentation method by\nemphasizing the vertical location in the image.\n3 Methods\n3.1 Global-Local Path Networks\nOur depth estimation framework aims to predict the depth\nmap ˆY ∈ RH×W ×1 with a given RGB imageI∈ RH×"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6645439863204956,
+      "text": "carefully designed network architectures. \nHowever, they often ignore the semantic information of scene structures, leading to poor performance in the se-\nmantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a mon"
+    },
+    {
+      "id": "chunk::Lite-Mono_p1_chunk_4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.6644569635391235,
+      "text": "and Trans-\nformers is investigated, and a hybrid architecture called\nLite-Mono is presented. A Consecutive Dilated Convolu-\ntions (CDC) module and a Local-Global Features Interac-\ntion (LGFI) module are proposed. The former is used to\nextract rich multi-s"
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_21",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6638268828392029,
+      "text": "Segmentation Query Guided Ag-\ngregation (SQGA) module, which is designed to recover the structural \ninformation of local semantic segments. Our method excels not only in \nPattern Recognition 171 (2026) 112279 \n12"
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_15",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6629855632781982,
+      "text": "brid network in MonoViT[Zhao et al., 2022b] as our\nDepthNet because of its good performance. Besides, inspired\nby [Vankadari et al., 2023], we further consider the potential\nilluminating changes between images, and the Illuminating\nChange Net (ICN) is intr"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p5_chunk_13",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 5,
+      "score": 0.662270188331604,
+      "text": "53], i.e. an encoder-decoder network,\nwith skip connections, enabling us to represent both deep\nabstract features as well as local information. We use a\nResNet18 [17] as our encoder, which contains 11M pa-\nrameters, compared to the larger, and slower, Disp"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p5_chunk_13",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.662270188331604,
+      "text": "53], i.e. an encoder-decoder network,\nwith skip connections, enabling us to represent both deep\nabstract features as well as local information. We use a\nResNet18 [17] as our encoder, which contains 11M pa-\nrameters, compared to the larger, and slower, Disp"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_54",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6615148782730103,
+      "text": "tion Compensa-\ntion. arXiv preprint arXiv:2404.13854 (2024).\n[41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng-\nshuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla-\nbeled data. In Proceedings of the IEEE/"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p10_chunk_28",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 10,
+      "score": 0.6614859104156494,
+      "text": "Cai, Gang Yu, Kaix-\nuan Wang, Xiaozhi Chen, and Chunhua Shen. Metric3D:\nTowards zero-shot metric 3d prediction from a single image.\nIn ICCV, 2023. 2, 6\n[59] Weihao Yuan, Xiaodong Gu, Zuozhuo Dai, Siyu Zhu, and\nPing Tan. NeWCRFs: Neural window fully-connec"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p10_chunk_28",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 10,
+      "score": 0.6614859104156494,
+      "text": "Cai, Gang Yu, Kaix-\nuan Wang, Xiaozhi Chen, and Chunhua Shen. Metric3D:\nTowards zero-shot metric 3d prediction from a single image.\nIn ICCV, 2023. 2, 6\n[59] Weihao Yuan, Xiaodong Gu, Zuozhuo Dai, Siyu Zhu, and\nPing Tan. NeWCRFs: Neural window fully-connec"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p10_chunk_34",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.6612281799316406,
+      "text": "ermody-\nnamics. In International Conference on Machine Learning, pages 2256–\n2265. PMLR, 2015.\n[46] Max Jaderberg, Karen Simonyan, Andrew Zisserman, et al. Spatial\ntransformer networks. Advances in Neural Information Processing\nSystems, 28, 2015.\n[47] Nan"
+    },
+    {
+      "id": "chunk::Global-Local_p6_chunk_11",
+      "source": "data\\Global-Local.pdf",
+      "page": 6,
+      "score": 0.6610254049301147,
+      "text": "arameters. The powerful en-\ncoding ability of our encoder and the effectively designed de-\ncoder enables the network to produce a ﬁnely detailed depth\nmap. In addition, our proposed SFF leverages additional per-\nformance of our model.\nWe additionally provi"
+    },
+    {
+      "id": "chunk::SSRDepth_p4_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.6606862545013428,
+      "text": "egments, achieving an eﬃcient execution of the structure recovery strategy \nwithin each semantic segment.\nmap 𝑃𝑆 ∈ ℝ𝑀× 𝐻\n4 × 𝑊\n4 :\n𝑃𝑆 = 𝐸𝑆 × 𝐹 ⊤\n𝑝 . (4)\nNext, we apply convolution and concatenation to expand the number of \nchannels to 𝑀 + 𝑁, and ﬁnally bin"
+    },
+    {
+      "id": "chunk::Global-Local_p2_chunk_7",
+      "source": "data\\Global-Local.pdf",
+      "page": 2,
+      "score": 0.6603716611862183,
+      "text": "work can generalize well under cross-dataset validation and\nshows robust performance against image corruption.\nTo summarize, our contributions are as follows:\n• We propose a novel global-local path architecture for\nmonocular depth estimation.\n• We suggest"
+    },
+    {
+      "id": "chunk::s_p9_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.660259485244751,
+      "text": "ang Xu, Anush Krishnan, Yu Pan,\nGiancarlo Baldan, and Oscar Beijbom. nuscenes: A mul-\ntimodal dataset for autonomous driving. arXiv preprint\narXiv:1903.11027, 2019. 2, 3, 6, 7\n[6] Ziyue Feng, Liang Yang, Longlong Jing, Haiyan Wang,\nYingLi Tian, and Bing Li"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p10_chunk_4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.6588676571846008,
+      "text": "3d for the motif-scaffolding problem.\narXiv preprint arXiv:2206.04119 , 2022.\n[21] Shoufa Chen, Peize Sun, Yibing Song, and Ping Luo. Diffusiondet:\nDiffusion model for object detection. arXiv preprint arXiv:2211.09788,\n2022.\n[22] Ting Chen, Lala Li, Saura"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p10_chunk_6",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 10,
+      "score": 0.658765435218811,
+      "text": "sed\ndual-branch network for image demoireing. InECCV, 2020.\n[44] Yifan Liu, Changyong Shun, Jingdong Wang, and Chunhua\nShen. Structured knowledge distillation for dense prediction.\nPAMI, 2020.\n[45] Zhuang Liu, Jianguo Li, Zhiqiang Shen, Gao Huang,\nShoumeng"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p9_chunk_29",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 9,
+      "score": 0.6584911942481995,
+      "text": "lly convolutional residual networks. In Proceedings\nof the International Conference on 3D Vision (3DV) , pages\n239–248. IEEE, 2016. 2\n[21] Jin Han Lee, Myung-Kyu Han, Dong Wook Ko, and\nIl Hong Suh. From big to small: Multi-scale local planar\nguidance for m"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_3",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6581264138221741,
+      "text": "ramework aims to predict the depth\nmap ˆY ∈ RH×W ×1 with a given RGB imageI∈ RH×W ×3.\nThus, we suggest a new architecture with global and local\nfeature paths through the entire network to generate ˆY . The\noverall structure of our framework is depicted in"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_8",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6578380465507507,
+      "text": "th relationships \nwithin the same semantic segments. We provide a detailed description \nof this phenomenon in Section 4.6.\nFinally, we obtain the true metric depth map 𝐷𝑚 ∈ ℝ1× 𝐻\n4 × 𝑊\n4  by per-\nforming pixel-wise multiplication between 𝐷𝑆 and 𝑅:\n𝐷𝑚 = 𝐷𝑆"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.657149076461792,
+      "text": "d, there are \nregular structural relationships within the same semantic segment. For \nexample, as shown in Fig. 1(b), the depth of the sky is eﬀectively inﬁnite \nand tends towards a uniform depth value. Meanwhile, the depth span \nof the road surface is rel"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.6565980315208435,
+      "text": "g, and Hengshuang Zhao. Depth anything:\nUnleashing the power of large-scale unlabeled data. InProceedings of the IEEE/CVF Conference on\nComputer Vision and Pattern Recognition, pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao"
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_18",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.6554938554763794,
+      "text": "e multi-scale context features. In prior stud-\nies, it is observed that the transformer enables the network\nto enlarge the size of the receptive ﬁeld [Xie et al. , 2021 ].\nMotivated by this knowledge, we leverage the global rela-\ntionships explicitly by bu"
+    },
+    {
+      "id": "chunk::Depth_Anything_p11_chunk_20",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.655343770980835,
+      "text": "fiers with localizable\nfeatures. In ICCV, 2019. 4\n[84] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding\nconditional control to text-to-image diffusion models. In\nICCV, 2023. 8\n[85] Youcai Zhang, Xinyu Huang, Jinyu Ma, Zhaoyang Li,\nZhaochuan Luo, Yanchun"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p10_chunk_7",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 10,
+      "score": 0.6549117565155029,
+      "text": "ion.\nPAMI, 2020.\n[45] Zhuang Liu, Jianguo Li, Zhiqiang Shen, Gao Huang,\nShoumeng Yan, and Changshui Zhang. Learning efﬁcient\nconvolutional networks through network slimming. InICCV,\n2017.\n[46] Chenchi Luo, Yingmao Li, Kaimo Lin, George Chen,\nSeok-Jun Lee,"
+    },
+    {
+      "id": "chunk::Lite-Mono_p9_chunk_6",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 9,
+      "score": 0.6548231840133667,
+      "text": "an-\ntic image segmentation. arXiv preprint arXiv:1706.05587 ,\n2017. 4\n[7] Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li,\nand Li Fei-Fei. Imagenet: A large-scale hierarchical image\ndatabase. In CVPR, 2009. 6, 7\n[8] Alexey Dosovitskiy, Lucas Beyer, A"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p9_chunk_26",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 9,
+      "score": 0.6543257236480713,
+      "text": "en, and Kilian Weinberger. Convolutional networks\nwith dense connectivity.IEEE Transactions on Pattern Anal-\nysis and Machine Intelligence, 2019.\n[32] Gao Huang, Zhuang Liu, Laurens van der Maaten, and Kil-\nian Q Weinberger. Densely connected convolutional"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p16_chunk_10",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 16,
+      "score": 0.6535005569458008,
+      "text": "MobileNetv2 \u0013 480×640 0.1734 0.6700 0.0731 0.7391 0.9347 0.9844 2.3036 8.0538\nTable 11: Quantitative results on NYUv2 [58] using depth-wise convolutions and light-weight encoder We show that our method is\ncompatible with other efﬁciency seeking approaches"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_22",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6532101631164551,
+      "text": "where LinearG denotes a point-wise convolution opera-\ntion, followed by theGELU [18] activation.BN is a batch\nnormalization layer, andDDWConv r(·) is a 3× 3 depth-\nwise dilated convolution with dilation rater.\nLocal-Global Features Interaction (LGFI). Give"
+    },
+    {
+      "id": "chunk::dav2_p15_chunk_16",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.6529015898704529,
+      "text": "n Luo, Shiwei Li, Jingyang Zhang, Yufan Ren, Lei Zhou, Tian Fang, and Long\nQuan. Blendedmvs: A large-scale dataset for generalized multi-view stereo networks. In\nCVPR, 2020. 18\n[93] Chongjie Ye, Yinyu Nie, Jiahao Chang, Yuantao Chen, Yihao Zhi, and Xiaogua"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p15_chunk_4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 15,
+      "score": 0.6518629789352417,
+      "text": "spects of complexity reduction.\n9.1. Experiment with a light-weight MobileNetv2\nencoder\nFirst, we replace the costly ResNet [23] or DenseNet [32,\n31] backbone encoders with the efﬁcient MobileNetv2 [56].\nIndeed, in contrast with FastDepth, in the main pape"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Global-Local_p1_chunk_16",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7932625412940979,
+      "text": "because adjacent pixels tend to have\nsimilar values owing to their coplanar surfaces. Therefore,\nwe propose a new global-local path network to fully extract\nmeaningful features on diverse scales and effectively deliver\nthem throughout the network. First,",
+      "estimated_tokens": 48
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_19",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7631429433822632,
+      "text": "vated by this knowledge, we leverage the global rela-\ntionships explicitly by building the global path with multi-\nple transformer blocks. Second, we design a highly utilized\ndecoder with an effective fusion module to enable local fea-\ntures to produce a ﬁ",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_5",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7360116243362427,
+      "text": "th map while considering lo-\ncal connectivity. By constructing connected paths\nbetween multi-scale local features and the global\ndecoding stream with our proposed selective fea-\nture fusion module, the network can integrate both\nrepresentations and recover",
+      "estimated_tokens": 47
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_0",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7227298021316528,
+      "text": "Global-Local Path Networks for Monocular Depth Estimation\nwith V ertical CutDepth\nDoyeon Kim1 , Woonghyun Ka2 , Pyunghwan Ahn1 , Donggyu Joo1 ,\nSewhan Chun2 and Junmo Kim1,2\nSchool of Electrical Engineering, KAIST, South Korea1\nDivision of Future Vehicle,",
+      "estimated_tokens": 78
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_4",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7199177742004395,
+      "text": "net-\nwork. We deploy a hierarchical transformer en-\ncoder to capture and convey the global context, and\ndesign a lightweight yet powerful decoder to gen-\nerate an estimated depth map while considering lo-\ncal connectivity. By constructing connected paths\nb",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p2_chunk_18",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 2,
+      "score": 0.7158968448638916,
+      "text": "rn some of the knowledge\nfrom a larger network e.g. [59, 44].\nIn contrast to these works, our contribution is to change\nthe internal representation of depth within the network it-\nself. We note that our contributions could be used in con-\njunction with the",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::Global-Local_p1_chunk_17",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7149674892425537,
+      "text": "s on diverse scales and effectively deliver\nthem throughout the network. First, we adopt a hierarchical\ntransformer as the encoder to model long-range dependen-\ncies and capture multi-scale context features. In prior stud-\nies, it is observed that the tran",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::Global-Local_p2_chunk_8",
+      "source": "data\\Global-Local.pdf",
+      "page": 2,
+      "score": 0.6892849802970886,
+      "text": "ovel global-local path architecture for\nmonocular depth estimation.\n• We suggest an improved depth-speciﬁc data augmenta-\ntion method to boost the performance of the model.\n• Our network achieves state-of-the-art performance on\nthe most popular dataset NYU",
+      "estimated_tokens": 54
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p4_chunk_6",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 4,
+      "score": 0.6859934329986572,
+      "text": "ale and reﬁne this es-\ntimate by predicting high-frequency coefﬁcient maps.\nIn our network architecture, the coarse depth estimate\nLL3 is estimated at 1/16 of the input scale. This depth map is\nthen progressively upscaled and reﬁned using Algorithm 1.\nA fo",
+      "estimated_tokens": 66
+    },
+    {
+      "id": "chunk::Global-Local_p7_chunk_3",
+      "source": "data\\Global-Local.pdf",
+      "page": 7,
+      "score": 0.6838151812553406,
+      "text": "ts demonstrate the ef-\nfectiveness and generalization ability of our network.\nReferences\n[Bhat et al., 2021] Shariq Farooq Bhat, Ibraheem Alhashim,\nand Peter Wonka. Adabins: Depth estimation using adap-\ntive bins. In Proceedings of the IEEE/CVF Conference",
+      "estimated_tokens": 69
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_1",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.6821938157081604,
+      "text": "tional Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund from Guangdong Laboratory of Artiﬁcial Intel-\nligence and Digital Economy (SZ) (GML-KF-24-09).\nReferences\n[Arampatzakis et al., 2023 ] V asileios Arampatzakis, George\nPavlidis,",
+      "estimated_tokens": 81
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_5",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6768938302993774,
+      "text": "ies, and the proposed decoder suc-\ncessfully recovers the extracted feature into the target depth\nmap by constructing the local path through skip connection\nand the feature fusion module. We detail the proposed archi-\ntecture in the following subsections.",
+      "estimated_tokens": 51
+    },
+    {
+      "id": "chunk::Lite-Mono_p1_chunk_5",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.6767607927322388,
+      "text": "rac-\ntion (LGFI) module are proposed. The former is used to\nextract rich multi-scale local features, and the latter takes\nadvantage of the self-attention mechanism to encode long-\nrange global information into the features. Experiments\ndemonstrate that Lit",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::Lite-Mono_p1_chunk_18",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.6754649877548218,
+      "text": "the convolution operation in CNNs has a local\nreceptive ﬁeld, which cannot capture long-range global in-\nformation. To achieve better results a CNN-based model\ncan use a deeper backbone or a more complicated archi-\ntecture [15, 28, 44], which also results",
+      "estimated_tokens": 61
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_3",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.6752477288246155,
+      "text": "Transactions on Pattern Analysis and Machine Intelli-\ngence, 46:2396–2414, 2023.\n[Bhat et al., 2023 ] Shariq Farooq Bhat, Reiner Birkl, Diana\nWofk, Peter Wonka, and Matthias M ¨uller. Zoedepth:\nZero-shot transfer by combining relative and metric depth.\narX",
+      "estimated_tokens": 81
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_4",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6729397773742676,
+      "text": "network to generate ˆY . The\noverall structure of our framework is depicted in Figure 1.\nOur transformer encoder [Xie et al., 2021] enables the model\nto learn global dependencies, and the proposed decoder suc-\ncessfully recovers the extracted feature into",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::SSRDepth_p13_chunk_30",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.6713557243347168,
+      "text": "rence on Computer Vision, 2021, pp. 10012–10022. \n[18] S.F. Bhat, I. Alhashim, P. Wonka, LocalBins: improving depth estimation by learning \nlocal distributions, in: Computer Vision – ECCV 2022, Cham, 2022, pp. 480–496. \n[19] K. Xian, J. Zhang, O. Wang, L.",
+      "estimated_tokens": 94
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6709898710250854,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.6688175201416016,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K",
+      "estimated_tokens": 66
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_2",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6679124236106873,
+      "text": "perfor-\nmance of this depth-speciﬁc data augmentation method by\nemphasizing the vertical location in the image.\n3 Methods\n3.1 Global-Local Path Networks\nOur depth estimation framework aims to predict the depth\nmap ˆY ∈ RH×W ×1 with a given RGB imageI∈ RH×",
+      "estimated_tokens": 71
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6645439863204956,
+      "text": "carefully designed network architectures. \nHowever, they often ignore the semantic information of scene structures, leading to poor performance in the se-\nmantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a mon",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::Lite-Mono_p1_chunk_4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.6644569635391235,
+      "text": "and Trans-\nformers is investigated, and a hybrid architecture called\nLite-Mono is presented. A Consecutive Dilated Convolu-\ntions (CDC) module and a Local-Global Features Interac-\ntion (LGFI) module are proposed. The former is used to\nextract rich multi-s",
+      "estimated_tokens": 63
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_21",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6638268828392029,
+      "text": "Segmentation Query Guided Ag-\ngregation (SQGA) module, which is designed to recover the structural \ninformation of local semantic segments. Our method excels not only in \nPattern Recognition 171 (2026) 112279 \n12",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_15",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6629855632781982,
+      "text": "brid network in MonoViT[Zhao et al., 2022b] as our\nDepthNet because of its good performance. Besides, inspired\nby [Vankadari et al., 2023], we further consider the potential\nilluminating changes between images, and the Illuminating\nChange Net (ICN) is intr",
+      "estimated_tokens": 71
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1484,
+    "compressed_context_tokens": 1484,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1484,
+  "context_tokens": 1484,
+  "prompt_token_estimate": 2132,
+  "run_label": "sage_semantic_all_v1_chunk_global_local_path_contributions",
+  "answer": "<think>The user is asking about the main contributions of the \"Global-Local Path Networks\" paper. Let me look through the provided sources to find relevant information.\n\nFrom the sources, I can identify several contributions mentioned:\n\n[8] mentions three contributions:\n1. A novel global-local path architecture for monocular depth estimation\n2. An improved depth-specific data augmentation method to boost performance\n3. State-of-the-art performance on the most popular dataset NYU\n\n[7] mentions using a hierarchical transformer as encoder to model long-range dependencies and capture multi-scale context features\n\n[2] mentions leveraging global relationships by building global path with multiple transformer blocks, and designing a highly utilized decoder with effective fusion module\n\n[3] mentions constructing connected paths between multi-scale local features and global decoding stream with selective feature fusion module\n\n[5] mentions deploying a hierarchical transformer encoder to capture global context, and designing a lightweight yet powerful decoder\n\n[20] mentions the vertical cut depth augmentation method emphasizing vertical location\n\nLet me compile the main contributions:\n\n1. Novel global-local path architecture for monocular depth estimation\n2. Hierarchical transformer encoder to capture global context/long-range dependencies\n3. Lightweight decoder with selective feature fusion module to integrate local and global features\n4. Depth-specific data augmentation method (Vertical CutDepth) emphasizing vertical location\n5. State-of-the-art performance on NYU dataset\n\nLet me format this as JSON.</think>\n\n{\n  \"answer\": \"Global-Local Path Networks 论文提出了用于单目深度估计的全局-局部路径架构，结合分层 Transformer 编码器、轻量化解码器与选择性特征融合模块，并提出了垂直切割数据增强方法，在 NYU 数据集上取得了最先进性能。\",\n  \"items\": [\n    {\n      \"name\": \"全局-局部路径网络架构\",\n      \"description\": \"提出一种新颖的全局-局部路径架构用于单目深度估计，通过分层 Transformer 编码器建模长程依赖并捕获多尺度上下文特征。\",\n      \"citations\": [7, 8]\n    },\n    {\n      \"name\": \"分层 Transformer 全局编码器\",\n      \"description\": \"采用分层 Transformer 作为编码器，显式利用全局关系，捕获多尺度上下文特征。\",\n      \"citations\": [2, 7]\n    },\n    {\n      \"name\": \"高效解码器与选择性特征融合模块\",\n      \"description\": \"设计了一个利用率高且有效的解码器，通过跳跃连接构建局部路径，并使用选择性特征融合模块连接多尺度局部特征与全局解码流。\",\n      \"citations\": [3, 12]\n    },\n    {\n      \"name\": \"深度特定的垂直切割数据增强方法\",\n      \"description\": \"提出改进的深度特定数据增强方法（Vertical CutDepth），通过强调图像中的垂直位置来提升模型性能。\",\n      \"citations\": [8, 20]\n    },\n    {\n      \"name\": \"在 NYU 数据集上达到最先进性能\",\n      \"description\": \"在 NYU 等主流数据集上实现了最先进（SOTA）的性能，验证了网络的有效性与泛化能力。\",\n      \"citations\": [8, 10]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 2157,
+    "completion_tokens": 651,
+    "total_tokens": 2808,
+    "model": "MiniMax-M3"
+  }
+}

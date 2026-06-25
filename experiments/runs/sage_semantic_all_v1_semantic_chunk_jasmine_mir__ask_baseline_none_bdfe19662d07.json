@@ -1,0 +1,414 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_jasmine_mir__ask_baseline_none_bdfe19662d07",
+  "dry_run": false,
+  "query": "Jasmine中Mix-batch Image Reconstruction (MIR)的作用是什么？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7854078412055969,
+      "text": "969 (c) Mix-batch Image Reconstruction (7) w/o MIR 0. 132 0. 673 4. 271 0. 852 0. 967 (8) Direct 0. 129 0. 679 4. 385 0. 858 0. 962 (9) Only Hy 0. 106 0. 614 4. 181 0. 901 0. 970 (10) Latent space 0. 095 0. 606 4. 138 0. 909 0. 970 (d) Auxiliary Image Analysis (12) KITTI 0. 095 0. 616 4. 040 0. 912 0. 972 (13) KITTI+ETH3D0. 090 0. 586 3. 937 0. 916 0. 972 (14) KITTI+vK 0. 094 0. 606 4. 068 0. 911 0. 972 (15) KITTI+Hy/4 0. 091 0. 596 3. 943 0. 917 0. 972 (16) KITTI+Hy/1. 60. 090 0. 591 3. 971 0. 918 0. 972 In sub-table(b), we further melted down our proposed SSG. ID (6) reveals that the naive GRU can initially solve the distribu- tion misalignment by estimating the Dδ (Eq. 4). However, the scale difference be- tween SSI and SI depth makes it difficult to restore through linear addition. Therefore, after introducing SST, the overall model performance is further enhanced by 10%, ultimately achieving SoTA performance. A comprehensive analysis of MIR was con- ducted in sub-table(c)and we can draw similar conclusions to Sec. 3. 2. Jasmine significantly outperforms the alternatives, such as KITTI/synthetic-only reconstruc- tion (IDs (8,9) and Fig."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.7378408312797546,
+      "text": "Despite these inherent disadvantages, as shown in Table 4, our method still outperforms the state- of-the-art approaches in both multi-frame and stereo-supervision domains across most metrics. This remarkable achievement, especially considering our more challenging problem setting, further demonstrates the substantial strength and generalizability of our approach. E. 3 Qualitative Comparisons Table 6:Ablation Studieson the mix-batch ratio. Ph refers to supervision using Eq. 5, while Latent refers to supervision using Eq. 4 . The notation +λ denotes the proportion of the KITTI dataset used (e.g., +0. 3 indicates a KITTI:Hypersim ratio of 3:7 in the MIR training data.) (ID) Method AbsRel SqRel RMSE a1 a2 Ph+0 0. 089 0. 5733. 973 0. 918 0. 972 Ph+0. 3 0. 090 0. 581 3. 944 0. 9190. 972 Ph+0. 6 0. 092 0. 5933. 933 0. 9150. 973 Ph+1 0. 093 0. 590 3. 970 0. 9150. 973 Latent+0 0. 106 0. 614 4. 181 0. 901 0. 970 Latent+0. 3 0. 095 0. 6064. 138 0. 909 0. 970 Latent+0. 6 0. 121 0. 649 4. 322 0. 8760. 970 Latent+1 0. 129 0. 679 4. 385 0. 858 0. 962 In Fig. 8, we further compare the perfor- mance of our Jasmine with other methods in multi scenes."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p17_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.7293355464935303,
+      "text": "Algorithm 1Jasmine Training Algorithm 1:Initialize:SD U-Net, PoseNet, SSG, V AE, optimizer 2:V AE.eval()▷V AE weights are frozen 3:foreach batch of inputs ‘I’ in dataloaderdo 4:▷Mix-batch Image Reconstruction (MIR) 5:s depth ←[1,0],s recon ←[0,1]▷Task switchers 6:z I t , zI m, zn ←V AE.encode(I[’I_t’],I[’I_m’],noise) 7:D ssi ←V AE.decode(SD_UNet([zI t , zn], t= 999, s=sdepth)) 8:I rec ←V AE.decode(SD_UNet([zI m, zn], t= 999, s=srecon)) 9:▷Scale-Shift GRU (SSG) 10:D list ←SSG(D ssi, zI t )▷ D list contains[D ssi, D1, Dsi] 11:pose←PoseNet(I[’I_t’],I[’I_t”])▷Pose Estimation for Self-Supervision 12:loss←compute_loss(I, D list, pose, Irec)▷Loss Computation and Optimization 13:optimizer.zero_grad() 14:loss.backward() 15:optimizer.step() 16:end for 17:functionCOMPUTE_LOSS(inputs,D list, pose,I rec) 18:D si, Dssi ←D list[−1], Dlist[0] 19:reproj_img←reproject(inputs[’I_t”], D si, pose) 20:L ph ←photometric_loss(reproj_img,inputs[’I_t’])▷Core self-supervised signal 21:L s ←photometric_loss(I rec,inputs[’I_m’])▷Surrogate task signal 22:L tc ←teacher_loss(D list,inputs[’D_tc’])▷As per Eq. 11 23:L a ←compute_auxiliary_loss(inputs, Dsi, Dssi) 24:loss←L ph +L s +L tc +L a ·0."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p15_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.7215663194656372,
+      "text": "Appendix In this appendix, we provide more implementation details, experiments, analysis, and discussions for a comprehensive evaluation and understanding of Jasmine. Detailed contents are listed as follows: Contents A Proof of Scale-Invariant Depth 15 B Detailed Training Workflow and Pseudocode 16 B. 1 Step-by-Step Workflow . 16 B. 2 Training Pseudocode . 17 C Supervision Details 17 C. 1 SGD Loss for Dynamic Object . 18 C. 2 Edge Loss for Sharp Prediction . 18 C. 3 Sky Loss for Anti-artifact . 18 C. 4 Eliminating the Bottleneck of Teacher Loss . 19 D Preliminaries of GRU 20 E Addition Experiments Results 21 E. 1 Evaluation on KITTI Improved Benchmark . 21 E. 2 Comparison with Other Self-Supervised Settings . 21 E. 3 Qualitative Comparisons . 21 E. 4 Mix-batch Ratio Ablation Details . 21 F Analysis of SD Prior Degradation via Self-Supervision 22 G Evaluation Metrics 22 H Error Bar Analysis 22 I Limitation and Future Work 23 A Proof of Scale-Invariant Depth For SSI depth, we assume that the estimated depth ˆD and the ground truth depth D have the following relationship: ˆD=s cD+s h Meanwhile, the depth from another viewpoint can be denoted as g1(D′)."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p1_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.7201958298683167,
+      "text": "Jasmine: Harnessing Diffusion Prior for Self-Supervised Depth Estimation Jiyuan Wang1 Chunyu Lin1† Cheng Guan1 Lang Nie4 Jing He3 Haodong Li3 Kang Liao2 Yao Zhao1 1BJTU 2NTU 3HKUST 4CQUPT †Corresponding Author Figure 1:Without any high-precision depth supervision, Jasmine achieves remarkably detailed and accurate depth estimation results through zero-shot generalization across diverse scenarios. Abstract In this paper, we proposeJasmine, the first Stable Diffusion (SD)-based self- supervised framework for monocular depth estimation, which effectively harnesses SD’s visual priors to enhance the sharpness and generalization of unsupervised prediction. Previous SD-based methods are all supervised since adapting diffusion models for dense prediction requires high-precision supervision. In contrast, self- supervised reprojection suffers from inherent challenges (e.g., occlusions, texture- less regions, illumination variance), and the predictions exhibit blurs and artifacts that severely compromise SD’s latent priors. To resolve this, we construct a novel surrogate task of mix-batch image reconstruction."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p4_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.7187094688415527,
+      "text": "2)Introducing high-quality synthesized images (maintaining self-supervision compliance) offers a potential solution, but exclusive training on these data causes the model to only excel at reconstructing synthetic images but fails to generalize this capability to reduce depth estimation blurriness(Fig. 3 (d)). 3)Mixing these images within a training batch allows synthesized images to anchor the model to latent priors, while real-world data enforces geometric structure alignment, is a possible solution. But this strategy shows notable sensitivity to mix rateλ(Fig. 3 (g), (e) is a failure scene). To address the mismatch between V AE and image, we proposed to replace Eq. 4 with the photometric loss Lph (Eq. 2) in the image domain. Compared to Eq. 4, Lph emphasizes structural consistency rather than color fidelity, which aligns better with depth estimation objectives. As shown in Fig. 3(f, g), this supervision not only makes MIR robust to λ but also significantly improves the estimation quality. Therefore, we take the Hypersim dataset(4. 2. 1), a photorealistic synthetic dataset specifically designed for geometric learning, as the auxiliary image and update Eq."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7165834903717041,
+      "text": "5 Inference Latency As shown in the table below (MACs and Runtime are measured on a image with 1024×320 resolution on RTX 4090.), while Jasmine is more computationally expensive than prior self-supervised methods, it follows the trend of models like Marigold in trading cost for superior performance. Notably, our SSG module adds negligible latency, with Jasmine’s runtime being comparable to Lotus. Method Marigold Lotus E2E-Mono Monodepth2 MonoViT MonoViFi Jasmine MACs 133T 2. 65T 2. 65T 21. 43G 25. 63G 28. 79G 2. 83T Runtime 9. 88s 157ms 152ms 33ms 29ms 25ms 172ms 5 Conclusion We propose Jasmine, the first SD-based self-supervised framework for monocular depth estimation, effectively leveraging SD’s priors to enhance sharpness and generalization without high-precision supervision. To achieve this objective, we introduce two novel modules: Mix-batch Image Recon- struction (MIR) for mitigating reprojection artifacts and preserving Stable Diffusion’s latent priors, alongside Scale-Shift GRU (SSG) to align scale-invariant depth predictions while suppressing noisy gradients."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p5_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.7138215899467468,
+      "text": "(e) Latent (d) Hypersim(c) Direct (c)Segment (b) Origin (h)E2E-FT (f) Ours .p .q . p(Occlude) . q(Correct) (a) Principle .p’(Wrong) AbsRel A1 0. 0 0. 3 0. 6 1. 0 0. 0 0. 3 0. 6 1. 0 0. 86 0. 92 0. 09 1. 0 0. 0 0. 3 0. 6 1. 0 0. 86 0. 92 0. 09 0. 13 (g) Results 𝝀𝝀 Target View Source View Shift 10 pixels Shift 510 pixels .r . r(Correct)Shift 5 pixels Tree depth=10m 10m 20m Figure 3:The attempts to preserve the SD prior. The meanings of (a)-(f) are detailed in Sec. 3. 2. Notably, while (e) demonstrates superior visual quality, it erroneously interprets surface textures (e.g., house windows) as depth edges. (g) shows the performance variations under different λ settings for photometric supervision (Eq. 5) and latent supervision (Eq. 4). The complete metrics and their definitions are provided in Sec. E. 4. whereϕdenotes random choice;I K andI H are KITTI and Hypersim images, respectively. In summary, MIR constructs each training batch by randomly selecting images from these two datasets, and supervises the reconstructed image with the photometric loss in Eq. 5. Analysis of Auxiliary ImagesThe specific synthetic data usage may raise concerns about appli- cability boundaries."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.7090311050415039,
+      "text": "[64] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. arXiv:2303. 02153, 2023. 3 [65] Chong Zhou, Chen Change Loy, and Bo Dai. Extract free dense labels from CLIP. In ECCV, pages 696–712, 2022. 3 Appendix In this supplementary material, we provide additional im- plementation details in Appendix A and present additional quantitative and qualitative results in Appendix B and Ap- pendix C, respectively. A. Implementation Details A. 1. Mixed Dataset Training We train on two synthetic datasets, Hypersim [37] and Vir- tual KITTI [7], whose images have different resolutions and aspect ratios. For each batch, we probabilistically choose the dataset and then draw samples from it. We ablate the Bernoulli parameter of dataset sampling in Appendix B. 4. A. 2. Annealed Multi-Resolution Noise In the standard multi-resolution noise, multiple Gaussian noise images are sampled to form a pyramid of resolutions and then subsequently combined by upsampling, weighted averaging, and renormalization."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.7090311050415039,
+      "text": "[64] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. arXiv:2303. 02153, 2023. 3 [65] Chong Zhou, Chen Change Loy, and Bo Dai. Extract free dense labels from CLIP. In ECCV, pages 696–712, 2022. 3 Appendix In this supplementary material, we provide additional im- plementation details in Appendix A and present additional quantitative and qualitative results in Appendix B and Ap- pendix C, respectively. A. Implementation Details A. 1. Mixed Dataset Training We train on two synthetic datasets, Hypersim [37] and Vir- tual KITTI [7], whose images have different resolutions and aspect ratios. For each batch, we probabilistically choose the dataset and then draw samples from it. We ablate the Bernoulli parameter of dataset sampling in Appendix B. 4. A. 2. Annealed Multi-Resolution Noise In the standard multi-resolution noise, multiple Gaussian noise images are sampled to form a pyramid of resolutions and then subsequently combined by upsampling, weighted averaging, and renormalization."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.7082371115684509,
+      "text": "[5] Yuanhao Cai, Hao Bian, Jing Lin, Haoqian Wang, Radu Timofte, and Yulun Zhang. 2023. Retinexformer: One-stage retinex-based transformer for low-light image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision. 12504–12513. [6] Wei-Ting Chen, Yu-Jiet Vong, Sy-Yen Kuo, Sizhou Ma, and Jian Wang. 2024. RobustSAM: Segment Anything Robustly on Degraded Images. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition . 4081–4091. [7] Ri Cheng, Yuqi Sun, Bo Yan, Weimin Tan, and Chenxi Ma. 2022. Geometry-aware reference synthesis for multi-view image super-resolution. In Proceedings of the 30th ACM International Conference on Multimedia . 6083–6093. [8] Yuekun Dai, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. 2022. Flare7k: A phenomenological nighttime flare removal dataset. Advances in Neural Information Processing Systems 35 (2022), 3926–3937. [9] Alexey Dosovitskiy. 2020. An image is worth 16x16 words: Transformers for image recognition at scale. arXiv preprint arXiv:2010. 11929 (2020). [10] Xiaodan Du, Nicholas Kolkin, Greg Shakhnarovich, and Anand Bhattad. 2023. Generative models: What do they know?"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p7_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.7081010937690735,
+      "text": "MIR Analysis Datasets ETH3D[41]: We resize this high-resolution (6048 ×4032) dataset to 4K resolution, then randomly cropped to 1024×320 per iteration (898 total samples). Virtual KITTI[4] is a synthetic street scene dataset. We processed this dataset identically to real KITTI data. 4. 2. 2 Performance Comparison For all the evaluations, only Jasmine*, Marigold, E2E FT, and Lotus adopt the least squares alignment. The other self-supervised methods use median alignment. The definitions and differences of these alignments are detailed discussed in Sec. 4. 3. The meaning of each metric is detailed in Sec. G. KITTI resultTo fully demonstrate the advantages of our approach, we compare Jasmine against the most efficient SSMDE models and SoTA SD-based methods. As shown in Table 1,Jasmine achieves the best performanceacross all metrics on the KITTI benchmark. Notably, our method makes significant progress on the a1 metric, reflecting an overall improvement in depth estimation accuracy. This systematic advancement stems from the rich prior knowledge of SD. As shown in Fig."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p2_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.7062914371490479,
+      "text": "In contrast, directly applying self-supervision introduces a critical challenge: reprojection losses or pre-trained depth pseudo-labels propagate perturbed gradients caused by artifacts and blurs into SD’s latent space, rapidly corrupting its priors during early training stages. Namely, high-precision “supervision\" must exist at the beginning to protect SD’s latent space. Such supervision seems impossible in self-supervised learning, but we find a handy and valuable alternative: the RGB image. In fact, the image inherently contains complete visual details, avoids external depth dependencies in self-supervision, and aligns perfectly with SD’s original objective of image generation. Therefore, we construct a surrogate task ofmix-batch image reconstruction(MIR)through a task switcher, where the same SD model alternately reconstructs synthesized/real images and predicts depth maps within each training batch. This strategy repurposes self-supervised reprojection loss to tolerate color variations while maintaining structural consistency[14], intentionally decoupling color fidelity from depth accuracy, and finally preserving SD priors successfully."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p7_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.7041500806808472,
+      "text": "Following [15], we also employed standard data augmentation techniques (horizontal flips, random brightness, contrast, saturation, and hue jitter). 4. 2 Evaluation 4. 2. 1 Datasets Unless specified, all datasets are finally resized to 1024×320 resolution for training. Training Datasets. KITTI[13]: Following the previous work[15], we mainly conduct our experiments on the widely used KITTI dataset. We employ Zhou’s split[ 71] containing 39,810 training and 4,424 validation samples after removing static frames. The evaluation uses 697 Eigen raw test images with metrics from [15], applying 80m ground truth clipping and Eigen crop preprocessing[8]. Hypersim[38]: This photorealistic synthetic dataset (461 indoor scenes) contributes approximately 28k samples from its official training split for mix-batch image reconstruction. Each iteration uses random crops from the original 1024×768 to 1024×320 resolution. Zero-shot Evaluation Datasets DrivingStereo[58]: Contains 500 images per weather condition (fog, cloudy, rainy, sunny) for zero-shot testing. CityScape[7]: Evaluated on 1,525 test images with dynamic vehicle-rich urban scenes, using ground truth from [52]."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p16_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 16,
+      "score": 0.7005953788757324,
+      "text": "1 Step-by-Step Workflow In this section, we temporarily omit the specifics of MIR and SSG to clarify the integration of self-supervision with the Stable Diffusion framework in Jasmine: • Input:A sequence of temporally adjacent images (like video frames), e.g., a source image It′ and a target imageI t. – Here It is exactly the training image, It′ can be the previous frame It−1 or the next frame It+1 ofI t. •Step 1: Depth Prediction (via SD U-Net): – The SD U-Net, f z θ , takes the latent of the target image, zI =V AE.encode(It), and a pure noise vector,n, as input. – It performs a single-step denoising process to predict the latent representation of a depth map, zy 0 . * This is the key point we mentioned in Sec 3. 1: single-step denoising make this step become a fast, feed-forward process rather than computationally prohibitive with slow, iterative denoising. –The V AE decoder then convertsz y 0 into the final depth map,D=V AE.decode(z y 0 ). – Crucially, no GT depth is ever used in this step. •Step 2: Pose Prediction: – A separate PoseNet takes the image pair (It, It′) as input and predicts the relative camera pose (rotation and translation),T t→t′."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc4",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6982105374336243,
+      "text": "Extensive experiments demonstrate that Jasmine achieves SoTA performance on KITTI and superior zero-shot generalization across datasets. Our approach establishes a new paradigm for unsupervised depth estimation, paving the way for future advancements in self-supervised learning. 10"
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc3",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6976460218429565,
+      "text": "The proposed objective minimizes the distances be- tween each pair of scaled and shifted predictions ( ˆd′i, ˆd′j), where ˆd′ = ˆd × ˆs + ˆt. In each optimization step, we cal- culate the merged depth map m by the taking pixel-wise median m(x, y) = median( ˆd′1(x, y), . ,ˆd′N (x, y)). An extra regularization term R = |min(m)| + |1 − max(m)|, is added to prevent collapse to the trivial solution and enforce the unit scale of m. Thus, the objective function can be written as follows: mins1,...,sN t1,...,tN vuut 1 b N −1X i=1 NX j=i+1 ∥ ˆd′i − ˆd′j∥2 2 + λR ! (4) where the binominal coefficient b = \u0000N 2 \u0001 represents the number of possible combinations of image pairs from N im- ages. After the iterative optimization for spatial alignment, the merged depth m is taken as our ensembled prediction. Note that this ensembling step requires no ground truth for aligning independent predictions. This scheme enables a flexible trade-off between computation efficiency and pre- diction quality by choosing N accordingly. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc3",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6976460218429565,
+      "text": "The proposed objective minimizes the distances be- tween each pair of scaled and shifted predictions ( ˆd′i, ˆd′j), where ˆd′ = ˆd × ˆs + ˆt. In each optimization step, we cal- culate the merged depth map m by the taking pixel-wise median m(x, y) = median( ˆd′1(x, y), . ,ˆd′N (x, y)). An extra regularization term R = |min(m)| + |1 − max(m)|, is added to prevent collapse to the trivial solution and enforce the unit scale of m. Thus, the objective function can be written as follows: mins1,...,sN t1,...,tN vuut 1 b N −1X i=1 NX j=i+1 ∥ ˆd′i − ˆd′j∥2 2 + λR ! (4) where the binominal coefficient b = \u0000N 2 \u0001 represents the number of possible combinations of image pairs from N im- ages. After the iterative optimization for spatial alignment, the merged depth m is taken as our ensembled prediction. Note that this ensembling step requires no ground truth for aligning independent predictions. This scheme enables a flexible trade-off between computation efficiency and pre- diction quality by choosing N accordingly. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6941884756088257,
+      "text": "3 (c,d)) and latent- space supervision (ID (10) and Fig. 3 (e)), which strongly proves the effectiveness of our proposed MIR. The analysis of auxil- iary images is presented in sub-table(d). The experiments in IDs (0, 13, 14) indicate that, compared to real/synthesis datasets, the content of the dataset is more impor- tant, and diverse scenes offer greater ben- efits than street views (virtual KITTI images) similar to our primary dataset, KITTI. Furthermore, IDs (0, 15, 16) demonstrate that our surrogate task is robust to image sampling resolutions, as downsampling to 1 1. 6 or even 1 4 has minimal impact on the results. Moreover, ID(13) further confirms that MIR remains effective even when trained on small-scale datasets (fewer than 1k samples). These insights provide potential opportunities for applying SD models to other dense estimation tasks and enhancing result sharpness. In summary,these ablation results validate the effectiveness of our proposed adaptation protocol, indicating that each design plays a crucial role in optimizing the diffusion model for self-supervised depth estimation tasks. 4."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p13_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 13,
+      "score": 0.6935418844223022,
+      "text": "We use a sequential fea- ture decoder (ICN) to estimate the linear brightness change {Ct,t+n ∈ RH×W ×1, Bt,t+n ∈ RH×W ×1}. The reconstruc- tion of It can be described as ˙Vt,t+n(u) =KI Tt,t+nDt(u)K −1 I ˙u, ˜It+n = bs(It+n ⊙ Ct,t+n + Bt,t+n, Vt,t+n), (16) with u being a pixel in frame It, ˙u being the corresponding homogeneous form, and ˜It+n being the reconstructed version of target frame It. We assume the camera intrinsic KI ∈ R3×3 is already known during the training. Following [Vankadari et al. , 2023; Godard et al. , 2019; Wang et al., 2021], we choose the combination of Structured Similarity Index Measure (SSIM) [Wang et al., 2004] and the L1 difference as the measure of photometric error, i.e. pe( ˜I, I) = α 2 (1 − SSIM( ˜I, I)) + (1− α)| ˜I − I|, (17) where we set α to 0. 85 in all our experiments. To handle potential occlusions within image sequences, we use the popular minimum re-projection and Auto-mask strate- gies [Godard et al., 2019] in the per-pixel photometric loss: Lss = min ˜I pe( ˜I, It), (18) with ˜I ∈ {˜It+n, ˜It−n, It+n, It−n}."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p13_sc7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.6904622316360474,
+      "text": "746–760. [31] D. Jia, J. Guo, K. Han, H. Wu, C. Zhang, C. Xu, X. Chen, GeminiFusion: eﬃcient pixel-wise multimodal fusion for vision transformer, in: Forty-First International Conference on Machine Learning, 2024. [32] A. Geiger, P. Lenz, C. Stiller, R. Urtasun, Vision meets robotics: the KITTI dataset, Int. J. Robot. Res. 32 (11) (2013) 1231–1237. [33] M. Cordts, M. Omran, S. Ramos, T. Rehfeld, M. Enzweiler, R. Benenson, U. Franke, S. Roth, B. Schiele, The Cityscapes dataset for semantic urban scene understanding, in: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2016, pp. 3213–3223. [34] S. Song, S. P. Lichtenberg, J. Xiao, SUN RGB-D: A RGB-D scene understanding bench- mark suite, in: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2015, pp. 567–576. [35] Y. Cabon, N. Murray, M. Humenberger, Virtual KITTI 2, 2020. arXiv:2001. 10773 [36] M. Contributors, MMSegmentation: openMMLab semantic segmentation toolbox and benchmark, 2020, (https://github.com/open-mmlab/mmsegmentation ). [37] Z. Liu, H. Mao, C.-Y. Wu, C. Feichtenhofer, T. Darrell, S."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6899383068084717,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6899383068084717,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p17_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.6897059679031372,
+      "text": "– A photometric reprojection loss, Lph, is calculated by comparing the synthesized image ˆIt with the original target imageI t. – This loss, Lph, is the core self-supervised signal. If the predicted depth D is incorrect, the reprojected image ˆIt will not match the originalI t, resulting in a high loss. •Step 5: End-to-End Backpropagation: – The gradient from Lph is backpropagated through the entire computational graph. This means the gradient flows back to update the weights of both thePoseNetand, most importantly, the SD U-Net(f z θ ). •Output:The predicted depth mapDobtained from Step 1. B. 2 Training Pseudocode Algorithm 1 outlines the complete training procedure for Jasmine, incorporating all components including MIR, SSG, and the full loss computation (Corresponds to the pipeline in Fig. 2)."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p5_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.689663290977478,
+      "text": "To clarify, we conduct additional experiments and present three insights about the relationship between auxiliary data and performance: (1) Synthetic images are not essential; our surrogate task maintains efficacy with real-world imagery. (2) The dataset scale proves non-critical, as competitive performance emerges with samples under 1k. (3) Domain divergence between auxiliary and primary datasets enhances results and is even more important than image quality. Please refer to Sec. 4. 4 for detailed experimental support. This analysis and related experiments reveal MIR is a highly promising training paradigm. It not only imposes no inherent limitations on any dense prediction tasks but also challenges the notion that fine-tuning SD requires high-quality annotation. Even with legacy datasets like KITTI, we can still leverage readily available images to effectively utilize SD priors and enhance depth estimation sharpness. 3. 3 Scale-Shift GRU The misalignment of SSI-SI depth. We first analyze the training procedure of SSMDE. Denoting the relative camera posesT t→t′ as[R|T], we can further expand theprojprocess in Eq."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p4_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.6881738901138306,
+      "text": "When activated by sx, we have D=D \u0000 f z θ \u0000 sx,z y τ ,z I\u0001\u0001 . In contrast, we have I=D \u0000 f z θ \u0000 sy,z y τ ,z I\u0001\u0001 . Notably, the switcher s is a processed one-hot vector and it is combined with the time embeddings fed into the f z θ . This allows the U-Net to condition its internal operations on the currently selected task. Therefore, we follow the SD paradigm and initially formulate the surrogate loss as: Ls =||z I −f z θ (sy,z y τ ,z I)||2.(4) Mix-batch Images Reconstruction with Photometric Supervision. We show that it is possible to preserve the SD priors by introducing a compact surrogate task. However, our experiments reveal that naively applying Eq. 4 for SSMDE optimization yields suboptimal results (Fig. 3(c)). Through empirical investigation, we identify three critical insights:1)Inferior reconstructed images (e.g., KITTI) introduce block artifacts (Fig. 3(c)). We attribute this to the latent space operating at 1 8 resolution: When inputs align with the pre-trained ε and D, smooth supervision is achieved. Conversely, each latent pixel supervision manifests as 8×8 block artifacts in prediction."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc2",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6871613264083862,
+      "text": "We encode the input image into the latent space, initialize depth latent as standard Gaussian noise, and progressively denoise it with the same schedule as during fine-tuning. We empirically find that initializing with standard Gaussian noise gives better results than with multi-resolution noise, although the model is trained on the latter. We follow DDIM’s [ 49] approach to perform non- Markovian sampling with re-spaced steps for accelerated inference. The final depth map is decoded from the latent code using the V AE decoder and postprocessed by averaging channels. Test-time ensembling. The stochastic nature of the infer- ence pipeline leads to varying predictions depending on the initialization noise in z(d) T . Capitalizing on that, we propose the following test-time ensembling scheme, capable of com- bining multiple inference passes over the same input. For each input sample, we can run inference N times. To aggre- gate these affine-invariant depth predictions {ˆd1, . ,ˆdN }, we jointly estimate the corresponding scale ˆsi and shift ˆti, relative to some canonical scale and range, in an iterative manner."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc2",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6871613264083862,
+      "text": "We encode the input image into the latent space, initialize depth latent as standard Gaussian noise, and progressively denoise it with the same schedule as during fine-tuning. We empirically find that initializing with standard Gaussian noise gives better results than with multi-resolution noise, although the model is trained on the latter. We follow DDIM’s [ 49] approach to perform non- Markovian sampling with re-spaced steps for accelerated inference. The final depth map is decoded from the latent code using the V AE decoder and postprocessed by averaging channels. Test-time ensembling. The stochastic nature of the infer- ence pipeline leads to varying predictions depending on the initialization noise in z(d) T . Capitalizing on that, we propose the following test-time ensembling scheme, capable of com- bining multiple inference passes over the same input. For each input sample, we can run inference N times. To aggre- gate these affine-invariant depth predictions {ˆd1, . ,ˆdN }, we jointly estimate the corresponding scale ˆsi and shift ˆti, relative to some canonical scale and range, in an iterative manner."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p3_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 3,
+      "score": 0.6870896816253662,
+      "text": "Distinguished from prior works that laboriously construct diverse labeled datasets, we highlight the value of unlabeled images in enhancing the data coverage. Nowadays, we can practically build a diverse and large-scale unlabeled set from the Internet or public datasets of various tasks. Also, we can effortlessly obtain the dense depth map of monocular unlabeled images simply by forwarding them to a pre-trained well-performed MDE model. This is much more convenient and efficient than performing stereo matching or SfM reconstruction for stereo images or videos. We select eight large-scale public datasets as our unlabeled sources for their diverse scenes. They contain more than 62M images in total. The details are provided in the bottom half of Table 1. Technically, given the previously obtained MDE teacher model T , we make predictions on the unlabeled set Du to obtain a pseudo labeled set ˆDu: ˆDu = {(ui, T(ui))|ui ∈ Du}N i=1. (4) With the combination set Dl ∪ ˆDu of labeled images and pseudo labeled images, we train a student model S on it. 10373"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6865405440330505,
+      "text": "Table 1:Quantitative results on the KITTI dataset. For the error-based metrics , the lower value is better; and for the accuracy-based metrics , the higher value is better. The best and second-best results are marked in boldand underline. Jaeho et al* is a combined model that applies both Jaeho’s[34] (handle dynamic objects) and TriDepth’s[5] (solve edge flatten) approach. Jasmine* and Jasmine are the same model but use different alignments (discussed in Sec. 4. 3). In the data column, Syn, K, and H represent the synthetic, KITTI, and Hypersim datasets, respectively. The number of images and depth labels usage are in brackets. All experiments are conducted at 1024×320 resolution (Performance of Marigold/E2E FT/Lotus is robust to this resolution). Method Venue Notes Data AbsRelSqRel RMSERMSElog a1 a2 a3 Marigold[25] CVPR2024ZeroShotSyn(74K+74K)0. 120 0. 672 4. 033 0. 184 0. 874 0. 968 0. 985E2E FT[33] W ACV2025ZeroShotSyn(74K+74K)0. 112 0. 649 4. 099 0. 180 0. 890 0. 969 0. 985Lotus[21] ICLR2025ZeroShotSyn(59K+59K)0. 110 0. 611 3. 807 0. 175 0. 892 0. 970 0. 986Jasmine* - Mono KH(68K+0) 0. 102 0. 540 3. 728 0. 162 0. 907 0. 973 0. 987 Monodepth2[15]ICCV2019 Mono K(40K+0) 0. 115 0."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p6_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 6,
+      "score": 0.6855157613754272,
+      "text": "It also shows that our fine-tuning protocol was successful in adapting Stable Diffusion for this task without unlearning such visual priors. For a visual assessment, we present qualitative compar- ison in Fig. 4. Additionally, in Fig. 5, we provide 3D visu- alizations of reconstructed surface normals. Marigold not only correctly captures the scene layout, such as the spatial relationships between walls and furniture in the first example in Fig. 5, but also captures fine-grained details, as indicated by the arrows in Fig. 4. Moreover, the reconstruction of flat surfaces, especially walls, is significantly better (see Fig. 4). Furthermore, our method effectively models common shapes and their layouts, once again aligning with our expectations regarding the generative prior. 4. 3. Ablation Studies Two zero-shot validation sets are selected for the ablation studies – the official training split of NYUv2 [31], consist- ing of 785 samples, and a randomly selected subset of 800 6"
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p6_sc4",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.6855157613754272,
+      "text": "It also shows that our fine-tuning protocol was successful in adapting Stable Diffusion for this task without unlearning such visual priors. For a visual assessment, we present qualitative compar- ison in Fig. 4. Additionally, in Fig. 5, we provide 3D visu- alizations of reconstructed surface normals. Marigold not only correctly captures the scene layout, such as the spatial relationships between walls and furniture in the first example in Fig. 5, but also captures fine-grained details, as indicated by the arrows in Fig. 4. Moreover, the reconstruction of flat surfaces, especially walls, is significantly better (see Fig. 4). Furthermore, our method effectively models common shapes and their layouts, once again aligning with our expectations regarding the generative prior. 4. 3. Ablation Studies Two zero-shot validation sets are selected for the ablation studies – the official training split of NYUv2 [31], consist- ing of 785 samples, and a randomly selected subset of 800 6"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6855102777481079,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.6855102777481079,
+      "text": "tion. In Proceedings of the 31st ACM International Confer- ence on Multimedia (ACM MM), 2023. 2 [31] Shuhang Wang, Jin Zheng, Hai-Miao Hu, and Bo Li. Nat- uralness preserved enhancement algorithm for non-uniform illumination images. IEEE Transactions on Image Process- ing, page 3538–3548, 2013. 4 [32] Tao Wang, Kaihao Zhang, Tianrun Shen, Wenhan Luo, Bjorn Stenger, and Tong Lu. Ultra-high-definition low-light image enhancement: A benchmark and transformer-based method. In Proceedings of Association for the Advancement of Artifi- cial Intelligence (AAAI), 2023. 4, 11 [33] Wenjing Wang, Huan Yang, Jianlong Fu, and Jiaying Liu. Zero-reference low-light enhancement via physical quadru- ple priors. In IEEE conference on computer vision and pat- tern recognition (CVPR), 2024. 3 [34] Z. Wang, A. C. Bovik, H. R. Sheikh, and E. P. Simoncelli. Im- age quality assessment: from error visibility to structural similarity. IEEE Transactions on Image Processing , page 600–612, 2004. 4 [35] Zhendong Wang, Xiaodong Cun, Jianmin Bao, Wengang Zhou, Jianzhuang Liu, and Houqiang Li. Uformer: A general u-shaped transformer for image restoration."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p1_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.6851982474327087,
+      "text": "Without any additional supervision, it preserves the detail priors of SD models by reconstructing the images themselves while preventing depth estimation from degradation. Furthermore, to address the inherent misalignment between SD’s scale and shift invariant estimation and self-supervised scale-invariant depth estimation, we build the Scale-Shift GRU. It not only bridges this distribution gap but also isolates the fine-grained texture of SD output against the interference of reprojection loss. Extensive experiments demonstrate that Jasmine achieves SoTA performance on the KITTI benchmark and exhibits superior zero-shot generalization across multiple datasets. Project page and code are available at here. 1 Introduction Estimating depth from monocular images is a fundamental problem in computer vision, which plays an essential role in various downstream applications such as 3D/4D reconstruction[53], autonomous driving[10], etc. Compared with supervised methods[25, 33, 21], self-supervised monocular depth estimation (SSMDE) mines 3D information solely from video sequences, significantly reducing reliance on expensive ground-truth depth annotations."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6849164366722107,
+      "text": "Thus, the remaining concern is the sufficient diversity or domain gaps between synthetic and real data, which sometimes limits generalization ability. As demonstrated in our experiments, our choice of synthetic datasets leads to impressive zero-shot transfer. Annealed multi-resolution noise. Previous works have explored deviations from the original DDPM formulations, such as non-Gaussian noise [30] or non-Markovian schedule shortcuts [49]. Our proposed setting and the fine-tuning pro- tocol outlined above are permissive to changes to the noise schedule at the fine-tuning stage. We identified a combina- tion of multi-resolution noise [23] and an annealed schedule to converge faster and substantially improve performance over the standard DDPM formulation. The multi-resolution noise is composed by superimposing several random Gaus- sian noise images of different scales, all upsampled to the U-Net input resolution. The proposed annealed schedule interpolates between the multi-resolution noise at t = T and standard Gaussian noise at t = 0. 3. 4. Inference Latent diffusion denoising. The overall inference pipeline is presented in Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6849164366722107,
+      "text": "Thus, the remaining concern is the sufficient diversity or domain gaps between synthetic and real data, which sometimes limits generalization ability. As demonstrated in our experiments, our choice of synthetic datasets leads to impressive zero-shot transfer. Annealed multi-resolution noise. Previous works have explored deviations from the original DDPM formulations, such as non-Gaussian noise [30] or non-Markovian schedule shortcuts [49]. Our proposed setting and the fine-tuning pro- tocol outlined above are permissive to changes to the noise schedule at the fine-tuning stage. We identified a combina- tion of multi-resolution noise [23] and an annealed schedule to converge faster and substantially improve performance over the standard DDPM formulation. The multi-resolution noise is composed by superimposing several random Gaus- sian noise images of different scales, all upsampled to the U-Net input resolution. The proposed annealed schedule interpolates between the multi-resolution noise at t = T and standard Gaussian noise at t = 0. 3. 4. Inference Latent diffusion denoising. The overall inference pipeline is presented in Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p2_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.684842586517334,
+      "text": "Extensive experiments show that our proposed method, Jasmine, ❶ achieves theSoTA performance among all SSMDEs on the competitive KITTI dataset, ❷ showsremarkable zero-shot generaliza- tionacross multiple datasets (even surpassing models trained with augmented data), ❸ demonstrates unprecedented detail preservation. As the first work to bridge self-supervised and zero-shot depth estimation paradigms, we also provide an in-depth analysis of the effects of different depth de-normalization strategies employed in their respective domains. To sum up, the main contributions are summarized as follows: • Wefirstintroduce SD into a self-supervised depth estimation framework. Our methods eliminate the dependency on high-precision depth supervision while retaining SD’s inherent advantages in detail sharpness and cross-domain generalization. • We proposed a surrogate task of MIR that anchors SD’s priors via self-supervised gradient sharing to avoid SD’s latent-space corruption caused by reprojection artifacts."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p6_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 6,
+      "score": 0.6843054890632629,
+      "text": "Specifically, the baseline results of Retinexformer and Uformer show ar- tifacts in sky regions and paper textures respectively. For MIRNet and SNR-Aware, the baseline outputs exhibit no- ticeable halo artifacts around object contours. Restormer and LLformer represent typical cases of over-exposure and under-exposure in their baseline results. Despite the diverse failure patterns observed across these baseline models, all these issues are effectively mitigated through the integra- tion of our GT-Mean loss. This comprehensive improve- ment demonstrates the robustness and adaptability of our approach in enhancing image quality across diverse model architectures. 4. 3. Impact of GT-Mean Loss on Training 4. 3. 1. Experimental Configuration. We evaluate training dynamics using Retinexformer [4] on the LOLv1 training dataset with four distinct strategies: • Baseline: Original Retinexformer loss (L1 loss). • Hybrid: A phased approach transitioning from the base- line loss (0–70K iterations) to a brightness-aligned loss in Eq. 1 (80K–150K iterations), with linear interpolation between 70K and 80K iterations."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p6_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 6,
+      "score": 0.6843054890632629,
+      "text": "Specifically, the baseline results of Retinexformer and Uformer show ar- tifacts in sky regions and paper textures respectively. For MIRNet and SNR-Aware, the baseline outputs exhibit no- ticeable halo artifacts around object contours. Restormer and LLformer represent typical cases of over-exposure and under-exposure in their baseline results. Despite the diverse failure patterns observed across these baseline models, all these issues are effectively mitigated through the integra- tion of our GT-Mean loss. This comprehensive improve- ment demonstrates the robustness and adaptability of our approach in enhancing image quality across diverse model architectures. 4. 3. Impact of GT-Mean Loss on Training 4. 3. 1. Experimental Configuration. We evaluate training dynamics using Retinexformer [4] on the LOLv1 training dataset with four distinct strategies: • Baseline: Original Retinexformer loss (L1 loss). • Hybrid: A phased approach transitioning from the base- line loss (0–70K iterations) to a brightness-aligned loss in Eq. 1 (80K–150K iterations), with linear interpolation between 70K and 80K iterations."
+    },
+    {
+      "id": "semantic_chunk::ACD_p3_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 3,
+      "score": 0.6842191219329834,
+      "text": "Combining with the intrinsic param- eters K of camera, it allows the network to synthesize the reconstruction image (I t′→t)o fI t using the adjacent frame It′, depicted as: It′→t = It′ ⟨proj (Dt,Tt→t′,K)⟩, (1) where the⟨⟩denotes the pixel sampling operator, and we con- strain the depth by calculating the photometric reconstruction loss between I t andIt′→t, formulated by: Lp =m i n t′ pe(It,It′→t), (2) pe(Ia,Ib)= θ 2 (1−SSIM (Ia,Ib))+(1 −θ)Ia−Ib, (3) where SSIM is the structural similarity index measure. Com- pared with the pixel-wised L2 loss, it can better reﬂect the structural similarity between images. Additionally, edge- aware smoothness loss is also used to constrain the continuity of the depth: L e (D)= |∂xD′|e∂xI +|∂yD′|e∂yI, (4) whereD′refers to the normalized inverse depth of D. ∂x and ∂y represent the horizontal and vertical gradients. Similar to [Gasperini et al., 2023 ], the above theoretical foundations of self-supervised learning are used to train the teacher model in this work. 3. 2 Overall Architecture Our ultimate goal is to achieve the robust MDE under adverse weather. Thus, we elaborate an ACDepth approach, as shown in Figure."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p3_sc2",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6841087341308594,
+      "text": "Most of the previous studies have convention- ally stacked multiple bilinear upsampling with convolution or deconvolution layers to recover the original size. However, we empirically observe that the model can achieve better per- formance with much fewer convolution and bilinear upsam- pling layers of the decoder if we design our restoring path effectively. First, we reduce the channel dimension of the bottleneck feature into NC with 1× 1 convolution to avoid computational complexity. Then we use consecutive bilinear upsampling to enlarge the feature into size ofH×W×NC. Finally, the output is passed through two convolution layers and a sigmoid function to predict depth map H×W× 1. Local Feat element-wise multiplication element-wise summation 𝐻𝐷 𝑖 Global Feat concat Conv BatchNorm ReLU Conv BatchNorm ReLU Conv Sigmoid Figure 2: Detailed description of the SFF module. And depth map is multiplied with the maximum depth value to scale in meter. This simple decoder can generate as precise a depth map as other baseline structures. However, to fur- ther exploit the local structures with ﬁne details, we add skip connection with the proposed fusion module. 3."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p3_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 3,
+      "score": 0.6830679774284363,
+      "text": "Noise n ℰ Denoiser U-Net 𝑓𝑓𝜃𝜃 surrogate switch s single step τ = T 𝒟𝒟 normalization Scale-Shift GRU×2 edge extraction warp 𝐿𝐿𝑠𝑠 𝐷𝐷𝑆𝑆𝑆𝑆𝑆𝑆 𝐷𝐷𝑆𝑆𝑆𝑆 𝐷𝐷𝑘𝑘 Training Image 𝐈𝐈𝑡𝑡 𝐿𝐿ph 𝐿𝐿𝑒𝑒 𝐿𝐿𝑡𝑡𝑡𝑡 𝐷𝐷𝑡𝑡𝑡𝑡 𝐿𝐿𝑒𝑒 Mix-batch 𝐈𝐈𝑚𝑚 Depth Prediction 𝐿𝐿𝑡𝑡𝑡𝑡 𝐿𝐿𝑡𝑡𝑡𝑡 𝐈𝐈𝑚𝑚 … … or or or Figure 2:Finetuning Protocol of Jasmine. The It and Im are each concatenated with n[33] and fed into the V AE encoderε. Next, the U-Net performs single-step denoising guided by the task switcher s, and subsequently decodes the SSI-depth prediction DSSI and the reconstructed image with the D (Sec. 3. 2). Afterward, the DSSI is processed by the SSG for distribution refinement, yielding the final depth estimation DSI . The Ltc, Le, Lph andL s are supervision loss and they are detailed in Sec. 3. 4. The edge extraction module is detailed in Sec C .into single-frame and multi-frame approaches[52, 17, 9, 1]. Comparisons between these paradigms are detailed in Sec. E. 2. Recently, DepthAnything v1/v2[59, 60] has revealed that we can obtain an accurate single image depth prediction model with strong generalization by training on large-scale image depth pairs."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6826564073562622,
+      "text": "/C10/C7/C8/C6/C9/C8/C4 /C3/C6/C5/C2/C1/C6/C0 /C10/C7/C8/C6/C9/C8/C4 /C16/C9/C5/C2/C1/C6/C0 /C24/C8/C7/C9/C1/C7/C0/C1/C4 /C32/C2/C25/C28/C6 /C38/C37/C35/C38/C34/C36 /C10/C7/C8/C6/C9/C8/C4 /C3/C25/C44/C43/C28/C25/C2/C9/C48 /C41/C40/C32/C6/C8 /C3/C6/C9/C2/C25/C28/C6 Figure 3. Overview of the Marigold inference scheme. Given an input image x, we encode it with the original Stable Diffusion V AE into the latent code z(x), and concatenate with the depth latent z(d) t before giving it to the modified fine-tuned U-Net on every denoising iteration. After executing the schedule of T steps, the resulting depth latent z(d) 0 is decoded into an image, whose 3 channels are averaged to get the final estimation ˆd. See Sec. 3. 4 for details. possible form of depth, which is guaranteed by the rendering pipeline. If our assumption about the possibility of fine- tuning a generalizable depth estimation from a text-to-image LDM is correct, then synthetic depth gives the cleanest set of examples and reduces noise in gradient updates during the short fine-tuning protocol."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6826564073562622,
+      "text": "/C10/C7/C8/C6/C9/C8/C4 /C3/C6/C5/C2/C1/C6/C0 /C10/C7/C8/C6/C9/C8/C4 /C16/C9/C5/C2/C1/C6/C0 /C24/C8/C7/C9/C1/C7/C0/C1/C4 /C32/C2/C25/C28/C6 /C38/C37/C35/C38/C34/C36 /C10/C7/C8/C6/C9/C8/C4 /C3/C25/C44/C43/C28/C25/C2/C9/C48 /C41/C40/C32/C6/C8 /C3/C6/C9/C2/C25/C28/C6 Figure 3. Overview of the Marigold inference scheme. Given an input image x, we encode it with the original Stable Diffusion V AE into the latent code z(x), and concatenate with the depth latent z(d) t before giving it to the modified fine-tuned U-Net on every denoising iteration. After executing the schedule of T steps, the resulting depth latent z(d) 0 is decoded into an image, whose 3 channels are averaged to get the final estimation ˆd. See Sec. 3. 4 for details. possible form of depth, which is guaranteed by the rendering pipeline. If our assumption about the possibility of fine- tuning a generalizable depth estimation from a text-to-image LDM is correct, then synthetic depth gives the cleanest set of examples and reduces noise in gradient updates during the short fine-tuning protocol."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6824989318847656,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6824989318847656,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p3_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 3,
+      "score": 0.6823337078094482,
+      "text": "Concurrently, Marigold[ 25] and GeoWizard[11] enhanced model generalization and detail preservation by fine-tuning Stable Diffusion, capitalizing on its prior training with large-scale, high-quality datasets. Afterward, E2E FT[33] and Lotus[21] further accelerated inference by optimizing the noise scheduling process. In this work, our Jasmine continues these works and extends SD to the field of self-supervision. 3 Methods In this section, we will introduce the foundational knowledge of the SSMDE and SD-based MDE (Sec. 3. 1), the surrogate task of mix-batch image reconstruction (MIR, Sec. 3. 2), the scale-shift adaptation with GRU (Sec. 3. 3) and the SD finetune protocol specified for self-supervision (SSG, Sec. 3. 4). An overview of the whole framework is shown in Fig. 2 and its training pseudocode is shown in Algorithm 1. 3. 1 Preliminaries Self-Supervised Monocular Depth Estimationmakes use of the adjacent frames It′ to supervise the output depth with geometric constraints."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p23_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 23,
+      "score": 0.6815346479415894,
+      "text": "while the second and third phases automatically transitioned, sharing an additional 10k steps for a total of 25k training steps. As illustrated in Fig. 9, we demonstrate that the pseudo-label supervision and module-wise freezing training are particularly crucial for steady training in complex, multi-module self-supervised systems. I Limitation and Future Work As noted in Sec. 2, the ubiquitously available videos suggest that the self-supervised methods possess significant data advantages and working potential. In this paper, Jasmine is trained on only tens of thousands of data samples and only on a driving dataset (KITTI), leaving room for further exploration in scaling up training data to other domains (industry, indoor, etc). We believe that if there really emerges a ‘GPT’ moment for 3D perception in the future, it will more likely involve self-supervised methods trained on videos rather than learning from annotated depth. Furthermore, we believe that the unsupervised Stable Diffusion fine-tuning paradigm proposed in this paper can be applied to other related fields, such as depth completion [56, 54, 57], depth super-resolution [55, 51], and Multi-view Stereo [63, 64, 61, 62]. 23"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6809202432632446,
+      "text": "The quantitative results obviously demonstrate that our method can produce much finer and more accurate depth predictions, particularly in complex regions with intricate structures, which sometimes cannot be reflected by the met- rics. E. 4 Mix-batch Ratio Ablation Details In the paper, Fig. 3 (g) illustrates the per- formance variation versus the mix-batch ratio under two supervision schemes. We further present 1Discussed in MonoDepth2 repository: https://github.com/nianticlabs/monodepth2/issues/274 21"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7854078412055969,
+      "text": "969 (c) Mix-batch Image Reconstruction (7) w/o MIR 0. 132 0. 673 4. 271 0. 852 0. 967 (8) Direct 0. 129 0. 679 4. 385 0. 858 0. 962 (9) Only Hy 0. 106 0. 614 4. 181 0. 901 0. 970 (10) Latent space 0. 095 0. 606 4. 138 0. 909 0. 970 (d) Auxiliary Image Analysis (12) KITTI 0. 095 0. 616 4. 040 0. 912 0. 972 (13) KITTI+ETH3D0. 090 0. 586 3. 937 0. 916 0. 972 (14) KITTI+vK 0. 094 0. 606 4. 068 0. 911 0. 972 (15) KITTI+Hy/4 0. 091 0. 596 3. 943 0. 917 0. 972 (16) KITTI+Hy/1. 60. 090 0. 591 3. 971 0. 918 0. 972 In sub-table(b), we further melted down our proposed SSG. ID (6) reveals that the naive GRU can initially solve the distribu- tion misalignment by estimating the Dδ (Eq. 4). However, the scale difference be- tween SSI and SI depth makes it difficult to restore through linear addition. Therefore, after introducing SST, the overall model performance is further enhanced by 10%, ultimately achieving SoTA performance. A comprehensive analysis of MIR was con- ducted in sub-table(c)and we can draw similar conclusions to Sec. 3. 2. Jasmine significantly outperforms the alternatives, such as KITTI/synthetic-only reconstruc- tion (IDs (8,9) and Fig.",
+      "estimated_tokens": 459
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.7378408312797546,
+      "text": "Despite these inherent disadvantages, as shown in Table 4, our method still outperforms the state- of-the-art approaches in both multi-frame and stereo-supervision domains across most metrics. This remarkable achievement, especially considering our more challenging problem setting, further demonstrates the substantial strength and generalizability of our approach. E. 3 Qualitative Comparisons Table 6:Ablation Studieson the mix-batch ratio. Ph refers to supervision using Eq. 5, while Latent refers to supervision using Eq. 4 . The notation +λ denotes the proportion of the KITTI dataset used (e.g., +0. 3 indicates a KITTI:Hypersim ratio of 3:7 in the MIR training data.) (ID) Method AbsRel SqRel RMSE a1 a2 Ph+0 0. 089 0. 5733. 973 0. 918 0. 972 Ph+0. 3 0. 090 0. 581 3. 944 0. 9190. 972 Ph+0. 6 0. 092 0. 5933. 933 0. 9150. 973 Ph+1 0. 093 0. 590 3. 970 0. 9150. 973 Latent+0 0. 106 0. 614 4. 181 0. 901 0. 970 Latent+0. 3 0. 095 0. 6064. 138 0. 909 0. 970 Latent+0. 6 0. 121 0. 649 4. 322 0. 8760. 970 Latent+1 0. 129 0. 679 4. 385 0. 858 0. 962 In Fig. 8, we further compare the perfor- mance of our Jasmine with other methods in multi scenes.",
+      "estimated_tokens": 424
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p17_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.7293355464935303,
+      "text": "Algorithm 1Jasmine Training Algorithm 1:Initialize:SD U-Net, PoseNet, SSG, V AE, optimizer 2:V AE.eval()▷V AE weights are frozen 3:foreach batch of inputs ‘I’ in dataloaderdo 4:▷Mix-batch Image Reconstruction (MIR) 5:s depth ←[1,0],s recon ←[0,1]▷Task switchers 6:z I t , zI m, zn ←V AE.encode(I[’I_t’],I[’I_m’],noise) 7:D ssi ←V AE.decode(SD_UNet([zI t , zn], t= 999, s=sdepth)) 8:I rec ←V AE.decode(SD_UNet([zI m, zn], t= 999, s=srecon)) 9:▷Scale-Shift GRU (SSG) 10:D list ←SSG(D ssi, zI t )▷ D list contains[D ssi, D1, Dsi] 11:pose←PoseNet(I[’I_t’],I[’I_t”])▷Pose Estimation for Self-Supervision 12:loss←compute_loss(I, D list, pose, Irec)▷Loss Computation and Optimization 13:optimizer.zero_grad() 14:loss.backward() 15:optimizer.step() 16:end for 17:functionCOMPUTE_LOSS(inputs,D list, pose,I rec) 18:D si, Dssi ←D list[−1], Dlist[0] 19:reproj_img←reproject(inputs[’I_t”], D si, pose) 20:L ph ←photometric_loss(reproj_img,inputs[’I_t’])▷Core self-supervised signal 21:L s ←photometric_loss(I rec,inputs[’I_m’])▷Surrogate task signal 22:L tc ←teacher_loss(D list,inputs[’D_tc’])▷As per Eq. 11 23:L a ←compute_auxiliary_loss(inputs, Dsi, Dssi) 24:loss←L ph +L s +L tc +L a ·0.",
+      "estimated_tokens": 472
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p10_sc4",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6982105374336243,
+      "text": "Extensive experiments demonstrate that Jasmine achieves SoTA performance on KITTI and superior zero-shot generalization across datasets. Our approach establishes a new paradigm for unsupervised depth estimation, paving the way for future advancements in self-supervised learning. 10",
+      "estimated_tokens": 50
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1405,
+    "compressed_context_tokens": 1405,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1405,
+  "context_tokens": 1405,
+  "prompt_token_estimate": 1782,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_jasmine_mir_purpose",
+  "answer": "<think>The user wants me to answer the question about the role of Mix-batch Image Reconstruction (MIR) in Jasmine, based on the provided materials.\n\nLet me analyze the materials:\n\nFrom [1]: Mentions MIR in the context of mix-batch image reconstruction, discussing ablation studies. It says \"A comprehensive analysis of MIR was conducted in sub-table(c) and we can draw similar conclusions to Sec. 3.2. Jasmine significantly outperforms the alternatives, such as KITTI/synthetic-only reconstruction (IDs (8,9)...\"\n\nFrom [2]: Table 6 shows ablation studies on the mix-batch ratio. \"Ph refers to supervision using Eq. 5, while Latent refers to supervision using Eq. 4. The notation +λ denotes the proportion of the KITTI dataset used (e.g., +0.3 indicates a KITTI:Hypersim ratio of 3:7 in the MIR training data.)\"\n\nFrom [3]: Algorithm 1 shows the MIR process:\n- Task switchers are set: s_depth ← [1,0], s_recon ← [0,1]\n- VAE encodes images\n- D_ssi ← VAE.decode(SD_UNet([z_I_t, z_n], t=999, s=s_depth))\n- I_rec ← VAE.decode(SD_UNet([z_I_m, z_n], t=999, s=s_recon))\n- The loss includes L_ph (photometric loss for reprojection) and L_s (surrogate task signal for image reconstruction)\n\nSo MIR involves mixing different data sources (like KITTI and synthetic datasets like Hypersim) in training batches, with task switchers that allow the same model to handle both depth estimation and image reconstruction tasks. This enables joint training on multiple datasets with different supervision types.\n\nThe role of MIR:\n1. Enables mixing of different datasets (e.g., KITTI and synthetic) in training batches\n2. Uses task switchers to handle different tasks (depth estimation vs image reconstruction)\n3. Allows the model to handle distribution misalignment between datasets (e.g., real KITTI vs synthetic Hypersim)\n4. The ablation studies show different ratios of mixing (KITTI:Hypersim ratios)\n5. Acts as a surrogate task signal (L_s) in addition to the core self-supervised signal (L_ph)\n\nLet me formulate the answer.</think>\n\n{\n  \"answer\": \"Mix-batch Image Reconstruction (MIR) 通过在同一训练批次中混合不同数据集（如真实数据 KITTI 与合成数据 Hypersim），并利用任务切换器（s_depth、s_recon）让同一个 SD U-Net 同时执行深度估计与图像重建两个任务，从而缓解不同数据源之间的分布差异，使模型能够联合利用多源数据进行自监督训练。\",\n  \"items\": [\n    {\n      \"name\": \"数据集混合训练\",\n      \"description\": \"MIR 在同一 batch 中混合不同来源的数据（如 KITTI 和 Hypersim），通过调整混合比例（如 +0.3 表示 KITTI:Hypersim=3:7）实现多数据集联合训练，缓解分布错位问题。\",\n      \"citations\": [2]\n    },\n    {\n      \"name\": \"任务切换机制\",\n      \"description\": \"通过任务切换器 s_depth=[1,0] 与 s_recon=[0,1]，使 SD U-Net 能够在同一批次中分别处理深度估计（生成 D_ssi）和图像重建（生成 I_rec）两个任务。\",\n      \"citations\": [3]\n    },\n    {\n      \"name\": \"引入图像重建作为代理监督信号\",\n      \"description\": \"MIR 在损失函数中引入 L_s（图像重建的光度损失）作为代理任务信号，与核心自监督信号 L_ph 共同优化总损失，提升模型性能。\",\n      \"citations\": [3]\n    },\n    {\n      \"name\": \"对消融实验的贡献\",\n      \"description\": \"消融研究（sub-table(c) 及 Table 6）表明，去除或改变 MIR 方案（如仅用 KITTI 或仅用合成数据重建）会导致性能显著下降，证明 MIR 对 Jasmine 达到 SoTA 性能至关重要。\",\n      \"citations\": [1, 2]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1812,
+    "completion_tokens": 878,
+    "total_tokens": 2690,
+    "model": "MiniMax-M3"
+  }
+}

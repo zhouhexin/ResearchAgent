@@ -1,0 +1,406 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_paper_main_contributi_ask_baseline_none_60179b311a9a",
+  "dry_run": false,
+  "query": "这篇论文的主要贡献包括哪些？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::LED_p17_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.5886596441268921,
+      "text": "✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.021 0.13213.12212.9840.9570.9830.992\n✗ ✓ ✓ ✗ ✗ 5.760 0.201 0.020 0.137 13.616 16.174 0.9580.9830.992\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.309"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5758666396141052,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.5650362968444824,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5645670294761658,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_21",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.5524746179580688,
+      "text": "ent. This work is supported by the National\nNatural Science Foundation of China (No. 62201484), HKU\nStartup Fund, and HKU Seed Fund for Basic Research.\n10378"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.5493109822273254,
+      "text": "Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. In ECCV, pages 696–712, 2022. 3\nAppendix\nIn this supplementary material, we provide additional im-\nplementation details in Appendix A and present additional\nquantitative and qua"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.5493109822273254,
+      "text": "Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. In ECCV, pages 696–712, 2022. 3\nAppendix\nIn this supplementary material, we provide additional im-\nplementation details in Appendix A and present additional\nquantitative and qua"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.5482239127159119,
+      "text": "/C10/C7/C8/C6/C9/C8/C4\n/C3/C6/C5/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C4\n/C16/C9/C5/C2/C1/C6/C0\n/C24/C8/C7/C9/C1/C7/C0/C1/C4\n/C32/C2/C25/C28/C6\n /C38/C37/C35/C38/C34/C36\n/C10/C7/C8/C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C2"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.5482239127159119,
+      "text": "/C10/C7/C8/C6/C9/C8/C4\n/C3/C6/C5/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C4\n/C16/C9/C5/C2/C1/C6/C0\n/C24/C8/C7/C9/C1/C7/C0/C1/C4\n/C32/C2/C25/C28/C6\n /C38/C37/C35/C38/C34/C36\n/C10/C7/C8/C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C2"
+    },
+    {
+      "id": "chunk::s_p9_chunk_22",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.5425922274589539,
+      "text": "tion. In Proceedings of the IEEE/CVF International\nConference on Computer Vision (ICCV), pages 5106–5115,\n2023.\n[17] Ming Li, Pan Zhou, Jia-Wei Liu, Jussi Keppo, Min Lin,\nShuicheng Yan, and Xiangyu Xu. Instant3d: Instant text-\nto-3d generation. arxiv: 2311"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.5421527624130249,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.5421527624130249,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::dav2_p13_chunk_8",
+      "source": "data\\dav2.pdf",
+      "page": 13,
+      "score": 0.5398041605949402,
+      "text": "Li, Nir Levine, Akihiro Matsukawa, and\nHassan Ghasemzadeh. Improved knowledge distillation via teacher assistant. In AAAI, 2020.\n6, 10\n[49] Jia Ning, Chen Li, Zheng Zhang, Chunyu Wang, Zigang Geng, Qi Dai, Kun He, and Han Hu.\nAll in tokens: Unifying outpu"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5392289757728577,
+      "text": "ce\nFoundation of China under Grant 62233005, in part by the\nNational Natural Science Foundation of China under Grant\n62203173, in part by the Program of Introducing Talents\nof Discipline to Universities through the 111 Project under\nGrant B17017 and Shangh"
+    },
+    {
+      "id": "chunk::LED_p1_chunk_13",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.53793865442276,
+      "text": "document resides with its authors.\nIt may be distributed unchanged freely in print or electronic forms."
+    },
+    {
+      "id": "chunk::s_p10_chunk_13",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.5372457504272461,
+      "text": "c fusion.\narXiv preprint arXiv:2407.09303, 2024. 1, 2, 5\n[35] Yihang Wu, Xiao Cao, Kaixin Li, Zitan Chen, Haonan Wang,\nLei Meng, and Zhiyong Huang. Towards better text-to-\nimage generation alignment via attention modulation.ArXiv,\nabs/2404.13899, 2024. 2\n["
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_12",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.5349480509757996,
+      "text": "ided that copies are not made or distributed\nfor profit or commercial advantage and that copies bear this notice and the full citation\non the first page. Copyrights for third-party components of this work must be honored.\nFor all other uses, contact the ow"
+    },
+    {
+      "id": "chunk::LED_p18_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 18,
+      "score": 0.5334969758987427,
+      "text": "e from section section 5.1.\nResolutionRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n200 px 5.94130.10730.0206 0.1270 12.62273.97360.9545 0.9228 0.9921\n320 px 5.42590.1996 0.01880.1253 12.490016.1224 0.96030.9846 0.9927\n640 px 5.7050 0.21090.01850.14"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p9_chunk_16",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 9,
+      "score": 0.5327528715133667,
+      "text": "Shijie Geng, Renrui Zhang, Teli Ma, Rongyao\nFang, Yongfeng Zhang, Hongsheng Li, and Yu Qiao. CLIP-\nadapter: Better vision-language models with feature adapters.\nInternational Journal of Computer Vision, 2023. 3\n[17] Andreas Geiger, Philip Lenz, and Raquel"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p9_chunk_16",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 9,
+      "score": 0.5327528715133667,
+      "text": "Shijie Geng, Renrui Zhang, Teli Ma, Rongyao\nFang, Yongfeng Zhang, Hongsheng Li, and Yu Qiao. CLIP-\nadapter: Better vision-language models with feature adapters.\nInternational Journal of Computer Vision, 2023. 3\n[17] Andreas Geiger, Philip Lenz, and Raquel"
+    },
+    {
+      "id": "chunk::dav2_p15_chunk_17",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.5260704755783081,
+      "text": "[93] Chongjie Ye, Yinyu Nie, Jiahao Chang, Yuantao Chen, Yihao Zhi, and Xiaoguang Han.\nGaustudio: A modular framework for 3d gaussian splatting and beyond. arXiv:2403.19632,\n2024. 2\n[94] Wei Yin, Yifan Liu, Chunhua Shen, and Youliang Yan. Enforcing geomet"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.5256382822990417,
+      "text": "[64] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie\nZhou, and Jiwen Lu. Unleashing text-to-image diffusion\nmodels for visual perception. arXiv:2303.02153, 2023. 3\n[65] Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. I"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.5256381034851074,
+      "text": "[64] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie\nZhou, and Jiwen Lu. Unleashing text-to-image diffusion\nmodels for visual perception. arXiv:2303.02153, 2023. 3\n[65] Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. I"
+    },
+    {
+      "id": "chunk::dav2_p33_chunk_0",
+      "source": "data\\dav2.pdf",
+      "page": 33,
+      "score": 0.5252434611320496,
+      "text": "Question: Does the paper provide open access to the data and code, with sufficient instruc-\ntions to faithfully reproduce the main experimental results, as described in supplemental\nmaterial?\nAnswer: [Yes]\nJustification: We will release of code and data.\nG"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.5238133668899536,
+      "text": "/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C17/C19/C16/C15/C14/C19/C2/C9/C20\n/C13/C12/C11/C6/C8\n/C37/C7/C36/C32/C35/C30\n/C11/C2/C19/C14/C6\n/C42/C41/C39/C42/C38/C40\n/C17/C6/C9/C2/C19/C14"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.5238133668899536,
+      "text": "/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C17/C19/C16/C15/C14/C19/C2/C9/C20\n/C13/C12/C11/C6/C8\n/C37/C7/C36/C32/C35/C30\n/C11/C2/C19/C14/C6\n/C42/C41/C39/C42/C38/C40\n/C17/C6/C9/C2/C19/C14"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_1",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5217871069908142,
+      "text": "Key Research and Devel-\nopment Program of China (U22A2047), the Key R&D Program of\nZhejiang under Grant No. (2025C03001, 2023C01044), the Funda-\nmental Research Funds for the Provincial Universities of Zhejiang\n(GK259909299001-023), the National Nature Sci"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_1",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5215569138526917,
+      "text": "tional Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund from Guangdong Laboratory of Artiﬁcial Intel-\nligence and Digital Economy (SZ) (GML-KF-24-09).\nReferences\n[Arampatzakis et al., 2023 ] V asileios Arampatzakis, George\nPavlidis,"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.521193265914917,
+      "text": "92\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.3090.206 0.022 0.149 14.862 16.048 0.954 0.981 0.990\n✗ ✓ ✗ ✓ ✓ 5.8090.186 0.0180.125 12.21014.6830.961 0.985 0.993\n✗ ✓ ✓ ✗ ✓ 5.4220.2000.0180.125 12.50316.1200.961 0.985 0.993\nTab"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5205836296081543,
+      "text": "n: night, r: rain, a: all. T†: Translated\nvia GAN, T‡: Translated via Diffusion. Visual support: 1st and 2nd.\nFigure. 4(a) presents qualitative results. md4all-DD is partic-\nularly sensitive to water reﬂections in rainy scenes. For exam-\nple, in the ﬁrst a"
+    },
+    {
+      "id": "chunk::SSRDepth_p13_chunk_6",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.5204452872276306,
+      "text": "CRediT authorship contribution statement\nYuhang Zou: Writing – original draft, Visualization, Formal anal-\nysis, Data curation, Conceptualization; Xiaoming Chen: Writing – re-\nview & editing, Writing – original draft; Zhangyan Zhao: Writing – re-\nview & e"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_16",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.5199151039123535,
+      "text": "jing, China. (email: swshao@buaa.edu.cn, peizc@buaa.edu.cn,\nwhchen@buaa.edu.cn, sdc@nuaa.edu.cn)\nPeter C.Y .Chen is with the Department of Mechanical Engineering, National\nUniversity of Singapore, Singapore. (e-mail: mpechenp@nus.edu.sg)\nZhengguo Li is wit"
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_1",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.5198944807052612,
+      "text": "in [Yin et al., 2019] 114 0.875 0.976 0.994 0.108 0.416 0.048\nDA V[Huynh et al., 2020] 25 0.882 0.980 0.996 0.108 0.412 -\nBTS [Lee et al., 2019] 47 0.885 0.978 0.994 0.110 0.392 0.047\nAdabins[Bhat et al., 2021] 78 0.903 0.984 0.997 0.103 0.364 0.044\nDPT* ["
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_17",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5194481611251831,
+      "text": "Hongsheng Li, and Yu Qiao. 2024. Clip-adapter: Better vision-language models\nwith feature adapters. International Journal of Computer Vision 132, 2 (2024),\n581–595.\n[14] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. 2016. Deep residual\nlearning fo"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_25",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5182352662086487,
+      "text": "al., 2021] Tao Huang, Songjiang Li, Xu Jia,\nHuchuan Lu, and Jianzhuang Liu. Neighbor2neighbor:\nSelf-supervised denoising from single noisy images. In\nCVPR, pages 14781–14790, 2021.\n[Huang et al., 2022] Tao Huang, Songjiang Li, Xu Jia,\nHuchuan Lu, and Jianz"
+    },
+    {
+      "id": "chunk::SSRDepth_p13_chunk_7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.5175936222076416,
+      "text": "view & editing, Writing – original draft; Zhangyan Zhao: Writing – re-\nview & editing, Resources, Project administration, Funding acquisition;\nChenghua Zhang: Writing – review & editing; Haipeng Liu: Visualiza-\ntion.\nData availability\nData will be made av"
+    },
+    {
+      "id": "chunk::TDDC_p10_chunk_2",
+      "source": "data\\TDDC.pdf",
+      "page": 10,
+      "score": 0.5163305997848511,
+      "text": "eling for ex-\ntreme low-light photography. IEEE Transactions on Pat-\ntern Analysis and Machine Intelligence , 2021.\n[Xue et al., 2020] Feng Xue, Guirong Zhuo, Ziyuan Huang,\nWufei Fu, Zhuoyue Wu, and Marcelo H Ang. Toward hier-\narchical self-supervised mono"
+    },
+    {
+      "id": "chunk::s_p9_chunk_23",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.5159966945648193,
+      "text": "heng Yan, and Xiangyu Xu. Instant3d: Instant text-\nto-3d generation. arxiv: 2311.08403, 2023. 2\n[18] Lina Liu, Xibin Song, Mengmeng Wang, Yong Liu, and\nLiangjun Zhang. Self-supervised monocular depth estima-\ntion for all day images using domain separation."
+    },
+    {
+      "id": "chunk::Depth_Anything_p11_chunk_21",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.5148613452911377,
+      "text": "8\n[85] Youcai Zhang, Xinyu Huang, Jinyu Ma, Zhaoyang Li,\nZhaochuan Luo, Yanchun Xie, Yuzhuo Qin, Tong Luo, Yaqian\nLi, Shilong Liu, et al. Recognize anything: A strong image\ntagging model. arXiv:2306.03514, 2023. 4\n[86] Wenliang Zhao, Yongming Rao, Zuyan L"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_6",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5147916078567505,
+      "text": "et. Trailing 0 added to the values from [V ankadari\net al., 2023 ] and [Tosi et al., 2025 ]. Notation from Table 1.\n:\u0012\u0003'/\u000e)&&\n2ULJLQ\u0003,PDJH :\u0012\u0003'/\n:\u0012\u0003'/\u000e)&&\u000e2*'\nFigure 5: Visualization of ablation study on the distillation learning,\nfeature consistency const"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_34",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.5144355297088623,
+      "text": "ur method gives a more accurate pre-\ndiction in these regions compared to ADDS and RNW, which\nshows the robustness of our method.\nIn addition, the comparisons between the top and bottom\nhalves of Fig. 4.1 and Table 4.1 suggest that the performance\nof DA: A"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p10_chunk_30",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 10,
+      "score": 0.5140659213066101,
+      "text": "2022. 3\n[45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork-\nGAN: Seeing into the rainy night. In Proceedings of the\nEuropean Conference on Computer Vision, pages 155–170.\nSpringer, 2020. 6, 7, 8\n[46] Tinghui Zhou, Matthew Brown, Noah Snavely, a"
+    },
+    {
+      "id": "chunk::LED_p10_chunk_12",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.5140347480773926,
+      "text": "c\nVillafruela from the Fablab of Mines Paris for his assistance in creating the real-world pro-\ntotype. In addition, we extend our warm thanks to the Exwayz team for the excellent collab-\noration on the real-world ground truth processing. This work was gra"
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_4",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.5126396417617798,
+      "text": "y Loss for Anti-artifact . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18\nC.4 Eliminating the Bottleneck of Teacher Loss . . . . . . . . . . . . . . . . . . . . . . 19\nD Preliminaries of GRU 20\nE Addition Experiments Results 21\nE.1 Evaluati"
+    },
+    {
+      "id": "chunk::Jasmine_p12_chunk_21",
+      "source": "data\\Jasmine.pdf",
+      "page": 12,
+      "score": 0.5120437145233154,
+      "text": "nference on Computer Vision and Pattern Recognition, pages 10519–\n10529, 2024. 2, 7, 8, 18, 20\n[35] Adam Paszke et al. Pytorch: An imperative style, high-performance deep learning library. InNeurIPS,\npages 8026–8037, 2019. 7\n[36] Rui Peng, Ronggang Wang, Y"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p10_chunk_32",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 10,
+      "score": 0.5119138956069946,
+      "text": "ai, Yu Qiao, and Hongsheng Li.\nTip-adapter: Training-free CLIP-adapter for better vision-\nlanguage modeling. arXiv:2111.03930, 2021. 3\n[63] Renrui Zhang, Xiangfei Hu, Bohao Li, Siyuan Huang, Hanqiu\nDeng, Yu Qiao, Peng Gao, and Hongsheng Li. Prompt, gener-"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p10_chunk_32",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 10,
+      "score": 0.5119138956069946,
+      "text": "ai, Yu Qiao, and Hongsheng Li.\nTip-adapter: Training-free CLIP-adapter for better vision-\nlanguage modeling. arXiv:2111.03930, 2021. 3\n[63] Renrui Zhang, Xiangfei Hu, Bohao Li, Siyuan Huang, Hanqiu\nDeng, Yu Qiao, Peng Gao, and Hongsheng Li. Prompt, gener-"
+    },
+    {
+      "id": "chunk::Depth_Anything_p7_chunk_10",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 7,
+      "score": 0.5108462572097778,
+      "text": "c, respectively.\nMethod Encoder mIoU (s.s.) m.s.\nSegmenter [57] ViT-L [15] - 82.2\nSegFormer [69] MiT-B5 [69] 82.4 84.0\nMask2Former [12] Swin-L [38] 83.3 84.3\nOneFormer [23] Swin-L [38] 83.0 84.4\nOneFormer [23] ConvNeXt-XL [40] 83.6 84.6\nDDP [24] ConvNeXt-L"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_22",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.5103232264518738,
+      "text": "onv5 ELU\niconv4 3 1 128 8 ↑upconv4, econv3ELU\ndisp4 3 1 1 1 iconv4 Sigmoid\nupconv3 3 1 64 8 iconv4 ELU\niconv3 3 1 64 4 ↑upconv3, econv2ELU\ndisp3 3 1 1 1 iconv3 Sigmoid\nupconv2 3 1 32 4 iconv3 ELU\niconv2 3 1 32 2 ↑upconv2, econv1ELU\ndisp2 3 1 1 1 iconv2 Sig"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_22",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.5103232264518738,
+      "text": "onv5 ELU\niconv4 3 1 128 8 ↑upconv4, econv3ELU\ndisp4 3 1 1 1 iconv4 Sigmoid\nupconv3 3 1 64 8 iconv4 ELU\niconv3 3 1 64 4 ↑upconv3, econv2ELU\ndisp3 3 1 1 1 iconv3 Sigmoid\nupconv2 3 1 32 4 iconv3 ELU\niconv2 3 1 32 2 ↑upconv2, econv1ELU\ndisp2 3 1 1 1 iconv2 Sig"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::LED_p17_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.5886596441268921,
+      "text": "✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.021 0.13213.12212.9840.9570.9830.992\n✗ ✓ ✓ ✗ ✗ 5.760 0.201 0.020 0.137 13.616 16.174 0.9580.9830.992\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.309",
+      "estimated_tokens": 172
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5758666396141052,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.5650362968444824,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K",
+      "estimated_tokens": 66
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 296,
+    "compressed_context_tokens": 296,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 296,
+  "context_tokens": 296,
+  "prompt_token_estimate": 664,
+  "run_label": "sage_semantic_all_v1_chunk_paper_main_contributions",
+  "answer": "<think>\nThe user is asking about the main contributions of a paper, but the provided materials are very limited:\n\n1. [1] source: data\\LED.pdf - Contains only numerical data (table values) with checkmarks/crosses\n2. [2] source: data\\TDDC.pdf - Contains only an acknowledgment section mentioning funding\n3. [3] source: data\\Jasmine.pdf - Contains only an acknowledgment section and a partial reference\n\nNone of these materials contain information about the main contributions of any paper. The materials only show funding acknowledgments and numerical data, but no description of contributions.\n\nI should indicate that the information is insufficient to answer the question.\n</think>\n{\"answer\":\"资料不足，无法回答论文的主要贡献。\",\"items\":[],\"missing_information\":\"所提供的三份资料中，资料[1]仅为数值表格片段，资料[2]和资料[3]均仅为致谢(Acknowledgment)部分，缺少论文的摘要、引言或结论等能说明主要贡献的内容。需要提供包含论文摘要或正文贡献描述的资料。\"}",
+  "usage": {
+    "prompt_tokens": 720,
+    "completion_tokens": 216,
+    "total_tokens": 936,
+    "model": "MiniMax-M3"
+  }
+}

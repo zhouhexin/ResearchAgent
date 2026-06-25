@@ -1,0 +1,590 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_syn2real_depth_synthe_ask_baseline_none_e3db20d70287",
+  "dry_run": false,
+  "query": "Synthetic Adaptation 阶段如何生成训练数据并转移白天知识？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::s_p3_chunk_0",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.7369111180305481,
+      "text": "Figure 2. Illustration of our proposed pipeline. (a) Synthetic adaptation utilizes an augmentation model to generate paired data for training,\nand we also conduct learning in an auxiliary motion space. (b) Real adaptation leverages the daytime model and sy"
+    },
+    {
+      "id": "chunk::s_p3_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.720292329788208,
+      "text": "cenarios (e.g., rain, night-\ntime, etc.). We demonstrate our pipeline in Fig. 2, which\nconsists of a) Synthetic Adaptation (SA); b) Real Adap-\ntation (RA). In SA, we train a network on synthetic data\nwhere: 1) daytime images are fed into a pre-trained day-"
+    },
+    {
+      "id": "chunk::s_p4_chunk_18",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.7201710939407349,
+      "text": ", K).\n3.3. Real Adaptation with Consistency Reweighting\nand Structure Prior\nAlthough synthetic adaptation helps to bridge the gap be-\ntween daytime and synthetic adverse conditions, there are"
+    },
+    {
+      "id": "chunk::s_p1_chunk_7",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7199578285217285,
+      "text": "stimator in synthetic adverse conditions. In the in-\nnovative real adaptation, which targets to fix synthetic-real\ngaps, models trained earlier identify the weather-insensitive\nregions with a designed consistency-reweighting strategy to\nemphasize valid pse"
+    },
+    {
+      "id": "chunk::s_p5_chunk_25",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.703038215637207,
+      "text": "ctive functionLreal is\nLreal = α1Lcd + α2LKL\ndis + α3Lcv + α4LT (16)\nWith the designed learning procedure, our model can\ngradually fit better to multiple real conditions, rather than\nonly learn from the synthetic conditions.\n4. Experiments\n4.1. Implementat"
+    },
+    {
+      "id": "chunk::s_p1_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.6978422403335571,
+      "text": "ively. In the synthetic adaptation, we transfer\nmotion-structure knowledge inside cost volumes for better\nrobust representation, using a frozen daytime model to train\na depth estimator in synthetic adverse conditions. In the in-\nnovative real adaptation, w"
+    },
+    {
+      "id": "chunk::s_p2_chunk_11",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6908547878265381,
+      "text": "ective auxiliary space for robust representation, as it natu-\nrally filters redundant information while preserving motion\nand structural features. Thus, in the synthetic adaptation\n(SA) which learns on the synthetic data, we construct cost\nvolumes from hig"
+    },
+    {
+      "id": "chunk::s_p4_chunk_15",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6873252391815186,
+      "text": "is added into training:\nLcv = 1\nchw\nchwX\n|cvday − cvsyn|. (7)\nTo construct the correct cost volume, we also supervise\nthe Tsyn by Tday with an L2 loss LT . The synthetic adapta-\ntion is illustrated in Fig.2 (a), where the total objectiveLsyn\nis designed w"
+    },
+    {
+      "id": "chunk::s_p4_chunk_5",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6856915950775146,
+      "text": "normal and adverse conditions is important.\n3.2. Synthetic Adaptation with Motion and CV\nSince we do not have real daytime-adverse paired data, di-\nrectly adapting a daytime model to multiple adverse con-\nditions is difficult. Following [8, 22, 25, 28], w"
+    },
+    {
+      "id": "chunk::s_p8_chunk_25",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.6783387660980225,
+      "text": "timation, includ-\ning synthetic adaptation and real adaptation stages where\nthe cost volume is constructed to transfer motion-structure\nfeature from daytime to adverse conditions. We introduce a\nconsistency reweighting strategy and a structure prior con-\ns"
+    },
+    {
+      "id": "chunk::s_p6_chunk_20",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.6765380501747131,
+      "text": "s\nto align the scales. Thanks to [8, 25], we can utilize the\nsynthetic data from their pretrained augmentation models.\nFor the Distday, we obtain a fixed distribution through the\nwhole daytime training dataset, and utilize it for the real\nadaptation constr"
+    },
+    {
+      "id": "chunk::ACD_p1_chunk_4",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.6748660802841187,
+      "text": "method called ACDepth from\nthe perspective of high-quality training data gener-\nation and domain adaptation. Speciﬁcally, we in-\ntroduce a one-step diffusion model for generating\nsamples that simulate adverse weather conditions,\nconstructing a multi-tuple"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.674785852432251,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f"
+    },
+    {
+      "id": "chunk::s_p4_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6705214977264404,
+      "text": "odel to multiple adverse con-\nditions is difficult. Following [8, 22, 25, 28], we first\nadapt the pre-trained daytime models ΦD−day, ΦP −day\n(denoted as Φday in Fig.2) to synthetic adverse model\nΦD−syn, ΦP −syn. To realize that, a generative adversarial\nne"
+    },
+    {
+      "id": "chunk::s_p5_chunk_0",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6688681840896606,
+      "text": "still inevitable gaps between synthetic and real adverse con-\nditions [8, 22, 46]. Here, we analyze the performance of\nmodels ΦD−syn and ΦP −syn on synthetic and real data un-\nder the same condition (e.g., night), as shown in Fig.3 (a)\nand (b). In (a), per"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_6",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6650093793869019,
+      "text": "protocol. Thus, the remaining concern\nis the sufficient diversity or domain gaps between synthetic\nand real data, which sometimes limits generalization ability.\nAs demonstrated in our experiments, our choice of synthetic\ndatasets leads to impressive zero-s"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_6",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6650093793869019,
+      "text": "protocol. Thus, the remaining concern\nis the sufficient diversity or domain gaps between synthetic\nand real data, which sometimes limits generalization ability.\nAs demonstrated in our experiments, our choice of synthetic\ndatasets leads to impressive zero-s"
+    },
+    {
+      "id": "chunk::s_p2_chunk_17",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6649810075759888,
+      "text": "verse conditions. This structural prior provides explicit con-\nstraint when facing real adverse data, learning real-world\ninformation further effectively.\nWith the proposed synthetic-to-real adaptation pipeline,\nour model can provide much more robust depth"
+    },
+    {
+      "id": "chunk::s_p4_chunk_4",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6609914898872375,
+      "text": "the single-frame model. Training on monocular videos pro-\nvides a strong model to work in normal conditions but suf-\nfer from degradation cases, and that’s why adapting to both\nnormal and adverse conditions is important.\n3.2. Synthetic Adaptation with Moti"
+    },
+    {
+      "id": "chunk::s_p8_chunk_18",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.657812237739563,
+      "text": ", we compare learning from\nthe cost volume with direct learning from daytime features\n(Lf eat). The baseline is trained solely with depth loss in\nthe synthetic adaptation (SA). Due to space limitations, we\nprovide results for night and rain conditions in T"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6567745208740234,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.6566359400749207,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::s_p2_chunk_18",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6556597948074341,
+      "text": "thetic-to-real adaptation pipeline,\nour model can provide much more robust depth predictions\nin diverse conditions through different real-world datasets\n[5, 19, 37]. Our contributions are listed as follows:\n• We propose a novel synthetic-to-real adaptation"
+    },
+    {
+      "id": "chunk::s_p2_chunk_21",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.65028977394104,
+      "text": "ng.\n• We design a novel real adaptation with two strategies\nnamed consistency-reweighting and structure prior con-\nstraint, which effectively learns from real adverse data.\n• Through the experiments, our method achieves state-of-\nthe-art performance on mul"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_chunk_6",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.6456775665283203,
+      "text": "y human visual adaptation, we propose the GT-\nMean Loss, which dynamically balances two optimization\nobjectives to enable end-to-end training:\n• Original Loss Term. Maintain the model’s baseline ca-\npabilities by directly optimizing L(f (x), y).\n• Brightne"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_chunk_6",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.6456775665283203,
+      "text": "y human visual adaptation, we propose the GT-\nMean Loss, which dynamically balances two optimization\nobjectives to enable end-to-end training:\n• Original Loss Term. Maintain the model’s baseline ca-\npabilities by directly optimizing L(f (x), y).\n• Brightne"
+    },
+    {
+      "id": "chunk::s_p6_chunk_21",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.6450648903846741,
+      "text": "he\nwhole daytime training dataset, and utilize it for the real\nadaptation constraint. Similar to [8, 22], our training is\nconducted with a mixture of daytime and adverse data, and\nmore details can be found in the supplementary.\n4.2. Datasets\nOur approach i"
+    },
+    {
+      "id": "chunk::s_p8_chunk_24",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.6445156931877136,
+      "text": "and highlights the\nimportance of synthetic-to-real adaptation.\n6. Conclusion\nIn this work, we propose a synthetic-to-real learning\npipeline for self-supervised robust depth estimation, includ-\ning synthetic adaptation and real adaptation stages where\nthe"
+    },
+    {
+      "id": "chunk::s_p5_chunk_26",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6414443254470825,
+      "text": "r than\nonly learn from the synthetic conditions.\n4. Experiments\n4.1. Implementation Details\nThe experiments on all models of different stages are con-\nducted on the same ResNet architecture [13], so do the base-\nlines. The training for the Φday and the Φsy"
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.640647292137146,
+      "text": "rify the eﬀectiveness of various compo-\nnents of our model, we decompose our method into ﬁve diﬀerent con-\nﬁgurations. Notably, the SQGA module is indispensable as our baseline \nstructure, so all conﬁgurations are modiﬁed based on SQGA. Model [a]\nis establ"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p2_chunk_15",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 2,
+      "score": 0.6405327320098877,
+      "text": "Net. Turning Stable Diffu-\nsion into Marigold requires only synthetic RGB-D data (in\nour case, the Hypersim [37] and Virtual KITTI [7] datasets)\nand a few GPU days on a single consumer graphics card.\nEmpowered by the underlying diffusion prior of natural i"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p2_chunk_15",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 2,
+      "score": 0.6405326128005981,
+      "text": "Net. Turning Stable Diffu-\nsion into Marigold requires only synthetic RGB-D data (in\nour case, the Hypersim [37] and Virtual KITTI [7] datasets)\nand a few GPU days on a single consumer graphics card.\nEmpowered by the underlying diffusion prior of natural i"
+    },
+    {
+      "id": "chunk::ACD_p2_chunk_4",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.6395284533500671,
+      "text": "he translated image are unrealistic and un-\nnatural (shown in Figure. 1(a)), which signiﬁcantly affects the\ngeneralization from normal scenarios to real adverse weather.\nIn addition, existing methods are often vulnerable to distur-\nbances in complex scenes"
+    },
+    {
+      "id": "chunk::dav2_p35_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 35,
+      "score": 0.6388661861419678,
+      "text": "the authors should point it out. For example, it is legitimate\nto point out that an improvement in the quality of generative models could be used to\ngenerate deepfakes for disinformation. On the other hand, it is not needed to point out\nthat a generic algo"
+    },
+    {
+      "id": "chunk::s_p10_chunk_30",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.6385621428489685,
+      "text": "ion , pages 9569–\n9578, 2023. 4, 5\n[47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING,\nYuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the\ncommon appearance-boundary adaptation for nighttime op-\ntical flow. InThe Twelfth International Conference on Lear"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p8_chunk_7",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 8,
+      "score": 0.6374431848526001,
+      "text": "e time and\nannealing further enhances this consistency.\nTraining data domain. To better understand the impact\nof the synthetic datasets used for our fine-tuning protocol,\nwe ablate on a photorealistic street-scene Virtual KITTI [7],\nand a more diverse and"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p8_chunk_7",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 8,
+      "score": 0.6374431848526001,
+      "text": "e time and\nannealing further enhances this consistency.\nTraining data domain. To better understand the impact\nof the synthetic datasets used for our fine-tuning protocol,\nwe ablate on a photorealistic street-scene Virtual KITTI [7],\nand a more diverse and"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_1",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.637414813041687,
+      "text": "Key Research and Devel-\nopment Program of China (U22A2047), the Key R&D Program of\nZhejiang under Grant No. (2025C03001, 2023C01044), the Funda-\nmental Research Funds for the Provincial Universities of Zhejiang\n(GK259909299001-023), the National Nature Sci"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p10_chunk_2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 10,
+      "score": 0.6365134716033936,
+      "text": "er, Caner Hazir-\nbas, Daniel Cremers, Alexey Dosovitskiy, and Thomas Brox.\nWhat makes good synthetic training data for learning dispar-\nity and optical ﬂow estimation? IJCV, 2018.\n[42] Nikolaus Mayer, Eddy Ilg, Philip H ¨ausser, Philipp Fischer,\nDaniel Cre"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p10_chunk_2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 10,
+      "score": 0.6365134716033936,
+      "text": "er, Caner Hazir-\nbas, Daniel Cremers, Alexey Dosovitskiy, and Thomas Brox.\nWhat makes good synthetic training data for learning dispar-\nity and optical ﬂow estimation? IJCV, 2018.\n[42] Nikolaus Mayer, Eddy Ilg, Philip H ¨ausser, Philipp Fischer,\nDaniel Cre"
+    },
+    {
+      "id": "chunk::TDDC_p1_chunk_18",
+      "source": "data\\TDDC.pdf",
+      "page": 1,
+      "score": 0.6362447738647461,
+      "text": "methods\nand photometric loss repair-based methods are proposed re-\ncently. The domain adaptation-based methods [Liu et al. ,\n2021; Wang et al. , 2021; Zhao et al. , 2022a; Vankadari et\nal., 2020] apply extra adversarial loss or domain transfer net-\nwork to"
+    },
+    {
+      "id": "chunk::s_p2_chunk_32",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6353321075439453,
+      "text": "ecent methods [8, 22, 25, 28, 29] target multiple con-\nditions, using data augmentation and generation techniques\nsuch as GANs and diffusion models [21, 38, 45, 49] to cre-"
+    },
+    {
+      "id": "chunk::DepthDark_p2_chunk_27",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.6336476802825928,
+      "text": "hrough domain adaptation. ITDFA\n[50] employs migrated image pairs to constrain the training process\nin both feature and output spaces. ADDS [24] utilizes independent\nencoders to decompose day and night images into invariant and\nvariant feature maps, estima"
+    },
+    {
+      "id": "chunk::dav2_p35_chunk_4",
+      "source": "data\\dav2.pdf",
+      "page": 35,
+      "score": 0.6329073905944824,
+      "text": "nformation. On the other hand, it is not needed to point out\nthat a generic algorithm for optimizing neural networks could enable people to train\nmodels that generate Deepfakes faster.\n• The authors should consider possible harms that could arise when the"
+    },
+    {
+      "id": "chunk::s_p5_chunk_5",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6301896572113037,
+      "text": "leverage the abilities of ΦD−day and ΦD−syn by care-\nfully designing a Real Adaptation stage in Fig. 3 (b).\nConsistency Reweighting Strategy A straightforward su-\npervision signal for Dreal is Dsyn, generated by ΦD−syn\non real data, which can serve as a p"
+    },
+    {
+      "id": "chunk::dav2_p4_chunk_16",
+      "source": "data\\dav2.pdf",
+      "page": 4,
+      "score": 0.6301793456077576,
+      "text": "ynthetic ones. Such distribution shift makes models struggle to\ntransfer from synthetic to real images, even if the two data sources share similar layouts [57, 9].\nLimitation 2. Synthetic images have restricted scene coverage . They are iteratively sampled"
+    },
+    {
+      "id": "chunk::s_p2_chunk_13",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6300666332244873,
+      "text": "art from\nlearning only with pseudo-depth labels.\nTo address the synthetic-real gaps, we propose a novel\nreal adaptation (RA) stage. One challenge is to find valid\nsupervision signals from earlier trained models, and we\ndesign a consistency-reweighting stra"
+    },
+    {
+      "id": "chunk::s_p7_chunk_20",
+      "source": "data\\s.pdf",
+      "page": 7,
+      "score": 0.629793107509613,
+      "text": "0.0%, 2.8% on AbsRel, SqRel, and RMSE,\ndemonstrating stronger generalization ability over models\ntrained on only synthetic data. Notably, our model signifi-\ncantly outperforms the fairly-designed baseline [33]+[8] in\nboth rain and fog conditions."
+    },
+    {
+      "id": "chunk::dav2_p12_chunk_1",
+      "source": "data\\dav2.pdf",
+      "page": 12,
+      "score": 0.6294573545455933,
+      "text": "e\nbut not perceive. arXiv:2404.12390, 2024. 8\n[22] Yaroslav Ganin and Victor Lempitsky. Unsupervised domain adaptation by backpropagation.\nIn ICML, 2015. 10\n[23] Yaroslav Ganin, Evgeniya Ustinova, Hana Ajakan, Pascal Germain, Hugo Larochelle, François\nLavi"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p2_chunk_12",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 2,
+      "score": 0.6292831301689148,
+      "text": "or other annotations. Synthetic train-\ning data is an alternative [41], but it is not trivial to generate\nlarge amounts of synthetic data containing varied real-world\nappearance and motion. Recent work has shown that con-\nventional structure-from-motion (S"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::s_p3_chunk_0",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.7369111180305481,
+      "text": "Figure 2. Illustration of our proposed pipeline. (a) Synthetic adaptation utilizes an augmentation model to generate paired data for training,\nand we also conduct learning in an auxiliary motion space. (b) Real adaptation leverages the daytime model and sy",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::s_p3_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.720292329788208,
+      "text": "cenarios (e.g., rain, night-\ntime, etc.). We demonstrate our pipeline in Fig. 2, which\nconsists of a) Synthetic Adaptation (SA); b) Real Adap-\ntation (RA). In SA, we train a network on synthetic data\nwhere: 1) daytime images are fed into a pre-trained day-",
+      "estimated_tokens": 74
+    },
+    {
+      "id": "chunk::s_p4_chunk_18",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.7201710939407349,
+      "text": ", K).\n3.3. Real Adaptation with Consistency Reweighting\nand Structure Prior\nAlthough synthetic adaptation helps to bridge the gap be-\ntween daytime and synthetic adverse conditions, there are",
+      "estimated_tokens": 41
+    },
+    {
+      "id": "chunk::s_p1_chunk_7",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7199578285217285,
+      "text": "stimator in synthetic adverse conditions. In the in-\nnovative real adaptation, which targets to fix synthetic-real\ngaps, models trained earlier identify the weather-insensitive\nregions with a designed consistency-reweighting strategy to\nemphasize valid pse",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::s_p5_chunk_25",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.703038215637207,
+      "text": "ctive functionLreal is\nLreal = α1Lcd + α2LKL\ndis + α3Lcv + α4LT (16)\nWith the designed learning procedure, our model can\ngradually fit better to multiple real conditions, rather than\nonly learn from the synthetic conditions.\n4. Experiments\n4.1. Implementat",
+      "estimated_tokens": 73
+    },
+    {
+      "id": "chunk::s_p1_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.6978422403335571,
+      "text": "ively. In the synthetic adaptation, we transfer\nmotion-structure knowledge inside cost volumes for better\nrobust representation, using a frozen daytime model to train\na depth estimator in synthetic adverse conditions. In the in-\nnovative real adaptation, w",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::s_p2_chunk_11",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6908547878265381,
+      "text": "ective auxiliary space for robust representation, as it natu-\nrally filters redundant information while preserving motion\nand structural features. Thus, in the synthetic adaptation\n(SA) which learns on the synthetic data, we construct cost\nvolumes from hig",
+      "estimated_tokens": 51
+    },
+    {
+      "id": "chunk::s_p4_chunk_15",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6873252391815186,
+      "text": "is added into training:\nLcv = 1\nchw\nchwX\n|cvday − cvsyn|. (7)\nTo construct the correct cost volume, we also supervise\nthe Tsyn by Tday with an L2 loss LT . The synthetic adapta-\ntion is illustrated in Fig.2 (a), where the total objectiveLsyn\nis designed w",
+      "estimated_tokens": 75
+    },
+    {
+      "id": "chunk::s_p4_chunk_5",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6856915950775146,
+      "text": "normal and adverse conditions is important.\n3.2. Synthetic Adaptation with Motion and CV\nSince we do not have real daytime-adverse paired data, di-\nrectly adapting a daytime model to multiple adverse con-\nditions is difficult. Following [8, 22, 25, 28], w",
+      "estimated_tokens": 63
+    },
+    {
+      "id": "chunk::s_p8_chunk_25",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.6783387660980225,
+      "text": "timation, includ-\ning synthetic adaptation and real adaptation stages where\nthe cost volume is constructed to transfer motion-structure\nfeature from daytime to adverse conditions. We introduce a\nconsistency reweighting strategy and a structure prior con-\ns",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::s_p6_chunk_20",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.6765380501747131,
+      "text": "s\nto align the scales. Thanks to [8, 25], we can utilize the\nsynthetic data from their pretrained augmentation models.\nFor the Distday, we obtain a fixed distribution through the\nwhole daytime training dataset, and utilize it for the real\nadaptation constr",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::ACD_p1_chunk_4",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.6748660802841187,
+      "text": "method called ACDepth from\nthe perspective of high-quality training data gener-\nation and domain adaptation. Speciﬁcally, we in-\ntroduce a one-step diffusion model for generating\nsamples that simulate adverse weather conditions,\nconstructing a multi-tuple",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.674785852432251,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f",
+      "estimated_tokens": 65
+    },
+    {
+      "id": "chunk::s_p4_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6705214977264404,
+      "text": "odel to multiple adverse con-\nditions is difficult. Following [8, 22, 25, 28], we first\nadapt the pre-trained daytime models ΦD−day, ΦP −day\n(denoted as Φday in Fig.2) to synthetic adverse model\nΦD−syn, ΦP −syn. To realize that, a generative adversarial\nne",
+      "estimated_tokens": 85
+    },
+    {
+      "id": "chunk::s_p5_chunk_0",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6688681840896606,
+      "text": "still inevitable gaps between synthetic and real adverse con-\nditions [8, 22, 46]. Here, we analyze the performance of\nmodels ΦD−syn and ΦP −syn on synthetic and real data un-\nder the same condition (e.g., night), as shown in Fig.3 (a)\nand (b). In (a), per",
+      "estimated_tokens": 76
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_6",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6650093793869019,
+      "text": "protocol. Thus, the remaining concern\nis the sufficient diversity or domain gaps between synthetic\nand real data, which sometimes limits generalization ability.\nAs demonstrated in our experiments, our choice of synthetic\ndatasets leads to impressive zero-s",
+      "estimated_tokens": 46
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_6",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6650093793869019,
+      "text": "protocol. Thus, the remaining concern\nis the sufficient diversity or domain gaps between synthetic\nand real data, which sometimes limits generalization ability.\nAs demonstrated in our experiments, our choice of synthetic\ndatasets leads to impressive zero-s",
+      "estimated_tokens": 46
+    },
+    {
+      "id": "chunk::s_p2_chunk_17",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6649810075759888,
+      "text": "verse conditions. This structural prior provides explicit con-\nstraint when facing real adverse data, learning real-world\ninformation further effectively.\nWith the proposed synthetic-to-real adaptation pipeline,\nour model can provide much more robust depth",
+      "estimated_tokens": 42
+    },
+    {
+      "id": "chunk::s_p4_chunk_4",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.6609914898872375,
+      "text": "the single-frame model. Training on monocular videos pro-\nvides a strong model to work in normal conditions but suf-\nfer from degradation cases, and that’s why adapting to both\nnormal and adverse conditions is important.\n3.2. Synthetic Adaptation with Moti",
+      "estimated_tokens": 54
+    },
+    {
+      "id": "chunk::s_p8_chunk_18",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.657812237739563,
+      "text": ", we compare learning from\nthe cost volume with direct learning from daytime features\n(Lf eat). The baseline is trained solely with depth loss in\nthe synthetic adaptation (SA). Due to space limitations, we\nprovide results for night and rain conditions in T",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6567745208740234,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.6566359400749207,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K",
+      "estimated_tokens": 66
+    },
+    {
+      "id": "chunk::s_p2_chunk_18",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.6556597948074341,
+      "text": "thetic-to-real adaptation pipeline,\nour model can provide much more robust depth predictions\nin diverse conditions through different real-world datasets\n[5, 19, 37]. Our contributions are listed as follows:\n• We propose a novel synthetic-to-real adaptation",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::s_p2_chunk_21",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.65028977394104,
+      "text": "ng.\n• We design a novel real adaptation with two strategies\nnamed consistency-reweighting and structure prior con-\nstraint, which effectively learns from real adverse data.\n• Through the experiments, our method achieves state-of-\nthe-art performance on mul",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_chunk_6",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.6456775665283203,
+      "text": "y human visual adaptation, we propose the GT-\nMean Loss, which dynamically balances two optimization\nobjectives to enable end-to-end training:\n• Original Loss Term. Maintain the model’s baseline ca-\npabilities by directly optimizing L(f (x), y).\n• Brightne",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_chunk_6",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.6456775665283203,
+      "text": "y human visual adaptation, we propose the GT-\nMean Loss, which dynamically balances two optimization\nobjectives to enable end-to-end training:\n• Original Loss Term. Maintain the model’s baseline ca-\npabilities by directly optimizing L(f (x), y).\n• Brightne",
+      "estimated_tokens": 55
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1489,
+    "compressed_context_tokens": 1489,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1489,
+  "context_tokens": 1489,
+  "prompt_token_estimate": 2171,
+  "run_label": "sage_semantic_all_v1_chunk_syn2real_depth_synthetic_adaptation_data_flow",
+  "answer": "<think>The user is asking about how the Synthetic Adaptation stage generates training data and transfers daytime knowledge. Let me analyze the relevant materials.\n\nFrom the materials, particularly about Synthetic Adaptation (SA):\n\n[2] mentions: \"In SA, we train a network on synthetic data where: 1) daytime images are fed into a pre-trained day-\"\n\n[9] mentions: \"Since we do not have real daytime-adverse paired data, directly adapting a daytime model to multiple adverse conditions is difficult. Following [8, 22, 25, 28], we first adapt the pre-trained daytime models ΦD−day, ΦP −day (denoted as Φday in Fig.2) to synthetic adverse model ΦD−syn, ΦP −syn.\"\n\n[14] mentions the adaptation to synthetic adverse model.\n\n[1] mentions: \"Synthetic adaptation utilizes an augmentation model to generate paired data for training, and we also conduct learning in an auxiliary motion space.\"\n\n[7] mentions: \"in the synthetic adaptation (SA) which learns on the synthetic data, we construct cost volumes from hig-\"\n\n[6] mentions: \"In the synthetic adaptation, we transfer motion-structure knowledge inside cost volumes for better robust representation, using a frozen daytime model to train a depth estimator in synthetic adverse conditions.\"\n\n[8] mentions the Lcv loss for cost volume and L2 loss LT for supervision.\n\n[10] mentions: \"including synthetic adaptation and real adaptation stages where the cost volume is constructed to transfer motion-structure feature from daytime to adverse conditions.\"\n\nSo the answer should cover:\n1. Training data generation: uses an augmentation model to generate paired synthetic data (daytime + adverse conditions) following [8, 22, 25, 28]\n2. Transfer daytime knowledge: uses frozen daytime model, constructs cost volumes in auxiliary motion space, transfers motion-structure knowledge\n3. Loss functions: Lcv (cost volume loss), LT (L2 loss)\n\nLet me construct the JSON response.</think>\n\n{\n  \"answer\": \"Synthetic Adaptation 通过预训练的增强模型将白天图像转换为合成的恶劣条件图像以生成配对训练数据，并利用冻结的白天模型在辅助运动空间中构建代价体积（cost volume），通过一致性约束和 L2 监督将运动-结构知识从白天迁移到合成恶劣条件。\",\n  \"items\": [\n    {\n      \"name\": \"训练数据生成方式\",\n      \"description\": \"遵循 [8, 22, 25, 28]，利用预训练的增强模型将白天图像生成合成恶劣条件图像，构建白天-合成恶劣条件的配对数据，用于训练合成恶劣模型 Φ_D-syn、Φ_P-syn。\",\n      \"citations\": [1, 2, 9, 14]\n    },\n    {\n      \"name\": \"白天知识转移机制\",\n      \"description\": \"使用冻结的白天模型 Φ_day，在辅助运动空间中从合成与白天特征构建代价体积（cost volume），并通过 L_cv 损失和 L_T（L2 损失）进行监督，将运动-结构知识从白天迁移到合成恶劣条件。\",\n      \"citations\": [6, 7, 8, 10]\n    },\n    {\n      \"name\": \"总目标函数\",\n      \"description\": \"合成适应阶段的损失 L_syn 由代价体积损失 L_cv 和变换监督 L_T 等组成，用于学习合成恶劣条件下的深度估计。\",\n      \"citations\": [8]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 2187,
+    "completion_tokens": 708,
+    "total_tokens": 2895,
+    "model": "MiniMax-M3"
+  }
+}

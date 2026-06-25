@@ -1,0 +1,414 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_paper_ablation_result_ask_baseline_none_2e2caf1d8ca7",
+  "dry_run": false,
+  "query": "论文的 BPG/ING 消融实验说明了什么？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::TDDC_p15_chunk_20",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.6609804630279541,
+      "text": "d, as shown\nin the cyan dashed boxes. The ING simulates the potential\nimaging noises in the dark area, thus present better depth pre-\ndiction at the background, such as the sky. The full model\nreceives the merits of BPG and ING, and thus has the best\npredi"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_10",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6559274196624756,
+      "text": "th the baseline, BPG im-\nproves ABS rel by 19.3% and RMSE by 14.0%, and ING im-\nproves ABS rel by 18.0% and RMSE by 9.1%. Besides, the\njoint application of BPG and ING achieves the best scores\nwith 20.8% improvement on ABS rel, 20.1% on RMSE and\n35.3% on δ"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_19",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.654194712638855,
+      "text": "arger DepthNet backbone.\nE.4 More visualization for ablation analyses\nIn Fig E.1, the BPG helps the regions where highlight spots\nfrequently occur, such as the cars and the road, as shown\nin the cyan dashed boxes. The ING simulates the potential\nimaging no"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_5",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.6518101692199707,
+      "text": "dard et al., 2019;\nZhao et al., 2022b].\nFor BPG, we set F min = smin\nF = 0.5 , empirically. Be-\nsides, we use smax\nF = 2, Fmax = 2 as the default setting.\nAs to ING, we set K min = 0.1 following ELD [Wei et al.,\n2020]. We use K max = 1with P + T Las the de"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_21",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.6507087349891663,
+      "text": ". The full model\nreceives the merits of BPG and ING, and thus has the best\nprediction performance at the mentioned areas. More quanti-\ntative study is in Sec. 4.4 in the main paper.\nInput\nBaseline\nBPG\nING\nFull\nFigure E.1: Ablation test. Left: test on nuSce"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_14",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6457622051239014,
+      "text": "izes a further ablation study on our BPG. The\nexperiments show that our Re-rendering submodule plays\nan important role within BPG. Besides, BPG achieves the\nbest result when F max is set to 2. Meanwhile, Fig. 4.3\npresents a detailed ablation on our ING. Ap"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_12",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6456234455108643,
+      "text": "ith 13.2%\non ABS rel and 9.7% on RMSE.\nIn addition, Table 4.2 shows that the joint application\nof BPG and ING significantly improves RMSE (7.2% in\nnuScenec-Night and 8.4% in RobotCar-Night compared to\nthe second-best), suggesting that our data distribution"
+    },
+    {
+      "id": "chunk::Depth_Anything_p11_chunk_22",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.6447185277938843,
+      "text": "gging model. arXiv:2306.03514, 2023. 4\n[86] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie\nZhou, and Jiwen Lu. Unleashing text-to-image diffusion\nmodels for visual perception. In ICCV, 2023. 6\n[87] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude"
+    },
+    {
+      "id": "chunk::Depth_Anything_p11_chunk_21",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.6416046619415283,
+      "text": "8\n[85] Youcai Zhang, Xinyu Huang, Jinyu Ma, Zhaoyang Li,\nZhaochuan Luo, Yanchun Xie, Yuzhuo Qin, Tong Luo, Yaqian\nLi, Shilong Liu, et al. Recognize anything: A strong image\ntagging model. arXiv:2306.03514, 2023. 4\n[86] Wenliang Zhao, Yongming Rao, Zuyan L"
+    },
+    {
+      "id": "chunk::s_p10_chunk_13",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.6392657160758972,
+      "text": "c fusion.\narXiv preprint arXiv:2407.09303, 2024. 1, 2, 5\n[35] Yihang Wu, Xiao Cao, Kaixin Li, Zitan Chen, Haonan Wang,\nLei Meng, and Zhiyong Huang. Towards better text-to-\nimage generation alignment via attention modulation.ArXiv,\nabs/2404.13899, 2024. 2\n["
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_18",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.6353129148483276,
+      "text": "relationship with the noise intensity. Therefore, we\nappoint K as ING Intensity. Similar in BPG, we make ING\nIntensity following the log uniform:\nlog K ∼ U(log K min, log K max). (14)\nFinally, with the simulated raw image RLR\nt , the sampled\nshot noise Np"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_4",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.6351765394210815,
+      "text": "used with\n0.9 as exponential. The total training step is set to 40,000.\nWe use the same augmentation for the image splits as applied\nin [Liu et al., 2021; Wang et al., 2021; Godard et al., 2019;\nZhao et al., 2022b].\nFor BPG, we set F min = smin\nF = 0.5 , e"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_23",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.6349585056304932,
+      "text": "ghtness Peak Generator, Image Noise Generator and\nBPG+ING for data compensation, respectively."
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_3",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6345475912094116,
+      "text": ",\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\nFigure 2.1: Overview of our data distribution compensation training framework . The proposed BPG and ING form our compensation\nstage, whose simple processes are also visualized in the top right. Note that BPG and ING will not participate in"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_8",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.6298917531967163,
+      "text": ",000. To maintain\nperformance on daytime images, BPG and ING processing\nrates are set to 0.5, and these two probabilities are indepen-\ndent of each other.\nD.4 Augmentation on light source images\nFor the sampled light source image, a random rotation\nU (0, 2"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_22",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.6292945146560669,
+      "text": "aper.\nInput\nBaseline\nBPG\nING\nFull\nFigure E.1: Ablation test. Left: test on nuScenes-Night. Right:\ntest on RobotCar-Night. Baseline, BPG, ING, and Full mean us-\ning nothing, Brightness Peak Generator, Image Noise Generator and\nBPG+ING for data compensation,"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.6270811557769775,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6270811557769775,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::TDDC_p4_chunk_15",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.6192127466201782,
+      "text": "sources number NF and a\nresize scale rate sF as the BPG IntensityF . To enrich outputs\nwhile avoiding numerous aggressive results, a log uniform\ndistribution is applied to select NF and F :\nlog sF ∼ U(log smin\nF , log smax\nF ),\nlog F ∼ U(log F min, log F m"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_36",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.618493378162384,
+      "text": "GGRAPH Asia 2020 Technical\nCommunications. 1–4.\n[28] Bui Tuong Phong. 1998. Illumination for computer generated pictures. InSeminal\ngraphics: pioneering efforts that shaped the field . 95–101.\n[29] Weichao Qiu, Fangwei Zhong, Yi Zhang, Siyuan Qiao, Zihao X"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_3",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6138851046562195,
+      "text": "on on BPG. F max = 0 indicates the baseline.\nThe result of BPG with or without Re-rendering is shown. (Best\nviewed with zoom.)\n(a) ABS rel\n0 .010 .11 1 01 009.29.49.69.810.010.210.410.610.8RMSE \n0\n (b) RMSE\n0 .010 .11 1 01 000.450.480.510.540.570.60\n0\n (c)"
+    },
+    {
+      "id": "chunk::TDDC_p4_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.6108493804931641,
+      "text": "effect of light source imaging and reflec-\ntions are considered in the sampling. Since it makes peaks of\nbrightness in the original image plane, we call it Brightness\nPeak Generator (BPG).\nLight Source Sample\nDue to the diffraction/wave optics effects[Lips"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.6105301380157471,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_chunk_18",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6097216606140137,
+      "text": "ning: A survey. IEEE Transactions on Pattern Analysis\nMachine Intelligence, 44(12):9396–9416, 2022. 1, 2\n[18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng\nFeng, and Chen Change Loy. Iterative prompt learning for\nunsupervised backlit image enhancement"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_chunk_18",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6097216606140137,
+      "text": "ning: A survey. IEEE Transactions on Pattern Analysis\nMachine Intelligence, 44(12):9396–9416, 2022. 1, 2\n[18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng\nFeng, and Chen Change Loy. Iterative prompt learning for\nunsupervised backlit image enhancement"
+    },
+    {
+      "id": "chunk::TDDC_p4_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.607933521270752,
+      "text": "ased on Flare7K [Dai et al., 2022] dataset, which is the\nonly light source dataset with 7000 samples.\nWhen applied, BPG randomly samples a single image from\nthe light source bank. Then, the image will be scaled to the\nstandard size which is determined by t"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_1",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.6071986556053162,
+      "text": "tional Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund from Guangdong Laboratory of Artiﬁcial Intel-\nligence and Digital Economy (SZ) (GML-KF-24-09).\nReferences\n[Arampatzakis et al., 2023 ] V asileios Arampatzakis, George\nPavlidis,"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_7",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.6057841777801514,
+      "text": "our main paper.\nSince the processing of Re-rendering requires the corre-\nsponding depth map as input, decay usage of BPG and ING\nis applied, and the starting step is set to 20,000. To maintain\nperformance on daytime images, BPG and ING processing\nrates ar"
+    },
+    {
+      "id": "chunk::s_p9_chunk_22",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.6032313108444214,
+      "text": "tion. In Proceedings of the IEEE/CVF International\nConference on Computer Vision (ICCV), pages 5106–5115,\n2023.\n[17] Ming Li, Pan Zhou, Jia-Wei Liu, Jussi Keppo, Min Lin,\nShuicheng Yan, and Xiangyu Xu. Instant3d: Instant text-\nto-3d generation. arxiv: 2311"
+    },
+    {
+      "id": "chunk::LED_p10_chunk_12",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.6017098426818848,
+      "text": "c\nVillafruela from the Fablab of Mines Paris for his assistance in creating the real-world pro-\ntotype. In addition, we extend our warm thanks to the Exwayz team for the excellent collab-\noration on the real-world ground truth processing. This work was gra"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p3_chunk_6",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 3,
+      "score": 0.6007176041603088,
+      "text": "hat ingest additional information on which\nthe output is then conditioned, similar to cGAN [ 29] and\ncV AE [48]. Conditioning can take various forms, including\ntext [41], other images [40], or semantic maps [61].\nIn the realm of text-based image generation"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p3_chunk_6",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.6007176041603088,
+      "text": "hat ingest additional information on which\nthe output is then conditioned, similar to cGAN [ 29] and\ncV AE [48]. Conditioning can take various forms, including\ntext [41], other images [40], or semantic maps [61].\nIn the realm of text-based image generation"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6003354787826538,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci"
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_12",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.5985321998596191,
+      "text": "ided that copies are not made or distributed\nfor profit or commercial advantage and that copies bear this notice and the full citation\non the first page. Copyrights for third-party components of this work must be honored.\nFor all other uses, contact the ow"
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_1",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.5969233512878418,
+      "text": "in [Yin et al., 2019] 114 0.875 0.976 0.994 0.108 0.416 0.048\nDA V[Huynh et al., 2020] 25 0.882 0.980 0.996 0.108 0.412 -\nBTS [Lee et al., 2019] 47 0.885 0.978 0.994 0.110 0.392 0.047\nAdabins[Bhat et al., 2021] 78 0.903 0.984 0.997 0.103 0.364 0.044\nDPT* ["
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_13",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5966417789459229,
+      "text": "botCar-Night compared to\nthe second-best), suggesting that our data distribution com-\npensation benefits on the prediction robustness.\nAblating into BPG and ING\nFig. 4.2 visualizes a further ablation study on our BPG. The\nexperiments show that our Re-rende"
+    },
+    {
+      "id": "chunk::TDDC_p11_chunk_10",
+      "source": "data\\TDDC.pdf",
+      "page": 11,
+      "score": 0.5955699682235718,
+      "text": "ing sets, respcetively. Time means the total training time compared\nto our training. All methods are trained on a single A60.\nExperiment Setting\nIn the training, all experiments in this part use our BPG and\nING for preprocessing. Full disturb and pose dis"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.5952199697494507,
+      "text": "92\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.3090.206 0.022 0.149 14.862 16.048 0.954 0.981 0.990\n✗ ✓ ✗ ✓ ✓ 5.8090.186 0.0180.125 12.21014.6830.961 0.985 0.993\n✗ ✓ ✓ ✗ ✓ 5.4220.2000.0180.125 12.50316.1200.961 0.985 0.993\nTab"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_11",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5950937867164612,
+      "text": "the best scores\nwith 20.8% improvement on ABS rel, 20.1% on RMSE and\n35.3% on δ1. For RobotCar-Night, the joint application of\nBPG and ING still achieves a significant boost with 13.2%\non ABS rel and 9.7% on RMSE.\nIn addition, Table 4.2 shows that the joi"
+    },
+    {
+      "id": "chunk::TDDC_p4_chunk_20",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.5949099063873291,
+      "text": "ing the color and texture of\nobjects in the image plane. Thus, we build up a Re-rendering\nsubmodule within BPG for compensation.\nWith limited and biased information (3D structure, surface\nnormal, material, etc) about the scene, we find the popular\nused Pho"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.590283989906311,
+      "text": "Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. In ECCV, pages 696–712, 2022. 3\nAppendix\nIn this supplementary material, we provide additional im-\nplementation details in Appendix A and present additional\nquantitative and qua"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.590283989906311,
+      "text": "Chong Zhou, Chen Change Loy, and Bo Dai. Extract free\ndense labels from CLIP. In ECCV, pages 696–712, 2022. 3\nAppendix\nIn this supplementary material, we provide additional im-\nplementation details in Appendix A and present additional\nquantitative and qua"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5902224183082581,
+      "text": "n: night, r: rain, a: all. T†: Translated\nvia GAN, T‡: Translated via Diffusion. Visual support: 1st and 2nd.\nFigure. 4(a) presents qualitative results. md4all-DD is partic-\nularly sensitive to water reﬂections in rainy scenes. For exam-\nple, in the ﬁrst a"
+    },
+    {
+      "id": "chunk::DepthDark_p1_chunk_2",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.5871342420578003,
+      "text": "ing, China\nBolun Zheng\nblzheng@hdu.edu.cn\nHangzhou Dianzi University\nHangzhou, China\nChenggang Yan\ncgyan@hdu.edu.cn\nHangzhou Dianzi University\nHangzhou, China\nAnke Xue\nakxue@hdu.edu.cn\nHangzhou Dianzi University\nHangzhou, China\nAbstract\nIn recent years, fo"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_2",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.5860521197319031,
+      "text": "n-\nerator (ING) to model nighttime noise distribution. The joint\napplication of BPG and ING together with the day-image dis-\ntribution results in a fused distribution that has a photometric\nand noise distribution close to the night images. The fused\ndistri"
+    },
+    {
+      "id": "chunk::dav2_p16_chunk_7",
+      "source": "data\\dav2.pdf",
+      "page": 16,
+      "score": 0.5854213833808899,
+      "text": "o text-to-image\ndiffusion models. In ICCV, 2023. 2, 23\n[102] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing\ntext-to-image diffusion models for visual perception. In ICCV, 2023. 9\n[103] Bolei Zhou, Agata Lapedriza, Ad"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5851434469223022,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_6",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5847113728523254,
+      "text": "et. Trailing 0 added to the values from [V ankadari\net al., 2023 ] and [Tosi et al., 2025 ]. Notation from Table 1.\n:\u0012\u0003'/\u000e)&&\n2ULJLQ\u0003,PDJH :\u0012\u0003'/\n:\u0012\u0003'/\u000e)&&\u000e2*'\nFigure 5: Visualization of ablation study on the distillation learning,\nfeature consistency const"
+    },
+    {
+      "id": "chunk::dav2_p23_chunk_0",
+      "source": "data\\dav2.pdf",
+      "page": 23,
+      "score": 0.5839735269546509,
+      "text": "• (more diverse) DIW images are typically collected from real life. However, considering the\nwidespread application of MDE models in AIGC [101, 39], we provide additional non-real\nimages, such as AI-generated images, cartoon images, etc..\n• (high-resolutio"
+    },
+    {
+      "id": "chunk::ACD_p2_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.5816184282302856,
+      "text": ",PDJH PG\u0017DOO\u0010QLJKW PG\u0017DOO\u0010UDLQ\n\u000bD\f\n\u000bE\f\n2XUV\u0010QLJKW 2XUV\u0010UDLQ\n,PDJH PG\u0017DOO\u0010'' 2XUV\nFigure 1: (a) Comparison of training data in challenging scenes:\nCompared to the data generation method used in md4all [Gasperini\net al., 2023 ], the samples generated by our"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::TDDC_p15_chunk_20",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.6609804630279541,
+      "text": "d, as shown\nin the cyan dashed boxes. The ING simulates the potential\nimaging noises in the dark area, thus present better depth pre-\ndiction at the background, such as the sky. The full model\nreceives the merits of BPG and ING, and thus has the best\npredi",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_10",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6559274196624756,
+      "text": "th the baseline, BPG im-\nproves ABS rel by 19.3% and RMSE by 14.0%, and ING im-\nproves ABS rel by 18.0% and RMSE by 9.1%. Besides, the\njoint application of BPG and ING achieves the best scores\nwith 20.8% improvement on ABS rel, 20.1% on RMSE and\n35.3% on δ",
+      "estimated_tokens": 95
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_19",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.654194712638855,
+      "text": "arger DepthNet backbone.\nE.4 More visualization for ablation analyses\nIn Fig E.1, the BPG helps the regions where highlight spots\nfrequently occur, such as the cars and the road, as shown\nin the cyan dashed boxes. The ING simulates the potential\nimaging no",
+      "estimated_tokens": 63
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_14",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6457622051239014,
+      "text": "izes a further ablation study on our BPG. The\nexperiments show that our Re-rendering submodule plays\nan important role within BPG. Besides, BPG achieves the\nbest result when F max is set to 2. Meanwhile, Fig. 4.3\npresents a detailed ablation on our ING. Ap",
+      "estimated_tokens": 70
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 295,
+    "compressed_context_tokens": 295,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 295,
+  "context_tokens": 295,
+  "prompt_token_estimate": 679,
+  "run_label": "sage_semantic_all_v1_chunk_paper_ablation_results",
+  "answer": "<think>\nThe user wants me to answer based on the given materials about BPG/ING ablation experiments in the paper. Let me analyze the materials:\n\n[1] Talks about ING simulating potential imaging noises in dark areas, providing better depth prediction at background (sky). Full model combines BPG and ING for best prediction.\n\n[2] Quantitative results: BPG improves ABS rel by 19.3% and RMSE by 14.0%, ING improves ABS rel by 18.0% and RMSE by 9.1%. Joint application achieves best: 20.8% ABS rel, 20.1% RMSE, 35.3% on δ.\n\n[3] BPG helps regions with highlight spots (cars, road). ING simulates imaging noises.\n\n[4] Re-rendering submodule important in BPG. BPG best when F max = 2. Detailed ablation on ING in Fig 4.3.\n\nLet me compose the answer.\n</think>\n{\n  \"answer\": \"消融实验表明 BPG 和 ING 各自对深度预测有显著提升，且二者联合使用效果最佳。\",\n  \"items\": [\n    {\n      \"name\": \"BPG 单独效果\",\n      \"description\": \"BPG 改善高光区域（如车辆、路面）的深度预测，相对基线在 ABS rel 上提升 19.3%，RMSE 提升 14.0%。\",\n      \"citations\": [1, 2, 3]\n    },\n    {\n      \"name\": \"ING 单独效果\",\n      \"description\": \"ING 模拟成像噪声，改善暗区（如天空）的深度预测，相对基线在 ABS rel 上提升 18.0%，RMSE 提升 9.1%。\",\n      \"citations\": [1, 2, 3]\n    },\n    {\n      \"name\": \"BPG 与 ING 联合效果\",\n      \"description\": \"联合使用 BPG 和 ING 取得最佳结果：ABS rel 提升 20.8%，RMSE 提升 20.1%，δ 提升 35.3%，综合了两者优势。\",\n      \"citations\": [1, 2]\n    },\n    {\n      \"name\": \"组件内部消融\",\n      \"description\": \"BPG 中 Re-rendering 子模块作用关键，且在 F max=2 时取得最佳结果；ING 的详细消融在图 4.3 中给出。\",\n      \"citations\": [4]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 720,
+    "completion_tokens": 513,
+    "total_tokens": 1233,
+    "model": "MiniMax-M3"
+  }
+}

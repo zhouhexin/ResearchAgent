@@ -1,0 +1,446 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_ssrdepth_sps_module_m_ask_baseline_none_105d9d5d3fc8",
+  "dry_run": false,
+  "query": "SSRDepth 的 SPS 模块如何预测 segmentation scale，并使用哪些约束？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::SSRDepth_p3_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7756971716880798,
+      "text": "ure of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth: the Segmentation Query Guided Aggregation module\n(Section 3.2), the Segmentation Proposal Scale module (Section 3.3), \nand the Adaptive Relative Depth module (Section 3.4).\n3"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7633678913116455,
+      "text": "𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance.\n3.  The proposed method\nIn this section, we ﬁrst introduce the overall architecture of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth"
+    },
+    {
+      "id": "chunk::SSRDepth_p4_chunk_7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.7523253560066223,
+      "text": "ethod, we propose the SPS module and use semantic seg-\nmentation and scale alignment as auxiliary supervision to predict the \nappropriate segmentation scale 𝐷𝑆 . As shown in Fig. 5, after the three-\ndimensional projection, each semantic segment of 𝐷𝑆 is pr"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7499948740005493,
+      "text": "Y. Zou et al.\nFig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module \n(SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module ("
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_9",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7498168349266052,
+      "text": "The SPS module employs segmentation queries we designed to predict \nsegmentation scale, uses semantic constraints to predict pixel proba-\nbilities for semantic segments, applies scale alignment to obtain depth \ncoeﬃcients, and weights these coeﬃcients by"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7146130800247192,
+      "text": "(SPS) module and an Adaptive Relative Depth (ARD) module. \nThe SPS module predicts the segmentation scale under the constraints of semantic segmentation and scale align-\nment, endowing the model with semantic awareness and maintaining sharp semantic bounda"
+    },
+    {
+      "id": "chunk::SSRDepth_p4_chunk_6",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.7140941619873047,
+      "text": "the advantages of se-\nmantic segmentation, ensuring clear semantic boundaries while predict-\ning a more accurate metric scale for each semantic segment. To achieve \nthe above method, we propose the SPS module and use semantic seg-\nmentation and scale align"
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_10",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.7118381261825562,
+      "text": "the \nSPS module to predict segmentation scale. Subsequently, Models [d]\nand [e] incorporate the SMG module on the basis of Models [b] and\n[c], respectively, to generate semantic segmentation attention masks \nthat guide query interaction. The experimental r"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7100384831428528,
+      "text": ", Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module (ARD) that we propose. Additionally, we propose the segmentation proposal \nscale alignment loss (𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance mod"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_21",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.7090398073196411,
+      "text": "upervision strategy from BinsFormer \n[10], applying the SPS and ARD modules at each feature scale to provide \nauxiliary supervision. Finally, the total loss is deﬁned as:\n𝑡𝑜𝑡𝑎𝑙 =\n3∑\n𝑙\n(\n𝑤𝑙\n𝐿∑\n𝑛\n(\n𝛼𝑙,𝑛\n𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛\n𝐶𝐸 + 𝛿𝑙,𝑛\n𝑆𝑃 𝑆𝐴\n))\n, (15)\nwhere 𝐿 repr"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_20",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.7063280940055847,
+      "text": "to \nensure the predicted segmentation scale values larger than the median \ndepth of each semantic segment. In our experiments, 𝛾 is set to 0.5.\nWe also adopt the multi-scale supervision strategy from BinsFormer \n[10], applying the SPS and ARD modules at e"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_15",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7047892808914185,
+      "text": "egments gener-\nated by our designed SMG, ensuring the eﬀectiveness of multi-scale \nsemantic feature aggregation and the recovery of structural regular-\nities within semantic segments.\n• Our proposed SPS module predicts segmentation scale with ex-\nplicit co"
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.7025952935218811,
+      "text": "original semantic segmentation part in the SPS module, where cross-\nentropy loss (𝐶𝐸 ) is directly computed on 𝑆. (b) represents the adjusted panoptic segmentation part, where 𝐸𝑆 computes the classiﬁcation loss (𝐶𝐿𝑆 ), and 𝑃𝑆\ncomputes the mask loss (𝑀𝐴"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7019663453102112,
+      "text": "carefully designed network architectures. \nHowever, they often ignore the semantic information of scene structures, leading to poor performance in the se-\nmantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a mon"
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.7011915445327759,
+      "text": "ectively.\nSegmentation\nscale\n SC  DC 𝛿1 ↑  AbsRel↓  RMSE↓  SqRel↓\n× × ×  0.790  0.280  2.026  1.761\n✓ × ×  0.794  0.283  2.144  1.420\n✓ ✓ ×  0.797  0.226  1.921  1.336\n✓ ✓ ✓  0.799  0.230  1.901  1.332\nTable 12 \nAblation study on the setting of the scaling"
+    },
+    {
+      "id": "chunk::SSRDepth_p11_chunk_23",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.7003453373908997,
+      "text": "gnify the estimated segmentation scale values. The \nprediction results deteriorate signiﬁcantly when 𝛾 = 1. The prediction \nperformance recovers somewhat when 𝛾 = 0.75, and the best prediction \nperformance is achieved when 𝛾 = 0.5.\nIntermediate prediction"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6949958205223083,
+      "text": "Y. Zou et al.\nFig. 5. Visualization of segmentation scale.\nFig. 6. Segmentation proposal scale module.\nSince typical classiﬁcation losses neglect the ordinal information be-\ntween discrete labels, we convert the predicted bins B into bin center \ndepths 𝐶 ="
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_16",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.6916183233261108,
+      "text": "gments.\n• Our proposed SPS module predicts segmentation scale with ex-\nplicit constraints, allowing the model to preserve sharp semantic \nboundaries. The ARD module predicts semantic-aware relative depth \nwithin a normalized depth space using a hybrid regr"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_10",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6897339820861816,
+      "text": "o the SPS module to generate the \nsemantic segmentation map 𝑆 ∈ ℝ1× 𝐻\n4 × 𝑊\n4  and the segmentation scale \nmap 𝐷𝑆 ∈ ℝ1× 𝐻\n4 × 𝑊\n4 , while 𝑄𝐵 and 𝐹𝑝 are fed into the ARD module to \ngenerate the semantic-aware relative depth map 𝑅 ∈ ℝ1× 𝐻\n4 × 𝑊\n4 . Finally,"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_5",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.6887739300727844,
+      "text": "relevant features within \nsemantic segments can better restore their internal relative depth rela-\ntionships.\nBased on this, we propose SSRDepth, a uniﬁed framework for \nSIDE that decomposes the task into segmentation scale predic-\ntion and semantic-aware"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_17",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6868317723274231,
+      "text": "𝜇(𝐷∗\n𝑆 (𝑝𝑖, 𝑗))|||, (14)\nwhere 𝐷𝑆 (𝑝𝑖, 𝑗) and 𝐷∗\n𝑆 (𝑝𝑖, 𝑗) represent the predicted and ground truth \n(GT) segmentation scale at pixel 𝑗 within the patch 𝑝𝑖, respectively. 𝜇(⋅)\ndenotes the median of the depths, 𝑈 is the number of semantic seg-\nmentation pat"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_12",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.6796815395355225,
+      "text": ". Finally, the semantic-aware rel-\native depth is multiplied by the segmentation scale to obtain the metric \ndepth.\nIn summary, our main contributions are as follows:\n• We propose a novel monocular depth estimation framework-\nSSRDepth, which decomposes met"
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_6",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6794268488883972,
+      "text": "Ablation study on semantic segmentation and scale alignment constraints. \nSC and DC stand for the semantic segmentation (𝐶𝐸 ) and scale alignment \n(𝑆𝑃 𝑆𝐴 ) constraints, respectively.\nSegmentation\nscale\n SC  DC 𝛿1 ↑  AbsRel↓  RMSE↓  SqRel↓\n× × ×  0.790"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6787468194961548,
+      "text": "𝐷!K\nScale Shift Transformer\nV\nKV\nSep-Conv GRU\n\t𝜎: Sigmoid Conv⊕:\tPixel addition⊗: Concatenation⊙: Pixel multiplyDiffusion\tℰ\n𝐡\" 𝐡\"#$𝐷\"#$⊕𝑠%+𝑠&×Q\nMLP\n𝒙\"\n(b)(a)\nTransformerMLP𝑠&\n𝑠%\n𝐳𝑰\n 𝐷\"\niteration𝑘\nFigure 4:(a): Model Structure of SSG. It corresponds to the"
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6785719394683838,
+      "text": "4  0.078\n✓  0.799  0.230  1.901  0.073\n12 ×  0.795  0.238  2.089  0.076\n✓  0.792  0.236  2.011  0.079\nTable 10 \nAblation study on the eﬀectiveness of segmentation scale.\n Setting 𝛿1 ↑  AbsRel↓  RMSE↓ log10 ↓\n no scale  0.790  0.280  2.026  0.078\n single me"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_6",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6783682107925415,
+      "text": "diction. Speciﬁcally, \nwe decompose metric depth into segmentation scale and semantic-aware relative depth, which are predicted \nseparately through Segmentation Proposal Scale (SPS) module and an Adaptive Relative Depth (ARD) module. \nThe SPS module predic"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_4",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.6770056486129761,
+      "text": ".991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2w/o pretrainingS 0.110 0.849 4.580 0.173 0.875 0.962 0.986\nMonodepth2 S 0.085 0.537 3.868 0.139 0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.9"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_4",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.6770056486129761,
+      "text": ".991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2w/o pretrainingS 0.110 0.849 4.580 0.173 0.875 0.962 0.986\nMonodepth2 S 0.085 0.537 3.868 0.139 0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.9"
+    },
+    {
+      "id": "chunk::SSRDepth_p12_chunk_5",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.670491099357605,
+      "text": "ng 𝛿1 ↑  AbsRel↓  RMSE↓ log10 ↓\n no scale  0.790  0.280  2.026  0.078\n single metric scale  0.789  0.237  1.971  0.079\n segmentation scale  0.799  0.230  1.901  0.073\nTable 11 \nAblation study on semantic segmentation and scale alignment constraints. \nSC an"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_9",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6703004837036133,
+      "text": "ve \ndepth, we also decompose 𝑄 into segmentation queries 𝑄𝑆 ∈ ℝ𝑀×𝐶 and \nbin queries 𝑄𝐵 ∈ ℝ𝑁×𝐶 , where 𝑀 and 𝑁 are the numbers of 𝑄𝑆 and \n𝑄𝐵, respectively. 𝑄𝑆 and 𝐹𝑝 are fed into the SPS module to generate the \nsemantic segmentation map 𝑆 ∈ ℝ1× 𝐻\n4 × 𝑊\n4  a"
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_9",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.6693165302276611,
+      "text": "orporates the ARD module, discretizes \nthe depth range into bins, and then performs hybrid regression, replac-\ning the continuous regression head. Model [c] further integrates the \nSPS module to predict segmentation scale. Subsequently, Models [d]\nand [e]"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_12",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6676616668701172,
+      "text": "lements of 𝐷𝑆 . Additionally, the semantic segmenta-\ntion map 𝑆 is employed only for auxiliary supervision of the SPS module \nduring training and is not needed in the inference process.\n3.2.  Segmentation query guided aggregation module\nThe proposed Segmen"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_19",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6648856997489929,
+      "text": "n of the metric depth for each se-\nmantic segment can cause the ﬁnal prediction to be generally smaller \nthan the ground truth. To address this issue, we set a scaling factor 𝛾 to \nensure the predicted segmentation scale values larger than the median \ndept"
+    },
+    {
+      "id": "chunk::SSRDepth_p11_chunk_13",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.6633892059326172,
+      "text": "wn in Table 10, to validate \nthe eﬀectiveness of segmentation scale, we conducted ablation experi-\nments by replacing segmentation scale with a single metric scale. The \nresults indicate that segmentation scale has a clear advantage. We be-\nlieve that segm"
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_16",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.6629625558853149,
+      "text": "erent distribution gap, we propose a gated recurrent unit (GRU)-based\nnovel transform module termedScale-Shift GRU(SSG). It not only iteratively aligns SSI depth\nto SI depth by refining scale-shift parameters but also acts as a gradient filter, which suppr"
+    },
+    {
+      "id": "chunk::SSRDepth_p11_chunk_25",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.6616125702857971,
+      "text": "be observed that the \nsegmentation scale retains the scene structure of semantic segmentation \nwhile exhibiting detailed segmented depth information. Furthermore, \nPattern Recognition 171 (2026) 112279 \n11"
+    },
+    {
+      "id": "chunk::Jasmine_p20_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 20,
+      "score": 0.6589580774307251,
+      "text": "LB (Dtc, D1)·η t1\n+LB (filter(D tc), DSI )·η t2)/η step, (22)\nis fully detailed in this part. The teacher loss not only stabilizes our model but also avoids limiting its\nperformance potential.\nThe segmentation modelmentioned above is Mask2Former[ 6] throug"
+    },
+    {
+      "id": "chunk::SSRDepth_p11_chunk_22",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.6544650197029114,
+      "text": "tor \n𝛾 of the scale alignment constraint, setting 𝛾 to 1, 0.75, 0.5 and 0.25 \nrespectively. The results are shown in Table 12. It is reasonable to use a \nscaling factor 𝛾 to magnify the estimated segmentation scale values. The \nprediction results deteriora"
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.6532447338104248,
+      "text": "framework \nincludes a Segmentation Proposal Scale module (SPS), an Adaptive\nRelative Depth (ARD) module, and a Segmentation Query Guided Aggre-\ngation module (SQGA). The SQGA module uses a new feature interaction \nmethod to aggregate features within semant"
+    },
+    {
+      "id": "chunk::SSRDepth_p8_chunk_29",
+      "source": "data\\SSRDepth.pdf",
+      "page": 8,
+      "score": 0.6523120403289795,
+      "text": "ptic segmenta-\ntion method can further reﬁne the boundary regions between diﬀerent\nPattern Recognition 171 (2026) 112279 \n8"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6517760753631592,
+      "text": "s\nprofound scene understanding, and the scale (sc) and shift (sh) factors are tightly coupled. Therefore,\nas shown in Fig. 4(a), compared to traditional GRU, SSG introduces a core component Scale-Shift\nTransformer (SST), and modifies the iterative predicti"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_chunk_9",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.6501505374908447,
+      "text": "× 1024 0.080 0.443 3.544 0.130 0.919 0.983 0.995\nWaveletMonodepth Resnet50 \u0013 S 320 × 1024 0.076 0.413 3.434 0.126 0.926 0.984 0.995\n[63] Depth Hints \u0013 SSGM 320 × 1024 0.077 0.404 3.345 0.119 0.930 0.988 0.997\nWaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0."
+    },
+    {
+      "id": "chunk::SSRDepth_p4_chunk_13",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.6499626636505127,
+      "text": "max on the \nsegmentation probability map 𝑃𝑆 to normalize the probability values \nbetween 0 and 1. Then, we perform a weighted calculation with the \ndepth coeﬃcients value 𝑜𝑟 as follows:\n𝐷𝑆 (𝑥, 𝑦) =\n𝑀∑\n𝑟=1\n𝑠𝑜𝑓 𝑡𝑚𝑎𝑥(𝑠𝑟(𝑥, 𝑦))𝑜𝑟, (7)\nwhere 𝑠𝑟(𝑥, 𝑦) represents"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_22",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6490799188613892,
+      "text": "𝑙 =\n3∑\n𝑙\n(\n𝑤𝑙\n𝐿∑\n𝑛\n(\n𝛼𝑙,𝑛\n𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛\n𝐶𝐸 + 𝛿𝑙,𝑛\n𝑆𝑃 𝑆𝐴\n))\n, (15)\nwhere 𝐿 represents the number of stacked masked transformer layers at \neach feature scale. 𝑤𝑙 is the scale weight, which is set to 1\n23−𝑙 . To balance \nthe weights of diﬀerent losses, we s"
+    },
+    {
+      "id": "chunk::SSRDepth_p4_chunk_15",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.6464677453041077,
+      "text": "𝑠(𝑥, 𝑦) denotes the segmen-\ntation scale value at the corresponding pixel location.\n3.4.  Adaptive relative depth module\nTo obtain the ﬁnal metric depth, it is not only necessary to predict \nthe segmentation scale but also to establish relative depth among"
+    },
+    {
+      "id": "chunk::SSRDepth_p4_chunk_12",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.6458241939544678,
+      "text": "the semantic segmentation map 𝑆 ∈ ℝ1× 𝐻\n4 × 𝑊\n4  is \nobtained by applying the argmax function:\n𝑆 = arg max(𝐶𝑀 (𝑃𝑆 )). (6)\nSegmentation scale prediction. First, we apply a softmax on the \nsegmentation probability map 𝑃𝑆 to normalize the probability values"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_5",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6443731784820557,
+      "text": "s of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular \ndepth estimation method that leverages semantic segmentation to improve metric depth prediction. Speciﬁcally, \nwe decompose metric depth into segmentation scale and sem"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_15",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.6438618898391724,
+      "text": "ge and do not crop, unlike\nwith the Eigen evaluation. We can see that our method still\nsigniﬁcantly outperforms all previously published methods\non all metrics. While Superdepth [47] comes a close sec-\nond to our algorithm in the S category, they are run a"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_15",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.6438618898391724,
+      "text": "ge and do not crop, unlike\nwith the Eigen evaluation. We can see that our method still\nsigniﬁcantly outperforms all previously published methods\non all metrics. While Superdepth [47] comes a close sec-\nond to our algorithm in the S category, they are run a"
+    },
+    {
+      "id": "chunk::SSRDepth_p11_chunk_19",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.6433675289154053,
+      "text": "ormance. Addition-\nally, when we allow the model to adaptively predict segmentation scale \nwithout any constraints, a signiﬁcant decrease in performance is ob-\nserved. We believe this is due to the model’s inability to spontaneously \nidentify an appropriat"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::SSRDepth_p3_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7756971716880798,
+      "text": "ure of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth: the Segmentation Query Guided Aggregation module\n(Section 3.2), the Segmentation Proposal Scale module (Section 3.3), \nand the Adaptive Relative Depth module (Section 3.4).\n3",
+      "estimated_tokens": 70
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7633678913116455,
+      "text": "𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance.\n3.  The proposed method\nIn this section, we ﬁrst introduce the overall architecture of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth",
+      "estimated_tokens": 71
+    },
+    {
+      "id": "chunk::SSRDepth_p4_chunk_7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.7523253560066223,
+      "text": "ethod, we propose the SPS module and use semantic seg-\nmentation and scale alignment as auxiliary supervision to predict the \nappropriate segmentation scale 𝐷𝑆 . As shown in Fig. 5, after the three-\ndimensional projection, each semantic segment of 𝐷𝑆 is pr",
+      "estimated_tokens": 62
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7499948740005493,
+      "text": "Y. Zou et al.\nFig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module \n(SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module (",
+      "estimated_tokens": 61
+    },
+    {
+      "id": "chunk::SSRDepth_p2_chunk_9",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.7498168349266052,
+      "text": "The SPS module employs segmentation queries we designed to predict \nsegmentation scale, uses semantic constraints to predict pixel proba-\nbilities for semantic segments, applies scale alignment to obtain depth \ncoeﬃcients, and weights these coeﬃcients by",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_7",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7146130800247192,
+      "text": "(SPS) module and an Adaptive Relative Depth (ARD) module. \nThe SPS module predicts the segmentation scale under the constraints of semantic segmentation and scale align-\nment, endowing the model with semantic awareness and maintaining sharp semantic bounda",
+      "estimated_tokens": 48
+    },
+    {
+      "id": "chunk::SSRDepth_p4_chunk_6",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.7140941619873047,
+      "text": "the advantages of se-\nmantic segmentation, ensuring clear semantic boundaries while predict-\ning a more accurate metric scale for each semantic segment. To achieve \nthe above method, we propose the SPS module and use semantic seg-\nmentation and scale align",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_10",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.7118381261825562,
+      "text": "the \nSPS module to predict segmentation scale. Subsequently, Models [d]\nand [e] incorporate the SMG module on the basis of Models [b] and\n[c], respectively, to generate semantic segmentation attention masks \nthat guide query interaction. The experimental r",
+      "estimated_tokens": 55
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 472,
+    "compressed_context_tokens": 472,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 472,
+  "context_tokens": 472,
+  "prompt_token_estimate": 912,
+  "run_label": "sage_semantic_all_v1_chunk_ssrdepth_sps_module_mechanism",
+  "answer": "<think>The question asks how SSRDepth's SPS module predicts segmentation scale and what constraints it uses.\n\nFrom the materials:\n- [3] mentions SPS module uses semantic segmentation and scale alignment as auxiliary supervision to predict segmentation scale D_S\n- [5] mentions SPS module employs segmentation queries to predict segmentation scale, uses semantic constraints to predict pixel probabilities for semantic segments, applies scale alignment to obtain depth coefficients\n- [6] mentions SPS module predicts the segmentation scale under the constraints of semantic segmentation and scale alignment\n- [7] mentions SPS module uses semantic segmentation and scale alignment as auxiliary supervision\n\nLet me synthesize the answer based on these sources.</think>\n\n{\"answer\":\"SSRDepth 的 SPS 模块通过设计专门的 segmentation queries 来预测 segmentation scale，并使用 semantic segmentation（语义分割）和 scale alignment（尺度对齐）作为辅助约束。\", \"items\":[{\"name\":\"SPS 模块预测 segmentation scale 的方式\",\"description\":\"SPS 模块利用设计的 segmentation queries 来预测 segmentation scale D_S，并结合三维投影，为每个语义段预测像素概率以获得深度系数。\",\"citations\":[3,5]},{\"name\":\"使用的约束\",\"description\":\"使用 semantic segmentation（语义分割约束）和 scale alignment（尺度对齐约束）作为辅助监督/约束。\",\"citations\":[3,6,7]}],\"missing_information\":\"\"}",
+  "usage": {
+    "prompt_tokens": 936,
+    "completion_tokens": 263,
+    "total_tokens": 1199,
+    "model": "MiniMax-M3"
+  }
+}

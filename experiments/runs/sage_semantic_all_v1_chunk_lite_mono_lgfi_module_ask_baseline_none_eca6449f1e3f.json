@@ -1,0 +1,470 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_lite_mono_lgfi_module_ask_baseline_none_eca6449f1e3f",
+  "dry_run": false,
+  "query": "LGFI 模块是如何实现全局信息编码的？它采用了什么注意力机制？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_5",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.6616403460502625,
+      "text": ".983\nw/o LGFI blocks 2.661M 3.2 0.111 0.854 4.705 0.187 0.881 0.960 0.982\nw/o dilated convolutions3.069M 4.5 0.112 0.836 4.685 0.187 0.880 0.960 0.982\nw/o pooled concatenations3.062M 4.4 0.109 0.842 4.700 0.186 0.883 0.960 0.982\nw/o cross-stage connections"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_8",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6574878692626953,
+      "text": "𝐾 \n𝑉 \nRepeat × N\nFigure 3. Structures of the proposed Consecutive Dilated Con-\nvolutions (CDC) module and Local-Global Features Interac-\ntion (LGFI) module. In each stage the CDC module with differ-\nent dilation rate is repeated for N times.\nwith size H×W×"
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_24",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6480542421340942,
+      "text": "posed LGFI\nis crucial to make Mono-Lite encode long-range global con-\ntexts, thus making up for the drawback that CNNs can only\nextract local features.\nThe beneﬁt of dilated convolutions. If all the dilation\nrates of convolutions in CDC blocks are set to 1"
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_23",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6379396319389343,
+      "text": "s shown in Table 5.\nThe beneﬁt of LGFI blocks. When all the LGFI blocks\nin stage 2, 3, and 4 are removed, the model size decreases\nby 0.4M, but the accuracy also drops. The proposed LGFI\nis crucial to make Mono-Lite encode long-range global con-\ntexts, thu"
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_22",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6365631222724915,
+      "text": "study is conducted to evaluate the impor-\ntance of different designs in the architecture. We remove or\nadjust some modules in the network, and report their results\non KITTI, as shown in Table 5.\nThe beneﬁt of LGFI blocks. When all the LGFI blocks\nin stage"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_23",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6317340135574341,
+      "text": "convolution with dilation rater.\nLocal-Global Features Interaction (LGFI). Given an\ninput feature mapX with dimensionH×W×C it is lin-\nearly projected to the same dimensional queriesQ =XW q,\nkeysK = XW k, and values V = XW v, where Wq,Wk,"
+    },
+    {
+      "id": "chunk::Lite-Mono_p3_chunk_18",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.6297324895858765,
+      "text": "Interaction (LGFI) module adopts\nthe cross-covariance attention [1] to compute the attention\nalong the feature channels. Comparing with the original\nself-attention [8] it reduces the memory complexity from\nO(hN 2+Nd ) toO(d2/h+Nd ), and reduces the time c"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6248542070388794,
+      "text": "3 [3 ×3,48]×3 [3 ×3,64]×3\nLGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3\n80×24 Downsampling3×3,64,stride= 2 3 ×3,80,stride= 2 3 ×3,80,stride= 2 3 ×3,128,stride= 2\nStage 2 CDC blocks [3×3,64]×3 [3 ×3,80]×3 [3 ×3,80]×3 [3 ×3,128]×"
+    },
+    {
+      "id": "chunk::Lite-Mono_p1_chunk_23",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.6211317777633667,
+      "text": "volutions\n(CDC) module is adopted to capture enhanced multi-scale\nlocal features. Then, a Local-Global Features Interaction\n(LGFI) module is used to calculate the MHSA and encode\narXiv:2211.13202v2  [cs.CV]  15 Mar 2023"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6144756078720093,
+      "text": "×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2\nStage 3 CDC blocks [3×3,128]×6 [3 ×3,128]×6 [3 ×3,128]×9 [3 ×3,224]×9\nLGFI blockdilation= 1,2,3,2,4,6 dilation= 1,2,3,2,4,6 dilation= [1,2,3]×2,2,4,6 dilation= [1,2,3]×2,2,4,6\n#Param"
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_1",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.6109334230422974,
+      "text": "in [Yin et al., 2019] 114 0.875 0.976 0.994 0.108 0.416 0.048\nDA V[Huynh et al., 2020] 25 0.882 0.980 0.996 0.108 0.412 -\nBTS [Lee et al., 2019] 47 0.885 0.978 0.994 0.110 0.392 0.047\nAdabins[Bhat et al., 2021] 78 0.903 0.984 0.997 0.103 0.364 0.044\nDPT* ["
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_18",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.6035796403884888,
+      "text": "sual quality factors.\nAdditionally, Figure 6(c) presents the weight curves that\ncorrespond to Figure 6(b), demonstrating how the GT-mean\nL1 loss behaves with regard to weight variation. As η ap-\nproaches 1, the weight W rapidly decreases, indicating that\nt"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_chunk_18",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.6035796403884888,
+      "text": "sual quality factors.\nAdditionally, Figure 6(c) presents the weight curves that\ncorrespond to Figure 6(b), demonstrating how the GT-mean\nL1 loss behaves with regard to weight variation. As η ap-\nproaches 1, the weight W rapidly decreases, indicating that\nt"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.6014469265937805,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_3",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6012728810310364,
+      "text": ",128,stride= 2\nStage 2 CDC blocks [3×3,64]×3 [3 ×3,80]×3 [3 ×3,80]×3 [3 ×3,128]×3\nLGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3\n40×12 Downsampling3×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2\nStage"
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_25",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6009765863418579,
+      "text": "nvolutions. If all the dilation\nrates of convolutions in CDC blocks are set to 1, i.e., there\nare no dilated convolutions used in the network. It can be\nobserved that although the model size remains the same the\naccuracy drops more than for not using LGFI"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_21",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.5993216037750244,
+      "text": "ent. This work is supported by the National\nNatural Science Foundation of China (No. 62201484), HKU\nStartup Fund, and HKU Seed Fund for Basic Research.\n10378"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_7",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5990976095199585,
+      "text": "on=r\nBatch Norm\n1×1 point-wise\nGELU\n1×1 point-wise\nCDC Module LGFI Module\nLinear\n1×1 point-wise\nGELU\nLinear Linear\nLayerNorm\n   \nSoftmax\nLinear\nLayerNorm\n1×1 point-wise\n𝑄𝑇 \n𝑄 \n𝐾 \n𝑉 \nRepeat × N\nFigure 3. Structures of the proposed Consecutive Dilated Con-\nv"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_chunk_14",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.5990094542503357,
+      "text": "men-\ntation is uncomplicated.\n• Flexibility: The GT-mean loss is highly flexible. For in-\nstance, the L1 loss can be directly extended into the L1\nGT-mean version. This character makes adopting the GT-\nmean loss a universal choice for supervised LLIE model"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_chunk_14",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.5990094542503357,
+      "text": "men-\ntation is uncomplicated.\n• Flexibility: The GT-mean loss is highly flexible. For in-\nstance, the L1 loss can be directly extended into the L1\nGT-mean version. This character makes adopting the GT-\nmean loss a universal choice for supervised LLIE model"
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_26",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.5989103317260742,
+      "text": "the model size remains the same the\naccuracy drops more than for not using LGFI blocks. The\nbeneﬁt of introducing the CDC module is to enhance the\nlocality by gradually extracting multi-scale features, while\nnot adding additional trainable parameters.\nThe"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.5975853204727173,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_chunk_20",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5962308645248413,
+      "text": "8103, 2023. 2\n[19] J. Liu, D. Xu, W. Yang, et al. Benchmarking low-light im-\nage enhancement and beyond. Proceedings of International\nJournal of Computer Vision (IJCV) , 129:1153–1184, 2021.\n1, 2\n[20] Yucheng Lu and Seung-Won Jung. Progressive joint low-\nl"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_chunk_20",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5962308645248413,
+      "text": "8103, 2023. 2\n[19] J. Liu, D. Xu, W. Yang, et al. Benchmarking low-light im-\nage enhancement and beyond. Proceedings of International\nJournal of Computer Vision (IJCV) , 129:1153–1184, 2021.\n1, 2\n[20] Yucheng Lu and Seung-Won Jung. Progressive joint low-\nl"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.595507800579071,
+      "text": "Figure 3. Qualitative results on six unseen datasets.\nLl Lu S Lf eat KI NY SI DD ET DI\n✓ 0.085 0.053 0.492 0.245 0.134 0.070\n✓ ✓ 0.085 0.054 0.481 0.242 0.138 0.073\n✓ ✓ ✓ 0.081 0.048 0.469 0.235 0.134 0.068\n✓ ✓ ✓ ✓ 0.076 0.043 0.458 0.230 0.127 0.066\nTable"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p11_chunk_10",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 11,
+      "score": 0.595257580280304,
+      "text": "were extended to GT-mean loss in the\nvariant.\nCID-Net. Both the baseline and the GT-mean loss vari-\nant were trained using the LOLv1 settings described in [42].\nIn the GT-mean loss variant, the Charbonnier loss, edge\nloss, and perceptual loss were extende"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p11_chunk_10",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 11,
+      "score": 0.595257580280304,
+      "text": "were extended to GT-mean loss in the\nvariant.\nCID-Net. Both the baseline and the GT-mean loss vari-\nant were trained using the LOLv1 settings described in [42].\nIn the GT-mean loss variant, the Charbonnier loss, edge\nloss, and perceptual loss were extende"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5931532979011536,
+      "text": "3×3,32]×2 [3 ×3,48]×2 [3 ×3,48]×2 [3 ×3,64]×2\n160×48 Downsampling3×3,32,stride= 2 3 ×3,48,stride= 2 3 ×3,48,stride= 2 3 ×3,64,stride= 2\nStage 1 CDC blocks [3×3,32]×3 [3 ×3,48]×3 [3 ×3,48]×3 [3 ×3,64]×3\nLGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1"
+    },
+    {
+      "id": "chunk::dav2_p9_chunk_11",
+      "source": "data\\dav2.pdf",
+      "page": 9,
+      "score": 0.5931236743927002,
+      "text": ".7\n✓ 0.078 0.939 0.049 0.976 0.495 0.734 0.137 0.858 0.068 0.950 97.0\nViT-L\n✓ 0.081 0.937 0.048 0.976 0.516 0.731 0.133 0.864 0.071 0.949 96.0\n✓ ✓ 0.075 0.947 0.045 0.979 0.542 0.741 0.130 0.866 0.066 0.953 97.3\n✓ 0.074 0.946 0.045 0.979 0.487 0.752 0.131"
+    },
+    {
+      "id": "chunk::Lite-Mono_p3_chunk_2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.5928704142570496,
+      "text": "locks LGFI \nBlock\nStage 3\nDownsample\nCDC \nBlocks LGFI \nBlock\nStage 3\nConcat\nConcat\n𝐻\n4 × 𝑊\n4 × 1 \n𝐻\n2 × 𝑊\n2 × 1 \n𝐻 × 𝑊 × 1 \nPrediction \nHead\nPrediction \nHead\nPrediction \nHead\n× 𝑵𝟏 \n× 𝑵𝟐 \n× 𝑵𝟑 \nDepthNet\n𝐼𝑡 \nConcat\nUpsampling Block\n3×3 Conv\nUpsample\n3×3 Conv"
+    },
+    {
+      "id": "chunk::Lite-Mono_p3_chunk_0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.5919227600097656,
+      "text": "Downsample\nCDC \nBlocks LGFI \nBlock\nStage 2\nDownsample\nCDC \nBlocks LGFI \nBlock\nStage 2\n𝐻\n4 × 𝑊\n4 × 𝐶2 \nConv \nstem\n𝐻\n2 × 𝑊\n2 × 𝐶1 \n𝐻\n8 × 𝑊\n8 × 𝐶3 \n𝐻\n16 × 𝑊\n16 × 𝐶4 \nDownsample\nCDC \nBlocks LGFI \nBlock\nDownsample\nCDC \nBlocks LGFI \nBlock\nUpsampling\nBlock\nStage"
+    },
+    {
+      "id": "chunk::Depth_Anything_p7_chunk_13",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 7,
+      "score": 0.5909320116043091,
+      "text": "training\ndatasets, HRWSI [67] fuels our model with the strongest\ngeneralization ability, even though it only contains 20K im-\nages. This indicates the data diversity counts a lot, which\nis well aligned with our motivation to utilize unlabeled im-\nages. Som"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_13",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5898531079292297,
+      "text": "feature size, which is inspired by ESP-\nNetv2 [3]. Then, the proposed Consecutive Dilated Con-\nvolutions (CDC) module and the Local-Global Features In-\nteraction (LGFI) module learn rich hierarchical feature rep-\nresentations. The down-sampling layers in"
+    },
+    {
+      "id": "chunk::Lite-Mono_p3_chunk_17",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.5892813801765442,
+      "text": "to the input dimension, hence it lim-\nits the design of lightweight models. Instead of comput-\ning the attention across the spatial dimension the proposed\nLocal-Global Features Interaction (LGFI) module adopts\nthe cross-covariance attention [1] to compute"
+    },
+    {
+      "id": "chunk::ACD_p2_chunk_10",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.589063286781311,
+      "text": "ample\npairs with T2I-Adapter [Mou et al., 2024 ]. This provides\nan alternative solution with diffusion models for multi-tuple\ndataset generation [Zhu et al., 2017; Parmar et al., 2024;\nSauer et al., 2025 ]. However, the translated image shows ob-\nvious inc"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_4",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.585671067237854,
+      "text": "210.410.610.8RMSE \n0\n (b) RMSE\n0 .010 .11 1 01 000.450.480.510.540.570.60\n0\n (c) δ1\nFigure 4.3: Ablation on ING. K max = 0 represents the baseline.\nResult of N , P, T L, P + N and P + T Lis shown.\npresents that these methods generalize poorly to unseen nig"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_5",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5847545862197876,
+      "text": "NW [Wang et al., 2021 ] M∗ dn 0.2872 9.185 56.21 0.3333 10.098 43.72 0.2952 9.341 57.21\nmd4all-AD [Gasperini et al., 2023 ] Mv dT†(nr) 0.1523 6.853 83.11 0.2187 9.003 68.84 0.1601 7.832 78.97\nmd4all-DD [Gasperini et al., 2023 ] Mv dT†(nr) 0.1366 6.452 84.6"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_22",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5840792655944824,
+      "text": "where LinearG denotes a point-wise convolution opera-\ntion, followed by theGELU [18] activation.BN is a batch\nnormalization layer, andDDWConv r(·) is a 3× 3 depth-\nwise dilated convolution with dilation rater.\nLocal-Global Features Interaction (LGFI). Give"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.5836789011955261,
+      "text": "d during training. In the early stages (as can\nbe seen in Figure 5 (a)), the curve tendencies under different\nσ settings are similar. Considering the curve with σ = 0is\nthe original L1 loss, we can verify that the GT-mean loss at\nthe early stage behaves li"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_chunk_3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.5836789011955261,
+      "text": "d during training. In the early stages (as can\nbe seen in Figure 5 (a)), the curve tendencies under different\nσ settings are similar. Considering the curve with σ = 0is\nthe original L1 loss, we can verify that the GT-mean loss at\nthe early stage behaves li"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_2",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5835344791412354,
+      "text": "49.00\nRNW [Wang et al., 2021] M∗ a: dn 0.2970 2.608 7.996 43.10 0.1850 1.710 6.549 73.30\nWSGD [V ankadariet al., 2023] M∗ a: dn 0.1760 1.603 6.036 75.00 0.1740 1.637 6.302 75.40\nmd4all-DD [Gasperini et al., 2023] Mv dT†(n) 0.1128 0.648 3.206 87.13 0.1219 0"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_16",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.5822745561599731,
+      "text": "ment is in turn slowed down. Based on this charac-\nteristic, in real-world model training, the GT-mean L1 loss\nenables LLIE models to focus on other important degener-\nation factors, when p(eE[y]) and q(eE[f (x)])] become closer.\nIn contrast, the original"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_chunk_16",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.5822745561599731,
+      "text": "ment is in turn slowed down. Based on this charac-\nteristic, in real-world model training, the GT-mean L1 loss\nenables LLIE models to focus on other important degener-\nation factors, when p(eE[y]) and q(eE[f (x)])] become closer.\nIn contrast, the original"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_24",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.581935465335846,
+      "text": ". In NIPS, page 6629–6640,\n2017.\n[Hu and others, 2022] Xueqi Hu et al. Qs-attn: Query-\nselected attention for contrastive learning in i2i translation.\nIn CVPR, 2022.\n[Huang et al., 2021] Tao Huang, Songjiang Li, Xu Jia,\nHuchuan Lu, and Jianzhuang Liu. Neig"
+    },
+    {
+      "id": "chunk::TDDC_p12_chunk_4",
+      "source": "data\\TDDC.pdf",
+      "page": 12,
+      "score": 0.5817548632621765,
+      "text": "nsation methodABS rel↓ Sq rel↓ RMSE↓ δ1↑ δ2↑ δ3↑ FID↓Train on KITTI - Test on nuScenes-NightNone 0.327 3.740 10.70 0.451 0.733 0.855 -Cut I2I: K to N-N 0.300 3.771 9.596 0.565 0.793 0.895 46.26Qs-Atten I2I: K to N-N 0.291 3.659 9.554 0.577 0.801 0.90345.05"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.5813654661178589,
+      "text": "0.591 3.971 0.918 0.972\nIn sub-table(b), we further melted down\nour proposed SSG. ID (6) reveals that the\nnaive GRU can initially solve the distribu-\ntion misalignment by estimating the Dδ\n(Eq. 4). However, the scale difference be-\ntween SSI and SI depth"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.5810947418212891,
+      "text": "ginal L1 loss, we can verify that the GT-mean loss at\nthe early stage behaves like the originalL1 loss. In contrast,\nas shown in the zoomed-in views of the last 30K iterations\n(Figure 5 (b)), we observe that all settings become stable,\nand the settings wit"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_chunk_4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.5810947418212891,
+      "text": "ginal L1 loss, we can verify that the GT-mean loss at\nthe early stage behaves like the originalL1 loss. In contrast,\nas shown in the zoomed-in views of the last 30K iterations\n(Figure 5 (b)), we observe that all settings become stable,\nand the settings wit"
+    },
+    {
+      "id": "chunk::dav2_p20_chunk_6",
+      "source": "data\\dav2.pdf",
+      "page": 20,
+      "score": 0.5794520378112793,
+      "text": "0.143 0.849 0.108 0.907\nSynCLR-L [75] 0.278 0.650 0.344 0.469 1.608 0.493 0.301 0.638 0.262 0.712\nDINOv2-L [50] 0.081 0.937 0.048 0.976 0.516 0.731 0.133 0.864 0.071 0.949\nDINOv2-L Reg [16] 0.078 0.942 0.049 0.975 0.522 0.734 0.138 0.856 0.068 0.952\nDINOv2"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p6_chunk_21",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 6,
+      "score": 0.5793619155883789,
+      "text": "7 0.887 0.964 0.984\n[3, 2] 0.096 0.679 4.333 0.179 0.890 0.963 0.983\n[3, 2, 1] 0.096 0.702 4.366 0.180 0.891 0.963 0.983\n[3, 2, 1, 0] 0.097 0.714 4.386 0.181 0.891 0.963 0.983\nTable 1: Ablation study on high frequency coefﬁcients on\nKITTI. While most of th"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_5",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.6616403460502625,
+      "text": ".983\nw/o LGFI blocks 2.661M 3.2 0.111 0.854 4.705 0.187 0.881 0.960 0.982\nw/o dilated convolutions3.069M 4.5 0.112 0.836 4.685 0.187 0.880 0.960 0.982\nw/o pooled concatenations3.062M 4.4 0.109 0.842 4.700 0.186 0.883 0.960 0.982\nw/o cross-stage connections",
+      "estimated_tokens": 136
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_8",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6574878692626953,
+      "text": "𝐾 \n𝑉 \nRepeat × N\nFigure 3. Structures of the proposed Consecutive Dilated Con-\nvolutions (CDC) module and Local-Global Features Interac-\ntion (LGFI) module. In each stage the CDC module with differ-\nent dilation rate is repeated for N times.\nwith size H×W×",
+      "estimated_tokens": 71
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_24",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6480542421340942,
+      "text": "posed LGFI\nis crucial to make Mono-Lite encode long-range global con-\ntexts, thus making up for the drawback that CNNs can only\nextract local features.\nThe beneﬁt of dilated convolutions. If all the dilation\nrates of convolutions in CDC blocks are set to 1",
+      "estimated_tokens": 63
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_23",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6379396319389343,
+      "text": "s shown in Table 5.\nThe beneﬁt of LGFI blocks. When all the LGFI blocks\nin stage 2, 3, and 4 are removed, the model size decreases\nby 0.4M, but the accuracy also drops. The proposed LGFI\nis crucial to make Mono-Lite encode long-range global con-\ntexts, thu",
+      "estimated_tokens": 77
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_22",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6365631222724915,
+      "text": "study is conducted to evaluate the impor-\ntance of different designs in the architecture. We remove or\nadjust some modules in the network, and report their results\non KITTI, as shown in Table 5.\nThe beneﬁt of LGFI blocks. When all the LGFI blocks\nin stage",
+      "estimated_tokens": 65
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_23",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6317340135574341,
+      "text": "convolution with dilation rater.\nLocal-Global Features Interaction (LGFI). Given an\ninput feature mapX with dimensionH×W×C it is lin-\nearly projected to the same dimensional queriesQ =XW q,\nkeysK = XW k, and values V = XW v, where Wq,Wk,",
+      "estimated_tokens": 68
+    },
+    {
+      "id": "chunk::Lite-Mono_p3_chunk_18",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.6297324895858765,
+      "text": "Interaction (LGFI) module adopts\nthe cross-covariance attention [1] to compute the attention\nalong the feature channels. Comparing with the original\nself-attention [8] it reduces the memory complexity from\nO(hN 2+Nd ) toO(d2/h+Nd ), and reduces the time c",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6248542070388794,
+      "text": "3 [3 ×3,48]×3 [3 ×3,64]×3\nLGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3\n80×24 Downsampling3×3,64,stride= 2 3 ×3,80,stride= 2 3 ×3,80,stride= 2 3 ×3,128,stride= 2\nStage 2 CDC blocks [3×3,64]×3 [3 ×3,80]×3 [3 ×3,80]×3 [3 ×3,128]×",
+      "estimated_tokens": 145
+    },
+    {
+      "id": "chunk::Lite-Mono_p1_chunk_23",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 1,
+      "score": 0.6211317777633667,
+      "text": "volutions\n(CDC) module is adopted to capture enhanced multi-scale\nlocal features. Then, a Local-Global Features Interaction\n(LGFI) module is used to calculate the MHSA and encode\narXiv:2211.13202v2  [cs.CV]  15 Mar 2023",
+      "estimated_tokens": 65
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6144756078720093,
+      "text": "×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2\nStage 3 CDC blocks [3×3,128]×6 [3 ×3,128]×6 [3 ×3,128]×9 [3 ×3,224]×9\nLGFI blockdilation= 1,2,3,2,4,6 dilation= 1,2,3,2,4,6 dilation= [1,2,3]×2,2,4,6 dilation= [1,2,3]×2,2,4,6\n#Param",
+      "estimated_tokens": 154
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_18",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.6035796403884888,
+      "text": "sual quality factors.\nAdditionally, Figure 6(c) presents the weight curves that\ncorrespond to Figure 6(b), demonstrating how the GT-mean\nL1 loss behaves with regard to weight variation. As η ap-\nproaches 1, the weight W rapidly decreases, indicating that\nt",
+      "estimated_tokens": 62
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 973,
+    "compressed_context_tokens": 973,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 973,
+  "context_tokens": 973,
+  "prompt_token_estimate": 1477,
+  "run_label": "sage_semantic_all_v1_chunk_lite_mono_lgfi_module_design",
+  "answer": "<think>\nThe user is asking about how the LGFI module implements global information encoding and what attention mechanism it uses.\n\nLooking at the sources:\n- [6] describes LGFI: \"Given an input feature map X with dimension H×W×C it is linearly projected to the same dimensional queries Q = XWq, keys K = XWk, and values V = XWv\"\n- [7] states: \"Interaction (LGFI) module adopts the cross-covariance attention [1] to compute the attention along the feature channels\"\n- [7] also mentions: \"Comparing with the original self-attention [8] it reduces the memory complexity from O(hN² + Nd) to O(d²/h + Nd)\"\n- [4] states: \"The proposed LGFI is crucial to make Mono-Lite encode long-range global contexts\"\n\nSo the LGFI module:\n1. Uses cross-covariance attention to compute attention along feature channels\n2. Performs linear projection to queries Q, keys K, values V\n3. Encodes long-range global contexts to compensate for CNNs' inability to extract only local features\n\nLet me construct the JSON answer.\n</think>\n{\n  \"answer\": \"LGFI 模块通过将输入特征图线性投影为查询 Q、键 K 和值 V，并采用 cross-covariance attention（跨协方差注意力）沿特征通道维度计算注意力，从而实现长距离全局上下文信息的编码，弥补 CNN 只能提取局部特征的不足。\",\n  \"items\": [\n    {\n      \"name\": \"LGFI 模块的全局信息编码机制\",\n      \"description\": \"对输入特征图 X（H×W×C）进行线性投影得到 Q=XWq、K=XWk、V=XWv，并通过注意力计算编码长距离全局上下文，以弥补 CNN 只能提取局部特征的缺陷。\",\n      \"citations\": [6, 4]\n    },\n    {\n      \"name\": \"LGFI 采用的注意力机制\",\n      \"description\": \"采用 cross-covariance attention（跨协方差注意力），沿特征通道维度计算注意力，相比原始 self-attention 将内存复杂度由 O(hN²+Nd) 降至 O(d²/h+Nd)。\",\n      \"citations\": [7]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1525,
+    "completion_tokens": 465,
+    "total_tokens": 1990,
+    "model": "MiniMax-M3"
+  }
+}

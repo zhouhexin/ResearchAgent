@@ -190,13 +190,7 @@ ACDepth/DepthDark-only runs.
 Direct chunk/sentence/proposition comparison:
 
 ```powershell
-python experiments\run_fixed_qa_batch.py `
-  --question-set all `
-  --granularities chunk,sentence,proposition `
-  --budgets 500,1000,1500 `
-  --top-k 50 `
-  --strategy baseline `
-  --run-prefix qa_all_v1
+python experiments\run_fixed_qa_batch.py   --question-set all --granularities chunk,sentence,proposition --budgets 500,1000,1500 --top-k 50 --strategy baseline --run-prefix qa_all_v1
 ```
 
 Outputs:

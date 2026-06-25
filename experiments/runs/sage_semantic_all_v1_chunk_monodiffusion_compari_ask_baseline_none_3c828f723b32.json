@@ -1,0 +1,542 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_monodiffusion_compari_ask_baseline_none_3c828f723b32",
+  "dry_run": false,
+  "query": "MonoDiffusion 在对比实验中与哪些方法进行了比较？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_10",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.7510632276535034,
+      "text": "erstand the influence of different components\nin MonoDiffusion on performance, we provide detailed abla-\ntion results.\nMonoDiffusion (Table IV). We leverage the Lite-Mono [18]\nas our baseline (ID 1). The implementation of diffusion is hard\nfor self-supervi"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_7",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.726933479309082,
+      "text": "sults of MonoDiffusion indicate that it gener-\nalizes well to unseen scenarios. In Fig. 5, we demonstrate a\nqualitative depth comparison. As we can see, MonoDiffusion\nacquires highly-detailed depth maps with good visual quality.\nIn Fig 6, we further show a"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p2_chunk_0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 2,
+      "score": 0.724196195602417,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 2\nFig. 2. An overview of the proposed MonoDiffusion . During the training phase, MonoDiffusion involves an additional teacher model to assist the diffusion.\nThe teacher model is self-supervised pre-trained based on Lite-Mono"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_9",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.7177520990371704,
+      "text": "9 0.953 0.980 3.1M\nMonoDiffusion (ours) 2023 M† 0.119 0.843 4.868 0.196 0.858 0.955 0.981 3.1M\nMonodepth2-Res18 [15] 2019 M* 0.115 0.882 4.701 0.190 0.879 0.961 0.982 14.3M\nR-MSFM3 [53] 2021 M* 0.112 0.773 4.581 0.189 0.879 0.960 0.982 3.5M\nR-MSFM6 [53] 20"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_8",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.7128092646598816,
+      "text": "ortion than the compared\nmethods. The outstanding performance of our MonoDiffusion\nevidences the strong generative capability of diffusion model."
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.712465763092041,
+      "text": "× 192.\nin Table II. As we can see, MonoDiffusion is able to exceed the\ncompared methods in each setting and beats recent Lite-Mono\nwith almost identical number of parameters. Moreover, even\ncompared to semantic segmentation-assisted methods such as\nSGDept"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_2",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.7053471803665161,
+      "text": "0.383 5.321 10.470 0.478\nDDVO [50] 0.387 4.720 8.090 0.204\nMonodepth2 [15] 0.322 3.589 7.417 0.163\nR-MSFM6 [53] 0.334 3.285 7.212 0.169\nLite-Mono [18] 0.305 3.060 6.981 0.158\nMonoDiffusion (ours) 0.295 2.849 6.854 0.150\nTABLE III\nQUANTITATIVE COMPARISON O"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_3",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.7032886743545532,
+      "text": "E .\nInput MonoDiffusion(w/o MVC) MonoDiffusion (ours)\nFig. 8. Qualitative comparison between MonoDiffusion with and without\nmasked visual condition (MVC) mechanism.\nobjects and then gradually refines the depth values and rectifies\nthe inter- and intra-obje"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.702135443687439,
+      "text": ".630 11.99 0.579 0.306 0.568 0.777\n3 ✓ 0.105 0.757 4.521 0.181 0.889 0.964 0.984\n4 ✓ ✓ 0.104 0.741 4.489 0.180 0.890 0.964 0.984\n5 ✓ ✓ ✓ 0.103 0.726 4.447 0.179 0.893 0.965 0.984\nTABLE IV\nABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_24",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6986749172210693,
+      "text": "ground-\ntruth in diffusion model.\nWe propose MonoDiffusion, which takes as input a random\ndepth distribution and progressively refines it through multiple\ndenoising steps under the guidance of visual conditions. Since\nthe depth ground-truth is not availab"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_7",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6984890699386597,
+      "text": "ts\nand the proposed MonoDiffusion outperforms prior state-of-the-\nart competitors. The source code will be available at https://\ngithub.com/ShuweiShao/MonoDiffusion.\nIndex Terms—Depth estimation, Self-supervised learning, Dif-\nfusion, Denoising\nI. I NTRODU"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_26",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6979745626449585,
+      "text": "fusion in MonoDiffusion. Specifically, the pseudo ground-\ntruth diffusion gradually appends noise to the depth generated\nby a pre-trained teacher model, which we refer to as the pseudo\nground-truth. As a by-product, the teacher model allows us to\nimpose a"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_3",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.6972202062606812,
+      "text": "MonoDiffusion (ours) 0.295 2.849 6.854 0.150\nTABLE III\nQUANTITATIVE COMPARISON ON THE MAKE 3D [29] DATASET. ALL\nMODELS ARE TRAINED ON KITTI [28] WITH AN IMAGE RESOLUTION OF\n640 × 192.\nin Table II. As we can see, MonoDiffusion is able to exceed the\ncompared"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_9",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6964629292488098,
+      "text": "ole,\nwhile MonoDiffusion is able to recover these smaller details\nand preserves prominent geometric features of the 3D scenes\nat the same time.\nF . Ablation Study\nTo better understand the influence of different components\nin MonoDiffusion on performance, w"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p4_chunk_8",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 4,
+      "score": 0.6928129196166992,
+      "text": "based on [25].\nMasked visual condition. Inspired by the success of cou-\npling diffusion model with masked image modeling [26], [27],\nwe develop a masked visual condition mechanism to further\nenhance the denoising ability of MonoDiffusion. For multi-\nscale"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_29",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6774959564208984,
+      "text": "ion mechanism to enhance the\ndenoising ability of MonoDiffusion, inspired by the success of\ncombining diffusion model with masked image modeling [26],\n[27]. The difference is that our target to reconstruction is the\ndenoised depth rather than the RGB image"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_12",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.676992654800415,
+      "text": "atasets indicate the efficacy of the proposed MonoDiffusion.\nWe hope our novel initiative will encourage more sophisticated\ndiffusion-based depth estimation achievements.\nREFERENCES\n[1] Shahram Izadi, David Kim, Otmar Hilliges, David Molyneaux, Richard\nNew"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p6_chunk_8",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 6,
+      "score": 0.6744800806045532,
+      "text": "inference.\nD. Comparison to Prior State-of-the-Arts\nWe compare the proposed MonoDiffusion with prior state-\nof-the-art competitors on the Eigen split of KITTI benchmark.\nWe mainly focus on training with monocular videos in three\nsettings: 640 × 192 resolu"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_23",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6725977659225464,
+      "text": "fusion model to MDE in a full supervised setting. However,\nthe lack of depth ground-truth in self-supervised MDE poses a\nsevere challenge to the diffusion process that requires ground-\ntruth in diffusion model.\nWe propose MonoDiffusion, which takes as inpu"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_11",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.671122133731842,
+      "text": "iffusion process to assist the diffusion and the masked\nvisual condition mechanism to strengthen the denoising ability\nof model. Extensive experiments on the KITTI and Make3D\ndatasets indicate the efficacy of the proposed MonoDiffusion.\nWe hope our novel i"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_25",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.670046865940094,
+      "text": "r the guidance of visual conditions. Since\nthe depth ground-truth is not available in the training phase, we\nintroduce a pseudo ground-truth diffusion process to assist the\ndiffusion in MonoDiffusion. Specifically, the pseudo ground-\ntruth diffusion gradua"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6696240901947021,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 1\nMonoDiffusion: Self-Supervised Monocular Depth\nEstimation Using Diffusion Model\nShuwei Shao, Zhongcai Pei, Weihai Chen ∗, Dingchi Sun, Peter C.Y .Chen and Zhengguo Li, Fellow, IEEE\nAbstract—Over the past few years, self-su"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6679663062095642,
+      "text": "the depth ground-truth\nis unavailable in the training phase, we develop a pseudo ground-\ntruth diffusion process to assist the diffusion in MonoDiffusion.\nThe pseudo ground-truth diffusion gradually adds noise to the\ndepth map generated by a pre-trained t"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_12",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6661128997802734,
+      "text": "-Mono-8M [18] 2023 M* 0.097 0.710 4.309 0.174 0.905 0.967 0.984 8.7M\nMonoDiffusion (ours) 2023 M* 0.099 0.702 4.305 0.175 0.903 0.967 0.984 3.1M\nMonoDiffusion-8M (ours) 2023 M* 0.094 0.662 4.235 0.171 0.908 0.968 0.984 8.8M\nMonoViT-tiny [55] 2022 M 0.102 0"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p3_chunk_6",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.6642743349075317,
+      "text": "III. M ETHODOLOGY\nIn this section, we first introduce the preliminary knowledge\nof diffusion model and self-supervised MDE. Then, we elabo-\nrate on the proposed MonoDiffusion, namely, depth estimation\nas denoising, pseudo ground-truth diffusion and masked"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p4_chunk_9",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 4,
+      "score": 0.6642726063728333,
+      "text": "ism to further\nenhance the denoising ability of MonoDiffusion. For multi-\nscale feature tokens propagated by the encoder, we generate\nrandom masks to remove part of the tokens from these feature\ntokens. To prevent the information leakage, these masks are\ns"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_5",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.6611354947090149,
+      "text": "Moreover, even\ncompared to semantic segmentation-assisted methods such as\nSGDepth, MonoDiffusion shows great advantages.\nIn Fig. 3, we show a qualitative depth comparison. MonoD-\niffusion is better at delineating object contours, for example,\ntraffic sign"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_2",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6605052947998047,
+      "text": "84\nTABLE IV\nABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD: PSEUDO GROUND -TRUTH DIFFUSION ; MVC: MASKED VISUAL\nCONDITION MECHANISM .\nInference step Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1.25 ↑ δ <1.252 ↑ δ <1.253 ↑\n2 1.812 75.600 3"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p3_chunk_21",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.6575319766998291,
+      "text": "t (p)\n\u0001\n2\n+\nX\np\n(1 − κ)\n\n\nft (p) − fs→t (p)\n\n\n1,\n(7)\nwhere Lph is referred to as the photometric loss and κ is set\nto 0.85.\nB. MonoDiffusion\nDepth estimation as denoising. Given the target frame ft,\na standard formulation for MDE is pθ\n\u0000\nDt \f\fft \u0001\n. By con"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_30",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6564145088195801,
+      "text": "hat our target to reconstruction is the\ndenoised depth rather than the RGB image.\nTo summarize, our contributions are listed as follows:\n• We propose a novel framework, dubbed MonoDiffusion,\narXiv:2311.07198v1  [cs.CV]  13 Nov 2023"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_22",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6557909250259399,
+      "text": "conduct zero-shot generalization and ablation studies\nto perform a thorough analysis of MonoDiffusion.\nA. Datasets and Evaluation Metrics\nThe KITTI dataset is composed of 61 stereo road scenes\nwith the image resolution around 1241 × 376 pixels. The data\nc"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_5",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.6544381380081177,
+      "text": "mparison between MonoDiffusion with and without\nmasked visual condition (MVC) mechanism. As can be seen,\nthe MVC mechanism can indeed enhance the denoising ability\nof model, e.g., better tree silhouettes. Additionally, the depth\nat distant distances can be"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p11_chunk_7",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 11,
+      "score": 0.6524211764335632,
+      "text": "er to the Gaussian used in the original DDPM\nformulation, we propose to anneal the weight of levels i >0\nbased on the diffusion schedule. Specifically, we assign thei-\nth level at timestep t the weight (st/T )i, where T is the total\nnumber of diffusion ste"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p11_chunk_7",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.6524211764335632,
+      "text": "er to the Gaussian used in the original DDPM\nformulation, we propose to anneal the weight of levels i >0\nbased on the diffusion schedule. Specifically, we assign thei-\nth level at timestep t the weight (st/T )i, where T is the total\nnumber of diffusion ste"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_6",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6456823945045471,
+      "text": ".762 4.619 0.186 0.877 0.961 0.983 23.3M\nLite-Mono [18] 2023 M 0.107 0.765 4.561 0.183 0.886 0.963 0.983 3.1M\nMonoDiffusion (ours) 2023 M 0.103 0.726 4.447 0.179 0.893 0.965 0.984 3.1M\nMonodepth2-Res18 [15] 2019 M† 0.132 1.044 5.142 0.210 0.845 0.948 0.977"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.6452646851539612,
+      "text": "then gradually refines the depth values and rectifies\nthe inter- and intra-object distance relationships.\nMasked visual condition. In Fig. 8, we display a qualitative\ndepth comparison between MonoDiffusion with and without\nmasked visual condition (MVC) me"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_3",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6448702812194824,
+      "text": "namic\nobjects. In this work, we introduce a novel self-supervised depth\nestimation framework, dubbed MonoDiffusion, by formulating it\nas an iterative denoising process. Because the depth ground-truth\nis unavailable in the training phase, we develop a pseud"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_7",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.6441203951835632,
+      "text": "vert depth maps\ninto point clouds and display the 3D structures in Fig 4. It can\nbe seen that MonoDiffusion is capable of recovering the 3D\nworld reasonably and shows less distortion than the compared\nmethods. The outstanding performance of our MonoDiffusi"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.6426099538803101,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 7\nInput Monodepth2 Lite-Mono MonoDiffusion (ours)\nFig. 5. Qualitative depth comparison on the Make3D dataset .\nInput Monodepth2 Lite-Mono MonoDiffusion (ours)\nFig. 6. Qualitative point cloud results on the Make3D dataset.\nMe"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_6",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6412369608879089,
+      "text": "ify the generalization ability of MonoD-\niffusion in a fully zero-shot setting. The models are trained\non the KITTI dataset but evaluated on the Make3D dataset.\nThe superior results of MonoDiffusion indicate that it gener-\nalizes well to unseen scenarios."
+    },
+    {
+      "id": "chunk::MonoDiffusion_p6_chunk_0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 6,
+      "score": 0.6411318778991699,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 6\nInput Monodepth2 Lite-Mono MonoDiffusion (ours)\nFig. 3. Qualitative depth comparison on the KITTI dataset. The red boxes indicate the regions to emphasize.\nInput Monodepth2 Lite-Mono MonoDiffusion (ours)\nFig. 4. Qualitativ"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_8",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6370812654495239,
+      "text": "] 2021 M† 0.128 0.965 5.019 0.207 0.853 0.951 0.977 3.5M\nR-MSFM6 [53] 2021 M† 0.126 0.944 4.981 0.204 0.857 0.952 0.978 3.8M\nLite-Mono [18] 2023 M† 0.121 0.876 4.918 0.199 0.859 0.953 0.980 3.1M\nMonoDiffusion (ours) 2023 M† 0.119 0.843 4.868 0.196 0.858 0."
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_15",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.6369867324829102,
+      "text": "ion.arXiv preprint arXiv:2412.09013, 2024. 3\n[66] Ziyao Zeng, Jingcheng Ni, Daniel Wang, Patrick Rim, Younjoon Chung, Fengyu Yang, Byung-Woo\nHong, and Alex Wong. Priordiffusion: Leverage language prior in diffusion models for monocular depth\nestimation, 20"
+    },
+    {
+      "id": "chunk::Jasmine_p13_chunk_10",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.6349942684173584,
+      "text": "ce, 2024. 20\n[44] Shuwei Shao, Zhongcai Pei, Weihai Chen, Dingchi Sun, Peter C. Y . Chen, and Zhengguo Li. Monodiffusion:\nSelf-supervised monocular depth estimation using diffusion model, 2023. 3\n[45] Shuwei Shao, Zhongcai Pei, Xingming Wu, Zhong Liu, Weih"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p6_chunk_1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 6,
+      "score": 0.6345024108886719,
+      "text": "to emphasize.\nInput Monodepth2 Lite-Mono MonoDiffusion (ours)\nFig. 4. Qualitative point cloud results on the KITTI dataset.\nthe self-supervised MDE system has inherent scale ambiguity,\nwe make use of the median scaling technique introduced by [5]\nto recove"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p6_chunk_2",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 6,
+      "score": 0.6339205503463745,
+      "text": "biguity,\nwe make use of the median scaling technique introduced by [5]\nto recover the absolute scale for depth evaluation.\nC. Implementation Details\nMonoDiffusion is implemented in the PyTorch library and\ntrained on a single NVIDIA TITAN RTX. We use the Ad"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_28",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.632800817489624,
+      "text": "the negative impact\nof depth error in pseudo ground-truth, we apply a multi-view\ncheck filter [25] to filter out erroneous depth. Furthermore, we\ndevelop a masked visual condition mechanism to enhance the\ndenoising ability of MonoDiffusion, inspired by the"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p2_chunk_10",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 2,
+      "score": 0.6320145130157471,
+      "text": "st-\norder variational constraint to regularize depth map. However,\nthese methods rely heavily on the quality and quantity of depth\nground-truth while the proposed MonoDiffusion does not have\nsuch a requirement.\nSelf-supervised depth estimation does not req"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_6",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6312903165817261,
+      "text": "sed depth. Further, we develop a masked visual condition\nmechanism to enhance the denoising ability of model. Extensive\nexperiments are conducted on the KITTI and Make3D datasets\nand the proposed MonoDiffusion outperforms prior state-of-the-\nart competitor"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p2_chunk_2",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 2,
+      "score": 0.6300656795501709,
+      "text": "estimation by regard-\ning it as an iterative denoising process.\n• We introduce a pseudo ground-truth diffusion process to\nassist the diffusion in MonoDiffusion and a masked visual\ncondition mechanism to enhance its denoising ability.\n• Extensive experiment"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_10",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.7510632276535034,
+      "text": "erstand the influence of different components\nin MonoDiffusion on performance, we provide detailed abla-\ntion results.\nMonoDiffusion (Table IV). We leverage the Lite-Mono [18]\nas our baseline (ID 1). The implementation of diffusion is hard\nfor self-supervi",
+      "estimated_tokens": 60
+    },
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_7",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.726933479309082,
+      "text": "sults of MonoDiffusion indicate that it gener-\nalizes well to unseen scenarios. In Fig. 5, we demonstrate a\nqualitative depth comparison. As we can see, MonoDiffusion\nacquires highly-detailed depth maps with good visual quality.\nIn Fig 6, we further show a",
+      "estimated_tokens": 64
+    },
+    {
+      "id": "chunk::MonoDiffusion_p2_chunk_0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 2,
+      "score": 0.724196195602417,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 2\nFig. 2. An overview of the proposed MonoDiffusion . During the training phase, MonoDiffusion involves an additional teacher model to assist the diffusion.\nThe teacher model is self-supervised pre-trained based on Lite-Mono",
+      "estimated_tokens": 64
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_9",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.7177520990371704,
+      "text": "9 0.953 0.980 3.1M\nMonoDiffusion (ours) 2023 M† 0.119 0.843 4.868 0.196 0.858 0.955 0.981 3.1M\nMonodepth2-Res18 [15] 2019 M* 0.115 0.882 4.701 0.190 0.879 0.961 0.982 14.3M\nR-MSFM3 [53] 2021 M* 0.112 0.773 4.581 0.189 0.879 0.960 0.982 3.5M\nR-MSFM6 [53] 20",
+      "estimated_tokens": 166
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_8",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.7128092646598816,
+      "text": "ortion than the compared\nmethods. The outstanding performance of our MonoDiffusion\nevidences the strong generative capability of diffusion model.",
+      "estimated_tokens": 28
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_4",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.712465763092041,
+      "text": "× 192.\nin Table II. As we can see, MonoDiffusion is able to exceed the\ncompared methods in each setting and beats recent Lite-Mono\nwith almost identical number of parameters. Moreover, even\ncompared to semantic segmentation-assisted methods such as\nSGDept",
+      "estimated_tokens": 59
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_2",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.7053471803665161,
+      "text": "0.383 5.321 10.470 0.478\nDDVO [50] 0.387 4.720 8.090 0.204\nMonodepth2 [15] 0.322 3.589 7.417 0.163\nR-MSFM6 [53] 0.334 3.285 7.212 0.169\nLite-Mono [18] 0.305 3.060 6.981 0.158\nMonoDiffusion (ours) 0.295 2.849 6.854 0.150\nTABLE III\nQUANTITATIVE COMPARISON O",
+      "estimated_tokens": 144
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_3",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.7032886743545532,
+      "text": "E .\nInput MonoDiffusion(w/o MVC) MonoDiffusion (ours)\nFig. 8. Qualitative comparison between MonoDiffusion with and without\nmasked visual condition (MVC) mechanism.\nobjects and then gradually refines the depth values and rectifies\nthe inter- and intra-obje",
+      "estimated_tokens": 62
+    },
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_1",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.702135443687439,
+      "text": ".630 11.99 0.579 0.306 0.568 0.777\n3 ✓ 0.105 0.757 4.521 0.181 0.889 0.964 0.984\n4 ✓ ✓ 0.104 0.741 4.489 0.180 0.890 0.964 0.984\n5 ✓ ✓ ✓ 0.103 0.726 4.447 0.179 0.893 0.965 0.984\nTABLE IV\nABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD",
+      "estimated_tokens": 146
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_24",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6986749172210693,
+      "text": "ground-\ntruth in diffusion model.\nWe propose MonoDiffusion, which takes as input a random\ndepth distribution and progressively refines it through multiple\ndenoising steps under the guidance of visual conditions. Since\nthe depth ground-truth is not availab",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_7",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6984890699386597,
+      "text": "ts\nand the proposed MonoDiffusion outperforms prior state-of-the-\nart competitors. The source code will be available at https://\ngithub.com/ShuweiShao/MonoDiffusion.\nIndex Terms—Depth estimation, Self-supervised learning, Dif-\nfusion, Denoising\nI. I NTRODU",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_26",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6979745626449585,
+      "text": "fusion in MonoDiffusion. Specifically, the pseudo ground-\ntruth diffusion gradually appends noise to the depth generated\nby a pre-trained teacher model, which we refer to as the pseudo\nground-truth. As a by-product, the teacher model allows us to\nimpose a",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::MonoDiffusion_p7_chunk_3",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 7,
+      "score": 0.6972202062606812,
+      "text": "MonoDiffusion (ours) 0.295 2.849 6.854 0.150\nTABLE III\nQUANTITATIVE COMPARISON ON THE MAKE 3D [29] DATASET. ALL\nMODELS ARE TRAINED ON KITTI [28] WITH AN IMAGE RESOLUTION OF\n640 × 192.\nin Table II. As we can see, MonoDiffusion is able to exceed the\ncompared",
+      "estimated_tokens": 91
+    },
+    {
+      "id": "chunk::MonoDiffusion_p8_chunk_9",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.6964629292488098,
+      "text": "ole,\nwhile MonoDiffusion is able to recover these smaller details\nand preserves prominent geometric features of the 3D scenes\nat the same time.\nF . Ablation Study\nTo better understand the influence of different components\nin MonoDiffusion on performance, w",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::MonoDiffusion_p4_chunk_8",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 4,
+      "score": 0.6928129196166992,
+      "text": "based on [25].\nMasked visual condition. Inspired by the success of cou-\npling diffusion model with masked image modeling [26], [27],\nwe develop a masked visual condition mechanism to further\nenhance the denoising ability of MonoDiffusion. For multi-\nscale",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_29",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6774959564208984,
+      "text": "ion mechanism to enhance the\ndenoising ability of MonoDiffusion, inspired by the success of\ncombining diffusion model with masked image modeling [26],\n[27]. The difference is that our target to reconstruction is the\ndenoised depth rather than the RGB image",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_12",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.676992654800415,
+      "text": "atasets indicate the efficacy of the proposed MonoDiffusion.\nWe hope our novel initiative will encourage more sophisticated\ndiffusion-based depth estimation achievements.\nREFERENCES\n[1] Shahram Izadi, David Kim, Otmar Hilliges, David Molyneaux, Richard\nNew",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::MonoDiffusion_p6_chunk_8",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 6,
+      "score": 0.6744800806045532,
+      "text": "inference.\nD. Comparison to Prior State-of-the-Arts\nWe compare the proposed MonoDiffusion with prior state-\nof-the-art competitors on the Eigen split of KITTI benchmark.\nWe mainly focus on training with monocular videos in three\nsettings: 640 × 192 resolu",
+      "estimated_tokens": 60
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_23",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6725977659225464,
+      "text": "fusion model to MDE in a full supervised setting. However,\nthe lack of depth ground-truth in self-supervised MDE poses a\nsevere challenge to the diffusion process that requires ground-\ntruth in diffusion model.\nWe propose MonoDiffusion, which takes as inpu",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_11",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.671122133731842,
+      "text": "iffusion process to assist the diffusion and the masked\nvisual condition mechanism to strengthen the denoising ability\nof model. Extensive experiments on the KITTI and Make3D\ndatasets indicate the efficacy of the proposed MonoDiffusion.\nWe hope our novel i",
+      "estimated_tokens": 54
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1451,
+    "compressed_context_tokens": 1451,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1451,
+  "context_tokens": 1451,
+  "prompt_token_estimate": 2042,
+  "run_label": "sage_semantic_all_v1_chunk_monodiffusion_comparison_methods",
+  "answer": "<think>\nThe user is asking about which methods MonoDiffusion was compared against in the comparison experiments. Let me look through the provided materials to find the names of methods compared with MonoDiffusion.\n\nFrom the materials, I can identify the following methods mentioned in comparison tables and text:\n\n1. Monodepth2-Res18 [15] - 2019\n2. R-MSFM3 [53] - 2021\n3. R-MSFM6 [53]\n4. DDVO [50]\n5. Monodepth2 [15]\n6. Lite-Mono [18]\n7. SGDept (mentioned but not fully visible)\n\nFrom [4]: Monodepth2-Res18, R-MSFM3, R-MSFM6 are mentioned\nFrom [7]: DDVO, Monodepth2, R-MSFM6, Lite-Mono, MonoDiffusion are mentioned\nFrom [6]: SGDept is mentioned (semantic segmentation-assisted methods)\n\nLet me compile the list based on the evidence available.\n</think>\n{\"answer\":\"MonoDiffusion在对比实验中主要与Monodepth2、Monodepth2-Res18、R-MSFM3、R-MSFM6、Lite-Mono、DDVO以及SGDept等方法进行了比较。\",\"items\":[{\"name\":\"Monodepth2 [15]\",\"description\":\"2019年提出的自监督单目深度估计方法，在KITTI和Make3D数据集上与MonoDiffusion进行了对比。\",\"citations\":[4,7]},{\"name\":\"Monodepth2-Res18 [15]\",\"description\":\"基于ResNet18的Monodepth2变体，在定量对比表中出现。\",\"citations\":[4]},{\"name\":\"R-MSFM3 / R-MSFM6 [53]\",\"description\":\"2021年提出的方法，包含3层和6层变体，在对比表格中出现。\",\"citations\":[4,7]},{\"name\":\"Lite-Mono [18]\",\"description\":\"MonoDiffusion的基线方法，在多个数据集对比中出现。\",\"citations\":[4,6,7]},{\"name\":\"DDVO [50]\",\"description\":\"在Make3D数据集对比表中与MonoDiffusion进行了比较。\",\"citations\":[7]},{\"name\":\"SGDept\",\"description\":\"基于语义分割辅助的深度估计方法，在对比中被MonoDiffusion超越。\",\"citations\":[6]}],\"missing_information\":\"\"}",
+  "usage": {
+    "prompt_tokens": 2084,
+    "completion_tokens": 490,
+    "total_tokens": 2574,
+    "model": "MiniMax-M3"
+  }
+}

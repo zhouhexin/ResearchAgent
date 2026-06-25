@@ -1,0 +1,454 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_led_why_checkerboard__ask_baseline_none_c0facc191ca1",
+  "dry_run": false,
+  "query": "LED 为什么选择使用棋盘格（checkerboard）图案进行投射？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::LED_p19_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.7988200187683105,
+      "text": "cs from this experiment are available in table S4, the checkerboard pat-\ntern demonstrates significantly superior performances.\nG LED Impact On Other Tasks\nWe introduce the LED lighting pattern for improving performance on geometric tasks. We\nstudy its imp"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.7934622168540955,
+      "text": "re the performance of the LED checkerboard\nagainst other common structured light patterns\n(horizontal and vertical lines). Table 3 shows\nthat the checkerboard pattern outperforms the\nothers across most metrics. While horizontal\nlines show slight improvemen"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.7785689830780029,
+      "text": "to vertical and\nhorizontal lines. Results are obtained\nfrom 50% of NSDD training data.\nPattern Study.We generated additional\ndata with various illumination patterns to com-\npare the performance of the LED checkerboard\nagainst other common structured light"
+    },
+    {
+      "id": "chunk::LED_p20_chunk_3",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.7383162379264832,
+      "text": "sults on NSDD.\nH Using Multiple Checkerboard Resolutions\nAny HD headlight can project LED’s checkerboard, although with a resolution adjustment.\nTo evaluate its impact on model performances, we propose to train a model with 3 checker-\nboard resolutions (0."
+    },
+    {
+      "id": "chunk::LED_p21_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.7191606760025024,
+      "text": "ts on real datasetwhen trained on 33% of each checkerboard\nresolutions (0.5°, 0.25°, 0.125°).\nFigure S6:Zoomed in qualitative results on NSDDshowcasing LED improved depth pre-\ndiction compared to high-beam (HB).\nI Real World Scenarios\nTo collect our real-w"
+    },
+    {
+      "id": "chunk::LED_p19_chunk_3",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.7140052914619446,
+      "text": ".23190.9370 0.9776 0.9903\nTable S4:Comparison of encoder-decoder performances using various patterns: LED\nuse the checkerboard, HB stands for high-beam, VL and HL are vertical and horizontal lines\nrespectively.\ndegrading others. Since most valuable cues in"
+    },
+    {
+      "id": "chunk::LED_p19_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.6768606305122375,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT19\nFigure S4:Example of illuminations pattern tested: high-beam (top-left), checkerboard\n(top-right), horizontal lines (bottom-left) and vertical lines (bottom-right).\nPatternRMSE↓Abs Rel↓Log1"
+    },
+    {
+      "id": "chunk::LED_p19_chunk_6",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.6757853031158447,
+      "text": "pplication, we generate half-sized datasets featuring com-\nmonly used structured light patterns: checkerboard, horizontal, and vertical lines (see fig. S4).\nComprehensive metrics from this experiment are available in table S4, the checkerboard pat-\ntern de"
+    },
+    {
+      "id": "chunk::LED_p21_chunk_11",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.6601841449737549,
+      "text": "boxes emphasize\non enhanced regions. Some are zoomed in for improved visibility. LED results (right) ex-\nhibit higher precision, leading to more accurate object boundaries and shapes compared to\nHB (middle). Far away obstacles are better defined and less"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_18",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6575854420661926,
+      "text": "es,e.g., car headlights, street lights.\nTo account for objects passing through the pattern illumination, we investigate the impact\nof smaller checkerboard cells. Using a size of 0.25°, we observe great enhancement across\nall metrics (-17.4% RMSE, -18.8% Ab"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6558578610420227,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9\nPattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nEncoder-decoderLB 14.199 0.187 0.072 0.292 28.938 5.620 0.772 0.909 0.956LED 0.5°11.089 0.119 0.050 0.213 21.251 2.304 0.864 0.95"
+    },
+    {
+      "id": "chunk::LED_p20_chunk_4",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.6550604104995728,
+      "text": "performances, we propose to train a model with 3 checker-\nboard resolutions (0.5°, 0.25° and 0.125°) evenly split, and evaluate on each one. Table S6\ndemonstrates that the model is able to perform well on all resolutions although with a minor\nperformance"
+    },
+    {
+      "id": "chunk::LED_p21_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.654962956905365,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT21\nTest set RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nLED (0.5°)6.859 0.102 0.041 0.153 14.162 1.511 0.894 0.971 0.989LED (0.25°)5.787 0.082 0.033 0.126 11.875 1.0839 0.929 0.983 0."
+    },
+    {
+      "id": "chunk::LED_p5_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.6503753066062927,
+      "text": "Beam (HB) as the comparison baseline, considering it the maximum\nnormal lighting condition. Since high beam illumination exceeds that of the checkerboard\npattern, performance improvements are attributed solely to the pattern’s contribution. In each\nframe,"
+    },
+    {
+      "id": "chunk::LED_p20_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.6495515704154968,
+      "text": "at LED enhances geometric tasks with limited impact on semantic ones.\nPattern mIoU↑\nMask2F ormer\nLB 51.45±4,00\nLED 51.49±0,76\nTable S5:Mask2Former [11] Semantic segmentation results on NSDD.\nH Using Multiple Checkerboard Resolutions\nAny HD headlight can pr"
+    },
+    {
+      "id": "chunk::LED_p20_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.6481407880783081,
+      "text": "S5. LED doesn’t improve, nor degrade performances. We even note a better\nstability with less variance over runs. Therefore, the similar performance on both domains\nsuggests that LED enhances geometric tasks with limited impact on semantic ones.\nPattern mI"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6421316862106323,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nDomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n(HB→HB)6.1204 0.0903 0.0233 0.1353 13.4847 3.3579 0.9489 0.9812 0.9908(HB→LED)17.3113 0.4479 0.1955 0.6817 52.5132 20.0263 0.4699 0"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6404356360435486,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT7\nModelRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n(HB) O-ROI9.2533 0.1598 0.0249 0.2047 20.4447 11.4068 0.9385 0.97140.9828(LED) O-ROI9.0070 0.1295 0.0221 0.2027 20.2348 8.7407 0.942"
+    },
+    {
+      "id": "chunk::LED_p4_chunk_8",
+      "source": "data\\LED.pdf",
+      "page": 4,
+      "score": 0.6391516923904419,
+      "text": "s\n[3]. Upon projection, the checkerboard\nis deformed according to surface shapes\n(from the camera’s perspective). Horizontal\nplanes stretch the pattern into a trapezoid,\nwhile vertical surfaces parallel to the image plane cause no deformation (see fig. 2)."
+    },
+    {
+      "id": "chunk::LED_p17_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6349552869796753,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17\nLdepth Lgrad Lnormal Metrics\nL1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n✓ ✗ ✗ ✗ ✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.02"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6330143213272095,
+      "text": "s offers valuable insights into LED behavior on more recent\narchitectures compared to the convolutional ones that are common in embedded devices.\nComparing the encoder-decoder LED with HB (table 1), we observe a significant im-\nprovement in metrics within"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_12",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6327910423278809,
+      "text": "ern data andvice versa. We report results in table 4. The HB-\ntrained model fails significantly on pattern data (+182.85% RMSE), while the LED-trained\nmodel performs reasonably on HB, with a +32.63% RMSE. The LED→HB performance is\n∼8 m RMSE, compared to∼17"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_14",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6320610642433167,
+      "text": "ements yield by LED, demonstrating that using the HD informative pat-\ntern even with a straightforward architecture is promising for challenging nighttime scenes.\nWith LED, Adabins demonstrates a substantial improvement compared to the HB model:\n-24.06% RM"
+    },
+    {
+      "id": "chunk::Depth_Anything_p3_chunk_23",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 3,
+      "score": 0.6312358379364014,
+      "text": "led sources for their diverse scenes.\nThey contain more than 62M images in total. The details are\nprovided in the bottom half of Table 1.\nTechnically, given the previously obtained MDE teacher\nmodel T , we make predictions on the unlabeled set Du to\nobtain"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p29_chunk_1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 29,
+      "score": 0.6297302842140198,
+      "text": "ta\nDIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\n29"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p29_chunk_1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 29,
+      "score": 0.6297302842140198,
+      "text": "ta\nDIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\n29"
+    },
+    {
+      "id": "chunk::LED_p4_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 4,
+      "score": 0.6273888349533081,
+      "text": "t-\ntern, because of its high contrast and sharp\ndiscontinuities. The dense concentration of\ncorners and transitions makes it easily de-\ntectable by convolutional neural networks\n[3]. Upon projection, the checkerboard\nis deformed according to surface shapes"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_17",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6251353025436401,
+      "text": "to fig. 6 (b)). Our results show\nthat encoder-decoder model trained with less than 20% of the LED data outperforms one\ntrained on the full HB dataset, reaching near-peak performance with just 50%. In addition,\nwe observe that incorporating just 10% of LED"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6249591708183289,
+      "text": "6DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nFigure 5:Qualitative results on NSDD.LED results exhibit higher precision, and more ac-\ncurate object boundaries and shapes compared to HB. Red boxes indicate enhanced regions.\nPattern RMSE↓"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6240228414535522,
+      "text": "ls trained on high beam (HB), while the variants use our HD\npattern (LED). Quantitative and qualitative results are presented in table 1 and fig. 5.\nQuantitative Results.We evaluate our method on the encoder-decoder and two SOTA ar-\nchitectures commonly us"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_13",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.623634934425354,
+      "text": "on HB, with a +32.63% RMSE. The LED→HB performance is\n∼8 m RMSE, compared to∼17 m RMSE for HB→LED. Furthermore, we show that incor-\nporating only 10% of HB data reduces performance drop (see fig. 6 (c)), limiting RMSE\nincrease to just +17.11%. It enables"
+    },
+    {
+      "id": "chunk::DepthDark_p3_chunk_1",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.6222176551818848,
+      "text": "onv \nk1c32\nConv \nk1c32\nConv \nk1c32\nConv \nk1c32\nTransformer\nBlock\nConv \nk1c32\nConv \nk1c32\nConv \nk1c32\nTransformer\nBlock\nConv \nk1c32\nLLDG\n Decoder\n𝑰𝑭𝑵\n𝑰 𝑰𝑭\nLow Light Setting\nLight Intensity \nAdaptation\nNoise Simulation\nModule\nLLPEFT\nIllumination \nGuidance\nCo"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p4_chunk_15",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 4,
+      "score": 0.617821991443634,
+      "text": "to reduce\nFLOPs by decreasing the number of pixel locations at which\nwe need to compute an output. This approach is orthogonal\nand complements other approaches such as channel prun-\ning, which instead reduces Cin andCout, or separable con-\nvolutions. We re"
+    },
+    {
+      "id": "chunk::LED_p21_chunk_8",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.616334855556488,
+      "text": "monstrate LED capabilities on complex real-world scenarios.\nWe illustrate additional qualitative results in fig. S5. A video of DepthFormer (LED 0.25°)\nqualitative results on our real-world dataset is available in the supplementary material.\nJ Qualitative"
+    },
+    {
+      "id": "chunk::LED_p21_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.6150854825973511,
+      "text": "ved by our method by\ncomparing results with and without pattern. They are obtained by taking the encoder-\ndecoder, trained on high beam (HB), and with our HD pattern (LED). Red boxes emphasize\non enhanced regions. Some are zoomed in for improved visibility"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p30_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 30,
+      "score": 0.6124197840690613,
+      "text": "DIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnid"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p30_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 30,
+      "score": 0.6124197840690613,
+      "text": "DIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnid"
+    },
+    {
+      "id": "chunk::LED_p1_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.6116888523101807,
+      "text": "arXiv:2409.08031v3  [cs.CV]  18 Nov 2025\nDE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT1\nLED: Light Enhanced Depth Estimation at\nNight\nSimon de Moreau1,2\nhttps://simon.demoreau.fr/\nY asser Almehio2\nyasser.almehio@valeo.com\nAndrei Bursuc3"
+    },
+    {
+      "id": "chunk::LED_p4_chunk_6",
+      "source": "data\\LED.pdf",
+      "page": 4,
+      "score": 0.611487627029419,
+      "text": "tor, this headlight can dynam-\nically project any image or shape onto the\nscene. To prevent pattern overlap, we use\nonly the left headlight.\nWe employ a regular checkerboard pat-\ntern, because of its high contrast and sharp\ndiscontinuities. The dense conce"
+    },
+    {
+      "id": "chunk::LED_p18_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 18,
+      "score": 0.6102982759475708,
+      "text": "18DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nImage inputRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nReference5.42590.19960.0188 0.1253 12.490016.12240.9603 0.98460.9927\nROI-Only5.69310.11450.0199 0.1428 14.21314.45410.9585 0."
+    },
+    {
+      "id": "chunk::LED_p8_chunk_19",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.609366774559021,
+      "text": "formances when used with pattern (see\nfig. 6 (c)). Therefore, any vehicle equipped with HD headlights can apply LED by adding\nonly a few pattern images in their training set, thereby reducing the cost of specialized data."
+    },
+    {
+      "id": "chunk::LED_p9_chunk_17",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6093299388885498,
+      "text": "erformance over LB across all met-\nrics. DepthFormer (0.5°) shows -22.4% RMSE improvement. The qualitative results in fig. 7\nshow LED’s robustness under interfering light sources,e.g., car headlights, street lights.\nTo account for objects passing through t"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_18",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.609321117401123,
+      "text": "rmance with just 50%. In addition,\nwe observe that incorporating just 10% of LED data into the HB training set enable the\nnetwork to learn relevant features and enhance its performances when used with pattern (see\nfig. 6 (c)). Therefore, any vehicle equipp"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_15",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6087876558303833,
+      "text": "na under grant 61620106012.\nShuwei Shao, Zhongcai Pei, Weihai Chen and Dingchi Sun are with\nthe School of Automation Science and Electrical Engineering, Beihang\nUniversity, Beijing, China. (email: swshao@buaa.edu.cn, peizc@buaa.edu.cn,\nwhchen@buaa.edu.cn,"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6086709499359131,
+      "text": "2 performances on NSDD.The model fails when used as zero-\nshot, but it correctly estimates depth with few-shot learning. LED always outperforms HB.\nPatternRMSE↓Abs Rel↓SILog↓\nLED 5.4970.20912.635\nHB 6.443 0.095 13.723\nHL 6.6680.06814.308\nVL 7.360 0.172 15."
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.6083386540412903,
+      "text": "×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2\nStage 3 CDC blocks [3×3,128]×6 [3 ×3,128]×6 [3 ×3,128]×9 [3 ×3,224]×9\nLGFI blockdilation= 1,2,3,2,4,6 dilation= 1,2,3,2,4,6 dilation= [1,2,3]×2,2,4,6 dilation= [1,2,3]×2,2,4,6\n#Param"
+    },
+    {
+      "id": "chunk::DepthDark_p5_chunk_14",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.6067230701446533,
+      "text": "illumination guidance. Specif-\nically, we first concatenate the low-light image and illumination\nguidance image along the channel dimension to form a new aug-\nmented low-light image, denoted as the low-light auxiliary image\n𝐼𝐹𝑁\n𝐴 . Subsequently, we design"
+    },
+    {
+      "id": "chunk::LED_p16_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 16,
+      "score": 0.6063737273216248,
+      "text": "16DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nFigure S1: Detailed encoder-decoder architecture.\ndetailed architecture is shown in fig. S1. Despite the simplicity of this architecture, we show\nthat LED enables the network to achieve per"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_12",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.6062391996383667,
+      "text": "el, Sq Rel). All metrics assessing global precision are improved.\nCompared to the SOTA approaches [4, 27], LED-trained encoder-decoder either outper-\nforms or matches the performance of their HB models. Given that the encoder-decoder is less\ntailored for d"
+    },
+    {
+      "id": "chunk::LED_p12_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 12,
+      "score": 0.6058933734893799,
+      "text": "12DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\n[17] Andreas Geiger, Philip Lenz, and Raquel Urtasun. Are we ready for autonomous driv-\ning? the kitti vision benchmark suite. InCVPR, 2012.\n[18] Clément Godard, Oisin Mac Aodha, and Gabrie"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::LED_p19_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.7988200187683105,
+      "text": "cs from this experiment are available in table S4, the checkerboard pat-\ntern demonstrates significantly superior performances.\nG LED Impact On Other Tasks\nWe introduce the LED lighting pattern for improving performance on geometric tasks. We\nstudy its imp",
+      "estimated_tokens": 47
+    },
+    {
+      "id": "chunk::LED_p8_chunk_10",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.7934622168540955,
+      "text": "re the performance of the LED checkerboard\nagainst other common structured light patterns\n(horizontal and vertical lines). Table 3 shows\nthat the checkerboard pattern outperforms the\nothers across most metrics. While horizontal\nlines show slight improvemen",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::LED_p8_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.7785689830780029,
+      "text": "to vertical and\nhorizontal lines. Results are obtained\nfrom 50% of NSDD training data.\nPattern Study.We generated additional\ndata with various illumination patterns to com-\npare the performance of the LED checkerboard\nagainst other common structured light",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::LED_p20_chunk_3",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.7383162379264832,
+      "text": "sults on NSDD.\nH Using Multiple Checkerboard Resolutions\nAny HD headlight can project LED’s checkerboard, although with a resolution adjustment.\nTo evaluate its impact on model performances, we propose to train a model with 3 checker-\nboard resolutions (0.",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::LED_p21_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.7191606760025024,
+      "text": "ts on real datasetwhen trained on 33% of each checkerboard\nresolutions (0.5°, 0.25°, 0.125°).\nFigure S6:Zoomed in qualitative results on NSDDshowcasing LED improved depth pre-\ndiction compared to high-beam (HB).\nI Real World Scenarios\nTo collect our real-w",
+      "estimated_tokens": 76
+    },
+    {
+      "id": "chunk::LED_p19_chunk_3",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.7140052914619446,
+      "text": ".23190.9370 0.9776 0.9903\nTable S4:Comparison of encoder-decoder performances using various patterns: LED\nuse the checkerboard, HB stands for high-beam, VL and HL are vertical and horizontal lines\nrespectively.\ndegrading others. Since most valuable cues in",
+      "estimated_tokens": 66
+    },
+    {
+      "id": "chunk::LED_p19_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.6768606305122375,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT19\nFigure S4:Example of illuminations pattern tested: high-beam (top-left), checkerboard\n(top-right), horizontal lines (bottom-left) and vertical lines (bottom-right).\nPatternRMSE↓Abs Rel↓Log1",
+      "estimated_tokens": 69
+    },
+    {
+      "id": "chunk::LED_p19_chunk_6",
+      "source": "data\\LED.pdf",
+      "page": 19,
+      "score": 0.6757853031158447,
+      "text": "pplication, we generate half-sized datasets featuring com-\nmonly used structured light patterns: checkerboard, horizontal, and vertical lines (see fig. S4).\nComprehensive metrics from this experiment are available in table S4, the checkerboard pat-\ntern de",
+      "estimated_tokens": 53
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p29_chunk_1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 29,
+      "score": 0.6297302842140198,
+      "text": "ta\nDIODE [50]\nInput RGB Image DiverseDepth MiDaS LeReS\nGround Truth Marigold (ours) DPT Omnidata\n29",
+      "estimated_tokens": 35
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 500,
+    "compressed_context_tokens": 500,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 500,
+  "context_tokens": 500,
+  "prompt_token_estimate": 954,
+  "run_label": "sage_semantic_all_v1_chunk_led_why_checkerboard_pattern",
+  "answer": "<think>\nThe user is asking why LED chose to use a checkerboard pattern for projection. Let me look at the sources to find the answer.\n\nFrom the sources:\n- [1] mentions \"the checkerboard pattern demonstrates significantly superior performances\"\n- [2] mentions \"the checkerboard pattern outperforms the others across most metrics. While horizontal lines show slight improvemen...\"\n- [3] mentions they generated data with various illumination patterns to compare performance of LED checkerboard against other common structured light\n- [6] mentions comparison using various patterns including LED checkerboard, HB (high-beam), VL and HL\n- [8] mentions \"the checkerboard pat-tern de...\" (cut off but from context \"demonstrates significantly superior performances\")\n\nSo the main reason is that the checkerboard pattern outperforms other patterns (vertical lines, horizontal lines, high-beam) across most metrics.\n\nLet me construct the JSON response.\n</think>\n{\n  \"answer\": \"LED 选择使用棋盘格图案是因为在与其他常见结构光图案（如水平线、垂直线、高光束）的对比实验中，棋盘格图案在大多数评估指标上表现显著优于其他图案。\",\n  \"items\": [\n    {\n      \"name\": \"棋盘格图案性能更优\",\n      \"description\": \"在与其他常见结构光图案（垂直线、水平线、高光束）的对比实验中，棋盘格图案在多数评估指标上显著优于其他图案。\",\n      \"citations\": [1, 2, 3, 6, 8]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1007,
+    "completion_tokens": 321,
+    "total_tokens": 1328,
+    "model": "MiniMax-M3"
+  }
+}

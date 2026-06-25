@@ -1,0 +1,502 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_paper_bpg_components_ask_baseline_none_749f981382da",
+  "dry_run": false,
+  "query": "Brightness Peak Generator (BPG) 由哪些关键步骤或子模块组成？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::TDDC_p2_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.8505327701568604,
+      "text": "distribution are located as two key components. Then, we\nbuild up corresponding modules for simulation. Considering\nthe wave optics/diffraction effect of light sources as well as\nreflections, we propose Brightness Peak Generator (BPG) to\nmodel the differen"
+    },
+    {
+      "id": "chunk::TDDC_p4_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.8281431794166565,
+      "text": "effect of light source imaging and reflec-\ntions are considered in the sampling. Since it makes peaks of\nbrightness in the original image plane, we call it Brightness\nPeak Generator (BPG).\nLight Source Sample\nDue to the diffraction/wave optics effects[Lips"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.819150984287262,
+      "text": "as\nreflections, we propose Brightness Peak Generator (BPG) to\nmodel the difference in photometric distribution. Based on\nthe shot-read noise model, we build up Imaging Noise Gen-\nerator (ING) to model nighttime noise distribution. The joint\napplication of"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_23",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7934467792510986,
+      "text": "ghtness Peak Generator, Image Noise Generator and\nBPG+ING for data compensation, respectively."
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_7",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7847172021865845,
+      "text": "tly\napplying light source imaging𝐿𝑆 tends to fail in generating promi-\nnent brightness peaks.\nTo address this issue, we apply a simple random darkening oper-\nation to the input image, where the brightness scaling factor𝑠𝑏 is\nsampled from a uniform distribu"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_8",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.7653744220733643,
+      "text": ",000. To maintain\nperformance on daytime images, BPG and ING processing\nrates are set to 0.5, and these two probabilities are indepen-\ndent of each other.\nD.4 Augmentation on light source images\nFor the sampled light source image, a random rotation\nU (0, 2"
+    },
+    {
+      "id": "chunk::TDDC_p4_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.7521997690200806,
+      "text": "ased on Flare7K [Dai et al., 2022] dataset, which is the\nonly light source dataset with 7000 samples.\nWhen applied, BPG randomly samples a single image from\nthe light source bank. Then, the image will be scaled to the\nstandard size which is determined by t"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_2",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.7442616820335388,
+      "text": "n-\nerator (ING) to model nighttime noise distribution. The joint\napplication of BPG and ING together with the day-image dis-\ntribution results in a fused distribution that has a photometric\nand noise distribution close to the night images. The fused\ndistri"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_chunk_13",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.7374059557914734,
+      "text": ".830 3.118 2.4163.330 60.044 3.707 2.7312.990 60.858 3.563 2.2313.410(-)57.522(+)3.401(+)2.446(+)\nBrightness discrepancy\nIterations(K)\nPNSR\nIterations(K)\n50K 100K 150K\nwith GT-mean loss \nbaseline \nwith GT-mean loss GT \ninput \nC\nbaseline \nB\nLPIPS\nIterations"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_chunk_13",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.7374059557914734,
+      "text": ".830 3.118 2.4163.330 60.044 3.707 2.7312.990 60.858 3.563 2.2313.410(-)57.522(+)3.401(+)2.446(+)\nBrightness discrepancy\nIterations(K)\nPNSR\nIterations(K)\n50K 100K 150K\nwith GT-mean loss \nbaseline \nwith GT-mean loss GT \ninput \nC\nbaseline \nB\nLPIPS\nIterations"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_20",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7366863489151001,
+      "text": "d, as shown\nin the cyan dashed boxes. The ING simulates the potential\nimaging noises in the dark area, thus present better depth pre-\ndiction at the background, such as the sky. The full model\nreceives the merits of BPG and ING, and thus has the best\npredi"
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_19",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7336007952690125,
+      "text": "arger DepthNet backbone.\nE.4 More visualization for ablation analyses\nIn Fig E.1, the BPG helps the regions where highlight spots\nfrequently occur, such as the cars and the road, as shown\nin the cyan dashed boxes. The ING simulates the potential\nimaging no"
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_8",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7285586595535278,
+      "text": "image, where the brightness scaling factor𝑠𝑏 is\nsampled from a uniform distribution. To enrich the diversity of light\nsources while avoiding excessively glaring effects, the peak bright-\nness intensity𝐹 is defined as the product of the number of light\nsou"
+    },
+    {
+      "id": "chunk::TDDC_p11_chunk_16",
+      "source": "data\\TDDC.pdf",
+      "page": 11,
+      "score": 0.727344810962677,
+      "text": "gh our partial compensation (BPG and ING) will not\nproduce vivid night images, the depth network trained by our\nmethod shows good day-to-night generation ability. In our\nmain paper, we have explained this problem in the terms of\nday-night differences. In t"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p6_chunk_16",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 6,
+      "score": 0.7248454093933105,
+      "text": "e the hybrid strategy with baseline. When brightness\nalignment is introduced at 80K iterations, the hybrid ap-\nproach achieves 0.129 LPIPS (vs. baseline 0.155), indicat-\ning enhanced perceptual quality. However, this comes at the\ncost of increased mean bri"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p6_chunk_16",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 6,
+      "score": 0.7248454093933105,
+      "text": "e the hybrid strategy with baseline. When brightness\nalignment is introduced at 80K iterations, the hybrid ap-\nproach achieves 0.129 LPIPS (vs. baseline 0.155), indicat-\ning enhanced perceptual quality. However, this comes at the\ncost of increased mean bri"
+    },
+    {
+      "id": "chunk::DepthDark_p5_chunk_8",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.7238581776618958,
+      "text": "the daytime image𝐼 using LLDG,\nwhile𝐼𝐹𝑁𝑔 is generated from𝐼𝐹𝑁 using illumination guidance. This\nprocess effectively simplifies the illumination guidance procedure\nby converting the low-light image into a grayscale representation\nusing a simple but efficien"
+    },
+    {
+      "id": "chunk::DepthDark_p5_chunk_7",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.7234948873519897,
+      "text": "𝑔 =𝑚𝑒𝑎𝑛𝑐\n\u0000𝐿𝐿𝐷𝐺(𝐼)\u0001, (7)\nThe operation𝑚𝑒𝑎𝑛𝑐 computes the mean value of each pixel\nalong the channel dimension. As shown in Fig. 1.1, the low-light\nimage𝐼𝐹𝑁 is synthesized from the daytime image𝐼 using LLDG,\nwhile𝐼𝐹𝑁𝑔 is generated from𝐼𝐹𝑁 using illumination"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_4",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.7233911156654358,
+      "text": "used with\n0.9 as exponential. The total training step is set to 40,000.\nWe use the same augmentation for the image splits as applied\nin [Liu et al., 2021; Wang et al., 2021; Godard et al., 2019;\nZhao et al., 2022b].\nFor BPG, we set F min = smin\nF = 0.5 , e"
+    },
+    {
+      "id": "chunk::Global-Local_p10_chunk_9",
+      "source": "data\\Global-Local.pdf",
+      "page": 10,
+      "score": 0.7213811874389648,
+      "text": "1 0.248\nDigital\nBrightness\nBTS 0.842 0.965 0.990 0.124 0.084 0.457 0.166\nAdabins 0.862 0.972 0.994 0.117 0.073 0.427 0.152\nOurs 0.899 0.984 0.997 0.104 0.055 0.369 0.133\nContrast\nBTS 0.697 0.864 0.932 0.181 0.198 0.689 0.263\nAdabins 0.654 0.836 0.917 0.198"
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_9",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7194846868515015,
+      "text": "eak bright-\nness intensity𝐹 is defined as the product of the number of light\nsources𝑁𝐹 and the scaling factor 𝑠𝐹 , both𝑠𝐹 and𝐹 are sampled\nfrom a log-uniform distribution:\n𝑠𝐹∼ exp\n\u0010\n𝑈(log𝑠𝑚𝑖𝑛\n𝐹 , log𝑠𝑚𝑎𝑥\n𝐹 )\n\u0011\n,\n𝐹∼ exp\n\u0010\n𝑈(log𝐹𝑚𝑖𝑛, log𝐹𝑚𝑎𝑥)\n\u0011\n.\n(2)\nwhere𝑠𝐹"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_chunk_0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.7187783718109131,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in\nLow-Light Image Enhancement\nJingxi Liao, Shijie Hao*, Richang Hong, Meng Wang,\nHefei University of Technology, Hefei, China\n{jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.c"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_chunk_0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.7187783718109131,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in\nLow-Light Image Enhancement\nJingxi Liao, Shijie Hao*, Richang Hong, Meng Wang,\nHefei University of Technology, Hefei, China\n{jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.c"
+    },
+    {
+      "id": "chunk::TDDC_p4_chunk_16",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.7168371677398682,
+      "text": "ct NF and F :\nlog sF ∼ U(log smin\nF , log smax\nF ),\nlog F ∼ U(log F min, log F max),\nNF = max(⌊ F\nsF\n+ 1\n2 ⌋, 1).\n(3)\nFollowing Flare7K [Dai et al., 2022], BPG adds the light\nsource within the gamma range of gf ∼ U(1.8, 2.2). The\nsampled image on current s"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_23",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.7156867980957031,
+      "text": "nd Pattern\nRecognition(CVPR), pages 586–595, 2018. 1, 4\n[47] Yonghua Zhang, Jiawan Zhang, and Xiaojie Guo. Kindling\nthe darkness: A practical low-light image enhancer. In Pro-\nceedings of the 27th ACM International Conference on Mul-\ntimedia (ACM MM), 2019"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_23",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.7156867980957031,
+      "text": "nd Pattern\nRecognition(CVPR), pages 586–595, 2018. 1, 4\n[47] Yonghua Zhang, Jiawan Zhang, and Xiaojie Guo. Kindling\nthe darkness: A practical low-light image enhancer. In Pro-\nceedings of the 27th ACM International Conference on Mul-\ntimedia (ACM MM), 2019"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p6_chunk_17",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 6,
+      "score": 0.7109503746032715,
+      "text": "hanced perceptual quality. However, this comes at the\ncost of increased mean brightness discrepancy (from 0.028\nto 0.075) and 4.6dB PSNR drop. These results suggest that\nwhile the introduction of brightness alignment in the hybrid\nstrategy benefits human p"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p6_chunk_17",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 6,
+      "score": 0.7109503746032715,
+      "text": "hanced perceptual quality. However, this comes at the\ncost of increased mean brightness discrepancy (from 0.028\nto 0.075) and 4.6dB PSNR drop. These results suggest that\nwhile the introduction of brightness alignment in the hybrid\nstrategy benefits human p"
+    },
+    {
+      "id": "chunk::LED_p7_chunk_14",
+      "source": "data\\LED.pdf",
+      "page": 7,
+      "score": 0.7109187841415405,
+      "text": "ements yield by LED, demonstrating that using the HD informative pat-\ntern even with a straightforward architecture is promising for challenging nighttime scenes.\nWith LED, Adabins demonstrates a substantial improvement compared to the HB model:\n-24.06% RM"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.7103533148765564,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17\nLdepth Lgrad Lnormal Metrics\nL1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n✓ ✗ ✗ ✗ ✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.02"
+    },
+    {
+      "id": "chunk::LED_p8_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.7096152305603027,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT\nDomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n(HB→HB)6.1204 0.0903 0.0233 0.1353 13.4847 3.3579 0.9489 0.9812 0.9908(HB→LED)17.3113 0.4479 0.1955 0.6817 52.5132 20.0263 0.4699 0"
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_14",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7071167826652527,
+      "text": "izes a further ablation study on our BPG. The\nexperiments show that our Re-rendering submodule plays\nan important role within BPG. Besides, BPG achieves the\nbest result when F max is set to 2. Meanwhile, Fig. 4.3\npresents a detailed ablation on our ING. Ap"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_chunk_11",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.7061913013458252,
+      "text": "rtion [42, 48], and arti-\nfacts [49, 50]. This misalignment stems from three inter-\nrelated issues:\n*Corresponding author\nThis work was supported by the National Natural Science Foundation\nof China under Grant 62172137.\n• Inevitable Brightness Residual : T"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_chunk_11",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.7061913013458252,
+      "text": "rtion [42, 48], and arti-\nfacts [49, 50]. This misalignment stems from three inter-\nrelated issues:\n*Corresponding author\nThis work was supported by the National Natural Science Foundation\nof China under Grant 62172137.\n• Inevitable Brightness Residual : T"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_chunk_8",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.706055760383606,
+      "text": "les\nf (x) such that the mean brightness of the scaled output\nE[λf (x)] aligns with E[y] . This eliminates the interfer-\nence of brightness differences during optimization.\nTo dynamically balance these two terms, we intro-\nduce W , which represents the Bhat"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_chunk_8",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.706055760383606,
+      "text": "les\nf (x) such that the mean brightness of the scaled output\nE[λf (x)] aligns with E[y] . This eliminates the interfer-\nence of brightness differences during optimization.\nTo dynamically balance these two terms, we intro-\nduce W , which represents the Bhat"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_chunk_9",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.7048405408859253,
+      "text": "ing to the constraint that f (x)\nshould resemble the ground truth (GT) image y as much\nas possible. While existing methods achieve reasonable\nbrightness adjustment, they face a critical dilemma: models\ndisproportionately prioritize global brightness alignm"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_chunk_9",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.7048405408859253,
+      "text": "ing to the constraint that f (x)\nshould resemble the ground truth (GT) image y as much\nas possible. While existing methods achieve reasonable\nbrightness adjustment, they face a critical dilemma: models\ndisproportionately prioritize global brightness alignm"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7042921781539917,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9\nPattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\nEncoder-decoderLB 14.199 0.187 0.072 0.292 28.938 5.620 0.772 0.909 0.956LED 0.5°11.089 0.119 0.050 0.213 21.251 2.304 0.864 0.95"
+    },
+    {
+      "id": "chunk::TDDC_p13_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 13,
+      "score": 0.7036482095718384,
+      "text": "are also\nconsidered during the training. We use a sequential fea-\nture decoder (ICN) to estimate the linear brightness change\n{Ct,t+n ∈ RH×W ×1, Bt,t+n ∈ RH×W ×1}. The reconstruc-\ntion of It can be described as\n˙Vt,t+n(u) =KI Tt,t+nDt(u)K −1\nI ˙u,\n˜It+n ="
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_7",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.7032977938652039,
+      "text": "our main paper.\nSince the processing of Re-rendering requires the corre-\nsponding depth map as input, decay usage of BPG and ING\nis applied, and the starting step is set to 20,000. To maintain\nperformance on daytime images, BPG and ING processing\nrates ar"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_chunk_19",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.6997575759887695,
+      "text": "tic modeling of brightness distributions: by treating E[·] as\na random variable rather than a fixed value, we represent\nthe inherent uncertainty in human perception of brightness.\nThis modeling approach enhances the controllability of the\nloss function du"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_chunk_19",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.6997575759887695,
+      "text": "tic modeling of brightness distributions: by treating E[·] as\na random variable rather than a fixed value, we represent\nthe inherent uncertainty in human perception of brightness.\nThis modeling approach enhances the controllability of the\nloss function du"
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_21",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.6982896327972412,
+      "text": "4, 2, 1] and\n[64, 128, 320, 512], respectively.\nIn the case of data augmentation, the following strate-\ngies are used with the proposed vertical CutDepth with\n50% probability: horizontal ﬂips, random brightness( ±0.2),\ncontrast(±0.2), gamma(±20), hue(±20),"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_chunk_11",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.6981704235076904,
+      "text": "sues arising from brightness\nmismatch, the key to constructing LGT (f (x), y) is match-\ning the average brightness of f (x) and y. Furthermore,\nLGT (f (x), y) is designed to retain the form and effec-\ntiveness of the original loss L(f (x), y). Based on thi"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_chunk_11",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.6981704235076904,
+      "text": "sues arising from brightness\nmismatch, the key to constructing LGT (f (x), y) is match-\ning the average brightness of f (x) and y. Furthermore,\nLGT (f (x), y) is designed to retain the form and effec-\ntiveness of the original loss L(f (x), y). Based on thi"
+    },
+    {
+      "id": "chunk::TDDC_p12_chunk_20",
+      "source": "data\\TDDC.pdf",
+      "page": 12,
+      "score": 0.6978869438171387,
+      "text": ".D.3).\nC Limitation\nAnalysis and Results\nAlthough the proposed compensation method (BPG+ING)\nworks well for day-to-night self-supervised monocular depth\ngeneration, the corresponding supervised generation remains\nunsolved.\nIn the KITTI dataset, as in all o"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6975699663162231,
+      "text": "on NSDD, Depth Anything V2 [49] performs poorly, with an\nRMSE of∼19 m (see table 5), highlighting the complexity of nighttime data and the need\nfor specialized models. It performs slightly better on LED images, possibly due to its ability\nto leverage the p"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_chunk_18",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.6951930522918701,
+      "text": "modeled by Gaussian dis-\ntributions, making them a suitable choice for representing\nbrightness perception variability.\nThis perceptual characteristic motivates our probabilis-\ntic modeling of brightness distributions: by treating E[·] as\na random variable"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_chunk_18",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.6951930522918701,
+      "text": "modeled by Gaussian dis-\ntributions, making them a suitable choice for representing\nbrightness perception variability.\nThis perceptual characteristic motivates our probabilis-\ntic modeling of brightness distributions: by treating E[·] as\na random variable"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::TDDC_p2_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.8505327701568604,
+      "text": "distribution are located as two key components. Then, we\nbuild up corresponding modules for simulation. Considering\nthe wave optics/diffraction effect of light sources as well as\nreflections, we propose Brightness Peak Generator (BPG) to\nmodel the differen",
+      "estimated_tokens": 54
+    },
+    {
+      "id": "chunk::TDDC_p4_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.8281431794166565,
+      "text": "effect of light source imaging and reflec-\ntions are considered in the sampling. Since it makes peaks of\nbrightness in the original image plane, we call it Brightness\nPeak Generator (BPG).\nLight Source Sample\nDue to the diffraction/wave optics effects[Lips",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.819150984287262,
+      "text": "as\nreflections, we propose Brightness Peak Generator (BPG) to\nmodel the difference in photometric distribution. Based on\nthe shot-read noise model, we build up Imaging Noise Gen-\nerator (ING) to model nighttime noise distribution. The joint\napplication of",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_23",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7934467792510986,
+      "text": "ghtness Peak Generator, Image Noise Generator and\nBPG+ING for data compensation, respectively.",
+      "estimated_tokens": 20
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_7",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7847172021865845,
+      "text": "tly\napplying light source imaging𝐿𝑆 tends to fail in generating promi-\nnent brightness peaks.\nTo address this issue, we apply a simple random darkening oper-\nation to the input image, where the brightness scaling factor𝑠𝑏 is\nsampled from a uniform distribu",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_8",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.7653744220733643,
+      "text": ",000. To maintain\nperformance on daytime images, BPG and ING processing\nrates are set to 0.5, and these two probabilities are indepen-\ndent of each other.\nD.4 Augmentation on light source images\nFor the sampled light source image, a random rotation\nU (0, 2",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::TDDC_p4_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 4,
+      "score": 0.7521997690200806,
+      "text": "ased on Flare7K [Dai et al., 2022] dataset, which is the\nonly light source dataset with 7000 samples.\nWhen applied, BPG randomly samples a single image from\nthe light source bank. Then, the image will be scaled to the\nstandard size which is determined by t",
+      "estimated_tokens": 66
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_2",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.7442616820335388,
+      "text": "n-\nerator (ING) to model nighttime noise distribution. The joint\napplication of BPG and ING together with the day-image dis-\ntribution results in a fused distribution that has a photometric\nand noise distribution close to the night images. The fused\ndistri",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_chunk_13",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.7374059557914734,
+      "text": ".830 3.118 2.4163.330 60.044 3.707 2.7312.990 60.858 3.563 2.2313.410(-)57.522(+)3.401(+)2.446(+)\nBrightness discrepancy\nIterations(K)\nPNSR\nIterations(K)\n50K 100K 150K\nwith GT-mean loss \nbaseline \nwith GT-mean loss GT \ninput \nC\nbaseline \nB\nLPIPS\nIterations",
+      "estimated_tokens": 108
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_chunk_13",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.7374059557914734,
+      "text": ".830 3.118 2.4163.330 60.044 3.707 2.7312.990 60.858 3.563 2.2313.410(-)57.522(+)3.401(+)2.446(+)\nBrightness discrepancy\nIterations(K)\nPNSR\nIterations(K)\n50K 100K 150K\nwith GT-mean loss \nbaseline \nwith GT-mean loss GT \ninput \nC\nbaseline \nB\nLPIPS\nIterations",
+      "estimated_tokens": 108
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_20",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7366863489151001,
+      "text": "d, as shown\nin the cyan dashed boxes. The ING simulates the potential\nimaging noises in the dark area, thus present better depth pre-\ndiction at the background, such as the sky. The full model\nreceives the merits of BPG and ING, and thus has the best\npredi",
+      "estimated_tokens": 67
+    },
+    {
+      "id": "chunk::TDDC_p15_chunk_19",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.7336007952690125,
+      "text": "arger DepthNet backbone.\nE.4 More visualization for ablation analyses\nIn Fig E.1, the BPG helps the regions where highlight spots\nfrequently occur, such as the cars and the road, as shown\nin the cyan dashed boxes. The ING simulates the potential\nimaging no",
+      "estimated_tokens": 63
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_8",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7285586595535278,
+      "text": "image, where the brightness scaling factor𝑠𝑏 is\nsampled from a uniform distribution. To enrich the diversity of light\nsources while avoiding excessively glaring effects, the peak bright-\nness intensity𝐹 is defined as the product of the number of light\nsou",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::TDDC_p11_chunk_16",
+      "source": "data\\TDDC.pdf",
+      "page": 11,
+      "score": 0.727344810962677,
+      "text": "gh our partial compensation (BPG and ING) will not\nproduce vivid night images, the depth network trained by our\nmethod shows good day-to-night generation ability. In our\nmain paper, we have explained this problem in the terms of\nday-night differences. In t",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p6_chunk_16",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 6,
+      "score": 0.7248454093933105,
+      "text": "e the hybrid strategy with baseline. When brightness\nalignment is introduced at 80K iterations, the hybrid ap-\nproach achieves 0.129 LPIPS (vs. baseline 0.155), indicat-\ning enhanced perceptual quality. However, this comes at the\ncost of increased mean bri",
+      "estimated_tokens": 63
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 966,
+    "compressed_context_tokens": 966,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 966,
+  "context_tokens": 966,
+  "prompt_token_estimate": 1550,
+  "run_label": "sage_semantic_all_v1_chunk_paper_bpg_components",
+  "answer": "<think>\nThe question asks about the key steps or sub-modules that compose the Brightness Peak Generator (BPG).\n\nLet me analyze the provided materials to extract relevant information about BPG's components.\n\nFrom the materials:\n\n[1] \"distribution are located as two key components. Then, we build up corresponding modules for simulation. Considering the wave optics/diffraction effect of light sources as well as reflections, we propose Brightness Peak Generator (BPG) to model the differen\" - mentions wave optics/diffraction effect and reflections as two key components\n\n[2] \"effect of light source imaging and reflections are considered in the sampling. Since it makes peaks of brightness in the original image plane, we call it Brightness Peak Generator (BPG).\" - mentions light source imaging and reflections in sampling\n\n[3] \"as reflections, we propose Brightness Peak Generator (BPG) to model the difference in photometric distribution.\" - BPG models photometric distribution differences\n\n[5] \"tly applying light source imaging 𝐿𝑆 tends to fail in generating prominent brightness peaks. To address this issue, we apply a simple random darkening operation to the input image, where the brightness scaling factor 𝑠𝑏 is sampled from a uniform distribu\" - this is from DepthDark paper, not TDDC, but discusses a similar issue\n\n[7] \"ased on Flare7K [Dai et al., 2022] dataset, which is the only light source dataset with 7000 samples. When applied, BPG randomly samples a single image from the light source bank. Then, the image will be scaled to the standard size which is determined by t\" - BPG samples from a light source bank (Flare7K) and scales the image\n\n[13] \"image, where the brightness scaling factor 𝑠𝑏 is sampled from a uniform distribution. To enrich the diversity of light sources while avoiding excessively glaring effects, the peak brightness intensity 𝐹 is defined as the product of the number of light sou\" - peak brightness intensity F is defined as product of number of light sources (this is from DepthDark, may be different)\n\nSo for the BPG in TDDC paper specifically:\n1. Light source sampling from Flare7K dataset (light source bank) [7]\n2. Scaling to standard size [7]\n3. Considering wave optics/diffraction effect of light sources [1]\n4. Considering reflections [1, 2]\n5. Random rotation mentioned in D.4 [6]\n\nLet me check [6]: \"For the sampled light source image, a random rotation U (0, 2\" - random rotation augmentation\n\nFrom the materials, the key components/steps of BPG are:\n1. Light source sampling (from Flare7K bank) [7]\n2. Image scaling to standard size [7]\n3. Modeling wave optics/diffraction effects [1]\n4. Modeling reflections [1, 2]\n5. Random rotation augmentation [6]\n\nLet me formulate the answer based on the available evidence.\n</think>\n{\n  \"answer\": \"BPG 通过从光源库采样、缩放到标准尺寸、并结合波动光学/衍射效应与反射建模来生成亮度峰值，核心包含光源采样与光学/反射模拟两个关键模块。\",\n  \"items\": [\n    {\"name\": \"光源采样（Light Source Sample）\", \"description\": \"从 Flare7K 光源库中随机采样单张光源图像，作为亮度峰值的来源。\", \"citations\": [7]},\n    {\"name\": \"图像尺寸缩放\", \"description\": \"将采样到的光源图像缩放至由网络决定的标准尺寸。\", \"citations\": [7]},\n    {\"name\": \"波动光学/衍射效应建模\", \"description\": \"考虑光源的波动光学（衍射）效应以模拟亮度分布。\", \"citations\": [1, 2]},\n    {\"name\": \"反射效应建模\", \"description\": \"在采样过程中考虑反射（reflections）的影响以生成亮度峰值。\", \"citations\": [1, 2, 3]},\n    {\"name\": \"随机旋转增强\", \"description\": \"对采样得到的光源图像进行随机旋转 U(0, 2π) 的数据增强。\", \"citations\": [6]}\n  ],\n  \"missing_information\": \"资料中未给出 BPG 内部完整的端到端公式或子模块结构图；峰值强度 F 的具体定义与采样流程的更多细节（来自 DepthDark 论文）需进一步确认是否完全适用于 TDDC 中的 BPG。\"\n}",
+  "usage": {
+    "prompt_tokens": 1567,
+    "completion_tokens": 944,
+    "total_tokens": 2511,
+    "model": "MiniMax-M3"
+  }
+}

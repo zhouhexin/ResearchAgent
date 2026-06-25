@@ -1,0 +1,406 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_ssrdepth_ablation_fin_ask_baseline_none_7e7b14a0e562",
+  "dry_run": false,
+  "query": "SSRDepth 的消融实验主要验证了哪些结论？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::SSRDepth_p3_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6968904137611389,
+      "text": "𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance.\n3.  The proposed method\nIn this section, we ﬁrst introduce the overall architecture of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6606792211532593,
+      "text": "Y. Zou et al.\nFig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module \n(SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module ("
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_4",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.6420089602470398,
+      "text": ".991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2w/o pretrainingS 0.110 0.849 4.580 0.173 0.875 0.962 0.986\nMonodepth2 S 0.085 0.537 3.868 0.139 0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.9"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_4",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.6420089602470398,
+      "text": ".991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2w/o pretrainingS 0.110 0.849 4.580 0.173 0.875 0.962 0.986\nMonodepth2 S 0.085 0.537 3.868 0.139 0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.9"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6331058740615845,
+      "text": "ure of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth: the Segmentation Query Guided Aggregation module\n(Section 3.2), the Segmentation Proposal Scale module (Section 3.3), \nand the Adaptive Relative Depth module (Section 3.4).\n3"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.5983059406280518,
+      "text": "carefully designed network architectures. \nHowever, they often ignore the semantic information of scene structures, leading to poor performance in the se-\nmantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a mon"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_19",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.5852989554405212,
+      "text": "l↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑Test on nuScenes-NightDepth Anything V2 97.470M 0.264 2.956 9.209 0.371 0.581 0.813 0.914+ AMFG 99.229M 0.243 2.351 5.416 0.267 0.674 0.862 0.945+ LoRA 99.830M 0.233 2.112 5.220 0.259 0.6850.8650.947+ LLPEFT 97.479M0.210 1.910"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_chunk_4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.5850042700767517,
+      "text": "[18] Monodepth2 Resnet18 \u0013 MS 192×640 0.104 0.786 4.687 0.194 0.876 0.958 0.980\nWaveletMonodepthResnet18 \u0013 MS 192×640 0.109 0.814 4.808 0.198 0.868 0.955 0.980\n[63] Depth Hints \u0013 MS +SSGM 192×640 0.105 0.769 4.627 0.189 0.875 0.959 0.982\nWaveletMonodepthRe"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_7",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.5837242603302002,
+      "text": "984 3.1M\nMonodepth2-Res18 [15] 2019 M† 0.132 1.044 5.142 0.210 0.845 0.948 0.977 14.3M\nMonodepth2-Res50 [15] 2019 M† 0.131 1.023 5.064 0.206 0.849 0.951 0.979 32.5M\nR-MSFM3 [53] 2021 M† 0.128 0.965 5.019 0.207 0.853 0.951 0.977 3.5M\nR-MSFM6 [53] 2021 M† 0."
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_10",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.5836495757102966,
+      "text": "SFM3 [53] 2021 M* 0.112 0.773 4.581 0.189 0.879 0.960 0.982 3.5M\nR-MSFM6 [53] 2021 M* 0.108 0.748 4.470 0.185 0.889 0.963 0.982 3.8M\nHR-Depth [52] 2021 M* 0.106 0.755 4.472 0.181 0.892 0.966 0.984 14.7M\nSRDepth-Res18 [25] 2023 M* 0.106 0.673 4.379 0.180 0."
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_1",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.5790687799453735,
+      "text": "in [Yin et al., 2019] 114 0.875 0.976 0.994 0.108 0.416 0.048\nDA V[Huynh et al., 2020] 25 0.882 0.980 0.996 0.108 0.412 -\nBTS [Lee et al., 2019] 47 0.885 0.978 0.994 0.110 0.392 0.047\nAdabins[Bhat et al., 2021] 78 0.903 0.984 0.997 0.103 0.364 0.044\nDPT* ["
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_6",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5782340168952942,
+      "text": "et. Trailing 0 added to the values from [V ankadari\net al., 2023 ] and [Tosi et al., 2025 ]. Notation from Table 1.\n:\u0012\u0003'/\u000e)&&\n2ULJLQ\u0003,PDJH :\u0012\u0003'/\n:\u0012\u0003'/\u000e)&&\u000e2*'\nFigure 5: Visualization of ablation study on the distillation learning,\nfeature consistency const"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_6",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.577696681022644,
+      "text": "Net18 w/o pt ✓ ✓ ✓ R18 0.132 1.044 5.142 0.210 0.845 0.948 0.977\nMonodepth2ResNet18 ✓ ✓ ✓ R18 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981\nMonodepth2ResNet 50 w/o pt ✓ ✓ ✓ R50 0.131 1.023 5.064 0.206 0.849 0.951 0.979\nMonodepth2ResNet 50 ✓ ✓ ✓ R50 ✓ 0.110 0"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_6",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.577696681022644,
+      "text": "Net18 w/o pt ✓ ✓ ✓ R18 0.132 1.044 5.142 0.210 0.845 0.948 0.977\nMonodepth2ResNet18 ✓ ✓ ✓ R18 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981\nMonodepth2ResNet 50 w/o pt ✓ ✓ ✓ R50 0.131 1.023 5.064 0.206 0.849 0.951 0.979\nMonodepth2ResNet 50 ✓ ✓ ✓ R50 ✓ 0.110 0"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_1",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5751508474349976,
+      "text": "Key Research and Devel-\nopment Program of China (U22A2047), the Key R&D Program of\nZhejiang under Grant No. (2025C03001, 2023C01044), the Funda-\nmental Research Funds for the Provincial Universities of Zhejiang\n(GK259909299001-023), the National Nature Sci"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_2",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.5743995904922485,
+      "text": "0.877 0.959 0.981 14.3M\nMonodepth2-Res50 [15] 2019 M 0.110 0.831 4.642 0.187 0.883 0.962 0.982 32.5M\nSGDepth [17] 2020 M+Se 0.113 0.835 4.693 0.191 0.879 0.961 0.981 16.3M\nJohnston et al. [37] 2020 M 0.111 0.941 4.817 0.189 0.885 0.961 0.981 14.3M+\nCADepth"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.5732426047325134,
+      "text": "k ✓ ✓ R18 ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2(full) ✓ ✓ ✓ R18 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981\n(b) Baseline w/o pt R18 0.150 1.585 5.671 0.234 0.827 0.938 0.971\nMonodepth2 w/o pt or auto-masking ✓ ✓ R18 0.138 1.197 5.369 0.215"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.5732426047325134,
+      "text": "k ✓ ✓ R18 ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2(full) ✓ ✓ ✓ R18 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981\n(b) Baseline w/o pt R18 0.150 1.585 5.671 0.234 0.827 0.938 0.971\nMonodepth2 w/o pt or auto-masking ✓ ✓ R18 0.138 1.197 5.369 0.215"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_21",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.573029637336731,
+      "text": "upervision strategy from BinsFormer \n[10], applying the SPS and ARD modules at each feature scale to provide \nauxiliary supervision. Finally, the total loss is deﬁned as:\n𝑡𝑜𝑡𝑎𝑙 =\n3∑\n𝑙\n(\n𝑤𝑙\n𝐿∑\n𝑛\n(\n𝛼𝑙,𝑛\n𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛\n𝐶𝐸 + 𝛿𝑙,𝑛\n𝑆𝑃 𝑆𝐴\n))\n, (15)\nwhere 𝐿 repr"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5728756189346313,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f"
+    },
+    {
+      "id": "chunk::dav2_p15_chunk_14",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.5728299617767334,
+      "text": ", 7, 8, 9, 10, 17, 19, 21, 22, 24\n[90] Lihe Yang, Zhen Zhao, Lei Qi, Yu Qiao, Yinghuan Shi, and Hengshuang Zhao. Shrinking\nclass space for enhanced certainty in semi-supervised learning. In ICCV, 2023. 10\n[91] Xiaodong Yang, Zhuang Ma, Zhiyu Ji, and Zhe Re"
+    },
+    {
+      "id": "chunk::Depth_Anything_p6_chunk_15",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 6,
+      "score": 0.5698795318603516,
+      "text": ".953 0.993 0.998 0.071 2.842 0.103\nNeWCRFs [82] 0.974 0.997 0.999 0.052 2.129 0.079\nSwinV2-L [39] 0.977 0.998 1.000 0.050 1.966 0.075\nNDDepth [53] 0.978 0.998 0.999 0.050 2.025 0.075\nGEDepth [75] 0.976 0.997 0.999 0.048 2.044 0.076\nZoeDepth∗ [4] 0.971 0.99"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.5696024298667908,
+      "text": "epth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMonodepth2 w/o SSIM ✓ ✓ ✓ R18 ✓ 0.118 0.853 4.824 0.198 0.868 0.956 0.980\nMonodepth2 with [76]’s mask ✓ ✓ R18 ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2(full) ✓ ✓ ✓ R18"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.5696024298667908,
+      "text": "epth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMonodepth2 w/o SSIM ✓ ✓ ✓ R18 ✓ 0.118 0.853 4.824 0.198 0.868 0.956 0.980\nMonodepth2 with [76]’s mask ✓ ✓ R18 ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2(full) ✓ ✓ ✓ R18"
+    },
+    {
+      "id": "chunk::s_p5_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.5690393447875977,
+      "text": "gnal for Dreal is Dsyn, generated by ΦD−syn\non real data, which can serve as a pseudo label forΦD−real.\nHowever, since ΦD−syn is optimized for the synthetic do-\nmain and may not perform well in real adverse conditions,\nit is intuitive to emphasize supervis"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p15_chunk_13",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 15,
+      "score": 0.5687265396118164,
+      "text": "eave for fu-\nture work.\n9.4. Input resolution\nFinally, one important factor that makes FastDepth ef-\nﬁcient is that it is trained with 224× 224 inputs, against\nC\nH\nW\n(a)\nC\nH\nW (b)\nFigure 9: Channel pruning (a) vs our sparse computation (b). Our\nsparse comp"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p6_chunk_15",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 6,
+      "score": 0.5677015781402588,
+      "text": "velet coefﬁcients while suffering a maximum relative perfor-\nmance loss of less than 0.2%.\n6 8 10 12 14 16 18\nGFLOPs\n0.096\n0.097\n0.098\n0.099\n0.100Abs rel\nDepth Hints \n (ResNet50)\n0.891\n0.890\n0.889\n0.888\n0.887\n< 1.25\nDepth Hints \n (ResNet50)\nFigure 6: Analy"
+    },
+    {
+      "id": "chunk::Lite-Mono_p6_chunk_1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 6,
+      "score": 0.5667989253997803,
+      "text": "6 0.935 0.975 31.6M\nDDVO [36] 2018 M 0.151 1.257 5.583 0.228 0.810 0.936 0.974 28.1M\nMonodepth2-Res18 [15] 2019 M0.115 0.903 4.863 0.193 0.877 0.959 0.981 14.3M\nMonodepth2-Res50 [15] 2019 M0.110 0.831 4.642 0.187 0.883 0.962 0.982 32.5M\nSGDepth [21] 2020 M"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p15_chunk_5",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 15,
+      "score": 0.5656490325927734,
+      "text": "9] D 14.74 3.88 11.74 15.63\nCSWS [32] D 14.85 3.48 11.84 16.38\nDHGRL [74] D 15.47 4.04 12.52 15.72\nMonodepth [15] S 22.02 20.58 17.79 21.84\nMonodepth2 M 15.57 4.52 12.98 16.70\nMonodepth2 MS 15.07 4.16 11.64 15.27\nMonodepth2(ResNet 50)MS 14.41 3.67 11.22 14"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p15_chunk_5",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 15,
+      "score": 0.5656489133834839,
+      "text": "9] D 14.74 3.88 11.74 15.63\nCSWS [32] D 14.85 3.48 11.84 16.38\nDHGRL [74] D 15.47 4.04 12.52 15.72\nMonodepth [15] S 22.02 20.58 17.79 21.84\nMonodepth2 M 15.57 4.52 12.98 16.70\nMonodepth2 MS 15.07 4.16 11.64 15.27\nMonodepth2(ResNet 50)MS 14.41 3.67 11.22 14"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.5653541684150696,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.5650582313537598,
+      "text": "9\nWeatherDepth[48]0.166 6.986 0.796 0.166 8.8440.748 0.1376.5150.837 0.167 7.566 0.793 0.132 7.679 0.859\nJasmine 0.136 5.340 0.850 0.160 7.194 0.787 0.1236.618 0.852 0.133 5.651 0.849 0.098 5.702 0.902\nGeneralization ResultsCompared to in-domain evaluation"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_7",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5644227266311646,
+      "text": "WSGD[35] R 𝑑 &𝑛 640 × 320 40 0.202 1.835 5.985 0.231 0.737 0.934 0.977\nDA\nITDFA[50] R 𝑑 &𝑛 640 × 320 40 0.266 3.010 8.293 0.287 0.567 0.888 0.962\nADDS[24] R 𝑑 &𝑛 640 × 320 40 0.209 2.179 6.808 0.254 0.704 0.918 0.965\nRNW[36] R 𝑑 &𝑛 640 × 320 40 0.197 1.78"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5643885135650635,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci"
+    },
+    {
+      "id": "chunk::Lite-Mono_p9_chunk_25",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 9,
+      "score": 0.5641833543777466,
+      "text": "TPAMI , 38(10):2024–\n2039, 2015. 2\n[26] Ilya Loshchilov and Frank Hutter. SGDR: Stochastic gradi-\nent descent with warm restarts. In ICLR, 2017. 6\n[27] Ilya Loshchilov and Frank Hutter. Decoupled weight decay\nregularization. In ICLR, 2018. 6\n[28] Xiaoyang"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.5629590153694153,
+      "text": "8473.35790.9489 0.9812 0.9908LED5.42590.19960.0188 0.1253 12.490016.12240.9603 0.9846 0.9927\nAdabinsHB 7.3520 0.1360 0.0320 0.1230 10.1880 4.2770 0.8790 0.9440 0.9740LED5.5830 0.0690 0.0240 0.0920 7.7290 2.5090 0.9210 0.9680 0.9840\nDepthF ormerHB 5.85280.0"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_4",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.5627195835113525,
+      "text": "DDS[24] R 𝑑 &𝑛 640 × 320 60 0.322 4.401 10.584 0.397 0.527 0.786 0.892\nMonoFormer[1] K 768 × 256 60 0.307 3.591 10.162 0.413 0.521 0.762 0.872\nTDDC[40] K 768 × 256 60 0.259 3.147 8.547 0.344 0.641 0.850 0.928\nDepth Anything[41] UD & LD - 60 0.302 3.051 9.2"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_19",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.5616512298583984,
+      "text": "ariation. As η ap-\nproaches 1, the weight W rapidly decreases, indicating that\nthe second term in Eq.1 begins to dominate the loss func-\ntion, confirming the mechanism of our loss. Notably, as σ\nincreases, W starts to drop at smaller values of η, meaning\nt"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_chunk_19",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.5616512298583984,
+      "text": "ariation. As η ap-\nproaches 1, the weight W rapidly decreases, indicating that\nthe second term in Eq.1 begins to dominate the loss func-\ntion, confirming the mechanism of our loss. Notably, as σ\nincreases, W starts to drop at smaller values of η, meaning\nt"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_21",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.5609106421470642,
+      "text": "ent. This work is supported by the National\nNatural Science Foundation of China (No. 62201484), HKU\nStartup Fund, and HKU Seed Fund for Basic Research.\n10378"
+    },
+    {
+      "id": "chunk::LED_p18_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 18,
+      "score": 0.5605922341346741,
+      "text": "e from section section 5.1.\nResolutionRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n200 px 5.94130.10730.0206 0.1270 12.62273.97360.9545 0.9228 0.9921\n320 px 5.42590.1996 0.01880.1253 12.490016.1224 0.96030.9846 0.9927\n640 px 5.7050 0.21090.01850.14"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.5595352649688721,
+      "text": "cf\nDepth Anything \nV2\n௖\nௗ\n௥\nOne batch\nStable Diffusion \nTurbo v2.1\nDecoder\nEncoder Decoder\nTD\nSD\nVD\nie\nim\nSD\n0p\n1p\n\u001f\n0p 1p\u001f\nVD\n\u000b\f\n\u000b\f\n01\n2log 1 0\n00\npp\neL\n\u0010\u0010­ \u000ez° ®\n °¯\n\u000b\n \f\n\u000b\n \f\n1\npp\n0\n\u000b\n\u000b\n \f\n01\n0\n01\n01\n11\n11 1\n0\npp\npp\notherwise\nW\nW\n\n\n\n\n­\u000et \u000e\n°° \u0010 \u001f® \u000e°\n°¯"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_15",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.5591458082199097,
+      "text": "ge and do not crop, unlike\nwith the Eigen evaluation. We can see that our method still\nsigniﬁcantly outperforms all previously published methods\non all metrics. While Superdepth [47] comes a close sec-\nond to our algorithm in the S category, they are run a"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_15",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.5591458082199097,
+      "text": "ge and do not crop, unlike\nwith the Eigen evaluation. We can see that our method still\nsigniﬁcantly outperforms all previously published methods\non all metrics. While Superdepth [47] comes a close sec-\nond to our algorithm in the S category, they are run a"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_chunk_6",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.5574494004249573,
+      "text": "tMonodepth Resnet50 \u0013 SSGM 192 × 640 0.081 0.449 3.509 0.125 0.923 0.986 0.996\n[18] Monodepth2 Resnet18 \u0013 MS 192 × 640 0.084 0.494 3.739 0.132 0.918 0.983 0.995\nWaveletMonodepth Resnet18 \u0013 MS 192 × 640 0.085 0.497 3.804 0.134 0.912 0.982 0.995\n[63] Depth H"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_5",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.5573222637176514,
+      "text": ".976\nMonodepth2 w/o pt or full-res m.s. ✓ ✓ R18 0.131 1.030 5.206 0.210 0.846 0.948 0.978\nMonodepth2w/o pt ✓ ✓ ✓ R18 0.132 1.044 5.142 0.210 0.845 0.948 0.977\n(c) Monodepth2ResNet18 w/o pt ✓ ✓ ✓ R18 0.132 1.044 5.142 0.210 0.845 0.948 0.977\nMonodepth2ResNe"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_5",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.5573222637176514,
+      "text": ".976\nMonodepth2 w/o pt or full-res m.s. ✓ ✓ R18 0.131 1.030 5.206 0.210 0.846 0.948 0.978\nMonodepth2w/o pt ✓ ✓ ✓ R18 0.132 1.044 5.142 0.210 0.845 0.948 0.977\n(c) Monodepth2ResNet18 w/o pt ✓ ✓ ✓ R18 0.132 1.044 5.142 0.210 0.845 0.948 0.977\nMonodepth2ResNe"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_7",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.5571539402008057,
+      "text": "ception of the student model to the adverse weather. For the\ngiven normal inputei and the produced degraded sample (hc\ni ),\nthe distillation loss function is deﬁned as:\nLd = 1\nS\nS∑\ns=1\n1\nNs\nNs∑\nj=1\n⏐⏐\n⏐F\nT (ei)js −FS (mi)js\n⏐\n⏐\n⏐\nFS (mi)js\n, (7)\nwhere S de"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_25",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.5571478605270386,
+      "text": "eature. We will verify the effec-\ntiveness of the proposed decoder in section 4.4.\n3.5 V ertical CutDepth\nRecently, a depth-speciﬁc data augmentation method named\nCutDepth has been proposed [Ishii and Yamashita, 2021 ],\nwhich replaces a part of the input i"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.5564461946487427,
+      "text": "92\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.3090.206 0.022 0.149 14.862 16.048 0.954 0.981 0.990\n✗ ✓ ✗ ✓ ✓ 5.8090.186 0.0180.125 12.21014.6830.961 0.985 0.993\n✗ ✓ ✓ ✗ ✓ 5.4220.2000.0180.125 12.50316.1200.961 0.985 0.993\nTab"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::SSRDepth_p3_chunk_2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6968904137611389,
+      "text": "𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance.\n3.  The proposed method\nIn this section, we ﬁrst introduce the overall architecture of \nSSRDepth (Section 3.1). Then, we present the key components \nof SSRDepth",
+      "estimated_tokens": 71
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6606792211532593,
+      "text": "Y. Zou et al.\nFig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module \n(SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module (",
+      "estimated_tokens": 61
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_4",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.6420089602470398,
+      "text": ".991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2w/o pretrainingS 0.110 0.849 4.580 0.173 0.875 0.962 0.986\nMonodepth2 S 0.085 0.537 3.868 0.139 0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.9",
+      "estimated_tokens": 151
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 283,
+    "compressed_context_tokens": 283,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 283,
+  "context_tokens": 283,
+  "prompt_token_estimate": 657,
+  "run_label": "sage_semantic_all_v1_chunk_ssrdepth_ablation_findings",
+  "answer": "<think>\nThe user is asking about the ablation experiments of SSRDepth and what conclusions they verify. Let me check the provided materials.\n\nThe materials provided are:\n[1] A snippet about SSRDepth introducing multi-scale supervision strategy\n[2] A figure description of SSRDepth's overall architecture\n[3] A table comparing different depth estimation methods (SuperDepth, Monodepth2, Zhan FullNYU)\n\nNone of these materials contain information about the ablation experiments of SSRDepth. The ablation study would typically be in Section 4 or 5 of the paper, but the provided snippets only cover Section 3 (the proposed method) and some comparison tables.\n\nI should respond that the provided materials do not contain information about the ablation experiments.\n</think>\n{\"answer\":\"所提供的资料中未包含 SSRDepth 消融实验的内容，无法回答其验证了哪些结论。\",\"items\":[],\"missing_information\":\"缺少 SSRDepth 论文中消融实验（Ablation Study）部分的资料，包括各模块（如 SQGA、SPS、ARD 等）逐一移除后的性能对比、多尺度监督策略的有效性验证等具体内容。\"}",
+  "usage": {
+    "prompt_tokens": 711,
+    "completion_tokens": 225,
+    "total_tokens": 936,
+    "model": "MiniMax-M3"
+  }
+}

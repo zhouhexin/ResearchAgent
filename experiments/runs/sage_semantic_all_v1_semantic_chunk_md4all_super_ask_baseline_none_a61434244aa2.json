@@ -1,0 +1,430 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_md4all_super_ask_baseline_none_a61434244aa2",
+  "dry_run": false,
+  "query": "md4all 在全监督单目深度估计中如何避免恶劣天气下 LiDAR 伪影的影响？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7642385363578796,
+      "text": "md4all md4all md4all md4all depth model md4all md4all md4all md4all md4all md4all md4all md4all translation model adverse - translated image day - input image day - input sequence day - pose model md4all md4all day - input imageday - reconstructed input depth prediction odometry informationcamera pose estimation photometric loss weak velocity loss x % (1 − x) % x % md4all-AD: Always Daytime, No Bad Weather md4all md4all md4all md4all any - input image depth predictiondepth model weights being trained frozen weights day night rain training fog snow one of inference alternative paths (random)rain md4all md4all (same as in md4all-DD) T Figure 4. Our self-supervised md4all-AD framework. With x = 0, it is equivalent to the day - depth model in Figure 3 and the baseline. The depth model is trained with a mix of easy and translated samples, while the training signal is always from the easy ones. As shown at the top of Figure 3, since we do not apply any architectural modification, at inference time, we pre- dict depth with the same model through the same model parameters, regardless of the input condition."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7641009092330933,
+      "text": "It is to be considered that LiDAR artifacts may have an impact on the rain val- ues, such that perfect estimates would not score perfectly because the ground truth is wrong (Figure 2). So, while we can assess the improvements of md4all at handling the blur caused by raindrops, we cannot correctly quantify its impact on eliminating the artifacts. Therefore, these com- parisons are more meaningful when considered alongside qualitative outputs (Figure 5). Our supervised md4all per- formed better than AdaBins both quantitatively and quali- tatively, eliminating the dependency on the sensor artifacts. Additionally, thanks to the strong regularization introduced by the translated samples, our model generalizes signifi- cantly better than the standard AdaBins, leading to vast im- provements across the board, also at night. Training on the sparse LiDAR signal of nuScenes [3] (Figures 2 and 5) can lead to overfitting. Ours is a beneficial data augmentation technique, adding diversity to the training, as the model is shown |C| + 1variations of each day-clear input."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7637436389923096,
+      "text": "input image ground truth AdaBins md4all (sup.) [ours] Monodepth2 md4all (self-sup.) [ours] fully-supervised self-supervised Figure 5. Comparison on nuScenes [3] between fully-sup. AdaBins [1] w/o and w/ ours, and self-sup. Monodepth2 [11] w/o and w/ ours. bustness by making it harder to recover information for the depth task, as the translations act as data augmentation and regularization. The table confirms the robustness of md4all, performing similarly regardless of which GAN is used, even when degrading 10% of the inputs via random erasing. 4. 3. Qualitative Results Qualitative comparisons in Figures 5 and 6 confirm the quantitative findings, with our md4all delivering improved estimates in both adverse and standard conditions. On nuScenes [3] (Figure 5), unlike the baselines, both our mod- els correctly identified the truck in the first rainy sample. As shown in Figure 2, rain leads to artifacts in the LiDAR ground truth, which cause the standard fully-supervised Ad- aBins [1] to learn them and estimate the road wrongly."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7516412138938904,
+      "text": "Our md4all outperforms them all across the board, with substantially better estimates at night than theirs dur- ing the day: the previous best WSGD [37]’s day absRel error is 45% higher than ours at night. This is thanks to the simplicity of our approach, which does not rely on complex architectures, but makes existing models robust in adverse conditions by changing their input and training signals. Rain – nuScenes Rain is less problematic than darkness due to the lack of cues in the latter. Results are shown in Table 1, with all methods performing better with rain than at night. Our self-supervised monocular md4all-DD signif- icantly improved over Monodepth2 and the baseline, per- forming close to the radar-based R4Dyn [8]. Fully-supervised Table 1 reports also results in super- vised settings. LiDAR data is reliable in the dark, so night scenes are less of an issue. Instead, rain inputs are partic- ularly interesting for supervised works due to the reflection issues shown in Figures 1 and 2. For supervised settings, we applied our method on AdaBins [1]."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.7237652540206909,
+      "text": "md4all md4all md4all md4all md4all md4all md4all md4all day - depth model translation model day - input image adverse - translated image depth model depth prediction day - depth prediction md4all md4all any - input image depth prediction depth model day distillation loss x % (1 − x) % x % weights being trained frozen weights day night rain training fog snow one of inference md4all-DD: Day Distillation alternative paths (random) rain md4all md4all B T Figure 3. Our md4all-DD framework. The frozen day - depth model estimates on easy samples and provides guidance to another model fed with a mix of easy and translated inputs. Inference is done with a simple single model for both fully- and self-supervised md4all. between the target It and source frames Is∈{t−1,t+1}, with which we warp the source into a reconstructed target view. As in [11, 12], a loss is computed on the appearance shift between It and the reconstruction [46], alongside the struc- tural similarity [39]. Following [11], we account for partial occlusions via the minimum reprojection error Lp, and we ignore static pixels. Another loss Ls promotes smoothness and preserves edges [10]."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7172937393188477,
+      "text": "Our supervised md4all exhibits no such artifacts as it was not trained with the problematic rainy samples but rather on our translated ones, which have reliable ground truth. Instead, self-supervised methods have issues at night. While Mon- odepth2 [11] could identify critical elements of the scenes (e.g., car and sign), its difficulties in extracting informa- tion in the dark are evident. Monodepth2 had fewer issues input image WSGD md4all [ours] Figure 6. Comparison on RobotCar [23] samples between ours self-supervised and WSGD [37]. Ouputs of WSGD are from [37]. with brighter night samples, as shown in the Appendix. Our self-supervised md4all delivered sharp estimates, identify- ing even the two trees on the left side of the bottom in- put, which are particularly hard to see. For RobotCar [23] (Figure 6), we compared on the same samples displayed by WSGD in their paper [37]. As in Table 2, our md4all de- livered better and sharper estimates in both conditions, cor- rectly estimating the people’s distance. Limitations md4all improves in all tested conditions, but DD may propagate errors from the baseline. Thus, a stronger baseline would help."
+    },
+    {
+      "id": "semantic_chunk::ACD_p2_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.7142482995986938,
+      "text": "1(b), md4all suffers from nonnegligible performance decline when there are signiﬁcant domain differences between scenes, making it far from generalizing to various degraded scenarios. Overall, two critical issues are imperative to train a gener- alizable and reliable depth estimation model: (1) the lack of a high-quality multi-tuple dataset covering diverse degradation types; (2) slack constraints between the teacher and student model, resulting in incomplete knowledge transfer. To mitigate the problem of data scarcity, the author in [Tosi et al., 2025 ] utilize depth maps and text descriptions as control conditions to generate [normal, degraded] sample pairs with T2I-Adapter [Mou et al., 2024 ]. This provides an alternative solution with diffusion models for multi-tuple dataset generation [Zhu et al., 2017; Parmar et al., 2024; Sauer et al., 2025 ]. However, the translated image shows ob- vious inconsistencies and less authenticity of scene contents, which is unacceptable for training generalizable depth esti- mation models."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7137860655784607,
+      "text": "While dedi- cated models or branches may lead to better performance, switching between them is not always trivial, e.g., at dusk or with light rain. Therefore, we opted for a single monocular model, which does not penalize inference time compared to the same model trained only on E. 3. 1. 3 md4all-DD: Day Distillation We take md4all-AD (Section 3. 1. 2) to the next level by sim- plifying the training scheme with md4all-DD. The core idea of md4all-DD is the same as for md4all-AD: we aim to learn depth only from E, pretending that the conditions C detri- mental for the losses never occur. Our md4all-DD framework mimics model estimates in ideal settings E, regardless of the difficulty of the input. As shown in Figure 3, we achieve this via knowledge distilla- tion from a depth network B (baseline) trained at an earlier stage on E to a new depth model DD for both easy and ad- verse scenarios (i.e., E and H). The latter is fed mi, i.e., the same mix of ei and hc i as in md4all-AD (Section 3. 1. 2), while the former is given only ei."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7119997143745422,
+      "text": "Day(-clear) While we do not include any modification addressing standard conditions, we still see improvements over the baselines across both datasets and supervision types (Tables 1 and 2). This is due to the training mix of easy and translated samples acting as a strong data augmen- tation and regularization technique. Since the same weights are optimized on all conditions, they learn to extract robust features which are beneficial also with good visibility. In- stead, RNW [38] is meant for operating only at night. All conditions Remarkably, across all tested conditions, md4all significantly improves over Monodepth2 and Ad- aBins on which we applied it, without the need for spe- cialized branches (Tables 1 and 2). There is no trade-off introduced when training our unique md4all model for mul- tiple conditions, as the scores and errors remain equivalent or even improve compared to training only in ideal settings. This proves the effectiveness and generality of our simple ideas. The Appendix includes preliminary results withsnow and fog on the challenging DENSE dataset [2]. AD and DD Our md4all delivers improvements both as DD and AD (Tables 1 and 2)."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_sc2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7111254930496216,
+      "text": "Despite the robustness against translations (Table 3), GANs [45] could be prob- lematic. Better translations would help eliminate the do- main gap, as seen with RobotCar (Table 2). GANs require many adverse images for training. Hard-to-distinguish data distributions (e.g., light snow vs. overcast) may create prob- lems. md4all is applicable to stereo-based models too, but only given consistent translations for the stereo images. Fu- ture work may focus on eliminating the dependency on the GAN. Furthermore, md4all does not address the issue of dynamic objects, so flow [14] or weak radar supervision [8] may be beneficial, albeit adding complexity. The core ideas of this work can be extended to other tasks. The Appendix includes a variety of extra results, e.g., experiments with snow and fog, and sample translations. 5. Conclusion We presented the simple and effective md4all, enabling a single monocular model to estimate depth robustly in both standard and challenging conditions (e.g., night, rain). We showed md4all delivering significant improvements under both fully- or self-supervised settings, overcoming the detri- mental factors that make adverse conditions problematic. 8184"
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_sc2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.6971950531005859,
+      "text": "DD is optimized solely through the following objective: Ld = 1 N NX j=1 |DD(mi)j − B(ei)j| DD(mi)j (1) where N is the number of pixels, DD(mi) is DD’s depth prediction on mi (i.e., an easy or hard sample), and B(ei) is B’s estimation on ei (i.e., an easy sample). DD learns to follow B at the output level, even when fed the problematic hc i, without being affected by the detrimental factors occur- ring in adverse settings. Inference is unchanged. 3. 2. md4all - Supervised Learning depth from a 3D sensor in adverse conditions exposes issues inherent to the sensor and the way it mea- sures depth [19]. With bad weather (e.g., rain), LiDARs provide erroneous measurements (Figure 2), so learning from their signal means copying their artifacts as well (Fig- ure 1). This has been ignored so far for monocular depth. Regardless of the input, we address the sensor issues by learning from E. Analogously to the self-supervised set- ting, we use image pairs ( ei, hc i) and specify our method as md4all-AD following the self-supervised definition (Sec- tion 3. 1. 2), except for the supervision signal. Thus, we train the depth model with mi and learn from the LiDAR sig- nal of ei."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_sc4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.6959280967712402,
+      "text": "PackNet [12] improved at night and rain, albeit doing worse in standard settings, possibly due to its large model and the relatively small dataset. Pack- Net’s velocity supervision also helped over Monodepth2 (md2) with our baseline. Thanks to the extra radar signal, R4Dyn [8] delivered significant improvements, although at night, only adding radar in input was beneficial over md2. md2 trained only on day-clear data outperformed RNW’s complex pipeline [38]. We retrained RNW on the official split (the authors reported an absRel of 0. 3150 at night on their split [38]). Remarkably, despite being based on the same model as md2, atnight, our simple techniques reduced absRel by 32% and relatively increased δ1 by 37% (DD). Our md4all also outperformed the radar-based R4Dyn at night. This is thanks to the ability of our method to extract robust features from monocular data even in the dark. 8182"
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.6895520687103271,
+      "text": "Lp and Ls are calculated at all decoder scales, upsampled to the input size [11]. So far, this is equivalent to Monodepth2 [11]. Then, we add the weak velocity supervision Lv to achieve scale- awareness [12] and allow consistent predictions, beneficial when distilling knowledge between different models. Architecture Unlike previous works having specialized branches [22, 43], we leave the architecture unchanged (e.g., [11]). Instead, we act on the training process. Our approach is general and not bound to a specific architecture. 3. 1. 2 md4all-AD: Always Daytime, No Bad Weather Our md4all-AD configuration is shown in Figure 4. The core idea is learning from easy samples, even when given challenging ones (e.g., night) as if it was always daytime with good visibility (i.e., sunny or cloudy). This allows us- ing the same established losses described in Section 3. 1. 1, which would otherwise fail with difficult inputs. Day-to-adverse translation To achieve the above, we need easy samples corresponding to the challenging ones."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.6858371496200562,
+      "text": "428 5. 079 8. 389 0. 149 Liu [37] D 0. 475 6. 562 10. 05 0. 165 Laina [31] D 0. 204 1. 840 5. 683 0. 084 Monodepth [15] S 0. 544 10. 94 11. 760 0. 193 Zhou [76] M 0. 383 5. 321 10. 470 0. 478 DDVO [62] M 0. 387 4. 720 8. 090 0. 204 Monodepth2 M 0. 322 3. 589 7. 417 0. 163 Monodepth2 MS 0. 374 3. 792 8. 238 0. 201 Table 3. Make3D results. All M results beneﬁt from median scal- ing, while MS uses the unmodiﬁed network prediction. dard split. We train models using this new benchmark split, and evaluate it using the online server [27], and provide re- sults in supplementary Section D. 3. Additionally, 93% of the Eigen split test frames have higher quality ground truth depths provided by [59]. Like [1], we use these instead of the reprojected LIDAR scans to compare our method against several existing baseline algorithms, still showing superior performance. Make3D In Table 3 we report performance on the Make3D dataset [55] using our models trained on KITTI. We out- perform all methods that do not use depth supervision, with the evaluation criteria from [15]."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.6858371496200562,
+      "text": "428 5. 079 8. 389 0. 149 Liu [37] D 0. 475 6. 562 10. 05 0. 165 Laina [31] D 0. 204 1. 840 5. 683 0. 084 Monodepth [15] S 0. 544 10. 94 11. 760 0. 193 Zhou [76] M 0. 383 5. 321 10. 470 0. 478 DDVO [62] M 0. 387 4. 720 8. 090 0. 204 Monodepth2 M 0. 322 3. 589 7. 417 0. 163 Monodepth2 MS 0. 374 3. 792 8. 238 0. 201 Table 3. Make3D results. All M results beneﬁt from median scal- ing, while MS uses the unmodiﬁed network prediction. dard split. We train models using this new benchmark split, and evaluate it using the online server [27], and provide re- sults in supplementary Section D. 3. Additionally, 93% of the Eigen split test frames have higher quality ground truth depths provided by [59]. Like [1], we use these instead of the reprojected LIDAR scans to compare our method against several existing baseline algorithms, still showing superior performance. Make3D In Table 3 we report performance on the Make3D dataset [55] using our models trained on KITTI. We out- perform all methods that do not use depth supervision, with the evaluation criteria from [15]."
+    },
+    {
+      "id": "semantic_chunk::ACD_p6_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.6857935190200806,
+      "text": "4(a), the obvious errors of depth estimation are observed in the regions of water surface reﬂections. In addition for nighttime scenes, md4all- DD is hard to predict the real depth of regions hidden in the darkness. In contrast, our ACDepth method can produce rea- sonable and reliable predictions of depth information in night scenes, such as trees and cars under low-light conditions. Comparison on the RobotCar . To further verify the effec- tiveness, we compare our ACDepth with existing state-of-the- art approaches on the RobotCar benchmark. As expected in Table 2, our method achieves the best performance in almost all metrics. Compared to md4all-DD, our approach reduces RMSE by 8. 80% on the standard benchmark and 11. 99% on the challenging benchmark, highlighting the superiority of our approach. To demonstrate the effectiveness of our method, Figure. 4(b) provides the visual comparisons, show- ing that our ACDepth can produce more precise depth maps over those of md4all-DD on both day and night scenes."
+    },
+    {
+      "id": "semantic_chunk::ACD_p6_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.6795893907546997,
+      "text": "07 0. 1414 7. 228 80. 98 DMMDE v1 [Tosi et al., 2025 ] Ms dT‡(nr) 0. 1370 6. 318 85. 05 0. 1880 8. 432 69. 94 0. 1470 7. 345 79. 59 DMMDE v2 [Tosi et al., 2025 ] Ms dT‡(nr) 0. 1400 6. 573 83. 51 0. 1970 8. 826 69. 65 0. 1430 7. 317 80. 28 DMMDE v3 [Tosi et al., 2025 ] Ms dT‡(nr) 0. 1280 6. 449 84. 03 0. 1910 8. 433 71. 14 0. 1390 7. 129 81. 36 ACDepth (Ours) Mv dT(nr) 0. 1340 6. 284 85. 07 0. 1873 8. 125 71. 14 0. 1377 6. 970 81. 32 Table 1: Evaluation of self-supervised methods on nuScenes [Caesar et al., 2020 ] validation set. v1,v2,v3: depth maps from md4all-DD, DPT, Depth Anything in [Tosi et al., 2025 ]. Supervisions (sup.): M: via monocular videos, *: test-time median-scaling via LiDAR, v: weak velocity, s: test-time scaling via LSE criterion [Ranftl et al., 2020]. Training data (tr.data): d: day-clear, n: night, r: rain, a: all. T†: Translated via GAN, T‡: Translated via Diffusion. Visual support: 1st and 2nd. Figure. 4(a) presents qualitative results. md4all-DD is partic- ularly sensitive to water reﬂections in rainy scenes. For exam- ple, in the ﬁrst and second rows of Figure."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.6795001029968262,
+      "text": "Robust Monocular Depth Estimation under Challenging Conditions Stefano Gasperini∗,1,2 Nils Morbitzer∗,1 HyunJun Jung1 Nassir Navab1 Federico Tombari1,3 1 Technical University of Munich 2 VisualAIs 3 Google Abstract While state-of-the-art monocular depth estimation ap- proaches achieve impressive results in ideal settings, they are highly unreliable under challenging illumination and weather conditions, such as at nighttime or in the presence of rain. In this paper, we uncover these safety-critical is- sues and tackle them with md4all: a simple and effective solution that works reliably under both adverse and ideal conditions, as well as for different types of learning super- vision. We achieve this by exploiting the efficacy of existing methods under perfect settings. Therefore, we provide valid training signals independently of what is in the input. First, we generate a set of complex samples corresponding to the normal training ones. Then, we train the model by guiding its self- or full-supervision by feeding the generated sam- ples and computing the standard losses on the correspond- ing original images."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p3_sc4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 3,
+      "score": 0.6743450164794922,
+      "text": "This simple idea is suitable to both self-supervised (Section 3. 1) and supervised (Section 3. 2) frameworks and is general to operate under various weather and illumination settings (including fog and snow). 3. 1. md4all - Self-Supervised We build upon a scale-aware video-based monocular method (Section 3. 1. 1). As described in Section 2. 2. 1, night and bad weather cause issues to self-supervised approaches. We address this with md4allby computing the losses only on the ideal samples corresponding to the hard ones given as input (Section 3. 1. 2). We then take this concept even fur- ther by distilling knowledge from a frozen self-supervised model trained only on the ideal samples (Section 3. 1. 3). 3. 1. 1 Self-Supervised Baseline We build on a standard video-based monocular depth base- line equivalent to the framework shown in Figure 4 when considering x = 0 (i.e., no translation). We predict both the depth ˆDt of a target frame and the pose transformations 8179"
+    },
+    {
+      "id": "semantic_chunk::ACD_p2_sc0",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.6742740869522095,
+      "text": ",PDJH PG\u0017DOO\u0010QLJKW PG\u0017DOO\u0010UDLQ D E 2XUV\u0010QLJKW 2XUV\u0010UDLQ ,PDJH PG\u0017DOO\u0010'' 2XUV Figure 1: (a) Comparison of training data in challenging scenes: Compared to the data generation method used in md4all [Gasperini et al., 2023 ], the samples generated by our approach are more realistic, providing a better simulation of challenging real-world conditions. (b) Estimation results in challenging scenes: Our method consistently produces more accurate results than the exist- ing md4all [Gasperini et al., 2023 ] method, particularly in handling complex issues such as ground water reﬂections and nighttime ob- ject recognition. depth maps to train the student model. However, the degraded characteristics in the translated image are unrealistic and un- natural (shown in Figure. 1(a)), which signiﬁcantly affects the generalization from normal scenarios to real adverse weather. In addition, existing methods are often vulnerable to distur- bances in complex scenes due to slack constraints between the teacher and student models, leading to incomplete knowl- edge transfer. Consequently, as shown in Figure."
+    },
+    {
+      "id": "semantic_chunk::LED_p21_sc1",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.6715693473815918,
+      "text": "Ground truth annotation was made using LiDAR data, ag- gregated and densified following DOC-Depth method [13] and thanks to Exwayz software [14]. Due to the high resolution of the headlight we were able to collect data with smaller cell size than in simulation, giving more insight into pattern resolution impact. The performance of our model on this dataset demonstrate LED capabilities on complex real-world scenarios. We illustrate additional qualitative results in fig. S5. A video of DepthFormer (LED 0. 25°) qualitative results on our real-world dataset is available in the supplementary material. J Qualitative Results on Synthetic Dataset We illustrate in fig. S6 the improvements of depth estimation achieved by our method by comparing results with and without pattern. They are obtained by taking the encoder- decoder, trained on high beam (HB), and with our HD pattern (LED). Red boxes emphasize on enhanced regions. Some are zoomed in for improved visibility. LED results (right) ex- hibit higher precision, leading to more accurate object boundaries and shapes compared to HB (middle)."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.6660044193267822,
+      "text": "Since LiDAR can constitute a misleading train- ing signal in adverse weather, and pixel correspondences are problematic too (e.g., at night), neither existing super- vised [24] nor self-supervised [11, 34] techniques work well in such challenging settings. A straightforward solution for the supervised case would be using synthetic data [40, 30], as by simply not modeling the sensor issues, a simula- tor could produce perfect ground truth in adverse weather. However, this is not only unexplored, but it would introduce a series of problems, such as a substantial syn2real gap due to the difficulty of modeling challenging conditions realis- tically (requiring, e.g., domain adaptation). In this paper, we address these open issues with a sim- ple and effective solution that works reliably in a variety of conditions and for multiple types of supervision. We ap- proach this challenging problem by considering the success of existing methods in standard illumination and weather settings [11, 13, 12, 8]. This motivated us to find a way for them to work also under challenging scenarios, exploiting what makes them learn depth effectively in ideal conditions."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p10_sc3",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 10,
+      "score": 0.6652631163597107,
+      "text": "6, 12, 29 [51] Wolfgang Wagner, Andreas Ullrich, Vesna Ducic, Thomas Melzer, and Nick Studnicka. Gaussian decomposition and calibration of a novel small-footprint full-waveform digitising airborne laser scanner. ISPRS journal of Photogrammetry and Remote Sensing, 60(2):100–112, 2006. 4 [52] Tianfu Wang, Menelaos Kanakis, Konrad Schindler, Luc Van Gool, and Anton Obukhov. Breathing new life into 3d assets with generative repainting. In BMVC. BMV A Press, 2023. 3 [53] Chenfeng Xu, Huan Ling, Sanja Fidler, and Or Litany. 3Diff- Tection: 3d object detection with geometry-aware diffusion features. arXiv, 2023. 3 [54] Guanglei Yang, Hao Tang, Mingli Ding, Nicu Sebe, and Elisa Ricci. Transformer-based attention networks for continuous pixel-wise prediction. In ICCV, 2021. 2 [55] Hantao Yao, Rui Zhang, and Changsheng Xu. Visual- language prompt tuning with knowledge-guided context opti- mization. In CVPR, pages 6757–6767, 2023. 3 [56] Wei Yin, Xinlong Wang, Chunhua Shen, Yifan Liu, Zhi Tian, Songcen Xu, Changming Sun, and Dou Renyin. Diversedepth: Affine-invariant depth prediction using diverse data. arXiv preprint arXiv:2002. 00569, 2020."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p10_sc3",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 10,
+      "score": 0.6652631163597107,
+      "text": "6, 12, 29 [51] Wolfgang Wagner, Andreas Ullrich, Vesna Ducic, Thomas Melzer, and Nick Studnicka. Gaussian decomposition and calibration of a novel small-footprint full-waveform digitising airborne laser scanner. ISPRS journal of Photogrammetry and Remote Sensing, 60(2):100–112, 2006. 4 [52] Tianfu Wang, Menelaos Kanakis, Konrad Schindler, Luc Van Gool, and Anton Obukhov. Breathing new life into 3d assets with generative repainting. In BMVC. BMV A Press, 2023. 3 [53] Chenfeng Xu, Huan Ling, Sanja Fidler, and Or Litany. 3Diff- Tection: 3d object detection with geometry-aware diffusion features. arXiv, 2023. 3 [54] Guanglei Yang, Hao Tang, Mingli Ding, Nicu Sebe, and Elisa Ricci. Transformer-based attention networks for continuous pixel-wise prediction. In ICCV, 2021. 2 [55] Hantao Yao, Rui Zhang, and Changsheng Xu. Visual- language prompt tuning with knowledge-guided context opti- mization. In CVPR, pages 6757–6767, 2023. 3 [56] Wei Yin, Xinlong Wang, Chunhua Shen, Yifan Liu, Zhi Tian, Songcen Xu, Changming Sun, and Dou Renyin. Diversedepth: Affine-invariant depth prediction using diverse data. arXiv preprint arXiv:2002. 00569, 2020."
+    },
+    {
+      "id": "semantic_chunk::LED_p11_sc1",
+      "source": "data\\LED.pdf",
+      "page": 11,
+      "score": 0.6630501747131348,
+      "text": "[9] Gayan Brahmanage and Henry Leung. Outdoor RGB-D Mapping Using Intel- RealSense. InIEEE Sensors, 2019. [10] Holger Caesar, Varun Bankiti, Alex H. Lang, Sourabh V ora, Venice Erin Liong, Qiang Xu, Anush Krishnan, Yu Pan, Giancarlo Baldan, and Oscar Beijbom. nuscenes: A multimodal dataset for autonomous driving. InCVPR, 2020. [11] Bowen Cheng, Ishan Misra, Alexander G. Schwing, Alexander Kirillov, and Rohit Girdhar. Masked-attention mask transformer for universal image segmentation.arXiv, 2021. [12] Raoul De Charette, Robert Tamburo, Peter C. Barnum, Anthony Rowe, Takeo Kanade, and Srinivasa G. Narasimhan. Fast reactive control for illumination through rain and snow. InICCP, 2012. [13] Simon de Moreau, Corsia Mathias, Bouchiba Hassan, Almehio Yasser, Bursuc Andrei, El-Idrissi Hafid, Moutarde Fabien, et al. Doc-depth: A novel approach for dense depth ground truth generation. InIEEE IV, 2025. [14] Exwayz. Exwayz 3d mapping: Create dense, accurate and georeferenced 3d point cloud using lidar slam.https://www.exwayz.fr/, 2024. [15] Sean Ryan Fanello, Christoph Rhemann, Vladimir Tankovich, Adarsh Kowdle, Ser- gio Orts Escolano, David Kim, and Shahram Izadi."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_sc2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.6609492897987366,
+      "text": "Our core idea is based on training the model by providing always valid training signals as if it was sunny or cloudy, even when samples with adverse conditions are given. We apply this general principle to both supervised and self- supervised depth estimation via a set of techniques to im- prove the model robustness and reduce the performance gap between standard and hard conditions. The main contribu- tions of this paper can be summarized as follows: • We show how estimating depth in adverse conditions (e.g., night and rain) is problematic for both self- and fully-supervised approaches, requiring new solutions. • We propose md4all: a simple and effective technique to make standard models robust in diverse conditions. no texture erroneous measurements noise reflections fully-supervised self-supervised → reflections blur light flares night rain ground-truth night Figure 2. Detrimental factors to monocular depth estimation in dif- ficult settings from nuScenes [3]. Self-supervised works have is- sues with textureless areas, reflections, and noise. Supervised ones learn artifacts from the ground truth sensor (LiDAR is shown)."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.6602911949157715,
+      "text": "• We apply our generic method to both fully- and self- supervised monocular settings. • We generate and share open-source images in adverse conditions corresponding to the sunny and cloudy sam- ples of nuScenes [3] and Oxford Robotcar [23]. With md4all, we substantially outperform prior solutions delivering robust estimates in a variety of conditions. 2. Related Work 2. 1. Supervised Monocular Depth Estimation The problem of estimating depth from a single color image is challenging due to the countless 3D scenarios that can produce the same 2D projection, making it an ill- posed problem. Nevertheless, significant progress has been made, thanks to the introduction of CNN-based architec- tures by Eigen et al. [5] and fully-convolutional networks with residual connections by Laina et al. [20] to estimate dense depth maps from monocular inputs. While many supervised methods have focused on directly regressing to depth measurements from LiDAR sensors (as in KITTI [9]) or RGB-D cameras (as in NYU-Depth v2 [31]), DORN [6] tackles the task in an ordinal manner. AdaBins [1] extended DORN via a linear combination of predictions across adap- tive bins."
+    },
+    {
+      "id": "semantic_chunk::LED_p6_sc1",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.659090518951416,
+      "text": "All images have a resolution of 1920×1080 px, and we provide depth maps, annotations for 2D/3D object detection, normal estimation, and both semantic and instance segmentation. The provided depth values are not limited, though they are clipped at 100 m for all experiments. During training, a 640×640 px square is ini- tially center-cropped and then resized to 320×320 px. To ensure reproducibility, code and synthetic dataset are publicly available. Releasing large-scale nighttime data, with precise and comprehensive annotations, will foster research in nighttime computer vision for au- tonomous driving. 4. 2 Real-world Dataset We validate LED on a real-world, in-house dataset collected using a car-mounted prototype. It comprises 50,000 images (70% train / 15% val / 15% test) from populated urban and rural roads, evenly split between Low Beam (LB) illumination and checkerboard pattern with 0. 5°, 0. 25° and 0. 125° cells’ dimension. Ground truth is obtained from LiDAR data using the DOC-Depth method [13] and Exwayz software [14]. More details are available in supplementary materials."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.6587308645248413,
+      "text": "complex pipelines and significant architecture changes af- fecting inference as well [38, 37, 22, 33, 36], such as illumination-specific branches. Additionally, prior methods that can operate both at night- and daytime introduce a sig- nificant trade-off concerning the standard daytime perfor- mance [22, 37], highlighting the need for a new solution. In adverse weather conditions such as rain, monocular models are similarly fooled by reflections and decreased visibility. However, rain introduces another problem. While radars are robust in such conditions, LiDARs become unre- liable, as they introduce multi-path and the so-called bloom- ing effects (Figure 2). In autonomous driving, since super- vised depth estimation approaches learn from LiDAR data, this causes them to learn also such erroneous measurements, rendering them unreliable in rainy settings (Figure 1). Anal- ogous issues occur with snow and fog. These problems are relatively unexplored, demanding new solutions. Alarmingly, no general solution currently allows an image-based depth estimator to work reliably under all con- ditions."
+    },
+    {
+      "id": "semantic_chunk::ACD_p6_sc0",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.6564733386039734,
+      "text": ",PDJH\u0003 \u0003*7 PG\u0017DOO\u0010'' 2XUV ,PDJH\u0003 \u0003*7 PG\u0017DOO\u0010'' 2XUV D QX6FHQHV E 2[IRUG\u00035RERW&DU 0RQRGHSWK\u0015 0RQRGHSWK\u0015 Figure 4: Qualitative results on nuScenes [Caesar et al., 2020 ] and RobotCar [Maddern et al., 2017 ]. We compare the ACDepth approach with md4all-DD and MonoDepth2, all of which use the same backbone. To better illustrate the results, the real point cloud is projected onto the original image, and no ground truth (GT) is required during training. day-clear – nuScenes night – nuScenes day-rain – nuScenes Method sup. tr.data absRel RMSE δ1 absRel RMSE δ1 absRel RMSE δ1 Monodepth2 [Godard et al., 2019 ] M∗ a: dnr 0. 1477 6. 771 85. 25 2. 3332 32. 940 10. 54 0. 4114 9. 442 60. 58 Monodepth2 [Godard et al., 2019 ] M∗ d 0. 1374 6. 692 85. 00 0. 2828 9. 729 51. 83 0. 1727 7. 743 77. 57 PackNet-SfM [Guizilini et al., 2020 ] Mv d 0. 1567 7. 230 82. 64 0. 2617 11. 063 56. 64 0. 1645 8. 288 77. 07 RNW [Wang et al., 2021 ] M∗ dn 0. 2872 9. 185 56. 21 0. 3333 10. 098 43. 72 0. 2952 9. 341 57. 21 md4all-AD [Gasperini et al., 2023 ] Mv dT†(nr) 0. 1523 6. 853 83. 11 0. 2187 9. 003 68. 84 0. 1601 7. 832 78. 97 md4all-DD [Gasperini et al., 2023 ] Mv dT†(nr) 0. 1366 6. 452 84. 61 0. 1921 8. 507 71."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.6555742025375366,
+      "text": "Evaluation of self- and GT-supervised methods on the nuScenes [3] validation set. Supervisions (sup.): M: via monocular videos, ∗: test-time median-scaling via LiDAR, v: weak velocity, r: weak radar, GT: via LiDAR data. Training data (tr.data): d: day-clear, T: translated in, n: night (incl. night-rain), r: day-rain, a: all. Visual support: 1st, 2nd, ... 3rd best. More conditions and metrics in the Appendix. night (including night-rain), and day-rain. We used the of- ficial split following R4Dyn [8], with 15129 training images (with synced sensors), and 6019 validation ones (of which 4449 day-clear, 602 night, and 1088 rain). RobotCar was collected in Oxford, UK, by traversing the same route multi- ple times in a year. It features a mix ofday and night scenes. We followed the split and setup of WSGD [37], with 16563 day training samples and 1411 test ones (with synced sen- sors, of which 709 night). While we focused on night, rain, sun, and overcast, the Appendix shows preliminary results with fog and snow from the DENSE dataset [2]. We report on the standard metrics and errors up to 50m for RobotCar as in [37], and 80m for nuScenes as in [8]."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p11_sc2",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 11,
+      "score": 0.6518847942352295,
+      "text": "2 [78] Wei Yin, Chi Zhang, Hao Chen, Zhipeng Cai, Gang Yu, Kaix- uan Wang, Xiaozhi Chen, and Chunhua Shen. Metric3d: Towards zero-shot metric 3d prediction from a single image. In ICCV, 2023. 2 [79] Yurong You, Yan Wang, Wei-Lun Chao, Divyansh Garg, Ge- off Pleiss, Bharath Hariharan, Mark Campbell, and Kilian Q Weinberger. Pseudo-lidar++: Accurate depth for 3d object detection in autonomous driving. In ICLR, 2020. 1 [80] Fisher Yu, Ari Seff, Yinda Zhang, Shuran Song, Thomas Funkhouser, and Jianxiong Xiao. Lsun: Construction of a large-scale image dataset using deep learning with humans in the loop. arXiv:1506. 03365, 2015. 3 [81] Fisher Yu, Haofeng Chen, Xin Wang, Wenqi Xian, Yingying Chen, Fangchen Liu, Vashisht Madhavan, and Trevor Dar- rell. Bdd100k: A diverse driving dataset for heterogeneous multitask learning. In CVPR, 2020. 2, 3 [82] Weihao Yuan, Xiaodong Gu, Zuozhuo Dai, Siyu Zhu, and Ping Tan. New crfs: Neural window fully-connected crfs for monocular depth estimation. arXiv:2203. 01502, 2022. 2, 6 [83] Sangdoo Yun, Dongyoon Han, Seong Joon Oh, Sanghyuk Chun, Junsuk Choe, and Youngjoon Yoo."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6480112671852112,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024)."
+    },
+    {
+      "id": "semantic_chunk::ACD_p1_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.6466836929321289,
+      "text": "It has wide-ranging applications in autonomous ∗Corresponding Author driving [Sch¨on et al., 2021; Xue et al., 2020 ], robot navi- gation [H¨ane et al., 2011 ], and 3D reconstruction [Y u and Gallup, 2014; Yin et al., 2022]. MDE methods can be roughly divided into supervised methods and self-supervised methods [Arampatzakis et al. , 2023 ]. The former [Bhat et al., 2023; Ranftl et al., 2020; Ranftl et al., 2021 ] directly learns depth mapping from the RGB input with paired samples (depth maps or 3D sensors like LiDAR). While achieving im- pressive performance, these methods heavily rely on high- quality ground truth data, which is time-consuming and labor- intensive for collection. By contrast, the latter [Godard et al., 2017; Godard et al., 2019; Zhou et al., 2017] uses only image sequences captured by a single camera and the correspond- ing camera parameters, and employs two assumptions (pho- tometric constancy and rigid motion) [Godard et al., 2019 ] to produce the supervised signal."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p21_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6456553936004639,
+      "text": "candidate hidden state computation, respectively. The Conv notation suggests that convolutional layers are used for these transformations, as is common when applying GRUs to feature maps in computer vision tasks. In our paper, the refined hidden state hk+1 predicts depth adjustment Dδ to update Dk, yielding Dk+1 for subsequent iterations, as utilized in our Scale-Shift GRU (SSG) module (see Sec. 3. 3). E Addition Experiments Results E. 1 Evaluation on KITTI Improved Benchmark The standard self-supervised evaluation on the KITTI dataset is typically conducted using the raw LiDAR GT. However, due to the noisy nature of LiDAR data and known preprocessing issues 1, we also provide the eigen improved benchmark result. Following the practice adopted in Mono- ViFi [29], as shown in Table 5, this evaluation further confirms Jasmine’s SoTA performance, where it consistently outperforms other leading methods. Table 5:Quantitative results on the KITTI dataset using the improved GT [ 47]. The performance of SD-based methods is not fully reported in their original papers. Method AbsRel↓SqRel↓ RMSE↓RMSElog↓a1↑ a2↑ a3↑ Marigold [25] 0. 099 - - - 0. 916 0. 987 - E2E-FT [33] 0. 096 - - - 0. 921 0."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p11_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.6436831951141357,
+      "text": "Acknowledgment This work was supported by the National Natural Science Foundation of China (NSFC) under Grant (U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536). References [1] Antyanta Bangunharcana, Ahmed Magd, and Kyung-Soo Kim. Dualrefine: Self-supervised depth and pose estimation through iterative epipolar sampling and refinement toward equilibrium. InCVPR, pages 726–738, 2023. 3, 16 [2] Juan Luis Gonzalez Bello and Munchurl Kim. Forget about the lidar: Self-supervised depth estimators with med probability volumes. InNeurIPS, pages 12626–12637, 2020. 2 [3] Juan Luis Gonzalez Bello and Munchurl Kim. Plade-net: Towards pixel-level accuracy for self-supervised single-view depth estimation with neural positional encoding and distilled matting loss. InCVPR, pages 6851–6860, 2021. 2 [4] Yohann Cabon, Naila Murray, and Martin Humenberger. Virtual kitti 2.arXiv preprint arXiv:2001. 10773, 2020. 7 [5] Xingyu Chen, Ruonan Zhang, Ji Jiang, Yan Wang, Ge Li, and Thomas H Li. Self-supervised monocular depth estimation: Solving the edge-fattening problem."
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6417001485824585,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9 Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderLB 14. 199 0. 187 0. 072 0. 292 28. 938 5. 620 0. 772 0. 909 0. 956LED 0. 5°11. 089 0. 119 0. 050 0. 213 21. 251 2. 304 0. 864 0. 950 0. 977LED 0. 25°8. 6950. 1090. 040 0. 190 18. 635 2. 1280. 899 0. 9630. 984LED 0. 125°10. 1540. 096 0. 040 0. 19018. 862 2. 1320. 907 0. 969 0. 984 DepthF ormerLB 8. 777 0. 138 0. 050 0. 186 17. 170 3. 365 0. 864 0. 957 0. 983LED 0. 5°6. 810 0. 101 0. 041 0. 152 14. 380 1. 376 0. 890 0. 969 0. 989LED 0. 25°5. 6210. 0820. 0300. 126 11. 7351. 1630. 923 0. 978 0. 992LED 0. 125°5. 7270. 076 0. 030 0. 116 10. 7541. 2610. 940 0. 987 0. 995 DepthAnythingV2 - 1000 training imagesLB 7. 637 0. 104 0. 044 0. 160 14. 617 1. 401 0. 891 0. 972 0. 990LED 0. 5°7. 017 0. 109 0. 047 0. 161 14. 044 1. 260 0. 877 0. 9697 0. 989LED 0. 25°6. 304 0. 102 0. 044 0. 146 12. 300 1. 079 0. 885 0. 9730. 993LED 0. 125°5. 785 0. 082 0. 037 0. 126 10. 673 0. 840 0. 921 0. 9810. 992 Table 6:Performance comparison on real-world data using various pattern resolutions."
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc3",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.63974529504776,
+      "text": "1, 2 [40] Xin Zhang, Jinheng Xie, Yuan Yuan, Michael Bi Mi, and Robby T Tan. Heap: unsupervised object discovery and localization with contrastive grouping. In Proceedings of the AAAI Conference on Artificial Intelligence, pages 7323– 7331, 2024. 1 [41] Chaoqiang Zhao, Yang Tang, and Qiyu Sun. Unsuper- vised monocular depth estimation in highly complex envi- ronments. IEEE Transactions on Emerging Topics in Com- putational Intelligence, 6(5):1237–1246, 2022. 2 [42] Chaoqiang Zhao, Youmin Zhang, Matteo Poggi, Fabio Tosi, Xianda Guo, Zheng Zhu, Guan Huang, Yang Tang, and Stefano Mattoccia. Monovit: Self-supervised monocular depth estimation with a vision transformer. In 2022 Inter- national Conference on 3D Vision (3DV) , pages 668–678. IEEE, 2022. 1, 2 [43] Ce Zheng, Yecheng Lyu, Ming Li, and Ziming Zhang. Lodonet: A deep neural network with 2d keypoint match- ing for 3d lidar odometry estimation. In Proceedings of the 28th ACM International Conference on Multimedia , page 2391–2399, New York, NY , USA, 2020. Association for Computing Machinery."
+    },
+    {
+      "id": "semantic_chunk::s_p8_sc1",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.6387801170349121,
+      "text": "Rows 1 and 2 show nuScenes examples under night and rain conditions. In row 1, the dark regions obscure details, yet the ground truth reveals a road sign on the left and trees on the right (highlighted in green). Robust-depth [22] and md4all [8] struggle in these areas, missing the road sign and misestimating the depth of the trees. In contrast, our model provides reasonable depth predictions, closely aligning with the ground truth. Row 2 illustrates a rainy scene with a blurry region partially obscuring a car. This blur causes [8, 22] to overestimate depth, consistent with Fig. 3 (d). Our model, however, accurately identifies the nearby car, pro- ducing depth values close to the ground truth. Row 3 shows a foggy scene from DrivingStereo, where previous methods misinterpret tire trails on the road as obstacles, while our model correctly ignores them, generating a smooth depth map. Row 4 presents a rainy DrivingStereo scene where reflections challenge even LiDAR depth capture, as shown in the green box. Both [8, 22] are affected by reflections, but our model remains robust, providing depth consistent with geometric features."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p9_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 9,
+      "score": 0.6387655735015869,
+      "text": "Y. Zou et al. Fig. 10. Qualitative comparison on the Cityscapes dataset. Table 4 Zero-shot quantitative results on two unseen datasets. Method SUN RGB-D Virtual KITTI 2 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ BTS [12] 0. 740 0. 933 0. 172 0. 515 0. 075 0. 831 0. 948 0. 115 5. 368 0. 054 AdaBins [9] 0. 771 0. 944 0. 159 0. 476 0. 068 0. 862 0. 957 0. 112 5. 218 0. 048 LocalBins [18] 0. 777 0. 949 0. 156 0. 470 0. 067 0. 810 0. 940 0. 127 5. 981 0. 061 NeWCRFs [16] 0. 798 0. 967 0. 151 0. 424 0. 064 0. 829 0. 951 0. 117 5. 691 0. 056 BinsFormer [10] 0. 805 0. 963 0. 143 0. 421 0. 061 – – – – – ZoeDepth [41] 0. 856 0. 979 0. 123 0. 356 0. 053 0. 850 0. 965 0. 105 5. 095 0. 050 Ours 0. 822 0. 969 0. 135 0. 395 0. 057 0. 890 0. 964 0. 098 4. 878 0. 043 Fig. 11. Qualitative zero-shot results on the SUN RGB-D dataset. Pattern Recognition 171 (2026) 112279 9"
+    },
+    {
+      "id": "semantic_chunk::ACD_p9_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.6374349594116211,
+      "text": "[Wang et al., 2024b ] Jiyuan Wang, Chunyu Lin, Lang Nie, Kang Liao, Shuwei Shao, and Y ao Zhao. Digging into contrastive learning for robust depth estimation with dif- fusion models. In ACM MM, pages 4129–4137, 2024. [Xian et al., 2020 ] Ke Xian, Jianming Zhang, Oliver Wang, Long Mai, Zhe Lin, and Zhiguo Cao. Structure-guided ranking loss for single image depth prediction. In CVPR, pages 611–620, 2020. [Xue et al., 2020 ] Feng Xue, Guirong Zhuo, Ziyuan Huang, Wufei Fu, Zhuoyue Wu, and Marcelo H Ang. Toward hier- archical self-supervised monocular absolute depth estima- tion for autonomous driving applications. In IROS, pages 2330–2337, 2020. [Y anget al., 2024a ] Haolin Y ang, Chaoqiang Zhao, Lu Sheng, and Y ang Tang. Self-supervised monocu- lar depth estimation in the dark: Towards data distribution compensation. In IJCAI, pages 1561–1569, 2024. [Y anget al., 2024b] Lihe Y ang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything v2. In NeurIPS, 2024. [Yin et al., 2022 ] Wei Yin, Jianming Zhang, Oliver Wang, Simon Niklaus, Simon Chen, Yifan Liu, and Chunhua Shen."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p10_sc2",
+      "source": "data\\Global-Local.pdf",
+      "page": 10,
+      "score": 0.6371905207633972,
+      "text": "804 0. 954 0. 988 0. 153 0. 115 0. 493 0. 182 Ours 0. 860 0. 973 0. 994 0. 123 0. 073 0. 413 0. 153 Weather Snow BTS 0. 410 0. 649 0. 803 0. 298 0. 423 1. 114 0. 458 Adabins 0. 410 0. 656 0. 817 0. 292 0. 410 1. 094 0. 440 Ours 0. 723 0. 926 0. 981 0. 170 0. 138 0. 598 0. 217 Spatter BTS 0. 705 0. 878 0. 945 0. 176 0. 168 0. 642 0. 250 Adabins 0. 699 0. 890 0. 964 0. 173 0. 155 0. 625 0. 234 Ours 0. 835 0. 971 0. 994 0. 134 0. 083 0. 445 0. 162 Fog BTS 0. 588 0. 798 0. 893 0. 227 0. 273 0. 835 0. 332 Adabins 0. 523 0. 748 0. 873 0. 252 0. 308 0. 898 0. 357 Ours 0. 759 0. 928 0. 978 0. 153 0. 125 0. 559 0. 204 Frost BTS 0. 515 0. 734 0. 850 0. 261 0. 359 0. 996 0. 400 Adabins 0. 439 0. 691 0. 842 0. 280 0. 398 1. 074 0. 413 Ours 0. 736 0. 929 0. 983 0. 163 0. 130 0. 576 0. 209 Table 8: Robustness experiment results on corrupted images of NYU Depth V2 datasets."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_sc4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.6352435350418091,
+      "text": "Moreover, BTS uses a multi-stage local planar guidance [21] and P3Depth exploits coplanar pixels [24]. Others investigated the benefit of depth estimation while tackling other tasks, such as 3D object detection [17]. Issues While the supervision signal from 3D sensors is reliable in ideal conditions (e.g., sunny, cloudy), it severely degrades in photometrically challenging scenarios [19]. Outdoor, LiDAR sensors deliver erroneous measurements in adverse weather conditions, such as rain, snow and fog. As Jung et al. demonstrated indoor [19], training on an in- exact ground truth leads depth models to learn the sensor ar- 8178"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6352332234382629,
+      "text": "While RDE serves as a valid estimation paradigm, it has limitations in real-world applications. ∗ Corresponding author. E-mail address: zhao13871001982@whut.edu.cn (Z. Zhao). Consequently, MDE methods have gradually become the mainstream [8]. MDE methods typically directly regress the metric depth of each pixel. Some MDE methods [9,10] employ a hybrid regression strategy, adaptively dividing the image depth range into discrete bins and then predicting the probability of pixels belonging to each bin to achieve ac- curate metric depth estimation. Despite their excellent performance in various benchmarks, these methods often neglect the semantic informa- tion of real-world scene structures, leading to “smooth transition” char- acteristics in the semantic boundaries areas of the predicted depth maps, as shown in Fig. 1(a). Therefore, the introduction of semantic priors is essential. However, existing methods [11] focus on implicitly constructing scene structural relationships utilizing semantic information, but with- out explicit constraints, models may struggle to learn semantic priors."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p8_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6348873376846313,
+      "text": "As a result, our Depth Anything model exhibits excellent zero-shot depth estimation ability, and also serves as a promising initialization for downstream metric depth estimation and semantic segmentation tasks. Acknowledgement. This work is supported by the National Natural Science Foundation of China (No. 62201484), HKU Startup Fund, and HKU Seed Fund for Basic Research. 10378"
+    },
+    {
+      "id": "semantic_chunk::ACD_p3_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 3,
+      "score": 0.6348409056663513,
+      "text": "To address these challenges, we propose a multi-granularity knowledge distillation strategy that enhances the knowledge transfer pro- cess by borrowing priors from multiple teachers to provide comprehensive supervision and guidance. 3 Method 3. 1 Preliminary MDE aims to estimate the depth map Dt from a single RGB image It. Restricted by high-quality paired samples in real-world scenarios, especially for adverse weather, the self-supervised learning strategy [Zhu et al., 2023; Wang et al., 2024b ] provides an alternative solution to obtain super- vised signals of the target image I t from adjacent frames It′ ∈ [It−1,It+1]. Speciﬁcally, the pose network and depth network are jointly optimized. The former estimates the rel- ative pose of camera motion T t→t′, from the target image to the adjacent frame (It′)."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p10_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 10,
+      "score": 0.6347754001617432,
+      "text": "PMLR, 2023. 2, 3, 6, 7, 8 [38] Kun Wang, Zhenyu Zhang, Zhiqiang Yan, Xiang Li, Baobei Xu, Jun Li, and Jian Yang. Regularizing Nighttime Weird- ness: Efficient self-supervised monocular depth estimation in the dark. In Proceedings of the IEEE/CVF International Conference on Computer Vision, pages 16055–16064, 2021. 2, 3, 6, 7 [39] Zhou Wang, Alan C Bovik, Hamid R Sheikh, and Eero P Si- moncelli. Image quality assessment: From error visibility to structural similarity. IEEE Transactions on Image Process- ing, 13(4):600–612, 2004. 4 [40] Mengchen Xiong, Xiao Xu, Dong Yang, and Eckehard Stein- bach. Robust depth estimation in foggy environments com- bining RGB images and mmWave radar. In International Symposium on Multimedia, pages 34–41. IEEE, 2022. 2, 3 [41] Jiaxing Yan, Hong Zhao, Penghui Bu, and YuSheng Jin. Channel-wise attention-based network for self-supervised monocular depth estimation. In International Conference on 3D vision (3DV), pages 464–473. IEEE, 2021. 1 [42] Fisher Yu, Haofeng Chen, Xin Wang, Wenqi Xian, Yingying Chen, Fangchen Liu, Vashisht Madhavan, and Trevor Dar- rell. BDD100K: A diverse driving dataset for heterogeneous multitask learning."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p9_sc0",
+      "source": "data\\Global-Local.pdf",
+      "page": 9,
+      "score": 0.6332995891571045,
+      "text": "6 Appendix: Additional dataset results In this section, we provide additional results on KITTI [Geiger et al., 2013] and iBims-1 [Koch et al., 2018] datasets. KITTI is an outdoor depth estimation dataset and iBims-1 is an indoor dataset. 6. 1 KITTI KITTI [Geiger et al. , 2013 ] contains stereo camera images and corresponding 3D LiDAR scans of various driving scenes acquired by car mounted sensors. The size of RGB images is around 1224× 368. We train our network using approximately 23K images on a random crop of 704× 352 and test on 697 images. To compare our performance with previous works, we use the crop as deﬁned by Garg [Garg et al., 2016] and a maximum value of 80m for evaluation. The results on the KITTI dataset are shown in Table 6. As shown in the table, our model outperforms other previous studies. Method Params (M) δ1↑ δ2↑ δ3↑ AbsRel↓ RMSE↓ RMSE log↓ Fu[Fu et al., 2018] 110 0. 932 0. 984 0. 994 0. 072 2. 727 0. 120 Yin[Yinet al., 2019] 114 0. 938 0. 984 0. 998 0. 072 3. 258 0. 117 BTS[Leeet al., 2019] 113 0. 956 0. 993 0. 998 0. 059 2. 756 0. 088 DPT*[Ranftlet al., 2021] 123 0. 959 0. 995 0. 999 0. 062 2. 573 0. 092 Adabins[Bhatet al., 2021] 78 0. 964 0. 995 0. 999 0."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6324630379676819,
+      "text": "DepthDark: Robust Monocular Depth Estimation for Low-Light Environments MM ’25, October 27–31, 2025, Dublin, Ireland. 7 Acknowledgments This work was supported by the National Key Research and Devel- opment Program of China (U22A2047), the Key R&D Program of Zhejiang under Grant No. (2025C03001, 2023C01044), the Funda- mental Research Funds for the Provincial Universities of Zhejiang (GK259909299001-023), the National Nature Science Foundation of China (62301198). References [1] Jinwoo Bae, Sungho Moon, and Sunghoon Im. 2023. Deep digging into the generalization of self-supervised monocular depth estimation. In Proceedings of the AAAI conference on artificial intelligence , Vol. 37. 187–196. [2] Hyojin Bahng, Ali Jahanian, Swami Sankaranarayanan, and Phillip Isola. 2022. Exploring visual prompts for adapting large-scale models. arXiv preprint arXiv:2203. 17274 (2022). [3] Shariq Farooq Bhat, Reiner Birkl, Diana Wofk, Peter Wonka, and Matthias Müller. 2023. Zoedepth: Zero-shot transfer by combining relative and metric depth.arXiv preprint arXiv:2302. 12288 (2023). [4] Yohann Cabon, Naila Murray, and Martin Humenberger. 2020. Virtual kitti 2. arXiv preprint arXiv:2001. 10773 (2020)."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_sc4",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.6324220895767212,
+      "text": "Real depth datasets suffer from missing depth values caused by the physical constraints of the capture rig and the physical properties of the sensors. Specifically, the disparity between cameras and reflective surfaces diverting LiDAR laser beams are inevitable sources of ground truth noise and missing pixels [21, 51]. In contrast to prior work that utilized diverse real datasets to achieve generalization [13, 35], we train exclusively with synthetic depth datasets. As with the depth normalization rationale, this decision has two objective reasons. First, synthetic depth is inherently dense and complete, meaning that every pixel has a valid ground truth depth value, allowing us to feed such data into the V AE, which can not handle data with invalid pixels. Second, synthetic depth is the cleanest 4"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7642385363578796,
+      "text": "md4all md4all md4all md4all depth model md4all md4all md4all md4all md4all md4all md4all md4all translation model adverse - translated image day - input image day - input sequence day - pose model md4all md4all day - input imageday - reconstructed input depth prediction odometry informationcamera pose estimation photometric loss weak velocity loss x % (1 − x) % x % md4all-AD: Always Daytime, No Bad Weather md4all md4all md4all md4all any - input image depth predictiondepth model weights being trained frozen weights day night rain training fog snow one of inference alternative paths (random)rain md4all md4all (same as in md4all-DD) T Figure 4. Our self-supervised md4all-AD framework. With x = 0, it is equivalent to the day - depth model in Figure 3 and the baseline. The depth model is trained with a mix of easy and translated samples, while the training signal is always from the easy ones. As shown at the top of Figure 3, since we do not apply any architectural modification, at inference time, we pre- dict depth with the same model through the same model parameters, regardless of the input condition.",
+      "estimated_tokens": 271
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7641009092330933,
+      "text": "It is to be considered that LiDAR artifacts may have an impact on the rain val- ues, such that perfect estimates would not score perfectly because the ground truth is wrong (Figure 2). So, while we can assess the improvements of md4all at handling the blur caused by raindrops, we cannot correctly quantify its impact on eliminating the artifacts. Therefore, these com- parisons are more meaningful when considered alongside qualitative outputs (Figure 5). Our supervised md4all per- formed better than AdaBins both quantitatively and quali- tatively, eliminating the dependency on the sensor artifacts. Additionally, thanks to the strong regularization introduced by the translated samples, our model generalizes signifi- cantly better than the standard AdaBins, leading to vast im- provements across the board, also at night. Training on the sparse LiDAR signal of nuScenes [3] (Figures 2 and 5) can lead to overfitting. Ours is a beneficial data augmentation technique, adding diversity to the training, as the model is shown |C| + 1variations of each day-clear input.",
+      "estimated_tokens": 232
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p8_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 8,
+      "score": 0.7637436389923096,
+      "text": "input image ground truth AdaBins md4all (sup.) [ours] Monodepth2 md4all (self-sup.) [ours] fully-supervised self-supervised Figure 5. Comparison on nuScenes [3] between fully-sup. AdaBins [1] w/o and w/ ours, and self-sup. Monodepth2 [11] w/o and w/ ours. bustness by making it harder to recover information for the depth task, as the translations act as data augmentation and regularization. The table confirms the robustness of md4all, performing similarly regardless of which GAN is used, even when degrading 10% of the inputs via random erasing. 4. 3. Qualitative Results Qualitative comparisons in Figures 5 and 6 confirm the quantitative findings, with our md4all delivering improved estimates in both adverse and standard conditions. On nuScenes [3] (Figure 5), unlike the baselines, both our mod- els correctly identified the truck in the first rainy sample. As shown in Figure 2, rain leads to artifacts in the LiDAR ground truth, which cause the standard fully-supervised Ad- aBins [1] to learn them and estimate the road wrongly.",
+      "estimated_tokens": 254
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7516412138938904,
+      "text": "Our md4all outperforms them all across the board, with substantially better estimates at night than theirs dur- ing the day: the previous best WSGD [37]’s day absRel error is 45% higher than ours at night. This is thanks to the simplicity of our approach, which does not rely on complex architectures, but makes existing models robust in adverse conditions by changing their input and training signals. Rain – nuScenes Rain is less problematic than darkness due to the lack of cues in the latter. Results are shown in Table 1, with all methods performing better with rain than at night. Our self-supervised monocular md4all-DD signif- icantly improved over Monodepth2 and the baseline, per- forming close to the radar-based R4Dyn [8]. Fully-supervised Table 1 reports also results in super- vised settings. LiDAR data is reliable in the dark, so night scenes are less of an issue. Instead, rain inputs are partic- ularly interesting for supervised works due to the reflection issues shown in Figures 1 and 2. For supervised settings, we applied our method on AdaBins [1].",
+      "estimated_tokens": 242
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.7237652540206909,
+      "text": "md4all md4all md4all md4all md4all md4all md4all md4all day - depth model translation model day - input image adverse - translated image depth model depth prediction day - depth prediction md4all md4all any - input image depth prediction depth model day distillation loss x % (1 − x) % x % weights being trained frozen weights day night rain training fog snow one of inference md4all-DD: Day Distillation alternative paths (random) rain md4all md4all B T Figure 3. Our md4all-DD framework. The frozen day - depth model estimates on easy samples and provides guidance to another model fed with a mix of easy and translated inputs. Inference is done with a simple single model for both fully- and self-supervised md4all. between the target It and source frames Is∈{t−1,t+1}, with which we warp the source into a reconstructed target view. As in [11, 12], a loss is computed on the appearance shift between It and the reconstruction [46], alongside the struc- tural similarity [39]. Following [11], we account for partial occlusions via the minimum reprojection error Lp, and we ignore static pixels. Another loss Ls promotes smoothness and preserves edges [10].",
+      "estimated_tokens": 271
+    },
+    {
+      "id": "semantic_chunk::ACD_p2_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.7142482995986938,
+      "text": "1(b), md4all suffers from nonnegligible performance decline when there are signiﬁcant domain differences between scenes, making it far from generalizing to various degraded scenarios. Overall, two critical issues are imperative to train a gener- alizable and reliable depth estimation model: (1) the lack of a high-quality multi-tuple dataset covering diverse degradation types; (2) slack constraints between the teacher and student model, resulting in incomplete knowledge transfer. To mitigate the problem of data scarcity, the author in [Tosi et al., 2025 ] utilize depth maps and text descriptions as control conditions to generate [normal, degraded] sample pairs with T2I-Adapter [Mou et al., 2024 ]. This provides an alternative solution with diffusion models for multi-tuple dataset generation [Zhu et al., 2017; Parmar et al., 2024; Sauer et al., 2025 ]. However, the translated image shows ob- vious inconsistencies and less authenticity of scene contents, which is unacceptable for training generalizable depth esti- mation models.",
+      "estimated_tokens": 224
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1494,
+    "compressed_context_tokens": 1494,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1494,
+  "context_tokens": 1494,
+  "prompt_token_estimate": 1965,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_md4all_supervised_training",
+  "answer": "<think>\nThe user is asking about how md4all avoids LiDAR artifacts in adverse weather conditions during fully-supervised monocular depth estimation. Let me look at the relevant information in the provided sources.\n\nFrom source [2]:\n- \"It is to be considered that LiDAR artifacts may have an impact on the rain values, such that perfect estimates would not score perfectly because the ground truth is wrong\"\n- \"Our supervised md4all performed better than AdaBins both quantitatively and qualitatively, eliminating the dependency on the sensor artifacts.\"\n- \"Additionally, thanks to the strong regularization introduced by the translated samples, our model generalizes significantly better than the standard AdaBins\"\n- \"Training on the sparse LiDAR signal of nuScenes can lead to overfitting. Ours is a beneficial data augmentation technique, adding diversity to the training, as the model is shown |C| + 1 variations of each day-clear input.\"\n\nFrom source [3]:\n- \"the standard fully-supervised AdaBins to learn them and estimate the road wrongly\" (referring to artifacts)\n- \"Qualitative comparisons in Figures 5 and 6 confirm the quantitative findings, with our md4all delivering improved estimates in both adverse and standard conditions.\"\n\nSo the key points are:\n1. md4all uses translated/adversarial images as data augmentation\n2. This adds diversity to training\n3. The regularization from translated samples helps the model not overfit to LiDAR artifacts\n4. The model is shown |C|+1 variations of each day-clear input (where |C| is number of adverse conditions)\n5. This eliminates dependency on sensor artifacts\n\nLet me structure the answer.\n</think>\n{\n  \"answer\": \"在全监督设置中，md4all 通过将恶劣天气（如雨天）的翻译图像作为数据增广加入训练，使模型对每个晴朗输入看到 |C|+1 种变体，利用翻译样本引入的强正则化，使模型不再过拟合稀疏 LiDAR 监督信号中的伪影，从而避免在雨天场景中学习到 LiDAR 伪影并错误估计路面。\",\n  \"items\": [\n    {\n      \"name\": \"翻译图像作为数据增广\",\n      \"description\": \"将恶劣天气翻译图像加入训练，使每个晴朗输入有 |C|+1 种变体，增加训练多样性，减少对稀疏 LiDAR 信号的过拟合。\",\n      \"citations\": [2]\n    },\n    {\n      \"name\": \"强正则化效果\",\n      \"description\": \"翻译样本带来的强正则化使模型泛化更好，消除对传感器伪影的依赖，优于标准 AdaBins。\",\n      \"citations\": [2, 3]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1982,
+    "completion_tokens": 553,
+    "total_tokens": 2535,
+    "model": "MiniMax-M3"
+  }
+}

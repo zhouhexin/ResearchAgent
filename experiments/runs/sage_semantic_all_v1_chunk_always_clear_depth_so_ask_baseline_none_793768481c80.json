@@ -1,0 +1,414 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_always_clear_depth_so_ask_baseline_none_793768481c80",
+  "dry_run": false,
+  "query": "Always Clear Depth 在 Comparison with SoTAs 中与哪些方法进行了比较？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::ACD_p4_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6608656644821167,
+      "text": "ents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith signiﬁcant discrepancies between D\nT and DS for re-\nﬁnement:\n¯D = |DT −DS|, (8)\nwhere ¯D reﬂects the difference between the output of the\nteacher model and the student model. We"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p6_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 6,
+      "score": 0.6603260636329651,
+      "text": "Table 1. Quantitative comparison of Marigold with SOTA affine-invariant depth estimators on several zero-shot benchmarks. All metrics†\nare presented in percentage terms; bold numbers are the best, underscored second best. Our method outperforms other metho"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p6_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.6603260636329651,
+      "text": "Table 1. Quantitative comparison of Marigold with SOTA affine-invariant depth estimators on several zero-shot benchmarks. All metrics†\nare presented in percentage terms; bold numbers are the best, underscored second best. Our method outperforms other metho"
+    },
+    {
+      "id": "chunk::LED_p4_chunk_14",
+      "source": "data\\LED.pdf",
+      "page": 4,
+      "score": 0.660219669342041,
+      "text": "state-of-the-art (SOTA) methods (see section 5.1). We also successfully\napply our method to more complex SOTA architectures, such as DepthFormer [27] and Ad-\nabins [4], with similar performance gains (see section 5.1). Finally, we show that finetuning\nDept"
+    },
+    {
+      "id": "chunk::SSRDepth_p7_chunk_0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 7,
+      "score": 0.6590389609336853,
+      "text": "Y. Zou et al.\nTable 1 \nQuantitative comparison on the NYU-Depth V2 dataset. The best results are indicated in bold, and the second-best results are \nunderlined.\n    Method  Venue  Backbone 𝛿1 ↑ 𝛿2 ↑ 𝛿3 ↑  RMSE↓  AbsRel↓  log10↓ \n  BTS [12]  arXiv 2019  Den"
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_10",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.656529426574707,
+      "text": "it with metric depth information\nfrom NYUv2 and KITTI, new SOTAs are set. Our better depth\nmodel also results in a better depth-conditioned ControlNet.\nOur models are released here.\nWork was done during an internship at TikTok.\n1While the grammatical soun"
+    },
+    {
+      "id": "chunk::dav2_p8_chunk_20",
+      "source": "data\\dav2.pdf",
+      "page": 8,
+      "score": 0.6564416289329529,
+      "text": "ompare with Depth Anything V1 [ 89] and MiDaS V3.1 [ 7] on five unseen test\ndatasets. As shown in Table 2, our results are superior to MiDaS and comparable to V1 [ 89]. We\nare slightly inferior to V1 in metrics on two of the datasets. However, the plain me"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.6559550762176514,
+      "text": "pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything v2.arXiv preprint arXiv:2406.09414, 2024. 3\n[61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tian"
+    },
+    {
+      "id": "chunk::SSRDepth_p1_chunk_26",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.6452171802520752,
+      "text": "hown in Fig. 1(b), all objects in the depth map have \nnearly identical contours with their semantic segments, and the depth \nvalues within the some semantic segments also exhibit a high degree of\nhttps://doi.org/10.1016/j.patcog.2025.112279\nReceived 29 Dec"
+    },
+    {
+      "id": "chunk::Depth_Anything_p2_chunk_29",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 2,
+      "score": 0.6439330577850342,
+      "text": "epth infor-\nmation. Recently, some works [4, 21, 78] take a step further\nto estimate the metric depth. However, in our practice, we\nobserve such methods exhibit poorer generalization ability\nthan MiDaS, especially its latest version [ 5]. Besides, as\ndemon"
+    },
+    {
+      "id": "chunk::Jasmine_p19_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 19,
+      "score": 0.641268253326416,
+      "text": "tain the depthD tc through:\n1\nDtc\n=clip\n\u0012 1\nDmax\n+\n\u0012 1\nDmin\n− 1\nDmax\n\u0013\n·dp,0,3\n\u0013\n,\nwhere Dmin and Dmax are set to 0.1 and 100, respectivley. We find that the depth range at range\n[0,3] can already describe all information within the maximum depth.\n19"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.6406343579292297,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.6406343579292297,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::Jasmine_p4_chunk_4",
+      "source": "data\\Jasmine.pdf",
+      "page": 4,
+      "score": 0.6381160616874695,
+      "text": "odels. Fortunately, Lotus and E2E FT[33, 21]\ndemonstrate that we can obtain comparable results with single-step denoising and directly predict\ndepth, D=D\n\u0000\nf z\nθ\n\u0000\nzy\nτ ,z I\u0001\u0001\n, τ=T , which makes it possible to train SD with self-supervision. The\nstep-by-s"
+    },
+    {
+      "id": "chunk::LED_p4_chunk_13",
+      "source": "data\\LED.pdf",
+      "page": 4,
+      "score": 0.6371289491653442,
+      "text": "tern for depth estimation, we leverage a simple encoder-decoder\nmodel [37]. In spite of its straight-forward architecture, it achieves results on par with or\nsuperior to other state-of-the-art (SOTA) methods (see section 5.1). We also successfully\napply ou"
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_1",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.6360616683959961,
+      "text": "† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1. Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [35]. Middle two:\nSA-1B [26] (a hold-out unseen set). Right two: p"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_12",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.6352585554122925,
+      "text": "truth depth is pro-\nvided for 652 (or 93%) of the 697 test frames contained in\nthe Eigen test split [8]. We evaluate our results on these 652\nimproved ground truth frames and compare to existing pub-\nlished methods without having to retrain each method, se"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_12",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.6352585554122925,
+      "text": "truth depth is pro-\nvided for 652 (or 93%) of the 697 test frames contained in\nthe Eigen test split [8]. We evaluate our results on these 652\nimproved ground truth frames and compare to existing pub-\nlished methods without having to retrain each method, se"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_chunk_19",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.6335431337356567,
+      "text": "ts [63]. We note that we achieve our best\nresults when using Depth Hints and high-resolution input\nimages. This is not surprising, as supervision from SGM\nshould give better scores, but more importantly using high\nresolution inputs and outputs allows for m"
+    },
+    {
+      "id": "chunk::dav2_p21_chunk_5",
+      "source": "data\\dav2.pdf",
+      "page": 21,
+      "score": 0.6325807571411133,
+      "text": "Qualitative comparison between Depth Anything V1 and V2\nPlease refer to Figure 13. Our Depth Anything V2 produces much more fine-grained depth predictions\nthan V1 [89]. Ours are also highly robust to transparent objects.\n21"
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_20",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.6303789019584656,
+      "text": "del’s perfor-\nmance. Therefore, we train our method on both the raw depth annota-\ntions(rawDepths) and the completed reﬁned depth annotations(Depths) \nfrom NYU1449. The experimental results are shown in Table 8. Our \nPattern Recognition 171 (2026) 112279"
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.6295650005340576,
+      "text": "contents are listed as follows:\nContents\nA Proof of Scale-Invariant Depth 15\nB Detailed Training Workflow and Pseudocode 16\nB.1 Step-by-Step Workflow . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 16\nB.2 Training Pseudocode . . . . . . . ."
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6288788914680481,
+      "text": "ine of SSG is comprehensively described in Sec. 3.3 (DepthHead\nis omit in (a) for clear).(b): Depth distribution alignment visualization. We statistically analyze each stage of\nJasmine’s SSG module on the KITTI test set. The standard SI and SSI depths are"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_3",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6283751130104065,
+      "text": "0.0690 0.0240 0.0920 7.7290 2.5090 0.9210 0.9680 0.9840\nDepthF ormerHB 5.85280.06870.0281 0.1205 11.38410.83280.9432 0.9802 0.9913LED5.38450.12150.0276 0.1111 10.41463.40150.9497 0.9838 0.9950\nTable 1:Comparison of depth estimation performances on NSDD:HB"
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_8",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.6281150579452515,
+      "text": "2\nH Error Bar Analysis 22\nI Limitation and Future Work 23\nA Proof of Scale-Invariant Depth\nFor SSI depth, we assume that the estimated depth ˆD and the ground truth depth D have the following\nrelationship:\nˆD=s cD+s h\nMeanwhile, the depth from another view"
+    },
+    {
+      "id": "chunk::ACD_p5_chunk_23",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.6278425455093384,
+      "text": "sidering both the effective-\nness of supervision signals and training efﬁciency, we select\nthe small version of Depth Anything V2 [Y anget al., 2024b ]\nas our supervision prior for ordinal guidance distillation. Fur-\nther details on the model training proc"
+    },
+    {
+      "id": "chunk::Global-Local_p9_chunk_9",
+      "source": "data\\Global-Local.pdf",
+      "page": 9,
+      "score": 0.6272415518760681,
+      "text": "ar regions, consistent depth values, and accurate absolute distances. We evaluate with our NYU Depth\nV2 trained model without any ﬁne-tuning. Results on iBims-1 dataset are listed in Table 7.\nMethod δ1↑ δ2↑ δ3↑ AbsRel↓ RMSE↓ log10↓\nVNL [Yin et al., 2019] 0"
+    },
+    {
+      "id": "chunk::dav2_p1_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 1,
+      "score": 0.6268931031227112,
+      "text": "e-grained details. Compared\nwith SD-based models [31, 25], it enjoys faster inference speed, fewer parameters, and higher depth accuracy.\nAbstract\nThis work presents Depth Anything V2. Without pursuing fancy techniques, we aim\nto reveal crucial findings to"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_54",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6264908313751221,
+      "text": "tion Compensa-\ntion. arXiv preprint arXiv:2404.13854 (2024).\n[41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng-\nshuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla-\nbeled data. In Proceedings of the IEEE/"
+    },
+    {
+      "id": "chunk::SSRDepth_p6_chunk_23",
+      "source": "data\\SSRDepth.pdf",
+      "page": 6,
+      "score": 0.6262556314468384,
+      "text": "-of-the-art\nTo demonstrate the eﬀectiveness of our method, we compare it with \nthe state-of-the-art methods on NYU-Depth v2, KITTI and Cityscapes \ndatasets.\nResult on NYU-Depth v2. As shown in Table 1, we perform quanti-\ntative evaluations on the NYU-Depth"
+    },
+    {
+      "id": "chunk::dav2_p2_chunk_7",
+      "source": "data\\dav2.pdf",
+      "page": 2,
+      "score": 0.6260562539100647,
+      "text": ",e.g., BEiT [4] and DINOv2 [50], while the other [31, 20, 25]\nis based on generative models, e.g., Stable Diffusion (SD) [ 59]. In Figure 2, we compare two\nrepresentative works from the two categories respectively: Depth Anything [89] as a discriminative\nm"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_25",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6259387731552124,
+      "text": "pth predictions while suppressing noisy\ngradients. Extensive experiments demonstrate that Jasmine achieves SoTA performance on KITTI\nand superior zero-shot generalization across datasets. Our approach establishes a new paradigm for\nunsupervised depth estim"
+    },
+    {
+      "id": "chunk::TDDC_p5_chunk_24",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.6245018243789673,
+      "text": "tive Test\nComparisons\nWe mainly compare our results with four SoTA methods i.e.\nDA (Domain adaptation): RNW [Wang et al. , 2021 ], DA:\nADDS [Liu et al. , 2021 ], DA: ITDFA [Zhao et al. , 2022a ]\nand DT (Direct training): WSGD [Vankadari et al., 2023] on\nnu"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_56",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6241294741630554,
+      "text": "ang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and\nHengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406.09414\n(2024)."
+    },
+    {
+      "id": "chunk::ACD_p9_chunk_18",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.6232650279998779,
+      "text": "l., 2024b] Lihe Y ang, Bingyi Kang, Zilong Huang,\nZhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang\nZhao. Depth anything v2. In NeurIPS, 2024.\n[Yin et al., 2022 ] Wei Yin, Jianming Zhang, Oliver Wang,\nSimon Niklaus, Simon Chen, Yifan Liu, and Chunhua\nShe"
+    },
+    {
+      "id": "chunk::SSRDepth_p6_chunk_27",
+      "source": "data\\SSRDepth.pdf",
+      "page": 6,
+      "score": 0.6231026649475098,
+      "text": "so visualize some of the prediction results \nand compare them with AdaBins and NewCRFs. It can be observed that \nour predicted depth maps are more accurate with clearer contours. For \ninstance, in the second and ﬁfth rows, our method distinctly separates"
+    },
+    {
+      "id": "chunk::SSRDepth_p6_chunk_24",
+      "source": "data\\SSRDepth.pdf",
+      "page": 6,
+      "score": 0.6227161288261414,
+      "text": "v2. As shown in Table 1, we perform quanti-\ntative evaluations on the NYU-Depth V2 dataset. Our ConvNeXt-L ver-\nsion of the model achieves the best performance, outperforming the \nstate-of-the-art methods in all ﬁve metrics. Compared to the second-\nranked"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p12_chunk_25",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 12,
+      "score": 0.621296763420105,
+      "text": "keep all four levels of\nwavelet decomposition.\nSupervised losses For our NYU results in the main paper,\nwe supervise depth using an L1 loss and SSIM:\nLD(y,y∗) = λ1ℓ1(y,y∗) (9)"
+    },
+    {
+      "id": "chunk::Jasmine_p13_chunk_22",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.6212865710258484,
+      "text": "feys. Depthsplat: Connecting gaussian splatting and depth.arXiv preprint arXiv:2410.13862, 2024. 1\n[54] Zhiqiang Yan, Yuankai Lin, Kun Wang, Yupeng Zheng, Yufei Wang, Zhenyu Zhang, Jun Li, and Jian\nYang. Tri-perspective view decomposition for geometry-awar"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_25",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.620898962020874,
+      "text": "t to be fairer and rep-\nresentative of the performance of each method. We also\ncalculated the standard deviation σscale of the individual\nscales, where lower values indicate more consistent output\ndepth map scales. As can be seen in Table 8, our method\nout"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_25",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.620898962020874,
+      "text": "t to be fairer and rep-\nresentative of the performance of each method. We also\ncalculated the standard deviation σscale of the individual\nscales, where lower values indicate more consistent output\ndepth map scales. As can be seen in Table 8, our method\nout"
+    },
+    {
+      "id": "chunk::SSRDepth_p13_chunk_31",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.620621919631958,
+      "text": "sion – ECCV 2022, Cham, 2022, pp. 480–496. \n[19] K. Xian, J. Zhang, O. Wang, L. Mai, Z. Lin, Z. Cao, Structure-guided ranking loss \nfor single image depth prediction, in: Proceedings of the IEEE/CVF Conference on \nComputer Vision and Pattern Recognition, 2"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_11",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6193242073059082,
+      "text": "822 0.918\nDepth Anything V2[42] RD & SD - 40 0.235 2.474 6.239 0.268 0.697 0.868 0.946\nOurs DepthDark H, VK - 40 0.157 1.063 4.284 0.202 0.760 0.941 0.985\nTable 4.1: The best results are in bold, while the second-best scores are underline. H, VK, K, N, and"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p11_chunk_0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 11,
+      "score": 0.6190197467803955,
+      "text": "[74] Zhenyu Zhang, Chunyan Xu, Jian Yang, Ying Tai, and Liang\nChen. Deep hierarchical guidance and regularization learn-\ning for end-to-end depth estimation. Pattern Recognition,\n2018.\n[75] Hang Zhao, Orazio Gallo, Iuri Frosio, and Jan Kautz. Loss\nfunction"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p11_chunk_0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 11,
+      "score": 0.6190197467803955,
+      "text": "[74] Zhenyu Zhang, Chunyan Xu, Jian Yang, Ying Tai, and Liang\nChen. Deep hierarchical guidance and regularization learn-\ning for end-to-end depth estimation. Pattern Recognition,\n2018.\n[75] Hang Zhao, Orazio Gallo, Iuri Frosio, and Jan Kautz. Loss\nfunction"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p9_chunk_22",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 9,
+      "score": 0.6189273595809937,
+      "text": "4.\n[27] KITTI Single Depth Evaluation Server.\nhttp://www.cvlibs.net/datasets/kitti/eval depth.php?\nbenchmark=depth prediction. 2017.\n[28] Maria Klodt and Andrea Vedaldi. Supervising the new with\nthe old: learning SFM from SFM. In ECCV, 2018.\n[29] Shu Kong"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p9_chunk_22",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 9,
+      "score": 0.6189273595809937,
+      "text": "4.\n[27] KITTI Single Depth Evaluation Server.\nhttp://www.cvlibs.net/datasets/kitti/eval depth.php?\nbenchmark=depth prediction. 2017.\n[28] Maria Klodt and Andrea Vedaldi. Supervising the new with\nthe old: learning SFM from SFM. In ECCV, 2018.\n[29] Shu Kong"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_27",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6187505722045898,
+      "text": "parison. Our final experiments indicate that the G-version results\nare largely consistent with those reported in TDDC.\nFor a more comprehensive comparison, we further compare our\nexperimental results with state-of-the-art methods, including Depth\nAnything,"
+    },
+    {
+      "id": "chunk::Jasmine_p6_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.618198037147522,
+      "text": "Jasmine’s SSG module on the KITTI test set. The standard SI and SSI depths are obtained by applying Eq. 9 and\ndividing the maximum value to the depth GT, respectively.\nbe recovered by the least squares alignment in evaluation. Consequently, SD-based MDE p"
+    },
+    {
+      "id": "chunk::Jasmine_p20_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 20,
+      "score": 0.6175340414047241,
+      "text": "For the SSI depth supervision, we perform a normalization similar to Eq. 9 in paper:\nNorm(Dtc) = 2·\n\u0012 Dtc −min(D tc)\nmax(Dtc)−min(D tc) −0.5\n\u0013\n.(20)\nFurthermore, to avoid the performance ceiling imposed by the teacher model, we draw inspiration\nfrom D4RD[4"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::ACD_p4_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6608656644821167,
+      "text": "ents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith signiﬁcant discrepancies between D\nT and DS for re-\nﬁnement:\n¯D = |DT −DS|, (8)\nwhere ¯D reﬂects the difference between the output of the\nteacher model and the student model. We",
+      "estimated_tokens": 77
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p6_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 6,
+      "score": 0.6603260636329651,
+      "text": "Table 1. Quantitative comparison of Marigold with SOTA affine-invariant depth estimators on several zero-shot benchmarks. All metrics†\nare presented in percentage terms; bold numbers are the best, underscored second best. Our method outperforms other metho",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p6_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.6603260636329651,
+      "text": "Table 1. Quantitative comparison of Marigold with SOTA affine-invariant depth estimators on several zero-shot benchmarks. All metrics†\nare presented in percentage terms; bold numbers are the best, underscored second best. Our method outperforms other metho",
+      "estimated_tokens": 55
+    },
+    {
+      "id": "chunk::LED_p4_chunk_14",
+      "source": "data\\LED.pdf",
+      "page": 4,
+      "score": 0.660219669342041,
+      "text": "state-of-the-art (SOTA) methods (see section 5.1). We also successfully\napply our method to more complex SOTA architectures, such as DepthFormer [27] and Ad-\nabins [4], with similar performance gains (see section 5.1). Finally, we show that finetuning\nDept",
+      "estimated_tokens": 68
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 255,
+    "compressed_context_tokens": 255,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 255,
+  "context_tokens": 255,
+  "prompt_token_estimate": 667,
+  "run_label": "sage_semantic_all_v1_chunk_always_clear_depth_sota_comparison_methods",
+  "answer": "<think>\nThe user is asking about \"Always Clear Depth\" (ACD) and which methods it was compared to in the \"Comparison with SoTAs\" section.\n\nLooking at the provided sources:\n- [1] is from ACD.pdf but only contains a fragment about the depth refinement equation\n- [2] and [3] are about Marigold, not Always Clear Depth\n- [4] is from LED.pdf about log-depth loss\n\nNone of the provided sources contain information about what methods Always Clear Depth was compared to in a \"Comparison with SoTAs\" section. The ACD.pdf source only provides a small fragment about the refinement process, not the comparison section.\n\nI should indicate that the information is missing.\n</think>\n{\"answer\":\"资料中没有 Always Clear Depth 在 Comparison with SoTAs 章节中所比较方法的相关信息。\",\"items\":[],\"missing_information\":\"提供的资料中，ACD.pdf 仅包含深度细化公式的片段（公式 8），未包含 Comparison with SoTAs 部分的比较方法列表。\"}",
+  "usage": {
+    "prompt_tokens": 708,
+    "completion_tokens": 209,
+    "total_tokens": 917,
+    "model": "MiniMax-M3"
+  }
+}

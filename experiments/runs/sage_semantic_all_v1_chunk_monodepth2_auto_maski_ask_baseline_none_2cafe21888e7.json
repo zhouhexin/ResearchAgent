@@ -1,0 +1,494 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_monodepth2_auto_maski_ask_baseline_none_2cafe21888e7",
+  "dry_run": false,
+  "query": "Monodepth2的auto-masking用于忽略哪些训练像素？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_11",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.7686792612075806,
+      "text": "her, in Table 2(a), we replace our auto-masking loss\nwith a re-implementation of the predictive mask from [76].\nWe ﬁnd that this ablated model is worse than using no mask-\ning at all, while our auto-masking improves results in all\ncases. We see an example"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_11",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.7686792612075806,
+      "text": "her, in Table 2(a), we replace our auto-masking loss\nwith a re-implementation of the predictive mask from [76].\nWe ﬁnd that this ablated model is worse than using no mask-\ning at all, while our auto-masking improves results in all\ncases. We see an example"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.7505419254302979,
+      "text": "0.973\nMonodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0.117 0.878 4.846 0.196 0.870 0.957 0.980\nMonodepth2 w/o auto-masking ✓ ✓ R18 ✓ 0.120 1.097 5.074 0.197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMono"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.7505419254302979,
+      "text": "0.973\nMonodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0.117 0.878 4.846 0.196 0.870 0.957 0.980\nMonodepth2 w/o auto-masking ✓ ✓ R18 ✓ 0.120 1.097 5.074 0.197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMono"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.7492213845252991,
+      "text": "k ✓ ✓ R18 ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2(full) ✓ ✓ ✓ R18 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981\n(b) Baseline w/o pt R18 0.150 1.585 5.671 0.234 0.827 0.938 0.971\nMonodepth2 w/o pt or auto-masking ✓ ✓ R18 0.138 1.197 5.369 0.215"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.7492213845252991,
+      "text": "k ✓ ✓ R18 ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2(full) ✓ ✓ ✓ R18 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981\n(b) Baseline w/o pt R18 0.150 1.585 5.671 0.234 0.827 0.938 0.971\nMonodepth2 w/o pt or auto-masking ✓ ✓ R18 0.138 1.197 5.369 0.215"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_4",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.7491549253463745,
+      "text": "27 0.938 0.971\nMonodepth2 w/o pt or auto-masking ✓ ✓ R18 0.138 1.197 5.369 0.215 0.842 0.945 0.975\nMonodepth2 w/o pt or min reproj ✓ ✓ R18 0.133 1.021 5.219 0.214 0.841 0.945 0.976\nMonodepth2 w/o pt or full-res m.s. ✓ ✓ R18 0.131 1.030 5.206 0.210 0.846 0."
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_4",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.7491549253463745,
+      "text": "27 0.938 0.971\nMonodepth2 w/o pt or auto-masking ✓ ✓ R18 0.138 1.197 5.369 0.215 0.842 0.945 0.975\nMonodepth2 w/o pt or min reproj ✓ ✓ R18 0.133 1.021 5.219 0.214 0.841 0.945 0.976\nMonodepth2 w/o pt or full-res m.s. ✓ ✓ R18 0.131 1.030 5.206 0.210 0.846 0."
+    },
+    {
+      "id": "chunk::Lite-Mono_p2_chunk_21",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 2,
+      "score": 0.7481889724731445,
+      "text": "chieve\ncompetitive results by simply improving the loss functions.\nThey proposed Monodepth2, which used a minimum repro-\njection loss to mitigate occlusion problems, and an auto-\nmasking loss to ﬁlter out moving objects that have the same\nvelocity as the c"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p4_chunk_22",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 4,
+      "score": 0.7451611757278442,
+      "text": "be\nmoving during training [38] (Fig. 2). This motivates our\nsecond contribution: a simple auto-masking method that ﬁl-\nters out pixels which do not change appearance from one\nframe to the next in the sequence. This has the effect of\nletting the network ign"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p4_chunk_22",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7451611757278442,
+      "text": "be\nmoving during training [38] (Fig. 2). This motivates our\nsecond contribution: a simple auto-masking method that ﬁl-\nters out pixels which do not change appearance from one\nframe to the next in the sequence. This has the effect of\nletting the network ign"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.7371485233306885,
+      "text": ".197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMonodepth2 with [76]’s mask ✓ ✓ ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0.128 1.087 5.171 0.204 0.855 0.953 0.978\nM"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.7371485233306885,
+      "text": ".197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMonodepth2 with [76]’s mask ✓ ✓ ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0.128 1.087 5.171 0.204 0.855 0.953 0.978\nM"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p4_chunk_15",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 4,
+      "score": 0.7341691255569458,
+      "text": "s\nFigure 5. Auto-masking. We show auto-masks computed after\none epoch, where black pixels are removed from the loss (i.e.µ =\n0). The mask prevents objects moving at similar speeds to the\ncamera (top) and whole frames where the camera is static (bottom)\nfro"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p4_chunk_15",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7341691255569458,
+      "text": "s\nFigure 5. Auto-masking. We show auto-masks computed after\none epoch, where black pixels are removed from the loss (i.e.µ =\n0). The mask prevents objects moving at similar speeds to the\ncamera (top) and whole frames where the camera is static (bottom)\nfro"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.7284486293792725,
+      "text": "epth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMonodepth2 w/o SSIM ✓ ✓ ✓ R18 ✓ 0.118 0.853 4.824 0.198 0.868 0.956 0.980\nMonodepth2 with [76]’s mask ✓ ✓ R18 ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2(full) ✓ ✓ ✓ R18"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.7284486293792725,
+      "text": "epth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMonodepth2 w/o SSIM ✓ ✓ ✓ R18 ✓ 0.118 0.853 4.824 0.198 0.868 0.956 0.980\nMonodepth2 with [76]’s mask ✓ ✓ R18 ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2(full) ✓ ✓ ✓ R18"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.7233761548995972,
+      "text": "0.124 1.170 5.249 0.203 0.865 0.953 0.978\nMonodepth2 w/o min reprojection ✓ ✓ ✓ 0.117 0.878 4.846 0.196 0.870 0.957 0.980\nMonodepth2 w/o auto-masking ✓ ✓ ✓ 0.120 1.097 5.074 0.197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ ✓ 0.117 0.866 4.864 0.19"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.7233761548995972,
+      "text": "0.124 1.170 5.249 0.203 0.865 0.953 0.978\nMonodepth2 w/o min reprojection ✓ ✓ ✓ 0.117 0.878 4.846 0.196 0.870 0.957 0.980\nMonodepth2 w/o auto-masking ✓ ✓ ✓ 0.120 1.097 5.074 0.197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ ✓ 0.117 0.866 4.864 0.19"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.7223342061042786,
+      "text": "Auto-\nmasking\nMin.\nreproj.\nFull-res\nmulti-scale Encoder Pretrained Abs Rel Sq Rel RMSE RMSE\nlog δ <1.25 δ <1.252 δ <1.253\n(a) Baseline R18 ✓ 0.140 1.610 5.512 0.223 0.852 0.946 0.973\nMonodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0.117 0.878 4.846 0.196 0.870 0"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.7223342061042786,
+      "text": "Auto-\nmasking\nMin.\nreproj.\nFull-res\nmulti-scale Encoder Pretrained Abs Rel Sq Rel RMSE RMSE\nlog δ <1.25 δ <1.252 δ <1.253\n(a) Baseline R18 ✓ 0.140 1.610 5.512 0.223 0.852 0.946 0.973\nMonodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0.117 0.878 4.846 0.196 0.870 0"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p1_chunk_13",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 1,
+      "score": 0.7216704487800598,
+      "text": "upervised\nInput\n Monodepth2 (M)\nMonodepth2 (S)\n Monodepth2 (MS)\nZhou et al. [76] (M)\n Monodepth [15] (S)\nZhan et al. [73] (MS)\n DDVO [62] (M)\nRanjan et al. [51] (M)\n EPC++ [38] (MS)\nFigure 1. Depth from a single image. Our self-supervised model,\nMonodepth2"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p1_chunk_13",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 1,
+      "score": 0.7216703295707703,
+      "text": "upervised\nInput\n Monodepth2 (M)\nMonodepth2 (S)\n Monodepth2 (MS)\nZhou et al. [76] (M)\n Monodepth [15] (S)\nZhan et al. [73] (MS)\n DDVO [62] (M)\nRanjan et al. [51] (M)\n EPC++ [38] (MS)\nFigure 1. Depth from a single image. Our self-supervised model,\nMonodepth2"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p5_chunk_19",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.7211145162582397,
+      "text": "lar to [15], we employ two source frames in\nLph and the one with the minimum Lph is chosen to handle\nocclusion. Moreover, an auto-masking mechanism [15] is used\nto deal with dynamic objects.\nIV. E XPERIMENT\nWe conduct extensive experiments on two standard"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p1_chunk_21",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 1,
+      "score": 0.7147493958473206,
+      "text": "problem of occluded pixels that occur when us-\ning monocular supervision. (2) A novel and simple auto-\nmasking approach to ignore pixels where no relative camera\narXiv:1806.01260v4  [cs.CV]  17 Aug 2019"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p1_chunk_21",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 1,
+      "score": 0.7147493958473206,
+      "text": "problem of occluded pixels that occur when us-\ning monocular supervision. (2) A novel and simple auto-\nmasking approach to ignore pixels where no relative camera\narXiv:1806.01260v4  [cs.CV]  17 Aug 2019"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p5_chunk_27",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 5,
+      "score": 0.709840714931488,
+      "text": "averaging, (2)\nour auto-masking improves results, especially when train-\ning on scenes with static cameras, and (3) our multi-scale\nappearance matching loss improves accuracy. We evaluate\nour models, named Monodepth2, on the KITTI 2015 stereo\ndataset [13],"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p5_chunk_27",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.709840714931488,
+      "text": "averaging, (2)\nour auto-masking improves results, especially when train-\ning on scenes with static cameras, and (3) our multi-scale\nappearance matching loss improves accuracy. We evaluate\nour models, named Monodepth2, on the KITTI 2015 stereo\ndataset [13],"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p4_chunk_14",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 4,
+      "score": 0.7058819532394409,
+      "text": "[40, 61], but this does not handle disocclusion, where aver-\nage reprojection can result in blurred depth discontinuities.\nWe propose an improvement that deals with both issues\nFigure 5. Auto-masking. We show auto-masks computed after\none epoch, where bla"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p4_chunk_14",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7058819532394409,
+      "text": "[40, 61], but this does not handle disocclusion, where aver-\nage reprojection can result in blurred depth discontinuities.\nWe propose an improvement that deals with both issues\nFigure 5. Auto-masking. We show auto-masks computed after\none epoch, where bla"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_12",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.701353907585144,
+      "text": "at all, while our auto-masking improves results in all\ncases. We see an example of how auto-masking works in\npractice in Fig. 5.\nEffect of ImageNet pretraining We follow previous work\n[14, 30, 16] in initializing our encoders with weights pre-\ntrained on I"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_12",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.701353907585144,
+      "text": "at all, while our auto-masking improves results in all\ncases. We see an example of how auto-masking works in\npractice in Fig. 5.\nEffect of ImageNet pretraining We follow previous work\n[14, 30, 16] in initializing our encoders with weights pre-\ntrained on I"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p4_chunk_25",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 4,
+      "score": 0.6979637742042542,
+      "text": "ior work, our mask is binary, soµ∈{ 0, 1},\nand is computed automatically on the forward pass of the\nnetwork, instead of being learned or estimated from object\nmotion. We observe that pixels which remain the same be-\ntween adjacent frames in the sequence of"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p4_chunk_25",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.6979637742042542,
+      "text": "ior work, our mask is binary, soµ∈{ 0, 1},\nand is computed automatically on the forward pass of the\nnetwork, instead of being learned or estimated from object\nmotion. We observe that pixels which remain the same be-\ntween adjacent frames in the sequence of"
+    },
+    {
+      "id": "chunk::TDDC_p13_chunk_11",
+      "source": "data\\TDDC.pdf",
+      "page": 13,
+      "score": 0.6977190375328064,
+      "text": "cclusions within image sequences, we\nuse the popular minimum re-projection and Auto-mask strate-\ngies [Godard et al., 2019] in the per-pixel photometric loss:\nLss = min\n˜I\npe( ˜I, It), (18)\nwith ˜I ∈ {˜It+n, ˜It−n, It+n, It−n}.\nIn addition, to maintain the"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_chunk_4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.6969122886657715,
+      "text": "[18] Monodepth2 Resnet18 \u0013 MS 192×640 0.104 0.786 4.687 0.194 0.876 0.958 0.980\nWaveletMonodepthResnet18 \u0013 MS 192×640 0.109 0.814 4.808 0.198 0.868 0.955 0.980\n[63] Depth Hints \u0013 MS +SSGM 192×640 0.105 0.769 4.627 0.189 0.875 0.959 0.982\nWaveletMonodepthRe"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p2_chunk_13",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 2,
+      "score": 0.6950565576553345,
+      "text": "hich are then utilized to perform view synthesis\nduring training. To handle edge cases such as dynamic objects\nand occlusion, they proposed an explainability mask to remove\nthese regions. Godard et al. [15] further introduced an auto-\nmasking technique and"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_27",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6912384629249573,
+      "text": ", we utilize MSA for \nself-interaction within 𝑄𝑖𝑛, and then update 𝑄𝑖𝑛 through an FFN with \nresidual connections. Finally, 𝑄𝑜𝑢𝑡 outputted after going through the \ncomplete masked transformer layer is deﬁned as:\n𝑄𝑜𝑢𝑡 = 𝐹 𝐹 𝑁(𝑀𝑆𝐴 (𝑀𝑀𝐴 (𝑄𝑖𝑛, 𝐹𝑙))). (3)\nSegmen"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.6911680698394775,
+      "text": "Auto-\nmasking\nMin.\nreproj.\nFull-res\nmulti-scale Pretrained Full Eigen\nsplit Abs Rel Sq Rel RMSE RMSE\nlog δ <1.25 δ <1.252 δ <1.253\n(a) Baseline ✓ 0.140 1.610 5.512 0.223 0.852 0.946 0.973\nBaseline + min reproj. ✓ ✓ 0.122 1.081 5.116 0.199 0.866 0.957 0.980"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.6911680698394775,
+      "text": "Auto-\nmasking\nMin.\nreproj.\nFull-res\nmulti-scale Pretrained Full Eigen\nsplit Abs Rel Sq Rel RMSE RMSE\nlog δ <1.25 δ <1.252 δ <1.253\n(a) Baseline ✓ 0.140 1.610 5.512 0.223 0.852 0.946 0.973\nBaseline + min reproj. ✓ ✓ 0.122 1.081 5.116 0.199 0.866 0.957 0.980"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p4_chunk_9",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 4,
+      "score": 0.6911221146583557,
+      "text": "ism to further\nenhance the denoising ability of MonoDiffusion. For multi-\nscale feature tokens propagated by the encoder, we generate\nrandom masks to remove part of the tokens from these feature\ntokens. To prevent the information leakage, these masks are\ns"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p5_chunk_3",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 5,
+      "score": 0.6893397569656372,
+      "text": "]);\n}\nreturn H;\nprocedure DensePredict(F)\nInput : Feature map F\nInitializeM with ones;\nreturn SparsePredict(F , M);\nprocedure GetSparseMask(H,η)\nInput : High frequency coefﬁcient mapsH\nM = max(|LH|,|HL|,|HH|)>η ;\nM = upsample×2(M ) ;\nreturnM;\ncomputation i"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.6872526407241821,
+      "text": "ber of training pa-\nrameters, we have since found that we can gain even higher\nresults with a separate ResNet pose encoder which accepts\na stack of two frames as input (see ablation study in Sec-\ntion H). Since v1, we have also introduced auto-masking\nto h"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6872526407241821,
+      "text": "ber of training pa-\nrameters, we have since found that we can gain even higher\nresults with a separate ResNet pose encoder which accepts\na stack of two frames as input (see ablation study in Sec-\ntion H). Since v1, we have also introduced auto-masking\nto h"
+    },
+    {
+      "id": "chunk::TDDC_p10_chunk_2",
+      "source": "data\\TDDC.pdf",
+      "page": 10,
+      "score": 0.6859399080276489,
+      "text": "eling for ex-\ntreme low-light photography. IEEE Transactions on Pat-\ntern Analysis and Machine Intelligence , 2021.\n[Xue et al., 2020] Feng Xue, Guirong Zhuo, Ziyuan Huang,\nWufei Fu, Zhuoyue Wu, and Marcelo H Ang. Toward hier-\narchical self-supervised mono"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_25",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6858171224594116,
+      "text": "𝑠(𝑥, 𝑦) = 0 , (2)\nwhere 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻\n4 × 𝑊\n4  is the binarized attention mask predicted by \nthe SMG module. In the masked attention mechanism, regions with a \nmask value of 0 are excluded from the computations, thereby conﬁning \nthe focus to the features"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p5_chunk_0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 5,
+      "score": 0.6855193972587585,
+      "text": "µ prevents the pixels which remain stationary in the image\nfrom contaminating the loss. Similarly, when the camera is\nstatic, the mask can ﬁlter out all pixels in the image (Fig. 5).\nWe show experimentally that this simple and inexpensive\nmodiﬁcation to th"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p5_chunk_0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6855193972587585,
+      "text": "µ prevents the pixels which remain stationary in the image\nfrom contaminating the loss. Similarly, when the camera is\nstatic, the mask can ﬁlter out all pixels in the image (Fig. 5).\nWe show experimentally that this simple and inexpensive\nmodiﬁcation to th"
+    },
+    {
+      "id": "chunk::SSRDepth_p3_chunk_24",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6827095746994019,
+      "text": "respectively, with the linear projections \ndenoted as Proj in the ﬁgure. The attention mask 𝑙 at feature location \n(𝑥, 𝑦) is deﬁned as:\n𝑙(𝑥, 𝑦) =\n{0, if 𝑀𝑠(𝑥, 𝑦) = 1\n−∞, if 𝑀𝑠(𝑥, 𝑦) = 0 , (2)\nwhere 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻\n4 × 𝑊\n4  is the binarized attention mask"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.6820837259292603,
+      "text": "0.946 0.973\nBaseline + min reproj. ✓ ✓ 0.122 1.081 5.116 0.199 0.866 0.957 0.980\nBaseline + automasking ✓ 0.124 0.936 5.010 0.206 0.858 0.952 0.977\nBaseline + full-res m.s. ✓ ✓ 0.124 1.170 5.249 0.203 0.865 0.953 0.978\nMonodepth2 w/o min reprojection ✓ ✓ ✓"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_11",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.7686792612075806,
+      "text": "her, in Table 2(a), we replace our auto-masking loss\nwith a re-implementation of the predictive mask from [76].\nWe ﬁnd that this ablated model is worse than using no mask-\ning at all, while our auto-masking improves results in all\ncases. We see an example",
+      "estimated_tokens": 65
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_11",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.7686792612075806,
+      "text": "her, in Table 2(a), we replace our auto-masking loss\nwith a re-implementation of the predictive mask from [76].\nWe ﬁnd that this ablated model is worse than using no mask-\ning at all, while our auto-masking improves results in all\ncases. We see an example",
+      "estimated_tokens": 65
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.7505419254302979,
+      "text": "0.973\nMonodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0.117 0.878 4.846 0.196 0.870 0.957 0.980\nMonodepth2 w/o auto-masking ✓ ✓ R18 ✓ 0.120 1.097 5.074 0.197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMono",
+      "estimated_tokens": 136
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.7505419254302979,
+      "text": "0.973\nMonodepth2 w/o min reprojection ✓ ✓ R18 ✓ 0.117 0.878 4.846 0.196 0.870 0.957 0.980\nMonodepth2 w/o auto-masking ✓ ✓ R18 ✓ 0.120 1.097 5.074 0.197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ R18 ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMono",
+      "estimated_tokens": 136
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.7492213845252991,
+      "text": "k ✓ ✓ R18 ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2(full) ✓ ✓ ✓ R18 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981\n(b) Baseline w/o pt R18 0.150 1.585 5.671 0.234 0.827 0.938 0.971\nMonodepth2 w/o pt or auto-masking ✓ ✓ R18 0.138 1.197 5.369 0.215",
+      "estimated_tokens": 145
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.7492213845252991,
+      "text": "k ✓ ✓ R18 ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2(full) ✓ ✓ ✓ R18 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981\n(b) Baseline w/o pt R18 0.150 1.585 5.671 0.234 0.827 0.938 0.971\nMonodepth2 w/o pt or auto-masking ✓ ✓ R18 0.138 1.197 5.369 0.215",
+      "estimated_tokens": 145
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_4",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.7491549253463745,
+      "text": "27 0.938 0.971\nMonodepth2 w/o pt or auto-masking ✓ ✓ R18 0.138 1.197 5.369 0.215 0.842 0.945 0.975\nMonodepth2 w/o pt or min reproj ✓ ✓ R18 0.133 1.021 5.219 0.214 0.841 0.945 0.976\nMonodepth2 w/o pt or full-res m.s. ✓ ✓ R18 0.131 1.030 5.206 0.210 0.846 0.",
+      "estimated_tokens": 138
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_4",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.7491549253463745,
+      "text": "27 0.938 0.971\nMonodepth2 w/o pt or auto-masking ✓ ✓ R18 0.138 1.197 5.369 0.215 0.842 0.945 0.975\nMonodepth2 w/o pt or min reproj ✓ ✓ R18 0.133 1.021 5.219 0.214 0.841 0.945 0.976\nMonodepth2 w/o pt or full-res m.s. ✓ ✓ R18 0.131 1.030 5.206 0.210 0.846 0.",
+      "estimated_tokens": 138
+    },
+    {
+      "id": "chunk::Lite-Mono_p2_chunk_21",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 2,
+      "score": 0.7481889724731445,
+      "text": "chieve\ncompetitive results by simply improving the loss functions.\nThey proposed Monodepth2, which used a minimum repro-\njection loss to mitigate occlusion problems, and an auto-\nmasking loss to ﬁlter out moving objects that have the same\nvelocity as the c",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p4_chunk_22",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 4,
+      "score": 0.7451611757278442,
+      "text": "be\nmoving during training [38] (Fig. 2). This motivates our\nsecond contribution: a simple auto-masking method that ﬁl-\nters out pixels which do not change appearance from one\nframe to the next in the sequence. This has the effect of\nletting the network ign",
+      "estimated_tokens": 63
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p4_chunk_22",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7451611757278442,
+      "text": "be\nmoving during training [38] (Fig. 2). This motivates our\nsecond contribution: a simple auto-masking method that ﬁl-\nters out pixels which do not change appearance from one\nframe to the next in the sequence. This has the effect of\nletting the network ign",
+      "estimated_tokens": 63
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.7371485233306885,
+      "text": ".197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMonodepth2 with [76]’s mask ✓ ✓ ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0.128 1.087 5.171 0.204 0.855 0.953 0.978\nM",
+      "estimated_tokens": 145
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.7371485233306885,
+      "text": ".197 0.872 0.956 0.979\nMonodepth2 w/o full-res m.s. ✓ ✓ ✓ 0.117 0.866 4.864 0.196 0.871 0.957 0.981\nMonodepth2 with [76]’s mask ✓ ✓ ✓ 0.123 1.177 5.210 0.200 0.869 0.955 0.978\nMonodepth2 smaller (416×128) ✓ ✓ ✓ ✓ 0.128 1.087 5.171 0.204 0.855 0.953 0.978\nM",
+      "estimated_tokens": 145
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p1_chunk_21",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 1,
+      "score": 0.7147493958473206,
+      "text": "problem of occluded pixels that occur when us-\ning monocular supervision. (2) A novel and simple auto-\nmasking approach to ignore pixels where no relative camera\narXiv:1806.01260v4  [cs.CV]  17 Aug 2019",
+      "estimated_tokens": 58
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1499,
+    "compressed_context_tokens": 1499,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1499,
+  "context_tokens": 1499,
+  "prompt_token_estimate": 2055,
+  "run_label": "sage_semantic_all_v1_chunk_monodepth2_auto_masking_function",
+  "answer": "<think>The question asks about what training pixels Monodepth2's auto-masking is used to ignore.\n\nLooking at the sources:\n- Source [10] and [11]: \"a simple auto-masking method that filters out pixels which do not change appearance from one frame to the next in the sequence. This has the effect of letting the network ign...\"\n- Source [14]: \"A novel and simple auto-masking approach to ignore pixels where no relative camera...\"\n\nSo the auto-masking ignores pixels that don't change appearance between consecutive frames (which typically indicates the camera is stationary relative to the object, i.e., static objects or pixels where there's no relative motion between camera and scene).</think>\n\n{\n  \"answer\": \"Monodepth2 的 auto-masking 用于忽略在相邻两帧之间外观不发生变化（即相机与场景无相对运动）的像素。\",\n  \"items\": [\n    {\n      \"name\": \"忽略外观不变像素\",\n      \"description\": \"auto-masking 会过滤掉在序列中相邻两帧之间外观不发生变化的像素，从而让网络忽略静止物体或相机相对静止的区域。\",\n      \"citations\": [10, 11, 14]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 2130,
+    "completion_tokens": 253,
+    "total_tokens": 2383,
+    "model": "MiniMax-M3"
+  }
+}

@@ -124,9 +124,7 @@ python experiments\run_densex_parent_sweep.py `
 评估：
 
 ```powershell
-python experiments\evaluate_densex_runs.py `
-  --run-label-prefix qa_parent_v1 `
-  --output experiments\qa_parent_v1_densex_results.csv
+python experiments\evaluate_densex_runs.py  --run-label-prefix qa_chunkaware_dedup_v1   --output experiments\qa_chunkaware_dedup_v1_results.csv
 ```
 
 ## 6. 运行 Chunk-Aware Dedup 实验
@@ -137,15 +135,7 @@ python experiments\evaluate_densex_runs.py `
 推荐先跑 300：
 
 ```powershell
-python experiments\run_densex_parent_sweep.py `
-  --question-set fixed `
-  --fine-granularities sentence,proposition `
-  --budgets 500,1000,1500 `
-  --fine-top-m 300 `
-  --parent-top-k 50 `
-  --fine-hit-dedup exact-per-parent `
-  --strategy baseline `
-  --run-label-prefix qa_chunkaware_dedup_v1
+python experiments\run_densex_parent_sweep.py --question-set fixed --fine-granularities sentence,proposition --budgets 500,1000,1500  --fine-top-m 500 --parent-top-k 50  --fine-hit-dedup exact-per-parent --strategy baseline   --run-label-prefix qa_chunkaware_dedup_m500_v1
 ```
 
 如果 300 有提升，再跑 500：
@@ -173,17 +163,13 @@ experiments\runs\
 评估 top-M=300：
 
 ```powershell
-python experiments\evaluate_densex_runs.py `
-  --run-label-prefix qa_chunkaware_dedup_v1 `
-  --output experiments\qa_chunkaware_dedup_v1_densex_results.csv
+python experiments\evaluate_densex_runs.py --run-label-prefix qa_chunkaware_dedup_v1 --output experiments\qa_chunkaware_dedup_v1_densex_results.csv
 ```
 
 评估 top-M=500：
 
 ```powershell
-python experiments\evaluate_densex_runs.py `
-  --run-label-prefix qa_chunkaware_dedup_m500_v1 `
-  --output experiments\qa_chunkaware_dedup_m500_v1_densex_results.csv
+python experiments\evaluate_densex_runs.py --run-label-prefix qa_chunkaware_dedup_m500_v1 --output experiments\qa_chunkaware_dedup_m500_v1_densex_results.csv
 ```
 
 生成 summary。把 `$inputPath` 和 `$outputPath` 改成你要汇总的结果文件：

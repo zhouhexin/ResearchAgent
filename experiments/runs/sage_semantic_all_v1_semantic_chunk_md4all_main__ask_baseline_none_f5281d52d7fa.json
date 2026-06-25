@@ -1,0 +1,430 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_md4all_main__ask_baseline_none_f5281d52d7fa",
+  "dry_run": false,
+  "query": "Robust Monocular Depth Estimation under Challenging Conditions 论文的主要贡献有哪些？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.8126946687698364,
+      "text": "DepthDark: Robust Monocular Depth Estimation for Low-Light Environments Longjian Zeng 245060073@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Zunjie Zhu∗ zunjiezhu@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Rongfeng Lu rongfeng-lu@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Ming Lu lu199192@gmail.com Intel Labs China Beijing, China Bolun Zheng blzheng@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Chenggang Yan cgyan@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Anke Xue akxue@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Abstract In recent years, foundation models for monocular depth estimation have received increasing attention. Current methods mainly address typical daylight conditions, but their effectiveness notably decreases in low-light environments. There is a lack of robust foundational models for monocular depth estimation specifically designed for low-light scenarios. This largely stems from the absence of large- scale, high-quality paired depth datasets for low-light conditions and the effective parameter-efficient fine-tuning (PEFT) strategy."
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc2",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.8118897676467896,
+      "text": "Accurate depth estimation is a crucial aspect © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.8105875849723816,
+      "text": "Robust Monocular Depth Estimation under Challenging Conditions Stefano Gasperini∗,1,2 Nils Morbitzer∗,1 HyunJun Jung1 Nassir Navab1 Federico Tombari1,3 1 Technical University of Munich 2 VisualAIs 3 Google Abstract While state-of-the-art monocular depth estimation ap- proaches achieve impressive results in ideal settings, they are highly unreliable under challenging illumination and weather conditions, such as at nighttime or in the presence of rain. In this paper, we uncover these safety-critical is- sues and tackle them with md4all: a simple and effective solution that works reliably under both adverse and ideal conditions, as well as for different types of learning super- vision. We achieve this by exploiting the efficacy of existing methods under perfect settings. Therefore, we provide valid training signals independently of what is in the input. First, we generate a set of complex samples corresponding to the normal training ones. Then, we train the model by guiding its self- or full-supervision by feeding the generated sam- ples and computing the standard losses on the correspond- ing original images."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.8099524974822998,
+      "text": "To address these challenges, we propose DepthDark, a robust foun- dation model for low-light monocular depth estimation. We first introduce a flare-simulation module and a noise-simulation mod- ule to accurately simulate the imaging process under nighttime conditions, producing high-quality paired depth datasets for low- light conditions. Additionally, we present an effective low-light PEFT strategy that utilizes illumination guidance and multiscale feature fusion to enhance the model’s capability in low-light envi- ronments. Our method achieves state-of-the-art depth estimation performance on the challenging nuScenes-Night and RobotCar- Night datasets, validating its effectiveness using limited training data and computing resources. CCS Concepts • Computing methodologies→ Computer vision; Image pro- cessing; Virtual reality. ∗Corresponding Author. Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.8057062029838562,
+      "text": "This revolution has also significantly boosted the development of monocular depth estimation, which predicts depth information from a single image, enabling applications in areas such as autonomous driving, augmented reality, and robotics. However, most existing methods perform well under sufficient illumination but degrade in low-light conditions because of substantial informa- tion loss and significant noise amplification. Although low-light monocular depth estimation is a highly chal- lenging task, it plays a pivotal role in various nighttime applications. However, most existing studies on low-light monocular depth esti- mation, such as RNW [36], ADDS [24], MonoVit [51], MonoFormer [1], and TDDC [40], focus primarily on nighttime autonomous driv- ing, which limits their applicability to other applications. Conse- quently, developing a foundation model capable of estimating depth information from a single nighttime image has become a critical goal in low-light monocular depth estimation."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.8043919801712036,
+      "text": "Copyrights for third-party components of this work must be honored. For all other uses, contact the owner/author(s). MM ’25, Dublin, Ireland. © 2025 Copyright held by the owner/author(s). ACM ISBN 979-8-4007-2035-2/2025/10 https://doi.org/10. 1145/3746027. 3754871 Keywords Low-Light Monocular Depth Estimation, Parameter-Efficient Fine- Tuning, Foundation Model ACM Reference Format: Longjian Zeng, Zunjie Zhu, Rongfeng Lu, Ming Lu, Bolun Zheng, Cheng- gang Yan, and Anke Xue. 2025. DepthDark: Robust Monocular Depth Esti- mation for Low-Light Environments. In Proceedings of the 33rd ACM Inter- national Conference on Multimedia (MM ’25), October 27–31, 2025, Dublin, Ireland. ACM, New York, NY, USA, 10 pages. https://doi.org/10. 1145/3746027. 3754871 1 Introduction In recent years, with the rapid advancement of convolutional neural networks [14] and vision transformers [9], the fields of computer vision and natural language processing are undergoing a signifi- cant revolution."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_sc2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.7943953275680542,
+      "text": "Our core idea is based on training the model by providing always valid training signals as if it was sunny or cloudy, even when samples with adverse conditions are given. We apply this general principle to both supervised and self- supervised depth estimation via a set of techniques to im- prove the model robustness and reduce the performance gap between standard and hard conditions. The main contribu- tions of this paper can be summarized as follows: • We show how estimating depth in adverse conditions (e.g., night and rain) is problematic for both self- and fully-supervised approaches, requiring new solutions. • We propose md4all: a simple and effective technique to make standard models robust in diverse conditions. no texture erroneous measurements noise reflections fully-supervised self-supervised → reflections blur light flares night rain ground-truth night Figure 2. Detrimental factors to monocular depth estimation in dif- ficult settings from nuScenes [3]. Self-supervised works have is- sues with textureless areas, reflections, and noise. Supervised ones learn artifacts from the ground truth sensor (LiDAR is shown)."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.791248083114624,
+      "text": "For our monocular models, we re- port results using the per-image median ground truth scaling introduced by [76]. See also supplementary material Sec- tion D. 2 for results where we apply a single median scaling to the whole test set, instead of scaling each image indepen- dently. For results that use any stereo supervision we do not perform median scaling as scale can be inferred from the known camera baseline during training. We compare the results of several variants of our model, trained with different types of self-supervision: monocular video only (M), stereo only (S), and both (MS). The results in Table 1 show that our monocular method outperforms all existing state-of-the-art self-supervised approaches. We also outperform recent methods ([38, 51]) that explicitly compute optical ﬂow as well as motion masks. Qualitative results can be seen in Fig. 7 and supplementary Section E. However, as with all image reconstruction based approaches to depth estimation, our model breaks when the scene con- tains objects that violate the Lambertian assumptions of our appearance loss (Fig. 8)."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.791248083114624,
+      "text": "For our monocular models, we re- port results using the per-image median ground truth scaling introduced by [76]. See also supplementary material Sec- tion D. 2 for results where we apply a single median scaling to the whole test set, instead of scaling each image indepen- dently. For results that use any stereo supervision we do not perform median scaling as scale can be inferred from the known camera baseline during training. We compare the results of several variants of our model, trained with different types of self-supervision: monocular video only (M), stereo only (S), and both (MS). The results in Table 1 show that our monocular method outperforms all existing state-of-the-art self-supervised approaches. We also outperform recent methods ([38, 51]) that explicitly compute optical ﬂow as well as motion masks. Qualitative results can be seen in Fig. 7 and supplementary Section E. However, as with all image reconstruction based approaches to depth estimation, our model breaks when the scene con- tains objects that violate the Lambertian assumptions of our appearance loss (Fig. 8)."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.789308488368988,
+      "text": "To comprehensively evaluate the effectiveness and efficiency of our training framework and ensure a fair comparison with domain adaptation methods, we provide quantitative results of various monocular depth estimation methods on the RobotCar-Day and nuScenes-Day datasets, along with their generalized versions in the supplementary material. 4. 3. 2 Qualitative results. To further validate the effectiveness of DepthDark, Figs. 4. 1 and 4. 2 presents qualitative results on the nuScenes-Night and RobotCar-Night low-light datasets, comparing our method with other monocular depth estimation approaches. As shown in the first row of Figs. 4. 1 and 4. 2, low-light conditions exhibit significant image quality variations due to uneven illumina- tion and noise artifacts. These lead to bright spots and noise patches, severely impairing object contours and overall image fidelity, thus posing challenges for monocular depth estimation. However, such phenomena are common in real-world nighttime environments and are critical for practical applications. Therefore, we selected diverse low-light scenarios for thorough testing and analysis."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p2_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 2,
+      "score": 0.7869827747344971,
+      "text": "We show that our approach allows us to effectively trade off depth accu- racy against runtime computation. 2. Related work We ﬁrst give an overview of monocular depth estimation, before looking at works which have made depth estimation more efﬁcient. We then discuss related works which have used wavelets for computer vision tasks, before ﬁnally look- ing at other forms of efﬁcient neural networks. 2. 1. Monocular Depth Estimation Beyond early shape-from-shading methods, most works that estimate depth from a single image have been learning- based. Early works used a Markov random ﬁeld [57], but more recent works have used deep neural networks. Super- vised approaches use image-to-image networks to regress depth maps e.g. [12, 11, 38, 13]; however these require ground truth depth data at training time. Self-supervision reduces the requirement of supervised data by using stereo frames [14, 16] or nearby video frames [73] as supervision, exploiting 3D geometry with image reconstruction losses to learn a depth estimator. Focus in this area is typically around improving the depth accuracy scores, e.g."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p7_sc0",
+      "source": "data\\Global-Local.pdf",
+      "page": 7,
+      "score": 0.7820234298706055,
+      "text": "5 Conclusion This paper proposes a new architecture for monocular depth estimation to deliver meaningful global and local features and generate a precisely estimated depth map. We further exploit the depth-speciﬁc data augmentation technique to improve the performance of the model by considering the knowledge that the use of vertical position is a crucial property of depth estimation. The proposed method shows improvement over state-of-the-art performance for the NYU Depth V2 dataset. Moreover, extensive experimental results demonstrate the ef- fectiveness and generalization ability of our network. References [Bhat et al., 2021] Shariq Farooq Bhat, Ibraheem Alhashim, and Peter Wonka. Adabins: Depth estimation using adap- tive bins. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 4009– 4018, 2021. [Chen et al., 2019] Xiaotian Chen, Xuejin Chen, and Zheng- Jun Zha. Structure-aware residual pyramid net- work for monocular depth estimation. arXiv preprint arXiv:1907. 06023, 2019. [Dijk and Croon, 2019] Tom van Dijk and Guido de Croon. How do neural networks see depth in single images?"
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p10_sc2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 10,
+      "score": 0.7800840139389038,
+      "text": "DeFeat-Net: General monocular depth via simultaneous unsupervised representation learning. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14402–14413, 2020. 2, 3, 6, 7 [34] Fabio Tosi, Filippo Aleotti, Matteo Poggi, and Stefano Mat- toccia. Learning monocular depth estimation infusing tradi- tional stereo knowledge. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9799–9809, 2019. 1, 2 [35] Shimon Ullman. The interpretation of structure from mo- tion. Proceedings of the Royal Society of London. Series B. Biological Sciences, 203(1153):405–426, 1979. 3 [36] Madhu Vankadari, Sourav Garg, Anima Majumder, Swa- gat Kumar, and Ardhendu Behera. Unsupervised monocu- lar depth estimation for night-time images using adversarial domain feature adaptation. In Proceedings of the European Conference on Computer Vision , pages 443–459. Springer, 2020. 2, 3 [37] Madhu Vankadari, Stuart Golodetz, Sourav Garg, Sangyun Shin, Andrew Markham, and Niki Trigoni. When the Sun Goes Down: Repairing photometric losses for all-day depth estimation. In Proceedings of the Conference on Robot Learning, pages 1992–2003."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p2_sc1",
+      "source": "data\\Global-Local.pdf",
+      "page": 2,
+      "score": 0.7794697880744934,
+      "text": "In addition, we observe that our net- work can generalize well under cross-dataset validation and shows robust performance against image corruption. To summarize, our contributions are as follows: • We propose a novel global-local path architecture for monocular depth estimation. • We suggest an improved depth-speciﬁc data augmenta- tion method to boost the performance of the model. • Our network achieves state-of-the-art performance on the most popular dataset NYU Depth V2 and shows higher generalization ability and robustness than previ- ously developed networks. 2 Related Work Monocular depth estimation is a computer vision task that predicts corresponding depth maps with given input images. Learning-based monocular depth estimation has been stud- ied following the seminal work of [Saxena et al. , 2008 ] which used monocular cues to predict depth based on a Markov random ﬁeld. Later, with the development of CNNs, depth estimation networks have utilized the encoded fea- tures of deep CNNs that generalize well to various tasks and achieve drastic performance improvement[Eigen et al., 2014; Huynh et al., 2020; Yin et al., 2019]."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_sc2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.7794453501701355,
+      "text": "Predictions in challenging settings [3] for self-supervised [11] and supervised [1] methods. Standard approaches fail due to training assumptions or sensor artifacts. Under both supervisions, our md4all makes the same models robust in all conditions. to learn depth estimation in a self-supervised manner [11, 25, 34, 7, 10]. Monocular training solutions are the most inexpensive and rely on the smallest amount of assumptions on the sensor setup, as they require only image sequences captured by a single camera. Self-supervised methods rely on photometric assump- tions and pixel correspondences [11, 34]. State-of-the-art approaches [11, 41, 32] deliver sharp and accurate esti- mates in standard conditions (i.e., sunny and cloudy), but suffer from a variety of inherent issues, such as scale am- biguity and difficulties with dynamic objects. While prior works have already proposed robust methods to address these problems [12, 8], there is still a major issue preventing the wide applicability of self-supervised depth estimators in safety-critical settings, such as autonomous driving."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p10_sc7",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.7787207365036011,
+      "text": "Monovit: Self-supervised monocular depth estimation with a vision transformer. In International Conference on 3D Vision , pages 668–678. IEEE, 2022. [56] Jia Deng, Wei Dong, Richard Socher, Li-Jia Li, Kai Li, and Li Fei- Fei. Imagenet: A large-scale hierarchical image database. In 2009 IEEE conference on computer vision and pattern recognition , pages 248–255. Ieee, 2009. [57] Ilya Loshchilov and Frank Hutter. Decoupled weight decay regulariza- tion. International Conference on Learning Representations , 2018. [58] Ilya Loshchilov and Frank Hutter. Sgdr: Stochastic gradient descent with warm restarts. International Conference on Learning Representations , 2017. [59] Cl ´ement Godard, Oisin Mac Aodha, and Gabriel J Brostow. Unsu- pervised monocular depth estimation with left-right consistency. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 270–279, 2017."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p6_sc3",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 6,
+      "score": 0.7784883975982666,
+      "text": "Next, we apply two widely recognized met- rics [35, 36, 57, 58] for assessing quality of depth estimation. The first is Absolute Mean Relative Error (AbsRel), calcu- lated as: 1 M PM i=1 |ai − di|/di, where M is the total num- ber of pixels. The second metric, δ1 accuracy, measures the proportion of pixels satisfying max(ai/di, di/ai) < 1. 25. Comparison with other methods. We compare Marigold to six baselines, each claiming zero-shot generalization. Di- verseDepth [56], LeReS [57] and HDN [60] estimate affine- invariant depth maps, while MiDaS [35], DPT [36], and Om- nidata [13] produce affine-invariant disparities. As shown in Tab. 1, Marigold outperforms prior art in most cases and secures the highest overall ranking. Despite being trained solely on synthetic depth datasets, the model can well gen- eralize to a wide range of real scenes. This successful adap- tation of diffusion-based image generation models toward depth estimation confirms our initial hypothesis that a com- prehensive representation of the visual world is the corner- stone of monocular depth estimation."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p6_sc3",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.7784883975982666,
+      "text": "Next, we apply two widely recognized met- rics [35, 36, 57, 58] for assessing quality of depth estimation. The first is Absolute Mean Relative Error (AbsRel), calcu- lated as: 1 M PM i=1 |ai − di|/di, where M is the total num- ber of pixels. The second metric, δ1 accuracy, measures the proportion of pixels satisfying max(ai/di, di/ai) < 1. 25. Comparison with other methods. We compare Marigold to six baselines, each claiming zero-shot generalization. Di- verseDepth [56], LeReS [57] and HDN [60] estimate affine- invariant depth maps, while MiDaS [35], DPT [36], and Om- nidata [13] produce affine-invariant disparities. As shown in Tab. 1, Marigold outperforms prior art in most cases and secures the highest overall ranking. Despite being trained solely on synthetic depth datasets, the model can well gen- eralize to a wide range of real scenes. This successful adap- tation of diffusion-based image generation models toward depth estimation confirms our initial hypothesis that a com- prehensive representation of the visual world is the corner- stone of monocular depth estimation."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p1_sc3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 1,
+      "score": 0.7775182723999023,
+      "text": "Conversely, using stereo data for training makes the camera-pose estimation a one-time ofﬂine calibration, but can cause issues related to occlusion and texture-copy artifacts [15]. We propose three architectural and loss innovations that combined, lead to large improvements in monocular depth estimation when training with monocular video, stereo pairs, or both: (1) A novel appearance matching loss to ad- dress the problem of occluded pixels that occur when us- ing monocular supervision. (2) A novel and simple auto- masking approach to ignore pixels where no relative camera arXiv:1806. 01260v4 [cs. CV] 17 Aug 2019"
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p1_sc3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 1,
+      "score": 0.7775182723999023,
+      "text": "Conversely, using stereo data for training makes the camera-pose estimation a one-time ofﬂine calibration, but can cause issues related to occlusion and texture-copy artifacts [15]. We propose three architectural and loss innovations that combined, lead to large improvements in monocular depth estimation when training with monocular video, stereo pairs, or both: (1) A novel appearance matching loss to ad- dress the problem of occluded pixels that occur when us- ing monocular supervision. (2) A novel and simple auto- masking approach to ignore pixels where no relative camera arXiv:1806. 01260v4 [cs. CV] 17 Aug 2019"
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p9_sc4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 9,
+      "score": 0.7768080830574036,
+      "text": "3 [19] HyunJun Jung, Patrick Ruhkamp, Guangyao Zhai, Nikolas Brasch, Yitong Li, Yannick Verdie, Jifei Song, Yiren Zhou, Anil Armagan, Slobodan Ilic, Aleˇs Leonardis, Nassir Navab, and Benjamin Busam. On the importance of accurate ge- ometry data for dense 3D vision tasks. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 780–791, 2023. 1, 2, 3, 5 [20] Iro Laina, Christian Rupprecht, Vasileios Belagiannis, Fed- erico Tombari, and Nassir Navab. Deeper depth prediction with fully convolutional residual networks. In Proceedings of the International Conference on 3D Vision (3DV) , pages 239–248. IEEE, 2016. 2 [21] Jin Han Lee, Myung-Kyu Han, Dong Wook Ko, and Il Hong Suh. From big to small: Multi-scale local planar guidance for monocular depth estimation. arXiv preprint arXiv:1907. 10326, 2019. 2 [22] Lina Liu, Xibin Song, Mengmeng Wang, Yong Liu, and Liangjun Zhang. Self-supervised monocular depth estima- tion for all day images using domain separation. In Proceed- ings of the IEEE/CVF International Conference on Com- puter Vision, pages 12737–12746, 2021. 2, 3, 4, 6, 7 [23] Will Maddern, Geoffrey Pascoe, Chris Linegar, and Paul Newman."
+    },
+    {
+      "id": "semantic_chunk::ACD_p9_sc2",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.7766774296760559,
+      "text": "[Wang et al., 2024b ] Jiyuan Wang, Chunyu Lin, Lang Nie, Kang Liao, Shuwei Shao, and Y ao Zhao. Digging into contrastive learning for robust depth estimation with dif- fusion models. In ACM MM, pages 4129–4137, 2024. [Xian et al., 2020 ] Ke Xian, Jianming Zhang, Oliver Wang, Long Mai, Zhe Lin, and Zhiguo Cao. Structure-guided ranking loss for single image depth prediction. In CVPR, pages 611–620, 2020. [Xue et al., 2020 ] Feng Xue, Guirong Zhuo, Ziyuan Huang, Wufei Fu, Zhuoyue Wu, and Marcelo H Ang. Toward hier- archical self-supervised monocular absolute depth estima- tion for autonomous driving applications. In IROS, pages 2330–2337, 2020. [Y anget al., 2024a ] Haolin Y ang, Chaoqiang Zhao, Lu Sheng, and Y ang Tang. Self-supervised monocu- lar depth estimation in the dark: Towards data distribution compensation. In IJCAI, pages 1561–1569, 2024. [Y anget al., 2024b] Lihe Y ang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. Depth anything v2. In NeurIPS, 2024. [Yin et al., 2022 ] Wei Yin, Jianming Zhang, Oliver Wang, Simon Niklaus, Simon Chen, Yifan Liu, and Chunhua Shen."
+    },
+    {
+      "id": "semantic_chunk::LED_p11_sc2",
+      "source": "data\\LED.pdf",
+      "page": 11,
+      "score": 0.7761034965515137,
+      "text": "HyperDepth: Learning Depth from Structured Light without Matching. InCVPR, 2016. [16] Stefano Gasperini, Nils Morbitzer, HyunJun Jung, Nassir Navab, and Federico Tombari. Robust monocular depth estimation under challenging conditions. InICCV, 2023."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p1_sc1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 1,
+      "score": 0.7760390043258667,
+      "text": "Still, monocular depth estimators tend to struggle when pre- sented with images with unfamiliar content and layout, since their knowledge of the visual world is restricted by the data seen during training, and challenged by zero-shot general- ization to new domains. This motivates us to explore whether the extensive priors captured in recent generative diffusion models can enable better, more generalizable depth estima- tion. We introduce Marigold, a method for affine-invariant monocular depth estimation that is derived from Stable Dif- fusion and retains its rich prior knowledge. The estimator can be fine-tuned in a couple of days on a single GPU us- ing only synthetic training data. It delivers state-of-the-art performance across a wide range of datasets, including over 20% performance gains in specific cases. Project page: https://marigoldmonodepth.github.io. 1. Introduction Monocular depth estimation aims to transform a photo- graphic image into a depth map,i.e., regress a range value for every pixel. The task arises whenever the 3D scene structure is needed, and no direct range or stereo measurements are available."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p1_sc1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 1,
+      "score": 0.7760390043258667,
+      "text": "Still, monocular depth estimators tend to struggle when pre- sented with images with unfamiliar content and layout, since their knowledge of the visual world is restricted by the data seen during training, and challenged by zero-shot general- ization to new domains. This motivates us to explore whether the extensive priors captured in recent generative diffusion models can enable better, more generalizable depth estima- tion. We introduce Marigold, a method for affine-invariant monocular depth estimation that is derived from Stable Dif- fusion and retains its rich prior knowledge. The estimator can be fine-tuned in a couple of days on a single GPU us- ing only synthetic training data. It delivers state-of-the-art performance across a wide range of datasets, including over 20% performance gains in specific cases. Project page: https://marigoldmonodepth.github.io. 1. Introduction Monocular depth estimation aims to transform a photo- graphic image into a depth map,i.e., regress a range value for every pixel. The task arises whenever the 3D scene structure is needed, and no direct range or stereo measurements are available."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.775726318359375,
+      "text": "DepthDark: Robust Monocular Depth Estimation for Low-Light Environments MM ’25, October 27–31, 2025, Dublin, Ireland. 7 Acknowledgments This work was supported by the National Key Research and Devel- opment Program of China (U22A2047), the Key R&D Program of Zhejiang under Grant No. (2025C03001, 2023C01044), the Funda- mental Research Funds for the Provincial Universities of Zhejiang (GK259909299001-023), the National Nature Science Foundation of China (62301198). References [1] Jinwoo Bae, Sungho Moon, and Sunghoon Im. 2023. Deep digging into the generalization of self-supervised monocular depth estimation. In Proceedings of the AAAI conference on artificial intelligence , Vol. 37. 187–196. [2] Hyojin Bahng, Ali Jahanian, Swami Sankaranarayanan, and Phillip Isola. 2022. Exploring visual prompts for adapting large-scale models. arXiv preprint arXiv:2203. 17274 (2022). [3] Shariq Farooq Bhat, Reiner Birkl, Diana Wofk, Peter Wonka, and Matthias Müller. 2023. Zoedepth: Zero-shot transfer by combining relative and metric depth.arXiv preprint arXiv:2302. 12288 (2023). [4] Yohann Cabon, Naila Murray, and Martin Humenberger. 2020. Virtual kitti 2. arXiv preprint arXiv:2001. 10773 (2020)."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.7751219272613525,
+      "text": "Doing so enables a single model to recover information across diverse conditions without mod- ifications at inference time. Extensive experiments on two challenging public datasets, namely nuScenes and Oxford RobotCar, demonstrate the effectiveness of our techniques, outperforming prior works by a large margin in both stan- dard and challenging conditions. Source code and data are available at: https://md4all.github.io. 1. Introduction Estimating the depth of a scene is a fundamental task for autonomous driving and robotics navigation. While supervised monocular depth estimation approaches have achieved remarkable results, they rely on ground truth data which is expensive and time-consuming to produce [19, 12]. This requires costly 3D sensors (e.g., LiDAR) and signifi- cant additional data processing [19, 12]. To circumvent these issues, geometrical constraints on stereo pairs or monocular videos have been widely explored ∗ The authors contributed equally. Contact author: Stefano Gasperini (stefano.gasperini@tum.de). night - input image Monodepth2 md4all [ours] rain - input image AdaBins md4all (sup.) [ours] fully-supervised self-supervised Figure 1."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p10_sc4",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 10,
+      "score": 0.7742399573326111,
+      "text": "In Proceedings of the IEEE/CVF Con- ference on Computer Vision and Pattern Recognition, pages 2636–2645, 2020. 6 [43] Chaoqiang Zhao, Yang Tang, and Qiyu Sun. Unsuper- vised monocular depth estimation in highly complex envi- ronments. Transactions on Emerging Topics in Computa- tional Intelligence, 6(5):1237–1246, 2022. 3, 4 [44] Chaoqiang Zhao, Youmin Zhang, Matteo Poggi, Fabio Tosi, Xianda Guo, Zheng Zhu, Guan Huang, Yang Tang, and Ste- fano Mattoccia. MonoViT: Self-supervised monocular depth estimation with a vision transformer. In Proceedings of the International Conference on 3D Vision (3DV) , pages 668– 678. IEEE, 2022. 3 [45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork- GAN: Seeing into the rainy night. In Proceedings of the European Conference on Computer Vision, pages 155–170. Springer, 2020. 6, 7, 8 [46] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G Lowe. Unsupervised learning of depth and ego-motion from video. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 1851–1858, 2017. 3, 4 [47] Jun-Yan Zhu, Taesung Park, Phillip Isola, and Alexei A Efros."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p1_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 1,
+      "score": 0.7738969326019287,
+      "text": "With day-to-night data distribution com- pensation, our framework can be trained in an ef- ficient one-stage self-supervised manner. Though no nighttime images are considered during training, qualitative and quantitative results demonstrate that our method achieves SoTA depth estimating results on the challenging nuScenes-Night and RobotCar- Night compared with existing methods. 1 Introduction Monocular depth estimation plays a key role in several ap- plications, such as augmented reality [Azuma et al. , 2001], autonomous driving [Menze and Geiger, 2015 ] and robotic manipulation [Nadon et al., 2018]. With the usage and devel- opment of neural networks, like Convolutional Neural Net- work [He et al., 2016] and Vision Transformer [Dosovitskiy et al., 2020], deep-learning approaches present impressive re- sults in this task[Zhao et al., 2020]. Since the self-supervised framework does not require numerous costly depth-image pairs during training, it has achieved increasing attention in recent years. Instead of using ground truth depth labels, the spatial and temporal geometric constraints from images are constructed in the self-supervised framework to supervise the training process."
+    },
+    {
+      "id": "semantic_chunk::s_p9_sc5",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.7723525166511536,
+      "text": "IEEE Transactions on Pattern Analysis and Machine Intelli- gence (TPAMI), 2023. 2 [25] Fabio Tosi, Pierluigi Zama Ramirez, and Matteo Poggi. Dif- fusion models for monocular depth estimation: Overcoming"
+    },
+    {
+      "id": "semantic_chunk::s_p9_sc1",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.7720386981964111,
+      "text": "arXiv preprint arXiv:1903. 11027, 2019. 2, 3, 6, 7 [6] Ziyue Feng, Liang Yang, Longlong Jing, Haiyan Wang, YingLi Tian, and Bing Li. Disentangling object motion and occlusion for unsupervised multi-frame monocular depth. arXiv preprint arXiv:2203. 15174, 2022. 1, 2 [7] Stefano Gasperini, Patrick Koch, Vinzenz Dallabetta, Nas- sir Navab, Benjamin Busam, and Federico Tombari. R4dyn: Exploring radar for self-supervised monocular depth estima- tion of dynamic scenes. In 2021 International Conference on 3D Vision (3DV), pages 751–760. IEEE, 2021. 6, 7 [8] Stefano Gasperini, Nils Morbitzer, HyunJun Jung, Nassir Navab, and Federico Tombari. Robust monocular depth esti- mation under challenging conditions. In Proceedings of the IEEE/CVF International Conference on Computer Vision , pages 8177–8186, 2023. 1, 2, 4, 5, 6, 7, 8 [9] Cl ´ement Godard, Oisin Mac Aodha, and Gabriel J. Bros- tow. Unsupervised monocular depth estimation with left- right consistency. In 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) , pages 6602–6611, 2017. 4 [10] Cl ´ement Godard, Oisin Mac Aodha, Michael Firman, and Gabriel J Brostow. Digging into self-supervised monocular depth estimation."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc5",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.771690845489502,
+      "text": "Experimental results on both RobotCar-Night and nuScenes-Night datasets demonstrate that LLPEFT achieves perfor- mance comparable to other advanced methods while introducing negligible parameter overhead. This advantage primarily stems from LLPEFT’s novel illumination guidance and multiscale feature fusion mechanism, which jointly optimize illumination perception and feature extraction to effectively address critical challenges in- cluding noise interference and uneven illumination distribution in low-light conditions. 6 Conclusion In this paper, we introduce DepthDark, a robust foundation model for low-light monocular depth estimation. We first propose flare- simulation module and noise-simulation module techniques to ac- curately simulate the imaging process under nighttime conditions, thereby generating high-quality paired depth datasets for low-light environments. Additionally, we present an effective PEFT strategy that integrates illumination guidance and multiscale feature fusion, enhancing the model’s robustness and adaptability in low-light con- ditions."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc4",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.7700066566467285,
+      "text": "However, caution should be taken with Make3D, as its ground truth depth and input images are not well aligned, causing potential evaluation is- sues. We evaluate on a center crop of 2× 1 ratio, and apply median scaling for our M model. Qualitative results can be seen in Fig. 6 and in supplementary Section E. 5. Conclusion We have presented a versatile model for self-supervised monocular depth estimation, achieving state-of-the-art depth predictions. We introduced three contributions: (i) a minimum reprojection loss, computed for each pixel, to deal"
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p7_sc4",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.7700066566467285,
+      "text": "However, caution should be taken with Make3D, as its ground truth depth and input images are not well aligned, causing potential evaluation is- sues. We evaluate on a center crop of 2× 1 ratio, and apply median scaling for our M model. Qualitative results can be seen in Fig. 6 and in supplementary Section E. 5. Conclusion We have presented a versatile model for self-supervised monocular depth estimation, achieving state-of-the-art depth predictions. We introduced three contributions: (i) a minimum reprojection loss, computed for each pixel, to deal"
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc0",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.7691494226455688,
+      "text": "challenging conditions. In European Conference on Com- puter Vision (ECCV), 2024. 1, 2, 4, 6, 7, 8 [26] Madhu Vankadari, Sourav Garg, Anima Majumder, Swa- gat Kumar, and Ardhendu Behera. Unsupervised monocu- lar depth estimation for night-time images using adversar- ial domain feature adaptation. In Computer Vision–ECCV 2020: 16th European Conference, Glasgow, UK, August 23–28, 2020, Proceedings, Part XXVIII 16 , pages 443–459. Springer, 2020. 1, 2 [27] Madhu Vankadari, Stuart Golodetz, Sourav Garg, Sangyun Shin, Andrew Markham, and Niki Trigoni. When the sun goes down: Repairing photometric losses for all-day depth estimation. In Conference on Robot Learning, pages 1992– 2003. PMLR, 2023. 1, 2, 6, 7 [28] Jiyuan Wang, Chunyu Lin, Lang Nie, Shujun Huang, Yao Zhao, Xing Pan, and Rui Ai. Weatherdepth: Curriculum con- trastive learning for self-supervised depth estimation under adverse weather conditions, 2023. 1, 2, 4, 7 [29] Jiyuan Wang, Lang Nie, Kang Liao, Shuwei Shao, and Yao Zhao. Digging into contrastive learning for robust depth esti- mation with diffusion models. InACM Int. Conf. Multimedia (ACMMM), pages 4129–4137, 2024."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.7681065797805786,
+      "text": "• We apply our generic method to both fully- and self- supervised monocular settings. • We generate and share open-source images in adverse conditions corresponding to the sunny and cloudy sam- ples of nuScenes [3] and Oxford Robotcar [23]. With md4all, we substantially outperform prior solutions delivering robust estimates in a variety of conditions. 2. Related Work 2. 1. Supervised Monocular Depth Estimation The problem of estimating depth from a single color image is challenging due to the countless 3D scenarios that can produce the same 2D projection, making it an ill- posed problem. Nevertheless, significant progress has been made, thanks to the introduction of CNN-based architec- tures by Eigen et al. [5] and fully-convolutional networks with residual connections by Laina et al. [20] to estimate dense depth maps from monocular inputs. While many supervised methods have focused on directly regressing to depth measurements from LiDAR sensors (as in KITTI [9]) or RGB-D cameras (as in NYU-Depth v2 [31]), DORN [6] tackles the task in an ordinal manner. AdaBins [1] extended DORN via a linear combination of predictions across adap- tive bins."
+    },
+    {
+      "id": "semantic_chunk::ACD_p1_sc0",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.7680418491363525,
+      "text": "Always Clear Depth: Robust Monocular Depth Estimation Under Adverse Weather Kui Jiang1 , Jing Cao1 , Zhaocheng Yu1 , Junjun Jiang1∗ and Jingchun Zhou2 1Harbin Institute of Technology 2Dalian Maritime University jiangkui@hit.edu.com, {caojing,yuzhaocheng}@stu.hit.edu.cn, jiangjunjun@hit.edu.cn, zhoujingchun@dlmu.edu.cn Abstract Monocular depth estimation is critical for applica- tions such as autonomous driving and scene recon- struction. While existing methods perform well un- der normal scenarios, their performance declines in adverse weather, due to challenging domain shifts and difﬁculties in extracting scene information. To address this issue, we present a robust monocu- lar depth estimation method called ACDepth from the perspective of high-quality training data gener- ation and domain adaptation. Speciﬁcally, we in- troduce a one-step diffusion model for generating samples that simulate adverse weather conditions, constructing a multi-tuple degradation dataset dur- ing training. To ensure the quality of the generated degradation samples, we employ LoRA adapters to ﬁne-tune the generation weights of diffusion model."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.7677861452102661,
+      "text": "Conclusion In this paper, we propose SSRDepth, a monocular depth estimation framework leverages semantic segmentation to improve metric depth prediction. The framework decomposes the metric depth estimation task into two parts: segmentation scale prediction through the Segmenta- tion Proposal Scale (SPS) module and semantic-aware relative depth estimation through the Adaptive Relative Depth (ARD) module. Addi- tionally, the framework includes the Segmentation Query Guided Ag- gregation (SQGA) module, which is designed to recover the structural information of local semantic segments. Our method excels not only in Pattern Recognition 171 (2026) 112279 12"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p12_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 12,
+      "score": 0.7672352194786072,
+      "text": "1, 2, 3, 4, 7, 8, 21 [34] Jaeho Moon, Juan Luis Gonzalez Bello, Byeongjun Kwon, and Munchurl Kim. From-ground-to-objects: Coarse-to-fine self-supervised monocular depth estimation of dynamic objects with ground contact prior. InProceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 10519– 10529, 2024. 2, 7, 8, 18, 20 [35] Adam Paszke et al. Pytorch: An imperative style, high-performance deep learning library. InNeurIPS, pages 8026–8037, 2019. 7 [36] Rui Peng, Ronggang Wang, Yawen Lai, Luyang Tang, and Yangang Cai. Excavating the potential capacity of selfsupervised monocular depth estimation. InICCV, pages 15560–15569, 2021. 16 12"
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p1_sc2",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7666510343551636,
+      "text": "This paper proposes a new architecture and training strategy to further improve the performance by focus- ing on the essential properties of monocular depth estimation. As many previous papers have claimed [Chen et al., 2019; Kim et al., 2020], understanding both global and local con- texts is crucial for successful depth estimation. There are many cues in monocular depth estimation that require under- standing the scene on a global scale, such as the location of objects or the vanishing point. In addition, local connectivity of features is important because adjacent pixels tend to have similar values owing to their coplanar surfaces. Therefore, we propose a new global-local path network to fully extract meaningful features on diverse scales and effectively deliver them throughout the network. First, we adopt a hierarchical transformer as the encoder to model long-range dependen- cies and capture multi-scale context features. In prior stud- ies, it is observed that the transformer enables the network to enlarge the size of the receptive ﬁeld [Xie et al. , 2021 ]."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p13_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.765173614025116,
+      "text": "A multi-view stereo benchmark with high-resolution images and multi- camera videos. InProceedings of the IEEE conference on computer vision and pattern recognition, pages 3260–3269, 2017. 7 [42] Lingdong Seo, Liang Weng, Zhiqiang Zhao, Xuan Wang, Jing Qiu, and Yinlong Liu. Robodepth: Robust out-of-distribution depth estimation under corruptions. InAdvances in Neural Information Processing Systems, volume 36, 2024. 8 [43] Shuwei Shao, Zhongcai Pei, Weihai Chen, Peter CY Chen, and Zhengguo Li. Nddepth: Normal-distance assisted monocular depth estimation and completion. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2024. 20 [44] Shuwei Shao, Zhongcai Pei, Weihai Chen, Dingchi Sun, Peter C. Y . Chen, and Zhengguo Li. Monodiffusion: Self-supervised monocular depth estimation using diffusion model, 2023. 3 [45] Shuwei Shao, Zhongcai Pei, Xingming Wu, Zhong Liu, Weihai Chen, and Zhengguo Li. Iebins: Iterative elastic bins for monocular depth estimation. InAdvances in Neural Information Processing Systems (NeurIPS), 2023. 20 [46] Jiaming Song, Chenlin Meng, and Stefano Ermon. Denoising diffusion implicit models, 2020."
+    },
+    {
+      "id": "semantic_chunk::s_p1_sc2",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7651664018630981,
+      "text": "Due to the high cost and difficulty Figure 1. Visual comparison between the previous [8] and ours. The first and second rows correspond to nighttime and rain, where ours provides more robust estimations especially for the vehicles. of obtaining reliable ground truth, self-supervised meth- ods focusing on photometric and geometric consistency [4, 10, 20, 31, 32, 39, 42, 48] have been developed to reduce dependence on expensive hardware. Early self-supervised methods perform depth inference on single images [10, 48], while recent multi-frame methods [3, 6, 12, 33, 34] for monocular videos achieve improved accuracy. However, these methods generally assume daytime conditions, lim- iting their generalizability to various adverse scenarios. Predicting depth in adverse conditions within a single model faces two major challenges: (1) the diverse types of degradation make it difficult to learn a unified repre- sentation; (2) the lack of labeled real data makes it diffi- cult to learn in adverse conditions in the real world."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p9_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 9,
+      "score": 0.7647596597671509,
+      "text": "Learning optical flow, depth, and scene flow without real-world labels. IEEE Robotics and Automation Letters , 7(2):3491–3498, 2022. 3, 8 [15] Vitor Guizilini, Igor Vasiljevic, Rares Ambrus, Greg Shakhnarovich, and Adrien Gaidon. Full surround mon- odepth from multiple cameras. IEEE Robotics and Automa- tion Letters, 7(2):5397–5404, 2022. 3 [16] Kaiming He, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. Deep residual learning for image recognition. In Proceed- ings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 770–778, 2016. 6 [17] Kuan-Chih Huang, Tsung-Han Wu, Hung-Ting Su, and Win- ston H Hsu. MonoDTR: Monocular 3d object detection with depth-aware transformer. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 4012–4021, 2022. 2 [18] Jianbo Jiao, Ying Cao, Yibing Song, and Rynson Lau. Look deeper into depth: Monocular depth estimation with seman- tic booster and attention-driven loss. In Proceedings of the European Conference on Computer Vision , pages 53–69, 2018."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p1_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 1,
+      "score": 0.764057457447052,
+      "text": "Digging Into Self-Supervised Monocular Depth Estimation Cl´ement Godard1 Oisin Mac Aodha2 Michael Firman3 Gabriel Brostow3,1 1UCL 2Caltech 3Niantic www.github.com/nianticlabs/monodepth2 Abstract Per-pixel ground-truth depth data is challenging to ac- quire at scale. To overcome this limitation, self-supervised learning has emerged as a promising alternative for train- ing models to perform monocular depth estimation. In this paper, we propose a set of improvements, which together re- sult in both quantitatively and qualitatively improved depth maps compared to competing self-supervised methods. Research on self-supervised monocular training usually explores increasingly complex architectures, loss functions, and image formation models, all of which have recently helped to close the gap with fully-supervised methods. We show that a surprisingly simple model, and associated de- sign choices, lead to superior predictions."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p1_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 1,
+      "score": 0.764057457447052,
+      "text": "Digging Into Self-Supervised Monocular Depth Estimation Cl´ement Godard1 Oisin Mac Aodha2 Michael Firman3 Gabriel Brostow3,1 1UCL 2Caltech 3Niantic www.github.com/nianticlabs/monodepth2 Abstract Per-pixel ground-truth depth data is challenging to ac- quire at scale. To overcome this limitation, self-supervised learning has emerged as a promising alternative for train- ing models to perform monocular depth estimation. In this paper, we propose a set of improvements, which together re- sult in both quantitatively and qualitatively improved depth maps compared to competing self-supervised methods. Research on self-supervised monocular training usually explores increasingly complex architectures, loss functions, and image formation models, all of which have recently helped to close the gap with fully-supervised methods. We show that a surprisingly simple model, and associated de- sign choices, lead to superior predictions."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.763556718826294,
+      "text": "As these datasets con- tain only daytime images, we employed the techniques described in Section 3. 1 to synthesize a high-quality, large-scale low-light depth-aligned dataset for training our proposed DepthDark model. 4. 2. 2 Evaluation Protocol. To evaluate our method, we selected two challenging benchmark datasets: nuScenes-Night and RobotCar- Night, which are, to the best of our knowledge, the most widely used benchmarks for low-light monocular depth estimation tasks. The evaluation settings for nuScenes-Night follow RNW [36], while those for RobotCar-Night follow ADDS [24]. Moreover, performing low-light image enhancement before applying these depth estima- tion models not only increases computational cost but also reduces the generalization capability of the models. Therefore, we primarily compare our experimental results with five methods designed for low-light monocular depth estimation. Specifically, direct training (DT) methods include MonoViT [51] and WSGD [35], whereas do- main adaptation (DA) methods consist of RNW, ADDS, and ITDFA [50]. The evaluation settings are based on the protocol of TDDC [40]."
+    },
+    {
+      "id": "semantic_chunk::ACD_p1_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 1,
+      "score": 0.7634241580963135,
+      "text": "Additionally, we integrate circular con- sistency loss and adversarial training to guarantee the ﬁdelity and naturalness of the scene contents. Furthermore, we elaborate on a multi-granularity knowledge distillation strategy (MKD) that encour- ages the student network to absorb knowledge from both the teacher model and pretrained Depth Any- thing V2. This strategy guides the student model in learning degradation-agnostic scene information from various degradation inputs. In particular, we introduce an ordinal guidance distillation mecha- nism (OGD) that encourages the network to focus on uncertain regions through differential ranking, leading to a more precise depth estimation. Experi- mental results demonstrate that our ACDepth sur- passes md4all-DD by 2. 50% for night scene and 2. 61% for rainy scene on the nuScenes dataset in terms of the absRel metric. 1 Introduction Monocular depth estimation (MDE) is a fundamental task in computer vision that aims to predict the depth from a sin- gle image."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p1_sc1",
+      "source": "data\\Global-Local.pdf",
+      "page": 1,
+      "score": 0.7624736428260803,
+      "text": "In ad- dition, the proposed decoder shows better perfor- mance than the previously proposed decoders, with considerably less computational complexity. Fur- thermore, we improve the depth-speciﬁc augmen- tation method by utilizing an important observa- tion in depth estimation to enhance the model. Our network achieves state-of-the-art performance over the challenging depth dataset NYU Depth V2. Ex- tensive experiments have been conducted to vali- date and show the effectiveness of the proposed ap- proach. Finally, our model shows better generaliza- tion ability and robustness than other comparative models. The code will be available soon. 1 Introduction Depth estimation is a challenging area that has been actively researched for many years. In particular, monocular depth es- timation, which uses a single image to predict depth, is an ill- posed problem due to its inherent ambiguity. With the advent of convolutional neural networks (CNNs), many CNN-based approaches have been proposed for depth estimation and have yielded promising results [Bhat et al., 2021; Lee et al., 2019; Fu et al., 2018]."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p7_sc3",
+      "source": "data\\Global-Local.pdf",
+      "page": 7,
+      "score": 0.7623599767684937,
+      "text": "[Kim et al., 2020] Doyeon Kim, Sihaeng Lee, Janghyeon Lee, and Junmo Kim. Leveraging contextual information for monocular depth estimation. IEEE Access, 8:147808– 147817, 2020. [Koch et al., 2018] Tobias Koch, Lukas Liebel, Friedrich Fraundorfer, and Marco Korner. Evaluation of cnn-based single-image depth estimation methods. In Proceedings of the European Conference on Computer Vision (ECCV) Workshops, pages 0–0, 2018. [Lee et al., 2019] Jin Han Lee, Myung-Kyu Han, Dong Wook Ko, and Il Hong Suh. From big to small: Multi-scale local planar guidance for monocular depth estimation. arXiv preprint arXiv:1907. 10326, 2019. [Luo et al., 2016] Wenjie Luo, Yujia Li, Raquel Urtasun, and Richard Zemel. Understanding the effective receptive ﬁeld in deep convolutional neural networks. In Proceedings of the 30th International Conference on Neural Information Processing Systems, pages 4905–4913, 2016. [Ramamonjisoa and Lepetit, 2019] Michael Ramamonjisoa and Vincent Lepetit. Sharpnet: Fast and accurate recov- ery of occluding contours in monocular depth estimation. In Proceedings of the IEEE/CVF International Conference on Computer Vision Workshops, pages 0–0, 2019."
+    },
+    {
+      "id": "semantic_chunk::ACD_p2_sc4",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.7619056701660156,
+      "text": "However, due to the high cost to obtain the high- quality annotation, self-supervised learning technologies, de- riving depth information from stereo pairs [Garg et al., 2016; Godard et al., 2017 ] or video sequences [Zhou et al., 2017; Godard et al., 2019; Bian et al., 2019 ] have drawn grow- ing interest. Unfortunately, a signiﬁcant portion of the ef- fort is focused on the normal scene. The depth estimation under adverse weather, such as low-light and rain-haze con- ditions, is barely explored, which is the common scenario in autonomous driving. Some studies [Zheng et al., 2023; Wang et al., 2021; Guo et al., 2020 ] divide depth estimation in adverse scenes into denoising and estimation, but these methods show poor generalization under unknown degrada- tions. Further, researchers achieve more robust depth estima- tion through data generation and knowledge distillation [Zhu et al., 2023; Gasperini et al., 2023 ], and integrate multi-level contrastive learning with diffusion model for robust feature representation [Wang et al., 2024b ]."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.8126946687698364,
+      "text": "DepthDark: Robust Monocular Depth Estimation for Low-Light Environments Longjian Zeng 245060073@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Zunjie Zhu∗ zunjiezhu@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Rongfeng Lu rongfeng-lu@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Ming Lu lu199192@gmail.com Intel Labs China Beijing, China Bolun Zheng blzheng@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Chenggang Yan cgyan@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Anke Xue akxue@hdu.edu.cn Hangzhou Dianzi University Hangzhou, China Abstract In recent years, foundation models for monocular depth estimation have received increasing attention. Current methods mainly address typical daylight conditions, but their effectiveness notably decreases in low-light environments. There is a lack of robust foundational models for monocular depth estimation specifically designed for low-light scenarios. This largely stems from the absence of large- scale, high-quality paired depth datasets for low-light conditions and the effective parameter-efficient fine-tuning (PEFT) strategy.",
+      "estimated_tokens": 256
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc2",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.8118897676467896,
+      "text": "Accurate depth estimation is a crucial aspect © 2025. The copyright of this document resides with its authors. It may be distributed unchanged freely in print or electronic forms.",
+      "estimated_tokens": 35
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.8105875849723816,
+      "text": "Robust Monocular Depth Estimation under Challenging Conditions Stefano Gasperini∗,1,2 Nils Morbitzer∗,1 HyunJun Jung1 Nassir Navab1 Federico Tombari1,3 1 Technical University of Munich 2 VisualAIs 3 Google Abstract While state-of-the-art monocular depth estimation ap- proaches achieve impressive results in ideal settings, they are highly unreliable under challenging illumination and weather conditions, such as at nighttime or in the presence of rain. In this paper, we uncover these safety-critical is- sues and tackle them with md4all: a simple and effective solution that works reliably under both adverse and ideal conditions, as well as for different types of learning super- vision. We achieve this by exploiting the efficacy of existing methods under perfect settings. Therefore, we provide valid training signals independently of what is in the input. First, we generate a set of complex samples corresponding to the normal training ones. Then, we train the model by guiding its self- or full-supervision by feeding the generated sam- ples and computing the standard losses on the correspond- ing original images.",
+      "estimated_tokens": 238
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.8099524974822998,
+      "text": "To address these challenges, we propose DepthDark, a robust foun- dation model for low-light monocular depth estimation. We first introduce a flare-simulation module and a noise-simulation mod- ule to accurately simulate the imaging process under nighttime conditions, producing high-quality paired depth datasets for low- light conditions. Additionally, we present an effective low-light PEFT strategy that utilizes illumination guidance and multiscale feature fusion to enhance the model’s capability in low-light envi- ronments. Our method achieves state-of-the-art depth estimation performance on the challenging nuScenes-Night and RobotCar- Night datasets, validating its effectiveness using limited training data and computing resources. CCS Concepts • Computing methodologies→ Computer vision; Image pro- cessing; Virtual reality. ∗Corresponding Author. Permission to make digital or hard copies of all or part of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for profit or commercial advantage and that copies bear this notice and the full citation on the first page.",
+      "estimated_tokens": 212
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p1_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 1,
+      "score": 0.8057062029838562,
+      "text": "This revolution has also significantly boosted the development of monocular depth estimation, which predicts depth information from a single image, enabling applications in areas such as autonomous driving, augmented reality, and robotics. However, most existing methods perform well under sufficient illumination but degrade in low-light conditions because of substantial informa- tion loss and significant noise amplification. Although low-light monocular depth estimation is a highly chal- lenging task, it plays a pivotal role in various nighttime applications. However, most existing studies on low-light monocular depth esti- mation, such as RNW [36], ADDS [24], MonoVit [51], MonoFormer [1], and TDDC [40], focus primarily on nighttime autonomous driv- ing, which limits their applicability to other applications. Conse- quently, developing a foundation model capable of estimating depth information from a single nighttime image has become a critical goal in low-light monocular depth estimation.",
+      "estimated_tokens": 192
+    },
+    {
+      "id": "semantic_chunk::s_p9_sc5",
+      "source": "data\\s.pdf",
+      "page": 9,
+      "score": 0.7723525166511536,
+      "text": "IEEE Transactions on Pattern Analysis and Machine Intelli- gence (TPAMI), 2023. 2 [25] Fabio Tosi, Pierluigi Zama Ramirez, and Matteo Poggi. Dif- fusion models for monocular depth estimation: Overcoming",
+      "estimated_tokens": 56
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 989,
+    "compressed_context_tokens": 989,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 989,
+  "context_tokens": 989,
+  "prompt_token_estimate": 1403,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_md4all_main_contributions",
+  "answer": "<think>\nThe user is asking about the main contributions of the paper \"Robust Monocular Depth Estimation under Challenging Conditions\". Let me look at the provided sources to find this information.\n\nSource [3] is from this paper. It mentions:\n- The paper \"uncovers safety-critical issues\" with monocular depth estimation under challenging illumination and weather conditions (nighttime, rain)\n- They propose \"md4all: a simple and effective solution that works reliably under both adverse and ideal conditions, as well as for different types of learning supervision\"\n- They exploit the efficacy of existing methods under perfect settings\n- They provide valid training signals independently of what is in the input\n- They generate a set of complex samples corresponding to the normal training ones\n- They train the model by guiding its self- or full-supervision by feeding the generated samples and computing the standard losses on the corresponding original images\n\nLet me extract the main contributions from this source:\n1. Identifying safety-critical issues of SOTA monocular depth estimation under challenging conditions (nighttime, rain)\n2. Proposing md4all - a simple and effective solution\n3. Works reliably under both adverse and ideal conditions\n4. Works for different types of learning supervision (self- and full-supervision)\n5. Generating complex samples corresponding to normal training ones\n6. Training methodology using generated samples with supervision on original images\n\nThe source [3] provides a good summary but might not be exhaustive. Let me structure the answer based on this information.\n</think>\n{\n  \"answer\": \"该论文提出了 md4all，一个在恶劣（夜间、雨天等）和理想条件下都能可靠工作的简单有效的单目深度估计方案。\",\n  \"items\": [\n    {\n      \"name\": \"揭示安全性问题\",\n      \"description\": \"指出当前最先进的单目深度估计方法在夜间、降雨等挑战性光照和天气条件下高度不可靠，存在安全隐患。\",\n      \"citations\": [3]\n    },\n    {\n      \"name\": \"提出 md4all 方案\",\n      \"description\": \"提出一个简单且有效的方案 md4all，能在恶劣和理想条件下均稳定工作，并兼容自监督与全监督等多种学习监督方式。\",\n      \"citations\": [3]\n    },\n    {\n      \"name\": \"复用现有方法在理想条件下的能力\",\n      \"description\": \"利用现有方法在理想设置下的有效性，独立于输入内容提供有效的训练信号。\",\n      \"citations\": [3]\n    },\n    {\n      \"name\": \"生成对应的复杂样本\",\n      \"description\": \"针对正常训练样本生成一组对应的复杂（恶劣条件）样本。\",\n      \"citations\": [3]\n    },\n    {\n      \"name\": \"新颖的训练策略\",\n      \"description\": \"通过输入生成的复杂样本、在对应的原始图像上计算标准损失来引导模型的自我监督或全监督训练。\",\n      \"citations\": [3]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1416,
+    "completion_tokens": 602,
+    "total_tokens": 2018,
+    "model": "MiniMax-M3"
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_led_nighttim_ask_baseline_none_4429fcabfc0d",
+  "dry_run": false,
+  "query": "LED 论文中 Nighttime Synthetic Drive Dataset 的图像数量表述是否一致？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::LED_p5_sc1",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.8115413784980774,
+      "text": "1 Nighttime Synthetic Drive Dataset (NSDD) Due to the lack of public datasets containing HD pattern illumination, we create the Night- time Synthetic Drive Dataset (NSDD) using the Nvidia Drive Sim (Drop 15) simulator [33], which generates road images with photorealism effort. To simulate realistic headlight pro- jections, we adapt the vehicle’s headlights based on photometric measurements. The dataset includes 24,995 images with pattern and 24,995 images with high beam illumination (see fig. 3). We simulate a real HD headlight with a resolution of 132×28 px and a field of view of 35°×7°. The checkerboard cells are 0. 5°, ensuring visibility with the camera resolution. We choose High Beam (HB) as the comparison baseline, considering it the maximum normal lighting condition. Since high beam illumination exceeds that of the checkerboard pattern, performance improvements are attributed solely to the pattern’s contribution. In each frame, vehicles, pedestrians, and traffic signs are randomized. To simulate light interference, we include other car headlights and randomize ambient light levels between 0 and 10 lux."
+    },
+    {
+      "id": "semantic_chunk::LED_p3_sc0",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.7909607887268066,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT3 •Data-efficiency: LED-trained models outperform the others with only 20% of training data. •Real prototype: LED demonstrates great performances improvements on our in-house dataset, collected using a real car-mounted prototype. •Dataset: We provide the Nighttime Synthetic Drive Dataset, a photorealistic synthetic dataset, comprising 49,995 comprehensively annotated nighttime images to foster future in- vestigations in nighttime perception. 2 Related Work 2. 1 Depth Estimation from Camera Supervised Learning. Recent advances in supervised depth prediction leverage transformer architectures and attention mechanisms [1, 4, 24, 27] to improve performances. The use of bins [1, 4] improves depth prediction accuracy even with limited datasets available [10, 17, 30, 32] compared to self-supervised methods [5, 19, 20, 35, 38, 50, 52]. However, these methods are confined to daytime scenarios. Nighttime depth estimation approaches [47, 51] rely on self-supervised methods, due to the lack of large, annotated nighttime datasets."
+    },
+    {
+      "id": "semantic_chunk::LED_p5_sc0",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.7862309217453003,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT5 Figure 3:Nighttime Synthetic Drive Dataset examples:(A) depicts HD pattern and (B) high-beam illumination. Ground truth annotations include dense depth maps, semantic seg- mentation, instance segmentation labels and bounding boxes. of 10−3. Input and output resolutions are set to 320×320 px. Similar to [22], our learning objective combines losses based on Log L1, gradient and normals. More information is available in the supplementary. The selection of the best epoch is based on the Root Mean Square Error (RMSE). The training process takes 4 hours on a single Nvidia RTX 4090. We implement Adabins [4] using the official code and rely on the toolbox [26] for Depth- Former [27]. We apply Depth Anything V2 [49] official fine-tuning code to adapt the model for metric depth estimation. The only changes are limited to dataset format compatibility. The training setup follows the original papers’ recommendations, excluding data augmenta- tion to preserve the HD pattern from cropping. 4 Dataset 4."
+    },
+    {
+      "id": "semantic_chunk::LED_p6_sc2",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.7787743806838989,
+      "text": "5 Experiments We evaluate our method through extensive experiments on the Nighttime Synthetic Drive Dataset. We validate the contribution of our light pattern in boosting performance, both in- side and outside illuminated area. We apply our method to the encoder-decoder and other SOTA approaches: Adabins [4], DepthFormer [27] and Depth Anything V2 [49], showing its agnosticity. Finally, we evaluate LED robustness beyond its training domain and its capa- bilities on real-world scenarios. Metrics used align with prior works [4, 27, 28, 40, 47, 51]."
+    },
+    {
+      "id": "semantic_chunk::LED_p10_sc1",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.7527074813842773,
+      "text": "Future work should assess both safety concerns and the impact on performance. 7 Conclusion We introduce LED, a method for enhancing nighttime depth estimation by leveraging high- definition light patterns projected by modern vehicle headlights. Through extensive exper- iments, we demonstrate significant improvements in depth perception, both within and be- yond illuminated areas. Our method’s versatility is highlighted by its successful integration with two state-of-the-art architectures, Adabins and DepthFormer, as well as the foundation model Depth Anything V2. Moreover, LED shows promising real-world performance. We also release the Nighttime Synthetic Drive Dataset, comprising 49,995 fully annotated im- ages. We hope it will serve as a valuable resource for the research community, supporting exploration of various nighttime perception tasks. Acknowledgment We would like to thank Amandine Brunetto for her help and insights. We also thank Naimeric Villafruela from the Fablab of Mines Paris for his assistance in creating the real-world pro- totype. In addition, we extend our warm thanks to the Exwayz team for the excellent collab- oration on the real-world ground truth processing."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p6_sc3",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.7374677062034607,
+      "text": "850 0. 928Test on RobotCar-NightBaseline 0. 242 1. 882 5. 962 0. 261 0. 600 0. 915 0. 979BPG Only 0. 2161. 827 5. 986 0. 248 0. 6860. 9200. 976ING Only 0. 238 1. 8175. 882 0. 257 0. 620 0. 9200. 980Full Method0. 210 1. 515 5. 386 0. 238 0. 6760. 936 0. 980 Table 4. 2: Quantitative results of pre-processing ablation test. The baseline in this table is G: MonoViT w. ICN. a fair comparison, all methods apply the same Transformer- CNN hybrid backbone [Zhao et al., 2022b] if no further ex- planation is made. We also provide the G (Generalize to test set) version result of each DA method for further compar- isons. In addition, we will release the code upon acceptance. Evaluation on nuScenes-Night As shown in Fig. 4. 1, due to the weak interference of ISP on the digit raw, wave optics/diffraction effects are evident, and the imaging noise is also visible. Though it provides more realistic imaging compared to that in RobotCar-Night, it in- troduces further disadvantages in the photometric loss. Thus, two DT methods strongly diverge on this dataset."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.7328298687934875,
+      "text": "N-N & R-N DA: RNW DA: ADDS G: Ours Figure 4. 1: Qualitative results on nuScenes-Night (First four columns) and RobotCar-Night (Last four columns). We leave more visual comparisons to the supplementary material. Compare to DA types methods, our training applies no images from the nuScenes or Oxford RobotCar datasets. 0 1 2 3 4 0. 260. 270. 280. 290. 300. 310. 320. 33 BPG wo. R-R BPG w. R-RA BS rel (a) ABS rel 0 1 2 3 4 9. 09. 39. 69. 910. 210. 510. 8RMSE (b) RMSE 0 1 2 3 4 0. 440. 460. 480. 500. 520. 540. 560. 580. 60 (c) δ1 Figure 4. 2: Ablation on BPG. F max = 0 indicates the baseline. The result of BPG with or without Re-rendering is shown. (Best viewed with zoom.) (a) ABS rel 0 . 010 . 11 1 01 009. 29. 49. 69. 810. 010. 210. 410. 610. 8RMSE 0 (b) RMSE 0 . 010 . 11 1 01 000. 450. 480. 510. 540. 570. 60 0 (c) δ1 Figure 4. 3: Ablation on ING. K max = 0 represents the baseline. Result of N , P, T L, P + N and P + T Lis shown. presents that these methods generalize poorly to unseen night scenes, while our approach does not suffer from such a draw- back, and note that no specific nighttime dataset is used as the target dataset during our training."
+    },
+    {
+      "id": "semantic_chunk::LED_p2_sc1",
+      "source": "data\\LED.pdf",
+      "page": 2,
+      "score": 0.7284358739852905,
+      "text": "While foundation models [8, 23, 48, 49] show great improvement for depth estimation on multiple domains, they are still not robust to nighttime images that are long-tail in the training data distribution. The availability of labeled data necessary for training high-capacity deep neural networks is an additional challenge. For the task of depth estimation, some methods rely on supervised learning [1, 4, 24, 27], but most use self-supervised methods [5, 19, 20, 35, 38, 47, 50, 51, 52] since obtaining ground truth depth information is expensive. While dedicated approaches for specific conditions have emerged in recent years [28, 40, 42, 47, 51], they still only partially mitigate these issues. To the best of our knowledge, they remain limited to self-supervised strategies, due to the lack of publicly available, large-scale annotated datasets suitable for nighttime depth estimation. To address this gap, this paper releases a synthetic nighttime dataset annotated with dense depth maps, along with additional labels."
+    },
+    {
+      "id": "semantic_chunk::LED_p3_sc1",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.7270874977111816,
+      "text": "In response, we release the Nighttime Synthetic Drive Dataset to support the development of nighttime-specific methods. Vision Foundation Models. Depth foundation models [8, 23, 48, 49] have achieved impres- sive generalization by leveraging extensive synthetic and real-world training data. However, we show in section 5. 4 that these models perform poorly in zero-shot evaluations on our nighttime dataset. It highlights the need for models specialized in nighttime conditions and underscores the benefits of our method. Nighttime Domain Adaptation. Nighttime depth estimation can be approached as a do- main adaptation problem [16], focusing on aligning features between daytime and nighttime images [28, 28, 40, 42]. Our method specifically adapts to nighttime scenes features by lever- aging the informative deformations of the light pattern emitted by a vehicle’s HD headlamp. 2. 2 Light for Perception Active Stereovision. Depth estimation based on active stereovision involves disparity mea- surement. Unlike traditional stereovision, disparity is computed between an image and a pattern projected onto the scene."
+    },
+    {
+      "id": "semantic_chunk::LED_p20_sc0",
+      "source": "data\\LED.pdf",
+      "page": 20,
+      "score": 0.7264508008956909,
+      "text": "20DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT [11] using the available annotation in the Nighttime Synthetic Drive Dataset. Results are re- ported in table S5. LED doesn’t improve, nor degrade performances. We even note a better stability with less variance over runs. Therefore, the similar performance on both domains suggests that LED enhances geometric tasks with limited impact on semantic ones. Pattern mIoU↑ Mask2F ormer LB 51. 45±4,00 LED 51. 49±0,76 Table S5:Mask2Former [11] Semantic segmentation results on NSDD. H Using Multiple Checkerboard Resolutions Any HD headlight can project LED’s checkerboard, although with a resolution adjustment. To evaluate its impact on model performances, we propose to train a model with 3 checker- board resolutions (0. 5°, 0. 25° and 0. 125°) evenly split, and evaluate on each one. Table S6 demonstrates that the model is able to perform well on all resolutions although with a minor performance degradation compared to single resolution training. This shows our model’s ability to generalize over multiple resolutions, thus, various HD headlights or car models. Figure S5:Qualitative results on real-world scenarios."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_sc0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.7253584861755371,
+      "text": "day – RobotCar night – RobotCar Method source sup. tr.data absRel sqRel RMSE δ1 absRel sqRel RMSE δ1 Monodepth2 [11] [ours] M ∗ d 0. 1196 0. 670 3. 164 ...... 86. 38 0. 3029 1. 724 5. 038 45. 88 DeFeatNet [33] [37] M ∗ a: dn 0. 2470 2. 980 7. 884 65. 00 0. 3340 4. 589 8. 606 58. 60 ADIDS [22] [37] M ∗ a: dn 0. 2390 2. 089 6. 743 61. 40 0. 2870 2. 569 7. 985 49. 00 RNW [38] [37] M ∗ a: dn 0. 2970 2. 608 7. 996 43. 10 ........ 0. 1850 ...... 1. 710 6. 549 ...... 73. 30 WSGD [37] [37] M ∗ a: dn 0. 1760 1. 603 6. 036 75. 00 0. 1740 1. 637 ....... 6. 302 75. 40 [ours] baseline [ours] Mv d ........ 0. 1209 ...... 0. 723 ....... 3. 335 86. 61 0. 3909 3. 547 8. 227 22. 51 [ours] md4all-DD [ours] Mv dT(n) 0. 1128 0. 648 3. 206 87. 13 0. 1219 0. 784 3. 604 84. 86 Table 2. Evaluation of self-supervised works on the RobotCar [23] test set. Trailing 0 added to the values from [37]. Notation from Table 1. Night – RobotCar In Table 2, we report results for RobotCar [23]. Here we compare with various approaches that also target depth estimation in challenging condi- tions [33, 22, 38, 37]. They all focus on night issues, tested here."
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_sc3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.7244858145713806,
+      "text": "For each condition c, we used a ForkGAN model [45] T c to translate all day-clear training samples E of nuScenes, with c ∈ C = {night, rain}. We trained Fork- GAN on BDD100K [42] and fine-tuned it on the nuScenes training set. For RobotCar, we used T c to translate all day samples E into night ones. RobotCar contains more night samples than nuScenes, so we trained T c directly on its training set. We share publicly all generated hc i images. Prior works and baselines We compared ours with a variety of works [8, 11, 12, 38, 37, 22, 33, 1]. We applied ours on the self-supervised Monodepth2-based baseline of Section 3. 1. 1 and the fully-supervised AdaBins [1]. 4. 2. Quantitative Results Night – nuScenes In Table 1, we report results for nuScenes [3] across various settings. Night samples present strong noise levels and reflections that are detrimental for self-supervised models (Figure 2), causing the absRel er- rors of most methods to double from ideal conditions (i.e., day-clear) to night. The difficulty of learning from night inputs is evident comparing Monodepth2 [11] trained only on day-clear (d) against all conditions (a), with the latter severely underperforming."
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc1",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.7235389351844788,
+      "text": "To this end, we introduce Light Enhanced Depth (LED), a novel, cost-effective approach that significantly improves depth esti- mation in low-light environments by harnessing a pattern projected by high definition headlights available in modern vehicles. LED leads to significant performance boosts across multiple depth-estimation architectures (encoder-decoder, Adabins, DepthFormer, Depth Anything V2) both on synthetic and real datasets. Furthermore, increased perfor- mances beyond illuminated areas reveal a holistic enhancement in scene understand- ing. Finally, we release the Nighttime Synthetic Drive Dataset, a synthetic and photo- realistic nighttime dataset, which comprises 49,990 comprehensively annotated images. To facilitate further research, both synthetic dataset and code are publicly available at https://simondemoreau.github.io/LED/. 1 Introduction Adverse conditions, such as harsh weather or nighttime, pose significant challenges to many computer vision applications. Despite impressive progress in perception systems for au- tonomous driving, enabled by powerful deep neural architectures and training techniques, the challenges of nighttime navigation persist."
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.7220724821090698,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9 Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderLB 14. 199 0. 187 0. 072 0. 292 28. 938 5. 620 0. 772 0. 909 0. 956LED 0. 5°11. 089 0. 119 0. 050 0. 213 21. 251 2. 304 0. 864 0. 950 0. 977LED 0. 25°8. 6950. 1090. 040 0. 190 18. 635 2. 1280. 899 0. 9630. 984LED 0. 125°10. 1540. 096 0. 040 0. 19018. 862 2. 1320. 907 0. 969 0. 984 DepthF ormerLB 8. 777 0. 138 0. 050 0. 186 17. 170 3. 365 0. 864 0. 957 0. 983LED 0. 5°6. 810 0. 101 0. 041 0. 152 14. 380 1. 376 0. 890 0. 969 0. 989LED 0. 25°5. 6210. 0820. 0300. 126 11. 7351. 1630. 923 0. 978 0. 992LED 0. 125°5. 7270. 076 0. 030 0. 116 10. 7541. 2610. 940 0. 987 0. 995 DepthAnythingV2 - 1000 training imagesLB 7. 637 0. 104 0. 044 0. 160 14. 617 1. 401 0. 891 0. 972 0. 990LED 0. 5°7. 017 0. 109 0. 047 0. 161 14. 044 1. 260 0. 877 0. 9697 0. 989LED 0. 25°6. 304 0. 102 0. 044 0. 146 12. 300 1. 079 0. 885 0. 9730. 993LED 0. 125°5. 785 0. 082 0. 037 0. 126 10. 673 0. 840 0. 921 0. 9810. 992 Table 6:Performance comparison on real-world data using various pattern resolutions."
+    },
+    {
+      "id": "semantic_chunk::LED_p6_sc1",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.7212939262390137,
+      "text": "All images have a resolution of 1920×1080 px, and we provide depth maps, annotations for 2D/3D object detection, normal estimation, and both semantic and instance segmentation. The provided depth values are not limited, though they are clipped at 100 m for all experiments. During training, a 640×640 px square is ini- tially center-cropped and then resized to 320×320 px. To ensure reproducibility, code and synthetic dataset are publicly available. Releasing large-scale nighttime data, with precise and comprehensive annotations, will foster research in nighttime computer vision for au- tonomous driving. 4. 2 Real-world Dataset We validate LED on a real-world, in-house dataset collected using a car-mounted prototype. It comprises 50,000 images (70% train / 15% val / 15% test) from populated urban and rural roads, evenly split between Low Beam (LB) illumination and checkerboard pattern with 0. 5°, 0. 25° and 0. 125° cells’ dimension. Ground truth is obtained from LiDAR data using the DOC-Depth method [13] and Exwayz software [14]. More details are available in supplementary materials."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p6_sc4",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.7168266177177429,
+      "text": "Meanwhile, our method generalizes well to these unseen nighttime scenes and outperforms all DA methods though no image from nuScenes dataset is used in our training. Besides, our method makes a 13. 3% improvement on ABS rel and 17. 6% improvement on RMSE compared to the second-best approach (DA:ADDS). As shown in the upper portion of Fig. 4. 1, our method out- performs the second-best and third-best method by a margin with much fewer prediction outliers. In addition, our method provides reasonable depth prediction for both dim scenes and bright scenes. Evaluation on RobotCar-Night As shown in Fig. 4. 1, the strong corrective effect of ISP in RobotCar-Night results in a cleaner image plane compared to that in nuScnce-Night. The light sources do not image streak and there is little noise in the sky. Here, we use RobotCar- Night to test the effectiveness of our method when the wave optics effect and noise are not significant. The bottom half of Table 4. 1 shows quantitative results on RobotCar-Night. Our result still outperforms the second-best method (DA: RNW) by 15. 3% in Sq rel and 8. 7% in RMSE, despite the reduction in ABS rel."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc4",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.7155699729919434,
+      "text": "Since the official code for TDDC is not publicly available, we use the experimental results reported in their paper. Additionally, we attempt to reproduce TDDC’s approach and provide the general (G) version results for each DA method to facilitate further com- parison. Our final experiments indicate that the G-version results are largely consistent with those reported in TDDC. For a more comprehensive comparison, we further compare our experimental results with state-of-the-art methods, including Depth Anything, Depth Anything V2, and TDDC. Evaluations on both nuScenes-Night and RobotCar-Night datasets demonstrate that our method exhibits superior robustness in low-light scenarios. 4. 3 Comparison with other methods. 4. 3. 1 Quantitative Results. We performed a quantitative evalua- tion of DepthDark and compared it with various state-of-the-art methods. As shown in Tab. 4. 1, the overall performance demon- strates that results on the nuScenes-Night dataset are generally worse compared to RobotCar-Night. This is primarily due to the strong corrective effects of the ISP in RobotCar-Night, which results in a cleaner image plane compared to nuScenes-Night."
+    },
+    {
+      "id": "semantic_chunk::LED_p5_sc2",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.7101900577545166,
+      "text": "Figure 4:Simulation of HD pattern:Top- left: control matrix of the HD headlight. Bottom-left: photometry considering aberra- tions created by the headlight lens. Right: Re- sulting image using the photometry. The area outlined in red is the region of interest. The dataset consists of 5 different maps (3 train / 1 val / 1 test), with 4,999 frames generated for both pattern and HB illumi- nated images in each. These maps represent major cities. Both parts of the dataset share the same randomization code, making the domains comparable. To closely replicate reality, we account for the optical imperfections of headlights using real measured photometry data (see fig. 4). Aberrations observed in the pattern, particularly along the edges of the projec-"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.7091332674026489,
+      "text": "However, low-light images often suffer from amplified noise due to low photon counts and high system gain in camera sensors. Inspired by the physical priors of noise formation, we introduce the Noise Simulation Module (NSM) technique to simulate the noise distribution in nighttime scenes. Based on the shot-read noise model [12, 37, 40], we take the flare image as input and precisely simulate noise under low-light conditions in a physically decoupled manner. This approach ensures that the synthesized images closely resemble those captured in real low-light scenarios. Therefore, the final low-light image𝐼𝐹𝑁 can be expressed by the following formula: 𝐼𝐹𝑁 =𝐼𝐹+𝑁, (5) where𝐼𝐹 represents the flare image of the real scene, and𝑁 refers to the summation of all physical noise. According to the physical noise models used in base image denoising [48], the overall noise 𝑁 can be decomposed into four components: photon shot noise𝑁𝑝, read noise𝑁𝑟𝑒𝑎𝑑 , row noise𝑁𝑟 , and quantization noise𝑁𝑞: 𝑁 =𝐾𝑁𝑝+𝑁𝑟𝑒𝑎𝑑+𝑁𝑟+𝑁𝑞."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p12_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 12,
+      "score": 0.708001971244812,
+      "text": "night scenes, can corrupt the depth-dependent high-frequency part of the image (i.e., object edges). Thus, the partial com- pensation of hightlights and noise (BPG and ING) allows the depth network to suppress these depth-uncorrelated disturb- ing terms and better generalize to the challenging nighttime scenes. Table B. 1 shows the comparison between our compensa- tion and other full compensation (image transfer). Although CUT and Qs-Atten get better FID score on the nuScenes- Night testing set, indicating that their methods produce more night-like images, our methods still get better night depth es- timation results. Compared to the second best, we improve ABS rel by 9. 8% and RMSE by 9. 8%. Compensation methodABS rel↓ Sq rel↓ RMSE↓ δ1↑ δ2↑ δ3↑ FID↓Train on KITTI - Test on nuScenes-NightNone 0. 327 3. 740 10. 70 0. 451 0. 733 0. 855 -Cut I2I: K to N-N 0. 300 3. 771 9. 596 0. 565 0. 793 0. 895 46. 26Qs-Atten I2I: K to N-N 0. 291 3. 659 9. 554 0. 577 0. 801 0. 90345. 05Ours compensation 0. 259 3. 147 8. 547 0. 641 0. 850 0. 92860. 01±1. 81Train on nuScenes - Test on nuScenes-NightCut I2I: N-D to N-N 0. 290 3. 653 9. 614 0. 580 0. 807 0. 911 54. 40Qs-Atten I2I: N-D to N-N 0. 287 3."
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.7076753973960876,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17 Ldepth Lgrad Lnormal Metrics L1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ ✓ ✗ ✗ ✗ ✗ 5. 9790. 1910. 020 0. 13213. 032 14. 3520. 957 0. 982 0. 991 ✗ ✓ ✗ ✗ ✗ 5. 852 0. 187 0. 021 0. 13213. 12212. 9840. 9570. 9830. 992 ✗ ✓ ✓ ✗ ✗ 5. 760 0. 201 0. 020 0. 137 13. 616 16. 174 0. 9580. 9830. 992 ✗ ✓ ✗ ✓ ✗ 5. 386 0. 2020. 0210. 12412. 373 15. 901 0. 9580. 985 0. 993 ✗ ✓ ✗ ✗ ✓ 5. 3090. 206 0. 022 0. 149 14. 862 16. 048 0. 954 0. 981 0. 990 ✗ ✓ ✗ ✓ ✓ 5. 8090. 186 0. 0180. 125 12. 21014. 6830. 961 0. 985 0. 993 ✗ ✓ ✓ ✗ ✓ 5. 4220. 2000. 0180. 125 12. 50316. 1200. 961 0. 985 0. 993 Table S1:Loss study. Performance comparison using several combination of losses:1st best, 2nd best,3rd best. Figure S2:Few-shot learning performances of Depth Anything V2 on our real dataset. All LED patterns demonstrate superior performances over LB. The model is near its maximal performances with only 1,000 training images. L=L depth +λ 1Lgrad +λ 2Lnormal .(4) B. 3 Loss Study To determine the impact of each individual loss, we conduct an ablation study (see table S1)."
+    },
+    {
+      "id": "semantic_chunk::ACD_p7_sc0",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.7076332569122314,
+      "text": "day – RobotCar night – RobotCar Method sup. tr.data absRel sqRel RMSE δ1 absRel sqRel RMSE δ1 Monodepth2 [Godard et al., 2019] M∗ d 0. 1196 0. 670 3. 164 86. 38 0. 3029 1. 724 5. 038 45. 88 DeFeatNet [Spencer et al., 2020] M∗ a: dn 0. 2470 2. 980 7. 884 65. 00 0. 3340 4. 589 8. 606 58. 60 ADIDS [Liu et al., 2021] M∗ a: dn 0. 2390 2. 089 6. 743 61. 40 0. 2870 2. 569 7. 985 49. 00 RNW [Wang et al., 2021] M∗ a: dn 0. 2970 2. 608 7. 996 43. 10 0. 1850 1. 710 6. 549 73. 30 WSGD [V ankadariet al., 2023] M∗ a: dn 0. 1760 1. 603 6. 036 75. 00 0. 1740 1. 637 6. 302 75. 40 md4all-DD [Gasperini et al., 2023] Mv dT†(n) 0. 1128 0. 648 3. 206 87. 13 0. 1219 0. 784 3. 604 84. 86 DMMDE v1 [Tosi et al., 2025] Mv dT‡(n) 0. 1190 0. 676 3. 239 87. 20 0. 1390 0. 739 3. 700 82. 46 DMMDE v2 [Tosi et al., 2025] Mv dT‡(n) 0. 1230 0. 724 3. 333 86. 62 0. 1330 0. 824 3. 712 83. 95 DMMDE v3 [Tosi et al., 2025] Mv dT‡(n) 0. 1190 0. 728 3. 287 87. 17 0. 1290 0. 751 3. 661 83. 68 ACDepth (Ours) Mv dT(n) 0. 1107 0. 591 3. 084 88. 03 0. 1206 0. 690 3. 432 84. 47 Table 2: Evaluation of self-supervised works on the RobotCar [Maddern et al., 2017] test set."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.7040395736694336,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT DomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ (HB→HB)6. 1204 0. 0903 0. 0233 0. 1353 13. 4847 3. 3579 0. 9489 0. 9812 0. 9908(HB→LED)17. 3113 0. 4479 0. 1955 0. 6817 52. 5132 20. 0263 0. 4699 0. 6652 0. 7658 (LED→LED)5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927(LED→HB)8. 05370. 15110. 0338 0. 2026 20. 11208. 19990. 9158 0. 9626 0. 9796 Table 4:Encoder-decoder performance across domains of NSDD. We denote (training domain→testing domain). The model trained on (HB) fails entirely when tested on (LED). Yet, (LED)-trained models are able to estimate depth when tested on the (HB) domain. Pattern# Images RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ HB Zero-shot19. 058 0. 430 0. 243 0. 587 27. 004 8. 134 0. 086 0. 186 0. 785LED 18. 023 0. 420 0. 232 0. 563 25. 500 7. 779 0. 096 0. 214 0. 867 HB 100 6. 499 0. 075 0. 033 0. 133 12. 894 0. 992 0. 9290. 977 0. 991LED 6. 198 0. 073 0. 032 0. 131 12. 182 0. 898 0. 933 0. 9770. 991 HB 500 5. 447 0. 0580. 0250. 112 10. 629 0. 688 0. 950 0. 9850. 995LED 5. 225 0. 057 0. 025 0. 108 10. 038 0. 648 0. 953 0. 986 0. 995 HB 1000 5. 124 0."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p3_sc3",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.7040098309516907,
+      "text": "This framework synthesizes realistic nighttime image distributions from daytime images by incorporating two key components: Flare Simulation Module (FSM) and Noise Simula- tion Module (NSM). These components utilize physical priors to simulate the unique noise and photometric characteristics of night- time scenes, enabling the creation of high-quality paired training datasets for low-light scenes. 3. 1. 1 Flare Simulation Module. The uneven distribution of light sources and significant optical aberrations in nighttime scenes pose challenges to depth estimation models. To address this, we intro- duce the Flare Simulation Module (FSM) as the core component of the Low-Light Dataset Generation, which accurately simulates the photometric inconsistencies caused by flares, glare, and brightness peaks in nighttime images, generating a more realistic synthetic dataset. This helps bridge the gap left by existing models that ne- glect optical defects, enhancing the robustness and generalization of depth estimation models in low-light environments. Low Light Setting: In the field of computer graphics, some meth- ods approximate this optical phenomenon using 2D Fourier trans- forms [22]."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p5_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.7036038041114807,
+      "text": "How- ever, raw images or the exact inverse ISP are not available in most daytime datasets. The simplest ISP includes white bal- ance, binning, denoising, color collection and gamma com- pression [Chen et al., 2018; Brooks et al., 2019]. Fortunately, except for denoising and gamma compression, rest operations can be viewed as approximately linear processes. We con- sider the gamma compression in ING as it’s strongly nonlin- ear. Following ELD, we set gn = 1/2. 2. To simulate the low photon count C in the dark, a light scale factor sn is proposed follows U (100, 300) [Wei et al., 2020]. Then, the simulated raw image will be RLR t = sbit(I LR t )1/gn sn , (13) where sbit denotes quantization factor equals to 2bit − 1. ING Intensity K According to Eq. 9, Eq. 11 and Eq. 12, system gain K has a positive relationship with the noise intensity. Therefore, we appoint K as ING Intensity. Similar in BPG, we make ING Intensity following the log uniform: log K ∼ U(log K min, log K max). (14) Finally, with the simulated raw image RLR t , the sampled shot noise Np and read noise Nread, the output of ING will be I LRN t = \u0012 snRLR t + KN p + Nread sbit \u0013gn . (15) Fig. 3."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p2_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.702351450920105,
+      "text": "distribution are located as two key components. Then, we build up corresponding modules for simulation. Considering the wave optics/diffraction effect of light sources as well as reflections, we propose Brightness Peak Generator (BPG) to model the difference in photometric distribution. Based on the shot-read noise model, we build up Imaging Noise Gen- erator (ING) to model nighttime noise distribution. The joint application of BPG and ING together with the day-image dis- tribution results in a fused distribution that has a photometric and noise distribution close to the night images. The fused distribution is randomly sampled and used for the training of the depth network. As shown in Fig. 1. 1, thoughno night im- age is seen during training, our method still achieves superior performance compared to existing nighttime methods. Our main contributions are summarized as follows: (I) We propose a nighttime monocular depth training framework that use day image pairs as the stable source of self-supervision. (II) Our training framework requires no night images dur- ing training. We accomplish this design by day-to-night data distribution compensation."
+    },
+    {
+      "id": "semantic_chunk::LED_p13_sc2",
+      "source": "data\\LED.pdf",
+      "page": 13,
+      "score": 0.7019355297088623,
+      "text": "Energy-Efficient Illumination by Matrix Headlamps for Nighttime Automated Object Detection. IJECER, 2022. [47] Kun Wang, Zhenyu Zhang, Zhiqiang Yan, Xiang Li, Baobei Xu, Jun Li, and Jian Yang. Regularizing nighttime weirdness: Efficient self-supervised monocular depth estima- tion in the dark. InCVPR, 2021."
+    },
+    {
+      "id": "semantic_chunk::LED_p1_sc0",
+      "source": "data\\LED.pdf",
+      "page": 1,
+      "score": 0.7014647722244263,
+      "text": "arXiv:2409. 08031v3 [cs. CV] 18 Nov 2025 DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT1 LED: Light Enhanced Depth Estimation at Night Simon de Moreau1,2 https://simon.demoreau.fr/ Y asser Almehio2 yasser.almehio@valeo.com Andrei Bursuc3 https://abursuc.github.io/ Hafid El-Idrissi2 hafid.el-idrissi@valeo.com Bogdan Stanciulescu1 bogdan.stanciulescu@minesparis.psl.eu Fabien Moutarde1 https://people.minesparis.psl.eu/fabien.moutarde/ 1 Mines Paris - PSL University Paris, France 2 Valeo Paris, France 3 Valeo AI Paris, France Abstract Nighttime camera-based depth estimation is a highly challenging task, especially for autonomous driving applications, where accurate depth perception is essential for ensuring safe navigation. Models trained on daytime data often fail in the absence of precise but costly LiDAR. Even vision foundation models trained on large amounts of data are unreliable in low-light conditions. In this work, we aim to improve the relia- bility of perception systems at night time."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.7008808851242065,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Method ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑ Test on nuScenes-Night Depth Anything V2 0. 272 2. 5518. 576 0. 304 0. 518 0. 843 0. 971 + Only LLDG 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914 + Only LLPEFT 0. 255 3. 050 7. 686 0. 302 0. 619 0. 836 0. 934 DepthDark 0. 210 1. 910 7. 764 0. 260 0. 630 0. 914 0. 976 Test on RobotCar-Night Depth Anything V2 0. 235 2. 474 6. 239 0. 268 0. 697 0. 868 0. 946 + Only LLDG 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972 + Only LLPEFT 0. 177 1. 584 6. 727 0. 245 0. 700 0. 895 0. 973 DepthDark 0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 2: Efficacy of Proposed Modules: Ablation studies on nuScenes-Night and RobotCar-Night demonstrate that each module enhances DepthDark’s performance, with combined use significantly improving robustness."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6967926025390625,
+      "text": "4% in RobotCar-Night compared to the second-best), suggesting that our data distribution com- pensation benefits on the prediction robustness. Ablating into BPG and ING Fig. 4. 2 visualizes a further ablation study on our BPG. The experiments show that our Re-rendering submodule plays an important role within BPG. Besides, BPG achieves the best result when F max is set to 2. Meanwhile, Fig. 4. 3 presents a detailed ablation on our ING. Apart from the stan- dard groups ( P + T Land P + N ), we also test P, N and T L(Eq. 10, Eq. 11 and Eq. 12) alone. Taken the three metrics shown in Fig. 4. 3 together, P + T Land P + N still achieve better performance. According to Fig. 4. 3(b) and Fig. 4. 3(c), P + T Lmaintains the most consistent performance as K max changes. In addition, we set K max to 1 as ABS rel increases after K max is greater than 1, which suggests that inappropri- ately high intensity of ING will lead to overly conservative predictions. 5 Conclusion This paper proposes a self-supervised monocular depth train- ing framework for nighttime, which requires no nighttime im- age during training but day-to-night data distribution com- pensation."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p9_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 9,
+      "score": 0.696603536605835,
+      "text": "Y. Zou et al. Fig. 10. Qualitative comparison on the Cityscapes dataset. Table 4 Zero-shot quantitative results on two unseen datasets. Method SUN RGB-D Virtual KITTI 2 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ BTS [12] 0. 740 0. 933 0. 172 0. 515 0. 075 0. 831 0. 948 0. 115 5. 368 0. 054 AdaBins [9] 0. 771 0. 944 0. 159 0. 476 0. 068 0. 862 0. 957 0. 112 5. 218 0. 048 LocalBins [18] 0. 777 0. 949 0. 156 0. 470 0. 067 0. 810 0. 940 0. 127 5. 981 0. 061 NeWCRFs [16] 0. 798 0. 967 0. 151 0. 424 0. 064 0. 829 0. 951 0. 117 5. 691 0. 056 BinsFormer [10] 0. 805 0. 963 0. 143 0. 421 0. 061 – – – – – ZoeDepth [41] 0. 856 0. 979 0. 123 0. 356 0. 053 0. 850 0. 965 0. 105 5. 095 0. 050 Ours 0. 822 0. 969 0. 135 0. 395 0. 057 0. 890 0. 964 0. 098 4. 878 0. 043 Fig. 11. Qualitative zero-shot results on the SUN RGB-D dataset. Pattern Recognition 171 (2026) 112279 9"
+    },
+    {
+      "id": "semantic_chunk::LED_p6_sc0",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6964394450187683,
+      "text": "6DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT Figure 5:Qualitative results on NSDD. LED results exhibit higher precision, and more ac- curate object boundaries and shapes compared to HB. Red boxes indicate enhanced regions. Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderHB 6. 12040. 09030. 0233 0. 1353 13. 48473. 35790. 9489 0. 9812 0. 9908LED5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927 AdabinsHB 7. 3520 0. 1360 0. 0320 0. 1230 10. 1880 4. 2770 0. 8790 0. 9440 0. 9740LED5. 5830 0. 0690 0. 0240 0. 0920 7. 7290 2. 5090 0. 9210 0. 9680 0. 9840 DepthF ormerHB 5. 85280. 06870. 0281 0. 1205 11. 38410. 83280. 9432 0. 9802 0. 9913LED5. 38450. 12150. 0276 0. 1111 10. 41463. 40150. 9497 0. 9838 0. 9950 Table 1:Comparison of depth estimation performances on NSDD:HB models are trained on high beam data and LED on HD light pattern. LED models outperform HB models across all metrics, exceptions are for Abs Rel and Sq Rel. Metrics are computed in the ROI. tion, are due to these imperfections."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.696276843547821,
+      "text": "In our supplementary material, we provide additional tests on nuScenes-Day and Robotcar-Day, give a complete qual- itative comparison on nuScenes-Night/nuScenes-Day and RobotCar-Night/RobotCar-Day, and offer additional visual results on other nighttime datasets to further prove the effec- tiveness of our method. 4. 3 Ablation Test on Pre-processing Contribution of Each Part Table 4. 2 shows the contributions of each pre-processing part. The comparison of different self-supervised training ap- proaches is left to the supplementary material to further prove the effectiveness of our training framework. In nuScenes-Night, compared with the baseline, BPG im- proves ABS rel by 19. 3% and RMSE by 14. 0%, and ING im- proves ABS rel by 18. 0% and RMSE by 9. 1%. Besides, the joint application of BPG and ING achieves the best scores with 20. 8% improvement on ABS rel, 20. 1% on RMSE and 35. 3% on δ1. For RobotCar-Night, the joint application of BPG and ING still achieves a significant boost with 13. 2% on ABS rel and 9. 7% on RMSE. In addition, Table 4. 2 shows that the joint application of BPG and ING significantly improves RMSE (7. 2% in nuScenec-Night and 8."
+    },
+    {
+      "id": "semantic_chunk::LED_p18_sc0",
+      "source": "data\\LED.pdf",
+      "page": 18,
+      "score": 0.6960700750350952,
+      "text": "18DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT Image inputRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Reference5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 98460. 9927 ROI-Only5. 69310. 11450. 0199 0. 1428 14. 21314. 45410. 9585 0. 98410. 9932 Table S2:Encoder-decoder performances on NSDDbetween ROI-only training and refer- ence from section section 5. 1. ResolutionRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ 200 px 5. 94130. 10730. 0206 0. 1270 12. 62273. 97360. 9545 0. 9228 0. 9921 320 px 5. 42590. 1996 0. 01880. 1253 12. 490016. 1224 0. 96030. 9846 0. 9927 640 px 5. 7050 0. 21090. 01850. 1420 14. 1092 17. 40850. 96680. 9837 0. 9893 Table S3:Encoder-decoder performances on NSDDat various resolutions. D ROI Details D. 1 ROI Definition To assess the impact of the LED pattern, we define a Region of Interest (ROI) representing the illuminated area in most images and calculate our metrics within this region. We center- crop the image to 640×640 px and then resize it to 320×320 px."
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc4",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.6943824291229248,
+      "text": "2 [44] Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang, and Dongbin Zhao. Steps: Joint self- supervised nighttime image enhancement and depth estima- tion. In 2023 IEEE International Conference on Robotics and Automation (ICRA), pages 4916–4923, 2023. 1, 2 [45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork- gan: Seeing into the rainy night. In The IEEE European Conference on Computer Vision (ECCV), 2020. 2, 4 [46] Hanyu Zhou, Yi Chang, Wending Yan, and Luxin Yan. Un- supervised cumulative domain adaptation for foggy scene optical flow. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9569– 9578, 2023. 4, 5 [47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING, Yuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the common appearance-boundary adaptation for nighttime op- tical flow. InThe Twelfth International Conference on Learn- ing Representations, 2024. 2 [48] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video."
+    },
+    {
+      "id": "semantic_chunk::s_p7_sc0",
+      "source": "data\\s.pdf",
+      "page": 7,
+      "score": 0.6938774585723877,
+      "text": "nuScenes night rain DrivingStereo fog rain Input Image Ground Truth robust-depth [22] md4all [8] Ours Figure 4. Qualitative comparison of depth predictions under adverse conditions. The first two rows refer to nighttime and rain conditions in nuScenes [5] dataset, and the last two rows are zero-shot evaluation results on DrivingStereo [37] dataset. Our method addresses the challenging cases indicated in green boxes (can be checked via the ground truth), where other methods fail. in rain, 602 in nighttime). Our model is evaluated both un- der single-frame and multi-frames settings. All the metrics are computed for ground truth within 0. 1 − 80m. Robotcar [19] contains daytime and nighttime driving data. We follow the split of WSGD [27], where there are 17790 images in daytime and 19612 in nighttime. The test set in- cludes 1411 single images, in which 702 are daytime and 709 are nighttime. Our model is evaluated in single-frame setting on the dataset, with the depth range of 0. 1 − 50m. DrivingStereo [37] is a dataset that includes the real rainy and foggy images, where each condition includes 500 single images for our zero-shot evaluation."
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc1",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6927773952484131,
+      "text": "LED models outperform LB on all metrics, showing LED suitability on real-world scenarios. 5. 4 Few-shot Learning Foundation models show strong zero-shot performance across various cameras and content types. However, when tested on NSDD, Depth Anything V2 [49] performs poorly, with an RMSE of∼19 m (see table 5), highlighting the complexity of nighttime data and the need for specialized models. It performs slightly better on LED images, possibly due to its ability to leverage the pattern’s geometric cues. Fine-tuning with as little as 100 images is sufficient for adapting the network to our distribution and produce consistent depth predictions on both LED and HB. LED-models demonstrate significant improvements across all metrics (-15. 5% RMSE with 1,000 images). This underlines the effectiveness of our method in enhancing nighttime depth estimation even on foundation models. Results on our real-world dataset are provided in the supplementary material. 5. 5 Robustness Across Domains We assess model robustness when operating beyond the original training domain by testing a HB-trained model on pattern data andvice versa. We report results in table 4."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p7_sc3",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.6925313472747803,
+      "text": "Focusing on day-night lighting differences, dis- similarities in photometric and noise distribution are located as two key components. We model the difference in corre- sponding distributions with the proposed BPG and ING. The samples from the fused distribution are used for the training of the depth network. Although no nighttime images were used during training, our model shows a more convincing per- formance than those nighttime frameworks, and our presented self-supervised method provides a new and feasible way for the nighttime monocular depth estimation task."
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc2",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.691222608089447,
+      "text": "Results are presented in table 2. Examining depth estimation both outside the ROI and across the entire image, we observe a consistent performance improvement: -2. 66% RMSE outside the ROI and -3. 05% RMSE on the entire image. We also report enhancement in relative metrics: Abs Rel (resp. -3. 03% and -1. 50%) and Sq Rel (resp. -23. 27% and -9. 23%). These results suggest that the HD headlight pattern provides valuable information, such as object size and scale, leading to enhanced overall scene understanding and more accurate depth estimation. 5. 3 Annotation-efficient Learning Collecting annotated nighttime data is challenging and costly. We explore whether pattern extra guidance can reduce the need for training data (refer to fig. 6 (b)). Our results show that encoder-decoder model trained with less than 20% of the LED data outperforms one trained on the full HB dataset, reaching near-peak performance with just 50%. In addition, we observe that incorporating just 10% of LED data into the HB training set enable the network to learn relevant features and enhance its performances when used with pattern (see fig. 6 (c))."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc1",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6896244287490845,
+      "text": "260 0. 630 0. 914 0. 976 Test on RobotCar-Night DT MonoViT[51] R 𝑑 &𝑛 640 × 320 40 0. 513 13. 558 9. 867 0. 479 0. 588 0. 846 0. 918 WSGD[35] R 𝑑 &𝑛 640 × 320 40 0. 202 1. 835 5. 985 0. 231 0. 737 0. 934 0. 977 DA ITDFA[50] R 𝑑 &𝑛 640 × 320 40 0. 266 3. 010 8. 293 0. 287 0. 567 0. 888 0. 962 ADDS[24] R 𝑑 &𝑛 640 × 320 40 0. 209 2. 179 6. 808 0. 254 0. 704 0. 918 0. 965 RNW[36] R 𝑑 &𝑛 640 × 320 40 0. 197 1. 789 5. 896 0. 234 0. 742 0. 930 0. 972 G ITDFA[50] N 𝑑 &𝑛 640 × 320 40 0. 302 3. 692 8. 642 0. 327 0. 548 0. 852 0. 938 ADDS[24] N 𝑑 &𝑛 640 × 320 40 0. 265 3. 651 8. 700 0. 309 0. 640 0. 870 0. 945 RNW[36] N 𝑑 &𝑛 640 × 320 40 0. 237 2. 958 8. 187 0. 298 0. 683 0. 885 0. 948 MonoFormer[1] K 768 × 256 40 0. 289 2. 893 7. 468 0. 302 0. 543 0. 873 0. 964 TDDC[40] K 768 × 256 40 0. 210 1. 515 5. 386 0. 238 0. 676 0. 936 0. 980 Depth Anything[41] UD & LD - 40 0. 302 3. 331 6. 622 0. 314 0. 635 0. 822 0. 918 Depth Anything V2[42] RD & SD - 40 0. 235 2. 474 6. 239 0. 268 0. 697 0. 868 0. 946 Ours DepthDark H, VK - 40 0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 1: The best results are in bold, while the second-best scores are underline."
+    },
+    {
+      "id": "semantic_chunk::LED_p2_sc0",
+      "source": "data\\LED.pdf",
+      "page": 2,
+      "score": 0.6894699335098267,
+      "text": "2DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT Figure 1:Light Enhanced Depth (LED)is a novel method that harnesses high-definition headlights’ pattern projected onto the scene to enhance nighttime depth estimation from RGB images. We release a synthetic nighttime dataset with high beam and pattern-illuminated im- ages, along with comprehensive ground truth annotations, to advance research in nighttime perception. of perception, profoundly impacting overall scene perception and comprehension, especially at night [39]. While LiDAR sensors offer high accuracy, their widespread adoption is im- peded by their substantial cost. Additionally, in humid weather, LiDAR effectiveness can be significantly degraded due to beam reflection and increased noise levels [6, 7]. Cameras are powerful, cost-effective sensors that capture rich information about the en- vironment and are deployed in most modern vehicles. Camera-based perception solutions display high reliability and accuracy [1, 4, 5, 18, 19, 20, 27], but mostly on clear daylight conditions: they struggle under distribution shift and low-light conditions."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p2_sc5",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.68937087059021,
+      "text": "1 Data Distribution Compensation Framework Compensation and sample To enable the depth network that sees no night image but gen- eralizes well to different night scenes, and to take advantage of the stable self-supervision of day images, we make a com- pensation on the day-image distribution with day-night dif- ferences: Pn = Pd + Pshif t, I LRN t ∼ Pd + ˜Pshif t, (1) where Pd and Pn represent the day-image and night-image distributions, Pshif tdonates the distribution difference be-"
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p4_sc2",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.6885927319526672,
+      "text": "Using the Phong illumination model [28, 40], the final flare image at the current stage,𝐼𝐹 , is calculated by the following equation: 𝐼𝐹 =(𝑠𝑏·𝐼)𝑔𝐹+ 𝑁𝐹∑︁ 𝑖=1 (𝑠𝑠(𝐿𝑆,𝑠𝐹,𝑃𝑖))𝑔𝐹 , (4) where𝐼 is the daytime image and𝑠𝑠(.) represents scaling and shifting the sampled𝐿𝑆 by the scale rate𝑠𝐹 and the 2D coordinate 𝑃𝑖. Ultimately, FSM generates more realistic nighttime flare images by incorporating existing synthetic flare images, applying random darkening operations, and adopting an adaptive light source inten- sity strategy. This approach effectively mitigates the photometric inconsistency issues in nighttime images and significantly enhances the diversity and quality of the training dataset. 𝐼 𝐼𝐹 𝐼𝐹𝑁 Figure 3. 1: Paired visual examples for different scenes, 𝐼 rep- resents the image under normal lighting conditions, 𝐼𝐹 rep- resents the visualization result of adding FSM to the normal lighting image, and 𝐼𝐹𝑁 represents the visualization result of adding both FSM and NSM to the normal lighting image. 3. 1. 2 Noise Simulation Module. In the previous section, we derived the calculation process of 𝐼𝐹 ."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p5_sc3",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.6875121593475342,
+      "text": "2 visualizes some examples of I LRN t . It I LR t I LRN t Figure 3. 2: Paired visual examples. (Best view with zoom.) 4 Experiments 4. 1 Dataset We construct the self-supervised training process on the widely used KITTI dataset, and following [Godard et al., 2019; Zhao et al. , 2022b ], the KITTI Eigen training split [Eigen et al. , 2014 ] is used as the training set due to its high-quality images, and we also regard it as our basic day-image distribution. For evaluation, we use the nuScenes-Night test split from RNW [Wang et al., 2021] and the RobotCar-Night test split proposed in ADDS [Liu et al., 2021]. And we also follow the same pre-cropping method proposed in their work. 4. 2 Effective Test Comparisons We mainly compare our results with four SoTA methods i.e. DA (Domain adaptation): RNW [Wang et al. , 2021 ], DA: ADDS [Liu et al. , 2021 ], DA: ITDFA [Zhao et al. , 2022a ] and DT (Direct training): WSGD [Vankadari et al., 2023] on nuScenes-Night and RobotCar-Night, respectively. To make"
+    },
+    {
+      "id": "semantic_chunk::LED_p3_sc2",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.6857744455337524,
+      "text": "Recent methods [2, 15, 25, 36] use deep learning mod- els designed to take patterns and images as input. While active stereovision offers valuable scale information, it has demonstrated significant performance degradation when deployed outdoors, due to high ambient lighting and the low power of projectors [9, 21, 31]. We avoid this thanks to our nighttime environment and the utilization of high-powered HD headlights. HD Lighting. A series of works [12, 41] highlight HD lighting potential applications and particularly its ability to design anti-glare systems while optimizing illumination for en- hanced driver visibility, even in adverse conditions such as rain or snow. More recently, [46] propose reducing overall scene illumination to decrease power consumption while main- taining object detection capabilities. [43, 44, 45] also have proposed hardware-in-the-loop simulation for HD headlights. We introduce a novel application of HD headlights to improve understanding of overall scene geometry and enhance depth estimation. We achieve this by projecting a pattern onto the nighttime scene, providing guidance for the model."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p2_sc4",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.6852869987487793,
+      "text": "In RNW [Wang et al. , 2021], an improved priors-based do- main adaptive on output space is used to regularize nighttime photometric outliers. However, the significant illumination inconsistency within poor-quality image sequences is still out of regularization and causes performance degradation. WSGD [Vankadari et al., 2023] is the first one-stage method that directly trains their proposed framework on nighttime im- age splits. It introduces an Illuminating Change Net, a Resid- ual Flow Net and a frozen Denoise Net [Huang et al., 2021; Huang et al., 2022] into monocular training. Instead of apply- ing domain adaptation, they utilize extra trainable and trained parts to refine the photometric loss. Though these methods show nighttime monocular depth estimation ability, low light and complex light in nighttime scenes still affect the photometric-based self-supervised train- ing process. Meanwhile, the benefits of the image transfer model are limited. In contrast, our method performs data distribution compensation on day images and does not suf- fer from the poor self-supervision of night images. 3 Approach 3."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p1_sc3",
+      "source": "data\\TDDC.pdf",
+      "page": 1,
+      "score": 0.6847732067108154,
+      "text": "Meanwhile, the pho- tometric loss repair-based method [Vankadari et al. , 2023 ] utilizes additional trainable and trained parts to complement the daytime photometric loss. Although these methods show improved results compared to the classical self-supervised framework [Godard et al. , 2019 ], their performance is still limited by the poor transfer quality of the image transfer model or the incomplete elimination of lighting effects in the photometric loss. In this paper, we suspend the direct application of night- time images during training since they are an inappropriate source of self-supervision. Our goal is to train a night depth network that does not see night images during training, but only day images, in a self-supervised manner. We achieve such a design by extracting some principal day-night dis- similarities and using physical priors to compensate for the day-image distribution. Focusing on the difference in light- ing conditions, the dissimilarities in photometric and noise arXiv:2404. 13854v1 [cs. CV] 22 Apr 2024"
+    },
+    {
+      "id": "semantic_chunk::LED_p21_sc1",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.6847578883171082,
+      "text": "Ground truth annotation was made using LiDAR data, ag- gregated and densified following DOC-Depth method [13] and thanks to Exwayz software [14]. Due to the high resolution of the headlight we were able to collect data with smaller cell size than in simulation, giving more insight into pattern resolution impact. The performance of our model on this dataset demonstrate LED capabilities on complex real-world scenarios. We illustrate additional qualitative results in fig. S5. A video of DepthFormer (LED 0. 25°) qualitative results on our real-world dataset is available in the supplementary material. J Qualitative Results on Synthetic Dataset We illustrate in fig. S6 the improvements of depth estimation achieved by our method by comparing results with and without pattern. They are obtained by taking the encoder- decoder, trained on high beam (HB), and with our HD pattern (LED). Red boxes emphasize on enhanced regions. Some are zoomed in for improved visibility. LED results (right) ex- hibit higher precision, leading to more accurate object boundaries and shapes compared to HB (middle)."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p6_sc2",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.6844702959060669,
+      "text": "1: Effective test on nuScenes-Night [Wang et al., 2021; Caesar et al., 2020] and Robotcar-Night [Liu et al., 2021; Maddern et al., 2017]. All methods use the same DepthNet backbone unless marked. K, N and R indicate KITTI , nuScenes and Oxford Robotcar dataset. d and n are daytime and nighttime training splits proposed by RNW [Wang et al., 2021] or ADDS [Liu et al., 2021]. Max depth here indicates the up range of ground truth depth. Note that no image from the nuScenes or Oxford RobotCar datasets is used during our training and the applied resolution 768 × 256 is a little smaller than 640 × 320. † means the original reported result in the paper with pure CNN backbone and Max depth as the clipping up range for the predicted depth (.i.e, a more relaxed approach to evaluation). ‡ donates that the method applies a much larger Transformer-CNN hybrid backbone for DepthNet (about ×12 of parameters). MethodABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ δ1↑ δ2↑ δ3↑Test on nuScenes-NightBaseline 0. 327 3. 740 10. 703 0. 448 0. 451 0. 733 0. 855BPG Only 0. 2642. 956 9. 209 0. 371 0. 581 0. 8130. 914ING Only 0. 268 3. 177 9. 397 0. 371 0. 5880. 807 0. 909Full Method0. 259 3. 147 8. 547 0. 344 0. 641 0."
+    },
+    {
+      "id": "semantic_chunk::LED_p21_sc0",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.6842526197433472,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT21 Test set RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ LED (0. 5°)6. 859 0. 102 0. 041 0. 153 14. 162 1. 511 0. 894 0. 971 0. 989LED (0. 25°)5. 787 0. 082 0. 033 0. 126 11. 875 1. 0839 0. 929 0. 983 0. 994LED (0. 125°)5. 730 0. 077 0. 030 0. 116 10. 913 1. 149 0. 958 0. 989 0. 995 Table S6:DepthFormer results on real datasetwhen trained on 33% of each checkerboard resolutions (0. 5°, 0. 25°, 0. 125°). Figure S6:Zoomed in qualitative results on NSDDshowcasing LED improved depth pre- diction compared to high-beam (HB). I Real World Scenarios To collect our real-world dataset, we made a prototype on a real car. We used an IDS U3- 36L0XC camera and an Ouster OS1-128 LiDAR (Rev 7). Regarding the HD headlight, we opt for the Digital Micromirror Device technology, which offer the greatest resolution (<0. 015°) with a horizontal FOV of 14° and vertical FOV of 7°. All the hardware was mounted on the roof of the car. This novel setup allowed us to test LED under another projector-camera configuration."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::LED_p5_sc1",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.8115413784980774,
+      "text": "1 Nighttime Synthetic Drive Dataset (NSDD) Due to the lack of public datasets containing HD pattern illumination, we create the Night- time Synthetic Drive Dataset (NSDD) using the Nvidia Drive Sim (Drop 15) simulator [33], which generates road images with photorealism effort. To simulate realistic headlight pro- jections, we adapt the vehicle’s headlights based on photometric measurements. The dataset includes 24,995 images with pattern and 24,995 images with high beam illumination (see fig. 3). We simulate a real HD headlight with a resolution of 132×28 px and a field of view of 35°×7°. The checkerboard cells are 0. 5°, ensuring visibility with the camera resolution. We choose High Beam (HB) as the comparison baseline, considering it the maximum normal lighting condition. Since high beam illumination exceeds that of the checkerboard pattern, performance improvements are attributed solely to the pattern’s contribution. In each frame, vehicles, pedestrians, and traffic signs are randomized. To simulate light interference, we include other car headlights and randomize ambient light levels between 0 and 10 lux.",
+      "estimated_tokens": 237
+    },
+    {
+      "id": "semantic_chunk::LED_p3_sc0",
+      "source": "data\\LED.pdf",
+      "page": 3,
+      "score": 0.7909607887268066,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT3 •Data-efficiency: LED-trained models outperform the others with only 20% of training data. •Real prototype: LED demonstrates great performances improvements on our in-house dataset, collected using a real car-mounted prototype. •Dataset: We provide the Nighttime Synthetic Drive Dataset, a photorealistic synthetic dataset, comprising 49,995 comprehensively annotated nighttime images to foster future in- vestigations in nighttime perception. 2 Related Work 2. 1 Depth Estimation from Camera Supervised Learning. Recent advances in supervised depth prediction leverage transformer architectures and attention mechanisms [1, 4, 24, 27] to improve performances. The use of bins [1, 4] improves depth prediction accuracy even with limited datasets available [10, 17, 30, 32] compared to self-supervised methods [5, 19, 20, 35, 38, 50, 52]. However, these methods are confined to daytime scenarios. Nighttime depth estimation approaches [47, 51] rely on self-supervised methods, due to the lack of large, annotated nighttime datasets.",
+      "estimated_tokens": 250
+    },
+    {
+      "id": "semantic_chunk::LED_p5_sc0",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.7862309217453003,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT5 Figure 3:Nighttime Synthetic Drive Dataset examples:(A) depicts HD pattern and (B) high-beam illumination. Ground truth annotations include dense depth maps, semantic seg- mentation, instance segmentation labels and bounding boxes. of 10−3. Input and output resolutions are set to 320×320 px. Similar to [22], our learning objective combines losses based on Log L1, gradient and normals. More information is available in the supplementary. The selection of the best epoch is based on the Root Mean Square Error (RMSE). The training process takes 4 hours on a single Nvidia RTX 4090. We implement Adabins [4] using the official code and rely on the toolbox [26] for Depth- Former [27]. We apply Depth Anything V2 [49] official fine-tuning code to adapt the model for metric depth estimation. The only changes are limited to dataset format compatibility. The training setup follows the original papers’ recommendations, excluding data augmenta- tion to preserve the HD pattern from cropping. 4 Dataset 4.",
+      "estimated_tokens": 240
+    },
+    {
+      "id": "semantic_chunk::LED_p6_sc2",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.7787743806838989,
+      "text": "5 Experiments We evaluate our method through extensive experiments on the Nighttime Synthetic Drive Dataset. We validate the contribution of our light pattern in boosting performance, both in- side and outside illuminated area. We apply our method to the encoder-decoder and other SOTA approaches: Adabins [4], DepthFormer [27] and Depth Anything V2 [49], showing its agnosticity. Finally, we evaluate LED robustness beyond its training domain and its capa- bilities on real-world scenarios. Metrics used align with prior works [4, 27, 28, 40, 47, 51].",
+      "estimated_tokens": 126
+    },
+    {
+      "id": "semantic_chunk::LED_p10_sc1",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.7527074813842773,
+      "text": "Future work should assess both safety concerns and the impact on performance. 7 Conclusion We introduce LED, a method for enhancing nighttime depth estimation by leveraging high- definition light patterns projected by modern vehicle headlights. Through extensive exper- iments, we demonstrate significant improvements in depth perception, both within and be- yond illuminated areas. Our method’s versatility is highlighted by its successful integration with two state-of-the-art architectures, Adabins and DepthFormer, as well as the foundation model Depth Anything V2. Moreover, LED shows promising real-world performance. We also release the Nighttime Synthetic Drive Dataset, comprising 49,995 fully annotated im- ages. We hope it will serve as a valuable resource for the research community, supporting exploration of various nighttime perception tasks. Acknowledgment We would like to thank Amandine Brunetto for her help and insights. We also thank Naimeric Villafruela from the Fablab of Mines Paris for his assistance in creating the real-world pro- totype. In addition, we extend our warm thanks to the Exwayz team for the excellent collab- oration on the real-world ground truth processing.",
+      "estimated_tokens": 231
+    },
+    {
+      "id": "semantic_chunk::TDDC_p6_sc3",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.7374677062034607,
+      "text": "850 0. 928Test on RobotCar-NightBaseline 0. 242 1. 882 5. 962 0. 261 0. 600 0. 915 0. 979BPG Only 0. 2161. 827 5. 986 0. 248 0. 6860. 9200. 976ING Only 0. 238 1. 8175. 882 0. 257 0. 620 0. 9200. 980Full Method0. 210 1. 515 5. 386 0. 238 0. 6760. 936 0. 980 Table 4. 2: Quantitative results of pre-processing ablation test. The baseline in this table is G: MonoViT w. ICN. a fair comparison, all methods apply the same Transformer- CNN hybrid backbone [Zhao et al., 2022b] if no further ex- planation is made. We also provide the G (Generalize to test set) version result of each DA method for further compar- isons. In addition, we will release the code upon acceptance. Evaluation on nuScenes-Night As shown in Fig. 4. 1, due to the weak interference of ISP on the digit raw, wave optics/diffraction effects are evident, and the imaging noise is also visible. Though it provides more realistic imaging compared to that in RobotCar-Night, it in- troduces further disadvantages in the photometric loss. Thus, two DT methods strongly diverge on this dataset.",
+      "estimated_tokens": 345
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1429,
+    "compressed_context_tokens": 1429,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1429,
+  "context_tokens": 1429,
+  "prompt_token_estimate": 1824,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_led_nighttime_dataset_size_inconsistency",
+  "answer": "<think>\nThe user is asking whether the image count in \"Nighttime Synthetic Drive Dataset\" is consistent in the LED paper.\n\nLet me check the sources:\n\n[1] \"The dataset includes 24,995 images with pattern and 24,995 images with high beam illumination\"\n- So 24,995 + 24,995 = 49,990 images total mentioned here\n\n[2] \"Dataset: We provide the Nighttime Synthetic Drive Dataset, a photorealistic synthetic dataset, comprising 49,995 comprehensively annotated nighttime images\"\n- Here it says 49,995\n\n[5] \"We also release the Nighttime Synthetic Drive Dataset, comprising 49,995 fully annotated images.\"\n- Here it says 49,995\n\nSo there's an inconsistency: \n- [1] says 24,995 + 24,995 = 49,990\n- [2] and [5] say 49,995\n\nThis is inconsistent. The answer should note this discrepancy.\n</think>\n{\n  \"answer\": \"不一致。资料 [1] 描述为 24,995 张带 pattern + 24,995 张 high beam（共 49,990 张），而资料 [2] 和 [5] 表述为 49,995 张，三处数字存在矛盾。\",\n  \"items\": [\n    {\n      \"name\": \"数据集图像数量表述矛盾\",\n      \"description\": \"[1] 描述为 24,995 (pattern) + 24,995 (high beam) = 49,990 张；[2] 和 [5] 均表述为 49,995 张，数量不一致。\",\n      \"citations\": [1, 2, 5]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1874,
+    "completion_tokens": 356,
+    "total_tokens": 2230,
+    "model": "MiniMax-M3"
+  }
+}

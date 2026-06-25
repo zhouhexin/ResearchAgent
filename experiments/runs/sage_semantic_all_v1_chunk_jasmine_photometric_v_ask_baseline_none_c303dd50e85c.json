@@ -1,0 +1,430 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_jasmine_photometric_v_ask_baseline_none_c303dd50e85c",
+  "dry_run": false,
+  "query": "Jasmine中为什么用光度损失而不是latent重建损失来优化MIR？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Jasmine_p21_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.7645492553710938,
+      "text": "0.6 0.121 0.649 4.322 0.8760.970\nLatent+1 0.129 0.679 4.385 0.858 0.962\nIn Fig. 8, we further compare the perfor-\nmance of our Jasmine with other methods\nin multi scenes. The quantitative results\nobviously demonstrate that our method\ncan produce much finer"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_12",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6975032687187195,
+      "text": "conclusions to Sec. 3.2. Jasmine\nsignificantly outperforms the alternatives,\nsuch as KITTI/synthetic-only reconstruc-\ntion (IDs (8,9) and Fig. 3 (c,d)) and latent-\nspace supervision (ID (10) and Fig. 3 (e)),\nwhich strongly proves the effectiveness of\nour"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_11",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6852766871452332,
+      "text": "rall model\nperformance is further enhanced by 10%,\nultimately achieving SoTA performance. A\ncomprehensive analysis of MIR was con-\nducted in sub-table(c)and we can draw\nsimilar conclusions to Sec. 3.2. Jasmine\nsignificantly outperforms the alternatives,\nsu"
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6842625141143799,
+      "text": "-\nJasmine* 0.064 0.294 2.982 0.097 0.957 0.994 0.998\nMonoViT [68] 0.068 0.314 3.125 0.105 0.948 0.992 0.998\nMonoViFi [29]0.071 0.338 3.539 0.113 0.937 0.990 0.998\nJasmine 0.061 0.255 2.765 0.092 0.963 0.995 0.999\nE.2 Comparison with Other Self-Supervised S"
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6750790476799011,
+      "text": "original papers.\nMethod AbsRel↓SqRel↓ RMSE↓RMSElog↓a1↑ a2↑ a3↑\nMarigold [25] 0.099 - - - 0.916 0.987 -\nE2E-FT [33] 0.096 - - - 0.921 0.980 -\nLotus [21] 0.081 - - - 0.931 0.987 -\nJasmine* 0.064 0.294 2.982 0.097 0.957 0.994 0.998\nMonoViT [68] 0.068 0.314 3."
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.6697074770927429,
+      "text": "Appendix\nIn this appendix, we provide more implementation details, experiments, analysis, and discussions for\na comprehensive evaluation and understanding of Jasmine. Detailed contents are listed as follows:\nContents\nA Proof of Scale-Invariant Depth 15\nB D"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_20",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6654761433601379,
+      "text": "ore computationally expensive than prior self-supervised methods,\nit follows the trend of models like Marigold in trading cost for superior performance. Notably, our\nSSG module adds negligible latency, with Jasmine’s runtime being comparable to Lotus.\nMeth"
+    },
+    {
+      "id": "chunk::Jasmine_p17_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.6637104153633118,
+      "text": "U-Net(f z\nθ ).\n•Output:The predicted depth mapDobtained from Step 1.\nB.2 Training Pseudocode\nAlgorithm 1 outlines the complete training procedure for Jasmine, incorporating all components\nincluding MIR, SSG, and the full loss computation (Corresponds to th"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6620819568634033,
+      "text": "dge flatten) approach. Jasmine* and Jasmine are the same model but use different\nalignments (discussed in Sec. 4.3). In the data column, Syn, K, and H represent the synthetic, KITTI, and\nHypersim datasets, respectively. The number of images and depth label"
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_4",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6619065999984741,
+      "text": "enchmark result. Following the practice adopted in Mono-\nViFi [29], as shown in Table 5, this evaluation further confirms Jasmine’s SoTA performance, where\nit consistently outperforms other leading methods.\nTable 5:Quantitative results on the KITTI dataset"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.6605755090713501,
+      "text": "lement Details\nWe implement the proposed Jasmine using Accelerate[16] and PyTorch[35] with Stable Diffusion\nv2[39] as the backbone. Following the pipeline in Fig. 2, we disable text conditioning while\nmaintaining most hyperparameter consistency with E2E FT"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6539466381072998,
+      "text": "re all predicted delicately and precisely. These sharp results were\ncompletely disrupted by the reprojection loss in previous self-supervised methods.\nFurther AnalysisWe also deeply compare Jasmine with other SSDE configurations (stereo training\nand multi-"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_22",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6533535122871399,
+      "text": "in in-domain scenarios (Table 1), Jasmine outperforms Jasmine* because the\nshift-free estimation learned by Jasmine is disrupted by LSQ alignment, introducing a suboptimal\nshift and degrading performance. In out-of-domain scenarios (Table 2), Jasmine* perf"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_21",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6514114141464233,
+      "text": "adds negligible latency, with Jasmine’s runtime being comparable to Lotus.\nMethod Marigold Lotus E2E-Mono Monodepth2 MonoViT MonoViFi Jasmine\nMACs 133T 2.65T 2.65T 21.43G 25.63G 28.79G 2.83T\nRuntime 9.88s 157ms 152ms 33ms 29ms 25ms 172ms\n5 Conclusion\nWe p"
+    },
+    {
+      "id": "chunk::Jasmine_p16_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 16,
+      "score": 0.6511255502700806,
+      "text": "ep Workflow\nIn this section, we temporarily omit the specifics of MIR and SSG to clarify the integration of\nself-supervision with the Stable Diffusion framework in Jasmine:\n• Input:A sequence of temporally adjacent images (like video frames), e.g., a sourc"
+    },
+    {
+      "id": "chunk::Jasmine_p23_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 23,
+      "score": 0.6505179405212402,
+      "text": "ture Work\nAs noted in Sec. 2, the ubiquitously available videos suggest that the self-supervised methods possess\nsignificant data advantages and working potential. In this paper, Jasmine is trained on only tens of\nthousands of data samples and only on a dr"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_17",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.6449464559555054,
+      "text": "he advantages of our approach, we compare Jasmine against\nthe most efficient SSMDE models and SoTA SD-based methods. As shown in Table 1,Jasmine\nachieves the best performanceacross all metrics on the KITTI benchmark. Notably, our method\nmakes significant p"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_chunk_10",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6441485285758972,
+      "text": "European Confer-\nence on Computer Vision (ECCV), 2022. 2\n[11] Hai Jiang, Ao Luo, Xiaohong Liu, Songchen Han, and\nShuaicheng Liu. Lightendiffusion: Unsupervised low-light\nimage enhancement with latent-retinex diffusion models. In\nEuropean Conference on Com"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_chunk_10",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6441485285758972,
+      "text": "European Confer-\nence on Computer Vision (ECCV), 2022. 2\n[11] Hai Jiang, Ao Luo, Xiaohong Liu, Songchen Han, and\nShuaicheng Liu. Lightendiffusion: Unsupervised low-light\nimage enhancement with latent-retinex diffusion models. In\nEuropean Conference on Com"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.6433582305908203,
+      "text": "KUST 4CQUPT †Corresponding Author\nFigure 1:Without any high-precision depth supervision, Jasmine achieves remarkably detailed and accurate\ndepth estimation results through zero-shot generalization across diverse scenarios.\nAbstract\nIn this paper, we propos"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_4",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6426073908805847,
+      "text": "eeply compare Jasmine with other SSDE configurations (stereo training\nand multi-frame inference) and on KITTI improved GT benchmark in Sec. E.2, E.1.\n4.3 Analysis of Depth De-normalization\nFigure 6:Comparison of different de-normalization\nschemes.The blue"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.6410450339317322,
+      "text": "demonstrate that this pseudo-label training proves particularly crucial for steady training in complex,\nmulti-module self-supervised systems. The implementation details are in Sec. C. Finally, the total\ntraining loss of the Jasmine model is:\nL=L s +L ph +L"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_24",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.638186514377594,
+      "text": "scape\nFigure 5:Qualitative resultson KITTI, DrivingStereo, and CityScape datasets. We compare Jasmine with the\nmost generalizable and best-performing SSMDE methods in both in-domain and zero-shot scenarios.\n8"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_9",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.6371901631355286,
+      "text": "terference of reprojection loss. Extensive experiments\ndemonstrate that Jasmine achieves SoTA performance on the KITTI benchmark\nand exhibits superior zero-shot generalization across multiple datasets. Project\npage and code are available at here.\n1 Introdu"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_21",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6368082761764526,
+      "text": "rder metrics also degrade due to these shifts. This explains why\nJasmine* achieves better RMSE and SqRel but worsea 1 and AbsRel compared to Jasmine.\nFor the last observation, in in-domain scenarios (Table 1), Jasmine outperforms Jasmine* because the\nshift"
+    },
+    {
+      "id": "chunk::Jasmine_p23_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 23,
+      "score": 0.6355910897254944,
+      "text": "r, Jasmine is trained on only tens of\nthousands of data samples and only on a driving dataset (KITTI), leaving room for further exploration\nin scaling up training data to other domains (industry, indoor, etc). We believe that if there really\nemerges a ‘GPT"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_19",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6351526975631714,
+      "text": "1 0.849 0.098 5.702 0.902\nGeneralization ResultsCompared to in-domain evaluation, Jasmine exhibits even more remark-\nable results in zero-shot generalization. Due to the large number of comparison datasets and the\nunavailability of some models’ open-source"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_23",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6346109509468079,
+      "text": "t and degrading performance. In out-of-domain scenarios (Table 2), Jasmine* performs better,\nas the depth distributions of different datasets may differ significantly, and using least-squares to\nestimate the best fit is clearly a better choice.\n9"
+    },
+    {
+      "id": "chunk::Jasmine_p9_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6327270269393921,
+      "text": "eather-enhanced\ndatasetslike WeatherKITTI[ 48]. As illustrated in Fig. 1, Jasmine successfully identifies water\nsurface reflections while producing refined depth estimates. The fine-grain estimation details are\nfurther demonstrated in Fig. 5, pedestrian ch"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6318069696426392,
+      "text": "best and second-best results are marked in\nboldand underline. Jaeho et al* is a combined model that applies both Jaeho’s[34] (handle dynamic objects)\nand TriDepth’s[5] (solve edge flatten) approach. Jasmine* and Jasmine are the same model but use different"
+    },
+    {
+      "id": "chunk::Jasmine_p5_chunk_10",
+      "source": "data\\Jasmine.pdf",
+      "page": 5,
+      "score": 0.6286048889160156,
+      "text": "ts reveal MIR is a highly promising training paradigm. It not\nonly imposes no inherent limitations on any dense prediction tasks but also challenges the notion\nthat fine-tuning SD requires high-quality annotation. Even with legacy datasets like KITTI, we c"
+    },
+    {
+      "id": "chunk::TDDC_p14_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 14,
+      "score": 0.6280770301818848,
+      "text": "Application of Phong Model.\nFinally, with the 3D structure, material information, and the\ncolor of the light source IF , the reflection image I R\ni will be\nC1(u) = max (0, N (u) ∗ Li (u))/ri (u)2 ,\nC2(u) = max (0, Ri (u) ∗ Vi (u))gr\n/ri (u)2 ,\nI R\ni = sF I"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.6277821063995361,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::Jasmine_p8_chunk_23",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.6274105310440063,
+      "text": "elled in generalization, allowing us to conduct a fair zero-shot comparison here. As\nshown in Table 2, Jasmine demonstrated state-of-the-art performance on the datasets of Cityscape\nFigure 5:Qualitative resultson KITTI, DrivingStereo, and CityScape dataset"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_1",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.6235010623931885,
+      "text": "C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C25/C28/C6\nFigure 3. Overview of the Marigold inference scheme. Given an\ninput image x, we encode it with the original Stable Diffusion V AE\ninto the latent code z(x), and concat"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_1",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.6235010623931885,
+      "text": "C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C25/C28/C6\nFigure 3. Overview of the Marigold inference scheme. Given an\ninput image x, we encode it with the original Stable Diffusion V AE\ninto the latent code z(x), and concat"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_21",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6229809522628784,
+      "text": "ent. This work is supported by the National\nNatural Science Foundation of China (No. 62201484), HKU\nStartup Fund, and HKU Seed Fund for Basic Research.\n10378"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_19",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6226620078086853,
+      "text": "d depth estimation tasks.\n4.5 Inference Latency\nAs shown in the table below (MACs and Runtime are measured on a image with 1024×320 resolution\non RTX 4090.), while Jasmine is more computationally expensive than prior self-supervised methods,\nit follows the"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.6224088072776794,
+      "text": "some auxiliary adjustment\nlosses (e.g.,gds loss[ 34] LGDS, edge loss Le, etc.) with a tiny weight. They will be detailed in\nsupplementary material Sec. C.\n4 Experiment\n4.1 Implement Details\nWe implement the proposed Jasmine using Accelerate[16] and PyTorc"
+    },
+    {
+      "id": "chunk::Jasmine_p1_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 1,
+      "score": 0.6195787191390991,
+      "text": "Jasmine: Harnessing Diffusion Prior for\nSelf-Supervised Depth Estimation\nJiyuan Wang1 Chunyu Lin1† Cheng Guan1 Lang Nie4 Jing He3\nHaodong Li3 Kang Liao2 Yao Zhao1\n1BJTU 2NTU 3HKUST 4CQUPT †Corresponding Author\nFigure 1:Without any high-precision depth supe"
+    },
+    {
+      "id": "chunk::Jasmine_p7_chunk_1",
+      "source": "data\\Jasmine.pdf",
+      "page": 7,
+      "score": 0.6188449859619141,
+      "text": "Sec. C. Finally, the total\ntraining loss of the Jasmine model is:\nL=L s +L ph +L tc +L a ·η a,(12)\nwhere Ls refers to Eq.5, Lph refers to Eq. 2, Ltc refers to Eq. 11, and La is some auxiliary adjustment\nlosses (e.g.,gds loss[ 34] LGDS, edge loss Le, etc.)"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_chunk_11",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.6185585260391235,
+      "text": "rtion [42, 48], and arti-\nfacts [49, 50]. This misalignment stems from three inter-\nrelated issues:\n*Corresponding author\nThis work was supported by the National Natural Science Foundation\nof China under Grant 62172137.\n• Inevitable Brightness Residual : T"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_chunk_11",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.6185585260391235,
+      "text": "rtion [42, 48], and arti-\nfacts [49, 50]. This misalignment stems from three inter-\nrelated issues:\n*Corresponding author\nThis work was supported by the National Natural Science Foundation\nof China under Grant 62172137.\n• Inevitable Brightness Residual : T"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_23",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6173053979873657,
+      "text": "nd Pattern\nRecognition(CVPR), pages 586–595, 2018. 1, 4\n[47] Yonghua Zhang, Jiawan Zhang, and Xiaojie Guo. Kindling\nthe darkness: A practical low-light image enhancer. In Pro-\nceedings of the 27th ACM International Conference on Mul-\ntimedia (ACM MM), 2019"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_23",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.6173053979873657,
+      "text": "nd Pattern\nRecognition(CVPR), pages 586–595, 2018. 1, 4\n[47] Yonghua Zhang, Jiawan Zhang, and Xiaojie Guo. Kindling\nthe darkness: A practical low-light image enhancer. In Pro-\nceedings of the 27th ACM International Conference on Mul-\ntimedia (ACM MM), 2019"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_5",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 7,
+      "score": 0.6170228123664856,
+      "text": "5 5.671 0.234 0.827 0.938 0.971\nMonodepth2w/o pt ✓ ✓ ✓ 0.132 1.044 5.142 0.210 0.845 0.948 0.977\n(c) Baseline (full Eigen dataset) ✓ ✓ 0.146 1.876 5.666 0.230 0.848 0.945 0.972\nMonodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0.116 0.918 4.872 0.193 0.874 0.959 0."
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p7_chunk_5",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 7,
+      "score": 0.6170228123664856,
+      "text": "5 5.671 0.234 0.827 0.938 0.971\nMonodepth2w/o pt ✓ ✓ ✓ 0.132 1.044 5.142 0.210 0.845 0.948 0.977\n(c) Baseline (full Eigen dataset) ✓ ✓ 0.146 1.876 5.666 0.230 0.848 0.945 0.972\nMonodepth2(full Eigen dataset) ✓ ✓ ✓ ✓ ✓ 0.116 0.918 4.872 0.193 0.874 0.959 0."
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_13",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6157928705215454,
+      "text": "vision (ID (10) and Fig. 3 (e)),\nwhich strongly proves the effectiveness of\nour proposed MIR. The analysis of auxil-\niary images is presented in sub-table(d).\nThe experiments in IDs (0, 13, 14) indicate\nthat, compared to real/synthesis datasets,\nthe conten"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p6_chunk_12",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.6132380962371826,
+      "text": "0.196 0.874 0.957 0.979\nMonodepth2(1024×320) MS 0.106 0.806 4.630 0.193 0.876 0.958 0.980\nTable 1. Quantitative results. Com-\nparison of our method to existing\nmethods on KITTI 2015 [13] using\nthe Eigen split. Best results in each\ncategory are in bold; sec"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p6_chunk_12",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.6132380962371826,
+      "text": "0.196 0.874 0.957 0.979\nMonodepth2(1024×320) MS 0.106 0.806 4.630 0.193 0.876 0.958 0.980\nTable 1. Quantitative results. Com-\nparison of our method to existing\nmethods on KITTI 2015 [13] using\nthe Eigen split. Best results in each\ncategory are in bold; sec"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Jasmine_p21_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.7645492553710938,
+      "text": "0.6 0.121 0.649 4.322 0.8760.970\nLatent+1 0.129 0.679 4.385 0.858 0.962\nIn Fig. 8, we further compare the perfor-\nmance of our Jasmine with other methods\nin multi scenes. The quantitative results\nobviously demonstrate that our method\ncan produce much finer",
+      "estimated_tokens": 88
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_12",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6975032687187195,
+      "text": "conclusions to Sec. 3.2. Jasmine\nsignificantly outperforms the alternatives,\nsuch as KITTI/synthetic-only reconstruc-\ntion (IDs (8,9) and Fig. 3 (c,d)) and latent-\nspace supervision (ID (10) and Fig. 3 (e)),\nwhich strongly proves the effectiveness of\nour",
+      "estimated_tokens": 76
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_11",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6852766871452332,
+      "text": "rall model\nperformance is further enhanced by 10%,\nultimately achieving SoTA performance. A\ncomprehensive analysis of MIR was con-\nducted in sub-table(c)and we can draw\nsimilar conclusions to Sec. 3.2. Jasmine\nsignificantly outperforms the alternatives,\nsu",
+      "estimated_tokens": 63
+    },
+    {
+      "id": "chunk::Jasmine_p21_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 21,
+      "score": 0.6842625141143799,
+      "text": "-\nJasmine* 0.064 0.294 2.982 0.097 0.957 0.994 0.998\nMonoViT [68] 0.068 0.314 3.125 0.105 0.948 0.992 0.998\nMonoViFi [29]0.071 0.338 3.539 0.113 0.937 0.990 0.998\nJasmine 0.061 0.255 2.765 0.092 0.963 0.995 0.999\nE.2 Comparison with Other Self-Supervised S",
+      "estimated_tokens": 144
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.6697074770927429,
+      "text": "Appendix\nIn this appendix, we provide more implementation details, experiments, analysis, and discussions for\na comprehensive evaluation and understanding of Jasmine. Detailed contents are listed as follows:\nContents\nA Proof of Scale-Invariant Depth 15\nB D",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_20",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.6654761433601379,
+      "text": "ore computationally expensive than prior self-supervised methods,\nit follows the trend of models like Marigold in trading cost for superior performance. Notably, our\nSSG module adds negligible latency, with Jasmine’s runtime being comparable to Lotus.\nMeth",
+      "estimated_tokens": 51
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 472,
+    "compressed_context_tokens": 472,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 472,
+  "context_tokens": 472,
+  "prompt_token_estimate": 885,
+  "run_label": "sage_semantic_all_v1_chunk_jasmine_photometric_vs_reconstruction",
+  "answer": "<think>The user is asking why Jasmine uses photometric loss instead of latent reconstruction loss to optimize MIR (Multi-scale Implicit Representation or similar). \n\nLooking at the provided materials:\n- [1] mentions comparison of Jasmine with other methods in multi scenes\n- [2] mentions \"latent-space supervision (ID (10) and Fig. 3 (e))\" as an alternative that Jasmine outperforms\n- [3] mentions analysis of MIR showing Jasmine outperforms alternatives\n- [4] shows quantitative results comparison\n- [5] mentions appendix with implementation details\n- [6] mentions computational expense and SSG module\n\nThe materials mention that Jasmine outperforms latent-space supervision but don't explicitly explain WHY photometric loss is preferred over latent reconstruction loss for optimizing MIR. The specific reasoning isn't directly stated in the provided snippets.\n\nI should indicate that the information is insufficient to answer this specific question about why photometric loss is used instead of latent reconstruction loss.</think>\n\n{\"answer\":\"现有资料未直接说明Jasmine选择光度损失而非latent重建损失来优化MIR的具体原因。资料仅表明Jasmine在实验中显著优于latent-space supervision（资料[2]）以及其他替代方案（资料[3]），但没有给出选择光度损失的动机或理由。\",\"items\":[],\"missing_information\":\"缺少关于Jasmine为何选用光度损失（photometric loss）而非latent重建损失（latent reconstruction loss）来优化MIR的明确论述，例如是否因为光度损失能更好地保持几何一致性、对噪声更鲁棒、或提供更密集的监督信号等。需要原文中关于MIR设计动机或消融实验的章节。\"}",
+  "usage": {
+    "prompt_tokens": 928,
+    "completion_tokens": 328,
+    "total_tokens": 1256,
+    "model": "MiniMax-M3"
+  }
+}

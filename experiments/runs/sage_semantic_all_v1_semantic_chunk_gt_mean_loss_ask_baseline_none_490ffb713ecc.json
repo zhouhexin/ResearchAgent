@@ -1,0 +1,398 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_gt_mean_loss_ask_baseline_none_490ffb713ecc",
+  "dry_run": false,
+  "query": "GT-Mean Loss 对训练动态的实验发现包括哪些？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.8086531162261963,
+      "text": "In summary, the GT-mean loss is highlighted in the fol- lowing aspects: • Simplicity: The construction of the GT-mean loss is both theoretically and practically straightforward. Its underly- ing mechanism is easy to understand, and its implemen- tation is uncomplicated. • Flexibility: The GT-mean loss is highly flexible. For in- stance, the L1 loss can be directly extended into the L1 GT-mean version. This character makes adopting the GT- mean loss a universal choice for supervised LLIE models to upgrade their loss functions. • Low Cost : Using the GT-mean loss introduces mini- mal overhead during training (approximately doubling the original loss computation). It is negligible compared to the overall model optimization process. • Effectiveness: Extensive experiments have demonstrated that the GT-mean loss consistently improves model per- formance across a wide range of supervised LLIE meth- ods (as shown in Figure 2). 2. Related works Loss function is essential in LLIE tasks, as it directs model training. We categorize the loss functions in LLIE into two groups based on their purposes. Fidelity Losses."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.8086531162261963,
+      "text": "In summary, the GT-mean loss is highlighted in the fol- lowing aspects: • Simplicity: The construction of the GT-mean loss is both theoretically and practically straightforward. Its underly- ing mechanism is easy to understand, and its implemen- tation is uncomplicated. • Flexibility: The GT-mean loss is highly flexible. For in- stance, the L1 loss can be directly extended into the L1 GT-mean version. This character makes adopting the GT- mean loss a universal choice for supervised LLIE models to upgrade their loss functions. • Low Cost : Using the GT-mean loss introduces mini- mal overhead during training (approximately doubling the original loss computation). It is negligible compared to the overall model optimization process. • Effectiveness: Extensive experiments have demonstrated that the GT-mean loss consistently improves model per- formance across a wide range of supervised LLIE meth- ods (as shown in Figure 2). 2. Related works Loss function is essential in LLIE tasks, as it directs model training. We categorize the loss functions in LLIE into two groups based on their purposes. Fidelity Losses."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc5",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.7982378005981445,
+      "text": "Com- pared to the model’s forward and backward propagation, the original loss computation is minimal. The second term in the GT-Mean Loss is essentially a brightness-adjusted version of the original loss, sharing the same computational complexity. Thus, the GT-Mean Loss incurs only twice the computational overhead of the original loss. For example, 5"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc5",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.7982378005981445,
+      "text": "Com- pared to the model’s forward and backward propagation, the original loss computation is minimal. The second term in the GT-Mean Loss is essentially a brightness-adjusted version of the original loss, sharing the same computational complexity. Thus, the GT-Mean Loss incurs only twice the computational overhead of the original loss. For example, 5"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p6_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 6,
+      "score": 0.7870669960975647,
+      "text": "using GT-Mean Loss with Retinexformer increases training time by just 1%. Therefore, this loss function can be seamlessly integrated into existing supervised LLIE meth- ods, achieving nearly zero-cost performance improvements. Input RetinexFormer Ours Input Uformer Ours Input MIRNet Ours Input SNR-aware Ours Input Restormer Ours Input LLformer Ours Figure 3. Visual comparison of results on the five unpaired datasets: original image (left), results from baselines (middle), and results from their improved versions based on our loss (right). Unpaired Datasets. Table 3 presents the performance of the models on five unpaired datasets. Compared with the baseline performance, using GT-mean loss demonstrates superior or comparable results in most cases in terms of the non-reference evaluation metrics. These results indicate that the GT-Mean loss possesses strong generalization capa- bilities: even when tested on unseen images, performance improvements are still observed, proving that its success on supervised datasets is not due to overfitting. As shown in Figure 3, the examples based on the GT-Mean loss demon- strate improvements over the baseline results."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p6_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 6,
+      "score": 0.7870669960975647,
+      "text": "using GT-Mean Loss with Retinexformer increases training time by just 1%. Therefore, this loss function can be seamlessly integrated into existing supervised LLIE meth- ods, achieving nearly zero-cost performance improvements. Input RetinexFormer Ours Input Uformer Ours Input MIRNet Ours Input SNR-aware Ours Input Restormer Ours Input LLformer Ours Figure 3. Visual comparison of results on the five unpaired datasets: original image (left), results from baselines (middle), and results from their improved versions based on our loss (right). Unpaired Datasets. Table 3 presents the performance of the models on five unpaired datasets. Compared with the baseline performance, using GT-mean loss demonstrates superior or comparable results in most cases in terms of the non-reference evaluation metrics. These results indicate that the GT-Mean loss possesses strong generalization capa- bilities: even when tested on unseen images, performance improvements are still observed, proving that its success on supervised datasets is not due to overfitting. As shown in Figure 3, the examples based on the GT-Mean loss demon- strate improvements over the baseline results."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc4",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.7849487066268921,
+      "text": "As shown in Table 2, we evaluated the performance of the GT-Mean loss on three paired datasets, covering reference-based evaluation metrics (PSNR, SSIM, LPIPS) and their GT-Mean versions (GT-Mean PSNR, GT- Mean SSIM, GT-Mean LPIPS), along with QALIGN for image quality assessment (IQA) and image alignment as- sessment (IAA). The experimental results demonstrate that, across the seven baseline models, regardless of the type of original loss function, extending them with the GT-Mean loss consistently improves performance across all evaluation metrics. This outcome validates the universal effectiveness of the GT-Mean loss in LLIE tasks. Notably, both SNR- aware and CIDNet methods exhibit significant performance improvements after incorporating the GT-Mean loss, indicating that the GT-Mean loss effectively complements perceptual loss. One possible explanation is that the GT-Mean loss compensates for the lack of pixel-level per- ception in perceptual loss. Furthermore, since the weight W is computed analytically during training and does not require gradient propagation, its cost is negligible."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc4",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.7849487066268921,
+      "text": "As shown in Table 2, we evaluated the performance of the GT-Mean loss on three paired datasets, covering reference-based evaluation metrics (PSNR, SSIM, LPIPS) and their GT-Mean versions (GT-Mean PSNR, GT- Mean SSIM, GT-Mean LPIPS), along with QALIGN for image quality assessment (IQA) and image alignment as- sessment (IAA). The experimental results demonstrate that, across the seven baseline models, regardless of the type of original loss function, extending them with the GT-Mean loss consistently improves performance across all evaluation metrics. This outcome validates the universal effectiveness of the GT-Mean loss in LLIE tasks. Notably, both SNR- aware and CIDNet methods exhibit significant performance improvements after incorporating the GT-Mean loss, indicating that the GT-Mean loss effectively complements perceptual loss. One possible explanation is that the GT-Mean loss compensates for the lack of pixel-level per- ception in perceptual loss. Furthermore, since the weight W is computed analytically during training and does not require gradient propagation, its cost is negligible."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.7731888294219971,
+      "text": "Completely remov- ing the original loss term severely impairs the model’s per- formance. Does GT-Mean Loss achieve simultaneous improvement in perception and fidelity? GT-Mean Loss achieves opti- mal LPIPS, PSNR, and mean brightness discrepancy. Its dynamic weighting mechanism W adaptively adjusts the original loss term and brightness alignment term, avoiding the limitations of a single objective. Unlike the phase fluc- tuations of hybrid strategies or the collapse associated with full brightness alignment, GT-Mean Loss maintains contin- uous positive optimization of both perception and fidelity throughout training, leading to a transition from conflict to mutual enhancement. 4. 3. 3. Qualitative Analysis. In Figure 4B, we recorded the absolute difference |y − f (x)| as residual heatmaps at 50K, 100K, and 150K it- erations. The GT-Mean Loss demonstrates significantly smaller residuals in both texture and noise regions com- pared to the baseline, suggesting its superior capability in detail refinement. In Figure 4C, the final results generated using GT-Mean Loss exhibit excellent alignment with the ground truth (GT) in terms of color fidelity and structural clarity."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.7731888294219971,
+      "text": "Completely remov- ing the original loss term severely impairs the model’s per- formance. Does GT-Mean Loss achieve simultaneous improvement in perception and fidelity? GT-Mean Loss achieves opti- mal LPIPS, PSNR, and mean brightness discrepancy. Its dynamic weighting mechanism W adaptively adjusts the original loss term and brightness alignment term, avoiding the limitations of a single objective. Unlike the phase fluc- tuations of hybrid strategies or the collapse associated with full brightness alignment, GT-Mean Loss maintains contin- uous positive optimization of both perception and fidelity throughout training, leading to a transition from conflict to mutual enhancement. 4. 3. 3. Qualitative Analysis. In Figure 4B, we recorded the absolute difference |y − f (x)| as residual heatmaps at 50K, 100K, and 150K it- erations. The GT-Mean Loss demonstrates significantly smaller residuals in both texture and noise regions com- pared to the baseline, suggesting its superior capability in detail refinement. In Figure 4C, the final results generated using GT-Mean Loss exhibit excellent alignment with the ground truth (GT) in terms of color fidelity and structural clarity."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.766456127166748,
+      "text": "Based on the above experimental design, we present the curve of the original L1 loss (Figure 6(a)), and the curves of the GT-mean L1 loss under different σ values (Figure 6(b)). The difference between them is that the use of the GT-mean loss clearly produces basins around η = 1. In an- other word, the GT-mean loss produces small-gradient re- gion with regard to brightness around η = 1, of which the range is controlled by σ. From an optimization perspec- tive, since the gradients with respect to brightness become smaller, the optimization along the direction of brightness adjustment is in turn slowed down. Based on this charac- teristic, in real-world model training, the GT-mean L1 loss enables LLIE models to focus on other important degener- ation factors, when p(eE[y]) and q(eE[f (x)])] become closer. In contrast, the original L1 loss is less capable of decou- pling the optimization with respect to brightness and other visual quality factors. Additionally, Figure 6(c) presents the weight curves that correspond to Figure 6(b), demonstrating how the GT-mean L1 loss behaves with regard to weight variation."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.766456127166748,
+      "text": "Based on the above experimental design, we present the curve of the original L1 loss (Figure 6(a)), and the curves of the GT-mean L1 loss under different σ values (Figure 6(b)). The difference between them is that the use of the GT-mean loss clearly produces basins around η = 1. In an- other word, the GT-mean loss produces small-gradient re- gion with regard to brightness around η = 1, of which the range is controlled by σ. From an optimization perspec- tive, since the gradients with respect to brightness become smaller, the optimization along the direction of brightness adjustment is in turn slowed down. Based on this charac- teristic, in real-world model training, the GT-mean L1 loss enables LLIE models to focus on other important degener- ation factors, when p(eE[y]) and q(eE[f (x)])] become closer. In contrast, the original L1 loss is less capable of decou- pling the optimization with respect to brightness and other visual quality factors. Additionally, Figure 6(c) presents the weight curves that correspond to Figure 6(b), demonstrating how the GT-mean L1 loss behaves with regard to weight variation."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p1_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 1,
+      "score": 0.764396071434021,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement Jingxi Liao, Shijie Hao*, Richang Hong, Meng Wang, Hefei University of Technology, Hefei, China {jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.com Abstract Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting con- ditions. In supervised LLIE research, there exists a signifi- cant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth coun- terpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss func- tion directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT- mean form with minimal additional computational costs."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p1_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 1,
+      "score": 0.764396071434021,
+      "text": "GT-Mean Loss: A Simple Yet Effective Solution for Brightness Mismatch in Low-Light Image Enhancement Jingxi Liao, Shijie Hao*, Richang Hong, Meng Wang, Hefei University of Technology, Hefei, China {jingxi.ljx, hfut.hsj, hongrc.hfut, eric.mengwang }@gmail.com Abstract Low-light image enhancement (LLIE) aims to improve the visual quality of images captured under poor lighting con- ditions. In supervised LLIE research, there exists a signifi- cant yet often overlooked inconsistency between the overall brightness of an enhanced image and its ground truth coun- terpart, referred to as brightness mismatch in this study. Brightness mismatch negatively impact supervised LLIE models by misleading model training. However, this issue is largely neglected in current research. In this context, we propose the GT-mean loss, a simple yet effective loss func- tion directly modeling the mean values of images from a probabilistic perspective. The GT-mean loss is flexible, as it extends existing supervised LLIE loss functions into the GT- mean form with minimal additional computational costs."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p3_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 3,
+      "score": 0.7642288208007812,
+      "text": "To pursue comprehensive visual quality enhancement, LLIE models tend to incorporate multiple loss functions. While this strategy can lead to improved results, it also in- creases the burden of model design and hyperparameter tun- ing. More importantly, as the existing loss functions over- look the brightness mismatch factor, the fundamental chal- lenges brought by this factor remain unaddressed. 3. METHOD In Section 3. 1 present the formulation of the GT-mean loss. In Section 3. 2 detail the crucial component W of this loss function. Section 3. 3 summarizes the features of the pro- posed loss. 3. 1. GT-mean loss In general, the GT-mean loss LGT (f (x), y) can be re- garded as an extension of the existing loss L(f (x), y) used for LLIE. To deal with the issues arising from brightness mismatch, the key to constructing LGT (f (x), y) is match- ing the average brightness of f (x) and y. Furthermore, LGT (f (x), y) is designed to retain the form and effec- tiveness of the original loss L(f (x), y)."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p3_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 3,
+      "score": 0.7642288208007812,
+      "text": "To pursue comprehensive visual quality enhancement, LLIE models tend to incorporate multiple loss functions. While this strategy can lead to improved results, it also in- creases the burden of model design and hyperparameter tun- ing. More importantly, as the existing loss functions over- look the brightness mismatch factor, the fundamental chal- lenges brought by this factor remain unaddressed. 3. METHOD In Section 3. 1 present the formulation of the GT-mean loss. In Section 3. 2 detail the crucial component W of this loss function. Section 3. 3 summarizes the features of the pro- posed loss. 3. 1. GT-mean loss In general, the GT-mean loss LGT (f (x), y) can be re- garded as an extension of the existing loss L(f (x), y) used for LLIE. To deal with the issues arising from brightness mismatch, the key to constructing LGT (f (x), y) is match- ing the average brightness of f (x) and y. Furthermore, LGT (f (x), y) is designed to retain the form and effec- tiveness of the original loss L(f (x), y)."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.7589126825332642,
+      "text": "1 allows the GT- mean loss to continuously improve model performance. In addition, the experiment shows that the choice of σ value is open. As σ measures the spread of the random variable eE[·] deviating from the observed average image brightness E[·] in our modeling, we recommend using a small value, such as σ = 0. 1 for real world application. 4. 5. Further analysis on the GT-mean loss In this experiment, we further investigate the difference be- tween the original loss and the GT-mean loss. Specifically, we randomly selected a batch of low-light images (batchsize = 8) and their corresponding ground truth images. These images were enhanced using RetinexFormer to produce en- hanced outputs f (x). To simulate the varying brightness, we introduced a unified scaling factorη ranging from 0 to 3, simulating the progression of the enhanced images η · f (x) from dark to bright. This experiment setting simulates how the loss value varies under different brightness levels, facil- itating us to investigate the loss curve with respect to the brightness variation only."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.7589125037193298,
+      "text": "1 allows the GT- mean loss to continuously improve model performance. In addition, the experiment shows that the choice of σ value is open. As σ measures the spread of the random variable eE[·] deviating from the observed average image brightness E[·] in our modeling, we recommend using a small value, such as σ = 0. 1 for real world application. 4. 5. Further analysis on the GT-mean loss In this experiment, we further investigate the difference be- tween the original loss and the GT-mean loss. Specifically, we randomly selected a batch of low-light images (batchsize = 8) and their corresponding ground truth images. These images were enhanced using RetinexFormer to produce en- hanced outputs f (x). To simulate the varying brightness, we introduced a unified scaling factorη ranging from 0 to 3, simulating the progression of the enhanced images η · f (x) from dark to bright. This experiment setting simulates how the loss value varies under different brightness levels, facil- itating us to investigate the loss curve with respect to the brightness variation only."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.7572055459022522,
+      "text": "At this stage, the GT-mean loss operates under the assumption of consistent image brightness, compelling the model to focus on ad- dressing degradation factors beyond brightness enhance- ment, such as noise, contrast, or structural details. This dynamic adjustment enables the model to refine its perfor- mance progressively, further mitigating degradation while preserving the capabilities of the baseline model. In application, flexibility is the primary advantage of the GT-mean loss, as it is independent of the model architecture and only requires the enhanced image f (x) and the ground truth y as inputs. Therefore, the GT-mean loss can be used in any supervised LLIE method by simply extending its su- pervised loss function into the GT-mean version. The GT-mean loss is also efficient. Compared to the original loss, it doubles the computation, and W is esti- mated with an analytical solution. Despite there is extra computation overhead, the overall increase introduced by the GT-mean loss is negligible throughout the training pro- cess. 4. Experiment 4. 1. Datasets and Settings Baselines. We selected a total of seven supervised LLIE models as baselines."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p4_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 4,
+      "score": 0.7572055459022522,
+      "text": "At this stage, the GT-mean loss operates under the assumption of consistent image brightness, compelling the model to focus on ad- dressing degradation factors beyond brightness enhance- ment, such as noise, contrast, or structural details. This dynamic adjustment enables the model to refine its perfor- mance progressively, further mitigating degradation while preserving the capabilities of the baseline model. In application, flexibility is the primary advantage of the GT-mean loss, as it is independent of the model architecture and only requires the enhanced image f (x) and the ground truth y as inputs. Therefore, the GT-mean loss can be used in any supervised LLIE method by simply extending its su- pervised loss function into the GT-mean version. The GT-mean loss is also efficient. Compared to the original loss, it doubles the computation, and W is esti- mated with an analytical solution. Despite there is extra computation overhead, the overall increase introduced by the GT-mean loss is negligible throughout the training pro- cess. 4. Experiment 4. 1. Datasets and Settings Baselines. We selected a total of seven supervised LLIE models as baselines."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.7533566951751709,
+      "text": "056(-0. 001)3. 197(↑) 2. 130(↑) Restormer 26. 288 0. 944 0. 045 30. 57 0. 955 0. 039 3. 350 2. 187Restormer with GT-mean loss(ours) 26. 630(+0. 342)0. 946(+0. 002)0. 041(-0. 004)31. 001(+0. 431)0. 957(+0. 002)0. 036(-0. 003)3. 404(↑) 2. 218(↑) LLFormer 24. 195 0. 918 0. 07 27. 862 0. 930 0. 064 3. 176 2. 137LLFormer with GT-mean loss(ours) 25. 152( +0. 957)0. 932(+0. 014)0. 058(-0. 012)29. 266(+1. 404)0. 945(+0. 015)0. 051(-0. 013)3. 283(↑) 2. 177(↑) SNR-Aware 24. 173 0. 924 0. 064 27. 756 0. 937 0. 058 3. 275 2. 209SNR-Aware with GT-mean loss(ours) 24. 301(+0. 128)0. 933(+0. 009)0. 057(-0. 007) 28. 525(+0. 769)0. 945(+0. 008)0. 050(-0. 008)3. 326(↑) 2. 207(↓) meaningful evaluations. For unpaired datasets, we evaluated the model per- formance using QALIGN’s IQA and IAA modules, NIQE [24], and MUSIQ [14]. Implementation Details. To retrain the baselines equipped with GT-mean loss functions, we followed the their official settings, which can be found in Appendix. 4. 2. Quantitative Results Paired Datasets."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.7533566951751709,
+      "text": "056(-0. 001)3. 197(↑) 2. 130(↑) Restormer 26. 288 0. 944 0. 045 30. 57 0. 955 0. 039 3. 350 2. 187Restormer with GT-mean loss(ours) 26. 630(+0. 342)0. 946(+0. 002)0. 041(-0. 004)31. 001(+0. 431)0. 957(+0. 002)0. 036(-0. 003)3. 404(↑) 2. 218(↑) LLFormer 24. 195 0. 918 0. 07 27. 862 0. 930 0. 064 3. 176 2. 137LLFormer with GT-mean loss(ours) 25. 152( +0. 957)0. 932(+0. 014)0. 058(-0. 012)29. 266(+1. 404)0. 945(+0. 015)0. 051(-0. 013)3. 283(↑) 2. 177(↑) SNR-Aware 24. 173 0. 924 0. 064 27. 756 0. 937 0. 058 3. 275 2. 209SNR-Aware with GT-mean loss(ours) 24. 301(+0. 128)0. 933(+0. 009)0. 057(-0. 007) 28. 525(+0. 769)0. 945(+0. 008)0. 050(-0. 008)3. 326(↑) 2. 207(↓) meaningful evaluations. For unpaired datasets, we evaluated the model per- formance using QALIGN’s IQA and IAA modules, NIQE [24], and MUSIQ [14]. Implementation Details. To retrain the baselines equipped with GT-mean loss functions, we followed the their official settings, which can be found in Appendix. 4. 2. Quantitative Results Paired Datasets."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.7478528022766113,
+      "text": "987Restormer with GT-mean loss(ours) 20. 717(+0. 482)0. 845(+0. 004)0. 149(-0. 013)28. 440(+0. 281)0. 884(+0. 004)0. 135(-0. 012)3. 554(↑) 2. 020(↑) LLFormer 21. 308 0. 803 0. 248 27. 052 0. 828 0. 236 2. 882 1. 827LLFormer with GT-mean loss(ours) 22. 291(+0. 983)0. 844( +0. 041)0. 166(-0. 082)28. 334(+1. 282)0. 870( +0. 042)0. 156(-0. 080)3. 104(↑) 1. 880(↑) SNR-Aware 21. 103 0. 839 0. 169 26. 971 0. 866 0. 161 3. 354 1. 879SNR-Aware with GT-mean loss(ours) 21. 350(+0. 247)0. 844(+0. 005)0. 164(-0. 005)27. 740(+0. 770)0. 875(+0. 010)0. 154(-0. 007)3. 468(↑) 1. 889(↑) LOLv2-synthetic Uformer 24. 693 0. 932 0. 060 27. 438 0. 941 0. 055 3. 148 2. 114Uformer with GT-mean loss(ours) 25. 319(+0. 626)0. 940( +0. 007)0. 049(-0. 011)28. 683(+1. 245)0. 948(+0. 007)0. 045(-0. 010)3. 191(↑) 2. 144(↑) MIRNet 22. 059 0. 894 0. 122 25. 274 0. 908 0. 114 2. 956 2. 145MIRNet with GT-mean loss(ours) 22. 576(+0. 517)0. 906(+0. 011)0. 104(-0. 018)26. 215(+0. 941)0. 918(+0. 010)0. 094(-0. 020)3. 064(↑) 2. 187(↑) RetinexFormer 25. 281 0. 928 0. 064 28. 827 0. 939 0. 057 3. 102 2. 099RetinexFormer with GT-mean loss(ours)25. 583(+0. 299)0. 933(+0. 005)0. 063(-0. 001)29. 261(+0. 434)0. 944(+0. 005)0."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.7478528022766113,
+      "text": "987Restormer with GT-mean loss(ours) 20. 717(+0. 482)0. 845(+0. 004)0. 149(-0. 013)28. 440(+0. 281)0. 884(+0. 004)0. 135(-0. 012)3. 554(↑) 2. 020(↑) LLFormer 21. 308 0. 803 0. 248 27. 052 0. 828 0. 236 2. 882 1. 827LLFormer with GT-mean loss(ours) 22. 291(+0. 983)0. 844( +0. 041)0. 166(-0. 082)28. 334(+1. 282)0. 870( +0. 042)0. 156(-0. 080)3. 104(↑) 1. 880(↑) SNR-Aware 21. 103 0. 839 0. 169 26. 971 0. 866 0. 161 3. 354 1. 879SNR-Aware with GT-mean loss(ours) 21. 350(+0. 247)0. 844(+0. 005)0. 164(-0. 005)27. 740(+0. 770)0. 875(+0. 010)0. 154(-0. 007)3. 468(↑) 1. 889(↑) LOLv2-synthetic Uformer 24. 693 0. 932 0. 060 27. 438 0. 941 0. 055 3. 148 2. 114Uformer with GT-mean loss(ours) 25. 319(+0. 626)0. 940( +0. 007)0. 049(-0. 011)28. 683(+1. 245)0. 948(+0. 007)0. 045(-0. 010)3. 191(↑) 2. 144(↑) MIRNet 22. 059 0. 894 0. 122 25. 274 0. 908 0. 114 2. 956 2. 145MIRNet with GT-mean loss(ours) 22. 576(+0. 517)0. 906(+0. 011)0. 104(-0. 018)26. 215(+0. 941)0. 918(+0. 010)0. 094(-0. 020)3. 064(↑) 2. 187(↑) RetinexFormer 25. 281 0. 928 0. 064 28. 827 0. 939 0. 057 3. 102 2. 099RetinexFormer with GT-mean loss(ours)25. 583(+0. 299)0. 933(+0. 005)0. 063(-0. 001)29. 261(+0. 434)0. 944(+0. 005)0."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.7461705207824707,
+      "text": "To validate the combined effect of the GT-Mean loss and perceptual loss, the baselines include SNR-aware [41] and CID-Net [42], both of which incorpo- rate perceptual loss. All baselines and their original loss functions are listed in Table 1: Table 1. Baselines and Their Loss Functions Method Loss Function Restormer [45]L1lossRetinexFormer [4]L1lossLLFormer [32] SmoothL1loss [8]MIRNet [44] Charbonnier loss [1]Uformer [35] Charbonnier loss [1]SNR-Aware [41] Charbonnier loss [1], perceptual loss [12]CID-Net [42]L1loss, edge loss [27], perceptual loss [12] Datasets. We conducted experiments on both paired and unpaired datasets to evaluate our loss. For paired datasets, we used LOLv1 [36], LOLv2-real [43], and LOLv2-syn [43]. Specifically, the LOLv1 dataset includes 485 train- ing images and 15 testing images. The LOLv2-real dataset includes 689 training images and 100 testing images. The LOLv2-synthetic dataset includes 900 training images and 100 testing images. For unpaired datasets, we chose DICM [15], VV [29], NPE [31], MEF [21], and LIME [9] as the test sets. Evaluation Metrics."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p4_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 4,
+      "score": 0.7461705207824707,
+      "text": "To validate the combined effect of the GT-Mean loss and perceptual loss, the baselines include SNR-aware [41] and CID-Net [42], both of which incorpo- rate perceptual loss. All baselines and their original loss functions are listed in Table 1: Table 1. Baselines and Their Loss Functions Method Loss Function Restormer [45]L1lossRetinexFormer [4]L1lossLLFormer [32] SmoothL1loss [8]MIRNet [44] Charbonnier loss [1]Uformer [35] Charbonnier loss [1]SNR-Aware [41] Charbonnier loss [1], perceptual loss [12]CID-Net [42]L1loss, edge loss [27], perceptual loss [12] Datasets. We conducted experiments on both paired and unpaired datasets to evaluate our loss. For paired datasets, we used LOLv1 [36], LOLv2-real [43], and LOLv2-syn [43]. Specifically, the LOLv1 dataset includes 485 train- ing images and 15 testing images. The LOLv2-real dataset includes 689 training images and 100 testing images. The LOLv2-synthetic dataset includes 900 training images and 100 testing images. For unpaired datasets, we chose DICM [15], VV [29], NPE [31], MEF [21], and LIME [9] as the test sets. Evaluation Metrics."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.74458909034729,
+      "text": "880 57. 262 3. 111 2. 3233. 380 60. 507 3. 673 2. 6992. 730 37. 513 3. 471 2. 1543. 420 53. 77 3. 438 2. 458Retinexformer with GT-mean loss (ours) 3. 210 57. 247 3. 805 2. 7733. 820 56. 633 3. 195 2. 4123. 840 57. 374 3. 273 2. 4233. 370 60. 682 3. 706 2. 7192. 770 37. 654 3. 517 2. 1663. 400(-)53. 918(+)3. 499(+)2. 498(+) SNR 6. 070 47. 025 3. 379 2. 5264. 270 48. 685 2. 531 1. 9436. 060 49. 216 2. 836 2. 1026. 470 46. 441 3. 445 2. 55111. 520 23. 186 3. 067 1. 9556. 880 42. 911 3. 052 2. 215SNR with GT-mean loss (ours) 6. 120 47. 430 3. 521 2. 5714. 260 48. 780 2. 571 1. 9576. 110 49. 008 2. 946 2. 1526. 460 46. 602 3. 580 2. 60511. 550 23. 853 3. 137 1. 9976. 900(+)43. 135(+)3. 151(+)2. 256(+) Uformer 3. 080 58. 084 2. 971 2. 1443. 720 56. 177 3. 177 2. 4033. 660 57. 698 2. 646 1. 9673. 400 61. 310 2. 938 2. 1312. 700 36. 235 2. 904 1. 8393. 310 53. 901 2. 927 2. 097Uformer with GT-mean loss (ours) 3. 120 58. 981 3. 067 2. 1803. 690 56. 641 3. 229 2. 4263. 640 58. 200 2. 712 1. 9733. 380 61. 704 2. 956 2. 1132. 700 36. 695 3. 001 1. 8483. 300(-)54. 444(+)2. 993(+)2. 108(+) LLformer 3. 260 56. 642 3. 832 2. 7883. 750 53. 335 2. 667 1. 9934. 010 55. 671 3. 040 2. 3433. 320 59."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.74458909034729,
+      "text": "880 57. 262 3. 111 2. 3233. 380 60. 507 3. 673 2. 6992. 730 37. 513 3. 471 2. 1543. 420 53. 77 3. 438 2. 458Retinexformer with GT-mean loss (ours) 3. 210 57. 247 3. 805 2. 7733. 820 56. 633 3. 195 2. 4123. 840 57. 374 3. 273 2. 4233. 370 60. 682 3. 706 2. 7192. 770 37. 654 3. 517 2. 1663. 400(-)53. 918(+)3. 499(+)2. 498(+) SNR 6. 070 47. 025 3. 379 2. 5264. 270 48. 685 2. 531 1. 9436. 060 49. 216 2. 836 2. 1026. 470 46. 441 3. 445 2. 55111. 520 23. 186 3. 067 1. 9556. 880 42. 911 3. 052 2. 215SNR with GT-mean loss (ours) 6. 120 47. 430 3. 521 2. 5714. 260 48. 780 2. 571 1. 9576. 110 49. 008 2. 946 2. 1526. 460 46. 602 3. 580 2. 60511. 550 23. 853 3. 137 1. 9976. 900(+)43. 135(+)3. 151(+)2. 256(+) Uformer 3. 080 58. 084 2. 971 2. 1443. 720 56. 177 3. 177 2. 4033. 660 57. 698 2. 646 1. 9673. 400 61. 310 2. 938 2. 1312. 700 36. 235 2. 904 1. 8393. 310 53. 901 2. 927 2. 097Uformer with GT-mean loss (ours) 3. 120 58. 981 3. 067 2. 1803. 690 56. 641 3. 229 2. 4263. 640 58. 200 2. 712 1. 9733. 380 61. 704 2. 956 2. 1132. 700 36. 695 3. 001 1. 8483. 300(-)54. 444(+)2. 993(+)2. 108(+) LLformer 3. 260 56. 642 3. 832 2. 7883. 750 53. 335 2. 667 1. 9934. 010 55. 671 3. 040 2. 3433. 320 59."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p11_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 11,
+      "score": 0.7404988408088684,
+      "text": "Appendix A. EXPERIMENTAL DETAILS In this section, we present the experimental setup for each method. Our aim is to ensure consistency with the official settings for each baseline model while introducing the GT- mean loss to demonstrate its effectiveness. To ensure fair comparisons, both the baseline models and the ones using GT-mean loss were trained under identical hardware and software environments, minimizing the effects of random- ness. Uformer. Both the baseline and the GT-mean loss vari- ant were trained following the experimental setup for mo- tion deblurring in [35], selected Uformer-T as the backbone model. The Charbonnier loss used in the baseline was ex- tended to GT-mean loss for the variant. MIRNet. Both the baseline and the GT-mean loss vari- ant were trained according to the settings used for the de- noising task in [44]. In the GT-mean loss variant, the Char- bonnier loss was replaced with the GT-mean loss. RetinexFormer. For both the baseline and the GT-mean loss variant, we followed the training settings for LOL datasets in [4]. The L1 loss used in the baseline was ex- tended to GT-mean loss in the variant. Restormer."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p11_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 11,
+      "score": 0.7404988408088684,
+      "text": "Appendix A. EXPERIMENTAL DETAILS In this section, we present the experimental setup for each method. Our aim is to ensure consistency with the official settings for each baseline model while introducing the GT- mean loss to demonstrate its effectiveness. To ensure fair comparisons, both the baseline models and the ones using GT-mean loss were trained under identical hardware and software environments, minimizing the effects of random- ness. Uformer. Both the baseline and the GT-mean loss vari- ant were trained following the experimental setup for mo- tion deblurring in [35], selected Uformer-T as the backbone model. The Charbonnier loss used in the baseline was ex- tended to GT-mean loss for the variant. MIRNet. Both the baseline and the GT-mean loss vari- ant were trained according to the settings used for the de- noising task in [44]. In the GT-mean loss variant, the Char- bonnier loss was replaced with the GT-mean loss. RetinexFormer. For both the baseline and the GT-mean loss variant, we followed the training settings for LOL datasets in [4]. The L1 loss used in the baseline was ex- tended to GT-mean loss in the variant. Restormer."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.7404680252075195,
+      "text": "(a) L1 loss curve (b) GT-mean L1 loss curves (c) Curves of the weight W Figure 6. Loss curves and weight curves for analyzing the effectiveness of the GT-mean loss. loss under different σ values. We selected 10 different σ values, running each setting three times for consistency. Notably, σ = 0 represents a special case where the GT- mean L1 loss degrades to the original L1 loss. For every 1,000 (1K) iterations in the 150K iterations, we calculated mean and variance of PSNR, shown in Figure 5 for demon- strating the trend during training. In the early stages (as can be seen in Figure 5 (a)), the curve tendencies under different σ settings are similar. Considering the curve with σ = 0is the original L1 loss, we can verify that the GT-mean loss at the early stage behaves like the originalL1 loss. In contrast, as shown in the zoomed-in views of the last 30K iterations (Figure 5 (b)), we observe that all settings become stable, and the settings with non-zero σ consistently perform bet- ter than σ = 0. This observation shows that the GT-mean loss diverges significantly from the original L1 loss in the late training stage. The second term in Eq."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.7404680252075195,
+      "text": "(a) L1 loss curve (b) GT-mean L1 loss curves (c) Curves of the weight W Figure 6. Loss curves and weight curves for analyzing the effectiveness of the GT-mean loss. loss under different σ values. We selected 10 different σ values, running each setting three times for consistency. Notably, σ = 0 represents a special case where the GT- mean L1 loss degrades to the original L1 loss. For every 1,000 (1K) iterations in the 150K iterations, we calculated mean and variance of PSNR, shown in Figure 5 for demon- strating the trend during training. In the early stages (as can be seen in Figure 5 (a)), the curve tendencies under different σ settings are similar. Considering the curve with σ = 0is the original L1 loss, we can verify that the GT-mean loss at the early stage behaves like the originalL1 loss. In contrast, as shown in the zoomed-in views of the last 30K iterations (Figure 5 (b)), we observe that all settings become stable, and the settings with non-zero σ consistently perform bet- ter than σ = 0. This observation shows that the GT-mean loss diverges significantly from the original L1 loss in the late training stage. The second term in Eq."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.7377833127975464,
+      "text": "As η ap- proaches 1, the weight W rapidly decreases, indicating that the second term in Eq. 1 begins to dominate the loss func- tion, confirming the mechanism of our loss. Notably, as σ increases, W starts to drop at smaller values of η, meaning that the second term in Eq. 1 takes over earlier in the opti- mization process. This behavior aligns with the design of σ, which controls the spread of eE[·]. 5. Conclusion In this paper, we propose the GT-mean loss to advance re- search on supervised low-light image enhancement (LLIE) methods. The GT-mean loss enables the model train- ing process to circumvent the misleading issue caused by brightness mismatch, thereby comprehensively addressing the various degeneration factors in low-light images. Due to its simple construction, the GT-mean loss can be eas- ily adopted by a wide range of supervised LLIE methods, imposing minimal additional computational overhead dur- ing training. Experiments across various supervised LLIE methods consistently demonstrate the effectiveness of the proposed loss."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p8_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 8,
+      "score": 0.7377833127975464,
+      "text": "As η ap- proaches 1, the weight W rapidly decreases, indicating that the second term in Eq. 1 begins to dominate the loss func- tion, confirming the mechanism of our loss. Notably, as σ increases, W starts to drop at smaller values of η, meaning that the second term in Eq. 1 takes over earlier in the opti- mization process. This behavior aligns with the design of σ, which controls the spread of eE[·]. 5. Conclusion In this paper, we propose the GT-mean loss to advance re- search on supervised low-light image enhancement (LLIE) methods. The GT-mean loss enables the model train- ing process to circumvent the misleading issue caused by brightness mismatch, thereby comprehensively addressing the various degeneration factors in low-light images. Due to its simple construction, the GT-mean loss can be eas- ily adopted by a wide range of supervised LLIE methods, imposing minimal additional computational overhead dur- ing training. Experiments across various supervised LLIE methods consistently demonstrate the effectiveness of the proposed loss."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.7346972227096558,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.7346972227096558,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.7279380559921265,
+      "text": "Inspired by human visual adaptation, we propose the GT- Mean Loss, which dynamically balances two optimization objectives to enable end-to-end training: • Original Loss Term. Maintain the model’s baseline ca- pabilities by directly optimizing L(f (x), y). • Brightness-Aligned Loss Term. This term is defined as L(λf (x), y), where λ = E[y]/E[f (x)] linearly scales f (x) such that the mean brightness of the scaled output E[λf (x)] aligns with E[y] . This eliminates the interfer- ence of brightness differences during optimization. To dynamically balance these two terms, we intro- duce W , which represents the Bhattacharyya distance be- tween the brightness distributions of f (x) and y. Unlike multi-stage frameworks, GT-Mean Loss enables brightness- decoupled optimization without requiring architectural modifications or manually tuned thresholds. Although perceptual losses can to some extent ignore the impact of brightness mismatch, almost all perceptual losses abandon corrections. In contrast, our GT-mean loss directly addresses the influence of brightness mismatch on pixel- level loss. The results in our experimental section validate this point in Section 4. 2."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.7279380559921265,
+      "text": "Inspired by human visual adaptation, we propose the GT- Mean Loss, which dynamically balances two optimization objectives to enable end-to-end training: • Original Loss Term. Maintain the model’s baseline ca- pabilities by directly optimizing L(f (x), y). • Brightness-Aligned Loss Term. This term is defined as L(λf (x), y), where λ = E[y]/E[f (x)] linearly scales f (x) such that the mean brightness of the scaled output E[λf (x)] aligns with E[y] . This eliminates the interfer- ence of brightness differences during optimization. To dynamically balance these two terms, we intro- duce W , which represents the Bhattacharyya distance be- tween the brightness distributions of f (x) and y. Unlike multi-stage frameworks, GT-Mean Loss enables brightness- decoupled optimization without requiring architectural modifications or manually tuned thresholds. Although perceptual losses can to some extent ignore the impact of brightness mismatch, almost all perceptual losses abandon corrections. In contrast, our GT-mean loss directly addresses the influence of brightness mismatch on pixel- level loss. The results in our experimental section validate this point in Section 4. 2."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p11_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 11,
+      "score": 0.7204519510269165,
+      "text": "The baseline and the GT-mean loss variant were both trained following the motion deblurring settings described in [45]. The L1 loss in the baseline was extended to GT-mean loss in the variant. LLFormer. Both the baseline and the GT-mean loss variant were trained according to the settings for the LOLv1 dataset described in [32]. The Smooth L1 loss used in the baseline was extended to GT-mean loss for the variant. SNR-Aware. The baseline and the GT-mean loss variant were both trained using the settings for for LOL datasets outlined in [41]. The Charbonnier loss and perceptual loss used in the baseline were extended to GT-mean loss in the variant. CID-Net. Both the baseline and the GT-mean loss vari- ant were trained using the LOLv1 settings described in [42]. In the GT-mean loss variant, the Charbonnier loss, edge loss, and perceptual loss were extended to GT-mean loss. In summary, for each method, the original loss functions were extended to GT-mean loss, and all models were trained using consistent settings to ensure a fair comparison. 11"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p11_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 11,
+      "score": 0.7204519510269165,
+      "text": "The baseline and the GT-mean loss variant were both trained following the motion deblurring settings described in [45]. The L1 loss in the baseline was extended to GT-mean loss in the variant. LLFormer. Both the baseline and the GT-mean loss variant were trained according to the settings for the LOLv1 dataset described in [32]. The Smooth L1 loss used in the baseline was extended to GT-mean loss for the variant. SNR-Aware. The baseline and the GT-mean loss variant were both trained using the settings for for LOL datasets outlined in [41]. The Charbonnier loss and perceptual loss used in the baseline were extended to GT-mean loss in the variant. CID-Net. Both the baseline and the GT-mean loss vari- ant were trained using the LOLv1 settings described in [42]. In the GT-mean loss variant, the Charbonnier loss, edge loss, and perceptual loss were extended to GT-mean loss. In summary, for each method, the original loss functions were extended to GT-mean loss, and all models were trained using consistent settings to ensure a fair comparison. 11"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.7174549698829651,
+      "text": "In supervised LLIE, the enhanced image f (x) should closely resemble the ground truth image y. Consequently, we assume that the shape of p(eE[y]) and q(eE[f (x)]) are similar. Based on this assumption, we equate σ2 α and σ2 β, setting them both to σ2. In our experiments, we empirically set σ as 0. 1 for all the comparisons. In Section 4. 4, we delve deeper into the influence of σ on the performance of LLIE. 3. 3. Discussion of the GT-mean loss The primary strength of the GT-mean loss lies in its ability to dynamically balance the model’s focus during training. In the early stages, when the difference between p(eE[y]) and q(eE[f (x)]) is significant, the weight W is expected to approach 1, causing the first term L(f (x), y) to dominate the overall loss function. This behavior ensures that the GT- mean loss closely resembles the original loss L(f (x), y), thereby preserving the baseline model’s capabilities. As training progresses and p(eE[y]) and q(eE[f (x)]) be- come closer, W decreases to a smaller value. This shift in weight emphasizes the second term L \u0010 E[y] E[f (x)] f (x), y \u0011 , ensuring that f (x) and y are compared under the condi- tion of average brightness alignment."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p4_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 4,
+      "score": 0.7174549698829651,
+      "text": "In supervised LLIE, the enhanced image f (x) should closely resemble the ground truth image y. Consequently, we assume that the shape of p(eE[y]) and q(eE[f (x)]) are similar. Based on this assumption, we equate σ2 α and σ2 β, setting them both to σ2. In our experiments, we empirically set σ as 0. 1 for all the comparisons. In Section 4. 4, we delve deeper into the influence of σ on the performance of LLIE. 3. 3. Discussion of the GT-mean loss The primary strength of the GT-mean loss lies in its ability to dynamically balance the model’s focus during training. In the early stages, when the difference between p(eE[y]) and q(eE[f (x)]) is significant, the weight W is expected to approach 1, causing the first term L(f (x), y) to dominate the overall loss function. This behavior ensures that the GT- mean loss closely resembles the original loss L(f (x), y), thereby preserving the baseline model’s capabilities. As training progresses and p(eE[y]) and q(eE[f (x)]) be- come closer, W decreases to a smaller value. This shift in weight emphasizes the second term L \u0010 E[y] E[f (x)] f (x), y \u0011 , ensuring that f (x) and y are compared under the condi- tion of average brightness alignment."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.7152204513549805,
+      "text": "824 3. 657 2. 7163. 160 60. 885 3. 557 2. 2493. 500 57. 271 3. 351 2. 418LLformer with GT-mean loss(ours)3. 050 57. 038 3. 910 2. 8373. 650 53. 842 2. 706 2. 0174. 070 55. 830 3. 118 2. 4163. 330 60. 044 3. 707 2. 7312. 990 60. 858 3. 563 2. 2313. 410(-)57. 522(+)3. 401(+)2. 446(+) Brightness discrepancy Iterations(K) PNSR Iterations(K) 50K 100K 150K with GT-mean loss baseline with GT-mean loss GT input C baseline B LPIPS Iterations(K) A Figure 4. Impact of GT-Mean Loss integration on training dynamics and enhancement quality. (A) Evolution of LPIPS (perceptual quality), PSNR (pixel fidelity), and brightness discrepancy ( |E[y] − E[f (x)]|) across four training strategies. (B) Absolute residual heatmaps (|y − f (x)|) at critical training stages. (C) Final output comparison showing improvements in color fidelity and detail preservation. Can brightness alignment alone achieve performance improvement? We found that the full brightness align- ment strategy causes a monotonic increase in LPIPS from 0. 191 to 0. 473, and PSNR decreases from 18. 6 dB to 7. 9 dB. These results demonstrate that the original loss term is crucial to the model’s training process."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.7152204513549805,
+      "text": "824 3. 657 2. 7163. 160 60. 885 3. 557 2. 2493. 500 57. 271 3. 351 2. 418LLformer with GT-mean loss(ours)3. 050 57. 038 3. 910 2. 8373. 650 53. 842 2. 706 2. 0174. 070 55. 830 3. 118 2. 4163. 330 60. 044 3. 707 2. 7312. 990 60. 858 3. 563 2. 2313. 410(-)57. 522(+)3. 401(+)2. 446(+) Brightness discrepancy Iterations(K) PNSR Iterations(K) 50K 100K 150K with GT-mean loss baseline with GT-mean loss GT input C baseline B LPIPS Iterations(K) A Figure 4. Impact of GT-Mean Loss integration on training dynamics and enhancement quality. (A) Evolution of LPIPS (perceptual quality), PSNR (pixel fidelity), and brightness discrepancy ( |E[y] − E[f (x)]|) across four training strategies. (B) Absolute residual heatmaps (|y − f (x)|) at critical training stages. (C) Final output comparison showing improvements in color fidelity and detail preservation. Can brightness alignment alone achieve performance improvement? We found that the full brightness align- ment strategy causes a monotonic increase in LPIPS from 0. 191 to 0. 473, and PSNR decreases from 18. 6 dB to 7. 9 dB. These results demonstrate that the original loss term is crucial to the model’s training process."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.7146379351615906,
+      "text": "(a) LOLv1 (b) LOLv2 real (c) LOLv2 synthetic Figure 2. Performance across various supervised LLIE models trained by their original loss functions and our GT-mean loss functions. The performance is consistently improved when the GT-mean loss functions are adopted. Notably, this improvement is easily attainable, as the use of GT-mean loss functions is flexible and brings minimal additional computational costs during training. The issue under brightness mismatch has largely been ig- nored in existing supervised LLIE research, despite some indirect solutions that do not primarily address this prob- lem. For example, [23, 36, 39, 43] designed multiple sub-networks to decouple brightness from other factors and optimized them separately. Nevertheless, the divide- and-conquer roadmap inevitably complicates the model de- sign, as well as introducing significant computational over- head. Others use perceptual losses [12] to bypass pixel-level alignment, sacrificing reconstruction fidelity. A unified, ef- ficient solution remains elusive."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.7146378755569458,
+      "text": "(a) LOLv1 (b) LOLv2 real (c) LOLv2 synthetic Figure 2. Performance across various supervised LLIE models trained by their original loss functions and our GT-mean loss functions. The performance is consistently improved when the GT-mean loss functions are adopted. Notably, this improvement is easily attainable, as the use of GT-mean loss functions is flexible and brings minimal additional computational costs during training. The issue under brightness mismatch has largely been ig- nored in existing supervised LLIE research, despite some indirect solutions that do not primarily address this prob- lem. For example, [23, 36, 39, 43] designed multiple sub-networks to decouple brightness from other factors and optimized them separately. Nevertheless, the divide- and-conquer roadmap inevitably complicates the model de- sign, as well as introducing significant computational over- head. Others use perceptual losses [12] to bypass pixel-level alignment, sacrificing reconstruction fidelity. A unified, ef- ficient solution remains elusive."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6976436376571655,
+      "text": "The expression for 𝑆𝑃 𝑆𝐴 is as follows: 𝑆𝑃 𝑆𝐴 = 1 𝑈 𝑉 𝑈∑ 𝑝𝑖 𝑉∑ 𝑗 |||𝛾𝐷 𝑆 (𝑝𝑖, 𝑗) − 𝜇(𝐷∗ 𝑆 (𝑝𝑖, 𝑗))|||, (14) where 𝐷𝑆 (𝑝𝑖, 𝑗) and 𝐷∗ 𝑆 (𝑝𝑖, 𝑗) represent the predicted and ground truth (GT) segmentation scale at pixel 𝑗 within the patch 𝑝𝑖, respectively. 𝜇(⋅) denotes the median of the depths, 𝑈 is the number of semantic seg- mentation patches, and 𝑉 represents the number of valid pixels in each patch. However, predicting the median of the metric depth for each se- mantic segment can cause the ﬁnal prediction to be generally smaller than the ground truth. To address this issue, we set a scaling factor 𝛾 to ensure the predicted segmentation scale values larger than the median depth of each semantic segment. In our experiments, 𝛾 is set to 0. 5. We also adopt the multi-scale supervision strategy from BinsFormer [10], applying the SPS and ARD modules at each feature scale to provide auxiliary supervision. Finally, the total loss is deﬁned as: 𝑡𝑜𝑡𝑎𝑙 = 3∑ 𝑙 ( 𝑤𝑙 𝐿∑ 𝑛 ( 𝛼𝑙,𝑛 𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛 𝐶𝐸 + 𝛿𝑙,𝑛 𝑆𝑃 𝑆𝐴 )) , (15) where 𝐿 represents the number of stacked masked transformer layers at each feature scale. 𝑤𝑙 is the scale weight, which is set to 1 23−𝑙 ."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p6_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 6,
+      "score": 0.6884647607803345,
+      "text": "Specifically, the baseline results of Retinexformer and Uformer show ar- tifacts in sky regions and paper textures respectively. For MIRNet and SNR-Aware, the baseline outputs exhibit no- ticeable halo artifacts around object contours. Restormer and LLformer represent typical cases of over-exposure and under-exposure in their baseline results. Despite the diverse failure patterns observed across these baseline models, all these issues are effectively mitigated through the integra- tion of our GT-Mean loss. This comprehensive improve- ment demonstrates the robustness and adaptability of our approach in enhancing image quality across diverse model architectures. 4. 3. Impact of GT-Mean Loss on Training 4. 3. 1. Experimental Configuration. We evaluate training dynamics using Retinexformer [4] on the LOLv1 training dataset with four distinct strategies: • Baseline: Original Retinexformer loss (L1 loss). • Hybrid: A phased approach transitioning from the base- line loss (0–70K iterations) to a brightness-aligned loss in Eq. 1 (80K–150K iterations), with linear interpolation between 70K and 80K iterations."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p6_sc1",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 6,
+      "score": 0.6884647607803345,
+      "text": "Specifically, the baseline results of Retinexformer and Uformer show ar- tifacts in sky regions and paper textures respectively. For MIRNet and SNR-Aware, the baseline outputs exhibit no- ticeable halo artifacts around object contours. Restormer and LLformer represent typical cases of over-exposure and under-exposure in their baseline results. Despite the diverse failure patterns observed across these baseline models, all these issues are effectively mitigated through the integra- tion of our GT-Mean loss. This comprehensive improve- ment demonstrates the robustness and adaptability of our approach in enhancing image quality across diverse model architectures. 4. 3. Impact of GT-Mean Loss on Training 4. 3. 1. Experimental Configuration. We evaluate training dynamics using Retinexformer [4] on the LOLv1 training dataset with four distinct strategies: • Baseline: Original Retinexformer loss (L1 loss). • Hybrid: A phased approach transitioning from the base- line loss (0–70K iterations) to a brightness-aligned loss in Eq. 1 (80K–150K iterations), with linear interpolation between 70K and 80K iterations."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc1",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.6847196221351624,
+      "text": "007)0. 846( +0. 023)0. 133( -0. 045)3. 419(↑) 2. 049(↑) SNR-Aware 23. 005 0. 824 0. 164 26. 373 0. 843 0. 158 3. 330 1. 893SNR-Aware with GT-mean loss(ours) 23. 992(+0. 988)0. 836(+0. 012)0. 158(-0. 006)26. 942(+0. 569)0. 853(+0. 009)0. 153(-0. 005)3. 509(↑) 1. 913(↑) CID-Net 23. 809 0. 857 0. 086 27. 715 0. 876 0. 079 4. 087 2. 157CID-Net with GT-mean loss(ours) 25. 122( +1. 313)0. 865(+0. 008)0. 081(-0. 005)28. 108(+0. 393)0. 878(+0. 002)0. 075(-0. 004)4. 074(↓) 2. 161(↑) LOLv2-real Uformer 14. 941 0. 76 0. 228 22. 148 0. 831 0. 199 3. 478 2. 009Uformer with GT-mean loss(ours) 16. 103( +1. 162)0. 792(+0. 032)0. 180(-0. 048)23. 989( +1. 841)0. 858(+0. 026)0. 156(-0. 043)3. 778(↑) 2. 048(↑) MIRNet 21. 648 0. 81 0. 313 26. 712 0. 827 0. 303 2. 598 1. 520MIRNet with GT-mean loss(ours) 22. 050(+0. 402)0. 830(+0. 021)0. 214( -0. 099)26. 769(+0. 057)0. 846(+0. 019)0. 208( -0. 101)2. 924(↑) 1. 702(↑) RetinexFormer 21. 272 0. 841 0. 163 27. 65 0. 877 0. 152 2. 714 1. 590RetinexFormer with GT-mean loss(ours)21. 810(+0. 538)0. 852(+0. 011)0. 143(-0. 020)28. 437(+0. 787)0. 879(+0. 002)0. 134(-0. 018)3. 206(↑) 1. 884(↑) Restormer 20. 235 0. 841 0. 162 28. 159 0. 88 0. 147 3. 478 1."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p2_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 2,
+      "score": 0.8086531162261963,
+      "text": "In summary, the GT-mean loss is highlighted in the fol- lowing aspects: • Simplicity: The construction of the GT-mean loss is both theoretically and practically straightforward. Its underly- ing mechanism is easy to understand, and its implemen- tation is uncomplicated. • Flexibility: The GT-mean loss is highly flexible. For in- stance, the L1 loss can be directly extended into the L1 GT-mean version. This character makes adopting the GT- mean loss a universal choice for supervised LLIE models to upgrade their loss functions. • Low Cost : Using the GT-mean loss introduces mini- mal overhead during training (approximately doubling the original loss computation). It is negligible compared to the overall model optimization process. • Effectiveness: Extensive experiments have demonstrated that the GT-mean loss consistently improves model per- formance across a wide range of supervised LLIE meth- ods (as shown in Figure 2). 2. Related works Loss function is essential in LLIE tasks, as it directs model training. We categorize the loss functions in LLIE into two groups based on their purposes. Fidelity Losses.",
+      "estimated_tokens": 233
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p2_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 2,
+      "score": 0.8086531162261963,
+      "text": "In summary, the GT-mean loss is highlighted in the fol- lowing aspects: • Simplicity: The construction of the GT-mean loss is both theoretically and practically straightforward. Its underly- ing mechanism is easy to understand, and its implemen- tation is uncomplicated. • Flexibility: The GT-mean loss is highly flexible. For in- stance, the L1 loss can be directly extended into the L1 GT-mean version. This character makes adopting the GT- mean loss a universal choice for supervised LLIE models to upgrade their loss functions. • Low Cost : Using the GT-mean loss introduces mini- mal overhead during training (approximately doubling the original loss computation). It is negligible compared to the overall model optimization process. • Effectiveness: Extensive experiments have demonstrated that the GT-mean loss consistently improves model per- formance across a wide range of supervised LLIE meth- ods (as shown in Figure 2). 2. Related works Loss function is essential in LLIE tasks, as it directs model training. We categorize the loss functions in LLIE into two groups based on their purposes. Fidelity Losses.",
+      "estimated_tokens": 233
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 466,
+    "compressed_context_tokens": 466,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 466,
+  "context_tokens": 466,
+  "prompt_token_estimate": 859,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_gt_mean_loss_training_dynamics_findings",
+  "answer": "<think>\nThe user is asking about the experimental findings of GT-Mean Loss on training dynamics. Let me look at the provided materials.\n\nThe materials provided are from \"PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf\" - wait, this seems mismatched. The content talks about GT-mean loss in LLIE (Low-Light Image Enhancement) tasks, not monocular depth estimation. The content describes:\n\n1. Simplicity - theoretically and practically straightforward\n2. Flexibility - L1 loss can be directly extended into L1 GT-mean version\n3. Low Cost - minimal overhead during training (approximately doubling the original loss computation)\n4. Effectiveness - consistently improves model performance across a wide range of supervised LLIE methods\n\nHowever, the question specifically asks about \"训练动态\" (training dynamics) experimental findings. The provided materials don't specifically discuss \"training dynamics\" experiments - they discuss the characteristics of GT-Mean Loss (simplicity, flexibility, low cost, effectiveness), but not specifically about training dynamics like convergence speed, gradient behavior, loss curves, etc.\n\nThe materials don't contain specific experimental findings about training dynamics. The closest is \"Low Cost\" mentioning approximately doubling the original loss computation overhead, but this is about computational cost, not training dynamics per se.\n\nI should answer based on what's available and note that specific training dynamics findings are not directly covered in the provided materials. However, I can mention the related points that touch on training aspects (low cost, effectiveness, consistency).\n\nLet me re-read carefully. The materials talk about:\n- Effectiveness: consistently improves model performance (but this is about final performance, not training dynamics)\n- Low Cost: minimal overhead, approximately doubling original loss computation (this is about computational cost during training)\n\nThese are the closest to \"training dynamics\" but the question asks specifically about training dynamics experimental findings, which would typically include things like convergence curves, gradient norms, training stability, etc. The provided materials don't contain such information.\n\nI should answer honestly that the materials don't provide specific experimental findings about training dynamics, but I can mention what's closest to this topic.\n\nActually, let me reconsider. The user wants me to answer based only on the provided materials. The materials discuss characteristics of GT-Mean Loss, some of which relate to training (low cost during training, effectiveness in improving performance). But \"training dynamics\" is a specific concept not directly addressed.\n\nI'll provide what I can and note the missing information.\n</think>\n{\n  \"answer\": \"给定资料未直接报告 GT-Mean Loss 对训练动态（如收敛曲线、梯度行为、训练稳定性等）的实验发现，仅涉及其在训练中的计算开销与对最终性能的影响。\",\n  \"items\": [\n    {\n      \"name\": \"训练计算开销低\",\n      \"description\": \"使用 GT-mean loss 引入的训练开销极小，约仅使原始损失计算量翻倍，相对于整体模型优化过程可忽略不计。\",\n      \"citations\": [1]\n    },\n    {\n      \"name\": \"对监督 LLIE 方法性能普遍有效\",\n      \"description\": \"广泛实验表明 GT-mean loss 能在多种监督 LLIE 方法上一致提升模型性能（见图 2），但该结论针对的是最终性能而非训练动态本身。\",\n      \"citations\": [1]\n    }\n  ],\n  \"missing_information\": \"资料中缺少关于 GT-Mean Loss 对训练动态（如损失收敛速度、梯度范数、训练稳定性、学习率敏感性等）的具体实验发现。\"\n}",
+  "usage": {
+    "prompt_tokens": 899,
+    "completion_tokens": 713,
+    "total_tokens": 1612,
+    "model": "MiniMax-M3"
+  }
+}

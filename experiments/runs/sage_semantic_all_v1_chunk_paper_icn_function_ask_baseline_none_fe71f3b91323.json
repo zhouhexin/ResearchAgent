@@ -1,0 +1,414 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_paper_icn_function_ask_baseline_none_fe71f3b91323",
+  "dry_run": false,
+  "query": "论文中的 Illuminating Change Net (ICN) 的作用是什么？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::TDDC_p3_chunk_15",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.7469824552536011,
+      "text": "brid network in MonoViT[Zhao et al., 2022b] as our\nDepthNet because of its good performance. Besides, inspired\nby [Vankadari et al., 2023], we further consider the potential\nilluminating changes between images, and the Illuminating\nChange Net (ICN) is intr"
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_16",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.7304094433784485,
+      "text": "luminating changes between images, and the Illuminating\nChange Net (ICN) is introduced to predict the linear per-pixel\nilluminating change Ct,t+n and Bt,t+n. In addition, to avoid\npoor self-supervision, we make a simple decoupling at the in-\nput stage, and"
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_5",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6644467115402222,
+      "text": "et, CNN-based PoseNet and CNN-based Illuminating Change\nNet (ICN) constitute the trainable part of our framework. The two DepthNets share the same weights during training and the left one are\nfrozen during the whole training. The images inputting of the po"
+    },
+    {
+      "id": "chunk::TDDC_p11_chunk_7",
+      "source": "data\\TDDC.pdf",
+      "page": 11,
+      "score": 0.6515141725540161,
+      "text": "e A.1: Different self-supervised methods with preprocess-\ning. The Illuminating Change Net (ICN) and the smooth loss are\nomitted from the figures.\nMethod ABS rel↓ Sq rel↓ RMSE↓ δ1↑ δ2↑ δ3↑ TimeFull disturb 0.601 10.06 15.76 0.247 0.447 0.610 ×1.0Pose distu"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_27",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.650497317314148,
+      "text": "erence on Computer Vision (ICCV) Workshops ,\n2021. 1\n[50] Shangchen Zhou, Chongyi Li, and Chen Change Loy. Led-\nnet: Joint low-light enhancement and deblurring in the dark.\nIn Proceedings of European Conference on Computer Vision\n(ECCV), 2022. 1\n10"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_27",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.650497317314148,
+      "text": "erence on Computer Vision (ICCV) Workshops ,\n2021. 1\n[50] Shangchen Zhou, Chongyi Li, and Chen Change Loy. Led-\nnet: Joint low-light enhancement and deblurring in the dark.\nIn Proceedings of European Conference on Computer Vision\n(ECCV), 2022. 1\n10"
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_4",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6477687358856201,
+      "text": "also visualized in the top right. Note that BPG and ING will not participate in the backward propagation.\nTheir input and output are detached. The Transformer-CNN hybrid DepthNet, CNN-based PoseNet and CNN-based Illuminating Change\nNet (ICN) constitute the"
+    },
+    {
+      "id": "chunk::TDDC_p13_chunk_6",
+      "source": "data\\TDDC.pdf",
+      "page": 13,
+      "score": 0.6286464333534241,
+      "text": "are also\nconsidered during the training. We use a sequential fea-\nture decoder (ICN) to estimate the linear brightness change\n{Ct,t+n ∈ RH×W ×1, Bt,t+n ∈ RH×W ×1}. The reconstruc-\ntion of It can be described as\n˙Vt,t+n(u) =KI Tt,t+nDt(u)K −1\nI ˙u,\n˜It+n ="
+    },
+    {
+      "id": "chunk::LED_p10_chunk_3",
+      "source": "data\\LED.pdf",
+      "page": 10,
+      "score": 0.6284993886947632,
+      "text": "ing V2 underpin the benefits of LED in\ncomplex real-world scenarios.\n6 Limitations and Future Works\nThe method’s reliance on a single reference pattern ensures agnosticism but limits its flex-\nibility. Designing specialized architectures that treat the pat"
+    },
+    {
+      "id": "chunk::TDDC_p2_chunk_29",
+      "source": "data\\TDDC.pdf",
+      "page": 2,
+      "score": 0.6263790130615234,
+      "text": "es an Illuminating Change Net, a Resid-\nual Flow Net and a frozen Denoise Net [Huang et al., 2021;\nHuang et al., 2022] into monocular training. Instead of apply-\ning domain adaptation, they utilize extra trainable and trained\nparts to refine the photometri"
+    },
+    {
+      "id": "chunk::s_p10_chunk_30",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.6242844462394714,
+      "text": "ion , pages 9569–\n9578, 2023. 4, 5\n[47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING,\nYuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the\ncommon appearance-boundary adaptation for nighttime op-\ntical flow. InThe Twelfth International Conference on Lear"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p2_chunk_18",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 2,
+      "score": 0.62151700258255,
+      "text": "rn some of the knowledge\nfrom a larger network e.g. [59, 44].\nIn contrast to these works, our contribution is to change\nthe internal representation of depth within the network it-\nself. We note that our contributions could be used in con-\njunction with the"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_24",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6206762194633484,
+      "text": "ceedings of the 27th ACM International Conference on Mul-\ntimedia (ACM MM), 2019. 3\n[48] Zhao Zhang, Huan Zheng, Richang Hong, Mingliang Xu,\nShuicheng Yan, and Meng Wang. Deep color consistent net-\nwork for low-light image enhancement. In Proceedings of\nth"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_24",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.6206762194633484,
+      "text": "ceedings of the 27th ACM International Conference on Mul-\ntimedia (ACM MM), 2019. 3\n[48] Zhao Zhang, Huan Zheng, Richang Hong, Mingliang Xu,\nShuicheng Yan, and Meng Wang. Deep color consistent net-\nwork for low-light image enhancement. In Proceedings of\nth"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p3_chunk_15",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 3,
+      "score": 0.6150025129318237,
+      "text": "changes. While these works made signifi-\ncant steps towards solving the problem, they either have\ncomplex pipelines with dedicated branches for day and\nnight [22, 43], use additional sensors [8], suffer from a sig-\nnificant trade-off on the daytime perfor"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_11",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6139349937438965,
+      "text": "Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy.\n2022. Flare7k: A phenomenological nighttime flare removal dataset. Advances in\nNeural Information Processing Systems 35 (2022), 3926–3937.\n[9] Alexey Dosovitskiy. 2020. An image is worth 16x16 words:"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_12",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6133995056152344,
+      "text": "nmin Jiang. Uretinex-net: Retinex-based deep\nunfolding network for low-light image enhancement. InPro-\nceedings of the IEEE/CVF Conference on Computer Vision\nand Pattern Recognition (CVPR), 2022. 2, 3\n[40] Yuhui Wu, Chen Pan, Guoqing Wang, Yang Yang, Jiwei"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_12",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.6133995056152344,
+      "text": "nmin Jiang. Uretinex-net: Retinex-based deep\nunfolding network for low-light image enhancement. InPro-\nceedings of the IEEE/CVF Conference on Computer Vision\nand Pattern Recognition (CVPR), 2022. 2, 3\n[40] Yuhui Wu, Chen Pan, Guoqing Wang, Yang Yang, Jiwei"
+    },
+    {
+      "id": "chunk::s_p1_chunk_21",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.612159252166748,
+      "text": "ific designs, but are quite limited to work under\nmultiple conditions in real-world applications. Some meth-\nods [18, 27] aim to address both daytime and nighttime\nconditions but exhibit limited performance across these do-\narXiv:2503.20211v1  [cs.CV]  26"
+    },
+    {
+      "id": "chunk::TDDC_p1_chunk_18",
+      "source": "data\\TDDC.pdf",
+      "page": 1,
+      "score": 0.6121006011962891,
+      "text": "methods\nand photometric loss repair-based methods are proposed re-\ncently. The domain adaptation-based methods [Liu et al. ,\n2021; Wang et al. , 2021; Zhao et al. , 2022a; Vankadari et\nal., 2020] apply extra adversarial loss or domain transfer net-\nwork to"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p6_chunk_6",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 6,
+      "score": 0.6114184856414795,
+      "text": "95.1 30.8 77.3 1.4\n† Most baselines are sourced from Metric3D [58], except for the ScanNet benchmark. For ScanNet, Metric3D used a different random split that is not publicly accessible,\ntherefore we re-ran all baselines on our split. For HDN [60] we show"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p6_chunk_6",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.6114184856414795,
+      "text": "95.1 30.8 77.3 1.4\n† Most baselines are sourced from Metric3D [58], except for the ScanNet benchmark. For ScanNet, Metric3D used a different random split that is not publicly accessible,\ntherefore we re-ran all baselines on our split. For HDN [60] we show"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p15_chunk_3",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 15,
+      "score": 0.6108347177505493,
+      "text": "ntroduced by Laina et al. [39] suffers from high complex-\nity, while it could largely be reduced. Here we present a\nset of experiments we conducted to explore these different\naspects of complexity reduction.\n9.1. Experiment with a light-weight MobileNetv2"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_25",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6098529100418091,
+      "text": "RNW, ADDS, and ITDFA\n[50]. The evaluation settings are based on the protocol of TDDC\n[40]. Since the official code for TDDC is not publicly available, we\nuse the experimental results reported in their paper. Additionally,\nwe attempt to reproduce TDDC’s app"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_1",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.6091594099998474,
+      "text": "tional Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund from Guangdong Laboratory of Artiﬁcial Intel-\nligence and Digital Economy (SZ) (GML-KF-24-09).\nReferences\n[Arampatzakis et al., 2023 ] V asileios Arampatzakis, George\nPavlidis,"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_6",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 13,
+      "score": 0.6091054081916809,
+      "text": "Net18 w/o pt ✓ ✓ ✓ R18 0.132 1.044 5.142 0.210 0.845 0.948 0.977\nMonodepth2ResNet18 ✓ ✓ ✓ R18 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981\nMonodepth2ResNet 50 w/o pt ✓ ✓ ✓ R50 0.131 1.023 5.064 0.206 0.849 0.951 0.979\nMonodepth2ResNet 50 ✓ ✓ ✓ R50 ✓ 0.110 0"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p13_chunk_6",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 13,
+      "score": 0.6091054081916809,
+      "text": "Net18 w/o pt ✓ ✓ ✓ R18 0.132 1.044 5.142 0.210 0.845 0.948 0.977\nMonodepth2ResNet18 ✓ ✓ ✓ R18 ✓ 0.115 0.903 4.863 0.193 0.877 0.959 0.981\nMonodepth2ResNet 50 w/o pt ✓ ✓ ✓ R50 0.131 1.023 5.064 0.206 0.849 0.951 0.979\nMonodepth2ResNet 50 ✓ ✓ ✓ R50 ✓ 0.110 0"
+    },
+    {
+      "id": "chunk::TDDC_p9_chunk_28",
+      "source": "data\\TDDC.pdf",
+      "page": 9,
+      "score": 0.6075587272644043,
+      "text": "error visibility to structural similarity. IEEE Trans-\nactions on Image Processing, 13(4):600–612, 2004.\n[Wang et al., 2021] Kun Wang, Zhenyu Zhang, Zhiqiang\nYan, Xiang Li, Baobei Xu, Jun Li, and Jian Yang. Reg-\nularizing nighttime weirdness: Efficient sel"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.60750812292099,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p2_chunk_0",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 2,
+      "score": 0.6073828935623169,
+      "text": "complex pipelines and significant architecture changes af-\nfecting inference as well [38, 37, 22, 33, 36], such as\nillumination-specific branches. Additionally, prior methods\nthat can operate both at night- and daytime introduce a sig-\nnificant trade-off c"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_chunk_18",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.6057783365249634,
+      "text": "ning: A survey. IEEE Transactions on Pattern Analysis\nMachine Intelligence, 44(12):9396–9416, 2022. 1, 2\n[18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng\nFeng, and Chen Change Loy. Iterative prompt learning for\nunsupervised backlit image enhancement"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_chunk_18",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.6057783365249634,
+      "text": "ning: A survey. IEEE Transactions on Pattern Analysis\nMachine Intelligence, 44(12):9396–9416, 2022. 1, 2\n[18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng\nFeng, and Chen Change Loy. Iterative prompt learning for\nunsupervised backlit image enhancement"
+    },
+    {
+      "id": "chunk::Lite-Mono_p8_chunk_15",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.6055504679679871,
+      "text": "accuracy beneﬁts\nfrom larger dilation rates. However, (4) using very large di-\nlation rates in the late CDC blocks does not help. Simply\npursuing larger dilation rates will result in the loss of local\ninformation, which is not good for the network to perc"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_22",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.6054970026016235,
+      "text": "lize to test\nset) version result of each DA method for further compar-\nisons. In addition, we will release the code upon acceptance.\nEvaluation on nuScenes-Night\nAs shown in Fig. 4.1, due to the weak interference of ISP on\nthe digit raw, wave optics/diffra"
+    },
+    {
+      "id": "chunk::Depth_Anything_p10_chunk_5",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 10,
+      "score": 0.6054730415344238,
+      "text": "Dong, et al.\nSwin transformer v2: Scaling up capacity and resolution. In\nCVPR, 2022. 6\n[40] Zhuang Liu, Hanzi Mao, Chao-Yuan Wu, Christoph Feicht-\nenhofer, Trevor Darrell, and Saining Xie. A convnet for the\n2020s. In CVPR, 2022. 6, 7\n[41] Jia Ning, Chen Li"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p1_chunk_2",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 1,
+      "score": 0.6038999557495117,
+      "text": "nder challenging illumination and\nweather conditions, such as at nighttime or in the presence\nof rain. In this paper, we uncover these safety-critical is-\nsues and tackle them with md4all: a simple and effective\nsolution that works reliably under both adve"
+    },
+    {
+      "id": "chunk::s_p10_chunk_28",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.6038084030151367,
+      "text": "Wu, Xinran Han, and Jianbo Shi. Fork-\ngan: Seeing into the rainy night. In The IEEE European\nConference on Computer Vision (ECCV), 2020. 2, 4\n[46] Hanyu Zhou, Yi Chang, Wending Yan, and Luxin Yan. Un-\nsupervised cumulative domain adaptation for foggy scene"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p1_chunk_17",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 1,
+      "score": 0.6034882068634033,
+      "text": "ersity of Singapore, Singapore. (e-mail: mpechenp@nus.edu.sg)\nZhengguo Li is with the SRO department, Institute for Infocomm Research,\n1 Fusionopolis Way, Singapore. (e-mail: ezgli@i2r.a-star.edu.sg)\n*(corresponding author: Weihai Chen.)\nFig. 1. Illustrati"
+    },
+    {
+      "id": "chunk::DepthDark_p4_chunk_0",
+      "source": "data\\DepthDark.pdf",
+      "page": 4,
+      "score": 0.603347897529602,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al.\ndirectly simulating light source images, we construct a light source\nlibrary based on the Flare7K dataset [8]. Flare7K is currently the\nonly large-scale dataset containing 7,000 light sourc"
+    },
+    {
+      "id": "chunk::LED_p2_chunk_15",
+      "source": "data\\LED.pdf",
+      "page": 2,
+      "score": 0.6032465696334839,
+      "text": "guiding the network and thereby improving performance.\nOur contributions can be summarized as follows:\n•Architecture-agnostic enhancement: LED can be applied to any depth estimation archi-\ntecture to improve nighttime performances (RMSE: -11% on encoder-de"
+    },
+    {
+      "id": "chunk::TDDC_p12_chunk_10",
+      "source": "data\\TDDC.pdf",
+      "page": 12,
+      "score": 0.6031191945075989,
+      "text": "re B.2: Visualization of full compensation and our partial\ncompensation results.\nDay-to-Night Image Transfer Experiment Setting\nTo train the day-to-night image transfer network, we ran-\ndomly select 4,000 images from the KITTI [Eigen et al. ,\n2014], nuScen"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_25",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.6024436950683594,
+      "text": "color consistent net-\nwork for low-light image enhancement. In Proceedings of\nthe IEEE/CVF Conference on Computer Vision and Pattern\nRecognition (CVPR), 2022. 1\n[49] Chu Zhou, Minggui Teng, Jin Han, Chao Xu, and Boxin Shi.\nDelieve-net: Deblurring low-light"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_25",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.6024436950683594,
+      "text": "color consistent net-\nwork for low-light image enhancement. In Proceedings of\nthe IEEE/CVF Conference on Computer Vision and Pattern\nRecognition (CVPR), 2022. 1\n[49] Chu Zhou, Minggui Teng, Jin Han, Chao Xu, and Boxin Shi.\nDelieve-net: Deblurring low-light"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_chunk_19",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.602109432220459,
+      "text": "Change Loy. Iterative prompt learning for\nunsupervised backlit image enhancement. In Proceedings of\nthe IEEE/CVF International Conference on Computer Vision\n(ICCV), pages 8094–8103, 2023. 2\n[19] J. Liu, D. Xu, W. Yang, et al. Benchmarking low-light im-\nage"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_chunk_19",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.602109432220459,
+      "text": "Change Loy. Iterative prompt learning for\nunsupervised backlit image enhancement. In Proceedings of\nthe IEEE/CVF International Conference on Computer Vision\n(ICCV), pages 8094–8103, 2023. 2\n[19] J. Liu, D. Xu, W. Yang, et al. Benchmarking low-light im-\nage"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p10_chunk_30",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 10,
+      "score": 0.601874828338623,
+      "text": "2022. 3\n[45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork-\nGAN: Seeing into the rainy night. In Proceedings of the\nEuropean Conference on Computer Vision, pages 155–170.\nSpringer, 2020. 6, 7, 8\n[46] Tinghui Zhou, Matthew Brown, Noah Snavely, a"
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6003565192222595,
+      "text": "\u0000\n\u0000\n,\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n,\n\u0000\n\u0000\n\u0000\n,\n\u0000\n\u0000\n,\n\u0000\n\u0000\n\u0000\n\u0000\n\u0000\n,\n\u0000\n\u0000\n\u0000\nPose decoder\nICN decoder\nDay\n-\nImage Splits \nSample\nING (\nsec. 3.4\n)\nBPG (\nsec. 3.3\n)\n\u0000\n\u0000\n3D position \nappointing\nRandom \ndarken\nIntensity \n\u0000\n \nsampling\nRe\n-\nrendering\nDark raw image \nsimulation\nIntensity"
+    },
+    {
+      "id": "chunk::Lite-Mono_p7_chunk_22",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.5986069440841675,
+      "text": "study is conducted to evaluate the impor-\ntance of different designs in the architecture. We remove or\nadjust some modules in the network, and report their results\non KITTI, as shown in Table 5.\nThe beneﬁt of LGFI blocks. When all the LGFI blocks\nin stage"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p10_chunk_18",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 10,
+      "score": 0.5984364748001099,
+      "text": "inex\nnetwork for robust low-light image enhancement. IEEE\nTransactions on Image Processing, page 2072–2086, 2021.\n2, 3, 4\n[44] Syed Waqas Zamir, Aditya Arora, Salman Khan, Munawar\nHayat, Fahad Shahbaz Khan, Ming-Hsuan Yang, and Ling\nShao. Learning enriched"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p10_chunk_18",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 10,
+      "score": 0.5984364748001099,
+      "text": "inex\nnetwork for robust low-light image enhancement. IEEE\nTransactions on Image Processing, page 2072–2086, 2021.\n2, 3, 4\n[44] Syed Waqas Zamir, Aditya Arora, Salman Khan, Munawar\nHayat, Fahad Shahbaz Khan, Ming-Hsuan Yang, and Ling\nShao. Learning enriched"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::TDDC_p3_chunk_15",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.7469824552536011,
+      "text": "brid network in MonoViT[Zhao et al., 2022b] as our\nDepthNet because of its good performance. Besides, inspired\nby [Vankadari et al., 2023], we further consider the potential\nilluminating changes between images, and the Illuminating\nChange Net (ICN) is intr",
+      "estimated_tokens": 71
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_16",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.7304094433784485,
+      "text": "luminating changes between images, and the Illuminating\nChange Net (ICN) is introduced to predict the linear per-pixel\nilluminating change Ct,t+n and Bt,t+n. In addition, to avoid\npoor self-supervision, we make a simple decoupling at the in-\nput stage, and",
+      "estimated_tokens": 69
+    },
+    {
+      "id": "chunk::TDDC_p3_chunk_5",
+      "source": "data\\TDDC.pdf",
+      "page": 3,
+      "score": 0.6644467115402222,
+      "text": "et, CNN-based PoseNet and CNN-based Illuminating Change\nNet (ICN) constitute the trainable part of our framework. The two DepthNets share the same weights during training and the left one are\nfrozen during the whole training. The images inputting of the po",
+      "estimated_tokens": 57
+    },
+    {
+      "id": "chunk::TDDC_p11_chunk_7",
+      "source": "data\\TDDC.pdf",
+      "page": 11,
+      "score": 0.6515141725540161,
+      "text": "e A.1: Different self-supervised methods with preprocess-\ning. The Illuminating Change Net (ICN) and the smooth loss are\nomitted from the figures.\nMethod ABS rel↓ Sq rel↓ RMSE↓ δ1↑ δ2↑ δ3↑ TimeFull disturb 0.601 10.06 15.76 0.247 0.447 0.610 ×1.0Pose distu",
+      "estimated_tokens": 89
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 286,
+    "compressed_context_tokens": 286,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 286,
+  "context_tokens": 286,
+  "prompt_token_estimate": 670,
+  "run_label": "sage_semantic_all_v1_chunk_paper_icn_function",
+  "answer": "<think>\nThe user is asking about the role of the Illuminating Change Net (ICN) in the paper. Let me look at the provided materials.\n\nFrom [1]: \"inspired by [Vankadari et al., 2023], we further consider the potential illuminating changes between images, and the Illuminating Change Net (ICN) is intr\" (cut off)\n\nFrom [2]: \"luminating changes between images, and the Illuminating Change Net (ICN) is introduced to predict the linear per-pixel illuminating change Ct,t+n and Bt,t+n.\"\n\nFrom [3]: \"CNN-based PoseNet and CNN-based Illuminating Change Net (ICN) constitute the trainable part of our framework. The two DepthNets share the same weights during training and the left one are frozen during the whole training.\"\n\nFrom [4]: mentions ICN is omitted from figures in ablation study.\n\nSo the ICN's role is to predict linear per-pixel illuminating changes (Ct,t+n and Bt,t+n) between images, and it is part of the trainable portion of the framework.\n\nLet me construct the JSON response.\n</think>\n{\n  \"answer\": \"Illuminating Change Net (ICN) 用于预测图像之间逐像素的线性光照变化 Ct,t+n 和 Bt,t+n，并与 PoseNet 一起构成框架中可训练的部分。\",\n  \"items\": [\n    {\n      \"name\": \"ICN 的预测目标\",\n      \"description\": \"ICN 被引入用于预测图像之间的逐像素线性光照变化参数 Ct,t+n 和 Bt,t+n，以应对图像间可能的光照变化。\",\n      \"citations\": [1, 2]\n    },\n    {\n      \"name\": \"ICN 在框架中的角色\",\n      \"description\": \"ICN 是一个基于 CNN 的网络，与 PoseNet 共同构成框架的可训练部分。\",\n      \"citations\": [3]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 724,
+    "completion_tokens": 395,
+    "total_tokens": 1119,
+    "model": "MiniMax-M3"
+  }
+}

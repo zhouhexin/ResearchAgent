@@ -1,0 +1,414 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_ssrdepth_met_ask_baseline_none_9eb5eec44843",
+  "dry_run": false,
+  "query": "SSRDepth 如何将度量深度估计分解并恢复最终的 metric depth？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7230846881866455,
+      "text": "Contents lists available at ScienceDirect Pattern Recognition journal homepage: www.elsevier.com/locate/pr SSRDepth: Combining semantic segmentation and relative depth for monocular metric depth estimation Yuhang Zou, Xiaoming Chen, Zhangyan Zhao ∗, Chenghua Zhang, Haipeng Liu School of Transportation and Logistics Engineering, Wuhan University of Technology, Wuhan, 430063, Hubei, China a r t i c l e i n f o Keywords: Monocular depth estimation Semantic segment Relative depth Masked transformer a b s t r a c t Monocular depth estimation is a pivotal task in computer vision, aimed to predict a dense depth map from a single image. Existing methods can achieve satisfactory performance through carefully designed network architectures. However, they often ignore the semantic information of scene structures, leading to poor performance in the se- mantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular depth estimation method that leverages semantic segmentation to improve metric depth prediction."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.7126061916351318,
+      "text": "Y. Zou et al. Fig. 2. The overall architecture of SSRDepth. SSRDepth consists of an Image Encoder, a Pixel Decoder, and the Segmentation Query Guided Aggregation module (SQGA), Segmentation Proposal Scale module (SPS), and Adaptive Relative Depth module (ARD) that we propose. Additionally, we propose the segmentation proposal scale alignment loss (𝑆𝑃 𝑆𝐴 ) and introduce a multi-scale supervision strategy to further enhance model performance. 3. The proposed method In this section, we ﬁrst introduce the overall architecture of SSRDepth (Section 3. 1). Then, we present the key components of SSRDepth: the Segmentation Query Guided Aggregation module (Section 3. 2), the Segmentation Proposal Scale module (Section 3. 3), and the Adaptive Relative Depth module (Section 3. 4). 3. 1. Framework overview As shown in Fig. 2, given an input image 𝐼 ∈ ℝ3×𝐻×𝑊 , we ﬁrst extract image features through the Image Encoder and then decode them into multi-scale features {𝐹𝑙}3 𝑙=1 and per-pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 employing the Pixel Decoder, where 𝐶 is the number of channels, and 𝐻 × 𝑊 is the resolution."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6759471893310547,
+      "text": "Conclusion In this paper, we propose SSRDepth, a monocular depth estimation framework leverages semantic segmentation to improve metric depth prediction. The framework decomposes the metric depth estimation task into two parts: segmentation scale prediction through the Segmenta- tion Proposal Scale (SPS) module and semantic-aware relative depth estimation through the Adaptive Relative Depth (ARD) module. Addi- tionally, the framework includes the Segmentation Query Guided Ag- gregation (SQGA) module, which is designed to recover the structural information of local semantic segments. Our method excels not only in Pattern Recognition 171 (2026) 112279 12"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p9_sc1",
+      "source": "data\\Jasmine.pdf",
+      "page": 9,
+      "score": 0.6705539226531982,
+      "text": "The performance gap between Jasmine and Jasmine* in Tables 1 and 2 high- lights the impact of de-normalization strategies—median alignment for self- supervised methods and LSQ alignment for zero-shot settings. As the first work bridging these two domains, we provide an in-depth analysis of how these choices affect evaluation. Depth de-normalization refers to the pro- cess of transforming the model’s predicted depth values back to the GT distribution for metric evaluation. The typical de- normalization strategies include: ❶No operation: Models predict metric depth [23]:D eval =D pred. ❷ Median Alignment: Models predict SI Depth [ 15], which can be recovered by scaling the ratio of the median of the GT depth to the median of the predicted depth: Deval =D pred · median(DGT )/median(Dpred). ❸ Least-Squares (LSQ) Alignment: Models predict SSI Depth [ 25], which can be recovered by affine transformation (scaled and shifted) to best fit the GT depth. The evaluated depth is given by: Deval =s ∗Dpred +t ∗. where the optimal scale s∗ and shift t∗ are determined by minimizing the sum of squared differences:(s ∗, t∗) = arg min s,t P i((s·D pred,i +t)−D GT,i )2."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p12_sc4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 12,
+      "score": 0.6680233478546143,
+      "text": "4, which predicts 224× 224 depth maps given a 224× 224 input image, we keep all four levels of wavelet decomposition. Supervised losses For our NYU results in the main paper, we supervise depth using an L1 loss and SSIM: LD(y,y∗) = λ1ℓ1(y,y∗) (9)"
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc3",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.6680232286453247,
+      "text": "We define N sub-intervals be- tween dmin and dmax, where each interval has a length of L = dmax−dmin N , with center bn = dmin + L(n + 1 2 ) for interval n. Using two sigmoid functions σ to model the ker- nel function K(x) = σ(x)σ(−x), the probability of a depth map D falling within interval k is P (n) = 1 HW HWX x=1 [σ( D(x) − bn + L 2 a ) − σ( D(x) − bn − L 2 a )], (12) where P is the differentiable probability function and a is a bandwidth factor. Finally, the Distday, Distadv are consist of Pday, Padv: Distday = {bn, Pday(n)}N n=1, (13) Distadv = {bn, Padv(n)}N n=1. (14) Noted that Distday is calculated among the whole day- time training set instead of one sample. The objective is to minimize the distribution distances betweenDistday and Distadv by K-L divergence: LKL dis = NX i=1 Padv(i) · log Padv(i) Pday(i) . (15) Apart from Lcd and LKL dis , we also utilize Lcv and LT as in previous stage. Thus, the total objective functionLreal is Lreal = α1Lcd + α2LKL dis + α3Lcv + α4LT (16) With the designed learning procedure, our model can gradually fit better to multiple real conditions, rather than only learn from the synthetic conditions. 4. Experiments 4. 1."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6676167249679565,
+      "text": "Then, the 𝑅 is computed through a weighted sum with respect to 𝑐𝑖: 𝑃𝐵 = 𝐸𝐵 × 𝐹 ⊤ 𝑝 , (9) 𝑅(𝑥, 𝑦) = 𝑁∑ 𝑘=1 𝑠𝑜𝑓 𝑡𝑚𝑎𝑥(𝑐𝑘)𝑝𝑘(𝑥, 𝑦), (10) where 𝑝𝑘(𝑥, 𝑦) represents the probability value at pixel location (𝑥, 𝑦) for the corresponding channel in the 𝑃𝐵, and 𝑅(𝑥, 𝑦) represents the semantic-aware relative depth value at the corresponding pixel location. Note that the semantic-aware relative depth here diﬀers from conven- tional relative depth, as it only establishes relative depth relationships within the same semantic segments. We provide a detailed description of this phenomenon in Section 4. 6. Finally, we obtain the true metric depth map 𝐷𝑚 ∈ ℝ1× 𝐻 4 × 𝑊 4 by per- forming pixel-wise multiplication between 𝐷𝑆 and 𝑅: 𝐷𝑚 = 𝐷𝑆 ⋅ 𝑅. (11) 3. 5. Loss function Depth and semantic segmentation loss."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6673834323883057,
+      "text": "The expression for 𝑆𝑃 𝑆𝐴 is as follows: 𝑆𝑃 𝑆𝐴 = 1 𝑈 𝑉 𝑈∑ 𝑝𝑖 𝑉∑ 𝑗 |||𝛾𝐷 𝑆 (𝑝𝑖, 𝑗) − 𝜇(𝐷∗ 𝑆 (𝑝𝑖, 𝑗))|||, (14) where 𝐷𝑆 (𝑝𝑖, 𝑗) and 𝐷∗ 𝑆 (𝑝𝑖, 𝑗) represent the predicted and ground truth (GT) segmentation scale at pixel 𝑗 within the patch 𝑝𝑖, respectively. 𝜇(⋅) denotes the median of the depths, 𝑈 is the number of semantic seg- mentation patches, and 𝑉 represents the number of valid pixels in each patch. However, predicting the median of the metric depth for each se- mantic segment can cause the ﬁnal prediction to be generally smaller than the ground truth. To address this issue, we set a scaling factor 𝛾 to ensure the predicted segmentation scale values larger than the median depth of each semantic segment. In our experiments, 𝛾 is set to 0. 5. We also adopt the multi-scale supervision strategy from BinsFormer [10], applying the SPS and ARD modules at each feature scale to provide auxiliary supervision. Finally, the total loss is deﬁned as: 𝑡𝑜𝑡𝑎𝑙 = 3∑ 𝑙 ( 𝑤𝑙 𝐿∑ 𝑛 ( 𝛼𝑙,𝑛 𝑆𝐼𝑙𝑜𝑔 + 𝛽𝑙,𝑛 𝐶𝐸 + 𝛿𝑙,𝑛 𝑆𝑃 𝑆𝐴 )) , (15) where 𝐿 represents the number of stacked masked transformer layers at each feature scale. 𝑤𝑙 is the scale weight, which is set to 1 23−𝑙 ."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p14_sc1",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 14,
+      "score": 0.6620217561721802,
+      "text": "996 [18] Monodepth2 Resnet18 \u0013 MS 192 × 640 0. 084 0. 494 3. 739 0. 132 0. 918 0. 983 0. 995 WaveletMonodepth Resnet18 \u0013 MS 192 × 640 0. 085 0. 497 3. 804 0. 134 0. 912 0. 982 0. 995 [63] Depth Hints \u0013 MS +SSGM 192 × 640 0. 087 0. 526 3. 776 0. 133 0. 915 0. 982 0. 995 WaveletMonodepth Resnet18 \u0013 MS +SSGM 192 × 640 0. 086 0. 497 3. 699 0. 131 0. 914 0. 983 0. 996 [18] Monodepth2 Resnet18 \u0013 S 320 × 1024 0. 082 0. 497 3. 637 0. 132 0. 924 0. 982 0. 994 WaveletMonodepth Resnet18 \u0013 S 320 × 1024 0. 080 0. 443 3. 544 0. 130 0. 919 0. 983 0. 995 WaveletMonodepth Resnet50 \u0013 S 320 × 1024 0. 076 0. 413 3. 434 0. 126 0. 926 0. 984 0. 995 [63] Depth Hints \u0013 SSGM 320 × 1024 0. 077 0. 404 3. 345 0. 119 0. 930 0. 988 0. 997 WaveletMonodepth Resnet18 \u0013 SSGM 320 × 1024 0. 078 0. 397 3. 316 0. 121 0. 928 0. 987 0. 997 Depth Hints Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 363 3. 198 0. 114 0. 936 0. 989 0. 997 WaveletMonodepth Resnet50 \u0013 SSGM 320 × 1024 0. 074 0. 357 3. 170 0. 114 0. 936 0. 989 0. 997 Table 9: Quantitative results on the improved KITTI benchmark. We compare our method to our baselines on the KITTI [15] improved dataset introduced by [61], using the Eigen split."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p2_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 2,
+      "score": 0.6594377756118774,
+      "text": "Finally, the semantic-aware rel- ative depth is multiplied by the segmentation scale to obtain the metric depth. In summary, our main contributions are as follows: • We propose a novel monocular depth estimation framework- SSRDepth, which decomposes metric depth into segmentation scale and semantic-aware relative depth. Ultimately, the multiplication of these two components yields accurate metric depth. • Our proposed SQGA module employs a new feature interaction pat- tern, combined with the binary masks of semantic segments gener- ated by our designed SMG, ensuring the eﬀectiveness of multi-scale semantic feature aggregation and the recovery of structural regular- ities within semantic segments. • Our proposed SPS module predicts segmentation scale with ex- plicit constraints, allowing the model to preserve sharp semantic boundaries. The ARD module predicts semantic-aware relative depth within a normalized depth space using a hybrid regression approach, providing the necessary foundation for the prediction of metric depth."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p6_sc2",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 6,
+      "score": 0.6552335023880005,
+      "text": "It is worth noting that we adopt the ZoeDepth framework for this scenario with a relatively ba- sic depth model, and we believe our results can be further enhanced if equipped with more advanced architectures. 4. 3. 2 Zero-Shot Metric Depth Estimation We follow ZoeDepth [4] to conduct zero-shot metric depth estimation. ZoeDepth fine-tunes the MiDaS pre-trained en- Method Higher is better ↑ Lower is better ↓ δ1 δ2 δ3 AbsRel RMSE RMSE log AdaBins [3] 0. 964 0. 995 0. 999 0. 058 2. 360 0. 088 DPT [46] 0. 959 0. 995 0. 999 0. 062 2. 573 0. 092 P3Depth [43] 0. 953 0. 993 0. 998 0. 071 2. 842 0. 103 NeWCRFs [82] 0. 974 0. 997 0. 999 0. 052 2. 129 0. 079 SwinV2-L [39] 0. 977 0. 998 1. 000 0. 050 1. 966 0. 075 NDDepth [53] 0. 978 0. 998 0. 999 0. 050 2. 025 0. 075 GEDepth [75] 0. 976 0. 997 0. 999 0. 048 2. 044 0. 076 ZoeDepth∗ [4] 0. 971 0. 996 0. 999 0. 054 2. 281 0. 082 Ours 0. 982 0. 998 1. 000 0. 046 1. 896 0. 069 Table 4. Fine-tuning and evaluating on KITTI [17] with our pre-trained MDE encoder. ∗: Reproduced by us. coder with metric depth information from NYUv2 [54] (for indoor scenes) or KITTI [17] (for outdoor scenes)."
+    },
+    {
+      "id": "semantic_chunk::dav2_p26_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 26,
+      "score": 0.6537681818008423,
+      "text": "Image ZoeDepth Ours Figure 15: Comparison between ZoeDepth [6] and our fine-tuned metric depth model. 26"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p7_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 7,
+      "score": 0.6460267305374146,
+      "text": "Y. Zou et al. Table 1 Quantitative comparison on the NYU-Depth V2 dataset. The best results are indicated in bold, and the second-best results are underlined. Method Venue Backbone 𝛿1 ↑ 𝛿2 ↑ 𝛿3 ↑ RMSE↓ AbsRel↓ log10↓ BTS [12] arXiv 2019 DenseNet-161 0. 871 0. 977 0. 995 0. 407 0. 113 0. 049 AdaBins [9] CVPR 2019 EﬃcientNet-B5 0. 903 0. 984 0. 997 0. 364 0. 103 0. 044 LocalBins [18] ECCV 2022 ResNet-101 0. 898 0. 987 0. 998 0. 357 – 0. 042 P3Depth [13] CVPR 2022 Swin-Large 0. 907 0. 981 0. 996 0. 356 0. 104 0. 043 NeWCRFs [16] CVPR 2022 Swin-Large 0. 927 0. 989 0. 998 0. 334 0. 095 0. 039 PixelFormer [39] WCAV 2023 Swin-Large 0. 929 0. 991 0. 998 0. 322 0. 090 0. 039 BinsFormer [10] TIP 2024 Swin-Large 0. 925 0. 991 0. 997 0. 330 0. 094 0. 040 iDisc [40] CVPR 2023 Swin-Large 0. 936 0. 992 0. 998 0. 313 0. 086 0. 037 ZoeDepth [41] arXiv 2023 Swin-Large 0. 937 0. 992 0. 998 0. 310 0. 086 0. 037 WorDepth [42] CVPR 2024 Swin-Large 0. 932 0. 992 0. 998 0. 317 0. 088 0. 038 Ours – Swin-Tiny 0. 893 0. 981 0. 995 0. 377 0. 107 0. 045 Swin-Large 0. 933 0. 991 0. 998 0. 316 0. 086 0. 037 Convnext-Large 0. 938 0. 991 0. 998 0. 308 0. 084 0. 036 Fig. 8."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6438696980476379,
+      "text": "Y. Zou et al. Table 8 Ablation study on diﬀerent depth annotations on the NYU1449 dataset. Depth annotation type Metric depth accuracy Boundary accuracy 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ F1↑ R↑ B-AbsRel↓ rawDepths 0. 815 0. 147 0. 502 0. 061 0. 0191 0. 0139 0. 1970 Depths 0. 812 0. 147 0. 500 0. 060 0. 0192 0. 0142 0. 1932 Fig. 16. Visualization of the model’s intermediate prediction results. Table 9 Ablation study on the number of masked transformer layers in the SQGA module. Masked transformer layer SMG 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ 3 × 0. 792 0. 238 2. 043 0. 078 ✓ 0. 794 0. 234 1. 995 0. 078 6 × 0. 787 0. 234 1. 963 0. 079 ✓ 0. 796 0. 234 1. 924 0. 078 9 × 0. 779 0. 233 1. 934 0. 078 ✓ 0. 799 0. 230 1. 901 0. 073 12 × 0. 795 0. 238 2. 089 0. 076 ✓ 0. 792 0. 236 2. 011 0. 079 Table 10 Ablation study on the eﬀectiveness of segmentation scale. Setting 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ no scale 0. 790 0. 280 2. 026 0. 078 single metric scale 0. 789 0. 237 1. 971 0. 079 segmentation scale 0. 799 0. 230 1. 901 0. 073 Table 11 Ablation study on semantic segmentation and scale alignment constraints."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p6_sc1",
+      "source": "data\\Global-Local.pdf",
+      "page": 6,
+      "score": 0.6413263082504272,
+      "text": "043 + CutDepth 0. 909 0. 986 0. 997 0. 102 0. 348 0. 042 + Ours (p=0. 25)0. 911 0. 988 0. 997 0. 102 0. 354 0. 043 + Ours (p=0. 50)0. 911 0. 988 0. 997 0. 100 0. 348 0. 042 +Ours (p=0. 75)0. 915 0. 988 0. 998 0. 098 0. 343 0. 042 + Ours (p=1. 00)0. 910 0. 988 0. 997 0. 101 0. 351 0. 043 Table 5: Experimental results with data augmentation. study aims to avoid computationally demanding decoders, we construct simple baselines and compare them with ours. Baseline-Dconv consists of consecutive deconvolution-batch normalization-ReLU blocks to obtain the desired depth map. In addition, Baseline-UNet is an improved structure from Baseline-Dconv that has skip connections between the en- coder and decoder. As detailed in the table, our decoder achieves better performance than the baselines. Even with- out an SFF, it already shows better performance than other decoders while having fewer parameters. The powerful en- coding ability of our encoder and the effectively designed de- coder enables the network to produce a ﬁnely detailed depth map. In addition, our proposed SFF leverages additional per- formance of our model."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p17_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 17,
+      "score": 0.6411235928535461,
+      "text": "008 25:returnloss 26:end function 27:functionCOMPUTE_AUXILIARY_LOSS(inputs,D si, Dssi) 28:L GDS ←gds_loss(inputs[’I_t’],inputs[’seg’], Dsi) 29:L SKY ←sky_loss(D ssi,inputs[’sky_mask’]) 30:L e ←edge_loss(D si, Dssi) 31:returnL GDS +L SKY +L e 32:end function C Supervision Details Self-supervised depth estimation has been researched for a decade, and hundreds of works have proposed numerous progressive ideas. Therefore, to achieve SoTA performance, it is inevitable that we will reuse some loss constraints from previous works to optimize our results. In the following text, except for theedge loss, the other losses are mostly referenced from prior papers and are not the core contributions of this paper. Thus, we have not included them in the main paper. The effectiveness of 17"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p13_sc6",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.6404649019241333,
+      "text": "Torralba, MTFormer: multi-task learning via transformer and cross-task reasoning, in: Computer Vision – ECCV 2022, Cham, 2022, pp. 304–321. [26] L. Wang, J. Zhang, O. Wang, Z. Lin, H. Lu, SDC-Depth: semantic divide-and-conquer network for monocular depth estimation, in: Proceedings of the IEEE/CVF Confer- ence on Computer Vision and Pattern Recognition, 2020, pp. 538–547. [27] R. Zhu, C. Wang, Z. Song, L. Liu, T. Zhang, Y. Zhang, ScaleDepth: decomposing metric depth estimation into scale prediction and relative depth estimation, 2024. arXiv:2407. 08187 [28] B. Cheng, I. Misra, A. G. Schwing, A. Kirillov, R. Girdhar, Masked-attention mask transformer for universal image segmentation, in: Proceedings of the IEEE/CVF Con- ference on Computer Vision and Pattern Recognition, 2022, pp. 1290–1299. [29] W. Yin, C. Zhang, H. Chen, Z. Cai, G. Yu, K. Wang, X. Chen, C. Shen, Metric3D: towards zero-shot metric 3D prediction from a single image, in: Proceedings of the IEEE/CVF International Conference on Computer Vision, 2023, pp. 9043–9053. [30] N. Silberman, D. Hoiem, P. Kohli, R. Fergus, Indoor segmentation and sup- port inference from RGBD images, in: Computer Vision – ECCV 2012, 2012, pp."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p6_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 6,
+      "score": 0.6375177502632141,
+      "text": "As can be seen, most of the signal is captured in low-frequency 0. 05 0. 10 0. 25 0. 50 1. 00 density 0. 00 0. 05 0. 10 0. 15 0. 20Relative score loss (%) Abs rel log10 RMSE 1 < 1. 25 Figure 5: Analysis of performance loss vs density on NYUv2 . Using our wavelet representation, we can drop up to 95% of the wavelet coefﬁcients while suffering a maximum relative perfor- mance loss of less than 0. 2%. 6 8 10 12 14 16 18 GFLOPs 0. 096 0. 097 0. 098 0. 099 0. 100Abs rel Depth Hints (ResNet50) 0. 891 0. 890 0. 889 0. 888 0. 887 < 1. 25 Depth Hints (ResNet50) Figure 6: Analysis of performance vs decoder GFLOPs on KITTI. By adjusting the parameter η, we trade off computation in GFLOPs (x-axis) against accuracy (y-axis; Abs Rel in red, and δ1 in green). We show here that we can reduce the computation by more than half while still remaining on par with our baseline. estimates of the depth map at the lowest resolution. This conﬁrms previous works observations [11, 4] that a coarse estimate of depth is sufﬁcient to capture the global geom- etry of the scene. Using more wavelet levels adds more high-frequency details to the depth map, yielding sharper results."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p8_sc3",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.637480616569519,
+      "text": "As a result, our Depth Anything model exhibits excellent zero-shot depth estimation ability, and also serves as a promising initialization for downstream metric depth estimation and semantic segmentation tasks. Acknowledgement. This work is supported by the National Natural Science Foundation of China (No. 62201484), HKU Startup Fund, and HKU Seed Fund for Basic Research. 10378"
+    },
+    {
+      "id": "semantic_chunk::LED_p8_sc0",
+      "source": "data\\LED.pdf",
+      "page": 8,
+      "score": 0.6365185976028442,
+      "text": "8DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT DomainRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ (HB→HB)6. 1204 0. 0903 0. 0233 0. 1353 13. 4847 3. 3579 0. 9489 0. 9812 0. 9908(HB→LED)17. 3113 0. 4479 0. 1955 0. 6817 52. 5132 20. 0263 0. 4699 0. 6652 0. 7658 (LED→LED)5. 42590. 19960. 0188 0. 1253 12. 490016. 12240. 9603 0. 9846 0. 9927(LED→HB)8. 05370. 15110. 0338 0. 2026 20. 11208. 19990. 9158 0. 9626 0. 9796 Table 4:Encoder-decoder performance across domains of NSDD. We denote (training domain→testing domain). The model trained on (HB) fails entirely when tested on (LED). Yet, (LED)-trained models are able to estimate depth when tested on the (HB) domain. Pattern# Images RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ HB Zero-shot19. 058 0. 430 0. 243 0. 587 27. 004 8. 134 0. 086 0. 186 0. 785LED 18. 023 0. 420 0. 232 0. 563 25. 500 7. 779 0. 096 0. 214 0. 867 HB 100 6. 499 0. 075 0. 033 0. 133 12. 894 0. 992 0. 9290. 977 0. 991LED 6. 198 0. 073 0. 032 0. 131 12. 182 0. 898 0. 933 0. 9770. 991 HB 500 5. 447 0. 0580. 0250. 112 10. 629 0. 688 0. 950 0. 9850. 995LED 5. 225 0. 057 0. 025 0. 108 10. 038 0. 648 0. 953 0. 986 0. 995 HB 1000 5. 124 0."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc2",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6364077925682068,
+      "text": "We employ scale- invariant loss [4] and cross-entropy loss respectively to provide depth and semantic segmentation constraints, with the expressions of 𝑆𝐼𝑙𝑜𝑔 and 𝐶𝐸 are as follows: 𝑆𝐼𝑙𝑜𝑔 = √√√√√ 1 𝑉 ∑ 𝑖 𝑑2 𝑖 − 𝜆 𝑉 2 ( ∑ 𝑖 𝑑𝑖 )2 , (12) 𝐶𝐸 = − 1 𝑉 𝑉∑ 𝑖 𝑆∗(𝑖) log 𝑆(𝑖), (13) in the formula, 𝑑𝑖 = log 𝐷𝑚(𝑖) − log 𝐷∗ 𝑚(𝑖), where 𝐷𝑚(𝑖) and 𝐷∗ 𝑚(𝑖) denote the predicted metric depth and ground truth (GT) metric depths at pixel 𝑖, respectively, while 𝑆(𝑖) and 𝑆∗(𝑖) represent the predicted semantic annotation and ground truth (GT) semantic annotations at pixel 𝑖. 𝑉 denotes the number of pixels in the image that provide valid ground truth depth values. In our experiments, we conventionally set 𝜆 to 0. 15. Segmentation proposal scale alignment loss. To improve the per- formance of depth estimation, we propose a segmentation proposal scale alignment loss (𝑆𝑃 𝑆𝐴 ). Inspired by [29], in order to make the pixel scales within each semantic segment converge to similar values, we crop the ground truth (GT) and predicted depths into 𝑈 patches according to the predicted semantic segmentation annotation, and then apply the me- dian absolute deviation for each patch."
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p3_sc4",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6353156566619873,
+      "text": "5 V ertical CutDepth Recently, a depth-speciﬁc data augmentation method named CutDepth has been proposed [Ishii and Yamashita, 2021 ], which replaces a part of the input image with the ground- truth depth map to provide diversity to the input image and enable the network to focus on the high-frequency area. In CutDepth, the coordinates (l,u ) and size (w,h ) of the cut re- gion are randomly chosen. However, we believe that the ver- tical and horizontal directions should not be regarded equally for depth estimation based on the following discovery. A pre- vious study [Dijk and Croon, 2019] suggested that the depth estimation networks mainly use vertical position in the im- age rather than apparent size or texture to predict the depth of arbitrary obstacles. This motivates us to proposevertical Cut- Depth, which enhances the original CutDepth by preserving the vertical geometric information. In vertical CutDepth, the ground-truth depth map replaces an area on I with the same location ofY , but the crop is not applied along the vertical di- rection. Therefore, the coordinate of the replacement region"
+    },
+    {
+      "id": "semantic_chunk::ACD_p4_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6351885199546814,
+      "text": "Similar to the existing technol- ogy [Gasperini et al., 2023 ], the commonly used multi-scale feature distillation loss between the teacher model (F T(·)) and student model (F S(·)) is employed to facilitate the per- ception of the student model to the adverse weather. For the given normal inputei and the produced degraded sample (hc i ), the distillation loss function is deﬁned as: Ld = 1 S S∑ s=1 1 Ns Ns∑ j=1 ⏐⏐ ⏐F T (ei)js −FS (mi)js ⏐ ⏐ ⏐ FS (mi)js , (7) where S denotes the number of different scales and mi rep- resents a sample randomly selected from the mixed training set. Ordinal Guidance Distillation. 1) Uncertain Region Def- inition: We use the output from Depth Anything V2 model as the supervisory signal because it ensures accurate depth prediction while maintaining acceptable inference speed. D T and DS represent the inverse depth of the teacher model and student model, respectively, and Dv represents the output depth of Depth Anything V2. We ﬁrst identify the regions with signiﬁcant discrepancies between D T and DS for re- ﬁnement: ¯D = |DT −DS|, (8) where ¯D reﬂects the difference between the output of the teacher model and the student model."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p20_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 20,
+      "score": 0.6320509910583496,
+      "text": "For the SSI depth supervision, we perform a normalization similar to Eq. 9 in paper: Norm(Dtc) = 2· \u0012 Dtc −min(D tc) max(Dtc)−min(D tc) −0. 5 \u0013 .(20) Furthermore, to avoid the performance ceiling imposed by the teacher model, we draw inspiration from D4RD[49], and employ an adaptive filtering mechanism: Mtc = \u0014 min t′ ph \u0000 I,I tc t′→t \u0001 < λ ηstep \u0015 , where λ is a constant set to 1. 5, Itc t′→t is the warped target image using the teacher disparity Dtc, and ηstep = max(1,30·(step now/stepmax)) is a dynamic factor that adjusts with training progress. This adaptive weight initially allows the model to converge across the entire depth map and subsequently filters out less accurate regions, mitigating the adverse effects of inaccurate pseudo-depth labels. Therefore, we have: filter(D tc) =Dtc ·M tc, In the supervision process, we introduce the BerHu lossL B and get better results: LB(x, y) = ( |x−y|,if|x−y| ≤c, (x−y)2+c2 2c ,if|x−y|> c, (21) where c= 0. 2·max(|x−y|) is a threshold that adapts to the error magnitude. This loss imposes a greater penalty on pixels with larger errors using an L2-like penalty, while retaining the robustness of L1 loss for small errors. Thus, The Eq."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p6_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6319612264633179,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Type Method Train on Train Res. Max depth ABS rel ↓ Sq rel ↓ RMSE ↓ RMSE log ↓ 𝛿 1 ↑ 𝛿 2 ↑ 𝛿 3 ↑ Test on nuScenes-Night DT MonoViT[51] N 𝑑 &𝑛 640 × 320 60 1. 726 93. 031 30. 321 2. 183 0. 143 0. 291 0. 437 WSGD[35] N 𝑑 &𝑛 640 × 320 60 0. 663 9. 573 15. 200 0. 755 0. 199 0. 388 0. 567 DA ITDFA[50] N 𝑑 &𝑛 640 × 320 60 0. 337 4. 511 10. 118 0. 403 0. 515 0. 767 0. 890 RNW[36] N 𝑑 &𝑛 640 × 320 60 0. 341 5. 516 11. 152 0. 406 0. 531 0. 789 0. 902 ADDS[24] N 𝑑 &𝑛 640 × 320 60 0. 299 4. 790 10. 372 0. 371 0. 620 0. 814 0. 907 G ITDFA[50] R 𝑑 &𝑛 640 × 320 60 0. 362 3. 760 10. 252 0. 441 0. 418 0. 702 0. 867 RNW[36] R 𝑑 &𝑛 640 × 320 60 0. 376 4. 732 11. 193 0. 506 0. 451 0. 712 0. 835 ADDS[24] R 𝑑 &𝑛 640 × 320 60 0. 322 4. 401 10. 584 0. 397 0. 527 0. 786 0. 892 MonoFormer[1] K 768 × 256 60 0. 307 3. 591 10. 162 0. 413 0. 521 0. 762 0. 872 TDDC[40] K 768 × 256 60 0. 259 3. 147 8. 547 0. 344 0. 641 0. 850 0. 928 Depth Anything[41] UD & LD - 60 0. 302 3. 051 9. 233 0. 321 0. 487 0. 784 0. 972 Depth Anything V2[42] RD & SD - 60 0. 272 2. 551 8. 576 0. 304 0. 518 0. 843 0. 971 Ours DepthDark H, VK - 60 0. 210 1. 910 7. 764 0."
+    },
+    {
+      "id": "semantic_chunk::s_p6_sc2",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.6314290165901184,
+      "text": "86 Manydepth [33] [self] 1 0. 1200 0. 802 3. 413 87. 46 0. 4974 5. 517 10. 21 14. 87 Manydepth [33]+[8] [self] 1 0. 1092 0. 759 3. 355 88. 32 0. 1257 0. 930 3. 904 85. 24 Ours-Single [self] 1 0. 1063 0. 646 3. 171 88. 29 0. 1103 0. 693 3. 455 86. 15 Table 2. Quantitative comparison on Robotcar dataset [19] in different conditions (daytime and nighttime). Source indicates where the metrics are cited, and [self] refers to our own implementations. Method Test DrivingStereo-rain frames AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ robust-depth [22] 1 0. 2622 4. 309 11. 657 59. 58 md4all [8] 1 0. 1822 2. 007 8. 465 70. 35 Manydepth [33]+[8] 1 0. 1852 2. 020 8. 515 69. 24 Ours-Single 1 0. 1707 1. 755 8. 004 72. 98 Method Test DrivingStereo-fog frames AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ robust-depth [22] 1 0. 1366 1. 260 6. 876 84. 01 md4all [8] 1 0. 1259 1. 081 6. 383 86. 16 Manydepth [33]+[8] 1 0. 1335 1. 162 6. 740 83. 50 Ours-Single 1 0. 1281 1. 023 6. 422 84. 52 Table 3. Zero-shot evaluation on DrivingStereo (rain, fog). Noted that our method is designed for both single-frame and multi-frame settings, and definitely defeats the compared baseline [33]+[8]. and trained for 10 epochs."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p5_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 5,
+      "score": 0.6313256025314331,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 5 Method Year Data Depth Error ( ↓) Depth Accuracy ( ↑) Model Size ( ↓) Abs Rel Sq Rel RMSE RMSE log δ <1. 25 δ <1. 252 δ <1. 253 Params. GeoNet [49] 2018 M 0. 149 1. 060 5. 567 0. 226 0. 796 0. 935 0. 975 31. 6M DDVO [50] 2018 M 0. 151 1. 257 5. 583 0. 228 0. 810 0. 936 0. 974 28. 1M Monodepth2-Res18 [15] 2019 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 14. 3M Monodepth2-Res50 [15] 2019 M 0. 110 0. 831 4. 642 0. 187 0. 883 0. 962 0. 982 32. 5M SGDepth [17] 2020 M+Se 0. 113 0. 835 4. 693 0. 191 0. 879 0. 961 0. 981 16. 3M Johnston et al. [37] 2020 M 0. 111 0. 941 4. 817 0. 189 0. 885 0. 961 0. 981 14. 3M+ CADepth-Res18 [51] 2021 M 0. 110 0. 812 4. 686 0. 187 0. 882 0. 962 0. 983 18. 8M HR-Depth [52] 2021 M 0. 109 0. 792 4. 632 0. 185 0. 884 0. 962 0. 983 14. 7M Lite-HR-Depth [52] 2021 M 0. 116 0. 845 4. 841 0. 190 0. 866 0. 957 0. 982 3. 1M R-MSFM3 [53] 2021 M 0. 114 0. 815 4. 712 0. 193 0. 876 0. 959 0. 981 3. 5M R-MSFM6 [53] 2021 M 0. 112 0. 806 4. 704 0. 191 0. 878 0. 960 0. 981 3. 8M MonoFormer [54] 2023 M 0. 108 0. 806 4. 594 0. 184 0. 884 0. 963 0. 983 23. 9M+ SRDepth-Res18 [25] 2023 M 0. 111 0. 762 4. 619 0. 186 0. 877 0. 961 0. 983 23."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p6_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 6,
+      "score": 0.6300321221351624,
+      "text": "25𝑖, 𝑖 = 1, 2, 3), absolute relative error (AbsRel), squared mean relative error (SqRel), log error (log10), root mean square error (RMSE), and its logarithmic form (RMSEL). Especially, 𝛿1, RMSE, and AbsRel are recognized as key metrics for depth estimation. Dur- ing the evaluation, we set the depth ranges for NYU-Depth-v2 and SUN RGB-D to 0. 01–10 m, for KITTI and Virtual KITTI 2 to 0. 01–80 m, and for Cityscapes to 0. 01–125 m. Note that we do not employ these depth ranges during training but use them to ﬁlter valid pixels. 4. 3. Comparison with the state-of-the-art To demonstrate the eﬀectiveness of our method, we compare it with the state-of-the-art methods on NYU-Depth v2, KITTI and Cityscapes datasets. Result on NYU-Depth v2. As shown in Table 1, we perform quanti- tative evaluations on the NYU-Depth V2 dataset. Our ConvNeXt-L ver- sion of the model achieves the best performance, outperforming the state-of-the-art methods in all ﬁve metrics. Compared to the second- ranked ZoeDepth, we reduce the RMSE and AbsRel error metrics by 0. 6% and 2. 3%, respectively, and also increase the accuracy metric 𝛿1 by 0. 1%."
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc0",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6285156011581421,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT17 Ldepth Lgrad Lnormal Metrics L1 Log L1L1 Log L1 RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ ✓ ✗ ✗ ✗ ✗ 5. 9790. 1910. 020 0. 13213. 032 14. 3520. 957 0. 982 0. 991 ✗ ✓ ✗ ✗ ✗ 5. 852 0. 187 0. 021 0. 13213. 12212. 9840. 9570. 9830. 992 ✗ ✓ ✓ ✗ ✗ 5. 760 0. 201 0. 020 0. 137 13. 616 16. 174 0. 9580. 9830. 992 ✗ ✓ ✗ ✓ ✗ 5. 386 0. 2020. 0210. 12412. 373 15. 901 0. 9580. 985 0. 993 ✗ ✓ ✗ ✗ ✓ 5. 3090. 206 0. 022 0. 149 14. 862 16. 048 0. 954 0. 981 0. 990 ✗ ✓ ✗ ✓ ✓ 5. 8090. 186 0. 0180. 125 12. 21014. 6830. 961 0. 985 0. 993 ✗ ✓ ✓ ✗ ✓ 5. 4220. 2000. 0180. 125 12. 50316. 1200. 961 0. 985 0. 993 Table S1:Loss study. Performance comparison using several combination of losses:1st best, 2nd best,3rd best. Figure S2:Few-shot learning performances of Depth Anything V2 on our real dataset. All LED patterns demonstrate superior performances over LB. The model is near its maximal performances with only 1,000 training images. L=L depth +λ 1Lgrad +λ 2Lnormal .(4) B. 3 Loss Study To determine the impact of each individual loss, we conduct an ablation study (see table S1)."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p6_sc0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 6,
+      "score": 0.6284345984458923,
+      "text": "Method Year Data Depth Error (↓) Depth Accuracy (↑) Model Size (↓) Abs Rel Sq Rel RMSE RMSE logδ <1. 25 δ <1. 252 δ <1. 253 Params. GeoNet [41] 2018 M 0. 149 1. 060 5. 567 0. 226 0. 796 0. 935 0. 975 31. 6M DDVO [36] 2018 M 0. 151 1. 257 5. 583 0. 228 0. 810 0. 936 0. 974 28. 1M Monodepth2-Res18 [15] 2019 M0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 14. 3M Monodepth2-Res50 [15] 2019 M0. 110 0. 831 4. 642 0. 187 0. 883 0. 962 0. 982 32. 5M SGDepth [21] 2020 M+Se 0. 113 0. 835 4. 693 0. 191 0. 879 0. 961 0. 981 16. 3M Johnstonet al.[19] 2020 M 0. 111 0. 941 4. 817 0. 189 0. 885 0. 961 0. 981 14. 3M+ CADepth-Res18 [39] 2021 M 0. 110 0. 812 4. 686 0. 187 0. 882 0. 962 0. 983 18. 8M HR-Depth [28] 2021 M 0. 109 0. 792 4. 632 0. 185 0. 884 0. 962 0. 983 14. 7M Lite-HR-Depth [28] 2021 M 0. 116 0. 845 4. 841 0. 190 0. 866 0. 957 0. 982 3. 1M R-MSFM3 [46] 2021 M 0. 114 0. 815 4. 712 0. 193 0. 876 0. 959 0. 981 3. 5M R-MSFM6 [46] 2021 M 0. 112 0. 806 4. 704 0. 191 0. 878 0. 960 0. 981 3. 8M MonoFormer [3] 2022 M 0. 108 0. 806 4. 594 0. 184 0. 884 0. 963 0. 983 23. 9M+ Lite-Mono-tiny (Ours)2023 M 0. 110 0. 837 4. 710 0. 187 0. 880 0. 960 0. 982 2. 2M Lite-Mono-small (Ours)2023 M 0. 110 0."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p10_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.6280814409255981,
+      "text": "This choice can not to fully demonstrate the model’s perfor- mance. Therefore, we train our method on both the raw depth annota- tions(rawDepths) and the completed reﬁned depth annotations(Depths) from NYU1449. The experimental results are shown in Table 8. Our Pattern Recognition 171 (2026) 112279 10"
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc0",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.6280342936515808,
+      "text": "K Scale Shift Transformer V KV Sep-Conv GRU 𝜎: Sigmoid Conv⊕: Pixel addition⊗: Concatenation⊙: Pixel multiplyDiffusion ℰ 𝐡\" 𝐡\"#$𝐷\"#$⊕𝑠%+𝑠&×Q MLP 𝒙\" (b)(a) TransformerMLP𝑠& 𝑠% 𝐳𝑰 𝐷\" iteration𝑘 Figure 4:(a): Model Structure of SSG. It corresponds to the gray rectangle shown in Fig. 2, standing for an iteration within two consecutive ones. The pipeline of SSG is comprehensively described in Sec. 3. 3 (DepthHead is omit in (a) for clear).(b): Depth distribution alignment visualization. We statistically analyze each stage of Jasmine’s SSG module on the KITTI test set. The standard SI and SSI depths are obtained by applying Eq. 9 and dividing the maximum value to the depth GT, respectively. be recovered by the least squares alignment in evaluation. Consequently, SD-based MDE predicts Scale-Shift-Invariant DepthD SSI . This inherent distribution gap between SSI and SI depth creates barriers for SD integration, and the SSG is specifically designed to fix it. The Design of SSG. Transforming the depth distribution from SSI depth to SI depth requires profound scene understanding, and the scale (sc) and shift (sh) factors are tightly coupled. Therefore, as shown in Fig."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p5_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 5,
+      "score": 0.6278631687164307,
+      "text": "Algorithm 1: Computing depth with wavelets Result: Depth map at input scale Input : Pyramid of feature maps [F4, F3, F2, F1]; Current scales = 3; LL3← DensePredict (F4); Thresholdη ; Sparse computation maskM = Initialize with 1; for (s = 3; s> = 0; s =s− 1 ){ ← LHs, HLs, HHs← SparsePredict (Fs+1; M); LLs−1← IDWT(LLs, [LHs, HLs, HHs]); ηs←η· (max(LLs−1)− min(LLs−1)); M← GetSparseMask (LHs, HLs, HHs,ηs); } procedure SparsePredict(F , M) Input : Feature mapF , Sparse maskM for ( allp s.t. M [p] == 1 ){ H[p] = SparseConv3x3(F[p]); } return H; procedure DensePredict(F) Input : Feature map F InitializeM with ones; return SparsePredict(F , M); procedure GetSparseMask(H,η) Input : High frequency coefﬁcient mapsH M = max(|LH|,|HL|,|HH|)>η ; M = upsample×2(M ) ; returnM; computation is about 3× lower in FLOPs compared to stan- dard convolutions at all pixel locations for an image of size 320× 1024. 3. 4. Self-supervised Training Our self-supervised losses are as described in [18], which we brieﬂy describe here for completeness. See sup- plemental material for further details."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6278159022331238,
+      "text": "DepthDark: Robust Monocular Depth Estimation for Low-Light Environments MM ’25, October 27–31, 2025, Dublin, Ireland. 7 Acknowledgments This work was supported by the National Key Research and Devel- opment Program of China (U22A2047), the Key R&D Program of Zhejiang under Grant No. (2025C03001, 2023C01044), the Funda- mental Research Funds for the Provincial Universities of Zhejiang (GK259909299001-023), the National Nature Science Foundation of China (62301198). References [1] Jinwoo Bae, Sungho Moon, and Sunghoon Im. 2023. Deep digging into the generalization of self-supervised monocular depth estimation. In Proceedings of the AAAI conference on artificial intelligence , Vol. 37. 187–196. [2] Hyojin Bahng, Ali Jahanian, Swami Sankaranarayanan, and Phillip Isola. 2022. Exploring visual prompts for adapting large-scale models. arXiv preprint arXiv:2203. 17274 (2022). [3] Shariq Farooq Bhat, Reiner Birkl, Diana Wofk, Peter Wonka, and Matthias Müller. 2023. Zoedepth: Zero-shot transfer by combining relative and metric depth.arXiv preprint arXiv:2302. 12288 (2023). [4] Yohann Cabon, Naila Murray, and Martin Humenberger. 2020. Virtual kitti 2. arXiv preprint arXiv:2001. 10773 (2020)."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p5_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6275647282600403,
+      "text": "Y. Zou et al. Fig. 5. Visualization of segmentation scale. Fig. 6. Segmentation proposal scale module. Since typical classiﬁcation losses neglect the ordinal information be- tween discrete labels, we convert the predicted bins B into bin center depths 𝐶 = {𝑐1, 𝑐2, … , 𝑐𝑖, … , 𝑐𝑁 } to preserve the depth ordering. Given a set of 𝑄𝐵 ∈ ℝ𝑁×𝐶 , two independent MLPs are used to predict the bins B and the bin embeddings 𝐸𝐵 ∈ ℝ𝑁×𝐶 . Then, the bin center depths value 𝑐𝑖 are computed utilizing the bin width values 𝑏𝑖: 𝑐𝑖 = 𝜖 + 1 2 𝑏𝑖 + 𝑖−1∑ 𝑗=1 𝑏𝑗 , (8) where 𝜖 = 0. 001, this small positive value ensures that each 𝑐𝑖 is greater than 0. Semantic-aware relative depth prediction. To obtain the semantic-aware relative depth map 𝑅 ∈ ℝ1× 𝐻 4 × 𝑊 4 , we multiply the per- pixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻 4 × 𝑊 4 with the bin embeddings 𝐸𝐵 ∈ ℝ𝑁×𝐶 to get the probability distribution 𝑃𝐵 ∈ ℝ𝑁× 𝐻 4 × 𝑊 4 for each pixel across the 𝐶."
+    },
+    {
+      "id": "semantic_chunk::s_p7_sc0",
+      "source": "data\\s.pdf",
+      "page": 7,
+      "score": 0.6272609233856201,
+      "text": "nuScenes night rain DrivingStereo fog rain Input Image Ground Truth robust-depth [22] md4all [8] Ours Figure 4. Qualitative comparison of depth predictions under adverse conditions. The first two rows refer to nighttime and rain conditions in nuScenes [5] dataset, and the last two rows are zero-shot evaluation results on DrivingStereo [37] dataset. Our method addresses the challenging cases indicated in green boxes (can be checked via the ground truth), where other methods fail. in rain, 602 in nighttime). Our model is evaluated both un- der single-frame and multi-frames settings. All the metrics are computed for ground truth within 0. 1 − 80m. Robotcar [19] contains daytime and nighttime driving data. We follow the split of WSGD [27], where there are 17790 images in daytime and 19612 in nighttime. The test set in- cludes 1411 single images, in which 702 are daytime and 709 are nighttime. Our model is evaluated in single-frame setting on the dataset, with the depth range of 0. 1 − 50m. DrivingStereo [37] is a dataset that includes the real rainy and foggy images, where each condition includes 500 single images for our zero-shot evaluation."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p6_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.6267929077148438,
+      "text": "Type Method Train on Train Res. Max depth ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ δ1 ↑ δ2 ↑ δ3 ↑ Test on nuScenes-Night DT MonoViT[Zhaoet al., 2022b] Nd&n 640×320 60 1. 726 93. 031 30. 321 2. 183 0. 143 0. 291 0. 437 WSGD[Vankadariet al., 2023] Nd&n 640×320 60 0. 663 9. 573 15. 200 0. 755 0. 199 0. 388 0. 567 DA ITDFA[Zhaoet al., 2022a] Nd&n 640×320 60 0. 337 4. 511 10. 118 0. 403 0. 515 0. 767 0. 890 RNW[Wanget al., 2021]† N d&n 768×384 60 0. 315 3. 792 9. 641 0. 403 0. 508 0. 778 0. 896 RNW[Wanget al., 2021] Nd&n 640×320 60 0. 341 5. 516 11. 152 0. 406 0. 531 0. 789 0. 902 ADDS[Liuet al., 2021] Nd&n 640×320 60 0. 299 4. 790 10. 372 0. 371 0. 620 0. 814 0. 907 G WSGD[Vankadariet al., 2023] Rd&n 640×320 60 0. 314 3. 567 10. 058 0. 408 0. 520 0. 758 0. 881 ITDFA[Zhaoet al., 2022a] Rd&n 640×320 60 0. 362 3. 760 10. 252 0. 441 0. 418 0. 702 0. 867 RNW[Wanget al., 2021] Rd&n 640×320 60 0. 376 4. 732 11. 193 0. 506 0. 451 0. 712 0. 835 ADDS[Liuet al., 2021] Rd&n 640×320 60 0. 322 4. 401 10. 584 0. 397 0. 527 0. 786 0. 892 MonoFormer[Baeet al., 2023]‡ K 768 ×256 60 0. 307 3. 591 10. 162 0. 413 0. 521 0. 762 0. 872 MonoViT[Zhaoet al., 2022b] K 768 ×256 60 0. 348 4. 144 11. 086 0. 473 0. 417 0."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p3_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 3,
+      "score": 0.6266664266586304,
+      "text": "Subsequently, we initialize a set of learnable queries 𝑄 ∈ ℝ(𝑀+𝑁)×𝐶 and feed them into the SQGA module to interact with the multi-scale features 𝐹𝑙. During the interaction, in- spired by the masked attention mechanism [28], we design the Segmen- tation Mask Generator (SMG) to generate segmentation attention masks 𝑀𝑆 ∈ ℝ(𝑀+𝑁)× 𝐻 4 × 𝑊 4 that guide the updates of the queries 𝑄. To decom- pose metric depth into segmentation scale and semantic-aware relative depth, we also decompose 𝑄 into segmentation queries 𝑄𝑆 ∈ ℝ𝑀×𝐶 and bin queries 𝑄𝐵 ∈ ℝ𝑁×𝐶 , where 𝑀 and 𝑁 are the numbers of 𝑄𝑆 and 𝑄𝐵, respectively. 𝑄𝑆 and 𝐹𝑝 are fed into the SPS module to generate the semantic segmentation map 𝑆 ∈ ℝ1× 𝐻 4 × 𝑊 4 and the segmentation scale map 𝐷𝑆 ∈ ℝ1× 𝐻 4 × 𝑊 4 , while 𝑄𝐵 and 𝐹𝑝 are fed into the ARD module to generate the semantic-aware relative depth map 𝑅 ∈ ℝ1× 𝐻 4 × 𝑊 4 . Finally, the metric depth map 𝐷𝑚 ∈ ℝ1× 𝐻 4 × 𝑊 4 is obtained by multiplying 𝑅 with the corresponding elements of 𝐷𝑆 . Additionally, the semantic segmenta- tion map 𝑆 is employed only for auxiliary supervision of the SPS module during training and is not needed in the inference process. 3. 2."
+    },
+    {
+      "id": "semantic_chunk::LED_p17_sc1",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6266478300094604,
+      "text": "Both L1 and Log L1 losses are tested forL depth andL grad. Our findings indicate that each selected loss positively influences performance. The combination outlined in section B. 2 demonstrates the most favorable trade-off between metrics. C Depth Anything V2 Details To fine-tune Depth Anything V2 [49] on our datasets, we used the metric model pre-trained on KITTI. We follow their indications for specializing the model to metric depth estimation. For each given number of training images, the split was selected randomly in the whole dataset. Figure S2 illustrates the RMSE of Depth Anything V2 across different numbers of fine-tuning images. We observe that the model is near its performance peak with just 1,000 images. All LED-enhanced models outperform the LB, also this architecture benefits from finer resolution in the pattern, demonstrating its best performances with LED 0. 125°."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p15_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 15,
+      "score": 0.626575767993927,
+      "text": "While channel pruning can, in practice, greatly reduce both complexity and memory footprint, it requires heavy hyper- parameter search that we therefore choose to leave for fu- ture work. 9. 4. Input resolution Finally, one important factor that makes FastDepth ef- ﬁcient is that it is trained with 224× 224 inputs, against C H W (a) C H W (b) Figure 9: Channel pruning (a) vs our sparse computation (b). Our sparse computation enabled by wavelets is complimentary with the channel pruning strategy to reduce the amount of computation, as both computation reduction methods operate in orthogonal dimen- sions. our 640× 480 input. While our method is best designed for higher-resolution regime where sparsity of wavelets is stronger, we still show that our method achieves decent re- sults even at low-resolution, and report our scores in Ta- ble 12."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p8_sc0",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.6265351176261902,
+      "text": "MM ’25, October 27–31, 2025, Dublin, Ireland. Longjian Zeng et al. Method ABS rel↓ Sq rel↓ RMSE↓ RMSE log↓ 𝛿1↑ 𝛿2↑ 𝛿3↑ Test on nuScenes-Night Depth Anything V2 0. 272 2. 5518. 576 0. 304 0. 518 0. 843 0. 971 + Only LLDG 0. 264 2. 956 9. 209 0. 371 0. 581 0. 813 0. 914 + Only LLPEFT 0. 255 3. 050 7. 686 0. 302 0. 619 0. 836 0. 934 DepthDark 0. 210 1. 910 7. 764 0. 260 0. 630 0. 914 0. 976 Test on RobotCar-Night Depth Anything V2 0. 235 2. 474 6. 239 0. 268 0. 697 0. 868 0. 946 + Only LLDG 0. 183 1. 679 6. 769 0. 251 0. 702 0. 893 0. 972 + Only LLPEFT 0. 177 1. 584 6. 727 0. 245 0. 700 0. 895 0. 973 DepthDark 0. 157 1. 063 4. 284 0. 202 0. 760 0. 941 0. 985 Table 4. 2: Efficacy of Proposed Modules: Ablation studies on nuScenes-Night and RobotCar-Night demonstrate that each module enhances DepthDark’s performance, with combined use significantly improving robustness."
+    },
+    {
+      "id": "semantic_chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p6_sc0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 6,
+      "score": 0.6254258155822754,
+      "text": "Table 1. Quantitative comparison of Marigold with SOTA affine-invariant depth estimators on several zero-shot benchmarks. All metrics† are presented in percentage terms; bold numbers are the best, underscored second best. Our method outperforms other methods on both indoor and outdoor scenes in most cases, without having seen a real depth sample. Method # Training samples NYUv2 KITTI ETH3D ScanNet DIODE Avg. RankReal Synthetic AbsRel ↓ δ1↑ AbsRel↓ δ1↑ AbsRel↓ δ1↑ AbsRel↓ δ1↑ AbsRel↓ δ1↑ DiverseDepth [56] 320K — 11. 7 87. 5 19. 0 70. 4 22. 8 69. 4 10. 9 88. 2 37. 6 63. 1 7. 6 MiDaS [35] 2M — 11. 1 88. 5 23. 6 63. 0 18. 4 75. 2 12. 1 84. 6 33. 2 71. 5 7. 3 LeReS [57] 300K 54K 9. 0 91. 6 14. 9 78. 4 17. 1 77. 7 9. 1 91. 7 27. 1 76. 6 5. 2 Omnidata [13] 11. 9M 310K 7. 4 94. 5 14. 9 83. 5 16. 6 77. 8 7. 5 93. 6 33. 9 74. 2 4. 8 HDN [60] 300K — 6. 9 94. 8 11. 5 86. 7 12. 1 83. 3 8. 0 93. 9 24. 6 78. 0 3. 2 DPT [36] 1. 2M 188K 9. 8 90. 3 10. 0 90. 1 7. 8 94. 6 8. 2 93. 4 18. 2 75. 8 3. 9 Ours (w/o ensemble)— ∗ 74K 6. 0 95. 9 10. 5 90. 4 7. 1 95. 1 6. 9 94. 5 31. 0 77. 2 2. 5 Ours (w/ ensemble) 5. 5 96. 4 9. 9 91. 6 6. 5 96. 0 6. 4 95. 1 30. 8 77. 3 1."
+    },
+    {
+      "id": "semantic_chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p6_sc0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.6254258155822754,
+      "text": "Table 1. Quantitative comparison of Marigold with SOTA affine-invariant depth estimators on several zero-shot benchmarks. All metrics† are presented in percentage terms; bold numbers are the best, underscored second best. Our method outperforms other methods on both indoor and outdoor scenes in most cases, without having seen a real depth sample. Method # Training samples NYUv2 KITTI ETH3D ScanNet DIODE Avg. RankReal Synthetic AbsRel ↓ δ1↑ AbsRel↓ δ1↑ AbsRel↓ δ1↑ AbsRel↓ δ1↑ AbsRel↓ δ1↑ DiverseDepth [56] 320K — 11. 7 87. 5 19. 0 70. 4 22. 8 69. 4 10. 9 88. 2 37. 6 63. 1 7. 6 MiDaS [35] 2M — 11. 1 88. 5 23. 6 63. 0 18. 4 75. 2 12. 1 84. 6 33. 2 71. 5 7. 3 LeReS [57] 300K 54K 9. 0 91. 6 14. 9 78. 4 17. 1 77. 7 9. 1 91. 7 27. 1 76. 6 5. 2 Omnidata [13] 11. 9M 310K 7. 4 94. 5 14. 9 83. 5 16. 6 77. 8 7. 5 93. 6 33. 9 74. 2 4. 8 HDN [60] 300K — 6. 9 94. 8 11. 5 86. 7 12. 1 83. 3 8. 0 93. 9 24. 6 78. 0 3. 2 DPT [36] 1. 2M 188K 9. 8 90. 3 10. 0 90. 1 7. 8 94. 6 8. 2 93. 4 18. 2 75. 8 3. 9 Ours (w/o ensemble)— ∗ 74K 6. 0 95. 9 10. 5 90. 4 7. 1 95. 1 6. 9 94. 5 31. 0 77. 2 2. 5 Ours (w/ ensemble) 5. 5 96. 4 9. 9 91. 6 6. 5 96. 0 6. 4 95. 1 30. 8 77. 3 1."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p6_sc1",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 6,
+      "score": 0.6254180669784546,
+      "text": "Fine-tuned to Metric Depth Estimation Apart from the impressive performance in zero-shot relative depth estimation, we further examine our Depth Anything model as a promising weight initialization for downstream metric depth estimation. We initialize the encoder of down- stream MDE models with our pre-trained encoder parameters and leave the decoder randomly initialized. The model is fine-tuned with correponding metric depth information. In this part, we use our ViT-L encoder for fine-tuning. We examine two representative scenarios: 1) in-domain metric depth estimation, where the model is trained and evaluated on the same domain (Section 4. 3. 1), and 2) zero- shot metric depth estimation, where the model is trained on one domain, e.g., NYUv2 [ 54], but evaluated in different domains, e.g., SUN RGB-D [56] (Section 4. 3. 2). 4. 3. 1 In-Domain Metric Depth Estimation As shown in Table 3 of NYUv2 [54], our model outperforms the previous best method VPD [86] remarkably, improving the δ1 (↑) from 0. 964 → 0. 984 and AbsRel (↓) from 0. 069 to 0. 056. Similar improvements can be observed in Table 4 of the KITTI dataset [17]. We improve the δ1 (↑) on KITTI from 0. 978 → 0. 982."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p8_sc2",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 8,
+      "score": 0.6252939105033875,
+      "text": "1433 WaveletMonodepth 480 × 640 0. 1258 0. 5515 0. 0542 0. 8451 0. 9681 0. 9917 1. 8070 7. 1073 WaveletMonodepth (η = 0. 04) 480 × 640 0. 1259 0. 5517 0. 0543 0. 8450 0. 9681 0. 9917 1. 8790 7. 0746 Table 4: Quantitative results on NYUv2 [58] We compare our DenseDepth [2]-inspired baseline to our implementation with wavelets and with sparsity. All results are evaluated in the Eigen center crop, without post-processing. As in DenseDepth, our network outputs a 240× 320 depth map which is then upsampled for evaluation. 4. 3. KITTI results We summarize our results on the KITTI dataset in Ta- ble 3. Here we show that our method, which simply re- places depth or disparity predictions with wavelet predic- tions, can be applied to a wide range of single image depth estimation models and losses. In each section of the table, the off-the-shelf model numbers are reported, together with numbers from a model trained with our wavelet formula- tion. For example, we demonstrate that wavelets can be used in self-supervised depth estimation frameworks such as Monodepth2 [18], as well as its weakly-supervised ex- tension Depth Hints [63]."
+    },
+    {
+      "id": "semantic_chunk::LED_p9_sc0",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6243074536323547,
+      "text": "DE MOREAUET AL.: LED: LIGHT ENHANCED DEPTH ESTIMA TION A T NIGHT9 Pattern RMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑ Encoder-decoderLB 14. 199 0. 187 0. 072 0. 292 28. 938 5. 620 0. 772 0. 909 0. 956LED 0. 5°11. 089 0. 119 0. 050 0. 213 21. 251 2. 304 0. 864 0. 950 0. 977LED 0. 25°8. 6950. 1090. 040 0. 190 18. 635 2. 1280. 899 0. 9630. 984LED 0. 125°10. 1540. 096 0. 040 0. 19018. 862 2. 1320. 907 0. 969 0. 984 DepthF ormerLB 8. 777 0. 138 0. 050 0. 186 17. 170 3. 365 0. 864 0. 957 0. 983LED 0. 5°6. 810 0. 101 0. 041 0. 152 14. 380 1. 376 0. 890 0. 969 0. 989LED 0. 25°5. 6210. 0820. 0300. 126 11. 7351. 1630. 923 0. 978 0. 992LED 0. 125°5. 7270. 076 0. 030 0. 116 10. 7541. 2610. 940 0. 987 0. 995 DepthAnythingV2 - 1000 training imagesLB 7. 637 0. 104 0. 044 0. 160 14. 617 1. 401 0. 891 0. 972 0. 990LED 0. 5°7. 017 0. 109 0. 047 0. 161 14. 044 1. 260 0. 877 0. 9697 0. 989LED 0. 25°6. 304 0. 102 0. 044 0. 146 12. 300 1. 079 0. 885 0. 9730. 993LED 0. 125°5. 785 0. 082 0. 037 0. 126 10. 673 0. 840 0. 921 0. 9810. 992 Table 6:Performance comparison on real-world data using various pattern resolutions."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p17_sc0",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 17,
+      "score": 0.6238313913345337,
+      "text": "RGB / Mask[J] DepthJ LHJ HLJ HHJ Error[J] Figure 10: Qualitative results of predicted wavelets coefﬁcients of depth maps on the NYU dataset (1/3). Our predicted wavelets have two desirable properties: they are sparse, allowing for efﬁcient computation, and they are accurately located around depth edges without needing to supervise them. Results are obtained with η = 0. 04. For each block of results, each row shows coefﬁcients and depth maps obtained at scale J in the decoder from lowest to highest scale (decreasing J), as well as the (signed-)error between DepthJ and the Depth map obtained with dense wavelet coefﬁcients at all scales. Error is displayed within range [−1. 5m, 1. 5m]."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p14_sc2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.623466968536377,
+      "text": "We evaluate our results on these 652 improved ground truth frames and compare to existing pub- lished methods without having to retrain each method, see Table 7. We present results for all other methods for which we have obtained predictions from the authors. We use the same error metrics from the standard evaluation, and clip the predicted depths to 80 meters to match the Eigen evalu- ation. We evaluate on the full image and do not crop, unlike with the Eigen evaluation. We can see that our method still signiﬁcantly outperforms all previously published methods on all metrics. While Superdepth [47] comes a close sec- ond to our algorithm in the S category, they are run at high resolution (1024× 384 vs. our 640× 192), and in Table 1 we show that at higher resolutions our model’s performance also increases. D. 2. Single-Scale Evaluation Our monocular trained approach, like all self-supervised baselines, has no guarantee of producing results with a metric scale. Nonetheless, we anticipate that there could be value in estimating depth-outputs that are, without spe- cial measures, consistent with each other across all predic- tions."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p14_sc2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.623466968536377,
+      "text": "We evaluate our results on these 652 improved ground truth frames and compare to existing pub- lished methods without having to retrain each method, see Table 7. We present results for all other methods for which we have obtained predictions from the authors. We use the same error metrics from the standard evaluation, and clip the predicted depths to 80 meters to match the Eigen evalu- ation. We evaluate on the full image and do not crop, unlike with the Eigen evaluation. We can see that our method still signiﬁcantly outperforms all previously published methods on all metrics. While Superdepth [47] comes a close sec- ond to our algorithm in the S category, they are run at high resolution (1024× 384 vs. our 640× 192), and in Table 1 we show that at higher resolutions our model’s performance also increases. D. 2. Single-Scale Evaluation Our monocular trained approach, like all self-supervised baselines, has no guarantee of producing results with a metric scale. Nonetheless, we anticipate that there could be value in estimating depth-outputs that are, without spe- cial measures, consistent with each other across all predic- tions."
+    },
+    {
+      "id": "semantic_chunk::Depth_Anything_p7_sc0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 7,
+      "score": 0.6229270696640015,
+      "text": "Method SUN RGB-D [56] iBims-1 [28] HyperSim [48] Virtual KITTI 2 [8] DIODE Outdoor [59] AbsRel (↓) δ1 (↑) AbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1 ZoeDepth [4] 0. 520 0. 545 0. 169 0. 656 0. 407 0. 302 0. 106 0. 844 0. 814 0. 237 Depth Anything 0. 500 0. 660 0. 150 0. 714 0. 363 0. 361 0. 085 0. 913 0. 794 0. 288 Table 5. Zero-shot metric depth estimation. The first three test sets in the header are indoor scenes, while the last two are outdoor scenes. Following ZoeDepth, we use the model trained on NYUv2 for indoor generalization, while use the model trained on KITTI for outdoor evaluation. For fair comparisons, we report the ZoeDepth results reproduced in our environment. Training set KITTI [17] NYUv2 [54] Sintel [7] DDAD [19] ETH3D [51] DIODE [59] Mean AbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1 AbsRel δ1 BlendedMVS [76] 0. 089 0. 918 0. 068 0. 958 0. 556 0. 689 0. 305 0. 731 0. 148 0. 845 0. 092 0. 921 0. 210 0. 844 DIML [13] 0. 099 0. 907 0. 055 0. 969 0. 573 0. 722 0. 381 0. 657 0. 142 0. 859 0. 107 0. 908 0. 226 0. 837 HRWSI [67] 0. 095 0. 917 0. 062 0. 966 0. 502 0. 731 0. 270 0. 750 0. 186 0. 775 0. 087 0. 935 0. 200 0. 846 IRS [61] 0. 105 0. 892 0. 057 0."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::SSRDepth_p1_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 1,
+      "score": 0.7230846881866455,
+      "text": "Contents lists available at ScienceDirect Pattern Recognition journal homepage: www.elsevier.com/locate/pr SSRDepth: Combining semantic segmentation and relative depth for monocular metric depth estimation Yuhang Zou, Xiaoming Chen, Zhangyan Zhao ∗, Chenghua Zhang, Haipeng Liu School of Transportation and Logistics Engineering, Wuhan University of Technology, Wuhan, 430063, Hubei, China a r t i c l e i n f o Keywords: Monocular depth estimation Semantic segment Relative depth Masked transformer a b s t r a c t Monocular depth estimation is a pivotal task in computer vision, aimed to predict a dense depth map from a single image. Existing methods can achieve satisfactory performance through carefully designed network architectures. However, they often ignore the semantic information of scene structures, leading to poor performance in the se- mantic boundary areas of the predicted depth maps. To address this issue, we propose SSRDepth, a monocular depth estimation method that leverages semantic segmentation to improve metric depth prediction.",
+      "estimated_tokens": 209
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.6759471893310547,
+      "text": "Conclusion In this paper, we propose SSRDepth, a monocular depth estimation framework leverages semantic segmentation to improve metric depth prediction. The framework decomposes the metric depth estimation task into two parts: segmentation scale prediction through the Segmenta- tion Proposal Scale (SPS) module and semantic-aware relative depth estimation through the Adaptive Relative Depth (ARD) module. Addi- tionally, the framework includes the Segmentation Query Guided Ag- gregation (SQGA) module, which is designed to recover the structural information of local semantic segments. Our method excels not only in Pattern Recognition 171 (2026) 112279 12",
+      "estimated_tokens": 129
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p12_sc4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 12,
+      "score": 0.6680233478546143,
+      "text": "4, which predicts 224× 224 depth maps given a 224× 224 input image, we keep all four levels of wavelet decomposition. Supervised losses For our NYU results in the main paper, we supervise depth using an L1 loss and SSIM: LD(y,y∗) = λ1ℓ1(y,y∗) (9)",
+      "estimated_tokens": 76
+    },
+    {
+      "id": "semantic_chunk::dav2_p26_sc0",
+      "source": "data\\dav2.pdf",
+      "page": 26,
+      "score": 0.6537681818008423,
+      "text": "Image ZoeDepth Ours Figure 15: Comparison between ZoeDepth [6] and our fine-tuned metric depth model. 26",
+      "estimated_tokens": 27
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 441,
+    "compressed_context_tokens": 441,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 441,
+  "context_tokens": 441,
+  "prompt_token_estimate": 835,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_ssrdepth_metric_depth_decomposition",
+  "answer": "<think>The user is asking about how SSRDepth decomposes metric depth estimation and recovers the final metric depth. Let me look at the provided sources.\n\nFrom source [1] (SSRDepth.pdf):\n- SSRDepth is a monocular depth estimation method that leverages semantic segmentation to improve metric depth prediction.\n- It decomposes the metric depth estimation task into two parts:\n  1. Segmentation scale prediction through the Segmentation Proposal Scale (SPS) module\n  2. Semantic-aware relative depth estimation through the Adaptive Relative Depth (ARD) module\n- Additionally, includes the Segmentation Query Guided Aggregation (SQGA) module, designed to recover the structural information of local semantic segments\n\nFrom source [2] (Conclusion):\n- Confirms the same decomposition: SPS module for segmentation scale prediction, ARD module for semantic-aware relative depth estimation, and SQGA module to recover structural information of local semantic segments.\n\nSo the answer should explain:\n1. Decomposition into two parts: segmentation scale (SPS) + semantic-aware relative depth (ARD)\n2. SQGA module to recover structural information of local semantic segments\n\nLet me format this as the required JSON.</think>\n\n{\n  \"answer\": \"SSRDepth 将度量深度估计任务分解为两部分：通过 Segmentation Proposal Scale (SPS) 模块进行分割尺度预测，以及通过 Adaptive Relative Depth (ARD) 模块进行语义感知的相对深度估计；并利用 Segmentation Query Guided Aggregation (SQGA) 模块恢复局部语义片段的结构信息，从而得到最终的 metric depth。\",\n  \"items\": [\n    {\n      \"name\": \"分割尺度预测（SPS 模块）\",\n      \"description\": \"SPS 模块负责预测分割尺度（segmentation scale prediction），为度量深度提供尺度信息。\",\n      \"citations\": [1, 2]\n    },\n    {\n      \"name\": \"语义感知相对深度估计（ARD 模块）\",\n      \"description\": \"ARD 模块负责进行语义感知的相对深度估计（semantic-aware relative depth estimation）。\",\n      \"citations\": [1, 2]\n    },\n    {\n      \"name\": \"结构信息恢复（SQGA 模块）\",\n      \"description\": \"SQGA（Segmentation Query Guided Aggregation）模块用于恢复局部语义片段的结构信息，以得到最终的 metric depth。\",\n      \"citations\": [1, 2]\n    }\n  ],\n  \"missing_information\": \"资料未提供 SPS、ARD、SQGA 三个模块之间的具体融合公式或生成最终 metric depth 的详细计算流程，仅说明了各模块的功能分工。\"\n}",
+  "usage": {
+    "prompt_tokens": 874,
+    "completion_tokens": 512,
+    "total_tokens": 1386,
+    "model": "MiniMax-M3"
+  }
+}

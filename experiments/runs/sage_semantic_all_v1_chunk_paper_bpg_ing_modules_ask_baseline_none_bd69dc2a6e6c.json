@@ -1,0 +1,486 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_paper_bpg_ing_modules_ask_baseline_none_bd69dc2a6e6c",
+  "dry_run": false,
+  "query": "这篇论文提出的两个核心数据分布补偿模块分别是什么？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::LED_p17_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6404249668121338,
+      "text": "✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.021 0.13213.12212.9840.9570.9830.992\n✗ ✓ ✓ ✗ ✗ 5.760 0.201 0.020 0.137 13.616 16.174 0.9580.9830.992\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.309"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_1",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6255485415458679,
+      "text": "Key Research and Devel-\nopment Program of China (U22A2047), the Key R&D Program of\nZhejiang under Grant No. (2025C03001, 2023C01044), the Funda-\nmental Research Funds for the Provincial Universities of Zhejiang\n(GK259909299001-023), the National Nature Sci"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6022619009017944,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_21",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.5972592234611511,
+      "text": "ent. This work is supported by the National\nNatural Science Foundation of China (No. 62201484), HKU\nStartup Fund, and HKU Seed Fund for Basic Research.\n10378"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.5957384705543518,
+      "text": "/C10/C7/C8/C6/C9/C8/C4\n/C3/C6/C5/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C4\n/C16/C9/C5/C2/C1/C6/C0\n/C24/C8/C7/C9/C1/C7/C0/C1/C4\n/C32/C2/C25/C28/C6\n /C38/C37/C35/C38/C34/C36\n/C10/C7/C8/C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C2"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.5957384705543518,
+      "text": "/C10/C7/C8/C6/C9/C8/C4\n/C3/C6/C5/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C4\n/C16/C9/C5/C2/C1/C6/C0\n/C24/C8/C7/C9/C1/C7/C0/C1/C4\n/C32/C2/C25/C28/C6\n /C38/C37/C35/C38/C34/C36\n/C10/C7/C8/C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C2"
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.5933579206466675,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5927775502204895,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f"
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_1",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.5882034301757812,
+      "text": "in [Yin et al., 2019] 114 0.875 0.976 0.994 0.108 0.416 0.048\nDA V[Huynh et al., 2020] 25 0.882 0.980 0.996 0.108 0.412 -\nBTS [Lee et al., 2019] 47 0.885 0.978 0.994 0.110 0.392 0.047\nAdabins[Bhat et al., 2021] 78 0.903 0.984 0.997 0.103 0.364 0.044\nDPT* ["
+    },
+    {
+      "id": "chunk::ACD_p5_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.5855803489685059,
+      "text": "଴\nଵ\nכ\nOREDO\n଴\nଵ\nכ\nRFDO\nଵ\n*OREDO\nଵ\n/RFDO\n\u000bD\f GD\\\u0010FOHDU\n\u000bE\f QLJKW\n\u000bF\f 3VHXGR GHSWK\n\u000bG\f 7UDLQLQJ\u0003GHSWK\n\u000bH\f 5HJLRQ PDVN\n\u000bI\f 'HSWK\u0003$Q\\WKLQJ\u00039\u0015\n5HJLRQDO\u0003'LIIHUHQFHV\nFigure 3: Ordinal Pair Sampling: During training, we use two strate-\ngies to efﬁciently sample or"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5843573808670044,
+      "text": "n: night, r: rain, a: all. T†: Translated\nvia GAN, T‡: Translated via Diffusion. Visual support: 1st and 2nd.\nFigure. 4(a) presents qualitative results. md4all-DD is partic-\nularly sensitive to water reﬂections in rainy scenes. For exam-\nple, in the ﬁrst a"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.5832544565200806,
+      "text": "/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C17/C19/C16/C15/C14/C19/C2/C9/C20\n/C13/C12/C11/C6/C8\n/C37/C7/C36/C32/C35/C30\n/C11/C2/C19/C14/C6\n/C42/C41/C39/C42/C38/C40\n/C17/C6/C9/C2/C19/C14"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.5832544565200806,
+      "text": "/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C17/C19/C16/C15/C14/C19/C2/C9/C20\n/C13/C12/C11/C6/C8\n/C37/C7/C36/C32/C35/C30\n/C11/C2/C19/C14/C6\n/C42/C41/C39/C42/C38/C40\n/C17/C6/C9/C2/C19/C14"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.5830426216125488,
+      "text": "..0.2194 10.542 ......62.28 0.1337 7.131 83.91\nRNW [38] M ∗ dn 0.2872 9.185 56.21 0.3333 10.098 43.72 0.2952 9.341 57.21\n[ours] baseline Mv d ........0.1333 .......6.459 85.88 0.2419 10.922 58.17 0.1572 .......7.453 79.49\n[ours] md4all-AD Mv dT(nr) 0.1523"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_1",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5792805552482605,
+      "text": "ce\nFoundation of China under Grant 62233005, in part by the\nNational Natural Science Foundation of China under Grant\n62203173, in part by the Program of Introducing Talents\nof Discipline to Universities through the 111 Project under\nGrant B17017 and Shangh"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.576374351978302,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_16",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.576374351978302,
+      "text": "[76] 0.021±0.0170.020±0.015 5\nZhou [76]† 0.016±0.0090.013±0.009 5\nMahjourian [40] 0.013±0.0100.012±0.011 3\nGeoNet [71] 0.012±0.0070.012±0.009 5\nEPC++ M [38] 0.013±0.0070.012±0.008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008"
+    },
+    {
+      "id": "chunk::s_p10_chunk_13",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.5751437544822693,
+      "text": "c fusion.\narXiv preprint arXiv:2407.09303, 2024. 1, 2, 5\n[35] Yihang Wu, Xiao Cao, Kaixin Li, Zitan Chen, Haonan Wang,\nLei Meng, and Zhiyong Huang. Towards better text-to-\nimage generation alignment via attention modulation.ArXiv,\nabs/2404.13899, 2024. 2\n["
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p6_chunk_6",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.5730301737785339,
+      "text": "[5] M 0.141 1.026 5.291 0.215 0.816 0.945 0.979Monodepth2w/o pretraining M 0.132 1.044 5.142 0.210 0.845 0.948 0.977Monodepth2 M 0.115 0.903 4.863 0.193 0.877 0.959 0.981\nMonodepth2(1024×320) M 0.115 0.882 4.701 0.190 0.879 0.961 0.982\nGarg [12]† S 0.152"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p6_chunk_6",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.5730301737785339,
+      "text": "[5] M 0.141 1.026 5.291 0.215 0.816 0.945 0.979Monodepth2w/o pretraining M 0.132 1.044 5.142 0.210 0.845 0.948 0.977Monodepth2 M 0.115 0.903 4.863 0.193 0.877 0.959 0.981\nMonodepth2(1024×320) M 0.115 0.882 4.701 0.190 0.879 0.961 0.982\nGarg [12]† S 0.152"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_2",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5729150176048279,
+      "text": "49.00\nRNW [Wang et al., 2021] M∗ a: dn 0.2970 2.608 7.996 43.10 0.1850 1.710 6.549 73.30\nWSGD [V ankadariet al., 2023] M∗ a: dn 0.1760 1.603 6.036 75.00 0.1740 1.637 6.302 75.40\nmd4all-DD [Gasperini et al., 2023] Mv dT†(n) 0.1128 0.648 3.206 87.13 0.1219 0"
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_1",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5689306855201721,
+      "text": "tional Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund from Guangdong Laboratory of Artiﬁcial Intel-\nligence and Digital Economy (SZ) (GML-KF-24-09).\nReferences\n[Arampatzakis et al., 2023 ] V asileios Arampatzakis, George\nPavlidis,"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p15_chunk_22",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 15,
+      "score": 0.5687688589096069,
+      "text": "er (416×128) resolutions. In\nTable 11 we show a full set of results at all three resolutions.\nWe see that higher resolution helps, conﬁrming the ﬁnding\nin [47]. We also include an ablation showing that, even at\nthe highest resolution, our full-res multi-sc"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p15_chunk_22",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 15,
+      "score": 0.5687688589096069,
+      "text": "er (416×128) resolutions. In\nTable 11 we show a full set of results at all three resolutions.\nWe see that higher resolution helps, conﬁrming the ﬁnding\nin [47]. We also include an ablation showing that, even at\nthe highest resolution, our full-res multi-sc"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_6",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5663473606109619,
+      "text": "et. Trailing 0 added to the values from [V ankadari\net al., 2023 ] and [Tosi et al., 2025 ]. Notation from Table 1.\n:\u0012\u0003'/\u000e)&&\n2ULJLQ\u0003,PDJH :\u0012\u0003'/\n:\u0012\u0003'/\u000e)&&\u000e2*'\nFigure 5: Visualization of ablation study on the distillation learning,\nfeature consistency const"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_11",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5647506713867188,
+      "text": "Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy.\n2022. Flare7k: A phenomenological nighttime flare removal dataset. Advances in\nNeural Information Processing Systems 35 (2022), 3926–3937.\n[9] Alexey Dosovitskiy. 2020. An image is worth 16x16 words:"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p7_chunk_14",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 7,
+      "score": 0.5636017918586731,
+      "text": "eliminating the artifacts. Therefore, these com-\nparisons are more meaningful when considered alongside\nqualitative outputs (Figure 5). Our supervised md4all per-\nformed better than AdaBins both quantitatively and quali-\ntatively, eliminating the dependen"
+    },
+    {
+      "id": "chunk::Lite-Mono_p4_chunk_8",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5621176958084106,
+      "text": "𝐾 \n𝑉 \nRepeat × N\nFigure 3. Structures of the proposed Consecutive Dilated Con-\nvolutions (CDC) module and Local-Global Features Interac-\ntion (LGFI) module. In each stage the CDC module with differ-\nent dilation rate is repeated for N times.\nwith size H×W×"
+    },
+    {
+      "id": "chunk::TDDC_p11_chunk_8",
+      "source": "data\\TDDC.pdf",
+      "page": 11,
+      "score": 0.56183922290802,
+      "text": "δ1↑ δ2↑ δ3↑ TimeFull disturb 0.601 10.06 15.76 0.247 0.447 0.610 ×1.0Pose disturb 0.276 3.606 9.098 0.625 0.840 0.928×1.0Self-teaching0.259 3.139 8.615 0.6410.8470.930 ×1.7Our training0.259 3.147 8.547 0.641 0.850 0.928 ×1.0\nTable A.1: Result of different"
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_5",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5614849925041199,
+      "text": "NW [Wang et al., 2021 ] M∗ dn 0.2872 9.185 56.21 0.3333 10.098 43.72 0.2952 9.341 57.21\nmd4all-AD [Gasperini et al., 2023 ] Mv dT†(nr) 0.1523 6.853 83.11 0.2187 9.003 68.84 0.1601 7.832 78.97\nmd4all-DD [Gasperini et al., 2023 ] Mv dT†(nr) 0.1366 6.452 84.6"
+    },
+    {
+      "id": "chunk::LED_p18_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 18,
+      "score": 0.5613129138946533,
+      "text": "e from section section 5.1.\nResolutionRMSE↓Abs Rel↓Log10↓RMSE Log↓SILog↓Sq Rel↓δ1↑δ 2↑δ 3↑\n200 px 5.94130.10730.0206 0.1270 12.62273.97360.9545 0.9228 0.9921\n320 px 5.42590.1996 0.01880.1253 12.490016.1224 0.96030.9846 0.9927\n640 px 5.7050 0.21090.01850.14"
+    },
+    {
+      "id": "chunk::s_p4_chunk_9",
+      "source": "data\\s.pdf",
+      "page": 4,
+      "score": 0.5597739815711975,
+      "text": "ed on the paired data Iday, ICi−syn in a\ndistillation or teacher-student manner, where the outputs of\nΦD−day, ΦP −day can be defined as Dday, Tday and those\nfrom ΦD−syn, ΦP −syn are Dsyn, Tsyn. The distillation ob-\njective is the absolute relative depth lo"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.5592594742774963,
+      "text": "Figure 3. Qualitative results on six unseen datasets.\nLl Lu S Lf eat KI NY SI DD ET DI\n✓ 0.085 0.053 0.492 0.245 0.134 0.070\n✓ ✓ 0.085 0.054 0.481 0.242 0.138 0.073\n✓ ✓ ✓ 0.081 0.048 0.469 0.235 0.134 0.068\n✓ ✓ ✓ ✓ 0.076 0.043 0.458 0.230 0.127 0.066\nTable"
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.5580178499221802,
+      "text": "ith Other Self-Supervised Settings . . . . . . . . . . . . . . . . . . . . 21\nE.3 Qualitative Comparisons . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 21\nE.4 Mix-batch Ratio Ablation Details . . . . . . . . . . . . . . . . . . . . . ."
+    },
+    {
+      "id": "chunk::TDDC_p7_chunk_8",
+      "source": "data\\TDDC.pdf",
+      "page": 7,
+      "score": 0.5574552416801453,
+      "text": "effec-\ntiveness of our method.\n4.3 Ablation Test on Pre-processing\nContribution of Each Part\nTable 4.2 shows the contributions of each pre-processing\npart. The comparison of different self-supervised training ap-\nproaches is left to the supplementary mater"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_17",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.5552729368209839,
+      "text": "008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008 3\nMonodepth2 M* 0.017±0.0080.015±0.010 2\nMonodepth2 MS* 0.017±0.0080.015±0.010 2\nMonodepth2 Mw/o pretraining*0.018±0.0100.015±0.010 2\nMonodepth2 MSw/o pretraining*0.018±0.0090."
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_17",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.5552729368209839,
+      "text": "008 3\nRanjan [51] 0.012±0.0070.012±0.008 5\nEPC++ MS [38] 0.012±0.0060.012±0.008 3\nMonodepth2 M* 0.017±0.0080.015±0.010 2\nMonodepth2 MS* 0.017±0.0080.015±0.010 2\nMonodepth2 Mw/o pretraining*0.018±0.0100.015±0.010 2\nMonodepth2 MSw/o pretraining*0.018±0.0090."
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p4_chunk_5",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 4,
+      "score": 0.5549870133399963,
+      "text": "ity when\neE[y] and eE[f (x)] exhibit strong divergence (DB ≥ 1).\n• W = 0: Exclusive focus on brightness-aligned refine-\nment when distributions coincide (DB = 0).\n• Smooth transition via W ∈ (0, 1) during intermediate\nphases .\nIn supervised LLIE, the enhan"
+    },
+    {
+      "id": "chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p4_chunk_5",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 4,
+      "score": 0.5549870133399963,
+      "text": "ity when\neE[y] and eE[f (x)] exhibit strong divergence (DB ≥ 1).\n• W = 0: Exclusive focus on brightness-aligned refine-\nment when distributions coincide (DB = 0).\n• Smooth transition via W ∈ (0, 1) during intermediate\nphases .\nIn supervised LLIE, the enhan"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_5",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.5536919832229614,
+      "text": "0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.981\nEPC++ [38] MS 0.123 0.754 4.453 0.172 0.863 0.964 0.989\nMonodepth2w/o pretrainingMS 0.107 0.720 4.345 0.161 0.890 0.971 0.989\nMonodepth2 MS 0.080 0.466 3.681 0.127 0.926 0.9"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_5",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.5536919832229614,
+      "text": "0.912 0.979 0.993\nZhan FullNYU [73] D*MS 0.130 1.520 5.184 0.205 0.859 0.955 0.981\nEPC++ [38] MS 0.123 0.754 4.453 0.172 0.863 0.964 0.989\nMonodepth2w/o pretrainingMS 0.107 0.720 4.345 0.161 0.890 0.971 0.989\nMonodepth2 MS 0.080 0.466 3.681 0.127 0.926 0.9"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p16_chunk_5",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 16,
+      "score": 0.5532110333442688,
+      "text": "w/o pretraining MS 0.127 1.031 5.266 0.221 0.836 0.943 0.974\nMonodepth2 w/o pretraining + pp MS 0.125 1.000 5.205 0.218 0.837 0.944 0.974\nMonodepth2 MS 0.106 0.818 4.750 0.196 0.874 0.957 0.979\nMonodepth2 + pp MS 0.104 0.786 4.687 0.194 0.876 0.958 0.980"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p16_chunk_5",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 16,
+      "score": 0.5532110333442688,
+      "text": "w/o pretraining MS 0.127 1.031 5.266 0.221 0.836 0.943 0.974\nMonodepth2 w/o pretraining + pp MS 0.125 1.000 5.205 0.218 0.837 0.944 0.974\nMonodepth2 MS 0.106 0.818 4.750 0.196 0.874 0.957 0.979\nMonodepth2 + pp MS 0.104 0.786 4.687 0.194 0.876 0.958 0.980"
+    },
+    {
+      "id": "chunk::ACD_p7_chunk_7",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5528930425643921,
+      "text": "zation of ablation study on the distillation learning,\nfeature consistency constraint and ordinal guidance distillation.\nDL OGD FCC day-clear night day-rain\nabsRel RMSE absRel RMSE absRel RMSE\nN\n0.1333 6.459 0.2419 10.922 0.1572 7.453\n✓ 0.1335 6.408 0.1883"
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_11",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.5526072978973389,
+      "text": "representation. In CVPR, pages\n2624–2632, 2019.\n[Dai et al., 2022] Yuekun Dai, Chongyi Li, Shangchen\nZhou, Ruicheng Feng, and Chen Change Loy. Flare7k:\nA phenomenological nighttime flare removal dataset. In\nNeurIPS, 2022.\n[Dijk and Croon, 2019] Tom van Dij"
+    },
+    {
+      "id": "chunk::Jasmine_p15_chunk_2",
+      "source": "data\\Jasmine.pdf",
+      "page": 15,
+      "score": 0.5514154434204102,
+      "text": ". . . . . . . . . . . . . . . . . . . 16\nB.2 Training Pseudocode . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 17\nC Supervision Details 17\nC.1 SGD Loss for Dynamic Object . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18\nC.2"
+    },
+    {
+      "id": "chunk::s_p8_chunk_14",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.5503535866737366,
+      "text": "indicate higher con-\nsistency. The first two columns correspond to night condi-\ntions, showing that dark, distant regions exhibit low con-\nsistency between Dday and Dsyn, while near regions have\nmuch stronger consistency. The last two columns represent\nrai"
+    },
+    {
+      "id": "chunk::SSRDepth_p13_chunk_9",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.550106406211853,
+      "text": "n competing ﬁnancial \ninterests or personal relationships that could have appeared to inﬂuence \nthe work reported in this paper. \nAcknowledgements\nThe authors would like to thank all the people who have contributed \nto this paper for their selﬂess work. Th"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p9_chunk_19",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 9,
+      "score": 0.5491945743560791,
+      "text": "er orthogonalen funktionensys-\nteme. Mathematische Annalen, 69:331–371, 1910.\n[23] K. He, X. Zhang, S. Ren, and J. Sun. Deep Residual Learning\nfor Image Recognition. In CVPR, 2016.\n[24] Yihui He, Xiangyu Zhang, and Jian Sun. Channel pruning\nfor acceleratin"
+    },
+    {
+      "id": "chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p8_chunk_18",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 8,
+      "score": 0.5490998029708862,
+      "text": "sual quality factors.\nAdditionally, Figure 6(c) presents the weight curves that\ncorrespond to Figure 6(b), demonstrating how the GT-mean\nL1 loss behaves with regard to weight variation. As η ap-\nproaches 1, the weight W rapidly decreases, indicating that\nt"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::LED_p17_chunk_1",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6404249668121338,
+      "text": "✗ 5.9790.1910.020 0.13213.032 14.3520.957 0.982 0.991\n✗ ✓ ✗ ✗ ✗ 5.852 0.187 0.021 0.13213.12212.9840.9570.9830.992\n✗ ✓ ✓ ✗ ✗ 5.760 0.201 0.020 0.137 13.616 16.174 0.9580.9830.992\n✗ ✓ ✗ ✓ ✗ 5.386 0.2020.0210.12412.373 15.901 0.9580.985 0.993\n✗ ✓ ✗ ✗ ✓ 5.309",
+      "estimated_tokens": 172
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_1",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6255485415458679,
+      "text": "Key Research and Devel-\nopment Program of China (U22A2047), the Key R&D Program of\nZhejiang under Grant No. (2025C03001, 2023C01044), the Funda-\nmental Research Funds for the Provincial Universities of Zhejiang\n(GK259909299001-023), the National Nature Sci",
+      "estimated_tokens": 75
+    },
+    {
+      "id": "chunk::TDDC_p8_chunk_0",
+      "source": "data\\TDDC.pdf",
+      "page": 8,
+      "score": 0.6022619009017944,
+      "text": "Acknowledgment\nThis work was supported in part by the National Key Re-\nsearch and Development Program of China under Grant\n2021YFB1714300, in part by the National Natural Science\nFoundation of China under Grant 62233005, in part by the\nNational Natural Sci",
+      "estimated_tokens": 58
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_21",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.5972592234611511,
+      "text": "ent. This work is supported by the National\nNatural Science Foundation of China (No. 62201484), HKU\nStartup Fund, and HKU Seed Fund for Basic Research.\n10378",
+      "estimated_tokens": 40
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p5_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 5,
+      "score": 0.5957384705543518,
+      "text": "/C10/C7/C8/C6/C9/C8/C4\n/C3/C6/C5/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C4\n/C16/C9/C5/C2/C1/C6/C0\n/C24/C8/C7/C9/C1/C7/C0/C1/C4\n/C32/C2/C25/C28/C6\n /C38/C37/C35/C38/C34/C36\n/C10/C7/C8/C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C2",
+      "estimated_tokens": 159
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p5_chunk_0",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 5,
+      "score": 0.5957384705543518,
+      "text": "/C10/C7/C8/C6/C9/C8/C4\n/C3/C6/C5/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C4\n/C16/C9/C5/C2/C1/C6/C0\n/C24/C8/C7/C9/C1/C7/C0/C1/C4\n/C32/C2/C25/C28/C6\n /C38/C37/C35/C38/C34/C36\n/C10/C7/C8/C6/C9/C8/C4\n/C3/C25/C44/C43/C28/C25/C2/C9/C48\n/C41/C40/C32/C6/C8\n/C3/C6/C9/C2/C2",
+      "estimated_tokens": 159
+    },
+    {
+      "id": "chunk::Jasmine_p11_chunk_0",
+      "source": "data\\Jasmine.pdf",
+      "page": 11,
+      "score": 0.5933579206466675,
+      "text": "Acknowledgment\nThis work was supported by the National Natural Science Foundation of China (NSFC) under Grant\n(U2441242,62172032) and Graduate Research Innovation Project under Grant (KKYJS25001536).\nReferences\n[1] Antyanta Bangunharcana, Ahmed Magd, and K",
+      "estimated_tokens": 66
+    },
+    {
+      "id": "chunk::ACD_p8_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 8,
+      "score": 0.5927775502204895,
+      "text": "Acknowledgments\nThis research was ﬁnancially supported by the Natural Sci-\nence Foundation of Heilongjiang Province of China for Ex-\ncellent Y outh Project (YQ2024F006), the National Natural\nScience Foundation of China (U23B2009) and Open Re-\nsearch Fund f",
+      "estimated_tokens": 65
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_1",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.5882034301757812,
+      "text": "in [Yin et al., 2019] 114 0.875 0.976 0.994 0.108 0.416 0.048\nDA V[Huynh et al., 2020] 25 0.882 0.980 0.996 0.108 0.412 -\nBTS [Lee et al., 2019] 47 0.885 0.978 0.994 0.110 0.392 0.047\nAdabins[Bhat et al., 2021] 78 0.903 0.984 0.997 0.103 0.364 0.044\nDPT* [",
+      "estimated_tokens": 155
+    },
+    {
+      "id": "chunk::ACD_p5_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 5,
+      "score": 0.5855803489685059,
+      "text": "଴\nଵ\nכ\nOREDO\n଴\nଵ\nכ\nRFDO\nଵ\n*OREDO\nଵ\n/RFDO\n\u000bD\f GD\\\u0010FOHDU\n\u000bE\f QLJKW\n\u000bF\f 3VHXGR GHSWK\n\u000bG\f 7UDLQLQJ\u0003GHSWK\n\u000bH\f 5HJLRQ PDVN\n\u000bI\f 'HSWK\u0003$Q\\WKLQJ\u00039\u0015\n5HJLRQDO\u0003'LIIHUHQFHV\nFigure 3: Ordinal Pair Sampling: During training, we use two strate-\ngies to efﬁciently sample or",
+      "estimated_tokens": 159
+    },
+    {
+      "id": "chunk::ACD_p6_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5843573808670044,
+      "text": "n: night, r: rain, a: all. T†: Translated\nvia GAN, T‡: Translated via Diffusion. Visual support: 1st and 2nd.\nFigure. 4(a) presents qualitative results. md4all-DD is partic-\nularly sensitive to water reﬂections in rainy scenes. For exam-\nple, in the ﬁrst a",
+      "estimated_tokens": 85
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_0",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.5832544565200806,
+      "text": "/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C5/C9/C4/C2/C1/C6/C0\n/C10/C7/C8/C6/C9/C8/C3\n/C17/C19/C16/C15/C14/C19/C2/C9/C20\n/C13/C12/C11/C6/C8\n/C37/C7/C36/C32/C35/C30\n/C11/C2/C19/C14/C6\n/C42/C41/C39/C42/C38/C40\n/C17/C6/C9/C2/C19/C14",
+      "estimated_tokens": 154
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p6_chunk_3",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 6,
+      "score": 0.5830426216125488,
+      "text": "..0.2194 10.542 ......62.28 0.1337 7.131 83.91\nRNW [38] M ∗ dn 0.2872 9.185 56.21 0.3333 10.098 43.72 0.2952 9.341 57.21\n[ours] baseline Mv d ........0.1333 .......6.459 85.88 0.2419 10.922 58.17 0.1572 .......7.453 79.49\n[ours] md4all-AD Mv dT(nr) 0.1523",
+      "estimated_tokens": 144
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1491,
+    "compressed_context_tokens": 1491,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1491,
+  "context_tokens": 1491,
+  "prompt_token_estimate": 2051,
+  "run_label": "sage_semantic_all_v1_chunk_paper_bpg_ing_modules",
+  "answer": "<think>\nThe user is asking about two core data distribution compensation modules proposed in a paper. Looking at the provided sources, I see references to \"OREDO\" and \"RFDO\" in source [10] from ACD.pdf. The text mentions \"Ordinal Pair Sampling\" and shows \"OREDO\" and \"RFDO\" which appear to be the two modules.\n\nLooking at source [10]: \"OREDO\", \"RFDO\", \"*OREDO\", \"*RFDO\" - these appear to be regional differences modules. The context mentions \"Regional Differences\" and \"Ordinal Pair Sampling\".\n\nSource [9] from Global-Local.pdf shows a table with depth estimation results.\n\nSource [13] from \"Robust Monocular Depth Estimation under Challenging Conditions\" mentions \"md4all\" which seems to be the method name. Looking at this paper context, it mentions \"md4all-AD\" and \"md4all-DD\" suggesting there are two variants.\n\nThe paper appears to be about \"Robust Monocular Depth Estimation under Challenging Conditions\" (source [13]) and \"ACD\" (source [10] also from ACD.pdf). Looking at source [10], the figure shows \"OREDO\" and \"RFDO\" which likely stand for \"Ordinal Regional Distribution Offset\" and \"Regional Feature Distribution Offset\" or similar.\n\nWait, let me re-read. Source [10] is from ACD.pdf and shows:\n- OREDO\n- RFDO\n- *OREDO\n- *RFDO\nAnd mentions \"Regional Differences\" in the figure caption.\n\nSo the two modules appear to be OREDO and RFDO, which likely stand for:\n- OREDO: possibly \"Ordinal Regional ...\" something\n- RFDO: possibly \"Regional Feature ...\" something\n\nLooking at the paper \"Robust Monocular Depth Estimation under Challenging Conditions\" (source [13]), which seems to be the md4all paper. The full title suggests it's about handling challenging conditions. The abbreviations might be from this paper.\n\nActually, looking more carefully, source [10] is from ACD.pdf which has \"Ordinal Pair Sampling\" and shows OREDO/RFDO. But the question is about \"data distribution compensation modules\" which is a specific concept.\n\nLooking at source [13] \"Robust Monocular Depth Estimation under Challenging Conditions\" - this paper mentions md4all-AD and md4all-DD. The \"AD\" might stand for \"Adverse\" or something related to all-day, and \"DD\" might stand for \"Dark/Difficult Domain\" or \"Diffusion Domain\".\n\nHmm, I need to be careful. The provided sources are quite fragmented and don't clearly explain what the two core data distribution compensation modules are. Source [10] mentions OREDO and RFDO but these are in the context of \"Ordinal Pair Sampling\" not necessarily \"data distribution compensation modules.\"\n\nGiven the limited information, I should be honest about what I can find. The sources mention \"OREDO\" and \"RFDO\" in the context of regional differences in depth estimation, and the paper appears to be \"Robust Monocular Depth Estimation under Challenging Conditions\" or \"ACD\".\n\nLet me provide what I can determine: OREDO and RFDO are mentioned, but their full names and their role as \"data distribution compensation modules\" is not clearly stated in the provided snippets.\n\nActually, looking again at source [10], the text says \"Regional Differences\" and shows OREDO/RFDO with stars. The figure caption mentions \"Ordinal Pair Sampling\" strategy. These might be the two modules but I cannot be 100% sure based on the limited snippets.\n\nGiven the instruction to not make up information and to write \"缺少什么信息\" if not enough, I should be cautious. However, the question is very specific and the sources do mention OREDO and RFDO which seem to be the two modules.\n\nWait - I should re-examine. The question asks about \"数据分布补偿模块\" (data distribution compensation modules). The ACD.pdf (Adaptive Cumulative Distribution?) paper might be the relevant one, but source [10] mentions \"Regional Differences\" not \"data distribution compensation.\"\n\nThe paper might be \"Robust Monocular Depth Estimation under Challenging Conditions\" (source [13]) which discusses md4all with AD and DD variants. But again, the snippets don't clearly define \"data distribution compensation modules.\"\n\nGiven the limited information, I'll provide what I can: OREDO and RFDO appear to be the two modules, but I'll note that the full descriptions are missing.\n\nActually, re-reading source [10] more carefully: \"଴ ଵ כ OREDO ଴ ଵ כ RFDO ଵ *OREDO ଵ /RFDO\" - these are clearly two modules with their variants (with and without the * or / prefix).\n\nGiven the context of \"Regional Differences\" and depth estimation,\n</think>\n",
+  "usage": {
+    "prompt_tokens": 2076,
+    "completion_tokens": 1024,
+    "total_tokens": 3100,
+    "model": "MiniMax-M3"
+  }
+}

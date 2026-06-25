@@ -1,0 +1,510 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_depth_anything_unlabe_ask_baseline_none_13671c3f6f75",
+  "dry_run": false,
+  "query": "Depth Anything 的数据引擎使用了哪些无标注数据来源？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::Jasmine_p14_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.7772148251533508,
+      "text": "pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything v2.arXiv preprint arXiv:2406.09414, 2024. 3\n[61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tian"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_56",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.7362122535705566,
+      "text": "ang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and\nHengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406.09414\n(2024)."
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.7311380505561829,
+      "text": "ents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith signiﬁcant discrepancies between D\nT and DS for re-\nﬁnement:\n¯D = |DT −DS|, (8)\nwhere ¯D reﬂects the difference between the output of the\nteacher model and the student model. We"
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.7300052046775818,
+      "text": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data\nLihe Yang1 Bingyi Kang2 † Zilong Huang2 Xiaogang Xu3,4 Jiashi Feng2 Hengshuang Zhao1‡\n1HKU 2TikTok 3CUHK 4ZJU\n† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_54",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.7181521654129028,
+      "text": "tion Compensa-\ntion. arXiv preprint arXiv:2404.13854 (2024).\n[41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng-\nshuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla-\nbeled data. In Proceedings of the IEEE/"
+    },
+    {
+      "id": "chunk::SSRDepth_p14_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 14,
+      "score": 0.7142785787582397,
+      "text": ". Xu, J. Feng, H. Zhao, Depth anything V2, in: \nAdvances in Neural Information Processing Systems,  37, 2024, pp. 21875–21911. \nYuhang Zou is a Master’s candidate in Mechanical Engineering at Wuhan University of \nTechnology, Wuhan, China. His research focu"
+    },
+    {
+      "id": "chunk::dav2_p1_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 1,
+      "score": 0.7128157615661621,
+      "text": "e-grained details. Compared\nwith SD-based models [31, 25], it enjoys faster inference speed, fewer parameters, and higher depth accuracy.\nAbstract\nThis work presents Depth Anything V2. Without pursuing fancy techniques, we aim\nto reveal crucial findings to"
+    },
+    {
+      "id": "chunk::dav2_p18_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 18,
+      "score": 0.7112176418304443,
+      "text": "2.5\nDepth Anything V2 Base 83.9\nSegmenter [74] ViT-L [17] 82.2\nSegFormer [85] MiT-B5 [85] 82.4\nMask2Former [13] Swin-L [45] 83.3\nOneFormer [29] Swin-L [45] 83.0\nOneFormer [29] ConvNeXt-XL [46] 83.6\nDDP [30] ConvNeXt-L [46] 83.2\nDepth Anything V2 Large 85.6"
+    },
+    {
+      "id": "chunk::dav2_p1_chunk_0",
+      "source": "data\\dav2.pdf",
+      "page": 1,
+      "score": 0.7073562145233154,
+      "text": "Depth Anything V2\nLihe Yang1 Bingyi Kang2† Zilong Huang2\nZhen Zhao Xiaogang Xu Jiashi Feng 2 Hengshuang Zhao1‡\n1HKU 2TikTok\n†project lead ‡corresponding author\nhttps://depth-anything-v2.github.io\nOurs-Large\nMarigold(LCM)\nDepthFM\nOurs-Small\nlatency (V100) p"
+    },
+    {
+      "id": "chunk::ACD_p9_chunk_18",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.7035700082778931,
+      "text": "l., 2024b] Lihe Y ang, Bingyi Kang, Zilong Huang,\nZhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang\nZhao. Depth anything v2. In NeurIPS, 2024.\n[Yin et al., 2022 ] Wei Yin, Jianming Zhang, Oliver Wang,\nSimon Niklaus, Simon Chen, Yifan Liu, and Chunhua\nShe"
+    },
+    {
+      "id": "chunk::Jasmine_p19_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 19,
+      "score": 0.7022871375083923,
+      "text": "tain the depthD tc through:\n1\nDtc\n=clip\n\u0012 1\nDmax\n+\n\u0012 1\nDmin\n− 1\nDmax\n\u0013\n·dp,0,3\n\u0013\n,\nwhere Dmin and Dmax are set to 0.1 and 100, respectivley. We find that the depth range at range\n[0,3] can already describe all information within the maximum depth.\n19"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_11",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.699283242225647,
+      "text": "822 0.918\nDepth Anything V2[42] RD & SD - 40 0.235 2.474 6.239 0.268 0.697 0.868 0.946\nOurs DepthDark H, VK - 40 0.157 1.063 4.284 0.202 0.760 0.941 0.985\nTable 4.1: The best results are in bold, while the second-best scores are underline. H, VK, K, N, and"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.698535680770874,
+      "text": "depth [15] S 0.109 0.811 4.568 0.166 0.877 0.967 0.988\n3net [50] (VGG) S 0.119 0.920 4.824 0.182 0.856 0.957 0.985\n3net [50] (ResNet 50) S 0.102 0.675 4.293 0.159 0.881 0.969 0.991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.698535680770874,
+      "text": "depth [15] S 0.109 0.811 4.568 0.166 0.877 0.967 0.988\n3net [50] (VGG) S 0.119 0.920 4.824 0.182 0.856 0.957 0.985\n3net [50] (ResNet 50) S 0.102 0.675 4.293 0.159 0.881 0.969 0.991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6981210708618164,
+      "text": "cf\nDepth Anything \nV2\n௖\nௗ\n௥\nOne batch\nStable Diffusion \nTurbo v2.1\nDecoder\nEncoder Decoder\nTD\nSD\nVD\nie\nim\nSD\n0p\n1p\n\u001f\n0p 1p\u001f\nVD\n\u000b\f\n\u000b\f\n01\n2log 1 0\n00\npp\neL\n\u0010\u0010­ \u000ez° ®\n °¯\n\u000b\n \f\n\u000b\n \f\n1\npp\n0\n\u000b\n\u000b\n \f\n01\n0\n01\n01\n11\n11 1\n0\npp\npp\notherwise\nW\nW\n\n\n\n\n­\u000et \u000e\n°° \u0010 \u001f® \u000e°\n°¯"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_19",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.697791576385498,
+      "text": "challenging optimization target when learning\nunlabeled images, and 2) preserving rich semantic priors\nfrom pre-trained models. As a result, our Depth Anything\nmodel exhibits excellent zero-shot depth estimation ability,\nand also serves as a promising ini"
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_1",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.6967025399208069,
+      "text": "† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1. Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [35]. Middle two:\nSA-1B [26] (a hold-out unseen set). Right two: p"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.6937382221221924,
+      "text": "g, and Hengshuang Zhao. Depth anything:\nUnleashing the power of large-scale unlabeled data. InProceedings of the IEEE/CVF Conference on\nComputer Vision and Pattern Recognition, pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao"
+    },
+    {
+      "id": "chunk::dav2_p10_chunk_22",
+      "source": "data\\dav2.pdf",
+      "page": 10,
+      "score": 0.6843606233596802,
+      "text": "sent Depth Anything V2, a more powerful foundation model for monocular depth\nestimation. It is capable of 1) providing robust and fine-grained depth prediction, 2) supporting\nextensive applications with varied model sizes (from 25M to 1.3B parameters), and"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_4",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6829817295074463,
+      "text": "rd best.\nFigure S2:Few-shot learning performances of Depth Anything V2 on our real dataset.\nAll LED patterns demonstrate superior performances over LB. The model is near its maximal\nperformances with only 1,000 training images.\nL=L depth +λ 1Lgrad +λ 2Lnor"
+    },
+    {
+      "id": "chunk::LED_p5_chunk_4",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.6784308552742004,
+      "text": "ly on the toolbox [26] for Depth-\nFormer [27]. We apply Depth Anything V2 [49] official fine-tuning code to adapt the model\nfor metric depth estimation. The only changes are limited to dataset format compatibility.\nThe training setup follows the original p"
+    },
+    {
+      "id": "chunk::dav2_p15_chunk_13",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.6754944324493408,
+      "text": "Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything: Unleashing the power of large-scale unlabeled data. In CVPR, 2024. 1, 2, 3,\n5, 6, 7, 8, 9, 10, 17, 19, 21, 22, 24\n[90] Lihe Yang, Zhen Zhao, Lei Qi, Yu Qiao, Yi"
+    },
+    {
+      "id": "chunk::Depth_Anything_p6_chunk_6",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 6,
+      "score": 0.6739560961723328,
+      "text": "Depth Anything\nmodel as a promising weight initialization for downstream\nmetric depth estimation. We initialize the encoder of down-\nstream MDE models with our pre-trained encoder parameters\nand leave the decoder randomly initialized. The model is\nfine-tun"
+    },
+    {
+      "id": "chunk::dav2_p21_chunk_5",
+      "source": "data\\dav2.pdf",
+      "page": 21,
+      "score": 0.6738032698631287,
+      "text": "Qualitative comparison between Depth Anything V1 and V2\nPlease refer to Figure 13. Our Depth Anything V2 produces much more fine-grained depth predictions\nthan V1 [89]. Ours are also highly robust to transparent objects.\n21"
+    },
+    {
+      "id": "chunk::Depth_Anything_p5_chunk_22",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 5,
+      "score": 0.6735454797744751,
+      "text": "date the zero-shot depth estimation capability\nof our Depth Anything model on six representative unseen\ndatasets: KITTI [17], NYUv2 [54], Sintel [7], DDAD [19],\nETH3D [51], and DIODE [59]. We compare with the best\nDPT-BEiTL-512 model from the latest MiDaS"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_11",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6734921336174011,
+      "text": "𝑖\n𝑑2\n𝑖 − 𝜆\n𝑉 2\n(\n∑\n𝑖\n𝑑𝑖\n)2\n, (12)\n𝐶𝐸 = − 1\n𝑉\n𝑉∑\n𝑖\n𝑆∗(𝑖) log 𝑆(𝑖), (13)\nin the formula, 𝑑𝑖 = log 𝐷𝑚(𝑖) − log 𝐷∗\n𝑚(𝑖), where 𝐷𝑚(𝑖) and 𝐷∗\n𝑚(𝑖) denote \nthe predicted metric depth and ground truth (GT) metric depths at pixel \n𝑖, respectively, while 𝑆(𝑖) and"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_17",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6731299161911011,
+      "text": "g [34] with our Depth Anything.\n5. Conclusion\nIn this work, we present Depth Anything, a highly practical\nsolution to robust monocular depth estimation. Different\nfrom prior arts, we especially highlight the value of cheap\nand diverse unlabeled images. We"
+    },
+    {
+      "id": "chunk::dav2_p8_chunk_20",
+      "source": "data\\dav2.pdf",
+      "page": 8,
+      "score": 0.6713472604751587,
+      "text": "ompare with Depth Anything V1 [ 89] and MiDaS V3.1 [ 7] on five unseen test\ndatasets. As shown in Table 2, our results are superior to MiDaS and comparable to V1 [ 89]. We\nare slightly inferior to V1 in metrics on two of the datasets. However, the plain me"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_13",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.670141875743866,
+      "text": "the ground truth. While Depth Any-\nthing and Depth Anything V2 can roughly estimate object contours\nand depth information, their predictions still exhibit noticeable\ndiscrepancies, particularly in the contours of vehicles and build-\nings. This is because A"
+    },
+    {
+      "id": "chunk::Depth_Anything_p7_chunk_24",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 7,
+      "score": 0.6667772531509399,
+      "text": "S trained encoder in downstream\ntasks. Our Depth Anything model has exhibited stronger\nzero-shot capability than MiDaS [5, 45]. Here, we further\n10377"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_10",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.6663342714309692,
+      "text": "curate depth\nprediction while maintaining acceptable inference speed. D\nT\nand DS represent the inverse depth of the teacher model and\nstudent model, respectively, and Dv represents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith si"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.6660739183425903,
+      "text": "min(        ,       ) =               \n❌\nerror\nerror\nDepth decoder\nBaseline Ours\n \nLooking up pixels using the correct depth\nDe\npth \nenc\nod\ner\nDe\npth \ndec\nod\ner\nc\no\nl\no\nr\nd\ne\np\nt\nh\n \n  \n⊗\nSSIM\n \n⊗\nSSIM\nUpsample\nBaseline Ours\nDepth \ndecoder\n \nBaseline O"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.6660739183425903,
+      "text": "min(        ,       ) =               \n❌\nerror\nerror\nDepth decoder\nBaseline Ours\n \nLooking up pixels using the correct depth\nDe\npth \nenc\nod\ner\nDe\npth \ndec\nod\ner\nc\no\nl\no\nr\nd\ne\np\nt\nh\n \n  \n⊗\nSSIM\n \n⊗\nSSIM\nUpsample\nBaseline Ours\nDepth \ndecoder\n \nBaseline O"
+    },
+    {
+      "id": "chunk::Jasmine_p13_chunk_22",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.6654162406921387,
+      "text": "feys. Depthsplat: Connecting gaussian splatting and depth.arXiv preprint arXiv:2410.13862, 2024. 1\n[54] Zhiqiang Yan, Yuankai Lin, Kun Wang, Yupeng Zheng, Yufei Wang, Zhenyu Zhang, Jun Li, and Jian\nYang. Tri-perspective view decomposition for geometry-awar"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_16",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6649775505065918,
+      "text": "ur Depth Anything, aiming to provide better\ncontrol signals for image synthesis and video editing. Please\nrefer to our project page for more qualitative results on video\nediting [34] with our Depth Anything.\n5. Conclusion\nIn this work, we present Depth Any"
+    },
+    {
+      "id": "chunk::dav2_p2_chunk_16",
+      "source": "data\\dav2.pdf",
+      "page": 2,
+      "score": 0.6644744277000427,
+      "text": "minative task, we start from Depth Anything V1 [89], aiming to\nmaintain its strengths and rectify its weaknesses. Intriguingly, we will demonstrate that, to achieve\n1https://jspenmar.github.io/MDEC\n2"
+    },
+    {
+      "id": "chunk::LED_p9_chunk_7",
+      "source": "data\\LED.pdf",
+      "page": 9,
+      "score": 0.6635421514511108,
+      "text": "on NSDD, Depth Anything V2 [49] performs poorly, with an\nRMSE of∼19 m (see table 5), highlighting the complexity of nighttime data and the need\nfor specialized models. It performs slightly better on LED images, possibly due to its ability\nto leverage the p"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_13",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6632283926010132,
+      "text": "d LD refer to Depth Anything being trained on 62M\nunlabeled datasets and 1.5M labeled datasets. RD and SD denote that Depth Anything V2 is trained on 62M real datasets and\n0.5M synthetic datasets.𝑑 and𝑛 refer to the daytime and nighttime training splits pr"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_5",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.662265419960022,
+      "text": "ays from the easy ones.\nAs shown at the top of Figure 3, since we do not apply\nany architectural modification, at inference time, we pre-\ndict depth with the same model through the same model\nparameters, regardless of the input condition. While dedi-\ncated"
+    },
+    {
+      "id": "chunk::dav2_p6_chunk_11",
+      "source": "data\\dav2.pdf",
+      "page": 6,
+      "score": 0.6606260538101196,
+      "text": "e gap is huge [ 48]. Finally, as\nsupported in Figure 16, unlabeled images boost the robustness of our smaller models tremendously.\n5 Depth Anything V2\n5.1 Overall Framework\nAccording to all the above analysis, our final pipeline to train Depth Anything V2"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p3_chunk_23",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 3,
+      "score": 0.659518301486969,
+      "text": "finement of random depth distri-\nbution Dτ into a depth estimate,\npθ (Dτ −1 |Dτ , c ) := N\n\u0000\nDτ −1; µθ (Dτ , τ,c) , σ2\nτ I\n\u0001\n, (8)\nwhere c stands for the conditions. To speed up the inference\nprocess, we employ an improved inference process from [41],\nwher"
+    },
+    {
+      "id": "chunk::dav2_p24_chunk_0",
+      "source": "data\\dav2.pdf",
+      "page": 24,
+      "score": 0.6581541299819946,
+      "text": "Image\n Depth Anything V1 Depth Anything V2\nFigure 13: Comparison between Depth Anything V1 [89] and our V2 in open-world images.\n24"
+    },
+    {
+      "id": "chunk::Depth_Anything_p3_chunk_15",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 3,
+      "score": 0.6574966907501221,
+      "text": ".1M\nLSUN [80] ✓ None 9.8M\nObjects365 [52] ✓ ✓ None 1.7M\nOpen Images V7 [29] ✓ ✓ None 7.8M\nPlaces365 [87] ✓ ✓ None 6.5M\nSA-1B [26] ✓ ✓ None 11.1M\nTable 1. In total, our Depth Anything is trained on 1.5M labeled\nimages and 62M unlabeled images jointly.\nour e"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.6569634079933167,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.6569634079933167,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_21",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.6559348106384277,
+      "text": "make ﬁve\nframes for evaluation.\nDepth Decoder\nlayer k s chns res input activation\nupconv5 3 1 256 32 econv5 ELU [7]\niconv5 3 1 256 16 ↑upconv5, econv4ELU\nupconv4 3 1 128 16 iconv5 ELU\niconv4 3 1 128 8 ↑upconv4, econv3ELU\ndisp4 3 1 1 1 iconv4 Sigmoid\nupcon"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_21",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6559348106384277,
+      "text": "make ﬁve\nframes for evaluation.\nDepth Decoder\nlayer k s chns res input activation\nupconv5 3 1 256 32 econv5 ELU [7]\niconv5 3 1 256 16 ↑upconv5, econv4ELU\nupconv4 3 1 128 16 iconv5 ELU\niconv4 3 1 128 8 ↑upconv4, econv3ELU\ndisp4 3 1 1 1 iconv4 Sigmoid\nupcon"
+    },
+    {
+      "id": "chunk::dav2_p2_chunk_9",
+      "source": "data\\dav2.pdf",
+      "page": 2,
+      "score": 0.6557953357696533,
+      "text": "r in\nmodeling the details, while Depth Anything produces more robust predictions for complex scenes.\nMoreover, as summarized in Table 1, Depth Anything is more efficient and lightweight than Marigold,\nwith different scales to choose from. Meantime, however"
+    },
+    {
+      "id": "chunk::DepthDark_p5_chunk_32",
+      "source": "data\\DepthDark.pdf",
+      "page": 5,
+      "score": 0.6553308963775635,
+      "text": "During training, we adopted the training set-\ntings from Depth Anything V2 and used the DPT decoder [30] in\nthe ZoeDepth [3] pipeline, built on the DINOv2 encoder. All images\nin the training dataset were resized to a resolution of 518× 518 for"
+    },
+    {
+      "id": "chunk::LED_p6_chunk_2",
+      "source": "data\\LED.pdf",
+      "page": 6,
+      "score": 0.6551178693771362,
+      "text": "8473.35790.9489 0.9812 0.9908LED5.42590.19960.0188 0.1253 12.490016.12240.9603 0.9846 0.9927\nAdabinsHB 7.3520 0.1360 0.0320 0.1230 10.1880 4.2770 0.8790 0.9440 0.9740LED5.5830 0.0690 0.0240 0.0920 7.7290 2.5090 0.9210 0.9680 0.9840\nDepthF ormerHB 5.85280.0"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::Jasmine_p14_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.7772148251533508,
+      "text": "pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything v2.arXiv preprint arXiv:2406.09414, 2024. 3\n[61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tian",
+      "estimated_tokens": 102
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_56",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.7362122535705566,
+      "text": "ang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and\nHengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406.09414\n(2024).",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.7311380505561829,
+      "text": "ents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith signiﬁcant discrepancies between D\nT and DS for re-\nﬁnement:\n¯D = |DT −DS|, (8)\nwhere ¯D reﬂects the difference between the output of the\nteacher model and the student model. We",
+      "estimated_tokens": 77
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.7300052046775818,
+      "text": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data\nLihe Yang1 Bingyi Kang2 † Zilong Huang2 Xiaogang Xu3,4 Jiashi Feng2 Hengshuang Zhao1‡\n1HKU 2TikTok 3CUHK 4ZJU\n† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1",
+      "estimated_tokens": 89
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_54",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.7181521654129028,
+      "text": "tion Compensa-\ntion. arXiv preprint arXiv:2404.13854 (2024).\n[41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng-\nshuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla-\nbeled data. In Proceedings of the IEEE/",
+      "estimated_tokens": 85
+    },
+    {
+      "id": "chunk::SSRDepth_p14_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 14,
+      "score": 0.7142785787582397,
+      "text": ". Xu, J. Feng, H. Zhao, Depth anything V2, in: \nAdvances in Neural Information Processing Systems,  37, 2024, pp. 21875–21911. \nYuhang Zou is a Master’s candidate in Mechanical Engineering at Wuhan University of \nTechnology, Wuhan, China. His research focu",
+      "estimated_tokens": 75
+    },
+    {
+      "id": "chunk::dav2_p1_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 1,
+      "score": 0.7128157615661621,
+      "text": "e-grained details. Compared\nwith SD-based models [31, 25], it enjoys faster inference speed, fewer parameters, and higher depth accuracy.\nAbstract\nThis work presents Depth Anything V2. Without pursuing fancy techniques, we aim\nto reveal crucial findings to",
+      "estimated_tokens": 54
+    },
+    {
+      "id": "chunk::dav2_p18_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 18,
+      "score": 0.7112176418304443,
+      "text": "2.5\nDepth Anything V2 Base 83.9\nSegmenter [74] ViT-L [17] 82.2\nSegFormer [85] MiT-B5 [85] 82.4\nMask2Former [13] Swin-L [45] 83.3\nOneFormer [29] Swin-L [45] 83.0\nOneFormer [29] ConvNeXt-XL [46] 83.6\nDDP [30] ConvNeXt-L [46] 83.2\nDepth Anything V2 Large 85.6",
+      "estimated_tokens": 126
+    },
+    {
+      "id": "chunk::dav2_p1_chunk_0",
+      "source": "data\\dav2.pdf",
+      "page": 1,
+      "score": 0.7073562145233154,
+      "text": "Depth Anything V2\nLihe Yang1 Bingyi Kang2† Zilong Huang2\nZhen Zhao Xiaogang Xu Jiashi Feng 2 Hengshuang Zhao1‡\n1HKU 2TikTok\n†project lead ‡corresponding author\nhttps://depth-anything-v2.github.io\nOurs-Large\nMarigold(LCM)\nDepthFM\nOurs-Small\nlatency (V100) p",
+      "estimated_tokens": 96
+    },
+    {
+      "id": "chunk::ACD_p9_chunk_18",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.7035700082778931,
+      "text": "l., 2024b] Lihe Y ang, Bingyi Kang, Zilong Huang,\nZhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang\nZhao. Depth anything v2. In NeurIPS, 2024.\n[Yin et al., 2022 ] Wei Yin, Jianming Zhang, Oliver Wang,\nSimon Niklaus, Simon Chen, Yifan Liu, and Chunhua\nShe",
+      "estimated_tokens": 93
+    },
+    {
+      "id": "chunk::Jasmine_p19_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 19,
+      "score": 0.7022871375083923,
+      "text": "tain the depthD tc through:\n1\nDtc\n=clip\n\u0012 1\nDmax\n+\n\u0012 1\nDmin\n− 1\nDmax\n\u0013\n·dp,0,3\n\u0013\n,\nwhere Dmin and Dmax are set to 0.1 and 100, respectivley. We find that the depth range at range\n[0,3] can already describe all information within the maximum depth.\n19",
+      "estimated_tokens": 95
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_11",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.699283242225647,
+      "text": "822 0.918\nDepth Anything V2[42] RD & SD - 40 0.235 2.474 6.239 0.268 0.697 0.868 0.946\nOurs DepthDark H, VK - 40 0.157 1.063 4.284 0.202 0.760 0.941 0.985\nTable 4.1: The best results are in bold, while the second-best scores are underline. H, VK, K, N, and",
+      "estimated_tokens": 117
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.698535680770874,
+      "text": "depth [15] S 0.109 0.811 4.568 0.166 0.877 0.967 0.988\n3net [50] (VGG) S 0.119 0.920 4.824 0.182 0.856 0.957 0.985\n3net [50] (ResNet 50) S 0.102 0.675 4.293 0.159 0.881 0.969 0.991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2",
+      "estimated_tokens": 155
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.698535680770874,
+      "text": "depth [15] S 0.109 0.811 4.568 0.166 0.877 0.967 0.988\n3net [50] (VGG) S 0.119 0.920 4.824 0.182 0.856 0.957 0.985\n3net [50] (ResNet 50) S 0.102 0.675 4.293 0.159 0.881 0.969 0.991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2",
+      "estimated_tokens": 155
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_19",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.697791576385498,
+      "text": "challenging optimization target when learning\nunlabeled images, and 2) preserving rich semantic priors\nfrom pre-trained models. As a result, our Depth Anything\nmodel exhibits excellent zero-shot depth estimation ability,\nand also serves as a promising ini",
+      "estimated_tokens": 52
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_1",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.6967025399208069,
+      "text": "† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1. Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [35]. Middle two:\nSA-1B [26] (a hold-out unseen set). Right two: p",
+      "estimated_tokens": 62
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1489,
+    "compressed_context_tokens": 1489,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1489,
+  "context_tokens": 1489,
+  "prompt_token_estimate": 2025,
+  "run_label": "sage_semantic_all_v1_chunk_depth_anything_unlabeled_data_sources",
+  "answer": "<think>\nThe user is asking about what unlabeled data sources are used in the Depth Anything data engine. Let me look through the provided materials to find this information.\n\nLooking at the materials, I see references to Depth Anything and Depth Anything V2 papers, but the materials provided are mostly snippets about citations, tables, and brief descriptions. \n\nLet me search for specific information about the data engine and unlabeled data sources:\n\n- [4] mentions \"Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data\" - this is the title\n- [15] mentions \"challenging optimization target when learning unlabeled images\" and \"preserving rich semantic priors from pre-trained models\"\n- [16] mentions \"Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [35]. Middle two: SA-1B [26] (a hold-out unseen set). Right two: p...\"\n\nThe materials mention COCO and SA-1B as test/unseen sets, but the question is about unlabeled data sources used in the data engine. The materials don't directly list the unlabeled data sources used to train the data engine.\n\nLooking more carefully:\n- [16] mentions COCO [35] and SA-1B [26] - but these seem to be presented as \"unseen scenes\" for testing/evaluation, not as training data sources\n- The materials don't explicitly list the unlabeled data sources used in the data engine\n\nThe information is not directly available in the provided materials. The materials only mention COCO and SA-1B as examples of unseen scenes shown in Figure 1, not as data sources for the data engine.\n\nI should indicate that the specific information about the unlabeled data sources used in the data engine is not available in the provided materials.\n</think>\n{\"answer\":\"所给资料未直接说明 Depth Anything 数据引擎具体使用的无标注数据来源。\",\"items\":[],\"missing_information\":\"资料中仅出现 Depth Anything 的标题、引用信息以及图1展示的'未见场景'示例（如 COCO、SA-1B），并未明确列出数据引擎所采用的无标注数据来源。\"}",
+  "usage": {
+    "prompt_tokens": 2039,
+    "completion_tokens": 431,
+    "total_tokens": 2470,
+    "model": "MiniMax-M3"
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "run_id": "sage_semantic_all_v1_semantic_chunk_lite_mono_cd_ask_baseline_none_4b09ca8f0f50",
+  "dry_run": false,
+  "query": "CDC 模块是如何设计的？它相比普通卷积有什么优势？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1500,
+  "retrieved_chunks": [
+    {
+      "id": "semantic_chunk::Lite-Mono_p7_sc4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6517988443374634,
+      "text": "It can be observed that although the model size remains the same the accuracy drops more than for not using LGFI blocks. The beneﬁt of introducing the CDC module is to enhance the locality by gradually extracting multi-scale features, while not adding additional trainable parameters. The beneﬁt of pooled concatenations. Accuracy also decreases when three pooled concatenations are removed."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.615020215511322,
+      "text": "The dilation rate used in each CDC block is also listed. Repeat × 1 3×3 DDWConv dilation=r Batch Norm 1×1 point-wise GELU 1×1 point-wise CDC Module LGFI Module Linear 1×1 point-wise GELU Linear Linear LayerNorm Softmax Linear LayerNorm 1×1 point-wise 𝑄𝑇 𝑄 𝐾 𝑉 Repeat × N Figure 3. Structures of the proposed Consecutive Dilated Con- volutions (CDC) module and Local-Global Features Interac- tion (LGFI) module. In each stage the CDC module with differ- ent dilation rate is repeated for N times. with size H×W× 3 is ﬁrst fed into a convolution stem, where the image is down-sampled by a 3× 3 convolu- tion. Following two additional 3× 3 convolutions with stride = 1 for local feature extraction, the feature maps of size H 2 × W 2 ×C1 are obtained. In the second stage the features are concatenated with the pooled three-channel in- put image, and another 3×3 convolution withstride = 2 is adopted to down-sample the feature maps, resulting in fea- ture maps with size H 4 × W 4 ×C2. Concatenating features with the average-pooled input image in a down-sampling layer can reduce the spatial information loss caused by the reduction of feature size, which is inspired by ESP- Netv2 [3]."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.603400468826294,
+      "text": "180 0. 808 0. 966 0. 989 WSGD[Vankadariet al., 2023] R d&n 640× 320 40 0. 123 0. 694 3. 957 0. 163 0. 835 0. 978 0. 995 DA ITDFA[Zhaoet al., 2022a] R d&n 640× 320 40 0. 156 0. 786 3. 971 0. 192 0. 778 0. 965 0. 992 ADDS[Liu et al., 2021]† R d&n 640× 320 40 0. 109 0. 584 3. 578 0. 153 0. 631 0. 908 0. 962 ADDS[Liu et al., 2021] R d&n 640× 320 40 0. 120 0. 778 4. 113 0. 172 0. 856 0. 967 0. 987 RNW[Wanget al., 2021] R d&n 640× 320 40 0. 156 0. 701 3. 838 0. 202 0. 768 0. 958 0. 991 G ITDFA[Zhaoet al., 2022a] N d&n 640× 320 40 0. 230 2. 018 6. 336 0. 281 0. 653 0. 875 0. 956 ADDS[Liu et al., 2021] N d&n 640× 320 40 0. 180 1. 441 5. 680 0. 232 0. 727 0. 930 0. 981 RNW[Wanget al., 2021] N d&n 640× 320 40 0. 271 3. 939 9. 204 0. 314 0. 661 0. 830 0. 927 MonoFormer[Baeet al., 2023] K 768 × 256 40 0. 138 0. 665 3. 730 0. 181 0. 824 0. 971 0. 993 MonoViT[Zhaoet al., 2022b] K 768 × 256 40 0. 102 0. 500 3. 364 0. 147 0. 905 0. 977 0. 992 Ours K 768 × 256 40 0. 109 0. 477 3. 261 0. 151 0. 891 0. 978 0. 993 Table E. 1: Effective test on nuScenes-Day [Wang et al., 2021; Caesar et al., 2020] and Robotcar-Day [Liu et al., 2021; Maddern et al., 2017]."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.598617672920227,
+      "text": "Then, the proposed Consecutive Dilated Con- volutions (CDC) module and the Local-Global Features In- teraction (LGFI) module learn rich hierarchical feature rep- resentations. The down-sampling layers in the second and the third stage also receive the concatenated features output by the previous down-sampling layer. This design is simi- lar to the residual connection proposed in ResNet [17], and is able to model better cross-stage correlation. Similarly, the output feature maps are further fed into the third and the fourth stages, and output features of dimensionH 8× W 8×C3 and H 16× W 16×C4. Consecutive Dilated Convolutions (CDC). The pro- posed CDC module utilizes dilated convolutions to extract multi-scale local features. Different from using a parallel dilated convolution module only in the last layer of the net- work [6] we insert several consecutive dilated convolutions with different dilation rates into each stage for adequate multi-scale contexts aggregation."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p4_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.5907357931137085,
+      "text": "The structure of the ARD module is shown in Fig. 7. We ﬁrst predict a set of discrete bins 𝐵 = {𝑏1, 𝑏2, … , 𝑏𝑖, … , 𝑏𝑁 }. Pattern Recognition 171 (2026) 112279 4"
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p8_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 8,
+      "score": 0.5683963894844055,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 8 ID SD PGD LKD MVC Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 1 0. 107 0. 787 4. 580 0. 182 0. 887 0. 963 0. 983 2 ✓ 0. 434 4. 630 11. 99 0. 579 0. 306 0. 568 0. 777 3 ✓ 0. 105 0. 757 4. 521 0. 181 0. 889 0. 964 0. 984 4 ✓ ✓ 0. 104 0. 741 4. 489 0. 180 0. 890 0. 964 0. 984 5 ✓ ✓ ✓ 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 TABLE IV ABLATION STUDY ON THE MONO DIFFUSION . SD: SELF -DIFFUSION [24]; PGD: PSEUDO GROUND -TRUTH DIFFUSION ; MVC: MASKED VISUAL CONDITION MECHANISM . Inference step Abs Rel ↓ Sq Rel ↓ RMSE ↓ RMSE log ↓ δ <1. 25 ↑ δ <1. 252 ↑ δ <1. 253 ↑ 2 1. 812 75. 600 30. 791 6. 160 0. 070 0. 141 0. 213 5 1. 503 58. 013 27. 140 5. 464 0. 125 0. 241 0. 340 10 0. 226 3. 730 9. 571 0. 754 0. 703 0. 878 0. 938 15 0. 822 28. 099 19. 232 2. 972 0. 357 0. 548 0. 653 20 0. 103 0. 726 4. 447 0. 179 0. 893 0. 965 0. 984 25 0. 431 10. 382 12. 709 1. 206 0. 503 0. 723 0. 827 TABLE V ABLATION STUDY ON DIFFERENT INFERENCE STEPS . Fig. 7. Visualization of the denoising process involving 20 inference steps in total. E."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p8_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.556069552898407,
+      "text": "(2) Based on the default setting the dilation rates of the last three blocks are set to 1, 2, and 3, respectively. (3) Similar to the default setting we set 1, 2, and 5 in every three CDC blocks as a group. (4) Based on the default setting the dilation rates in the last two CDC blocks are set to 2, 4, 6 and 4, 8, 12, respectively. Table 6 lists the accuracy under different dila- tion settings. Comparing (2) with (3) the accuracy beneﬁts from larger dilation rates. However, (4) using very large di- lation rates in the late CDC blocks does not help. Simply pursuing larger dilation rates will result in the loss of local information, which is not good for the network to perceive small and medium-sized objects. Therefore, the proposed Lite-Mono adopts the setting (1) to extract multi-scale lo- cal features, i.e., smaller dilation rates are used in shallow layers, and they are doubled in the last three CDC modules. NO. Abs Rel Sq Rel RMSE RMSE logδ1 δ2 δ3 1 0. 107 0. 765 4. 561 0. 183 0. 886 0. 963 0. 983 2 0. 110 0. 867 4. 681 0. 187 0. 885 0. 961 0. 981 3 0. 108 0. 835 4. 652 0. 186 0. 885 0. 962 0. 982 4 0. 110 0. 855 4. 642 0. 187 0. 885 0. 961 0. 981 Table 6."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p8_sc1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.5539270639419556,
+      "text": "883 0. 960 0. 982 w/o cross-stage connections2. 942M 4. 4 0. 108 0. 834 4. 683 0. 185 0. 884 0. 962 0. 982 Table 5. Ablation study on model architectures. All the models are trained and tested on KITTI with the input size 640× 192. This is because when using a down-sampling layer to re- duce the size of feature maps, some spatial information is also lost. The advantage of using pooled concatenations is that the spatial information is kept, and this design only adds a small number of parameters (0. 007M). The beneﬁt of cross-stage connections. When two cross-stage connections are removed the accuracy decreases slightly. The beneﬁt of the proposed cross-stage connec- tions in Mono-Lite is to promote feature propagation and cross-stage information fusion. 4. 7. Ablation study on dilation rates The inﬂuence of the dilation rate in the proposed CDC module on the accuracy is studied. Four different settings are used in this experiment. (1) The default setting of our models is to group every three CDC blocks together, and set the dilation rate to 1, 2, and 3, respectively. For the last three blocks we set them to 2, 4, and 6."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc3",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.550513505935669,
+      "text": "Given a two-dimensional signal x[i] the output y[i] of a 2D dilated convolution can be deﬁned as: y[i] = K∑ k=1 x[i +r·k]w[k], (1) wherew[k] is a ﬁlter with length K, and r denotes the di- lation rate used to convolve the input x[i]. In a standard non-dilated convolutionr = 1. By using a dilated convolu- tion the network can keep the size of the output feature map ﬁxed while achieving a larger receptive ﬁeld. Considering an input feature X with dimension H×W×C our CDC module outputs ˆX as follows: ˆX =X +LinearG(Linear(BN (DDWConv r(X)))), (2) where LinearG denotes a point-wise convolution opera- tion, followed by theGELU [18] activation. BN is a batch normalization layer, andDDWConv r(·) is a 3× 3 depth- wise dilated convolution with dilation rater. Local-Global Features Interaction (LGFI). Given an input feature mapX with dimensionH×W×C it is lin- early projected to the same dimensional queriesQ =XW q, keysK = XW k, and values V = XW v, where Wq,Wk,"
+    },
+    {
+      "id": "semantic_chunk::Global-Local_p10_sc2",
+      "source": "data\\Global-Local.pdf",
+      "page": 10,
+      "score": 0.5494780540466309,
+      "text": "804 0. 954 0. 988 0. 153 0. 115 0. 493 0. 182 Ours 0. 860 0. 973 0. 994 0. 123 0. 073 0. 413 0. 153 Weather Snow BTS 0. 410 0. 649 0. 803 0. 298 0. 423 1. 114 0. 458 Adabins 0. 410 0. 656 0. 817 0. 292 0. 410 1. 094 0. 440 Ours 0. 723 0. 926 0. 981 0. 170 0. 138 0. 598 0. 217 Spatter BTS 0. 705 0. 878 0. 945 0. 176 0. 168 0. 642 0. 250 Adabins 0. 699 0. 890 0. 964 0. 173 0. 155 0. 625 0. 234 Ours 0. 835 0. 971 0. 994 0. 134 0. 083 0. 445 0. 162 Fog BTS 0. 588 0. 798 0. 893 0. 227 0. 273 0. 835 0. 332 Adabins 0. 523 0. 748 0. 873 0. 252 0. 308 0. 898 0. 357 Ours 0. 759 0. 928 0. 978 0. 153 0. 125 0. 559 0. 204 Frost BTS 0. 515 0. 734 0. 850 0. 261 0. 359 0. 996 0. 400 Adabins 0. 439 0. 691 0. 842 0. 280 0. 398 1. 074 0. 413 Ours 0. 736 0. 929 0. 983 0. 163 0. 130 0. 576 0. 209 Table 8: Robustness experiment results on corrupted images of NYU Depth V2 datasets."
+    },
+    {
+      "id": "semantic_chunk::ACD_p7_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 7,
+      "score": 0.5484947562217712,
+      "text": "Trailing 0 added to the values from [V ankadari et al., 2023 ] and [Tosi et al., 2025 ]. Notation from Table 1. :\u0012\u0003'/\u000e)&& 2ULJLQ\u0003,PDJH :\u0012\u0003'/ :\u0012\u0003'/\u000e)&&\u000e2*' Figure 5: Visualization of ablation study on the distillation learning, feature consistency constraint and ordinal guidance distillation. DL OGD FCC day-clear night day-rain absRel RMSE absRel RMSE absRel RMSE N 0. 1333 6. 459 0. 2419 10. 922 0. 1572 7. 453 ✓ 0. 1335 6. 408 0. 1883 8. 398 0. 1404 7. 092 ✓✓ 0. 1325 6. 328 0. 1879 8. 353 0. 1414 7. 084 ✓✓ ✓ 0. 1355 6. 340 0. 1872 8. 125 0. 1377 6. 999 DL OGD FCC day night absRel RMSE sqRel absRel RMSE sqRel R 0. 1209 3. 335 0. 723 0. 3909 8. 227 3. 547 ✓ 0. 1123 3. 135 0. 631 0. 1233 3. 476 0. 720 ✓✓ 0. 1117 3. 115 0. 615 0. 1224 3. 458 0. 704 ✓✓ ✓ 0. 1107 3. 084 0. 591 0. 1206 3. 432 0. 690 Table 3: Ablation study of Design Components. N: nuScenes, R: RobotCar, DL: distillation learning, OGD: ordinal guidance distilla- tion, FCC: feature consistency constraint. provements in model performance, reducing the absRel met- ric by 0. 54% for day scene and 0. 73% for night scene on the RobotCar."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p9_sc0",
+      "source": "data\\SSRDepth.pdf",
+      "page": 9,
+      "score": 0.5396639108657837,
+      "text": "Y. Zou et al. Fig. 10. Qualitative comparison on the Cityscapes dataset. Table 4 Zero-shot quantitative results on two unseen datasets. Method SUN RGB-D Virtual KITTI 2 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ 𝛿1 ↑ 𝛿2 ↑ AbsRel↓ RMSE↓ log 10 ↓ BTS [12] 0. 740 0. 933 0. 172 0. 515 0. 075 0. 831 0. 948 0. 115 5. 368 0. 054 AdaBins [9] 0. 771 0. 944 0. 159 0. 476 0. 068 0. 862 0. 957 0. 112 5. 218 0. 048 LocalBins [18] 0. 777 0. 949 0. 156 0. 470 0. 067 0. 810 0. 940 0. 127 5. 981 0. 061 NeWCRFs [16] 0. 798 0. 967 0. 151 0. 424 0. 064 0. 829 0. 951 0. 117 5. 691 0. 056 BinsFormer [10] 0. 805 0. 963 0. 143 0. 421 0. 061 – – – – – ZoeDepth [41] 0. 856 0. 979 0. 123 0. 356 0. 053 0. 850 0. 965 0. 105 5. 095 0. 050 Ours 0. 822 0. 969 0. 135 0. 395 0. 057 0. 890 0. 964 0. 098 4. 878 0. 043 Fig. 11. Qualitative zero-shot results on the SUN RGB-D dataset. Pattern Recognition 171 (2026) 112279 9"
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.537806510925293,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.537806510925293,
+      "text": "026 5. 291 0. 215 0. 816 0. 945 0. 979Monodepth2w/o pretraining M 0. 132 1. 044 5. 142 0. 210 0. 845 0. 948 0. 977Monodepth2 M 0. 115 0. 903 4. 863 0. 193 0. 877 0. 959 0. 981 Monodepth2(1024×320) M 0. 115 0. 882 4. 701 0. 190 0. 879 0. 961 0. 982 Garg [12]† S 0. 152 1. 226 5. 849 0. 246 0. 784 0. 921 0. 967Monodepth R50 [15]† S 0. 133 1. 142 5. 533 0. 230 0. 830 0. 936 0. 970StrAT [43] S 0. 128 1. 019 5. 403 0. 227 0. 827 0. 935 0. 9713Net (R50) [50] S 0. 129 0. 996 5. 281 0. 223 0. 831 0. 939 0. 9743Net (VGG) [50] S 0. 119 1. 201 5. 888 0. 208 0. 844 0. 941 0. 978SuperDepth + pp [47] (1024×382) S 0. 112 0. 875 4. 958 0. 207 0. 852 0. 947 0. 977Monodepth2w/o pretraining S 0. 130 1. 144 5. 485 0. 232 0. 831 0. 932 0. 968Monodepth2 S 0. 109 0. 873 4. 960 0. 209 0. 864 0. 948 0. 975 Monodepth2(1024×320) S 0. 107 0. 849 4. 764 0. 201 0. 874 0. 953 0. 977 UnDeepVO [33] MS 0. 183 1. 730 6. 57 0. 268 - - -Zhan FullNYU [73] D*MS 0. 135 1. 132 5. 585 0. 229 0. 820 0. 933 0. 971EPC++ [38] MS 0. 128 0. 935 5. 011 0. 209 0. 831 0. 945 0. 979Monodepth2w/o pretraining MS 0. 127 1. 031 5. 266 0. 221 0. 836 0. 943 0. 974Monodepth2 MS 0. 106 0. 818 4. 750 0. 196 0. 874 0. 957 0."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.5357900857925415,
+      "text": "Output Size Layers Lite-Mono-tiny Lite-Mono-small Lite-Mono Lite-Mono-8M 640×192 Input 320×96 Conv Stem 3×3,32,stride= 2 3 ×3,48,stride= 2 3 ×3,48,stride= 2 3 ×3,64,stride= 2 [3×3,32]×2 [3 ×3,48]×2 [3 ×3,48]×2 [3 ×3,64]×2 160×48 Downsampling3×3,32,stride= 2 3 ×3,48,stride= 2 3 ×3,48,stride= 2 3 ×3,64,stride= 2 Stage 1 CDC blocks [3×3,32]×3 [3 ×3,48]×3 [3 ×3,48]×3 [3 ×3,64]×3 LGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 80×24 Downsampling3×3,64,stride= 2 3 ×3,80,stride= 2 3 ×3,80,stride= 2 3 ×3,128,stride= 2 Stage 2 CDC blocks [3×3,64]×3 [3 ×3,80]×3 [3 ×3,80]×3 [3 ×3,128]×3 LGFI block dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 dilation= 1,2,3 40×12 Downsampling3×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,128,stride= 2 3 ×3,224,stride= 2 Stage 3 CDC blocks [3×3,128]×6 [3 ×3,128]×6 [3 ×3,128]×9 [3 ×3,224]×9 LGFI blockdilation= 1,2,3,2,4,6 dilation= 1,2,3,2,4,6 dilation= [1,2,3]×2,2,4,6 dilation= [1,2,3]×2,2,4,6 #Params. (M) 2. 0 2. 3 2. 9 8. 1 Table 1. Four variants of the proposed depth encoder. [3× 3, C]× N means that a CDC block uses the 3× 3 kernel size to output C channels, and repeats for N times."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.5354156494140625,
+      "text": "Dtc provides direct supervision but has a performance upper bound, which can stabilize model training in the early stages while gradually decreasing loss weights throughout the training process: Ltc = (LB (norm(D tc), DSSI) +LB (Dtc, D1)·η t1 +LB (filter(D tc), DSI )·η t2)/η step,(11) where LB is the Berhu Loss, “norm” is the [-1,1] normalization, and “filter” are adaptive strategies to avoid performance bottlenecks. Through extensive experimentation and error bar analysis, we 6"
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p3_sc0",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.5338244438171387,
+      "text": "Downsample CDC Blocks LGFI Block Stage 2 Downsample CDC Blocks LGFI Block Stage 2 𝐻 4 × 𝑊 4 × 𝐶2 Conv stem 𝐻 2 × 𝑊 2 × 𝐶1 𝐻 8 × 𝑊 8 × 𝐶3 𝐻 16 × 𝑊 16 × 𝐶4 Downsample CDC Blocks LGFI Block Downsample CDC Blocks LGFI Block Upsampling Block Stage 1 Stage 4 Upsampling Block Upsampling Block Downsample CDC Blocks LGFI Block Downsample CDC Blocks LGFI Block Stage 3 Downsample CDC Blocks LGFI Block Stage 3 Concat Concat 𝐻 4 × 𝑊 4 × 1 𝐻 2 × 𝑊 2 × 1 𝐻 × 𝑊 × 1 Prediction Head Prediction Head Prediction Head × 𝑵𝟏 × 𝑵𝟐 × 𝑵𝟑 DepthNet 𝐼𝑡 Concat Upsampling Block 3×3 Conv Upsample 3×3 Conv 3×3 Conv Upsample 3×3 Conv Prediction Head Data Flow Skip Connection 1×1 Conv Upsample Sigmoid Pooled Concatenation ResNet-18 PoseNet 𝐼𝑠 ∈ [−1, 1] ResNet-18 PoseNet 𝐼𝑠 ∈ [−1, 1] 𝑃 Cross-Stage Connection Image reconstruction Optimization AvgPool Figure 2. Overview of the proposed Lite-Mono. Lite-Mono has an encoder-decoder DepthNet for depth prediction, and a commonly used PoseNet [15, 46] to estimate poses between adjacent monocular frames."
+    },
+    {
+      "id": "semantic_chunk::dav2_p16_sc1",
+      "source": "data\\dav2.pdf",
+      "page": 16,
+      "score": 0.5321183800697327,
+      "text": "10 [101] Lvmin Zhang, Anyi Rao, and Maneesh Agrawala. Adding conditional control to text-to-image diffusion models. In ICCV, 2023. 2, 23 [102] Wenliang Zhao, Yongming Rao, Zuyan Liu, Benlin Liu, Jie Zhou, and Jiwen Lu. Unleashing text-to-image diffusion models for visual perception. In ICCV, 2023. 9 [103] Bolei Zhou, Agata Lapedriza, Aditya Khosla, Aude Oliva, and Antonio Torralba. Places: A 10 million image database for scene recognition. TPAMI, 2017. 18, 28 16"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p5_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 5,
+      "score": 0.5270652174949646,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p5_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 5,
+      "score": 0.5270652174949646,
+      "text": "Table 2. Comparison on the Paired Datasets. Red(Green) denotes the improvement(reduction) of performance. Datasets Methods Normal GT-meanPSNR↑ SSIM↑ LPIPS↓ PSNR↑ SSIM↑ LPIPS↓ IQA↑ IAA↑ LOLv1 Uformer 18. 218 0. 771 0. 212 22. 325 0. 81 0. 195 3. 317 1. 959Uformer with GT-mean loss(ours) 18. 915(+0. 697)0. 795(+0. 023)0. 168(-0. 044)22. 854(+0. 529)0. 830(+0. 019)0. 157(-0. 038)3. 331(↑) 1. 971(↑) MIRNet 21. 512 0. 788 0. 222 24. 968 0. 8 0. 216 2. 917 1. 745MIRNet with GT-mean loss(ours) 21. 780(+0. 268)0. 804(+0. 016)0. 196(-0. 026)25. 596(+0. 628)0. 818(+0. 018)0. 189(-0. 027)3. 039(↑) 1. 758(↑) RetinexFormer 23. 83 0. 832 0. 141 26. 312 0. 844 0. 134 3. 027 1. 800RetinexFormer with GT-mean loss(ours)24. 561(+0. 731)0. 834(+0. 003)0. 138(-0. 003)26. 586(+0. 274)0. 849(+0. 005)0. 132(-0. 002)3. 373(↑) 1. 956(↑) Restormer 22. 718 0. 83 0. 128 26. 375 0. 848 0. 122 3. 567 2. 032Restormer with GT-mean loss(ours) 23. 313(+0. 595)0. 837(+0. 007)0. 122(-0. 006)26. 743(+0. 368)0. 855(+0. 007)0. 117(-0. 005)3. 672(↑) 2. 054(↑) LLFormer 23. 007 0. 805 0. 183 25. 762 0. 823 0. 178 3. 087 1. 946LLFormer with GT-mean loss(ours) 23. 847(+0. 840)0. 830( +0. 025)0. 138( -0. 045)26. 769( +1."
+    },
+    {
+      "id": "semantic_chunk::s_p10_sc4",
+      "source": "data\\s.pdf",
+      "page": 10,
+      "score": 0.5268070101737976,
+      "text": "2 [44] Yupeng Zheng, Chengliang Zhong, Pengfei Li, Huan-ang Gao, Yuhang Zheng, Bu Jin, Ling Wang, Hao Zhao, Guyue Zhou, Qichao Zhang, and Dongbin Zhao. Steps: Joint self- supervised nighttime image enhancement and depth estima- tion. In 2023 IEEE International Conference on Robotics and Automation (ICRA), pages 4916–4923, 2023. 1, 2 [45] Ziqiang Zheng, Yang Wu, Xinran Han, and Jianbo Shi. Fork- gan: Seeing into the rainy night. In The IEEE European Conference on Computer Vision (ECCV), 2020. 2, 4 [46] Hanyu Zhou, Yi Chang, Wending Yan, and Luxin Yan. Un- supervised cumulative domain adaptation for foggy scene optical flow. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pages 9569– 9578, 2023. 4, 5 [47] Hanyu Zhou, Yi Chang, Haoyue Liu, Y AN WENDING, Yuxing Duan, Zhiwei Shi, and Luxin Yan. Exploring the common appearance-boundary adaptation for nighttime op- tical flow. InThe Twelfth International Conference on Learn- ing Representations, 2024. 2 [48] Tinghui Zhou, Matthew Brown, Noah Snavely, and David G. Lowe. Unsupervised learning of depth and ego-motion from video."
+    },
+    {
+      "id": "semantic_chunk::dav2_p32_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 32,
+      "score": 0.5257330536842346,
+      "text": "(d) We recognize that reproducibility may be tricky in some cases, in which case authors are welcome to describe the particular way they provide for reproducibility. In the case of closed-source models, it may be that access to the model is limited in some way (e.g., to registered users), but it should be possible for other researchers to have some path to reproducing or verifying the results. 5. Open access to data and code 32"
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p7_sc0",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 7,
+      "score": 0.5245205760002136,
+      "text": "Table 3. Comparison on the Unpaired Datasets. Red(Green) denotes the improvement(reduction) of performance. Note that all the models were trained on the LOLv2-synthetic dataset. Method DICM MEF LIME NPE VV A VGNIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑Restormer 3. 220 58. 525 3. 885 2. 8003. 660 56. 528 3. 215 2. 4153. 660 58. 461 3. 267 2. 4663. 470 61. 031 3. 781 2. 7353. 290 37. 919 3. 710 2. 2643. 460 54. 493 3. 572 2. 536Restormer with GT-mean loss (ours) 3. 180 58. 604 3. 913 2. 8213. 630 56. 522 3. 208 2. 4313. 630 58. 124 3. 380 2. 5213. 450 60. 971 3. 820 2. 7693. 300 38. 290 3. 712 2. 2553. 440(-)54. 502(+)3. 607(+)2. 559(+) MIRNET 3. 820 52. 467 3. 111 2. 3373. 670 47. 399 2. 742 2. 0564. 230 54. 837 2. 860 2. 0883. 470 58. 641 3. 285 2. 3743. 640 54. 566 2. 955 2. 1623. 770 53. 582 2. 991 2. 203MIRNET with GT-mean loss(ours)3. 200 53. 188 3. 295 2. 3753. 600 47. 611 2. 817 2. 0674. 330 55. 776 2. 747 2. 0583. 500 58. 718 3. 366 2. 4283. 710 54. 891 3. 120 2. 2153. 670(-)54. 037(+)3. 069(+)2. 229(+) Retinexformer 3. 230 57. 398 3. 800 2. 7403. 860 56. 170 3. 137 2. 3733."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p7_sc0",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 7,
+      "score": 0.5245205760002136,
+      "text": "Table 3. Comparison on the Unpaired Datasets. Red(Green) denotes the improvement(reduction) of performance. Note that all the models were trained on the LOLv2-synthetic dataset. Method DICM MEF LIME NPE VV A VGNIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑ NIQE↓ MUSIQ↑ IQA↑ IAA↑Restormer 3. 220 58. 525 3. 885 2. 8003. 660 56. 528 3. 215 2. 4153. 660 58. 461 3. 267 2. 4663. 470 61. 031 3. 781 2. 7353. 290 37. 919 3. 710 2. 2643. 460 54. 493 3. 572 2. 536Restormer with GT-mean loss (ours) 3. 180 58. 604 3. 913 2. 8213. 630 56. 522 3. 208 2. 4313. 630 58. 124 3. 380 2. 5213. 450 60. 971 3. 820 2. 7693. 300 38. 290 3. 712 2. 2553. 440(-)54. 502(+)3. 607(+)2. 559(+) MIRNET 3. 820 52. 467 3. 111 2. 3373. 670 47. 399 2. 742 2. 0564. 230 54. 837 2. 860 2. 0883. 470 58. 641 3. 285 2. 3743. 640 54. 566 2. 955 2. 1623. 770 53. 582 2. 991 2. 203MIRNET with GT-mean loss(ours)3. 200 53. 188 3. 295 2. 3753. 600 47. 611 2. 817 2. 0674. 330 55. 776 2. 747 2. 0583. 500 58. 718 3. 366 2. 4283. 710 54. 891 3. 120 2. 2153. 670(-)54. 037(+)3. 069(+)2. 229(+) Retinexformer 3. 230 57. 398 3. 800 2. 7403. 860 56. 170 3. 137 2. 3733."
+    },
+    {
+      "id": "semantic_chunk::dav2_p7_sc3",
+      "source": "data\\dav2.pdf",
+      "page": 7,
+      "score": 0.5241882801055908,
+      "text": "However, there may be cases where all models incorrectly predict challenging pairs, and they are not flagged. To address this, we introduce a second pipeline, where we carefully analyze images and manually identify challenging pairs. 7"
+    },
+    {
+      "id": "semantic_chunk::s_p6_sc1",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.5239363312721252,
+      "text": "1170 1. 371 6. 023 86. 66 0. 1713 1. 779 7. 689 73. 16 0. 1266 1. 532 6. 654 82. 86 Table 1. Quantitative comparison on nuScenes in different conditions (daytime, nighttime and rain). † indicates the method [7] using additional Radar information . Test frames indicates the evaluation is conducted in multi-frame or single-frame setting. - points to the missing value from the reference. The first and second ranked performances are indicated by bold and underline. Method Source Test Robotcar-day Robotcar-night frames AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ AbsRel↓ SqRel↓ RMSE↓ δ1 ↑ Monodepth2 [10] [8] 1 0. 1209 0. 723 3. 335 86. 61 0. 3909 3. 547 8. 227 22. 51 DeFeatNet [23] [27] 1 0. 2470 2. 980 7. 884 65. 00 0. 3340 4. 589 8. 606 58. 60 ADIDS [18] [27] 1 0. 2390 2. 089 6. 743 61. 40 0. 2870 2. 569 7. 985 49. 00 RNW [30] [27] 1 0. 2970 2. 608 7. 996 43. 10 0. 1850 1. 710 6. 549 73. 30 WSGD [27] [27] 1 0. 1760 1. 603 6. 036 75. 00 0. 1740 1. 637 6. 302 75. 40 robust-depth [22] [self] 1 0. 1225 0. 776 3. 302 85. 84 0. 1333 0. 895 3. 756 85. 11 md4all [8] [8] 1 0. 1128 0. 648 3. 206 87. 13 0. 1219 0. 784 3. 604 84. 86 DM-MDE [25] [25] 1 0. 1190 0. 728 3. 287 87. 17 0. 1290 0. 751 3. 661 83."
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p12_sc1",
+      "source": "data\\SSRDepth.pdf",
+      "page": 12,
+      "score": 0.5214928984642029,
+      "text": "SC and DC stand for the semantic segmentation (𝐶𝐸 ) and scale alignment (𝑆𝑃 𝑆𝐴 ) constraints, respectively. Segmentation scale SC DC 𝛿1 ↑ AbsRel↓ RMSE↓ SqRel↓ × × × 0. 790 0. 280 2. 026 1. 761 ✓ × × 0. 794 0. 283 2. 144 1. 420 ✓ ✓ × 0. 797 0. 226 1. 921 1. 336 ✓ ✓ ✓ 0. 799 0. 230 1. 901 1. 332 Table 12 Ablation study on the setting of the scaling factor 𝛾 in the scale alignment constraint. Scaling factor 𝛾 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ 1 0. 743 0. 250 2. 339 0. 088 0. 75 0. 776 0. 233 2. 125 0. 080 0. 5 0. 799 0. 230 1. 901 0. 073 0. 25 0. 793 0. 231 1. 906 0. 075 Table 13 Ablation study on the number of bin queries. Number of bin queries 𝛿1 ↑ AbsRel↓ RMSE↓ log10 ↓ 8 0. 781 0. 231 2. 129 0. 078 32 0. 779 0. 240 2. 034 0. 076 100 0. 786 0. 233 1. 984 0. 078 128 0. 799 0. 230 1. 901 0. 073 256 0. 790 0. 231 2. 011 0. 075 the semantic-aware relative depth is discontinuous at adjacent seman- tic boundaries."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p5_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 5,
+      "score": 0.5212589502334595,
+      "text": "(10) with P indicating Poisson distribution. Meanwhile, the composition of read noise is more com- plex, and Nread is usually assumed to follow a bell- shape distribution e.g. Gaussian distribution, N (0, σN ) and Tukey lambda distribution [Joiner and Rosenblatt, 1971 ], T L(λT L; 0, σT L). T Lis a distribution family that can fit many bell-shaped distributions, andλT Lis used to control the shape. Applying the linear least squares method, the system gains K and the variance of the distribution are considered to be linear in the logarithmic domain [Wei et al., 2020]: log (σN )| log K ∼ N(aN log(K) +bN , ˆσN ), (11) log (σT L)| log K ∼ N(aT Llog(K) +bT L, ˆσT L), (12) with aN (aT L) and bN (bT L) being the approximating linear parameters and ˆσN (ˆσT L) donating the standard deviation of the unbiased estimation. In ELD [Wei et al., 2020], different kinds of digit sensors are calibrated with Gaussian distribu- tion and Tukey lambda distribution respectively and ING ran- domly samples the calibrations to generate read noise Nread. From RGB to simulated dark raw image RLR t In ELD, shot noise Np is applied on the number of pho- tons R/K while read noise Nread on raw image R."
+    },
+    {
+      "id": "semantic_chunk::DepthDark_p9_sc8",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.5210028886795044,
+      "text": "In Proceedings of the 32nd ACM International Conference on Multimedia. 10421–10430. [40] Haolin Yang, Chaoqiang Zhao, Lu Sheng, and Yang Tang. 2024. Self-Supervised Monocular Depth Estimation in the Dark: Towards Data Distribution Compensa- tion. arXiv preprint arXiv:2404. 13854 (2024). [41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng- shuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla- beled data. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition. 10371–10381. [42] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406. 09414 (2024)."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc2",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5203402042388916,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc2",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5203402042388916,
+      "text": "IEEE Transactions on Communica- tion Technology, 15(1):52–60, 1967. 4 [14] Junjie Ke, Qifei Wang, Yilin Wang, Peyman Milanfar, and Feng Yang. Musiq: Multi-scale image quality transformer. In Proceedings of the IEEE International Conference on Com- puter Vision (ICCV), pages 5148–5157, 2021. 5 [15] Chulwoo Lee, Chul Lee, and Chang-Su Kim. Contrast en- hancement based on layered difference representation of 2d histograms. IEEE Transactions on Image Processing , 22 (12):5372–5384, 2013. 4 [16] Chongyi Li, Chunle Guo, and Change Loy Chen. Learning to enhance low-light image via zero-reference deep curve esti- mation. IEEE Transactions on Pattern Analysis and Machine Intelligence, page 1–1, 2021. 3 [17] C. Li, C. Guo, L. Han, J. Jiang, M. Cheng, J. Gu, and C. Loy. Low-light image and video enhancement using deep learning: A survey. IEEE Transactions on Pattern Analysis Machine Intelligence, 44(12):9396–9416, 2022. 1, 2 [18] Zhexin Liang, Chongyi Li, Shangchen Zhou, Ruicheng Feng, and Chen Change Loy. Iterative prompt learning for unsupervised backlit image enhancement. In Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV), pages 8094–8103, 2023. 2 [19] J."
+    },
+    {
+      "id": "semantic_chunk::TDDC_p16_sc0",
+      "source": "data\\TDDC.pdf",
+      "page": 16,
+      "score": 0.5190263986587524,
+      "text": "Input DT: MonoViT DT: WSGD DA: ITDFA DA: RNW DA: ADDS G: ITDFA G: RNW G: ADDS G: MonoFormer G: MonoViT G: Ours Figure E. 2: Qualitative results on nuScenes-Night and nuScenes-Day [Wang et al., 2021; Caesar et al., 2020]."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage_p9_sc3",
+      "source": "data\\PrimeDepth-Efficient-Monocular-Depth-Estimation-with-a-Stable-Diffusion-Preimage.pdf",
+      "page": 9,
+      "score": 0.5180985331535339,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::PrimeDepth-_Efficient_Monocular_Depth_Estimation_with_a_Stable_Diffusion_Preimage_p9_sc3",
+      "source": "data\\PrimeDepth- Efficient Monocular Depth  Estimation with a Stable Diffusion Preimage.pdf",
+      "page": 9,
+      "score": 0.5180985331535339,
+      "text": "Liu, D. Xu, W. Yang, et al. Benchmarking low-light im- age enhancement and beyond. Proceedings of International Journal of Computer Vision (IJCV) , 129:1153–1184, 2021. 1, 2 [20] Yucheng Lu and Seung-Won Jung. Progressive joint low- light enhancement and noise removal for raw images. IEEE Transactions on Image Processing, 31:2390–2404, 2022. 1 [21] Kede Ma, Kai Zeng, and Zhou Wang. Perceptual quality assessment for multi-exposure image fusion. IEEE Transac- tions on Image Processing, page 3345–3356, 2015. 4 [22] Long Ma, Tengyu Ma, Risheng Liu, Xin Fan, and Zhongx- uan Luo. Toward fast, flexible, and robust low-light image enhancement. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2022. 3 [23] Qianting Ma, Yang Wang, and Tieyong Zeng. Retinex- based variational framework for low-light image enhance- ment and denoising. IEEE Transactions on Multimedia, 25: 5580–5588, 2023. 2, 3 [24] A. Mittal, R. Soundararajan, and A. C. Bovik. Making a “completely blind” image quality analyzer. IEEE Signal Pro- cessing Letters, page 209–212, 2013. 5 [25] Ben Moseley, Valentin Bickel, Ignacio G. Lopez-Francos, and Loveneesh Rana."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p3_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 3,
+      "score": 0.5175778865814209,
+      "text": "Then, a reconstructed target image is generated, and the loss is computed to optimize the model (Section 3. 4). Enhanced local features. Using shallow instead of deeper networks can effectively reduce the size of a model. As mentioned shallow CNNs have very limited receptive ﬁelds, while using dilated convolution [42] is helpful to en- large receptive ﬁelds. By stacking the proposed Consec- utive Dilated Convolutions (CDC) the network is able to ”observe” the input at a larger area, while not introducing extra training parameters. Low-computation global information. The enhanced local features are not enough to learn a global repre- sentation of the input without the help of Transform- ers to model long-range information. The MHSA mod- ule in the original Transformer [8] has a linear compu- tational complexity to the input dimension, hence it lim- its the design of lightweight models. Instead of comput- ing the attention across the spatial dimension the proposed Local-Global Features Interaction (LGFI) module adopts the cross-covariance attention [1] to compute the attention along the feature channels."
+    },
+    {
+      "id": "semantic_chunk::s_p5_sc1",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.5174492001533508,
+      "text": "However, since ΦD−syn is optimized for the synthetic do- main and may not perform well in real adverse conditions, it is intuitive to emphasize supervision on the more reliable parts. To address this, we also leverage ΦD−day to provide predictions Dday on real images across diverse conditions. Our strategy compares Dday and Dsyn, assigning higher weights to consistent regions and lower weights to highly inconsistent areas. Using an exponential function [34], we design a confidence map Ccst based on the consistency and transform it into a reweighting map Wcst: Ccst = e−β |Dsyn −Dday | Dsyn , (9) Wcst = Ccst + ϵ. (10) The β is a scale factor and the ϵ is a weight bias to guar- antee a weak supervision. The supervision forDreal will be changed into a reweighting consistent-depth loss Lcd: Lcd = 1 HW HWX Wcst| Dreal − Dsyn Dreal |. (11) Structure Prior Constraint Although pseudo-label learn- ing is reweighted, it still cannot perfectly supervise real ad- verse predictions, motivating us to seek more explicit pri- ors from daytime data and depth. To investigate further, we calculate and visualize the predicted depth distributions of ΦD−day and ΦD−syn on the real training set in Fig."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p8_sc1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 8,
+      "score": 0.5167556405067444,
+      "text": "Acknowledgements Thanks to the authors who shared their results, and Peter Hedman, Daniyar Turmukhambetov, and Aron Monszpart for their helpful discussions."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p8_sc1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 8,
+      "score": 0.5167556405067444,
+      "text": "Acknowledgements Thanks to the authors who shared their results, and Peter Hedman, Daniyar Turmukhambetov, and Aron Monszpart for their helpful discussions."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p14_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.5154647827148438,
+      "text": "Method Train Abs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Zhou [76]† M 0. 176 1. 532 6. 129 0. 244 0. 758 0. 921 0. 971 Mahjourian [40] M 0. 134 0. 983 5. 501 0. 203 0. 827 0. 944 0. 981 GeoNet [71] M 0. 132 0. 994 5. 240 0. 193 0. 833 0. 953 0. 985 DDVO [62] M 0. 126 0. 866 4. 932 0. 185 0. 851 0. 958 0. 986 Ranjan [51] M 0. 123 0. 881 4. 834 0. 181 0. 860 0. 959 0. 985 EPC++ [38] M 0. 120 0. 789 4. 755 0. 177 0. 856 0. 961 0. 987 Monodepth2w/o pretrainingM 0. 112 0. 715 4. 502 0. 167 0. 876 0. 967 0. 990 Monodepth2 M 0. 090 0. 545 3. 942 0. 137 0. 914 0. 983 0. 995 Monodepth [15] S 0. 109 0. 811 4. 568 0. 166 0. 877 0. 967 0. 988 3net [50] (VGG) S 0. 119 0. 920 4. 824 0. 182 0. 856 0. 957 0. 985 3net [50] (ResNet 50) S 0. 102 0. 675 4. 293 0. 159 0. 881 0. 969 0. 991 SuperDepth [47] + pp S 0. 090 0. 542 3. 967 0. 144 0. 901 0. 976 0. 993 Monodepth2w/o pretrainingS 0. 110 0. 849 4. 580 0. 173 0. 875 0. 962 0. 986 Monodepth2 S 0. 085 0. 537 3. 868 0. 139 0. 912 0. 979 0. 993 Zhan FullNYU [73] D*MS 0. 130 1. 520 5. 184 0. 205 0. 859 0. 955 0. 981 EPC++ [38] MS 0. 123 0. 754 4. 453 0. 172 0. 863 0. 964 0. 989 Monodepth2w/o pretrainingMS 0. 107 0. 720 4. 345 0. 161 0. 890 0."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p14_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.5154647827148438,
+      "text": "Method Train Abs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Zhou [76]† M 0. 176 1. 532 6. 129 0. 244 0. 758 0. 921 0. 971 Mahjourian [40] M 0. 134 0. 983 5. 501 0. 203 0. 827 0. 944 0. 981 GeoNet [71] M 0. 132 0. 994 5. 240 0. 193 0. 833 0. 953 0. 985 DDVO [62] M 0. 126 0. 866 4. 932 0. 185 0. 851 0. 958 0. 986 Ranjan [51] M 0. 123 0. 881 4. 834 0. 181 0. 860 0. 959 0. 985 EPC++ [38] M 0. 120 0. 789 4. 755 0. 177 0. 856 0. 961 0. 987 Monodepth2w/o pretrainingM 0. 112 0. 715 4. 502 0. 167 0. 876 0. 967 0. 990 Monodepth2 M 0. 090 0. 545 3. 942 0. 137 0. 914 0. 983 0. 995 Monodepth [15] S 0. 109 0. 811 4. 568 0. 166 0. 877 0. 967 0. 988 3net [50] (VGG) S 0. 119 0. 920 4. 824 0. 182 0. 856 0. 957 0. 985 3net [50] (ResNet 50) S 0. 102 0. 675 4. 293 0. 159 0. 881 0. 969 0. 991 SuperDepth [47] + pp S 0. 090 0. 542 3. 967 0. 144 0. 901 0. 976 0. 993 Monodepth2w/o pretrainingS 0. 110 0. 849 4. 580 0. 173 0. 875 0. 962 0. 986 Monodepth2 S 0. 085 0. 537 3. 868 0. 139 0. 912 0. 979 0. 993 Zhan FullNYU [73] D*MS 0. 130 1. 520 5. 184 0. 205 0. 859 0. 955 0. 981 EPC++ [38] MS 0. 123 0. 754 4. 453 0. 172 0. 863 0. 964 0. 989 Monodepth2w/o pretrainingMS 0. 107 0. 720 4. 345 0. 161 0. 890 0."
+    },
+    {
+      "id": "semantic_chunk::MonoDiffusion_p10_sc0",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 10,
+      "score": 0.5153287649154663,
+      "text": "XXX, VOL. XX, NO. XX, XXXX 2023 10 [18] Ning Zhang, Francesco Nex, George V osselman, and Norman Kerle. Lite-mono: A lightweight cnn and transformer architecture for self- supervised monocular depth estimation. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 18537– 18546, 2023. [19] Emiel Hoogeboom, Vıctor Garcia Satorras, Cl ´ement Vignac, and Max Welling. Equivariant diffusion for molecule generation in 3d. In Inter- national Conference on Machine Learning , pages 8867–8887. PMLR, 2022. [20] Brian L Trippe, Jason Yim, Doug Tischer, Tamara Broderick, David Baker, Regina Barzilay, and Tommi Jaakkola. Diffusion probabilistic modeling of protein backbones in 3d for the motif-scaffolding problem. arXiv preprint arXiv:2206. 04119 , 2022. [21] Shoufa Chen, Peize Sun, Yibing Song, and Ping Luo. Diffusiondet: Diffusion model for object detection. arXiv preprint arXiv:2211. 09788, 2022. [22] Ting Chen, Lala Li, Saurabh Saxena, Geoffrey Hinton, and David J Fleet. A generalist framework for panoptic segmentation of images and videos. arXiv preprint arXiv:2210. 06366 , 2022. [23] Saurabh Saxena, Abhishek Kar, Mohammad Norouzi, and David J Fleet."
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p8_sc4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 8,
+      "score": 0.5150794386863708,
+      "text": "This work also uses the Geospatial Computing Platform of the Center of Expertise in Big Geodata Science (CRIB) (https://crib.utwente.nl). We thank Dr. Serkan Girgin for providing the computing infrastructure."
+    },
+    {
+      "id": "semantic_chunk::s_p11_sc0",
+      "source": "data\\s.pdf",
+      "page": 11,
+      "score": 0.5148787498474121,
+      "text": "(ICCV), 2017 IEEE International Conference on , 2017. 2, 4"
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p13_sc8",
+      "source": "data\\SSRDepth.pdf",
+      "page": 13,
+      "score": 0.5138006210327148,
+      "text": "Xie, A convnet for the 2020s, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2022, pp. 11976–11986. [38] X. Zhu, W. Su, L. Lu, B. Li, X. Wang, J. Dai, Deformable DETR: deformable trans- formers for end-to-end object detection, in: International Conference on Learning Representations, 2021. [39] A. Agarwal, C. Arora, Attention attention everywhere: monocular depth prediction with skip attention, in: Proceedings of the IEEE/CVF Winter Conference on Appli- cations of Computer Vision, 2023, pp. 5861–5870. [40] L. Piccinelli, C. Sakaridis, F. Yu, iDisc: internal discretization for monocular depth estimation, in: Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, 2023, pp. 21477–21487. [41] S. F. Bhat, R. Birkl, D. Wofk, P. Wonka, M. Müller, ZoeDepth: zero-shot transfer by combining relative and metric depth, 2023. arXiv:2302. 12288 Pattern Recognition 171 (2026) 112279 13"
+    },
+    {
+      "id": "semantic_chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p4_sc1",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 4,
+      "score": 0.5131772756576538,
+      "text": "Lp and Ls are calculated at all decoder scales, upsampled to the input size [11]. So far, this is equivalent to Monodepth2 [11]. Then, we add the weak velocity supervision Lv to achieve scale- awareness [12] and allow consistent predictions, beneficial when distilling knowledge between different models. Architecture Unlike previous works having specialized branches [22, 43], we leave the architecture unchanged (e.g., [11]). Instead, we act on the training process. Our approach is general and not bound to a specific architecture. 3. 1. 2 md4all-AD: Always Daytime, No Bad Weather Our md4all-AD configuration is shown in Figure 4. The core idea is learning from easy samples, even when given challenging ones (e.g., night) as if it was always daytime with good visibility (i.e., sunny or cloudy). This allows us- ing the same established losses described in Section 3. 1. 1, which would otherwise fail with difficult inputs. Day-to-adverse translation To achieve the above, we need easy samples corresponding to the challenging ones."
+    },
+    {
+      "id": "semantic_chunk::ACD_p6_sc1",
+      "source": "data\\ACD.pdf",
+      "page": 6,
+      "score": 0.5128491520881653,
+      "text": "07 0. 1414 7. 228 80. 98 DMMDE v1 [Tosi et al., 2025 ] Ms dT‡(nr) 0. 1370 6. 318 85. 05 0. 1880 8. 432 69. 94 0. 1470 7. 345 79. 59 DMMDE v2 [Tosi et al., 2025 ] Ms dT‡(nr) 0. 1400 6. 573 83. 51 0. 1970 8. 826 69. 65 0. 1430 7. 317 80. 28 DMMDE v3 [Tosi et al., 2025 ] Ms dT‡(nr) 0. 1280 6. 449 84. 03 0. 1910 8. 433 71. 14 0. 1390 7. 129 81. 36 ACDepth (Ours) Mv dT(nr) 0. 1340 6. 284 85. 07 0. 1873 8. 125 71. 14 0. 1377 6. 970 81. 32 Table 1: Evaluation of self-supervised methods on nuScenes [Caesar et al., 2020 ] validation set. v1,v2,v3: depth maps from md4all-DD, DPT, Depth Anything in [Tosi et al., 2025 ]. Supervisions (sup.): M: via monocular videos, *: test-time median-scaling via LiDAR, v: weak velocity, s: test-time scaling via LSE criterion [Ranftl et al., 2020]. Training data (tr.data): d: day-clear, n: night, r: rain, a: all. T†: Translated via GAN, T‡: Translated via Diffusion. Visual support: 1st and 2nd. Figure. 4(a) presents qualitative results. md4all-DD is partic- ularly sensitive to water reﬂections in rainy scenes. For exam- ple, in the ﬁrst and second rows of Figure."
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p8_sc2",
+      "source": "data\\Jasmine.pdf",
+      "page": 8,
+      "score": 0.5125447511672974,
+      "text": "Alignment protocols and annotation rules follow Table 1’s specifications. AbsRel, RMSE, anda 1 metrics are shown. Method DrivingStereo Rainy CityScape Cloudy Foggy AbsRelRMSE a1 AbsRelRMSE a1 AbsRelRMSE a1 AbsRelRMSE a1 AbsRelRMSE a1 Marigold[25] 0. 178 6. 638 0. 749 0. 1486. 770 0. 801 0. 164 6. 632 0. 763 0. 173 6. 881 0. 751 0. 146 6. 545 0. 798 E2E FT[33] 0. 160 5. 4370. 795 0. 164 6. 671 0. 793 0. 160 6. 944 0. 792 0. 157 5. 5220. 797 0. 141 6. 0340. 836 Lotus[21] 0. 173 5. 816 0. 771 0. 167 6. 675 0. 775 0. 147 6. 5820. 824 0. 159 5. 640 0. 795 0. 150 6. 173 0. 798 Jasmine* 0. 134 4. 666 0. 854 0. 159 6. 071 0. 8250. 107 5. 000 0. 907 0. 134 4. 762 0. 846 0. 113 4. 883 0. 897 MonoDepth2[15]0. 191 8. 359 0. 770 0. 260 12. 577 0. 6090. 158 8. 185 0. 783 0. 192 10. 07 0. 775 0. 156 10. 425 0. 799 MonoViT[68] 0. 150 7. 657 0. 8150. 190 9. 407 0. 724 0. 140 7. 913 0. 802 0. 134 7. 2800. 849 0. 107 7. 899 0. 882 Mono-ViFI[29] 0. 158 6. 723 0. 798 0. 400 13. 960 0. 4840. 134 7. 372 0. 8170. 154 6. 883 0. 800 0. 160 8. 494 0. 769 WeatherDepth[48]0. 166 6. 986 0. 796 0. 166 8. 8440. 748 0. 1376. 5150. 837 0. 167 7. 566 0. 793 0. 132 7. 679 0. 859 Jasmine 0. 136 5. 340 0. 850 0. 160 7."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 6,
+      "score": 0.5119578242301941,
+      "text": "Method Train Abs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Eigen [9] D 0. 203 1. 548 6. 307 0. 282 0. 702 0. 890 0. 890Liu [36] D 0. 201 1. 584 6. 471 0. 273 0. 680 0. 898 0. 967Klodt [28] D*M 0. 166 1. 490 5. 998 - 0. 778 0. 919 0. 966AdaDepth [45] D* 0. 167 1. 257 5. 578 0. 237 0. 771 0. 922 0. 971Kuznietsov [30] DS 0. 113 0. 741 4. 621 0. 189 0. 862 0. 960 0. 986DVSO [68] D*S 0. 097 0. 734 4. 442 0. 187 0. 888 0. 958 0. 980SVSM FT [39] DS 0. 094 0. 626 4. 252 0. 177 0. 891 0. 965 0. 984Guo [16] DS 0. 096 0. 641 4. 095 0. 168 0. 892 0. 967 0. 986DORN [10] D 0. 072 0. 307 2. 727 0. 120 0. 932 0. 984 0. 994 Zhou [76]† M 0. 183 1. 595 6. 709 0. 270 0. 734 0. 902 0. 959Yang [70] M 0. 182 1. 481 6. 501 0. 267 0. 725 0. 906 0. 963Mahjourian [40] M 0. 163 1. 240 6. 220 0. 250 0. 762 0. 916 0. 968GeoNet [71]† M 0. 149 1. 060 5. 567 0. 226 0. 796 0. 935 0. 975DDVO [62] M 0. 151 1. 257 5. 583 0. 228 0. 810 0. 936 0. 974DF-Net [78] M 0. 150 1. 124 5. 507 0. 223 0. 806 0. 933 0. 973LEGO [69] M 0. 162 1. 352 6. 276 0. 252 - - -Ranjan [51] M 0. 148 1. 149 5. 464 0. 226 0. 815 0. 935 0. 973EPC++ [38] M 0. 141 1. 029 5. 350 0. 216 0. 816 0. 941 0. 976Struct2depth ‘(M)’ [5] M 0. 141 1."
+    },
+    {
+      "id": "semantic_chunk::Monocular_Depth_Estimation_p6_sc0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 6,
+      "score": 0.5119578242301941,
+      "text": "Method Train Abs RelSq RelRMSERMSE logδ <1. 25 δ <1. 252 δ <1. 253 Eigen [9] D 0. 203 1. 548 6. 307 0. 282 0. 702 0. 890 0. 890Liu [36] D 0. 201 1. 584 6. 471 0. 273 0. 680 0. 898 0. 967Klodt [28] D*M 0. 166 1. 490 5. 998 - 0. 778 0. 919 0. 966AdaDepth [45] D* 0. 167 1. 257 5. 578 0. 237 0. 771 0. 922 0. 971Kuznietsov [30] DS 0. 113 0. 741 4. 621 0. 189 0. 862 0. 960 0. 986DVSO [68] D*S 0. 097 0. 734 4. 442 0. 187 0. 888 0. 958 0. 980SVSM FT [39] DS 0. 094 0. 626 4. 252 0. 177 0. 891 0. 965 0. 984Guo [16] DS 0. 096 0. 641 4. 095 0. 168 0. 892 0. 967 0. 986DORN [10] D 0. 072 0. 307 2. 727 0. 120 0. 932 0. 984 0. 994 Zhou [76]† M 0. 183 1. 595 6. 709 0. 270 0. 734 0. 902 0. 959Yang [70] M 0. 182 1. 481 6. 501 0. 267 0. 725 0. 906 0. 963Mahjourian [40] M 0. 163 1. 240 6. 220 0. 250 0. 762 0. 916 0. 968GeoNet [71]† M 0. 149 1. 060 5. 567 0. 226 0. 796 0. 935 0. 975DDVO [62] M 0. 151 1. 257 5. 583 0. 228 0. 810 0. 936 0. 974DF-Net [78] M 0. 150 1. 124 5. 507 0. 223 0. 806 0. 933 0. 973LEGO [69] M 0. 162 1. 352 6. 276 0. 252 - - -Ranjan [51] M 0. 148 1. 149 5. 464 0. 226 0. 815 0. 935 0. 973EPC++ [38] M 0. 141 1. 029 5. 350 0. 216 0. 816 0. 941 0. 976Struct2depth ‘(M)’ [5] M 0. 141 1."
+    },
+    {
+      "id": "semantic_chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p9_sc4",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 9,
+      "score": 0.5119411945343018,
+      "text": "[32] Gao Huang, Zhuang Liu, Laurens van der Maaten, and Kil- ian Q Weinberger. Densely connected convolutional net- works. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, 2017. [33] Huaibo Huang, Ran He, Zhenan Sun, and Tieniu Tan. Wavelet-srnet: A wavelet-based cnn for multi-scale face su- per resolution. In ICCV, 2017. [34] Eunhee Kang, Won Chang, Jaejun Yoo, and Jong Chul Ye. Deep convolutional framelet denosing for low-dose CT via wavelet residual network. IEEE Transactions on Medical Imaging, 37(6):1358–1369, 2018. [35] Alexander Kirillov, Yuxin Wu, Kaiming He, and Ross Gir- shick. Pointrend: Image segmentation as rendering. In CVPR, 2020. [36] Tobias Koch, Lukas Liebel, Friedrich Fraundorfer, and Marco K ¨orner. Evaluation of CNN-Based Single-Image Depth Estimation Methods. In ECCV, 2018."
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "semantic_chunk::Lite-Mono_p7_sc4",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 7,
+      "score": 0.6517988443374634,
+      "text": "It can be observed that although the model size remains the same the accuracy drops more than for not using LGFI blocks. The beneﬁt of introducing the CDC module is to enhance the locality by gradually extracting multi-scale features, while not adding additional trainable parameters. The beneﬁt of pooled concatenations. Accuracy also decreases when three pooled concatenations are removed.",
+      "estimated_tokens": 74
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc1",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.615020215511322,
+      "text": "The dilation rate used in each CDC block is also listed. Repeat × 1 3×3 DDWConv dilation=r Batch Norm 1×1 point-wise GELU 1×1 point-wise CDC Module LGFI Module Linear 1×1 point-wise GELU Linear Linear LayerNorm Softmax Linear LayerNorm 1×1 point-wise 𝑄𝑇 𝑄 𝐾 𝑉 Repeat × N Figure 3. Structures of the proposed Consecutive Dilated Con- volutions (CDC) module and Local-Global Features Interac- tion (LGFI) module. In each stage the CDC module with differ- ent dilation rate is repeated for N times. with size H×W× 3 is ﬁrst fed into a convolution stem, where the image is down-sampled by a 3× 3 convolu- tion. Following two additional 3× 3 convolutions with stride = 1 for local feature extraction, the feature maps of size H 2 × W 2 ×C1 are obtained. In the second stage the features are concatenated with the pooled three-channel in- put image, and another 3×3 convolution withstride = 2 is adopted to down-sample the feature maps, resulting in fea- ture maps with size H 4 × W 4 ×C2. Concatenating features with the average-pooled input image in a down-sampling layer can reduce the spatial information loss caused by the reduction of feature size, which is inspired by ESP- Netv2 [3].",
+      "estimated_tokens": 321
+    },
+    {
+      "id": "semantic_chunk::TDDC_p15_sc1",
+      "source": "data\\TDDC.pdf",
+      "page": 15,
+      "score": 0.603400468826294,
+      "text": "180 0. 808 0. 966 0. 989 WSGD[Vankadariet al., 2023] R d&n 640× 320 40 0. 123 0. 694 3. 957 0. 163 0. 835 0. 978 0. 995 DA ITDFA[Zhaoet al., 2022a] R d&n 640× 320 40 0. 156 0. 786 3. 971 0. 192 0. 778 0. 965 0. 992 ADDS[Liu et al., 2021]† R d&n 640× 320 40 0. 109 0. 584 3. 578 0. 153 0. 631 0. 908 0. 962 ADDS[Liu et al., 2021] R d&n 640× 320 40 0. 120 0. 778 4. 113 0. 172 0. 856 0. 967 0. 987 RNW[Wanget al., 2021] R d&n 640× 320 40 0. 156 0. 701 3. 838 0. 202 0. 768 0. 958 0. 991 G ITDFA[Zhaoet al., 2022a] N d&n 640× 320 40 0. 230 2. 018 6. 336 0. 281 0. 653 0. 875 0. 956 ADDS[Liu et al., 2021] N d&n 640× 320 40 0. 180 1. 441 5. 680 0. 232 0. 727 0. 930 0. 981 RNW[Wanget al., 2021] N d&n 640× 320 40 0. 271 3. 939 9. 204 0. 314 0. 661 0. 830 0. 927 MonoFormer[Baeet al., 2023] K 768 × 256 40 0. 138 0. 665 3. 730 0. 181 0. 824 0. 971 0. 993 MonoViT[Zhaoet al., 2022b] K 768 × 256 40 0. 102 0. 500 3. 364 0. 147 0. 905 0. 977 0. 992 Ours K 768 × 256 40 0. 109 0. 477 3. 261 0. 151 0. 891 0. 978 0. 993 Table E. 1: Effective test on nuScenes-Day [Wang et al., 2021; Caesar et al., 2020] and Robotcar-Day [Liu et al., 2021; Maddern et al., 2017].",
+      "estimated_tokens": 694
+    },
+    {
+      "id": "semantic_chunk::Lite-Mono_p4_sc2",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 4,
+      "score": 0.598617672920227,
+      "text": "Then, the proposed Consecutive Dilated Con- volutions (CDC) module and the Local-Global Features In- teraction (LGFI) module learn rich hierarchical feature rep- resentations. The down-sampling layers in the second and the third stage also receive the concatenated features output by the previous down-sampling layer. This design is simi- lar to the residual connection proposed in ResNet [17], and is able to model better cross-stage correlation. Similarly, the output feature maps are further fed into the third and the fourth stages, and output features of dimensionH 8× W 8×C3 and H 16× W 16×C4. Consecutive Dilated Convolutions (CDC). The pro- posed CDC module utilizes dilated convolutions to extract multi-scale local features. Different from using a parallel dilated convolution module only in the last layer of the net- work [6] we insert several consecutive dilated convolutions with different dilation rates into each stage for adequate multi-scale contexts aggregation.",
+      "estimated_tokens": 210
+    },
+    {
+      "id": "semantic_chunk::SSRDepth_p4_sc3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 4,
+      "score": 0.5907357931137085,
+      "text": "The structure of the ARD module is shown in Fig. 7. We ﬁrst predict a set of discrete bins 𝐵 = {𝑏1, 𝑏2, … , 𝑏𝑖, … , 𝑏𝑁 }. Pattern Recognition 171 (2026) 112279 4",
+      "estimated_tokens": 71
+    },
+    {
+      "id": "semantic_chunk::Jasmine_p6_sc3",
+      "source": "data\\Jasmine.pdf",
+      "page": 6,
+      "score": 0.5354156494140625,
+      "text": "Dtc provides direct supervision but has a performance upper bound, which can stabilize model training in the early stages while gradually decreasing loss weights throughout the training process: Ltc = (LB (norm(D tc), DSSI) +LB (Dtc, D1)·η t1 +LB (filter(D tc), DSI )·η t2)/η step,(11) where LB is the Berhu Loss, “norm” is the [-1,1] normalization, and “filter” are adaptive strategies to avoid performance bottlenecks. Through extensive experimentation and error bar analysis, we 6",
+      "estimated_tokens": 122
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 1492,
+    "compressed_context_tokens": 1492,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 1492,
+  "context_tokens": 1492,
+  "prompt_token_estimate": 1907,
+  "run_label": "sage_semantic_all_v1_semantic_chunk_lite_mono_cdc_module_design",
+  "answer": "<think>\nThe user wants me to answer a question about the CDC module's design and advantages based on the provided materials. Let me analyze the relevant information from the sources.\n\nFrom source [1]: \"The benefit of introducing the CDC module is to enhance the locality by gradually extracting multi-scale features, while not adding additional trainable parameters.\"\n\nFrom source [2]: Shows the structure of CDC module - \"3×3 DDWConv dilation=r Batch Norm 1×1 point-wise GELU 1×1 point-wise\". The dilation rate used in each CDC block is also listed.\n\nFrom source [4]: \"The proposed CDC module utilizes dilated convolutions to extract multi-scale local features. Different from using a parallel dilated convolution module only in the last layer of the network [6] we insert several consecutive dilated convolutions with different dilation rates into each stage for adequate multi-scale contexts aggregation.\"\n\nSo the CDC module:\n- Uses dilated convolutions (3×3 DDWConv with different dilation rates)\n- Structure: 3×3 DDWConv with dilation=r → Batch Norm → 1×1 point-wise → GELU → 1×1 point-wise\n- Consecutive dilated convolutions with different dilation rates\n- Inserted into each stage of the network\n- Advantage: extracts multi-scale local features, enhances locality by gradually extracting multi-scale features\n- Doesn't add additional trainable parameters\n- Better than parallel dilated convolution only in the last layer - provides adequate multi-scale contexts aggregation\n\nLet me format this as the required JSON.\n</think>\n{\n  \"answer\": \"CDC（Consecutive Dilated Convolutions）模块由 3×3 深度可分离膨胀卷积（不同 dilation rate）+ BN + 1×1 point-wise + GELU + 1×1 point-wise 组成，并在网络的每个阶段串联多个不同膨胀率的 CDC 块，以充分聚合多尺度局部上下文。\",\n  \"items\": [\n    {\n      \"name\": \"CDC 模块的结构设计\",\n      \"description\": \"每个 CDC 块包含 3×3 深度可分离膨胀卷积（dilation=r）、BatchNorm、1×1 point-wise、GELU 激活和 1×1 point-wise；不同阶段的 CDC 块采用不同的 dilation rate，并在每个阶段连续重复 N 次。\",\n      \"citations\": [2, 4]\n    },\n    {\n      \"name\": \"相比普通/并行膨胀卷积的优势\",\n      \"description\": \"区别于仅在网络最后一层使用并行膨胀卷积的方式，CDC 在每个阶段连续插入多个不同膨胀率的膨胀卷积，能够逐步提取多尺度局部特征、获得更充分的多尺度上下文聚合，并增强局部性。\",\n      \"citations\": [4, 1]\n    },\n    {\n      \"name\": \"不增加额外训练参数\",\n      \"description\": \"引入 CDC 模块的额外好处是仅增强局部多尺度特征提取能力，而不会引入额外的可训练参数。\",\n      \"citations\": [1]\n    }\n  ],\n  \"missing_information\": \"\"\n}",
+  "usage": {
+    "prompt_tokens": 1942,
+    "completion_tokens": 622,
+    "total_tokens": 2564,
+    "model": "MiniMax-M3"
+  }
+}

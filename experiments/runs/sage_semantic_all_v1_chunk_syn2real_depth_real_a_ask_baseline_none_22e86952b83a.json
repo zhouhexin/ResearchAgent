@@ -1,0 +1,430 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_syn2real_depth_real_a_ask_baseline_none_22e86952b83a",
+  "dry_run": false,
+  "query": "Syn2Real-Depth 的 Real Adaptation 阶段包含哪些核心策略和损失项？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 300,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::s_p2_chunk_18",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.812527060508728,
+      "text": "thetic-to-real adaptation pipeline,\nour model can provide much more robust depth predictions\nin diverse conditions through different real-world datasets\n[5, 19, 37]. Our contributions are listed as follows:\n• We propose a novel synthetic-to-real adaptation"
+    },
+    {
+      "id": "chunk::s_p3_chunk_4",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.7978082299232483,
+      "text": "consider\nabout bridging the synthetic-real gap. In contrast, we pro-\npose an auxiliary space to enhance robust representation\nlearning and introduce a novel real adaptation stage.\n3. Proposed Method\nWe propose to estimate depth map from single frame or con"
+    },
+    {
+      "id": "chunk::s_p1_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7976545095443726,
+      "text": "ively. In the synthetic adaptation, we transfer\nmotion-structure knowledge inside cost volumes for better\nrobust representation, using a frozen daytime model to train\na depth estimator in synthetic adverse conditions. In the in-\nnovative real adaptation, w"
+    },
+    {
+      "id": "chunk::s_p8_chunk_24",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.7874208092689514,
+      "text": "and highlights the\nimportance of synthetic-to-real adaptation.\n6. Conclusion\nIn this work, we propose a synthetic-to-real learning\npipeline for self-supervised robust depth estimation, includ-\ning synthetic adaptation and real adaptation stages where\nthe"
+    },
+    {
+      "id": "chunk::s_p2_chunk_19",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7851667404174805,
+      "text": "butions are listed as follows:\n• We propose a novel synthetic-to-real adaptation pipeline\nfor robust depth estimation in diverse conditions, which\nis able to work in multiple real-world datasets.\n• We construct the motion and cost volume as auxiliary\nspace"
+    },
+    {
+      "id": "chunk::s_p2_chunk_13",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7841573357582092,
+      "text": "art from\nlearning only with pseudo-depth labels.\nTo address the synthetic-real gaps, we propose a novel\nreal adaptation (RA) stage. One challenge is to find valid\nsupervision signals from earlier trained models, and we\ndesign a consistency-reweighting stra"
+    },
+    {
+      "id": "chunk::s_p3_chunk_1",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.7741216421127319,
+      "text": "n auxiliary motion space. (b) Real adaptation leverages the daytime model and synthetic model to\nprovide valid pseudo-labels with consistency reweighting, and the daytime depth distribution from plenty of daytime predictions are seen\nas structure prior to"
+    },
+    {
+      "id": "chunk::s_p1_chunk_5",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7718089818954468,
+      "text": "ts. In this paper, we present the first synthetic-\nto-real robust depth estimation framework, incorporating\nmotion and structure priors to capture real-world knowl-\nedge effectively. In the synthetic adaptation, we transfer\nmotion-structure knowledge insid"
+    },
+    {
+      "id": "chunk::s_p2_chunk_7",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7705490589141846,
+      "text": "and\nan effective strategy to learn in real-world conditions.\nIn this work, we propose the first synthetic-to-real frame-\nwork to achieve depth estimation under diverse conditions.\nDifferent from previous methods focused solely on syn-\nthetic data, ours lea"
+    },
+    {
+      "id": "chunk::s_p2_chunk_20",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.767145037651062,
+      "text": "eal-world datasets.\n• We construct the motion and cost volume as auxiliary\nspace to transfer filtered daytime knowledge for depth,\nwhich boosts the robust representation learning.\n• We design a novel real adaptation with two strategies\nnamed consistency-re"
+    },
+    {
+      "id": "chunk::s_p8_chunk_25",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.76077800989151,
+      "text": "timation, includ-\ning synthetic adaptation and real adaptation stages where\nthe cost volume is constructed to transfer motion-structure\nfeature from daytime to adverse conditions. We introduce a\nconsistency reweighting strategy and a structure prior con-\ns"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_16",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.7586830854415894,
+      "text": "ays a sig-\nnificant role in enabling affine-invariance. We discuss our\nnormalization approach in Sec. 3.3. We verified that without\nany modification of the V AE or the latent space structure,\nthe depth map can be reconstructed from the encoded latent\ncode"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_16",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7586830854415894,
+      "text": "ays a sig-\nnificant role in enabling affine-invariance. We discuss our\nnormalization approach in Sec. 3.3. We verified that without\nany modification of the V AE or the latent space structure,\nthe depth map can be reconstructed from the encoded latent\ncode"
+    },
+    {
+      "id": "chunk::DepthDark_p8_chunk_4",
+      "source": "data\\DepthDark.pdf",
+      "page": 8,
+      "score": 0.7561980485916138,
+      "text": "emonstrate that each\nmodule enhances DepthDark’s performance, with combined\nuse significantly improving robustness.\nTo comprehensively evaluate the effectiveness and efficiency of\nour training framework and ensure a fair comparison with domain\nadaptation m"
+    },
+    {
+      "id": "chunk::s_p3_chunk_0",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.7498177289962769,
+      "text": "Figure 2. Illustration of our proposed pipeline. (a) Synthetic adaptation utilizes an augmentation model to generate paired data for training,\nand we also conduct learning in an auxiliary motion space. (b) Real adaptation leverages the daytime model and sy"
+    },
+    {
+      "id": "chunk::Lite-Mono_p5_chunk_15",
+      "source": "data\\Lite-Mono.pdf",
+      "page": 5,
+      "score": 0.7497544288635254,
+      "text": "ss is deﬁned as:\nLr( ˆIt,I t) = µ·L p(Is,I t), (9)\nEdge-aware smoothness loss. To smooth the generated\ninverse depth maps an edge-aware smoothness loss is cal-\nculated, followed by [15, 44]:\nLsmooth =|∂xd∗\nt|e−|∂xIt| +|∂xd∗\nt|e−|∂yIt|, (10)\nwhere d∗\nt = dt"
+    },
+    {
+      "id": "chunk::ACD_p2_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 2,
+      "score": 0.7492924928665161,
+      "text": "., 2024;\nSauer et al., 2025 ]. However, the translated image shows ob-\nvious inconsistencies and less authenticity of scene contents,\nwhich is unacceptable for training generalizable depth esti-\nmation models.\nTo address these issues, we propose to optimiz"
+    },
+    {
+      "id": "chunk::Depth_Anything_p3_chunk_6",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 3,
+      "score": 0.7480109930038452,
+      "text": "th value is first transformed\ninto the disparity space by d = 1/t and then normalized\nto 0∼1 on each depth map. To enable multi-dataset joint\ntraining, we adopt the affine-invariant loss to ignore the\nunknown scale and shift of each sample:\nLl = 1\nHW\nHWX\ni"
+    },
+    {
+      "id": "chunk::SSRDepth_p6_chunk_8",
+      "source": "data\\SSRDepth.pdf",
+      "page": 6,
+      "score": 0.7477662563323975,
+      "text": "s. Additionally, all depth anno-\ntations are replaced by disparity maps provided by the oﬃcial sources. \nWe crop the image resolution to 640 × 640 for training.\nTwo unseen datasets are introduced in the experiment to evalu-\nate the zero-shot generalization"
+    },
+    {
+      "id": "chunk::Global-Local_p2_chunk_4",
+      "source": "data\\Global-Local.pdf",
+      "page": 2,
+      "score": 0.7475632429122925,
+      "text": "xis, so that the model adaptively learns to capture\nvertical long-range information from the training sample.\nThe proposed network architecture and training strategy\nare experimented over the popular depth estimation dataset\nNYU Depth V2 [Silberman et al.,"
+    },
+    {
+      "id": "chunk::LED_p16_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 16,
+      "score": 0.7471153736114502,
+      "text": "on in depth maps.\nThe depth normals are estimated at each pixel usingna\ni ≡[−∇ x(ai),−∇ y(ai),1] ⊺. The co-\nsine similarity loss, expressed in eq. (3), is then employed to compare estimated and ground\ntruth normals.⟨., .⟩denotes vector inner product operat"
+    },
+    {
+      "id": "chunk::Single_Image_Depth_Prediction_with_Wavelet_Decomposition_p12_chunk_19",
+      "source": "data\\Single Image Depth Prediction with Wavelet Decomposition.pdf",
+      "page": 12,
+      "score": 0.7465285062789917,
+      "text": "egions, by replacing depth\ngradients with wavelets coefﬁcients in Monodepth’s [17]\ndisparity smoothness loss, which unfortunately made train-\ning unstable. We also tried to supervise wavelet coefﬁ-\ncients using distillation [26, 1] from a teacher depth net"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_22",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.7461230754852295,
+      "text": "tion. For the ground\ntruth depth maps d, we implement a linear normalization\nsuch that the depth primarily falls in the value range [−1, 1],\nto match the designed input value range of the V AE. Such\nnormalization serves two purposes. First, it is the conve"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_22",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7461230754852295,
+      "text": "tion. For the ground\ntruth depth maps d, we implement a linear normalization\nsuch that the depth primarily falls in the value range [−1, 1],\nto match the designed input value range of the V AE. Such\nnormalization serves two purposes. First, it is the conve"
+    },
+    {
+      "id": "chunk::Jasmine_p10_chunk_18",
+      "source": "data\\Jasmine.pdf",
+      "page": 10,
+      "score": 0.7444307208061218,
+      "text": "on results validate the effectiveness of\nour proposed adaptation protocol, indicating that each design plays a crucial role in optimizing the\ndiffusion model for self-supervised depth estimation tasks.\n4.5 Inference Latency\nAs shown in the table below (MAC"
+    },
+    {
+      "id": "chunk::DepthDark_p3_chunk_7",
+      "source": "data\\DepthDark.pdf",
+      "page": 3,
+      "score": 0.744379460811615,
+      "text": "ed real-world images\nwith synthetic images and enhances the capacity of the teacher\nmodel, leading to the development of an advanced depth estima-\ntion model. However, Depth Anything V2 performs poorly under\nlow-light conditions, indicating the model’s lim"
+    },
+    {
+      "id": "chunk::SSRDepth_p11_chunk_5",
+      "source": "data\\SSRDepth.pdf",
+      "page": 11,
+      "score": 0.7427911162376404,
+      "text": "c ✓ ✓ ×  0.779  0.233  1.934  0.078  \n  d ✓ × ✓  0.774  0.254  1.935  0.075  \n  e ✓ ✓ ✓  0.799  0.230  1.901  0.073 \nmethod is able to provide sharp depth boundaries on imperfect real \ndatasets, as the predicted performance obtained from training on bo"
+    },
+    {
+      "id": "chunk::s_p1_chunk_18",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7425923347473145,
+      "text": "ion; (2) the lack of labeled real data makes it diffi-\ncult to learn in adverse conditions in the real world. To\novercome these challenges, many methods are designed for\ndepth estimation in adverse conditions within an unsuper-\nvised domain adaptive (UDA)"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p3_chunk_22",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 3,
+      "score": 0.7424576878547668,
+      "text": "tuning, where Sta-\nbleDiffusion plays the role of the foundation model. With as\nfew as 74k synthetic depth samples, we obtain state-of-the-\nart depth estimates on real image datasets, and convincing\nperformance in the wild (cf . Fig. 1).\n3. Method\n3.1. Gen"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p3_chunk_22",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7424576282501221,
+      "text": "tuning, where Sta-\nbleDiffusion plays the role of the foundation model. With as\nfew as 74k synthetic depth samples, we obtain state-of-the-\nart depth estimates on real image datasets, and convincing\nperformance in the wild (cf . Fig. 1).\n3. Method\n3.1. Gen"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_12",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.7399793267250061,
+      "text": "he difference between the output of the\nteacher model and the student model. We normalize the depth\ndifference ¯D to obtain ˆD, which takes values between 0 and\n1. We deﬁne U as the region of focus for the loss, and the\nregion of focus is determined by the"
+    },
+    {
+      "id": "chunk::Robust_Monocular_Depth_Estimation_under_Challenging_Conditions_p5_chunk_10",
+      "source": "data\\Robust Monocular Depth Estimation under Challenging Conditions.pdf",
+      "page": 5,
+      "score": 0.7394858002662659,
+      "text": "deal settings E, regardless of the difficulty of the input. As\nshown in Figure 3, we achieve this via knowledge distilla-\ntion from a depth network B (baseline) trained at an earlier\nstage on E to a new depth model DD for both easy and ad-\nverse scenarios"
+    },
+    {
+      "id": "chunk::s_p1_chunk_0",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7390547394752502,
+      "text": "Synthetic-to-Real Self-supervised Robust Depth Estimation\nvia Learning with Motion and Structure Priors\nWeilong Yan1 Ming Li3 Haipeng Li4 Shuwei Shao5 Robby T. Tan1,2\n1National University of Singapore 2ASUS Intelligent Cloud Services\n3Guangdong Laboratory"
+    },
+    {
+      "id": "chunk::LED_p21_chunk_9",
+      "source": "data\\LED.pdf",
+      "page": 21,
+      "score": 0.7390387654304504,
+      "text": "ur real-world dataset is available in the supplementary material.\nJ Qualitative Results on Synthetic Dataset\nWe illustrate in fig. S6 the improvements of depth estimation achieved by our method by\ncomparing results with and without pattern. They are obtain"
+    },
+    {
+      "id": "chunk::s_p5_chunk_12",
+      "source": "data\\s.pdf",
+      "page": 5,
+      "score": 0.7385129928588867,
+      "text": "ise real ad-\nverse predictions, motivating us to seek more explicit pri-\nors from daytime data and depth. To investigate further,\nwe calculate and visualize the predicted depth distributions\nof ΦD−day and ΦD−syn on the real training set in Fig.3\n(c) and (d"
+    },
+    {
+      "id": "chunk::Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation_p4_chunk_3",
+      "source": "data\\Repurposing-Diffusion-Based-Image-Generators-for-Monocular-Depth-Estimation.pdf",
+      "page": 4,
+      "score": 0.7381927371025085,
+      "text": "d\ndepth d into the latent space using the original Stable Diffusion\nV AE. We fine-tune just the U-Net by optimizing the standard diffu-\nsion objective relative to the depth latent code. Image conditioning\nis achieved by concatenating the two latent codes b"
+    },
+    {
+      "id": "chunk::Repurposing_Diffusion-Based_Image_Generators_for_Monocular_Depth_Estimation_p4_chunk_3",
+      "source": "data\\Repurposing Diffusion-Based Image Generators for Monocular Depth Estimation.pdf",
+      "page": 4,
+      "score": 0.7381927371025085,
+      "text": "d\ndepth d into the latent space using the original Stable Diffusion\nV AE. We fine-tune just the U-Net by optimizing the standard diffu-\nsion objective relative to the depth latent code. Image conditioning\nis achieved by concatenating the two latent codes b"
+    },
+    {
+      "id": "chunk::s_p6_chunk_20",
+      "source": "data\\s.pdf",
+      "page": 6,
+      "score": 0.7381277680397034,
+      "text": "s\nto align the scales. Thanks to [8, 25], we can utilize the\nsynthetic data from their pretrained augmentation models.\nFor the Distday, we obtain a fixed distribution through the\nwhole daytime training dataset, and utilize it for the real\nadaptation constr"
+    },
+    {
+      "id": "chunk::s_p2_chunk_21",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7380432486534119,
+      "text": "ng.\n• We design a novel real adaptation with two strategies\nnamed consistency-reweighting and structure prior con-\nstraint, which effectively learns from real adverse data.\n• Through the experiments, our method achieves state-of-\nthe-art performance on mul"
+    },
+    {
+      "id": "chunk::s_p2_chunk_17",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7379207611083984,
+      "text": "verse conditions. This structural prior provides explicit con-\nstraint when facing real adverse data, learning real-world\ninformation further effectively.\nWith the proposed synthetic-to-real adaptation pipeline,\nour model can provide much more robust depth"
+    },
+    {
+      "id": "chunk::s_p1_chunk_4",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7363545298576355,
+      "text": "verse data. Previous methods either rely on\nsynthetic inputs and pseudo-depth labels or directly apply\ndaytime strategies to adverse conditions, resulting in sub-\noptimal results. In this paper, we present the first synthetic-\nto-real robust depth estimati"
+    },
+    {
+      "id": "chunk::DepthDark_p2_chunk_29",
+      "source": "data\\DepthDark.pdf",
+      "page": 2,
+      "score": 0.7363017201423645,
+      "text": "ugh a\nprior-based output space domain adaptation approach. However,\nthe performance of the aforementioned methods is constrained\nby the challenges posed by the brightness and illumination incon-\nsistencies in low-light images. WSGD [ 35] is the first one-s"
+    },
+    {
+      "id": "chunk::s_p2_chunk_22",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7359278202056885,
+      "text": "hrough the experiments, our method achieves state-of-\nthe-art performance on multiple real challenging datasets\n(improving by 7.5% in AbsRel and 4.3% in RMSE), in\nmulti-frame, single-frame, zero-shot settings.\n2. Related Work\n2.1. Self-supervised Depth Est"
+    },
+    {
+      "id": "chunk::dav2_p9_chunk_19",
+      "source": "data\\dav2.pdf",
+      "page": 9,
+      "score": 0.7358169555664062,
+      "text": "due to the inherent noise in\ntraining sets. Therefore, to satisfy real-world applications such as multi-view synthesis, we fine-tune\nour powerful encoder on Hypersim [ 58] and Virtual KITTI [9] synthetic datasets, for indoor and\noutdoor metric depth estim"
+    },
+    {
+      "id": "chunk::Global-Local_p9_chunk_9",
+      "source": "data\\Global-Local.pdf",
+      "page": 9,
+      "score": 0.7355051040649414,
+      "text": "ar regions, consistent depth values, and accurate absolute distances. We evaluate with our NYU Depth\nV2 trained model without any ﬁne-tuning. Results on iBims-1 dataset are listed in Table 7.\nMethod δ1↑ δ2↑ δ3↑ AbsRel↓ RMSE↓ log10↓\nVNL [Yin et al., 2019] 0"
+    },
+    {
+      "id": "chunk::SSRDepth_p6_chunk_24",
+      "source": "data\\SSRDepth.pdf",
+      "page": 6,
+      "score": 0.7354996204376221,
+      "text": "v2. As shown in Table 1, we perform quanti-\ntative evaluations on the NYU-Depth V2 dataset. Our ConvNeXt-L ver-\nsion of the model achieves the best performance, outperforming the \nstate-of-the-art methods in all ﬁve metrics. Compared to the second-\nranked"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_2",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.7353270053863525,
+      "text": "e\np\nt\nh\n \n  \n⊗\nSSIM\n \n⊗\nSSIM\nUpsample\nBaseline Ours\nDepth \ndecoder\n \nBaseline Ours\n⊗\nSSIM\nloss\n⊗\n \n \nUpscale\n(c) Our appearance loss (d) Our full-res multi-scale\nDepth decoder\n \nBaseline Ours\n⊗\nSSIM\nSSIM\n⊗\n \n Upscale\n(c) Our reprojection loss\n(b) Pose net"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_2",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.7353270053863525,
+      "text": "e\np\nt\nh\n \n  \n⊗\nSSIM\n \n⊗\nSSIM\nUpsample\nBaseline Ours\nDepth \ndecoder\n \nBaseline Ours\n⊗\nSSIM\nloss\n⊗\n \n \nUpscale\n(c) Our appearance loss (d) Our full-res multi-scale\nDepth decoder\n \nBaseline Ours\n⊗\nSSIM\nSSIM\n⊗\n \n Upscale\n(c) Our reprojection loss\n(b) Pose net"
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_8",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.7346000671386719,
+      "text": "iments\nTo validate our approach, we perform several experiments on\nthe NYU Depth V2 and SUN RGB-D datasets. We com-\npare our model with existing methods through quantitative\nand qualitative evaluation, and an ablation study is conducted\nto show the effecti"
+    },
+    {
+      "id": "chunk::Jasmine_p2_chunk_21",
+      "source": "data\\Jasmine.pdf",
+      "page": 2,
+      "score": 0.7344398498535156,
+      "text": "analysis of the effects of different depth\nde-normalization strategies employed in their respective domains. To sum up, the main contributions\nare summarized as follows:\n• Wefirstintroduce SD into a self-supervised depth estimation framework. Our methods e"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::s_p2_chunk_18",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.812527060508728,
+      "text": "thetic-to-real adaptation pipeline,\nour model can provide much more robust depth predictions\nin diverse conditions through different real-world datasets\n[5, 19, 37]. Our contributions are listed as follows:\n• We propose a novel synthetic-to-real adaptation",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::s_p3_chunk_4",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.7978082299232483,
+      "text": "consider\nabout bridging the synthetic-real gap. In contrast, we pro-\npose an auxiliary space to enhance robust representation\nlearning and introduce a novel real adaptation stage.\n3. Proposed Method\nWe propose to estimate depth map from single frame or con",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::s_p1_chunk_6",
+      "source": "data\\s.pdf",
+      "page": 1,
+      "score": 0.7976545095443726,
+      "text": "ively. In the synthetic adaptation, we transfer\nmotion-structure knowledge inside cost volumes for better\nrobust representation, using a frozen daytime model to train\na depth estimator in synthetic adverse conditions. In the in-\nnovative real adaptation, w",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::s_p8_chunk_24",
+      "source": "data\\s.pdf",
+      "page": 8,
+      "score": 0.7874208092689514,
+      "text": "and highlights the\nimportance of synthetic-to-real adaptation.\n6. Conclusion\nIn this work, we propose a synthetic-to-real learning\npipeline for self-supervised robust depth estimation, includ-\ning synthetic adaptation and real adaptation stages where\nthe",
+      "estimated_tokens": 49
+    },
+    {
+      "id": "chunk::s_p2_chunk_19",
+      "source": "data\\s.pdf",
+      "page": 2,
+      "score": 0.7851667404174805,
+      "text": "butions are listed as follows:\n• We propose a novel synthetic-to-real adaptation pipeline\nfor robust depth estimation in diverse conditions, which\nis able to work in multiple real-world datasets.\n• We construct the motion and cost volume as auxiliary\nspace",
+      "estimated_tokens": 50
+    },
+    {
+      "id": "chunk::s_p3_chunk_1",
+      "source": "data\\s.pdf",
+      "page": 3,
+      "score": 0.7741216421127319,
+      "text": "n auxiliary motion space. (b) Real adaptation leverages the daytime model and synthetic model to\nprovide valid pseudo-labels with consistency reweighting, and the daytime depth distribution from plenty of daytime predictions are seen\nas structure prior to",
+      "estimated_tokens": 48
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 297,
+    "compressed_context_tokens": 297,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 297,
+  "context_tokens": 297,
+  "prompt_token_estimate": 699,
+  "run_label": "sage_semantic_all_v1_chunk_syn2real_depth_real_adaptation_components",
+  "answer": "<think>\nThe user is asking about the core strategies and loss terms in the \"Real Adaptation\" stage of Syn2Real-Depth, based on the provided source materials.\n\nLet me analyze the provided materials carefully:\n\n[1] Mentions synthetic-to-real adaptation pipeline, robust depth predictions, and lists contributions including \"novel synthetic-to-real adaptation.\"\n\n[2] Mentions auxiliary space for robust representation learning and \"novel real adaptation stage.\" Starts describing the Proposed Method section.\n\n[3] Describes synthetic adaptation (motion-structure knowledge in cost volumes, frozen daytime model) and starts describing \"innovative real adaptation\" but the text is cut off.\n\n[4] Mentions synthetic-to-real learning pipeline including synthetic adaptation and real adaptation stages. Also mentions structure prior.\n\n[5] Lists contributions: synthetic-to-real adaptation pipeline for robust depth estimation, and constructing motion and cost volume as auxiliary space.\n\n[6] Describes: \"(b) Real adaptation leverages the daytime model and synthetic model to provide valid pseudo-labels with consistency reweighting, and the daytime depth distribution from plenty of daytime predictions are seen as structure prior to...\"\n\nSo from the materials, I can extract these elements about Real Adaptation:\n1. Leverages daytime model and synthetic model to provide valid pseudo-labels\n2. Consistency reweighting\n3. Daytime depth distribution from daytime predictions as structure prior\n\nHowever, the materials are cut off and don't provide complete information about all the loss terms or the full details of the Real Adaptation stage. The text is truncated in several places.\n\nI need to be honest about what I can and cannot extract from the materials. The materials mention:\n- Pseudo-labels with consistency reweighting\n- Structure prior from daytime depth distribution\n- Leveraging daytime model and synthetic model\n\nBut specific loss terms are not fully detailed in the provided excerpts. The materials are partial (multiple \"[3]\" cuts off mid-sentence, and the full method details aren't shown).\n\nLet me construct the answer based on what IS available, and note what information is missing.\n\nCore strategies identifiable:\n1. Using daytime model and synthetic model to generate pseudo-labels\n2. Consistency reweighting of pseudo-labels\n3. Using daytime depth distribution as structure prior\n\nMissing information:\n- Complete list of loss terms (e.g., specific loss functions like photometric loss, smoothness loss, etc.)\n- Full details of the consistency reweighting mechanism\n- The full architecture details of the real adaptation stage\n</think>\n{\n  \"answer\": \"根据资料，Real Adaptation 阶段的核心策略是利用 daytime model 和 synthetic model 生成 pseudo-labels 并进行 consistency reweighting，以及将大量 daytime 预测的深度分布作为 structure prior。具体的损失项和更详细的策略在所提供资料中不完整。\",\n  \"items\": [\n    {\n      \"name\": \"Pseudo-labels with consistency reweighting\",\n      \"description\": \"利用 daytime model 和 synthetic model 提供有效的 pseudo-labels，并使用 consistency reweighting 对其进行加权。\",\n      \"citations\": [6]\n    },\n    {\n      \"name\": \"Daytime depth distribution as structure prior\",\n      \"description\": \"将来自大量 daytime 预测的深度分布作为 structure prior，用于 real adaptation 阶段。\",\n      \"citations\": [6]\n    },\n    {\n      \"name\": \"Leveraging daytime and synthetic models\",\n      \"description\": \"Real adaptation 同时利用在 daytime 训练好的模型和在 synthetic adverse conditions 训练的模型作为基础。\",\n      \"citations\": [3, 6]\n    }\n  ],\n  \"missing_information\": \"资料中 Real Adaptation 部分在多处以截断形式呈现（如 [3]、[6] 仅给出简要描述），未提供完整的损失项列表（例如 photometric loss、smoothness loss、consistency loss 等具体公式或名称）、伪标签生成的具体流程以及 consistency reweighting 的详细计算方式。\"\n}",
+  "usage": {
+    "prompt_tokens": 755,
+    "completion_tokens": 784,
+    "total_tokens": 1539,
+    "model": "MiniMax-M3"
+  }
+}

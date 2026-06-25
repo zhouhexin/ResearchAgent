@@ -1,0 +1,470 @@
+{
+  "run_id": "sage_semantic_all_v1_chunk_depth_anything_cutmix_ask_baseline_none_781829ae932d",
+  "dry_run": false,
+  "query": "Depth Anything 中 CutMix 是如何应用于无标注图像训练的？",
+  "strategy": "baseline",
+  "compression": "none",
+  "compression_stage": "none",
+  "top_k": 50,
+  "budget": 1000,
+  "retrieved_chunks": [
+    {
+      "id": "chunk::ACD_p4_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.7268378734588623,
+      "text": "cf\nDepth Anything \nV2\n௖\nௗ\n௥\nOne batch\nStable Diffusion \nTurbo v2.1\nDecoder\nEncoder Decoder\nTD\nSD\nVD\nie\nim\nSD\n0p\n1p\n\u001f\n0p 1p\u001f\nVD\n\u000b\f\n\u000b\f\n01\n2log 1 0\n00\npp\neL\n\u0010\u0010­ \u000ez° ®\n °¯\n\u000b\n \f\n\u000b\n \f\n1\npp\n0\n\u000b\n\u000b\n \f\n01\n0\n01\n01\n11\n11 1\n0\npp\npp\notherwise\nW\nW\n\n\n\n\n­\u000et \u000e\n°° \u0010 \u001f® \u000e°\n°¯"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.7256372570991516,
+      "text": "pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything v2.arXiv preprint arXiv:2406.09414, 2024. 3\n[61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tian"
+    },
+    {
+      "id": "chunk::Jasmine_p13_chunk_22",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.7119948863983154,
+      "text": "feys. Depthsplat: Connecting gaussian splatting and depth.arXiv preprint arXiv:2410.13862, 2024. 1\n[54] Zhiqiang Yan, Yuankai Lin, Kun Wang, Yupeng Zheng, Yufei Wang, Zhenyu Zhang, Jun Li, and Jian\nYang. Tri-perspective view decomposition for geometry-awar"
+    },
+    {
+      "id": "chunk::dav2_p18_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 18,
+      "score": 0.7110552191734314,
+      "text": "2.5\nDepth Anything V2 Base 83.9\nSegmenter [74] ViT-L [17] 82.2\nSegFormer [85] MiT-B5 [85] 82.4\nMask2Former [13] Swin-L [45] 83.3\nOneFormer [29] Swin-L [45] 83.0\nOneFormer [29] ConvNeXt-XL [46] 83.6\nDDP [30] ConvNeXt-L [46] 83.2\nDepth Anything V2 Large 85.6"
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.7110224366188049,
+      "text": "ents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith signiﬁcant discrepancies between D\nT and DS for re-\nﬁnement:\n¯D = |DT −DS|, (8)\nwhere ¯D reﬂects the difference between the output of the\nteacher model and the student model. We"
+    },
+    {
+      "id": "chunk::Depth_Anything_p4_chunk_12",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.7043462991714478,
+      "text": "baseline of labeled images.\nWe provide more details about CutMix. It was originally\nproposed for image classification, and is rarely explored in\nmonocular depth estimation. We first interpolate a random\npair of unlabeled images ua and ub spatially:\nuab ="
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.7022435665130615,
+      "text": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data\nLihe Yang1 Bingyi Kang2 † Zilong Huang2 Xiaogang Xu3,4 Jiashi Feng2 Hengshuang Zhao1‡\n1HKU 2TikTok 3CUHK 4ZJU\n† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_25",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.7011696100234985,
+      "text": "eature. We will verify the effec-\ntiveness of the proposed decoder in section 4.4.\n3.5 V ertical CutDepth\nRecently, a depth-speciﬁc data augmentation method named\nCutDepth has been proposed [Ishii and Yamashita, 2021 ],\nwhich replaces a part of the input i"
+    },
+    {
+      "id": "chunk::Jasmine_p19_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 19,
+      "score": 0.7006945610046387,
+      "text": "tain the depthD tc through:\n1\nDtc\n=clip\n\u0012 1\nDmax\n+\n\u0012 1\nDmin\n− 1\nDmax\n\u0013\n·dp,0,3\n\u0013\n,\nwhere Dmin and Dmax are set to 0.1 and 100, respectivley. We find that the depth range at range\n[0,3] can already describe all information within the maximum depth.\n19"
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_56",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6958448886871338,
+      "text": "ang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and\nHengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406.09414\n(2024)."
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_54",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6937699913978577,
+      "text": "tion Compensa-\ntion. arXiv preprint arXiv:2404.13854 (2024).\n[41] Lihe Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Heng-\nshuang Zhao. 2024. Depth anything: Unleashing the power of large-scale unla-\nbeled data. In Proceedings of the IEEE/"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_16",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6934972405433655,
+      "text": "ur Depth Anything, aiming to provide better\ncontrol signals for image synthesis and video editing. Please\nrefer to our project page for more qualitative results on video\nediting [34] with our Depth Anything.\n5. Conclusion\nIn this work, we present Depth Any"
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_6",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.688904881477356,
+      "text": "g, and Hengshuang Zhao. Depth anything:\nUnleashing the power of large-scale unlabeled data. InProceedings of the IEEE/CVF Conference on\nComputer Vision and Pattern Recognition, pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_3",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 14,
+      "score": 0.6880578398704529,
+      "text": "depth [15] S 0.109 0.811 4.568 0.166 0.877 0.967 0.988\n3net [50] (VGG) S 0.119 0.920 4.824 0.182 0.856 0.957 0.985\n3net [50] (ResNet 50) S 0.102 0.675 4.293 0.159 0.881 0.969 0.991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p14_chunk_3",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 14,
+      "score": 0.6880578398704529,
+      "text": "depth [15] S 0.109 0.811 4.568 0.166 0.877 0.967 0.988\n3net [50] (VGG) S 0.119 0.920 4.824 0.182 0.856 0.957 0.985\n3net [50] (ResNet 50) S 0.102 0.675 4.293 0.159 0.881 0.969 0.991\nSuperDepth [47] + pp S 0.090 0.542 3.967 0.144 0.901 0.976 0.993\nMonodepth2"
+    },
+    {
+      "id": "chunk::dav2_p1_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 1,
+      "score": 0.6817223429679871,
+      "text": "e-grained details. Compared\nwith SD-based models [31, 25], it enjoys faster inference speed, fewer parameters, and higher depth accuracy.\nAbstract\nThis work presents Depth Anything V2. Without pursuing fancy techniques, we aim\nto reveal crucial findings to"
+    },
+    {
+      "id": "chunk::dav2_p1_chunk_0",
+      "source": "data\\dav2.pdf",
+      "page": 1,
+      "score": 0.6794629693031311,
+      "text": "Depth Anything V2\nLihe Yang1 Bingyi Kang2† Zilong Huang2\nZhen Zhao Xiaogang Xu Jiashi Feng 2 Hengshuang Zhao1‡\n1HKU 2TikTok\n†project lead ‡corresponding author\nhttps://depth-anything-v2.github.io\nOurs-Large\nMarigold(LCM)\nDepthFM\nOurs-Small\nlatency (V100) p"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_1",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6757799983024597,
+      "text": "been\nstudied. To the best of our knowledge, CutDepth [Ishii and\nYamashita, 2021] is the ﬁrst approach that attempts to aug-\nment the data in depth estimation. We accelerate the perfor-\nmance of this depth-speciﬁc data augmentation method by\nemphasizing the"
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_1",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.6735193729400635,
+      "text": "† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1. Our model exhibits impressive generalization ability across extensive unseen scenes. Left two columns: COCO [35]. Middle two:\nSA-1B [26] (a hold-out unseen set). Right two: p"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_27",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6717700958251953,
+      "text": "work to focus on the high-frequency area. In\nCutDepth, the coordinates (l,u ) and size (w,h ) of the cut re-\ngion are randomly chosen. However, we believe that the ver-\ntical and horizontal directions should not be regarded equally\nfor depth estimation bas"
+    },
+    {
+      "id": "chunk::dav2_p15_chunk_13",
+      "source": "data\\dav2.pdf",
+      "page": 15,
+      "score": 0.6697139739990234,
+      "text": "Yang, Bingyi Kang, Zilong Huang, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything: Unleashing the power of large-scale unlabeled data. In CVPR, 2024. 1, 2, 3,\n5, 6, 7, 8, 9, 10, 17, 19, 21, 22, 24\n[90] Lihe Yang, Zhen Zhao, Lei Qi, Yu Qiao, Yi"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_0",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.669040858745575,
+      "text": "2019], Copy-Paste [Ghiasi et al. , 2021 ] and CutBlur [Yoo\net al. , 2020 ], have been actively proposed in diverse tasks,\nthe depth-speciﬁc data augmentation method has rarely been\nstudied. To the best of our knowledge, CutDepth [Ishii and\nYamashita, 2021]"
+    },
+    {
+      "id": "chunk::Global-Local_p5_chunk_10",
+      "source": "data\\Global-Local.pdf",
+      "page": 5,
+      "score": 0.6666802167892456,
+      "text": "NYU\nDepth V2 dataset.\nComparison with different decoder designs. Table 3\ndemonstrates the comparison results with different decoder\ndesign. In this experiment, vertical CutDepth is omitted to\nsolely compare the effectiveness of the decoder. As our"
+    },
+    {
+      "id": "chunk::TDDC_p6_chunk_16",
+      "source": "data\\TDDC.pdf",
+      "page": 6,
+      "score": 0.6646528244018555,
+      "text": "al reported result in the paper with pure CNN backbone\nand Max depth as the clipping up range for the predicted depth (.i.e, a more relaxed approach to evaluation). ‡ donates that the method applies\na much larger Transformer-CNN hybrid backbone for DepthNe"
+    },
+    {
+      "id": "chunk::LED_p5_chunk_4",
+      "source": "data\\LED.pdf",
+      "page": 5,
+      "score": 0.6644896268844604,
+      "text": "ly on the toolbox [26] for Depth-\nFormer [27]. We apply Depth Anything V2 [49] official fine-tuning code to adapt the model\nfor metric depth estimation. The only changes are limited to dataset format compatibility.\nThe training setup follows the original p"
+    },
+    {
+      "id": "chunk::Depth_Anything_p4_chunk_11",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.6641125679016113,
+      "text": "d the other is strong spatial dis-\ntortion, which is CutMix [ 83]. Despite the simplicity, the\ntwo modifications make our large-scale unlabeled images\nsignificantly improve the baseline of labeled images.\nWe provide more details about CutMix. It was origin"
+    },
+    {
+      "id": "chunk::dav2_p10_chunk_22",
+      "source": "data\\dav2.pdf",
+      "page": 10,
+      "score": 0.6637662649154663,
+      "text": "sent Depth Anything V2, a more powerful foundation model for monocular depth\nestimation. It is capable of 1) providing robust and fine-grained depth prediction, 2) supporting\nextensive applications with varied model sizes (from 25M to 1.3B parameters), and"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_4",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6633701920509338,
+      "text": "rd best.\nFigure S2:Few-shot learning performances of Depth Anything V2 on our real dataset.\nAll LED patterns demonstrate superior performances over LB. The model is near its maximal\nperformances with only 1,000 training images.\nL=L depth +λ 1Lgrad +λ 2Lnor"
+    },
+    {
+      "id": "chunk::Global-Local_p4_chunk_22",
+      "source": "data\\Global-Local.pdf",
+      "page": 4,
+      "score": 0.6626167297363281,
+      "text": "horizontal ﬂips, random brightness( ±0.2),\ncontrast(±0.2), gamma(±20), hue(±20), saturation(±30),\nand value(±20). We apply p = 0.75 for vertical CutDepth\nwith 25% possibility.\n4.3 Comparison with State-of-the-Arts\nNYU Depth V2. Table 1 presents the perform"
+    },
+    {
+      "id": "chunk::DepthDark_p6_chunk_11",
+      "source": "data\\DepthDark.pdf",
+      "page": 6,
+      "score": 0.6619547009468079,
+      "text": "822 0.918\nDepth Anything V2[42] RD & SD - 40 0.235 2.474 6.239 0.268 0.697 0.868 0.946\nOurs DepthDark H, VK - 40 0.157 1.063 4.284 0.202 0.760 0.941 0.985\nTable 4.1: The best results are in bold, while the second-best scores are underline. H, VK, K, N, and"
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_26",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.6616507768630981,
+      "text": "been proposed [Ishii and Yamashita, 2021 ],\nwhich replaces a part of the input image with the ground-\ntruth depth map to provide diversity to the input image and\nenable the network to focus on the high-frequency area. In\nCutDepth, the coordinates (l,u ) an"
+    },
+    {
+      "id": "chunk::SSRDepth_p14_chunk_3",
+      "source": "data\\SSRDepth.pdf",
+      "page": 14,
+      "score": 0.6615034341812134,
+      "text": ". Xu, J. Feng, H. Zhao, Depth anything V2, in: \nAdvances in Neural Information Processing Systems,  37, 2024, pp. 21875–21911. \nYuhang Zou is a Master’s candidate in Mechanical Engineering at Wuhan University of \nTechnology, Wuhan, China. His research focu"
+    },
+    {
+      "id": "chunk::ACD_p9_chunk_18",
+      "source": "data\\ACD.pdf",
+      "page": 9,
+      "score": 0.6610865592956543,
+      "text": "l., 2024b] Lihe Y ang, Bingyi Kang, Zilong Huang,\nZhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang\nZhao. Depth anything v2. In NeurIPS, 2024.\n[Yin et al., 2022 ] Wei Yin, Jianming Zhang, Oliver Wang,\nSimon Niklaus, Simon Chen, Yifan Liu, and Chunhua\nShe"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_21",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 12,
+      "score": 0.6607586145401001,
+      "text": "make ﬁve\nframes for evaluation.\nDepth Decoder\nlayer k s chns res input activation\nupconv5 3 1 256 32 econv5 ELU [7]\niconv5 3 1 256 16 ↑upconv5, econv4ELU\nupconv4 3 1 128 16 iconv5 ELU\niconv4 3 1 128 8 ↑upconv4, econv3ELU\ndisp4 3 1 1 1 iconv4 Sigmoid\nupcon"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p12_chunk_21",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 12,
+      "score": 0.6607586145401001,
+      "text": "make ﬁve\nframes for evaluation.\nDepth Decoder\nlayer k s chns res input activation\nupconv5 3 1 256 32 econv5 ELU [7]\niconv5 3 1 256 16 ↑upconv5, econv4ELU\nupconv4 3 1 128 16 iconv5 ELU\niconv4 3 1 128 8 ↑upconv4, econv3ELU\ndisp4 3 1 1 1 iconv4 Sigmoid\nupcon"
+    },
+    {
+      "id": "chunk::SSRDepth_p10_chunk_20",
+      "source": "data\\SSRDepth.pdf",
+      "page": 10,
+      "score": 0.6601762175559998,
+      "text": "del’s perfor-\nmance. Therefore, we train our method on both the raw depth annota-\ntions(rawDepths) and the completed reﬁned depth annotations(Depths) \nfrom NYU1449. The experimental results are shown in Table 8. Our \nPattern Recognition 171 (2026) 112279"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_17",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.659564197063446,
+      "text": "g [34] with our Depth Anything.\n5. Conclusion\nIn this work, we present Depth Anything, a highly practical\nsolution to robust monocular depth estimation. Different\nfrom prior arts, we especially highlight the value of cheap\nand diverse unlabeled images. We"
+    },
+    {
+      "id": "chunk::dav2_p18_chunk_4",
+      "source": "data\\dav2.pdf",
+      "page": 18,
+      "score": 0.6593810319900513,
+      "text": "ConvNeXt-XL [46] 83.6\nDDP [30] ConvNeXt-L [46] 83.2\nDepth Anything V2 Large 85.6\n(a) Cityscapes dataset\nMethod Encoder mIoU\nUperNet [84] InternImage-S [78] 50.1\nDepth Anything V2 Small 53.9\nUperNet [84] InternImage-B [78] 50.8\nDepth Anything V2 Base 57.1\nU"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_0",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.6590778827667236,
+      "text": "It\nIt-1\n It+1\nGood matchOccluded pixel\npe(        ,       ) =               \npe(        ,       ) =               \n ✓\nBaseline:  avg(        ,       ) =               \nOurs:       min(        ,       ) =               \n❌\nerror\nerror\nDepth decoder\nBaseline"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_0",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.6590778827667236,
+      "text": "It\nIt-1\n It+1\nGood matchOccluded pixel\npe(        ,       ) =               \npe(        ,       ) =               \n ✓\nBaseline:  avg(        ,       ) =               \nOurs:       min(        ,       ) =               \n❌\nerror\nerror\nDepth decoder\nBaseline"
+    },
+    {
+      "id": "chunk::MonoDiffusion_p9_chunk_26",
+      "source": "data\\MonoDiffusion.pdf",
+      "page": 9,
+      "score": 0.6587148904800415,
+      "text": "g, 27(8):4131–4144,\n2018.\n[11] Shuwei Shao, Zhongcai Pei, Weihai Chen, Ran Li, Zhong Liu, and\nZhengguo Li. Urcdc-depth: Uncertainty rectified cross-distillation\nwith cutflip for monocular depth estimation. arXiv preprint\narXiv:2302.08149, 2023.\n[12] Xinche"
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_19",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6577998399734497,
+      "text": "challenging optimization target when learning\nunlabeled images, and 2) preserving rich semantic priors\nfrom pre-trained models. As a result, our Depth Anything\nmodel exhibits excellent zero-shot depth estimation ability,\nand also serves as a promising ini"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p8_chunk_1",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 8,
+      "score": 0.6573185920715332,
+      "text": "ative results on the KITTI Eigen split. Our models (MD2) in the last four rows produce the sharpest depth maps, which\nare reﬂected in the superior quantitative results in Table 1. Additional results can be seen in the supplementary materiale Section E.\nMon"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p8_chunk_1",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 8,
+      "score": 0.6573185920715332,
+      "text": "ative results on the KITTI Eigen split. Our models (MD2) in the last four rows produce the sharpest depth maps, which\nare reﬂected in the superior quantitative results in Table 1. Additional results can be seen in the supplementary materiale Section E.\nMon"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular_Depth_Estimation.pdf",
+      "page": 3,
+      "score": 0.6565256118774414,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::Monocular_Depth_Estimation_p3_chunk_26",
+      "source": "data\\Monocular Depth Estimation.pdf",
+      "page": 3,
+      "score": 0.6565256118774414,
+      "text": "lting 2D coordi-\nnates of the projected depths Dt in It′ and\n⟨⟩\nis the sam-\npling operator. For simplicity of notation we assume the\npre-computed intrinsics K of all the views are identical,\nthough they can be different. Following [21] we use bilin-\near sa"
+    },
+    {
+      "id": "chunk::Jasmine_p13_chunk_21",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.655717134475708,
+      "text": "multi-frame monocular depth. InCVPR, pages 1164–1174, 2021. 3,\n7, 16\n[53] Haofei Xu, Songyou Peng, Fangjinhua Wang, Hermann Blum, Daniel Barath, Andreas Geiger, and Marc\nPollefeys. Depthsplat: Connecting gaussian splatting and depth.arXiv preprint arXiv:2"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_17",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6556357145309448,
+      "text": "𝜇(𝐷∗\n𝑆 (𝑝𝑖, 𝑗))|||, (14)\nwhere 𝐷𝑆 (𝑝𝑖, 𝑗) and 𝐷∗\n𝑆 (𝑝𝑖, 𝑗) represent the predicted and ground truth \n(GT) segmentation scale at pixel 𝑗 within the patch 𝑝𝑖, respectively. 𝜇(⋅)\ndenotes the median of the depths, 𝑈 is the number of semantic seg-\nmentation pat"
+    },
+    {
+      "id": "chunk::LED_p17_chunk_3",
+      "source": "data\\LED.pdf",
+      "page": 17,
+      "score": 0.6549747586250305,
+      "text": "961 0.985 0.993\n✗ ✓ ✓ ✗ ✓ 5.4220.2000.0180.125 12.50316.1200.961 0.985 0.993\nTable S1:Loss study.Performance comparison using several combination of losses:1st\nbest, 2nd best,3rd best.\nFigure S2:Few-shot learning performances of Depth Anything V2 on our re"
+    },
+    {
+      "id": "chunk::SSRDepth_p5_chunk_4",
+      "source": "data\\SSRDepth.pdf",
+      "page": 5,
+      "score": 0.6540322303771973,
+      "text": "ware relative depth map 𝑅 ∈ ℝ1× 𝐻\n4 × 𝑊\n4 , we multiply the per-\npixel representations 𝐹𝑝 ∈ ℝ𝐶× 𝐻\n4 × 𝑊\n4  with the bin embeddings 𝐸𝐵 ∈\nℝ𝑁×𝐶 to get the probability distribution 𝑃𝐵 ∈ ℝ𝑁× 𝐻\n4 × 𝑊\n4  for each pixel \nacross the 𝐶. Then, the 𝑅 is computed throu"
+    }
+  ],
+  "selected_chunks": [
+    {
+      "id": "chunk::ACD_p4_chunk_0",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.7268378734588623,
+      "text": "cf\nDepth Anything \nV2\n௖\nௗ\n௥\nOne batch\nStable Diffusion \nTurbo v2.1\nDecoder\nEncoder Decoder\nTD\nSD\nVD\nie\nim\nSD\n0p\n1p\n\u001f\n0p 1p\u001f\nVD\n\u000b\f\n\u000b\f\n01\n2log 1 0\n00\npp\neL\n\u0010\u0010­ \u000ez° ®\n °¯\n\u000b\n \f\n\u000b\n \f\n1\npp\n0\n\u000b\n\u000b\n \f\n01\n0\n01\n01\n11\n11 1\n0\npp\npp\notherwise\nW\nW\n\n\n\n\n­\u000et \u000e\n°° \u0010 \u001f® \u000e°\n°¯",
+      "estimated_tokens": 163
+    },
+    {
+      "id": "chunk::Jasmine_p14_chunk_7",
+      "source": "data\\Jasmine.pdf",
+      "page": 14,
+      "score": 0.7256372570991516,
+      "text": "pages 10371–10381, 2024. 3\n[60] Lihe Yang, Bingyi Kang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and Hengshuang Zhao.\nDepth anything v2.arXiv preprint arXiv:2406.09414, 2024. 3\n[61] Zhenlong Yuan, Cong Liu, Fei Shen, Zhaoxin Li, Jinguo Luo, Tian",
+      "estimated_tokens": 102
+    },
+    {
+      "id": "chunk::Jasmine_p13_chunk_22",
+      "source": "data\\Jasmine.pdf",
+      "page": 13,
+      "score": 0.7119948863983154,
+      "text": "feys. Depthsplat: Connecting gaussian splatting and depth.arXiv preprint arXiv:2410.13862, 2024. 1\n[54] Zhiqiang Yan, Yuankai Lin, Kun Wang, Yupeng Zheng, Yufei Wang, Zhenyu Zhang, Jun Li, and Jian\nYang. Tri-perspective view decomposition for geometry-awar",
+      "estimated_tokens": 84
+    },
+    {
+      "id": "chunk::dav2_p18_chunk_3",
+      "source": "data\\dav2.pdf",
+      "page": 18,
+      "score": 0.7110552191734314,
+      "text": "2.5\nDepth Anything V2 Base 83.9\nSegmenter [74] ViT-L [17] 82.2\nSegFormer [85] MiT-B5 [85] 82.4\nMask2Former [13] Swin-L [45] 83.3\nOneFormer [29] Swin-L [45] 83.0\nOneFormer [29] ConvNeXt-XL [46] 83.6\nDDP [30] ConvNeXt-L [46] 83.2\nDepth Anything V2 Large 85.6",
+      "estimated_tokens": 126
+    },
+    {
+      "id": "chunk::ACD_p4_chunk_11",
+      "source": "data\\ACD.pdf",
+      "page": 4,
+      "score": 0.7110224366188049,
+      "text": "ents the output\ndepth of Depth Anything V2. We ﬁrst identify the regions\nwith signiﬁcant discrepancies between D\nT and DS for re-\nﬁnement:\n¯D = |DT −DS|, (8)\nwhere ¯D reﬂects the difference between the output of the\nteacher model and the student model. We",
+      "estimated_tokens": 77
+    },
+    {
+      "id": "chunk::Depth_Anything_p4_chunk_12",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 4,
+      "score": 0.7043462991714478,
+      "text": "baseline of labeled images.\nWe provide more details about CutMix. It was originally\nproposed for image classification, and is rarely explored in\nmonocular depth estimation. We first interpolate a random\npair of unlabeled images ua and ub spatially:\nuab =",
+      "estimated_tokens": 54
+    },
+    {
+      "id": "chunk::Depth_Anything_p1_chunk_0",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 1,
+      "score": 0.7022435665130615,
+      "text": "Depth Anything: Unleashing the Power of Large-Scale Unlabeled Data\nLihe Yang1 Bingyi Kang2 † Zilong Huang2 Xiaogang Xu3,4 Jiashi Feng2 Hengshuang Zhao1‡\n1HKU 2TikTok 3CUHK 4ZJU\n† project lead ‡ corresponding author\nhttps://depth-anything.github.io\nFigure 1",
+      "estimated_tokens": 89
+    },
+    {
+      "id": "chunk::Global-Local_p3_chunk_25",
+      "source": "data\\Global-Local.pdf",
+      "page": 3,
+      "score": 0.7011696100234985,
+      "text": "eature. We will verify the effec-\ntiveness of the proposed decoder in section 4.4.\n3.5 V ertical CutDepth\nRecently, a depth-speciﬁc data augmentation method named\nCutDepth has been proposed [Ishii and Yamashita, 2021 ],\nwhich replaces a part of the input i",
+      "estimated_tokens": 72
+    },
+    {
+      "id": "chunk::Jasmine_p19_chunk_3",
+      "source": "data\\Jasmine.pdf",
+      "page": 19,
+      "score": 0.7006945610046387,
+      "text": "tain the depthD tc through:\n1\nDtc\n=clip\n\u0012 1\nDmax\n+\n\u0012 1\nDmin\n− 1\nDmax\n\u0013\n·dp,0,3\n\u0013\n,\nwhere Dmin and Dmax are set to 0.1 and 100, respectivley. We find that the depth range at range\n[0,3] can already describe all information within the maximum depth.\n19",
+      "estimated_tokens": 95
+    },
+    {
+      "id": "chunk::DepthDark_p9_chunk_56",
+      "source": "data\\DepthDark.pdf",
+      "page": 9,
+      "score": 0.6958448886871338,
+      "text": "ang, Zilong Huang, Zhen Zhao, Xiaogang Xu, Jiashi Feng, and\nHengshuang Zhao. 2024. Depth Anything V2. arXiv preprint arXiv:2406.09414\n(2024).",
+      "estimated_tokens": 56
+    },
+    {
+      "id": "chunk::Depth_Anything_p8_chunk_16",
+      "source": "data\\Depth_Anything.pdf",
+      "page": 8,
+      "score": 0.6934972405433655,
+      "text": "ur Depth Anything, aiming to provide better\ncontrol signals for image synthesis and video editing. Please\nrefer to our project page for more qualitative results on video\nediting [34] with our Depth Anything.\n5. Conclusion\nIn this work, we present Depth Any",
+      "estimated_tokens": 53
+    }
+  ],
+  "compression_info": {
+    "method": "none",
+    "stage": "none",
+    "original_context_tokens": 971,
+    "compressed_context_tokens": 971,
+    "compression_ratio": 1.0
+  },
+  "original_context_tokens": 971,
+  "context_tokens": 971,
+  "prompt_token_estimate": 1442,
+  "run_label": "sage_semantic_all_v1_chunk_depth_anything_cutmix_application",
+  "answer": "<think>\nThe user is asking about how CutMix is applied to unlabeled image training in Depth Anything. Let me look at the provided materials to find information about this.\n\nLooking at the materials:\n\n[6] source: data\\Depth_Anything.pdf says: \"We provide more details about CutMix. It was originally proposed for image classification, and is rarely explored in monocular depth estimation. We first interpolate a random pair of unlabeled images ua and ub spatially: uab = ...\"\n\nThis gives partial information - it mentions that CutMix is applied to unlabeled images by interpolating a random pair of unlabeled images ua and ub spatially. But the full details are cut off.\n\n[7] source: data\\Depth_Anything.pdf is the title/author page of the Depth Anything paper.\n\n[8] source: data\\Global-Local.pdf talks about CutDepth (a different augmentation), not CutMix.\n\nSo based on the available materials, we have partial information about how CutMix is applied:\n- It was originally for image classification\n- It's rarely explored in monocular depth estimation\n- They interpolate a random pair of unlabeled images ua and ub spatially to form uab\n- The full details/equation are cut off in the snippet\n\nThe information is incomplete - we only have the start of the description. We know they spatially interpolate two unlabeled images, but the full procedure (including how labels/targets are mixed, how it's used in the training objective) is not provided in the materials.\n\nLet me construct a JSON response that acknowledges the partial information available.\n</think>\n{\n  \"answer\": \"根据资料，Depth Anything 中 CutMix 的应用方式是对一对随机抽取的无标注图像 u_a 和 u_b 进行空间插值，生成混合图像 u_ab。但资料中关于 CutMix 在无标注训练中的完整公式与具体训练目标处理方式被截断，缺少完整细节。\",\n  \"items\": [\n    {\n      \"name\": \"CutMix 在无标注图像上的空间插值\",\n      \"description\": \"资料[6] 提到 CutMix 原本用于图像分类，在单目深度估计中很少被探索；用于无标注训练时，先对随机抽取的一对无标注图像 u_a 和 u_b 在空间上进行插值，得到 u_ab。完整的混合公式与后续训练目标在所给资料中被截断。\",\n      \"citations\": [6]\n    }\n  ],\n  \"missing_information\": \"资料[6] 中关于 CutMix 完整的插值公式（包括 patch 区域如何裁剪与拼接、混合掩码的生成）以及对应的训练损失/伪标签处理方式均未在所给片段中给出，无法给出更完整的答案。\"\n}",
+  "usage": {
+    "prompt_tokens": 1469,
+    "completion_tokens": 544,
+    "total_tokens": 2013,
+    "model": "MiniMax-M3"
+  }
+}
