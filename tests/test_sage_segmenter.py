@@ -39,6 +39,49 @@ class SageSegmenterTests(unittest.TestCase):
         self.assertEqual(units[0]["sentence_count"], 2)
         self.assertEqual(units[0]["segment_score_min"], 0.8)
 
+    def test_make_semantic_chunk_units_keeps_paragraphs_as_hard_boundaries(self):
+        calls = []
+
+        def scorer(sentences):
+            calls.append(sentences)
+            return [0.95 for _ in range(len(sentences) - 1)]
+
+        chunks = [
+            {
+                "source": "data/ACD.pdf",
+                "page": 1,
+                "text": (
+                    "First paragraph sentence one. First paragraph sentence two.\n\n"
+                    "Second paragraph sentence one. Second paragraph sentence two."
+                ),
+            }
+        ]
+
+        units = make_semantic_chunk_units(
+            chunks,
+            scorer=scorer,
+            threshold=0.55,
+            min_sentence_chars=5,
+            min_chars=1,
+            max_chars=1000,
+        )
+
+        self.assertEqual(
+            [unit["text"] for unit in units],
+            [
+                "First paragraph sentence one. First paragraph sentence two.",
+                "Second paragraph sentence one. Second paragraph sentence two.",
+            ],
+        )
+        self.assertEqual([unit["paragraph_index"] for unit in units], [0, 1])
+        self.assertEqual(
+            calls,
+            [
+                ["First paragraph sentence one.", "First paragraph sentence two."],
+                ["Second paragraph sentence one.", "Second paragraph sentence two."],
+            ],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

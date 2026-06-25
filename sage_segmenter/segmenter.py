@@ -13,7 +13,7 @@ import numpy as np
 from densex.corpus import paper_title_from_source
 from retrieval.embed import Embedder
 from sage_segmenter.model import SegmentationMLP, build_pair_features
-from sage_segmenter.sentence_utils import split_sentences
+from sage_segmenter.sentence_utils import split_paragraphs, split_sentences
 
 
 @dataclass(frozen=True)
@@ -132,37 +132,47 @@ def make_semantic_chunk_units(
     min_chars: int = 120,
     max_chars: int = 1200,
 ) -> list[dict]:
-    """Create DenseX-compatible semantic chunk units from page/text records."""
+    """Create DenseX-compatible semantic chunk units from page/text records.
+
+    Paragraph boundaries are hard boundaries. The MLP only decides boundaries
+    between adjacent sentences inside one paragraph, so a saturated same-chunk
+    score cannot merge unrelated paragraphs into one long chunk.
+    """
     units = []
     for chunk in chunks:
         source = str(chunk.get("source", ""))
         page = chunk.get("page")
-        sentences = split_sentences(str(chunk.get("text", "")), min_chars=min_sentence_chars)
-        if not sentences:
-            continue
-        scores = scorer(sentences) if len(sentences) > 1 else []
-        segments = split_by_scores(
-            sentences,
-            scores,
-            threshold=threshold,
-            min_chars=min_chars,
-            max_chars=max_chars,
-        )
         source_part = re.sub(r"[^A-Za-z0-9_-]+", "_", Path(source).stem).strip("_") or "doc"
         page_part = f"p{page}" if page is not None else "p0"
-        for segment_index, segment in enumerate(segments):
-            unit_id = f"semantic_chunk::{source_part}_{page_part}_sc{segment_index}"
-            unit = {
-                "id": unit_id,
-                "granularity": "semantic_chunk",
-                "text": segment.text,
-                "source": source,
-                "page": page,
-                "parent_chunk_id": f"{source_part}_{page_part}_semantic_{segment_index}",
-                "paper_title": paper_title_from_source(source),
-                "sentence_count": segment.sentence_count,
-            }
-            if segment.score_min is not None and np.isfinite(segment.score_min):
-                unit["segment_score_min"] = float(segment.score_min)
-            units.append(unit)
+        segment_index = 0
+        for paragraph_index, paragraph in enumerate(split_paragraphs(str(chunk.get("text", "")))):
+            sentences = split_sentences(paragraph, min_chars=min_sentence_chars)
+            if not sentences:
+                continue
+            scores = scorer(sentences) if len(sentences) > 1 else []
+            segments = split_by_scores(
+                sentences,
+                scores,
+                threshold=threshold,
+                min_chars=min_chars,
+                max_chars=max_chars,
+            )
+            for paragraph_segment_index, segment in enumerate(segments):
+                unit_id = f"semantic_chunk::{source_part}_{page_part}_sc{segment_index}"
+                unit = {
+                    "id": unit_id,
+                    "granularity": "semantic_chunk",
+                    "text": segment.text,
+                    "source": source,
+                    "page": page,
+                    "parent_chunk_id": f"{source_part}_{page_part}_semantic_{segment_index}",
+                    "paper_title": paper_title_from_source(source),
+                    "paragraph_index": paragraph_index,
+                    "paragraph_segment_index": paragraph_segment_index,
+                    "sentence_count": segment.sentence_count,
+                }
+                if segment.score_min is not None and np.isfinite(segment.score_min):
+                    unit["segment_score_min"] = float(segment.score_min)
+                units.append(unit)
+                segment_index += 1
     return units
