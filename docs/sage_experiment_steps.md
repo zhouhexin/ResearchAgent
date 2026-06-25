@@ -47,8 +47,7 @@ WhereIsAI/UAE-Large-V1
 SAGE 对比实验需要在同一个 embedding model 下分别构建 fixed chunk index 和 semantic chunk index。先生成固定 chunk JSONL：
 
 ```bash
-python experiments/densex_prepare_corpus.py \
-  --granularities chunk
+python experiments/densex_prepare_corpus.py  --granularities chunk
 ```
 
 输出：
@@ -62,11 +61,7 @@ experiments/densex_corpus/chunk.jsonl
 使用现有 PDF chunk metadata 构造相邻句子对：
 
 ```bash
-python experiments/sage_build_pairs.py \
-  --metadata storage/metadata.json \
-  --output experiments/sage_pairs/pairs.jsonl \
-  --validation-output experiments/sage_pairs/validation.jsonl \
-  --max-pairs 5000
+python experiments/sage_build_pairs.py --metadata storage/metadata.json --output experiments/sage_pairs/pairs.jsonl  --validation-output experiments/sage_pairs/validation.jsonl --max-pairs 5000
 ```
 
 说明：
@@ -91,15 +86,7 @@ python experiments/sage_build_pairs.py \
 第一版按照论文思路默认使用 MSE：
 
 ```bash
-python experiments/sage_train_segmenter.py \
-  --pairs experiments/sage_pairs/pairs.jsonl \
-  --validation-pairs experiments/sage_pairs/validation.jsonl \
-  --embedding-model WhereIsAI/UAE-Large-V1 \
-  --output-dir models/sage_segmenter_angle \
-  --epochs 3 \
-  --batch-size 16 \
-  --loss mse \
-  --device auto
+python experiments/sage_train_segmenter.py --pairs experiments/sage_pairs/pairs.jsonl  --validation-pairs experiments/sage_pairs/validation.jsonl --embedding-model WhereIsAI/UAE-Large-V1 --output-dir models/sage_segmenter_angle --epochs 3  --batch-size 16 --loss mse --device auto
 ```
 
 输出：
@@ -121,12 +108,7 @@ models/sage_segmenter_angle/metrics.json
 使用训练好的 MLP 对相邻句子打分，并根据阈值切分 semantic chunk：
 
 ```bash
-python experiments/sage_prepare_corpus.py \
-  --metadata storage/metadata.json \
-  --model-dir models/sage_segmenter_angle \
-  --embedding-model WhereIsAI/UAE-Large-V1 \
-  --output experiments/sage_corpus/semantic_chunk.jsonl \
-  --threshold 0.55
+python experiments/sage_prepare_corpus.py --metadata storage/metadata.json --model-dir models/sage_segmenter_angle --embedding-model WhereIsAI/UAE-Large-V1 --output experiments/sage_corpus/semantic_chunk.jsonl --threshold 0.55
 ```
 
 输出：
@@ -159,19 +141,13 @@ experiments/sage_corpus/semantic_chunk_t060.jsonl
 构建 fixed chunk index：
 
 ```bash
-python experiments/sage_build_index.py \
-  --corpus experiments/densex_corpus/chunk.jsonl \
-  --index-dir storage/sage/chunk \
-  --embedding-model WhereIsAI/UAE-Large-V1
+python experiments/sage_build_index.py --corpus experiments/densex_corpus/chunk.jsonl --index-dir storage/sage/chunk --embedding-model WhereIsAI/UAE-Large-V1
 ```
 
 构建 semantic chunk index：
 
 ```bash
-python experiments/sage_build_index.py \
-  --corpus experiments/sage_corpus/semantic_chunk.jsonl \
-  --index-dir storage/sage/semantic_chunk \
-  --embedding-model WhereIsAI/UAE-Large-V1
+python experiments/sage_build_index.py --corpus experiments/sage_corpus/semantic_chunk.jsonl --index-dir storage/sage/semantic_chunk --embedding-model WhereIsAI/UAE-Large-V1
 ```
 
 ## 8. 运行 QA 对比实验
@@ -179,25 +155,13 @@ python experiments/sage_build_index.py \
 先只跑 ACDepth 四个问题：
 
 ```bash
-python experiments/run_sage_semantic_chunk_sweep.py \
-  --questions evaluation/questions.jsonl \
-  --question-ids always_clear_depth_contributions,always_clear_depth_eval_datasets,always_clear_depth_ablation_components,always_clear_depth_sota_comparison_methods \
-  --embedding-model WhereIsAI/UAE-Large-V1 \
-  --budgets 300,500,1000,1500 \
-  --top-k 50 \
-  --run-label-prefix sage_semantic_v1
+python experiments/run_sage_semantic_chunk_sweep.py --questions evaluation/questions.jsonl --question-ids always_clear_depth_contributions,always_clear_depth_eval_datasets,always_clear_depth_ablation_components,always_clear_depth_sota_comparison_methods --embedding-model WhereIsAI/UAE-Large-V1 --budgets 300,500,1000,1500 --top-k 50 --run-label-prefix sage_semantic_v1
 ```
 
 如果 ACDepth 流程跑通，再跑全部问题：
 
 ```bash
-python experiments/run_sage_semantic_chunk_sweep.py \
-  --questions evaluation/questions.jsonl \
-  --all-questions \
-  --embedding-model WhereIsAI/UAE-Large-V1 \
-  --budgets 300,500,1000,1500 \
-  --top-k 50 \
-  --run-label-prefix sage_semantic_all_v1
+python experiments/run_sage_semantic_chunk_sweep.py --questions evaluation/questions.jsonl --all-questions --embedding-model WhereIsAI/UAE-Large-V1 --budgets 300,500,1000,1500 --top-k 50 --run-label-prefix sage_semantic_all_v1
 ```
 
 如果全量实验中网络不稳定，建议使用可恢复的循环脚本。该脚本会：
@@ -230,10 +194,7 @@ python experiments/run_sage_semantic_chunk_loop.py `
 QA 实验结束后，继续使用现有 DenseX evaluation 脚本统计准确率：
 
 ```bash
-python experiments/evaluate_densex_runs.py \
-  --questions evaluation/questions.jsonl \
-  --run-label-prefix sage_semantic_v1 \
-  --output experiments/accuracy_results_sage_semantic_v1.csv
+python experiments/evaluate_densex_runs.py --questions evaluation/questions.jsonl --run-label-prefix sage_semantic_v1 --output experiments/accuracy_results_sage_semantic_v1.csv
 ```
 
 重点比较：
