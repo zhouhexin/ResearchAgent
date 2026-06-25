@@ -118,7 +118,7 @@ models/sage_segmenter_angle/metrics.json
 
 ## 6. 生成 semantic chunk 语料
 
-使用训练好的 MLP 对相邻句子打分，并根据阈值切分 semantic chunk：
+使用训练好的 MLP 对相邻句子打分，并根据阈值切分 semantic chunk。当前实现会先把文本切成段落，**段落边界作为强切分边界**；MLP 只在同一段落内部判断相邻句子是否继续切分。过短段落第一版不做合并，先保留为独立 semantic chunk，便于观察段落强边界对检索结果的影响。
 
 ```bash
 python experiments/sage_prepare_corpus.py \
@@ -133,6 +133,17 @@ python experiments/sage_prepare_corpus.py \
 
 ```text
 experiments/sage_corpus/semantic_chunk.jsonl
+```
+
+如果要与旧版 semantic chunk 结果区分，建议输出为新文件：
+
+```bash
+python experiments/sage_prepare_corpus.py \
+  --metadata storage/metadata.json \
+  --model-dir models/sage_segmenter_angle \
+  --embedding-model WhereIsAI/UAE-Large-V1 \
+  --output experiments/sage_corpus/semantic_chunk_paragraph_v1.jsonl \
+  --threshold 0.55
 ```
 
 后续可以扫描不同阈值：
@@ -174,6 +185,15 @@ python experiments/sage_build_index.py \
   --embedding-model WhereIsAI/UAE-Large-V1
 ```
 
+如果使用段落强边界的新语料，则构建独立 index：
+
+```bash
+python experiments/sage_build_index.py \
+  --corpus experiments/sage_corpus/semantic_chunk_paragraph_v1.jsonl \
+  --index-dir storage/sage/semantic_chunk_paragraph_v1 \
+  --embedding-model WhereIsAI/UAE-Large-V1
+```
+
 ## 8. 运行 QA 对比实验
 
 先只跑 ACDepth 四个问题：
@@ -183,9 +203,10 @@ python experiments/run_sage_semantic_chunk_sweep.py \
   --questions evaluation/questions.jsonl \
   --question-ids always_clear_depth_contributions,always_clear_depth_eval_datasets,always_clear_depth_ablation_components,always_clear_depth_sota_comparison_methods \
   --embedding-model WhereIsAI/UAE-Large-V1 \
+  --semantic-index-dir storage/sage/semantic_chunk_paragraph_v1 \
   --budgets 300,500,1000,1500 \
   --top-k 50 \
-  --run-label-prefix sage_semantic_v1
+  --run-label-prefix sage_semantic_paragraph_v1
 ```
 
 如果 ACDepth 流程跑通，再跑全部问题：
@@ -232,8 +253,8 @@ QA 实验结束后，继续使用现有 DenseX evaluation 脚本统计准确率�
 ```bash
 python experiments/evaluate_densex_runs.py \
   --questions evaluation/questions.jsonl \
-  --run-label-prefix sage_semantic_v1 \
-  --output experiments/accuracy_results_sage_semantic_v1.csv
+  --run-label-prefix sage_semantic_paragraph_v1 \
+  --output experiments/accuracy_results_sage_semantic_paragraph_v1.csv
 ```
 
 重点比较：
