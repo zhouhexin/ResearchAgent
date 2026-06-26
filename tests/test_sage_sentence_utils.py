@@ -1,6 +1,9 @@
 import unittest
+import tempfile
+from pathlib import Path
 
 from sage_segmenter.sentence_utils import (
+    load_page_records_from_docs,
     merge_ordered_chunk_texts,
     split_paragraphs,
     split_sentences,
@@ -39,6 +42,35 @@ class SageSentenceUtilsTests(unittest.TestCase):
         merged = merge_ordered_chunk_texts(chunks, min_overlap=10)
 
         self.assertEqual(merged, "The first chunk has overlapping text. The second chunk continues.")
+
+    def test_load_page_records_from_docs_preserves_paragraph_blank_lines(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            docs = Path(tmpdir) / "data"
+            docs.mkdir()
+            path = docs / "sample.txt"
+            path.write_text("First paragraph.\n\nSecond paragraph.", encoding="utf-8")
+
+            records = load_page_records_from_docs(docs, extensions={".txt"})
+
+        self.assertEqual(len(records), 1)
+        self.assertEqual(records[0]["page"], None)
+        self.assertEqual(records[0]["source"], str(path))
+        self.assertIn("\n\n", records[0]["text"])
+
+    def test_load_page_records_from_docs_filters_by_source_contains(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            docs = Path(tmpdir) / "data"
+            docs.mkdir()
+            (docs / "keep.txt").write_text("Keep this paragraph.", encoding="utf-8")
+            (docs / "drop.txt").write_text("Drop this paragraph.", encoding="utf-8")
+
+            records = load_page_records_from_docs(
+                docs,
+                extensions={".txt"},
+                source_contains="keep",
+            )
+
+        self.assertEqual([Path(record["source"]).name for record in records], ["keep.txt"])
 
 
 if __name__ == "__main__":

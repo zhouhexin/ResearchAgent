@@ -7,6 +7,8 @@ from collections import defaultdict
 from pathlib import Path
 
 
+DEFAULT_DOCUMENT_EXTENSIONS = {".txt", ".md", ".markdown", ".pdf"}
+
 _SENTENCE_BOUNDARY = re.compile(
     r"(?<=[。！？.!?])\s+|(?<=[。！？.!?])(?=[A-Z0-9\u4e00-\u9fff])"
 )
@@ -101,3 +103,82 @@ def reconstruct_page_texts_from_chunks(chunks: list[dict]) -> list[dict]:
         )
     return pages
 
+
+def _read_pdf_page_texts(path: Path) -> list[dict]:
+    """Read PDF page text directly while preserving extraction line breaks."""
+    try:
+        from pypdf import PdfReader
+    except ImportError as exc:
+        raise RuntimeError("Missing dependency: install pypdf to read PDF files.") from exc
+
+    reader = PdfReader(str(path))
+    records = []
+    stem = re.sub(r"[^A-Za-z0-9_-]+", "_", path.stem).strip("_") or "doc"
+    for page_index, page in enumerate(reader.pages, start=1):
+        try:
+            text = page.extract_text(extraction_mode="layout") or ""
+        except TypeError:
+            text = page.extract_text() or ""
+        text = text.replace("\r\n", "\n").replace("\r", "\n").strip()
+        if not text:
+            continue
+        records.append(
+            {
+                "id": f"{stem}_p{page_index}",
+                "source": str(path),
+                "page": page_index,
+                "text": text,
+            }
+        )
+    return records
+
+
+def _read_text_page_record(path: Path) -> dict | None:
+    """Read one plain-text document as a single page-like record."""
+    text = path.read_text(encoding="utf-8").replace("\r\n", "\n").replace("\r", "\n").strip()
+    if not text:
+        return None
+    stem = re.sub(r"[^A-Za-z0-9_-]+", "_", path.stem).strip("_") or "doc"
+    return {
+        "id": f"{stem}_p0",
+        "source": str(path),
+        "page": None,
+        "text": text,
+    }
+
+
+def load_page_records_from_docs(
+    docs_dir: Path,
+    *,
+    extensions: set[str] | None = None,
+    source_contains: str = "",
+    limit: int = 0,
+) -> list[dict]:
+    """Load page-like records from original documents without flattening paragraphs.
+
+    This direct document path is for SAGE semantic chunk preparation. It avoids
+    reconstructing text from fixed-size metadata chunks, because that path has
+    already normalized whitespace and can erase paragraph boundaries.
+    """
+    if not docs_dir.exists():
+        raise FileNotFoundError(f"Document directory does not exist: {docs_dir}")
+    if not docs_dir.is_dir():
+        raise NotADirectoryError(f"Document path is not a directory: {docs_dir}")
+
+    supported = extensions or DEFAULT_DOCUMENT_EXTENSIONS
+    needle = source_contains.lower()
+    records: list[dict] = []
+    for path in sorted(docs_dir.rglob("*")):
+        if not path.is_file() or path.suffix.lower() not in supported:
+            continue
+        if needle and needle not in str(path).lower():
+            continue
+        if path.suffix.lower() == ".pdf":
+            records.extend(_read_pdf_page_texts(path))
+        else:
+            record = _read_text_page_record(path)
+            if record is not None:
+                records.append(record)
+        if limit > 0 and len(records) >= limit:
+            return records[:limit]
+    return records

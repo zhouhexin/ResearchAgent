@@ -13,7 +13,7 @@ if str(PROJECT_ROOT) not in sys.path:
 import config
 from densex.corpus import load_chunks_from_metadata, write_jsonl
 from sage_segmenter.segmenter import SemanticSegmenter, make_semantic_chunk_units
-from sage_segmenter.sentence_utils import reconstruct_page_texts_from_chunks
+from sage_segmenter.sentence_utils import load_page_records_from_docs, reconstruct_page_texts_from_chunks
 
 
 def _device_arg(value: str) -> str:
@@ -40,6 +40,12 @@ def _filter_chunks(chunks: list[dict], source_contains: str) -> list[dict]:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Prepare SAGE semantic chunk corpus")
     parser.add_argument("--metadata", type=Path, default=config.INDEX_DIR / "metadata.json")
+    parser.add_argument(
+        "--docs",
+        type=Path,
+        default=None,
+        help="Optional document directory. When set, read original files directly and preserve paragraph breaks.",
+    )
     parser.add_argument("--model-dir", type=Path, required=True)
     parser.add_argument("--embedding-model", default=None)
     parser.add_argument("--output", type=Path, default=PROJECT_ROOT / "experiments" / "sage_corpus" / "semantic_chunk.jsonl")
@@ -52,13 +58,25 @@ def main() -> None:
     parser.add_argument("--device", choices=["auto", "cpu", "cuda", "mps"], default="auto")
     args = parser.parse_args()
 
-    chunks = _filter_chunks(load_chunks_from_metadata(args.metadata), args.source_contains)
-    if args.limit > 0:
-        chunks = chunks[: args.limit]
-    if not chunks:
-        raise RuntimeError("No chunks matched the requested metadata/filter")
+    if args.docs is not None:
+        page_records = load_page_records_from_docs(
+            args.docs,
+            source_contains=args.source_contains,
+            limit=args.limit,
+        )
+        input_description = f"docs={args.docs}"
+    else:
+        chunks = _filter_chunks(load_chunks_from_metadata(args.metadata), args.source_contains)
+        if args.limit > 0:
+            chunks = chunks[: args.limit]
+        if not chunks:
+            raise RuntimeError("No chunks matched the requested metadata/filter")
+        page_records = reconstruct_page_texts_from_chunks(chunks)
+        input_description = f"metadata={args.metadata}"
+    if not page_records:
+        raise RuntimeError("No page records matched the requested input/filter")
+    print(f"Loaded {len(page_records)} page records from {input_description}", flush=True)
 
-    page_records = reconstruct_page_texts_from_chunks(chunks)
     segmenter = SemanticSegmenter.from_model_dir(
         args.model_dir,
         embedding_model=args.embedding_model,
